@@ -40,28 +40,30 @@ descript
 
 surface0
 {
-	//--snail body
-	//base
-	animation300.interval,runonce
-	animation300.pattern0,overlay,3000,0,0,0
-
-	//--cutting this out because if we DO have the snail talking, we can just use the idle animations from like, surface1... i think its a Charming Look even after the balloon breaks.
-	//vertical bob
-	//animation301.interval,talk,4
-	//animation301.pattern0,stop,300
-	//animation301.pattern1,overlay,3001,0,0,0
-	//control talk
-	//animation399.interval,runonce
-	//animation399.pattern0,stop,301
+	//----------SNAIL BODY
+	//------base
+	//--beige
+	animation31000.interval,bind
+	animation31000.pattern0,overlay,31000,0,0,0
+	//--mauve
+	animation31010.interval,bind
+	animation31010.pattern0,overlay,31010,0,0,0
 }
 
 surface1
 {
-	animation300.interval,runonce+always
-	animation300.pattern0,overlay,3000,0,0,0
-	animation300.pattern1,overlay,-1,500,0,0
-	animation300.pattern2,overlay,3001,0,0,0
-	animation300.pattern3,overlay,-1,500,0,0
+	//----------SNAIL BODY
+	//------base
+	//--beige
+	animation31000.interval,bind+always
+	animation31000.pattern0,overlay,31000,0,0,0
+	animation31000.pattern1,overlay,31001,500,0,0
+	animation31000.pattern2,overlay,-1,500,0,0
+	//--mauve
+	animation31010.interval,bind+always
+	animation31010.pattern0,overlay,31010,0,0,0
+	animation31010.pattern1,overlay,31011,500,0,0
+	animation31010.pattern2,overlay,-1,500,0,0
 
 	//headgear back and fronts will use coord anims to align..
 }
@@ -85,58 +87,37 @@ surface10
 
 //—————————————————————————————— Snail Dressups (this doesnt roll off the tongue) ——————————————————————————————
 
-//for now ive set the dressups to have the same number as the images. absolutely open to change
-
-//only the snail body will use this system. everything else is a very simple interval,bind :) numbers below also open to change
-
-//--SNAIL BODY
-//pose base
-surface3000
+//----------SNAIL BODY
+//------base
+//--beige
+surface31000
 {
-	element0,overlay,surface10.png,0,0
-
-	//base beige
-	animation31000.interval,bind
-	animation31000.pattern0,add,30000,0,0,0
+	element0,replace,surface30000c.png,0,0
+	element1,overlayfast,surface31000.png,0,0
+	element2,overlay,surface30000l.png,0,0
 }
-//vertical bob
-surface3001
+surface31001
 {
-	element0,overlay,surface10.png,0,0
-	
-	//base beige
-	animation31000.interval,bind
-	animation31000.pattern0,add,30001,0,0,0
+	element0,replace,surface30001c.png,0,0
+	element1,overlayfast,surface31000.png,0,0
+	element2,overlay,surface30001l.png,0,0
+}
+
+//--mauve
+surface31010
+{
+	element0,replace,surface30000c.png,0,0
+	element1,overlayfast,surface31010.png,0,0
+	element2,overlay,surface30000l.png,0,0
+}
+surface31011
+{
+	element0,replace,surface30001c.png,0,0
+	element1,overlayfast,surface31010.png,0,0
+	element2,overlay,surface30001l.png,0,0
 }
 
 //—————————————————————————————— Snail Clipping (Snipping) ——————————————————————————————
-
-//---SNAIL BODY
-//-colors
-//base beige: pose base
-surface30000
-{
-	element0,overlay,surface30000c.png,0,0
-	element1,overlayfast,surface31000.png,0,0
-}
-//base beige: vertical bob
-surface30001
-{
-	element0,overlay,surface30001c.png,0,0
-	element1,overlayfast,surface31000.png,0,0
-}
-
-//-lineart
-//pose base
-surface.append30000
-{
-	element2,overlay,surface30000l.png,0,0
-}
-//vertical bob
-surface.append30001
-{
-	element2,overlay,surface30001l.png,0,0
-}
 
 //---SHELL
 //-colors

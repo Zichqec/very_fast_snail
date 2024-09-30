@@ -41,7 +41,7 @@ menu.sidebar.bitmap.filename,menu_sidebar.png
 
 //Dressup stuff
 
-sakura.menu,hidden
+sakura.menu,auto
 
 //Trail
 //sakura.bindgroup0.name,trail,default
@@ -52,6 +52,7 @@ sakura.menu,hidden
 sakura.bindoption0.group,bodypaint,mustselect
 sakura.bindgroup31000.name,bodypaint,basebeige
 sakura.bindgroup31000.default,1
+sakura.bindgroup31010.name,bodypaint,basemauve
 
 //Shell paint base
 sakura.bindoption1.group,shellpaint,mustselect
