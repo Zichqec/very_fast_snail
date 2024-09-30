@@ -52,6 +52,20 @@ crayons
 	"lit fireworks"
 }
 
+dictation
+{
+	"dictation"
+	"typing"
+	"reading"
+	"listening"
+	"money management"
+	"coloring-in-the-lines"
+	"gamer"
+	"lying-to-the-press"
+	"movie trivia"
+	"memory"
+}
+
 inthedrywall
 {
 	"in the drywall"
@@ -63,6 +77,82 @@ inthedrywall
 	"in your socks"
 	"in loaves of bread"
 	"in your shirts"
+}
+
+itbites
+{
+	"it bites"
+	"of the long criminal history"
+	"of the smell"
+	"it's allergic to lettuce"
+	"it loves crawling into mouths"
+	"it keeps trying to hatch chicken eggs"
+	"it's really, really, really slow... even for a snail"
+	"of its arson habit"
+	"it always leaves all the lights on"
+	"it won't sleep without a bedtime story"
+	"of the curse placed on it a thousand years ago"
+	"of what happened to its previous sponsor"
+	"it's a ghost"
+	"it's a slug with a fake shell"
+	"it thinks it's a bird"
+	"its racer number is considered unlucky"
+	"it only eats meat"
+	"it listens to metal at full blast all the time"
+	"it unplugs every cord it sees"
+	"it's running for mayor"
+	"it likes the sound of glass breaking"
+	"of the gambling addiction"
+	"it eats and eats and eats and eats until there's no lettuce left"
+	"it keeps bringing stray animals inside"
+	"it screams to be let outside, then screams to be let back in. The current theory is that it might be a cat trapped in a snail body"
+	"it pulsates with a dark energy"
+	"it likes the smell of fish"
+	"it always falls for scam calls"
+	"it spends too much time watching videos on the internet"
+	"it has plans to dominate the world one race at a time"
+	"it never gets anywhere on time"
+	"it doesn't actually understand the concept of racing"
+	"it has terrible eyesight but doesn't want to see an optometrist because it's in denial"
+	"it likes to roll in the mud"
+	"an attitude like that doesn't just come from nowhere"
+	"a fortune teller said it would never complete a race again"
+	"it won't come out of that corner"
+	"something about it seems... off"
+	"of the bloodstains"
+	"the snail racing rules changed and its old strategy doesn't work anymore"
+	"it keeps trying to bake itself into a pie"
+	"it's more into the idea of being a racer than the reality"
+	"all the other snails keep talking about it behind its back, and honestly? They're right"
+	"it just didn't do well at the genetic lottery"
+	"other snails have been avoiding it and that's usually a pretty good sign something is wrong"
+	"secretly we all know it isn't ready for competition and will crumple like a leaf"
+	"it keeps saying it invented waterbeds, but it wasn't even alive when they were popular"
+	"\c[char,1], well... just look at it"
+	"we're all conspiring to keep this one particular snail here"
+	"it's way more into dating than training"
+	"it always schedules a day at the salon when it's supposed to have a race"
+	"it always forgets which way the finish line is"
+	"all its friends abandoned it and it's too sad to move anymore"
+	"all it wants to do is sleep"
+}
+
+itssoshiny
+{
+	"it's so shiny"
+	"it showers daily"
+	"it has an extra light shell"
+	"its autograph game is next level"
+	"it likes to organize the fridge"
+	"it got all As in snail school"
+	"it was a professional in motorsports before it switched to snail racing"
+	"of the cool sounding name"
+	"of the ease with which it slides across the race track"
+	"it just has such good vibes"
+	"it always opens its mail immediately"
+	"we're promoting it %(onTV)"
+	"it has good %(dictation) skills"
+	"it doesn't %(pickitsnose)"
 }
 
 jigsaw
@@ -129,6 +219,30 @@ madeitout
 	"made %(RAND(99) + 2) prank calls"
 	"added %(crayons) to the washer %(RAND(9) + 2) times"
 	"drank every can of pop in the minifridge (and left the empty cans inside)"
+}
+
+onTV
+{
+	"on TV"
+	"in the newspaper"
+	"on the radio"
+	"on the internet"
+	"on every billboard in the city"
+	"with free bumper stickers"
+	"with flyers"
+	"with posters"
+	"by yelling its name out of the window every hour on the hour"
+}
+
+pickitsnose
+{
+	"pick its nose"
+	"set things on fire"
+	"put itself on a stick and pretend to be a swirly lollipop in the hopes of ending up in mouths"
+	"eat meat"
+	"eat lettuce"
+	"try to flush itself down the toilet"
+	"use electronics without permission"
 }
 
 salt
