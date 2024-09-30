@@ -1,5 +1,5 @@
 charset,UTF-8
 type,ghost
 
-name,Simplicity Template
-directory,simplicity_template
+name,Very Fast Snail
+directory,very_fast_snail_gwz
