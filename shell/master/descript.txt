@@ -50,11 +50,12 @@ sakura.menu,auto
 
 //Body paint
 sakura.bindoption0.group,bodypaint,mustselect
-sakura.bindgroup31000.name,bodypaint,basebeige
+sakura.bindgroup31000.name,bodypaint,Basic Beige
 sakura.bindgroup31000.default,1
-sakura.bindgroup31010.name,bodypaint,basemauve
+sakura.bindgroup31010.name,bodypaint,Basic Mauve
 
 //Shell paint base
 sakura.bindoption1.group,shellpaint,mustselect
-sakura.bindgroup50000.name,shellpaint,basicbrown
+sakura.bindgroup50000.name,shellpaint,Basic Brown
 sakura.bindgroup50000.default,1
+sakura.bindgroup50001.name,shellpaint,Basic Purple

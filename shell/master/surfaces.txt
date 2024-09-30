@@ -8,7 +8,7 @@ descript
 //animation#.pattern#,method,surface,pause,X,Y
 
 //NUMBERS
-//----------Image + Clipping ranges (10000-100000+)
+//—————————— Image + Clipping ranges (10000-100000+) ——————————
 //Backgrounds (background) : 10000-19999, round new on 100s 
 //Snail Trails (background) : 20000-29999, round new on 50s 
 //Base/Skin Paints : 30000-39999. First 999 individual animations, last 4/5 colors, round on 100s (space for slight single skin paint alts)
@@ -23,7 +23,7 @@ descript
 //Add-ons (engines, wings, things that did not fit the requirements of being Hardware) : 80000-84999, round new on 50s
 //Overlays (polish sparkles, hearts cuz it wuvs u so much, The Explosion, etc) : 85000-99999, number in order, round to 10s if part of an animation or if alts may be added later
 //Foreground (pieces that need to go in front of everything else, no matter what) : 100000+
-//----------Surface ranges (0-99)
+//—————————— Surface ranges (0-99) ——————————
 //surface0: snail still idle
 //surface1: snail vertical bobble idle for racing (adjustable bobble speed?)
 //surface2: snail eye wiggling idle
@@ -40,42 +40,47 @@ descript
 
 surface0
 {
-	//----------SNAIL BODY
-	//------base
-	//--beige
+	//———————— SNAIL BODY ————————
+	//———— base ————
+	//basic beige
 	animation31000.interval,bind
 	animation31000.pattern0,overlay,31000,0,0,0
-	//--mauve
+	
+	//basic mauve
 	animation31010.interval,bind
 	animation31010.pattern0,overlay,31010,0,0,0
 }
 
 surface1
 {
-	//----------SNAIL BODY
-	//------base
-	//--beige
+	//———————— SNAIL BODY ————————
+	//———— base ————
+	//basic beige
 	animation31000.interval,bind+always
 	animation31000.pattern0,overlay,31000,0,0,0
 	animation31000.pattern1,overlay,31001,500,0,0
-	animation31000.pattern2,overlay,-1,500,0,0
-	//--mauve
+	animation31000.pattern2,overlay,31001,500,0,0
+	
+	//basic mauve
 	animation31010.interval,bind+always
 	animation31010.pattern0,overlay,31010,0,0,0
 	animation31010.pattern1,overlay,31011,500,0,0
-	animation31010.pattern2,overlay,-1,500,0,0
+	animation31010.pattern2,overlay,31011,500,0,0
 
 	//headgear back and fronts will use coord anims to align..
 }
 
 surface.append0-9
 {
-	element0,overlay,surface10.png,0,0
-
-	//--SHELL COLORS
+	//———————— SNAIL SHELL ————————
+	//———— base ————
 	//basic brown
 	animation50000.interval,bind
 	animation50000.pattern0,overlay,50000,0,0,0
+	
+	//basic purple
+	animation50001.interval,bind
+	animation50001.pattern0,overlay,50001,0,0,0
 
 	point.basepos.y,335
 }
@@ -87,48 +92,54 @@ surface10
 
 //—————————————————————————————— Snail Dressups (this doesnt roll off the tongue) ——————————————————————————————
 
-//----------SNAIL BODY
-//------base
-//--beige
+//———————— SNAIL BODY ————————
+//———— base ————
+//basic beige
 surface31000
 {
-	element0,replace,surface30000c.png,0,0
+	element0,overlay,surface30000c.png,0,0
 	element1,overlayfast,surface31000.png,0,0
 	element2,overlay,surface30000l.png,0,0
 }
+
 surface31001
 {
-	element0,replace,surface30001c.png,0,0
+	element0,overlay,surface30001c.png,0,0
 	element1,overlayfast,surface31000.png,0,0
 	element2,overlay,surface30001l.png,0,0
 }
 
-//--mauve
+//basic mauve
 surface31010
 {
-	element0,replace,surface30000c.png,0,0
+	element0,overlay,surface30000c.png,0,0
 	element1,overlayfast,surface31010.png,0,0
 	element2,overlay,surface30000l.png,0,0
 }
+
 surface31011
 {
-	element0,replace,surface30001c.png,0,0
+	element0,overlay,surface30001c.png,0,0
 	element1,overlayfast,surface31010.png,0,0
 	element2,overlay,surface30001l.png,0,0
 }
 
 //—————————————————————————————— Snail Clipping (Snipping) ——————————————————————————————
 
-//---SHELL
-//-colors
+//———————— SNAIL SHELL ————————
+//———— base ————
 //basic brown
 surface50000
 {
 	element0,overlay,surface50000c.png,0,0
 	element1,overlayfast,surface50000.png,0,0
+	element2,overlay,surface50000l.png,0,0
 }
-//-lineart 
-surface.append50000
+
+//basic purple
+surface50001
 {
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50001.png,0,0
 	element2,overlay,surface50000l.png,0,0
 }
