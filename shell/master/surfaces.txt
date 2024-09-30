@@ -1,38 +1,153 @@
+//THE SPEEDIEST SNAIL AROUND
+//master shell
+
 descript
 {
 	version,1
 }
+//animation#.pattern#,method,surface,pause,X,Y
+
+//NUMBERS
+//----------Image + Clipping ranges (10000-100000+)
+//Backgrounds (background) : 10000-19999, round new on 100s 
+//Snail Trails (background) : 20000-29999, round new on 50s 
+//Base/Skin Paints : 30000-39999. First 999 individual animations, last 4/5 colors, round on 100s (space for slight single skin paint alts)
+//Tattoos : 40000-44999, round new on 10s 
+//Snail Clothes (snothes) (imagine it wearing a little bowtie) : 45000-49999, round new on 10s 
+//Shells (base shell colors/patterns/designs(?) would all go in this cluster) : 50000-54999, number in order, round to 10s if more alts of a design may be added later 
+//Shell Decals (larger than stickers, but smaller than a full shell skin) : 55000-59999, number in order, round to 10s if more alts of a design may be added later
+//Stickers : 60000-64999, number in order
+//Hardware (antenna, spoilers, things that are attached to and roughly in line with the center line of the shell, if we were to look at the snail from the front) : 65000-69999, round new on 5s
+//Masks (things that would be distinctly under hats, such as goggles over the eyes, a mustache, etc) : 70000-74999, round new on 5s
+//Hats : 75000-79999, round new on 5s
+//Add-ons (engines, wings, things that did not fit the requirements of being Hardware) : 80000-84999, round new on 50s
+//Overlays (polish sparkles, hearts cuz it wuvs u so much, The Explosion, etc) : 85000-99999, number in order, round to 10s if part of an animation or if alts may be added later
+//Foreground (pieces that need to go in front of everything else, no matter what) : 100000+
+//----------Surface ranges (0-99)
+//surface0: snail still idle
+//surface1: snail vertical bobble idle for racing (adjustable bobble speed?)
+//surface2: snail eye wiggling idle
+//surface3:
+//surface4:
+//surface5:
+//surface6:
+//surface7:
+//surface8:
+//surface9:
+//surface10: blank
+
+//—————————————————————————————— Snail Surfaces (Snurfaces) ——————————————————————————————
 
 surface0
 {
-	collision0,0,0,130,65,head
-	
-	//Example code for blink animation - uncomment if you want it
-	//animation0.interval,random,4
-	//animation0.pattern0,overlay,101,0,0,0
-	//animation0.pattern1,overlay,102,100,0,0
-	//animation0.pattern2,overlay,-1,50,0,0
-	
-	
-	//Example code for a talk animation - uncomment if you want it
-	// animation1.interval,talk,4
-	// animation1.pattern0,alternativestart,(2,3,4)
-	
-	// animation2.interval,never
-	// animation2.pattern0,overlay,103,0,0,0
-	// animation2.pattern1,overlay,104,200,0,0
-	// animation2.pattern2,overlay,-1,200,0,0
-	
-	// animation3.interval,never
-	// animation3.pattern0,overlay,103,0,0,0
-	// animation3.pattern1,overlay,-1,200,0,0
-	
-	// animation4.interval,never
-	// animation4.pattern0,overlay,104,0,0,0
-	// animation4.pattern1,overlay,105,200,0,0
-	// animation4.pattern2,overlay,-1,200,0,0
+	//--snail body
+	//base
+	animation300.interval,runonce
+	animation300.pattern0,overlay,3000,0,0,0
+
+	//--cutting this out because if we DO have the snail talking, we can just use the idle animations from like, surface1... i think its a Charming Look even after the balloon breaks.
+	//vertical bob
+	//animation301.interval,talk,4
+	//animation301.pattern0,stop,300
+	//animation301.pattern1,overlay,3001,0,0,0
+	//control talk
+	//animation399.interval,runonce
+	//animation399.pattern0,stop,301
+}
+
+surface1
+{
+	animation300.interval,runonce+always
+	animation300.pattern0,overlay,3000,0,0,0
+	animation300.pattern1,overlay,-1,500,0,0
+	animation300.pattern2,overlay,3001,0,0,0
+	animation300.pattern3,overlay,-1,500,0,0
+
+	//headgear back and fronts will use coord anims to align..
+}
+
+surface.append0-9
+{
+	element0,overlay,surface10.png,0,0
+
+	//--SHELL COLORS
+	//basic brown
+	animation50000.interval,bind
+	animation50000.pattern0,overlay,50000,0,0,0
+
+	point.basepos.y,335
 }
 
 surface10
 {
+	//absolutely nothing
+}
+
+//—————————————————————————————— Snail Dressups (this doesnt roll off the tongue) ——————————————————————————————
+
+//for now ive set the dressups to have the same number as the images. absolutely open to change
+
+//only the snail body will use this system. everything else is a very simple interval,bind :) numbers below also open to change
+
+//--SNAIL BODY
+//pose base
+surface3000
+{
+	element0,overlay,surface10.png,0,0
+
+	//base beige
+	animation31000.interval,bind
+	animation31000.pattern0,add,30000,0,0,0
+}
+//vertical bob
+surface3001
+{
+	element0,overlay,surface10.png,0,0
+	
+	//base beige
+	animation31000.interval,bind
+	animation31000.pattern0,add,30001,0,0,0
+}
+
+//—————————————————————————————— Snail Clipping (Snipping) ——————————————————————————————
+
+//---SNAIL BODY
+//-colors
+//base beige: pose base
+surface30000
+{
+	element0,overlay,surface30000c.png,0,0
+	element1,overlayfast,surface31000.png,0,0
+}
+//base beige: vertical bob
+surface30001
+{
+	element0,overlay,surface30001c.png,0,0
+	element1,overlayfast,surface31000.png,0,0
+}
+
+//-lineart
+//pose base
+surface.append30000
+{
+	element2,overlay,surface30000l.png,0,0
+}
+//vertical bob
+surface.append30001
+{
+	element2,overlay,surface30001l.png,0,0
+}
+
+//---SHELL
+//-colors
+//basic brown
+surface50000
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50000.png,0,0
+}
+//-lineart 
+surface.append50000
+{
+	element2,overlay,surface50000l.png,0,0
 }

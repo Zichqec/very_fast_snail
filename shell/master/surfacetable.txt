@@ -1,0 +1,16 @@
+charset,UTF-8
+version,1
+option,DisableNoDefineSurfaces
+
+//everything else isnt disabled because for now i'd like to be able to see all the things we've set up... -phanta
+
+group,__disabled
+{
+    31000,__parts
+}
+
+group,S
+{
+    scope,0
+    0,Idle
+}

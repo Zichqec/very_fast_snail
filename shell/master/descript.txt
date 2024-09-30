@@ -8,3 +8,52 @@ craftmanurl,https://github.com/Zichqec/very_fast_snail
 
 seriko.alignmenttodesktop,free
 seriko.use_self_alpha,1
+
+//Menu stuff
+
+//Text color for options that you're not hovering over
+menu.background.font.color.r,0
+menu.background.font.color.g,0
+menu.background.font.color.b,0
+
+//Text color for options that you're hovering over
+menu.foreground.font.color.r,255
+menu.foreground.font.color.g,255
+menu.foreground.font.color.b,255
+
+//Text color for options that are disabled/grayed out
+menu.disable.font.color.r,222
+menu.disable.font.color.g,222
+menu.disable.font.color.b,222
+
+//Color of the separator bars
+menu.separator.color.r,240
+menu.separator.color.g,240
+menu.separator.color.b,240
+
+menu.background.alignment,righttop
+menu.foreground.alignment,righttop
+menu.sidebar.alignment,bottom
+
+menu.background.bitmap.filename,menu_background.png
+menu.foreground.bitmap.filename,menu_foreground.png
+menu.sidebar.bitmap.filename,menu_sidebar.png
+
+//Dressup stuff
+
+sakura.menu,hidden
+
+//Trail
+//sakura.bindgroup0.name,trail,default
+//sakura.bindgroup0.default,1
+//sakura.bindgroup0.name,trail,simplesludge
+
+//Body paint
+sakura.bindoption0.group,bodypaint,mustselect
+sakura.bindgroup31000.name,bodypaint,basebeige
+sakura.bindgroup31000.default,1
+
+//Shell paint base
+sakura.bindoption1.group,shellpaint,mustselect
+sakura.bindgroup50000.name,shellpaint,basicbrown
+sakura.bindgroup50000.default,1
