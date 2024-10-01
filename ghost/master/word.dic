@@ -1,3 +1,12 @@
+traits
+{
+	"[snail name]? Big fan of %(salt), that one."
+	"[snail name] once %(madeitout) before getting caught."
+	"[snail name]. Solid choice. Watch out for %(thenightterrors), though."
+	"[snail name]... No one's been interested in it for a while. You know, because %(itbites)."
+	"[snail name]'s got a long list of interested sponsors right now, probably because %(itssoshiny)."
+}
+
 ballpoint
 {
 	"ballpoint"
@@ -221,6 +230,66 @@ madeitout
 	"drank every can of pop in the minifridge (and left the empty cans inside)"
 }
 
+timespan : pool
+{
+	_pick = ANY("second","minute","hour","day","week","month","year","other")
+	
+	if _pick == "other"
+	{
+		"a fortnight"
+		return
+	}
+	
+	_r = 0
+	if _pick == "second"
+	{
+		_r = RAND(60)
+	}
+	elseif _pick == "minute"
+	{
+		_r = RAND(60)
+	}
+	elseif _pick == "hour"
+	{
+		_r = RAND(24)
+		
+		if RAND(4) == 0
+		{
+			_r = ANY(24,36,48,72)
+		}
+	}
+	elseif _pick == "day"
+	{
+		_r = RAND(30)
+		
+		if RAND(4) == 0
+		{
+			_r = ANY(50,100,200,300)
+		}
+	}
+	elseif _pick == "week"
+	{
+		_r = RAND(3)
+	}
+	elseif _pick == "month"
+	{
+		_r = RAND(11)
+	}
+	elseif _pick == "year"
+	{
+		_r = RAND(3)
+	}
+	
+	_r += 1 //Prevent them from coming out as 0
+	
+	if _r == 1
+	{
+		if _pick == "hour"; "an hour"
+		else; "a %(_pick)"
+	}
+	else; "%(_r) %(_pick)s"
+}
+
 onTV
 {
 	"on TV"
@@ -365,4 +434,78 @@ thenightterrors
 	"broken tiles"
 	"abandoned craft projects"
 	"holes %(inthedrywall)"
+}
+
+SnailNameGenerator
+{
+	_id = _argv[0]
+	if _argv[0] == ""
+	{
+		_rand = TOSTR(RAND)
+		//ty terraria for inspiring me, but i'm using a different delimiter <3
+		_id = ghostver + "|" + SUBSTR(_rand,0,10)
+	}
+	
+	void SRAND(_id)
+	_rand = RAND(3)
+	
+	_type = "alliteration"
+	if _rand == 0; _type = "not alliteration"
+	
+	_firstlist = GETFUNCLIST("SnailNames.1")
+	_lastlist = GETFUNCLIST("SnailNames.2")
+	
+	_listlen = ARRAYSIZE(_firstlist)
+	
+	void SRAND(_id)
+	_num1 = RAND(_listlen)
+	_num2 = 0
+	if _type == "not alliteration"
+	{
+		void SRAND(_id)
+		_num2 = RAND(_listlen)
+		while _num2 == _num1
+		{
+			_num2 = RAND(_listlen)
+		}
+	}
+	else; _num2 = _num1
+	
+	_list1 = EVAL("%(_firstlist[_num1])")
+	_list2 = EVAL("%(_lastlist[_num2])")
+	
+	void SRAND(_id)
+	_name1 = _list1[RAND(ARRAYSIZE(_list1))]
+	void SRAND(_id)
+	_name2 = _list2[RAND(ARRAYSIZE(_list2))]
+	
+	"%(_name1) %(_name2)"
+}
+
+SnailNames.1.A : array
+{
+	"Agile"
+	"Angry"
+	"Artificial"
+}
+
+SnailNames.2.A : array
+{
+	"Alkaline"
+	"Aardvark"
+	"Apple"
+}
+
+SnailNames.1.B : array
+{
+	"Belligerent"
+	"Brave"
+	"Banded"
+}
+
+SnailNames.2.B : array
+{
+	"Bear"
+	"Brute"
+	"Bagel"
 }

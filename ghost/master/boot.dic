@@ -1,9 +1,12 @@
-OnFirstBoot
+OnFirstBoot : all
 {
 	stroke = 0
 	LastTalk = ""
 	
-	"\1\s[-1]\0\s[0]firstboot"
+	"\1\s[-1]\0\s[0]"
+	
+	"\_q\f[bold,1]\f[italic,1]\f[align,center]CHOOSE YOUR RACER!\n\f[align,left]\f[italic,default]\f[bold,default]\n"
+	"Snaily McSnailson"
 }
 
 OnInitialize
@@ -16,25 +19,9 @@ OnInitialize
 
 OnBoot
 {
-	_temp = SHIORI3FW.UserBirthday
-	_user_birthday = "%(_temp[1])/%(_temp[2])"
-	_today = "%(month)/%(day)"
-	
 	"\1\s[-1]\0\s[0]"
 	--
-	if _today == _user_birthday
-	{
-		"\0\s[0]It is %(username)'s birthday today.\w8 Happy birthday, %(username).\w8 Developer,\w4 you can add an interesting message here.\w8 It can be as long as you like.\w8 Or, you can remove it entirely."
-	}
-	elseif _today == "1/1"
-	{
-		"\0\s[0]It's new year's day.\w8 Happy %(year),\w4 %(username)."
-	}
-	else //Normal boot
-	{
-		"\0\s[0]Hello %(username).\w8 Good to see you."
-		"\0\s[0]Hello.\w8 Ready to make something cool?"
-	}
+	"snails"
 }
 
 OnClose
