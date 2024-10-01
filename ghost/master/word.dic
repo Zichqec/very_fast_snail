@@ -1,10 +1,11 @@
-traits
+traits : nonoverlap
 {
-	"[snail name]? Big fan of %(salt), that one."
-	"[snail name] once %(madeitout) before getting caught."
-	"[snail name]. Solid choice. Watch out for %(thenightterrors), though."
-	"[snail name]... No one's been interested in it for a while. You know, because %(itbites)."
-	"[snail name]'s got a long list of interested sponsors right now, probably because %(itssoshiny)."
+	_name = _argv[0]
+	"%(_name)? Big fan of %(salt), that one."
+	"%(_name) once %(madeitout) before getting caught."
+	"%(_name). Solid choice. Watch out for %(thenightterrors), though."
+	"%(_name)... No one's been interested in it for a while. You know, because %(itbites)."
+	"%(_name)'s got a long list of interested sponsors right now, probably because %(itssoshiny)."
 }
 
 ballpoint
@@ -442,9 +443,15 @@ SnailNameGenerator
 	if _argv[0] == ""
 	{
 		_rand = TOSTR(RAND)
-		//ty terraria for inspiring me, but i'm using a different delimiter <3
-		_id = ghostver + "|" + SUBSTR(_rand,0,10)
+		_id = SUBSTR(_rand,0,10)
 	}
+	elseif "|" _in_ _id
+	{
+		_id = _id[1,'|']
+	}
+	LOGGING("_id: %(_id)")
+	_id = TOINT(_id)
+	LOGGING("_id: %(_id)")
 	
 	void SRAND(_id)
 	_rand = RAND(3)
@@ -487,6 +494,8 @@ SnailNames.1.A : array
 	"Agile"
 	"Angry"
 	"Artificial"
+	"Ancient"
+	"Aching"
 }
 
 SnailNames.2.A : array
@@ -494,6 +503,8 @@ SnailNames.2.A : array
 	"Alkaline"
 	"Aardvark"
 	"Apple"
+	"Asp"
+	"Allegory"
 }
 
 SnailNames.1.B : array
@@ -501,6 +512,8 @@ SnailNames.1.B : array
 	"Belligerent"
 	"Brave"
 	"Banded"
+	"Burgling"
+	"Brandished"
 }
 
 SnailNames.2.B : array
@@ -508,4 +521,6 @@ SnailNames.2.B : array
 	"Bear"
 	"Brute"
 	"Bagel"
+	"Brain"
+	"Bringer"
 }

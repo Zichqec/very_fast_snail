@@ -2,11 +2,58 @@ OnFirstBoot : all
 {
 	stroke = 0
 	LastTalk = ""
+	SnailPickList = (GenerateSnail,GenerateSnail,GenerateSnail)
 	
 	"\1\s[-1]\0\s[0]"
+	--
+	OnFirst.SnailPick
+}
+
+OnFirst.SnailPick : all
+{
+	"\_q\f[bold,1]\f[italic,1]\f[align,center]\f[height,+2]CHOOSE YOUR RACER!\n\f[height,default]\f[align,left]\f[italic,default]\f[bold,default]\n"
 	
-	"\_q\f[bold,1]\f[italic,1]\f[align,center]CHOOSE YOUR RACER!\n\f[align,left]\f[italic,default]\f[bold,default]\n"
-	"Snaily McSnailson"
+	
+	foreach SnailPickList; _snail
+	{
+		_id = _snail[0,C_BYTE1]
+		_name = _snail[1,C_BYTE1]
+		_trait = _snail[2,C_BYTE1]
+		"\![*]\__q[OnFirst.SelectSnail,""%(_id)"",""%(_name)"",""%(_trait)""]%(_name)\__q\n"
+	}
+	"\n"
+	"\![*]\__q[OnFirst.NewSnailList]None of these, show me other snails\__q"
+}
+
+OnFirst.SelectSnail : all
+{
+	_name = reference1
+	_trait = reference2
+	
+	"\0\b[2]\t\*"
+	"%(_trait)\n\n\_q"
+	"\![*]\__q[OnFirst.SnailPick]Back\__q    \![*]\__q[OnFirst.SelectSnail.Confirm,""%(reference0)"",""%(reference1)"",""%(reference2)""]Choose this snail\__q"
+}
+
+OnFirst.SelectSnail.Confirm
+{
+	"Snail picked: %(reference)"
+}
+
+OnFirst.NewSnailList
+{
+	SnailPickList = (GenerateSnail,GenerateSnail,GenerateSnail)
+	OnFirst.SnailPick
+}
+
+GenerateSnail
+{
+	//ty terraria for inspiring me, but i'm using a different delimiter <3
+	_id = ghostver + "|" + SUBSTR(TOSTR(RAND),0,10)
+	_name = SnailNameGenerator(_id)
+	_trait = traits(_name)
+	
+	"%(_id)%(C_BYTE1)%(_name)%(C_BYTE1)%(_trait)"
 }
 
 OnInitialize
