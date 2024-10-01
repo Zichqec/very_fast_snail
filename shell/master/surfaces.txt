@@ -47,8 +47,12 @@ surface0
 	animation31000.pattern0,overlay,31000,0,0,0
 	
 	//basic mauve
-	animation31010.interval,bind
-	animation31010.pattern0,overlay,31010,0,0,0
+	animation31025.interval,bind
+	animation31025.pattern0,overlay,31025,0,0,0
+	
+	//cowprint mauve
+	animation32025.interval,bind
+	animation32025.pattern0,overlay,32025,0,0,0
 }
 
 surface1
@@ -62,10 +66,45 @@ surface1
 	animation31000.pattern2,overlay,31001,500,0,0
 	
 	//basic mauve
-	animation31010.interval,bind+always
-	animation31010.pattern0,overlay,31010,0,0,0
-	animation31010.pattern1,overlay,31011,500,0,0
-	animation31010.pattern2,overlay,31011,500,0,0
+	animation31025.interval,bind+always
+	animation31025.pattern0,overlay,31025,0,0,0
+	animation31025.pattern1,overlay,31026,500,0,0
+	animation31025.pattern2,overlay,31026,500,0,0
+	
+	//cowprint mauve
+	animation32025.interval,bind+always
+	animation32025.pattern0,overlay,32025,0,0,0
+	animation32025.pattern1,overlay,32026,500,0,0
+	animation32025.pattern2,overlay,32026,500,0,0
+
+	//headgear back and fronts will use coord anims to align..
+}
+
+surface2
+{
+	//———————— SNAIL BODY ————————
+	//———— base ————
+	//basic beige
+	animation31000.interval,bind+always
+	animation31000.pattern0,overlay,31000,0,0,0
+	animation31000.pattern1,overlay,31001,500,0,0
+	animation31000.pattern2,overlay,31001,500,0,0
+	
+	//basic mauve
+	animation31025.interval,bind+always
+	animation31025.pattern0,overlay,31027,0,0,0
+	animation31025.pattern1,overlay,31028,500,0,0
+	animation31025.pattern2,overlay,31027,500,0,0
+	animation31025.pattern3,overlay,31029,500,0,0
+	animation31025.pattern4,overlay,31027,500,0,0
+	
+	//cowprint mauve
+	animation32025.interval,bind+always
+	animation32025.pattern0,overlay,32027,0,0,0
+	animation32025.pattern1,overlay,32028,500,0,0
+	animation32025.pattern2,overlay,32027,500,0,0
+	animation32025.pattern3,overlay,32029,500,0,0
+	animation32025.pattern4,overlay,32027,500,0,0
 
 	//headgear back and fronts will use coord anims to align..
 }
@@ -79,8 +118,32 @@ surface.append0-9
 	animation50000.pattern0,overlay,50000,0,0,0
 	
 	//basic purple
-	animation50001.interval,bind
-	animation50001.pattern0,overlay,50001,0,0,0
+	animation50007.interval,bind
+	animation50007.pattern0,overlay,50007,0,0,0
+	
+	//chunky stripe brown
+	animation50050.interval,bind
+	animation50050.pattern0,overlay,50050,0,0,0
+	
+	//chunky stripe purple
+	animation50057.interval,bind
+	animation50057.pattern0,overlay,50057,0,0,0
+	
+	//single swirl brown
+	animation50100.interval,bind
+	animation50100.pattern0,overlay,50100,0,0,0
+	
+	//single swirl purple
+	animation50107.interval,bind
+	animation50107.pattern0,overlay,50107,0,0,0
+	
+	//radial swirl brown
+	animation50150.interval,bind
+	animation50150.pattern0,overlay,50150,0,0,0
+	
+	//radial swirl purple
+	animation50157.interval,bind
+	animation50157.pattern0,overlay,50157,0,0,0
 
 	point.basepos.y,335
 }
@@ -110,18 +173,75 @@ surface31001
 }
 
 //basic mauve
-surface31010
+surface31025
 {
 	element0,overlay,surface30000c.png,0,0
-	element1,overlayfast,surface31010.png,0,0
+	element1,overlayfast,surface31025.png,0,0
 	element2,overlay,surface30000l.png,0,0
 }
 
-surface31011
+surface31026
 {
 	element0,overlay,surface30001c.png,0,0
-	element1,overlayfast,surface31010.png,0,0
+	element1,overlayfast,surface31025.png,0,0
 	element2,overlay,surface30001l.png,0,0
+}
+
+surface31027
+{
+	element0,overlay,surface30002c.png,0,0
+	element1,overlayfast,surface31025.png,0,0
+	element2,overlay,surface30002l.png,0,0
+}
+
+surface31028
+{
+	element0,overlay,surface30003c.png,0,0
+	element1,overlayfast,surface31025.png,0,0
+	element2,overlay,surface30003l.png,0,0
+}
+
+surface31029
+{
+	element0,overlay,surface30004c.png,0,0
+	element1,overlayfast,surface31025.png,0,0
+	element2,overlay,surface30004l.png,0,0
+}
+
+//cowprint mauve
+surface32025
+{
+	element0,overlay,surface30000c.png,0,0
+	element1,overlayfast,surface32025.png,0,0
+	element2,overlay,surface30000l.png,0,0
+}
+
+surface32026
+{
+	element0,overlay,surface30001c.png,0,0
+	element1,overlayfast,surface32025.png,0,0
+	element2,overlay,surface30001l.png,0,0
+}
+
+surface32027
+{
+	element0,overlay,surface30002c.png,0,0
+	element1,overlayfast,surface32027.png,0,0
+	element2,overlay,surface30002l.png,0,0
+}
+
+surface32028
+{
+	element0,overlay,surface30003c.png,0,0
+	element1,overlayfast,surface32025.png,0,0
+	element2,overlay,surface30003l.png,0,0
+}
+
+surface32029
+{
+	element0,overlay,surface30004c.png,0,0
+	element1,overlayfast,surface32025.png,0,0
+	element2,overlay,surface30004l.png,0,0
 }
 
 //—————————————————————————————— Snail Clipping (Snipping) ——————————————————————————————
@@ -137,9 +257,57 @@ surface50000
 }
 
 //basic purple
-surface50001
+surface50007
 {
 	element0,overlay,surface50000c.png,0,0
-	element1,overlayfast,surface50001.png,0,0
+	element1,overlayfast,surface50007.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//chunky stripe brown
+surface50050
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50050.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//chunky stripe purple
+surface50057
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50057.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//single swirl brown
+surface50100
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50100.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//single swirl purple
+surface50107
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50107.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//radial swirl brown
+surface50150
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50150.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//radial swirl purple
+surface50157
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50157.png,0,0
 	element2,overlay,surface50000l.png,0,0
 }
