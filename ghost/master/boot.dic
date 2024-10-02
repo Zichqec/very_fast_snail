@@ -2,7 +2,20 @@ OnFirstBoot : all
 {
 	stroke = 0
 	LastTalk = ""
-	SnailPickList = (GenerateSnail,GenerateSnail,GenerateSnail)
+	SavedSnails = IARRAY
+	
+	CurrentSnail.ID = ""
+	CurrentSnail.Name = ""
+	CurrentSnail.Version = ""
+	CurrentSnail.Trait = ""
+	CurrentSnail.TotalRaces = 0
+	CurrentSnail.TotalRaceTime = 0
+	CurrentSnail.HighestCoolness = 0
+	CurrentSnail.TotalCrashes = 0
+	CurrentSnail.Loadout = IARRAY
+	CurrentSnail.DateSponsored = ""
+	
+	SnailPickList = (GenerateSnailChoices,GenerateSnailChoices,GenerateSnailChoices)
 	
 	"\1\s[-1]\0\s[0]"
 	--
@@ -37,24 +50,16 @@ OnFirst.SelectSnail : all
 
 OnFirst.SelectSnail.Confirm
 {
+	CreateSnail(reference0,reference1,reference2)
 	"Snail picked: %(reference)"
 }
 
 OnFirst.NewSnailList
 {
-	SnailPickList = (GenerateSnail,GenerateSnail,GenerateSnail)
+	SnailPickList = (GenerateSnailChoices,GenerateSnailChoices,GenerateSnailChoices)
 	OnFirst.SnailPick
 }
 
-GenerateSnail
-{
-	//ty terraria for inspiring me, but i'm using a different delimiter <3
-	_id = ghostver + "|" + SUBSTR(TOSTR(RAND),0,10)
-	_name = SnailNameGenerator(_id)
-	_trait = traits(_name)
-	
-	"%(_id)%(C_BYTE1)%(_name)%(C_BYTE1)%(_trait)"
-}
 
 OnInitialize
 {

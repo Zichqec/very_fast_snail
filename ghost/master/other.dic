@@ -44,6 +44,118 @@ ghostver
 	"1.0.0"
 }
 
+GenerateSnailChoices
+{
+	//ty terraria for inspiring me, but i'm using a different delimiter <3
+	_id = ghostver + "|" + GenerateID
+	_name = SnailNameGenerator(_id)
+	_trait = traits(_name)
+	
+	"%(_id)%(C_BYTE1)%(_name)%(C_BYTE1)%(_trait)"
+}
+
+GenerateID : all
+{
+	"%(RAND(10))"
+	"%(RAND(10))"
+	"%(RAND(10))"
+	"%(RAND(10))"
+	"%(RAND(10))"
+	"%(RAND(10))"
+	"%(RAND(10))"
+	"%(RAND(10))"
+	"%(RAND(10))"
+	"%(RAND(10))"
+	"%(RAND(10))"
+	"%(RAND(10))"
+	"%(RAND(10))"
+	"%(RAND(10))"
+	"%(RAND(10))"
+	"%(RAND(10))"
+}
+
+CreateSnail
+{
+	CurrentSnail.ID = _argv[0]
+	CurrentSnail.Name = _argv[1]
+	CurrentSnail.Version = ghostver
+	CurrentSnail.Trait = _argv[2]
+	CurrentSnail.TotalRaces = 0
+	CurrentSnail.TotalRaceTime = 0
+	CurrentSnail.HighestCoolness = 0
+	CurrentSnail.TotalCrashes = 0
+	CurrentSnail.Loadout = IARRAY
+	CurrentSnail.DateSponsored = "%(year)-%(month)-%(day):%(GETSECCOUNT)"
+}
+
+SaveSnail
+{
+	_index = ASEARCH(_argv[0],SavedSnails)
+	if _index == -1; _index = ARRAYSIZE(SavedSnails)
+	
+	_snaildata = ""
+	_snaildata += /
+	CurrentSnail.ID /
+	+ C_BYTE1 + CurrentSnail.Name /
+	+ C_BYTE1 + CurrentSnail.Version /
+	+ C_BYTE1 + CurrentSnail.Trait /
+	+ C_BYTE1 + CurrentSnail.TotalRaces /
+	+ C_BYTE1 + CurrentSnail.TotalRaceTime /
+	+ C_BYTE1 + CurrentSnail.HighestCoolness /
+	+ C_BYTE1 + CurrentSnail.TotalCrashes /
+	+ C_BYTE1 + CurrentSnail.Loadout /
+	+ C_BYTE1 + CurrentSnail.DateSponsored
+	
+	SavedSnails[_index] =_snaildata
+}
+
+LoadSnail
+{
+	_index = ASEARCH(_argv[0],SavedSnails)
+	if _index == -1; _index = 0
+	
+	_snaildata = SPLIT(SavedSnails[_index],C_BYTE1)
+	
+	CurrentSnail.ID = _snaildata[0]
+	CurrentSnail.Name = _snaildata[1]
+	CurrentSnail.Version = _snaildata[2]
+	CurrentSnail.Trait = _snaildata[3]
+	CurrentSnail.TotalRaces = TOINT(_snaildata[4])
+	CurrentSnail.TotalRaceTime = TOINT(_snaildata[5])
+	CurrentSnail.HighestCoolness = TOINT(_snaildata[6])
+	CurrentSnail.TotalCrashes = TOINT(_snaildata[7])
+	CurrentSnail.Loadout = SPLIT(_snaildata[8],",")
+	CurrentSnail.DateSponsored = _snaildata[9]
+}
+
+CurrentSnail : all
+{
+	"\0\b[2]\_q"
+	"I am a snail\n"
+	"My ID is %(CurrentSnail.ID)\n"
+	"My name is %(CurrentSnail.Name)\n"
+	"I was made in version %(CurrentSnail.Version)\n"
+	"My trait is \f[italic,1]""%(CurrentSnail.Trait)""\f[italic,default]\n"
+	"I've run in %(CurrentSnail.TotalRaces) races\n"
+	"My total time on the track is %(CurrentSnail.TotalRaceTime)\n"
+	"My highest cool score ever is %(CurrentSnail.HighestCoolness)\n"
+	"My current loadout is %(CurrentSnail.Loadout)\n"
+	"I was sponsored on %(CurrentSnail.DateSponsored)\n"
+	"\n\![*]\q[Done,OnBlank]"
+}
+
+
+OnNotifyDressupInfo
+{
+	Dressups.Current = IARRAY
+	Dressups.Available = IARRAY
+	
+	foreach reference; _ref
+	{
+		if _ref[4,C_BYTE1] == "1"; Dressups.Current ,= _ref
+		Dressups.Available ,= _ref
+	}
+}
 
 //—————————————————————————————— Right click menu links ——————————————————————————————
 

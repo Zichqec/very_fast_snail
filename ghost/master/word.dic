@@ -442,8 +442,7 @@ SnailNameGenerator
 	_id = _argv[0]
 	if _argv[0] == ""
 	{
-		_rand = TOSTR(RAND)
-		_id = SUBSTR(_rand,0,10)
+		_id = GenerateID
 	}
 	elseif "|" _in_ _id
 	{
