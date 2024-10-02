@@ -138,6 +138,8 @@ OnDebug.SnailPicker : all
 		"\__q[OnDebug.SnailPicker.Select,""%(SavedSnails.ID[_i])""]%(SavedSnails.Name[_i])\__q\n"
 	}
 	"\n\![*]\q[See snail stats,OnDebug.CurrentSnail]"
+	"\n\n\![*]\q[Add a snail,OnFirst.SnailPick]"
+	
 	"\n\n\![*]\q[Back,OnSakuraMenu]"
 }
 
