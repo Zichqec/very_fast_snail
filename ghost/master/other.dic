@@ -96,10 +96,7 @@ GetSnailIndex
 
 SaveSnail
 {
-	LOGGING("SAVING SNAIL =====================================")
-	LOGGING("_argv[0]: %(_argv[0])")
 	_index = GetSnailIndex(_argv[0])
-	LOGGING("_index: %(_index)")
 	if _index == -1; _index = ARRAYSIZE(SavedSnails.ID)
 	
 	SavedSnails.ID[_index] = CurrentSnail.ID
@@ -139,12 +136,9 @@ LoadSnail
 	CurrentSnail.HighestCoolness = SavedSnails.HighestCoolness[_index]
 	CurrentSnail.TotalCrashes = SavedSnails.TotalCrashes[_index]
 	
-	LOGGING("====================================================================")
 	_loadout = IARRAY
-	LOGGING("SavedSnails.Loadout: %(SavedSnails.Loadout)")
 	foreach SPLIT(SavedSnails.Loadout[_index],"|"); _item
 	{
-		LOGGING("_loadout: %(_loadout)")
 		_loadout ,= _item
 	}
 	CurrentSnail.Loadout = _loadout
