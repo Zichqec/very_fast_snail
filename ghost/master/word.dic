@@ -444,9 +444,9 @@ SnailNameGenerator
 	{
 		_id = GenerateID
 	}
-	elseif "|" _in_ _id
+	elseif ":" _in_ _id
 	{
-		_id = _id[1,'|']
+		_id = _id[1,':']
 	}
 	LOGGING("_id: %(_id)")
 	_id = TOINT(_id)

@@ -2,7 +2,16 @@ OnFirstBoot : all
 {
 	stroke = 0
 	LastTalk = ""
-	SavedSnails = IARRAY
+	SavedSnails.ID = IARRAY
+	SavedSnails.Name = IARRAY
+	SavedSnails.Version = IARRAY
+	SavedSnails.Trait = IARRAY
+	SavedSnails.TotalRaces = IARRAY
+	SavedSnails.TotalRaceTime = IARRAY
+	SavedSnails.HighestCoolness = IARRAY
+	SavedSnails.TotalCrashes = IARRAY
+	SavedSnails.Loadout = IARRAY
+	SavedSnails.DateSponsor = IARRAY
 	
 	CurrentSnail.ID = ""
 	CurrentSnail.Name = ""

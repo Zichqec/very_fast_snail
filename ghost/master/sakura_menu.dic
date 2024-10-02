@@ -15,7 +15,14 @@ OnSakuraMenu : all
 	if LastTalk != ""; "  \![*]\q[Say that again,OnLastTalk]"
 	"\n\n"
 	
+	"\![*]\q[Change loadout,OnEquipMenu,bodypaint]\n\n"
+	
 	"\![*]\q[Change talk rate,OnTalkRateMenu]\n\n"
+	
+	if SHIORI3FW.DebugMode
+	{
+		"\![*]\q[Change snails,OnDebug.SnailPicker]\n\n"
+	}
 	
 	"\![*]\q[Nevermind,blank]"	
 }
@@ -23,6 +30,75 @@ OnSakuraMenu : all
 OnLastTalk
 {
 	LastTalk
+}
+
+OnEquipMenu : all
+{
+	_category = reference0
+	if _category == ""; _category = "bodypaint"
+	
+	"\C\![lock,balloonrepaint]\c\0\b[2]\t\*\![no-autopause]\_q"
+	
+	foreach Dressups.Categories; _cat
+	{
+		"\__q[OnEquipMenu,%(_cat)]%(_cat)\__q  "
+	}
+	"\n\n"
+	
+	foreach Dressups.Available; _dressup
+	{
+		_dressup = SPLIT(_dressup,C_BYTE1)
+		//character, category, part, options, on/off, thumbnail
+		if _dressup[1] == _category
+		{
+			if _dressup[4] == "1"; "\![*]"
+			"\__q[OnEquipMenu.ToggleItem,""%(_dressup[1])"",""%(_dressup[2])""]%(_dressup[2])\__q\n"
+		}
+	}
+	"\n"
+	"\![*]\__q[OnEquipMenu.Confirm]Done\__q\![unlock,balloonrepaint]"
+}
+
+OnEquipMenu.ToggleItem : all
+{
+	"\C\![lock,balloonrepaint]\c\0\b[0]\_q\![bind,""%(reference0)"",""%(reference1)""] "
+	"\![raise,OnEquipMenu,""%(reference0)""]"
+}
+
+OnEquipMenu.Confirm : all
+{
+	"\0\b[0]\_q\t\*\![no-autopause]"
+	"Save the current loadout?\n\n"
+	"\![*]\__q[OnEquipMenu.Save]Yes, save this loadout\__q\n\n"
+	"\![*]\__q[OnEquipMenu.Revert]No, go back to the previous loadout\__q"
+}
+
+OnEquipMenu.Save : all
+{
+	//TODO legality check
+	CurrentSnail.Loadout = Dressups.Current
+	OnSakuraMenu
+}
+
+OnEquipMenu.Revert : all
+{
+	"\0"
+	RefreshDressups
+}
+
+RefreshDressups : all
+{
+	//character, category, part, options, on/off, thumbnail
+	foreach Dressups.Current; _dressup
+	{
+		_dressup = SPLIT(_dressup,C_BYTE1)
+		"\![bind,%(_dressup[1]),%(_dressup[2]),0]"
+	}
+	foreach CurrentSnail.Loadout; _dressup
+	{
+		_dressup = SPLIT(_dressup,C_BYTE1)
+		"\![bind,%(_dressup[1]),%(_dressup[2]),1]"
+	}
 }
 
 OnTalkRateMenu : all
@@ -51,4 +127,42 @@ OnTalkRateMenu : all
 OnTalkRateChange
 {
 	aitalkinterval = TOINT(reference0)
+}
+
+OnDebug.SnailPicker : all
+{
+	"\0\b[2]\_q\![no-autopause]"
+	for _i = 0; _i < ARRAYSIZE(SavedSnails.ID); _i++
+	{
+		if SavedSnails.ID[_i] == CurrentSnail.ID; "\![*]"
+		"\__q[OnDebug.SnailPicker.Select,""%(SavedSnails.ID[_i])""]%(SavedSnails.Name[_i])\__q\n"
+	}
+	"\n\![*]\q[See snail stats,OnDebug.CurrentSnail]"
+	"\n\n\![*]\q[Back,OnSakuraMenu]"
+}
+
+OnDebug.SnailPicker.Select
+{
+	SaveSnail(CurrentSnail.ID)
+	LOGGING("SAVING %(CurrentSnail.ID) %(CurrentSnail.Name)")
+	LoadSnail(reference0)
+	LOGGING("LOADING %(CurrentSnail.ID) %(CurrentSnail.Name)")
+	
+	"\C%(RefreshDressups)\![raise,OnDebug.SnailPicker]"
+}
+
+OnDebug.CurrentSnail : all
+{
+	"\0\b[2]\_q"
+	"I am a snail\n"
+	"My ID is %(CurrentSnail.ID)\n"
+	"My name is %(CurrentSnail.Name)\n"
+	"I was made in version %(CurrentSnail.Version)\n"
+	"My trait is \f[italic,1]""%(CurrentSnail.Trait)""\f[italic,default]\n"
+	"I've run in %(CurrentSnail.TotalRaces) races\n"
+	"My total time on the track is %(CurrentSnail.TotalRaceTime)\n"
+	"My highest cool score ever is %(CurrentSnail.HighestCoolness)\n"
+	"My current loadout is %(CurrentSnail.Loadout)\n"
+	"I was sponsored on %(CurrentSnail.DateSponsored)\n"
+	"\n\![*]\q[Back,OnDebug.SnailPicker]  \![*]\q[Done,OnBlank]"
 }

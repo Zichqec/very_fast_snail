@@ -47,7 +47,7 @@ ghostver
 GenerateSnailChoices
 {
 	//ty terraria for inspiring me, but i'm using a different delimiter <3
-	_id = ghostver + "|" + GenerateID
+	_id = ghostver + ":" + GenerateID
 	_name = SnailNameGenerator(_id)
 	_trait = traits(_name)
 	
@@ -86,74 +86,88 @@ CreateSnail
 	CurrentSnail.TotalCrashes = 0
 	CurrentSnail.Loadout = IARRAY
 	CurrentSnail.DateSponsored = "%(year)-%(month)-%(day):%(GETSECCOUNT)"
+	SaveSnail(_argv[0])
+}
+
+GetSnailIndex
+{
+	ASEARCH(_argv[0],SavedSnails.ID)
 }
 
 SaveSnail
 {
-	_index = ASEARCH(_argv[0],SavedSnails)
-	if _index == -1; _index = ARRAYSIZE(SavedSnails)
+	LOGGING("SAVING SNAIL =====================================")
+	LOGGING("_argv[0]: %(_argv[0])")
+	_index = GetSnailIndex(_argv[0])
+	LOGGING("_index: %(_index)")
+	if _index == -1; _index = ARRAYSIZE(SavedSnails.ID)
 	
-	_snaildata = ""
-	_snaildata += /
-	CurrentSnail.ID /
-	+ C_BYTE1 + CurrentSnail.Name /
-	+ C_BYTE1 + CurrentSnail.Version /
-	+ C_BYTE1 + CurrentSnail.Trait /
-	+ C_BYTE1 + CurrentSnail.TotalRaces /
-	+ C_BYTE1 + CurrentSnail.TotalRaceTime /
-	+ C_BYTE1 + CurrentSnail.HighestCoolness /
-	+ C_BYTE1 + CurrentSnail.TotalCrashes /
-	+ C_BYTE1 + CurrentSnail.Loadout /
-	+ C_BYTE1 + CurrentSnail.DateSponsored
+	SavedSnails.ID[_index] = CurrentSnail.ID
+	SavedSnails.Name[_index] = CurrentSnail.Name
+	SavedSnails.Version[_index] = CurrentSnail.Version
+	SavedSnails.Trait[_index] = CurrentSnail.Trait
+	SavedSnails.TotalRaces[_index] = CurrentSnail.TotalRaces
+	SavedSnails.TotalRaceTime[_index] = CurrentSnail.TotalRaceTime
+	SavedSnails.HighestCoolness[_index] = CurrentSnail.HighestCoolness
+	SavedSnails.TotalCrashes[_index] = CurrentSnail.TotalCrashes
 	
-	SavedSnails[_index] =_snaildata
+	_loadout = ""
+	foreach CurrentSnail.Loadout; _item
+	{
+		if _loadout != ""; _loadout += "|"
+		_loadout += _item
+	}
+	SavedSnails.Loadout[_index] = _loadout
+	
+	SavedSnails.DateSponsor[_index] = CurrentSnail.DateSponsor
+	
 }
 
 LoadSnail
 {
-	_index = ASEARCH(_argv[0],SavedSnails)
+	_index = GetSnailIndex(_argv[0])
 	if _index == -1; _index = 0
 	
-	_snaildata = SPLIT(SavedSnails[_index],C_BYTE1)
+	_snaildata = SPLIT(SavedSnails[_index],"|")
 	
-	CurrentSnail.ID = _snaildata[0]
-	CurrentSnail.Name = _snaildata[1]
-	CurrentSnail.Version = _snaildata[2]
-	CurrentSnail.Trait = _snaildata[3]
-	CurrentSnail.TotalRaces = TOINT(_snaildata[4])
-	CurrentSnail.TotalRaceTime = TOINT(_snaildata[5])
-	CurrentSnail.HighestCoolness = TOINT(_snaildata[6])
-	CurrentSnail.TotalCrashes = TOINT(_snaildata[7])
-	CurrentSnail.Loadout = SPLIT(_snaildata[8],",")
-	CurrentSnail.DateSponsored = _snaildata[9]
+	CurrentSnail.ID = SavedSnails.ID[_index]
+	CurrentSnail.Name = SavedSnails.Name[_index]
+	CurrentSnail.Version = SavedSnails.Version[_index]
+	CurrentSnail.Trait = SavedSnails.Trait[_index]
+	CurrentSnail.TotalRaces = SavedSnails.TotalRaces[_index]
+	CurrentSnail.TotalRaceTime = SavedSnails.TotalRaceTime[_index]
+	CurrentSnail.HighestCoolness = SavedSnails.HighestCoolness[_index]
+	CurrentSnail.TotalCrashes = SavedSnails.TotalCrashes[_index]
+	
+	LOGGING("====================================================================")
+	_loadout = IARRAY
+	LOGGING("SavedSnails.Loadout: %(SavedSnails.Loadout)")
+	foreach SPLIT(SavedSnails.Loadout[_index],"|"); _item
+	{
+		LOGGING("_loadout: %(_loadout)")
+		_loadout ,= _item
+	}
+	CurrentSnail.Loadout = _loadout
+	
+	CurrentSnail.DateSponsor = SavedSnails.DateSponsor[_index]
 }
 
-CurrentSnail : all
-{
-	"\0\b[2]\_q"
-	"I am a snail\n"
-	"My ID is %(CurrentSnail.ID)\n"
-	"My name is %(CurrentSnail.Name)\n"
-	"I was made in version %(CurrentSnail.Version)\n"
-	"My trait is \f[italic,1]""%(CurrentSnail.Trait)""\f[italic,default]\n"
-	"I've run in %(CurrentSnail.TotalRaces) races\n"
-	"My total time on the track is %(CurrentSnail.TotalRaceTime)\n"
-	"My highest cool score ever is %(CurrentSnail.HighestCoolness)\n"
-	"My current loadout is %(CurrentSnail.Loadout)\n"
-	"I was sponsored on %(CurrentSnail.DateSponsored)\n"
-	"\n\![*]\q[Done,OnBlank]"
-}
+
 
 
 OnNotifyDressupInfo
 {
 	Dressups.Current = IARRAY
 	Dressups.Available = IARRAY
+	Dressups.Categories = IARRAY
 	
 	foreach reference; _ref
 	{
+		//character, category, part, options, on/off, thumbnail
 		if _ref[4,C_BYTE1] == "1"; Dressups.Current ,= _ref
 		Dressups.Available ,= _ref
+		
+		if ASEARCH(_ref[1,C_BYTE1],Dressups.Categories) == -1; Dressups.Categories ,= _ref[1,C_BYTE1]
 	}
 }
 
