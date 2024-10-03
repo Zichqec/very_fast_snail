@@ -1,0 +1,99 @@
+charset,UTF-8
+type,balloon
+use_self_alpha,1
+use_input_alpha,1
+//overlay_outside_balloon,1
+
+
+//——— Basic information ———
+name,Very Fast Speedway
+craftman,Galla
+craftmanw,Galla
+craftmanurl,https://gallathegalla.github.io/gtg-ghosts/
+homeurl,https://raw.githubusercontent.com/GallaTheGalla/very_fast_speedway/main/
+
+
+//——— Display area ———
+origin.x,0
+origin.y,0
+
+validrect.left,5
+validrect.top,40
+validrect.right,-55
+validrect.bottom,-40
+
+wordwrappoint.x,-70
+
+
+//——— Font ———
+font.name,Verdana
+font.height,14
+
+font.color.r,000
+font.color.g,040
+font.color.b,015
+
+anchor.font.color.r,015
+anchor.font.color.g,084
+anchor.font.color.b,138
+
+cursor.font.color.r,015
+cursor.font.color.g,084
+cursor.font.color.b,138
+
+cursor.style,underline
+
+disable.font.color.r,146
+disable.font.color.g,135
+disable.font.color.b,178
+
+
+//——— Arrows ———
+arrow0.x,-18
+arrow0.y,5
+
+arrow1.x,-18
+arrow1.y,-20
+
+
+//——— Online marker ———
+onlinemarker.x,5
+onlinemarker.y,-22
+
+//onlinemarker.interval,175
+
+
+//——— SSTP ———
+sstpmarker.x,5
+sstpmarker.y,5
+
+sstpmessage.font.name,Verdana
+sstpmessage.font.height,11
+
+sstpmessage.x,22
+sstpmessage.xr,-70
+sstpmessage.y,7
+
+sstpmessage.font.color.r,000
+sstpmessage.font.color.g,020
+sstpmessage.font.color.b,010
+
+
+//——— Number ———
+number.font.name,Verdana
+number.font.height,11
+
+number.xr,-55
+number.y,-20
+
+number.font.color.r,000
+number.font.color.g,020
+number.font.color.b,010
+
+
+//——— Input box ———
+communicatebox.x,8
+communicatebox.y,8
+
+communicatebox.width,283
+communicatebox.height,20
