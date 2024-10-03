@@ -24,6 +24,13 @@ OnFirstBoot : all
 	CurrentSnail.Loadout = IARRAY
 	CurrentSnail.DateSponsored = ""
 	
+	HighestAllTimeCoolness = 0
+	
+	PurchasedItems = IARRAY
+	PurchasedItems ,= "bodypaint,Beige Basic" //TODO these'll need updated if the category names change
+	PurchasedItems ,= "shellpaint,Brown Basic"
+	Lettuce = 0
+	
 	SnailPickList = (GenerateSnailChoices,GenerateSnailChoices,GenerateSnailChoices)
 	
 	"\1\s[-1]\0\s[0]"

@@ -9,6 +9,7 @@ dicdir, yaya_base
 
 dic, aitalk.dic
 dic, boot.dic
+dic, item_details.dic
 dic, mouse.dic
 dic, meta.dic
 dic, other.dic

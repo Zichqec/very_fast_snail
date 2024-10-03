@@ -158,11 +158,53 @@ OnNotifyDressupInfo
 	foreach reference; _ref
 	{
 		//character, category, part, options, on/off, thumbnail
-		if _ref[4,C_BYTE1] == "1"; Dressups.Current ,= _ref
+		if _ref[4,C_BYTE1] == "1"; Dressups.Current ,= "%(_ref[1,C_BYTE1]),%(_ref[2,C_BYTE1])"
 		Dressups.Available ,= _ref
 		
 		if ASEARCH(_ref[1,C_BYTE1],Dressups.Categories) == -1; Dressups.Categories ,= _ref[1,C_BYTE1]
 	}
+}
+
+IsOwned
+{
+	//category, name
+	_key = "%(_argv[0]),%(_argv[1])"
+	
+	if ASEARCH(_key,PurchasedItems) != -1; 1
+	else; 0
+}
+
+CurrentStats
+{
+	_array = Dressups.Current
+	if _argv[0] == "loadout"; _array = CurrentSnail.Loadout
+	_cost = 0
+	_speed = 0
+	_coolness = 0
+	_explosiveness = 0
+	foreach _array; _dressup
+	{
+		foreach ItemDetails; _item
+		{
+			if _item[0] == _dressup[0] && _item[1] == _dressup[1]
+			{
+				//Category,Name,Unlocked,Price,Speed,Coolness,Explosiveness
+				_speed += TOINT(_item[4])
+				_coolness += TOINT(_item[5])
+				_explosiveness += TOINT(_item[6])
+				if !IsOwned(_dressup[0],_dressup[1])
+				{
+					_cost += TOINT(_item[3])
+				}
+			}
+		}
+	}
+	(_speed,_coolness,_explosiveness,_cost)
+}
+
+L
+{
+	"\f[strike,1]L\f[strike,default]"
 }
 
 //—————————————————————————————— Right click menu links ——————————————————————————————

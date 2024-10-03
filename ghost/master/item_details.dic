@@ -1,0 +1,16 @@
+ItemDetails : array
+{
+	//Category,Name,Unlock condition (1 if always available),Price,Speed,Coolness,Explosiveness
+	"bodypaint,Beige Basic,1,20,0,0,0"
+	"bodypaint,Mauve Basic,1,20,0,0,0"
+	"bodypaint,Mauve Cowprint,1,20,0,0,0"
+	
+	"shellpaint,Brown Basic,1,20,0,0,0"
+	"shellpaint,Purple Basic,1,20,0,0,0"
+	"shellpaint,Brown Chunky Stripe,%(hour == 18),20,1,2,3" //testing
+	"shellpaint,Purple Chunky Stripe,%(hour == 18),20,1,2,3"
+	"shellpaint,Brown Single Swirl,%(HighestAllTimeCoolness > 1),22,1,5,4"
+	"shellpaint,Purple Single Swirl,%(HighestAllTimeCoolness > 1),22,1,5,4"
+	"shellpaint,Brown Radial Swirl,%(HighestAllTimeCoolness > 1),200,3,2,1"
+	"shellpaint,Purple Radial Swirl,%(HighestAllTimeCoolness > 1),200,3,2,1"
+}

@@ -16,6 +16,8 @@ OnSakuraMenu : all
 	"\n\n"
 	
 	"\![*]\q[Change loadout,OnEquipMenu,bodypaint]\n\n"
+	"\![*]\q[Snail shop,OnShopMenu,bodypaint]\n\n"
+	
 	
 	"\![*]\q[Change talk rate,OnTalkRateMenu]\n\n"
 	
@@ -49,7 +51,7 @@ OnEquipMenu : all
 	{
 		_dressup = SPLIT(_dressup,C_BYTE1)
 		//character, category, part, options, on/off, thumbnail
-		if _dressup[1] == _category
+		if _dressup[1] == _category && IsOwned(_dressup[1],_dressup[2])
 		{
 			if _dressup[4] == "1"; "\![*]"
 			"\__q[OnEquipMenu.ToggleItem,""%(_dressup[1])"",""%(_dressup[2])""]%(_dressup[2])\__q\n"
@@ -67,6 +69,12 @@ OnEquipMenu.ToggleItem : all
 
 OnEquipMenu.Confirm : all
 {
+	if CurrentSnail.Loadout == Dressups.Current
+	{
+		OnSakuraMenu
+		return
+	}
+	
 	"\0\b[0]\_q\t\*\![no-autopause]"
 	"Save the current loadout?\n\n"
 	"\![*]\__q[OnEquipMenu.Save]Yes, save this loadout\__q\n\n"
@@ -77,6 +85,7 @@ OnEquipMenu.Save : all
 {
 	//TODO legality check
 	CurrentSnail.Loadout = Dressups.Current
+	RefreshDressups
 	OnSakuraMenu
 }
 
@@ -86,19 +95,170 @@ OnEquipMenu.Revert : all
 	RefreshDressups
 }
 
-RefreshDressups : all
+OnShopMenu : all
 {
-	//character, category, part, options, on/off, thumbnail
+	_category = reference0
+	if _category == ""; _category = "bodypaint"
+	
+	"\C\![lock,balloonrepaint]\c\0\b[2]\t\*\![no-autopause]\_q"
+	
+	foreach Dressups.Categories; _cat
+	{
+		"\__q[OnShopMenu,%(_cat)]%(_cat)\__q  "
+	}
+	"\n\n"
+	
+	foreach ItemDetails; _item
+	{
+		_purchased = IsOwned(_item[0],_item[1])
+		//Category,Name,Unlocked,Price,Speed,Coolness,Explosiveness
+		if _item[0] == _category && (_item[2] == "1" || _purchased)
+		{
+			_choice = "\__q[OnShopMenu.ToggleItem,""%(_item[0])"",""%(_item[1])""]%(_item[1])\__q"
+			
+			if ASEARCH("%(_item[0]),%(_item[1])",Dressups.Current) != -1; "\![*]"
+			
+			switch _purchased
+			{
+				"%(_choice) %(L)%(_item[3])"
+				"\f[color,disabled]%(_choice) (purchased)\f[color,default]"
+			}
+			"\n"
+		}
+	}
+	"\n"
+	"\![*]\__q[OnShopMenu.Confirm]Done\__q\![unlock,balloonrepaint]"
+	
+	"\1\b[0]\![lock,balloonrepaint]\c"
+	
+	_stats = CurrentStats
+	_speed = _stats[0]
+	_coolness = _stats[1]
+	_explosiveness = _stats[2]
+	_cost = _stats[3]
+	
+	"Cost: %(L)%(_cost)\n"
+	"Speed: %(_speed)\n"
+	"Coolness: %(_coolness)\n"
+	"Explosiveness: %(_explosiveness)\n"
+	
+	"\![unlock,balloonrepaint]\0"
+}
+
+OnShopMenu.ToggleItem : all
+{
+	"\C\![lock,balloonrepaint]\c\0\b[0]\_q\![bind,""%(reference0)"",""%(reference1)""] "
+	"\![raise,OnShopMenu,""%(reference0)""]"
+}
+
+OnShopMenu.Confirm : all
+{
+	if CurrentSnail.Loadout == Dressups.Current
+	{
+		OnSakuraMenu
+		return
+	}
+	
+	_cost = 0
+	_count = 0
 	foreach Dressups.Current; _dressup
 	{
-		_dressup = SPLIT(_dressup,C_BYTE1)
-		"\![bind,%(_dressup[1]),%(_dressup[2]),0]"
+		if !IsOwned(_dressup[0],_dressup[1])
+		{
+			foreach ItemDetails; _item
+			{
+				if _item[0] == _dressup[0] && _item[1] == _dressup[1]
+				{
+					_count++
+					_cost += TOINT(_item[3])
+				}
+			}
+		}
+	}
+	
+	_s = ""
+	_thisitem = "this item"
+	if _count != 1
+	{
+		_s = "s"
+		_thisitem = "these items"
+	}
+	
+	"\0\b[0]\_q\t\*\![no-autopause]"
+	
+	if _count == 0
+	{
+		"Save the current loadout?\n\n"
+		"\![*]\__q[OnEquipMenu.Save]Yes, save this loadout\__q\n\n"
+		"\![*]\__q[OnEquipMenu.Revert]No, go back to the previous loadout\__q"
+	}
+	elseif _cost > Lettuce
+	{
+		"The cost of %(_count) item%(_s) comes to %(_cost) lettuce. You can't afford %(_thisitem).\n\n"
+		"\![*]\__q[OnShopMenu]Back to the shop\__q\n\n"
+		"\![*]\__q[OnShopMenu.Revert]Nevermind, I'll shop another time\__q"
+	}
+	else
+	{
+		"Purchase %(_count) item%(_s) for %(_cost) lettuce?\n\n"
+		"\![*]\__q[OnShopMenu.Save,keep,%(_cost)]Yes, purchase %(_thisitem) and save this loadout\__q\n\n"
+		"\![*]\__q[OnShopMenu.Save,leave,%(_cost)]Yes, purchase %(_thisitem) but use previous loadout\__q\n\n"
+		"\![*]\__q[OnShopMenu]No, go back to shopping\__q\n\n"
+		"\![*]\__q[OnShopMenu.Revert]No, go back to the previous loadout\__q"
+	}
+}
+
+OnShopMenu.Save : all
+{
+	Lettuce -= TOINT(reference1)
+	
+	foreach Dressups.Current; _dressup
+	{
+		if !IsOwned(_dressup[0],_dressup[1])
+		{
+			foreach ItemDetails; _item
+			{
+				if _item[0] == _dressup[0] && _item[1] == _dressup[1]
+				{
+					PurchasedItems ,= "%(_item[0]),%(_item[1])"
+				}
+			}
+		}
+	}
+	
+	//TODO legality check
+	if reference0 == "keep"
+	{
+		CurrentSnail.Loadout = Dressups.Current
+	}
+	else //leave
+	{
+		RefreshDressups
+	}
+	OnSakuraMenu
+}
+
+OnShopMenu.Revert : all
+{
+	"\0"
+	RefreshDressups
+}
+
+RefreshDressups : all
+{
+	LOGGING("====================================================================")
+	foreach Dressups.Current; _dressup
+	{
+		"\![bind,%(_dressup[0]),%(_dressup[1]),0]"
 	}
 	foreach CurrentSnail.Loadout; _dressup
 	{
-		_dressup = SPLIT(_dressup,C_BYTE1)
-		"\![bind,%(_dressup[1]),%(_dressup[2]),1]"
+		"\![bind,%(_dressup[0]),%(_dressup[1]),1]"
 	}
+	_coolness = TOINT(CurrentStats[1])
+	LOGGING("_coolness: %(_coolness)")
+	if _coolness > HighestAllTimeCoolness; HighestAllTimeCoolness = _coolness
+	if _coolness > CurrentSnail.HighestCoolness; CurrentSnail.HighestCoolness = _coolness
 }
 
 OnTalkRateMenu : all
