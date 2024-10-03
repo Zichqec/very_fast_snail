@@ -448,31 +448,29 @@ SnailNameGenerator
 	{
 		_id = _id[1,':']
 	}
-	LOGGING("_id: %(_id)")
-	_id = TOINT(_id)
-	LOGGING("_id: %(_id)")
 	
-	void SRAND(_id)
-	_rand = RAND(3)
+	_firstnum = SUBSTR(_id,0,1)
+	_id = TOINT(_id)
 	
 	_type = "alliteration"
-	if _rand == 0; _type = "not alliteration"
+	if TOINT(_firstnum) >= 5; _type = "not alliteration"
+	
 	
 	_firstlist = GETFUNCLIST("SnailNames.1")
 	_lastlist = GETFUNCLIST("SnailNames.2")
 	
 	_listlen = ARRAYSIZE(_firstlist)
 	
-	void SRAND(_id)
-	_num1 = RAND(_listlen)
+	_num1 = _id % _listlen
 	_num2 = 0
 	if _type == "not alliteration"
 	{
-		void SRAND(_id)
-		_num2 = RAND(_listlen)
+		_temp = _id - TOINT(_firstnum)
+		_num2 = _temp % _listlen
 		while _num2 == _num1
 		{
-			_num2 = RAND(_listlen)
+			_temp -= TOINT(_firstnum)
+			_num2 = _temp % _listlen
 		}
 	}
 	else; _num2 = _num1
@@ -480,10 +478,8 @@ SnailNameGenerator
 	_list1 = EVAL("%(_firstlist[_num1])")
 	_list2 = EVAL("%(_lastlist[_num2])")
 	
-	void SRAND(_id)
-	_name1 = _list1[RAND(ARRAYSIZE(_list1))]
-	void SRAND(_id)
-	_name2 = _list2[RAND(ARRAYSIZE(_list2))]
+	_name1 = _list1[_id % ARRAYSIZE(_list1)]
+	_name2 = _list2[_id % ARRAYSIZE(_list2)]
 	
 	"%(_name1) %(_name2)"
 }
