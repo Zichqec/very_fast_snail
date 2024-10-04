@@ -66,9 +66,10 @@ OnFirst.SelectSnail : all
 	"\![*]\__q[OnFirst.SnailPick]Back\__q    \![*]\__q[OnFirst.SelectSnail.Confirm,""%(reference0)"",""%(reference1)"",""%(reference2)""]Choose this snail\__q"
 }
 
-OnFirst.SelectSnail.Confirm
+OnFirst.SelectSnail.Confirm : all
 {
 	CreateSnail(reference0,reference1,reference2)
+	RefreshDressups
 	"Snail picked: %(reference)"
 }
 
