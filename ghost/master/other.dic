@@ -85,7 +85,7 @@ CreateSnail
 	CurrentSnail.HighestCoolness = 0
 	CurrentSnail.TotalCrashes = 0
 	CurrentSnail.Loadout = IARRAY
-	CurrentSnail.DateSponsored = "%(year)-%(month)-%(day):%(GETSECCOUNT)"
+	CurrentSnail.DateSponsored = "%(year)-%(leadingmonth)-%(leadingday):%(GETSECCOUNT)"
 	SaveSnail(_argv[0])
 }
 
@@ -202,6 +202,18 @@ CurrentStats
 		}
 	}
 	(_speed,_coolness,_explosiveness,_cost,_count)
+}
+
+leadingmonth : all
+{
+	if month <= 9; "0"
+	month
+}
+
+leadingday : all
+{
+	if day <= 9; "0"
+	day
 }
 
 L
