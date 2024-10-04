@@ -216,6 +216,26 @@ leadingday : all
 	day
 }
 
+TimeDisplay : all
+{
+	_time = _argv[0]
+	
+	_days = _time / 86400
+	_time %= 86400
+	_hours = _time / 3600
+	_time %= 3600
+	_minutes = _time / 60
+	_seconds = _time % 60
+	
+	if _days > 0; "%(_days)d "
+	if _hours <= 9; "0"
+	"%(_hours):"
+	if _minutes <= 9; "0"
+	"%(_minutes):"
+	if _seconds <= 9; "0"
+	"%(_seconds)"
+}
+
 L
 {
 	"\f[strike,1]L\f[strike,default]"

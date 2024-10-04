@@ -449,11 +449,19 @@ SnailNameGenerator
 		_id = _id[1,':']
 	}
 	
-	_firstnum = SUBSTR(_id,0,1)
+	_firstnum = TOINT(SUBSTR(_id,0,1))
+	_1_four = TOINT(SUBSTR(_id,0,4))
+	_2_four = TOINT(SUBSTR(_id,4,4))
+	_3_four = TOINT(SUBSTR(_id,8,4))
+	_4_four = TOINT(SUBSTR(_id,12,4))
+	_1_six = TOINT(SUBSTR(_id,0,6))
+	_2_six = TOINT(SUBSTR(_id,2,6))
+	_3_six = TOINT(SUBSTR(_id,4,6))
+	_4_six = TOINT(SUBSTR(_id,6,6))
 	_id = TOINT(_id)
 	
 	_type = "alliteration"
-	if TOINT(_firstnum) >= 5; _type = "not alliteration"
+	if _firstnum >= 7; _type = "not alliteration"
 	
 	
 	_firstlist = GETFUNCLIST("SnailNames.1")
@@ -463,25 +471,124 @@ SnailNameGenerator
 	
 	_num1 = _id % _listlen
 	_num2 = 0
+	_num3 = 0
+	_num4 = 0
 	if _type == "not alliteration"
 	{
-		_temp = _id - TOINT(_firstnum)
+		_temp = _id - _firstnum
 		_num2 = _temp % _listlen
 		while _num2 == _num1
 		{
-			_temp -= TOINT(_firstnum)
+			_temp -= _firstnum
 			_num2 = _temp % _listlen
+		}
+		_temp -= _firstnum
+		_num3 = _temp % _listlen
+		while _num3 == _num2
+		{
+			_temp -= _firstnum
+			_num3 = _temp % _listlen
+		}
+		_temp -= _firstnum
+		_num4 = _temp % _listlen
+		while _num4 == _num3
+		{
+			_temp -= _firstnum
+			_num4 = _temp % _listlen
 		}
 	}
 	else; _num2 = _num1
 	
 	_list1 = EVAL("%(_firstlist[_num1])")
 	_list2 = EVAL("%(_lastlist[_num2])")
+	_list3 = EVAL("%(_firstlist[_num3])")
+	_list4 = EVAL("%(_lastlist[_num4])")
 	
-	_name1 = _list1[_id % ARRAYSIZE(_list1)]
-	_name2 = _list2[_id % ARRAYSIZE(_list2)]
+	_name1 = _list1[_1_four % ARRAYSIZE(_list1)]
+	_name3 = _list3[_2_four % ARRAYSIZE(_list3)]
+	_name2 = _list2[_3_four % ARRAYSIZE(_list2)]
+	_name4 = _list4[_4_four % ARRAYSIZE(_list4)]
 	
-	"%(_name1) %(_name2)"
+	_prefix = SnailName.Prefixes[_1_six % ARRAYSIZE(SnailName.Prefixes)]
+	_initials = SnailName.Initials[_2_six % ARRAYSIZE(SnailName.Initials)]
+	_numeral = SnailName.Numerals[_3_six % ARRAYSIZE(SnailName.Numerals)]
+	
+	_style = SnailNameStyle[_4_six % ARRAYSIZE(SnailNameStyle)]
+	
+	_name = _style
+	_name = REPLACE(_name,"{NAME1}",_name1)
+	_name = REPLACE(_name,"{NAME2}",_name2)
+	_name = REPLACE(_name,"{NAME3}",_name3)
+	_name = REPLACE(_name,"{NAME4}",_name4)
+	_name = REPLACE(_name,"{PREFIX}",_prefix)
+	_name = REPLACE(_name,"{INITIALS}",_initials)
+	_name = REPLACE(_name,"{NUMERAL}",_numeral)
+	
+	_name
+}
+
+SnailNameStyle : array
+{
+	//odds are first names, evens are second names...
+	"{NAME1} {NAME2}"
+	"{NAME1} {NAME2}"
+	"{NAME1} {NAME2}"
+	"{NAME1} {NAME2}"
+	"{NAME1} {NAME2}"
+	"{NAME1} {NAME2}"
+	"{NAME1} {NAME2}"
+	"{NAME1} {NAME2}"
+	"{NAME1} {NAME2}"
+	"{INITIALS} {NAME2}"
+	"{INITIALS} {NAME1} {NAME2}"
+	"{NAME1}-{NAME3} {NAME2}"
+	"{NAME1} {NAME2} the {NAME4}"
+	"{NAME2} the {NAME1} {NAME4}"
+	"{PREFIX} {NAME2} the {NAME4}"
+	"{PREFIX} {NAME2} {NUMERAL}, {NAME1} {NAME4}"
+	"{PREFIX} {INITIALS} {NAME2}"
+}
+
+SnailName.Prefixes : array
+{
+	"Dr."
+}
+
+SnailName.Initials : array
+{
+	"J.D."
+	"D.J."
+	"M.P."
+	"F.L."
+	"D.R."
+	"W.T."
+	"T.J."
+	"D.A."
+	"P.O."
+	"M.C."
+	"G.Z."
+}
+
+SnailName.Numerals : array
+{
+	"I"
+	"II"
+	"III"
+	"IV"
+	"V"
+	"VI"
+	"VII"
+	"VIII"
+	"IX"
+	"X"
+	"XI"
+	"XII"
+	"XIII"
+	"XIV"
+	"XV"
+	"XVI"
+	"XVII"
+	"XVIII" //wheels on the big rig... and they're rollin rollin rollin, rollin rollin rollin~
 }
 
 SnailNames.1.A : array

@@ -12,6 +12,8 @@ craftmanurl,https://github.com/Zichqec/very_fast_snail
 sakura.name,Racing Snail
 kero.name,Announcer
 
+balloon,Very Fast Speedway
+
 icon,icon.ico
 
 sstp.allowunspecifiedsend,0
