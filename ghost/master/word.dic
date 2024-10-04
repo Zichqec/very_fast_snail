@@ -471,8 +471,6 @@ SnailNameGenerator
 	
 	_num1 = _id % _listlen
 	_num2 = 0
-	_num3 = 0
-	_num4 = 0
 	if _type == "not alliteration"
 	{
 		_temp = _id - _firstnum
@@ -482,32 +480,16 @@ SnailNameGenerator
 			_temp -= _firstnum
 			_num2 = _temp % _listlen
 		}
-		_temp -= _firstnum
-		_num3 = _temp % _listlen
-		while _num3 == _num2
-		{
-			_temp -= _firstnum
-			_num3 = _temp % _listlen
-		}
-		_temp -= _firstnum
-		_num4 = _temp % _listlen
-		while _num4 == _num3
-		{
-			_temp -= _firstnum
-			_num4 = _temp % _listlen
-		}
 	}
 	else; _num2 = _num1
 	
 	_list1 = EVAL("%(_firstlist[_num1])")
 	_list2 = EVAL("%(_lastlist[_num2])")
-	_list3 = EVAL("%(_firstlist[_num3])")
-	_list4 = EVAL("%(_lastlist[_num4])")
 	
 	_name1 = _list1[_1_four % ARRAYSIZE(_list1)]
-	_name3 = _list3[_2_four % ARRAYSIZE(_list3)]
+	_name3 = _list1[_2_four % ARRAYSIZE(_list1)]
 	_name2 = _list2[_3_four % ARRAYSIZE(_list2)]
-	_name4 = _list4[_4_four % ARRAYSIZE(_list4)]
+	_name4 = _list2[_4_four % ARRAYSIZE(_list2)]
 	
 	_prefix = SnailName.Prefixes[_1_six % ARRAYSIZE(SnailName.Prefixes)]
 	_initials = SnailName.Initials[_2_six % ARRAYSIZE(SnailName.Initials)]
