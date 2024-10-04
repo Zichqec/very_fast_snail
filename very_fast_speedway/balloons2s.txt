@@ -1,0 +1,2 @@
+clickwaitmarker.x,-38
+clickwaitmarker.y,135

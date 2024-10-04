@@ -33,27 +33,30 @@ font.color.r,000
 font.color.g,040
 font.color.b,015
 
-anchor.font.color.r,015
-anchor.font.color.g,084
-anchor.font.color.b,138
+anchor.font.color.r,255
+anchor.font.color.g,233
+anchor.font.color.b,127
 
-cursor.font.color.r,015
-cursor.font.color.g,084
-cursor.font.color.b,138
+cursor.font.color.r,255
+cursor.font.color.g,233
+cursor.font.color.b,127
 
 cursor.style,underline
 
-disable.font.color.r,146
-disable.font.color.g,135
-disable.font.color.b,178
+//disable.font.color.r,146
+//disable.font.color.g,135
+//disable.font.color.b,178
 
 
 //——— Arrows ———
-arrow0.x,-18
+arrow0.x,-38
 arrow0.y,5
 
-arrow1.x,-18
-arrow1.y,-20
+arrow1.x,-38
+arrow1.y,-35
+
+clickwaitmarker.x,-38
+clickwaitmarker.y,85
 
 
 //——— Online marker ———
@@ -92,8 +95,12 @@ number.font.color.b,010
 
 
 //——— Input box ———
-communicatebox.x,8
-communicatebox.y,8
+communicatebox.x,5
+communicatebox.y,15
 
-communicatebox.width,283
+communicatebox.width,390
 communicatebox.height,20
+
+communicatebox.font.color.r,000
+communicatebox.font.color.g,000
+communicatebox.font.color.b,000
