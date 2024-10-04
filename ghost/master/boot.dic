@@ -31,6 +31,8 @@ OnFirstBoot : all
 	PurchasedItems ,= "shellpaint,Brown Basic"
 	Lettuce = 0
 	
+	EquipFilter = "All"
+	
 	SnailPickList = (GenerateSnailChoices,GenerateSnailChoices,GenerateSnailChoices)
 	
 	"\1\s[-1]\0\s[0]"

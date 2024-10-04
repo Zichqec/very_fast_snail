@@ -182,6 +182,7 @@ CurrentStats
 	_speed = 0
 	_coolness = 0
 	_explosiveness = 0
+	_count = 0
 	foreach _array; _dressup
 	{
 		foreach ItemDetails; _item
@@ -195,11 +196,12 @@ CurrentStats
 				if !IsOwned(_dressup[0],_dressup[1])
 				{
 					_cost += TOINT(_item[3])
+					_count++
 				}
 			}
 		}
 	}
-	(_speed,_coolness,_explosiveness,_cost)
+	(_speed,_coolness,_explosiveness,_cost,_count)
 }
 
 L
