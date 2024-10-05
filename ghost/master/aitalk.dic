@@ -14,6 +14,7 @@ OnAiTalk
 RandomTalk : nonoverlap_pool
 {
 	parallel RadioTalk
+	parallel SnailTalk
 	"\0\s[0]snail time"
 }
 
@@ -33,3 +34,18 @@ chain.pellet_wars
 	"\1\b[22]This just in: a series of horrific tripping accidents are sweeping the nation. ""All it takes is a bag knocked over, and suddenly the floor is a minefield! Those cylindrical pellets are a deathtrap!"" says one very real victim. \n\nDon't take the risk. \f[italic,1]Chow Cubes!\f[italic,default] Available now!"
 	"\1\b[22]What's the truth about pellets? Are some really better than others? We took to the streets to find out. \n\n""They're all terrible for snails,"" said Dr. Shellcracker, certified sports medicine physician. ""Snails need a variety of nutrient dense vegetables, as well as a stable source of calcium, such as eggshells. Pellets simply don't cut it, no matter the brand.""\e:chain=end"
 }}CHAIN
+
+SnailTalk : array
+{
+	"\1\b[10]%(snail)Slow snails slide short slopes smoothly."
+	"\1\b[10]%(snail)Safe snail silo, summer storm survived."
+	"\1\b[10]%(snail)Broken brakes bring battered bodies."
+	"\1\b[10]%(snail)Fast fast fast, fleet-footed flurries for future food."
+	"\1\b[10]%(snail)Green, go. Greatness, glory, glitter. Get going!"
+	"\1\b[10]%(snail)Yield your yard. Yummy yucca yearned."
+	
+	if !IsAlliterative(CurrentSnail.Name)
+	{
+		"\1\b[10]%(snail)Alliteration absent. Aghast. Angry. Abhorrent."
+	}
+}

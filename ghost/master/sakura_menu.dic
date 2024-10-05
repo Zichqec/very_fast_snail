@@ -260,17 +260,12 @@ OnLettuceShop : all
 	}
 	"\f[color,default]\n\f[align,left]\f[italic,default]\f[bold,default]\n"
 	
-	"\![*]Lettuce Loan\n\n"
 	"\![*]\__q[OnLettuceExchange]Lettuce exchange\__q\n\n"
 	"\![*]\f[strike,1]Lettuce conversion\f[strike,default] Currently unavailable!"
 	"\n\n"
 	"\![*]\q[Back,OnSakuraMenu]"
 }
 
-OnLettuceLoan : all
-{
-	
-}
 
 OnLettuceExchange : all
 {

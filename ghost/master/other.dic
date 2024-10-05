@@ -305,6 +305,8 @@ L
 OnMinuteChange
 {
 	Lettuce++ //freebie lettuce gain
+}
+
 br
 {
     if SHIORI3FW.BalloonName == "Very Fast Speedway"; "\n"
