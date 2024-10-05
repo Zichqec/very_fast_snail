@@ -236,6 +236,36 @@ TimeDisplay : all
 	"%(_seconds)"
 }
 
+IsAlliterative
+{
+	_input = _argv[0]
+	_chunks = REPLACE(_input,"-"," ")
+	_chunks = SPLIT(_chunks," ")
+	
+	_letter = TOLOWER(SUBSTR(_input,0,1))
+	
+	foreach _chunks; _chunk
+	{
+		if TOLOWER(SUBSTR(_chunk,0,1)) != _letter
+		{
+			0
+			return
+		}
+	}
+	1
+}
+
+//snail talk rate change
+snail
+{
+	"\![set,balloonwait,1.7]"
+}
+
+snailend
+{
+	"\![set,balloonwait,1]"
+}
+
 L
 {
 	"\f[strike,1]L\f[strike,default]"
