@@ -1,12 +1,12 @@
 arrow.filename,arrowsmall
 clickwaitmarker.filename,clickwaitsmall
 
-validrect.left,24
-validrect.top,31
-validrect.right,-114
-validrect.bottom,-30
+validrect.left,8
+validrect.top,19
+validrect.right,-98
+validrect.bottom,-16
 
-wordwrappoint.x,-129
+wordwrappoint.x,-118
 
 anchor.font.color.r,047
 anchor.font.color.g,137
@@ -20,24 +20,24 @@ cursor.font.color.r,097
 cursor.font.color.g,126
 cursor.font.color.b,082
 
-arrow0.x,-120
-arrow0.y,40
+arrow0.x,-112
+arrow0.y,24
 
-arrow1.x,-120
-arrow1.y,-50
+arrow1.x,-112
+arrow1.y,-34
 
-clickwaitmarker.x,-120
-clickwaitmarker.y,63
+clickwaitmarker.x,-112
+clickwaitmarker.y,99
 
-onlinemarker.x,49
-onlinemarker.y,-28
+onlinemarker.x,6
+onlinemarker.y,-17
 
-sstpmarker.x,46
-sstpmarker.y,15
+sstpmarker.x,8
+sstpmarker.y,4
 
-sstpmessage.x,61
+sstpmessage.x,24
 //sstpmessage.xr,-10
-sstpmessage.y,15
+sstpmessage.y,4
 
-number.xr,-148
-number.y,-24
+number.xr,-116
+number.y,-15

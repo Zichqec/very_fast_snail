@@ -37,6 +37,10 @@ anchor.font.color.r,255
 anchor.font.color.g,233
 anchor.font.color.b,127
 
+anchor.visited.font.color.r,230
+anchor.visited.font.color.g,210
+anchor.visited.font.color.b,114
+
 cursor.font.color.r,255
 cursor.font.color.g,233
 cursor.font.color.b,127
@@ -74,7 +78,7 @@ sstpmessage.font.name,Verdana
 sstpmessage.font.height,11
 
 sstpmessage.x,22
-sstpmessage.xr,-70
+//sstpmessage.xr,-70
 sstpmessage.y,7
 
 sstpmessage.font.color.r,000
