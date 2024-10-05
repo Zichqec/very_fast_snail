@@ -48,7 +48,7 @@ OnEquipMenu : all
 	_count = _stats[4]
 	
 	
-	"\C\![lock,balloonrepaint]\c\![set,autoscroll,disable]\0\b[2]\t\*\![no-autopause]\_q"
+	"\C\![lock,balloonrepaint]\c\![set,autoscroll,disable]\f[anchorvisitedfontcolor,default.anchor]\0\b[2]\t\*\![no-autopause]\_q"
 	"\f[bold,1]\f[italic,1]\f[align,center]\f[height,+2]EQUIP YOUR SNAIL!\n\f[height,default]\f[align,left]\f[italic,default]\f[bold,default]\n"
 	
 	"Current funds: %(L)%(Lettuce)\n\n"
@@ -73,7 +73,7 @@ OnEquipMenu : all
 	
 	"\![unlock,balloonrepaint]"
 	
-	"\1\b[2]\![lock,balloonrepaint]\c"
+	"\1\b[2]\![lock,balloonrepaint]\c\f[anchorvisitedfontcolor,default.anchor]"
 	_filters = ("All","Purchased","Unpurchased")
 	"Showing: "
 	foreach _filters; _filter
