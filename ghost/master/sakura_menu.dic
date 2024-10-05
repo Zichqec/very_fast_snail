@@ -73,7 +73,7 @@ OnEquipMenu : all
 	
 	"\![unlock,balloonrepaint]"
 	
-	"\1\b[2]\![lock,balloonrepaint]\c\f[anchorvisitedfontcolor,default.anchor]"
+	"\p[2]\b[2]\![lock,balloonrepaint]\c\f[anchorvisitedfontcolor,default.anchor]"
 	_filters = ("All","Purchased","Unpurchased")
 	"Showing: "
 	foreach _filters; _filter
