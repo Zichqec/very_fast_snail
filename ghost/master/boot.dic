@@ -11,7 +11,8 @@ OnFirstBoot : all
 	SavedSnails.HighestCoolness = IARRAY
 	SavedSnails.TotalCrashes = IARRAY
 	SavedSnails.Loadout = IARRAY
-	SavedSnails.DateSponsor = IARRAY
+	SavedSnails.DateSponsored = IARRAY
+	SavedSnails.Notes = IARRAY
 	
 	CurrentSnail.ID = ""
 	CurrentSnail.Name = ""
@@ -23,13 +24,14 @@ OnFirstBoot : all
 	CurrentSnail.TotalCrashes = 0
 	CurrentSnail.Loadout = IARRAY
 	CurrentSnail.DateSponsored = ""
+	CurrentSnail.Notes = IARRAY
 	
 	HighestAllTimeCoolness = 0
 	
 	PurchasedItems = IARRAY
 	PurchasedItems ,= "bodypaint,Beige Basic" //TODO these'll need updated if the category names change
 	PurchasedItems ,= "shellpaint,Brown Basic"
-	Lettuce = 0
+	Lettuce = 100
 	
 	EquipFilter = "All"
 	
@@ -90,7 +92,11 @@ OnInitialize
 
 OnBoot
 {
-	"\p[2]\s[-1]\![move,--x=0,--y=0,--base=0,--option=ignore-sticky-window]\1\s[-1]\![move,--x=0,--y=0,--base=0,--option=ignore-sticky-window]\0\s[0]"
+	"\p[2]\s[-1]\![move,--x=0,--y=0,--base=0,--option=ignore-sticky-window]\1\s[-1]\![move,--x=0,--y=0,--base=0,--option=ignore-sticky-window]"
+	--
+	"\0\s[0]"
+	--
+	LegalityCheck
 	--
 	"snails"
 }

@@ -27,11 +27,15 @@ OnKeyPress
 OnSurfaceRestore
 {
 	"\1\s[-1]\0\s[0]"
+	--
+	LegalityCheck
 }
 
 OnWindowStateRestore
 {
 	"\1\s[-1]\0\s[0]"
+	--
+	LegalityCheck
 }
 
 On_homeurl
@@ -86,6 +90,7 @@ CreateSnail
 	CurrentSnail.TotalCrashes = 0
 	CurrentSnail.Loadout = IARRAY
 	CurrentSnail.DateSponsored = "%(year)-%(leadingmonth)-%(leadingday):%(GETSECCOUNT)"
+	CurrentSnail.Notes = IARRAY
 	SaveSnail(_argv[0])
 }
 
@@ -116,7 +121,15 @@ SaveSnail
 	}
 	SavedSnails.Loadout[_index] = _loadout
 	
-	SavedSnails.DateSponsor[_index] = CurrentSnail.DateSponsor
+	_notes = ""
+	foreach CurrentSnail.Notes; _note
+	{
+		if _notes != ""; _notes += "|"
+		_notes += _note
+	}
+	SavedSnails.Notes[_index] = _notes
+	
+	SavedSnails.DateSponsored[_index] = CurrentSnail.DateSponsored
 	
 }
 
@@ -143,7 +156,14 @@ LoadSnail
 	}
 	CurrentSnail.Loadout = _loadout
 	
-	CurrentSnail.DateSponsor = SavedSnails.DateSponsor[_index]
+	_notes = IARRAY
+	foreach SPLIT(SavedSnails.Notes[_index],"|"); _note
+	{
+		_notes ,= _note
+	}
+	CurrentSnail.Notes = _notes
+	
+	CurrentSnail.DateSponsored = SavedSnails.DateSponsored[_index]
 }
 
 
@@ -266,9 +286,25 @@ snailend
 	"\![set,balloonwait,1]"
 }
 
+LegalityCheck : all
+{
+	foreach Dressups.Current; _dressup
+	{
+		if !IsOwned(_dressup[0],_dressup[1])
+		{
+			"\![bind,%(_dressup[0]),%(_dressup[1]),0]"
+		}
+	}
+}
+
 L
 {
 	"\f[strike,1]L\f[strike,default]"
+}
+
+OnMinuteChange
+{
+	Lettuce++ //freebie lettuce gain
 }
 
 //—————————————————————————————— Right click menu links ——————————————————————————————
