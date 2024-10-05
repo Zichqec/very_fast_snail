@@ -26,15 +26,18 @@ descript
 //—————————— Surface ranges (0-99) ——————————
 //surface0: snail still idle
 //surface1: snail vertical bobble idle for racing (adjustable bobble speed?)
-//surface2: snail eye wiggling idle
-//surface3:
-//surface4:
+//surface2: snail horizontal bobble udke
+//surface3:	snail eye wiggling idle
+//surface4: 
 //surface5:
 //surface6:
 //surface7:
 //surface8:
 //surface9:
 //surface10: blank
+
+//im thinking the fire animation and sparkling animation and such can be intervals...? set to always, then run another interval that stops the runonce that makes the always anim stop playing (yk what i mean)
+//sparkles should be an interval, but maybe fire can be its own surface because its only really used when the snail explodes
 
 //—————————————————————————————— Snail Surfaces (Snurfaces) ——————————————————————————————
 
@@ -53,6 +56,27 @@ surface0
 	//cowprint mauve
 	animation32025.interval,bind
 	animation32025.pattern0,overlay,32025,0,0,0
+	
+	//———————— SNAIL HATS ————————
+
+	//blue party
+	animation75000.interval,bind
+	animation75000.pattern0,interpolate,75000,0,0,0
+
+	//pink party
+	animation75001.interval,bind
+	animation75001.pattern0,interpolate,75001,0,0,0
+
+	//--------need help figuring these out
+	//red helmet
+	animation75005.interval,bind
+	animation75005.pattern0,interpolate,75005,0,0,0
+	animation75005.pattern1,overlay,75006,0,0,0
+
+	//red trucker
+	animation75010.interval,bind
+	animation75010.pattern0,interpolate,75010,0,0,0
+	animation75010.pattern1,add,75011,0,0,0
 }
 
 surface1
@@ -78,6 +102,7 @@ surface1
 	animation32025.pattern2,overlay,32026,500,0,0
 
 	//headgear back and fronts will use coord anims to align..
+	//shared index probably... will have to reorganize some stuff
 }
 
 surface2
@@ -87,8 +112,8 @@ surface2
 	//basic beige
 	animation31000.interval,bind+always
 	animation31000.pattern0,overlay,31000,0,0,0
-	animation31000.pattern1,overlay,31001,500,0,0
-	animation31000.pattern2,overlay,31001,500,0,0
+	animation31000.pattern1,overlay,31002,500,0,0
+	animation31000.pattern2,overlay,31002,500,0,0
 	
 	//basic mauve
 	animation31025.interval,bind+always
@@ -106,7 +131,64 @@ surface2
 	animation32025.pattern3,overlay,32029,500,0,0
 	animation32025.pattern4,overlay,32027,500,0,0
 
-	//headgear back and fronts will use coord anims to align..
+	//shared index timeee
+}
+
+surface3
+{
+	//———————— SNAIL BODY ————————
+	//———— base ————
+	//basic beige
+	animation31000.interval,bind+always
+	animation31000.pattern0,overlay,31000,0,0,0
+	animation31000.pattern1,overlay,31003,500,0,0
+	animation31000.pattern2,overlay,31000,500,0,0
+	animation31000.pattern3,overlay,31004,500,0,0
+	animation31000.pattern4,overlay,31000,500,0,0
+	
+	//basic mauve
+	animation31025.interval,bind+always
+	animation31025.pattern0,overlay,31025,0,0,0
+	animation31025.pattern1,overlay,31028,500,0,0
+	animation31025.pattern2,overlay,31025,500,0,0
+	animation31025.pattern3,overlay,31029,500,0,0
+	animation31025.pattern4,overlay,31025,500,0,0
+	
+	//cowprint mauve
+	animation32025.interval,bind+always
+	animation32025.pattern0,overlay,32025,0,0,0
+	animation32025.pattern1,overlay,32028,500,0,0
+	animation32025.pattern2,overlay,32025,500,0,0
+	animation32025.pattern3,overlay,32029,500,0,0
+	animation32025.pattern4,overlay,32025,500,0,0
+}
+
+surface4
+{
+	//--could probably append this with surface0 too (this is just adding the fire overlay)
+	//———————— SNAIL BODY ————————
+	//———— base ————
+	//basic beige
+	animation31000.interval,bind
+	animation31000.pattern0,overlay,31000,0,0,0
+	
+	//basic mauve
+	animation31025.interval,bind
+	animation31025.pattern0,overlay,31025,0,0,0
+	
+	//cowprint mauve
+	animation32025.interval,bind
+	animation32025.pattern0,overlay,32025,0,0,0
+	
+	//———————— SNAIL HATS ————————
+
+	//not copy pasted here for now
+
+	//———————— OVERLAY ————————
+	animation85000.interval,always
+	animation85000.pattern0,overlay,85000,0,0,0
+	animation85000.pattern1,overlay,85001,50,0,0
+	animation85000.pattern2,overlay,85001,50,0,0
 }
 
 surface.append0-9
@@ -144,6 +226,67 @@ surface.append0-9
 	//radial swirl purple
 	animation50157.interval,bind
 	animation50157.pattern0,overlay,50157,0,0,0
+	
+	//pinstripe swirl brown
+	animation50200.interval,bind
+	animation50200.pattern0,overlay,50200,0,0,0
+	
+	//pinstripe swirl purple
+	animation50207.interval,bind
+	animation50207.pattern0,overlay,50207,0,0,0
+
+	//———— decals  ————
+	//two stripes
+	animation55000.interval,bind
+	animation55000.pattern0,overlay,55000,0,0,0
+	
+	//single flame
+	animation55010.interval,bind
+	animation55010.pattern0,overlay,55010,0,0,0
+	
+	//big flame
+	animation55015.interval,bind
+	animation55015.pattern0,overlay,55015,0,0,0
+
+	//———— hardware ————
+	//red spoiler
+	animation65000.interval,bind
+	animation65000.pattern0,overlay,65000,0,0,0
+
+	//saddle bag
+	animation65010.interval,bind
+	animation65010.pattern0,overlay,65010,0,0,0
+
+	//sling bag
+	animation65015.interval,bind
+	animation65015.pattern0,overlay,65015,0,0,0
+
+	//hot rod exhaust
+	animation65020.interval,bind
+	animation65020.pattern0,overlay,65020,0,0,0
+
+	//———— add-ons ————
+	//saddle
+	animation80000.interval,bind
+	animation80000.pattern0,overlay,80000,0,0,0
+
+	//white bird wings
+	animation80005.interval,bind
+	animation80005.pattern0,overlay,80005,0,0,0
+
+	//red bat wings
+	animation80010.interval,bind
+	animation80010.pattern0,overlay,80010,0,0,0
+
+	//red wheel
+	animation80015.interval,bind
+	animation80015.pattern0,overlay,80015,0,0,0
+
+	//box fan
+	animation80020.interval,bind
+	animation80020.pattern0,overlay,80020,0,0,0
+
+	//———— overlays ————
 
 	point.basepos.y,335
 }
@@ -170,6 +313,27 @@ surface31001
 	element0,overlay,surface30001c.png,0,0
 	element1,overlayfast,surface31000.png,0,0
 	element2,overlay,surface30001l.png,0,0
+}
+
+surface31002
+{
+	element0,overlay,surface30002c.png,0,0
+	element1,overlayfast,surface31000.png,0,0
+	element2,overlay,surface30002l.png,0,0
+}
+
+surface31003
+{
+	element0,overlay,surface30003c.png,0,0
+	element1,overlayfast,surface31000.png,0,0
+	element2,overlay,surface30003l.png,0,0
+}
+
+surface31004
+{
+	element0,overlay,surface30004c.png,0,0
+	element1,overlayfast,surface31000.png,0,0
+	element2,overlay,surface30004l.png,0,0
 }
 
 //basic mauve
@@ -309,5 +473,21 @@ surface50157
 {
 	element0,overlay,surface50000c.png,0,0
 	element1,overlayfast,surface50157.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//pinstripe swirl brown
+surface50200
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50200.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//pinstripe swirl purple
+surface50207
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50207.png,0,0
 	element2,overlay,surface50000l.png,0,0
 }
