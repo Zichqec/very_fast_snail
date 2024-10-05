@@ -68,3 +68,29 @@ sakura.bindgroup50100.name,shellpaint,Brown Single Swirl
 sakura.bindgroup50107.name,shellpaint,Purple Single Swirl
 sakura.bindgroup50150.name,shellpaint,Brown Radial Swirl
 sakura.bindgroup50157.name,shellpaint,Purple Radial Swirl
+sakura.bindgroup50200.name,shellpaint,Brown Pinstripe Swirl
+sakura.bindgroup50207.name,shellpaint,Purple Pinstripe Swirl
+
+//Decals
+sakura.bindgroup55000.name,decals,Two Stripes
+sakura.bindgroup55010.name,decals,Single Flame
+sakura.bindgroup55015.name,decals,Big Flame
+
+//Hardware
+sakura.bindgroup65000.name,hardware,Red Spoiler
+sakura.bindgroup65010.name,hardware,Saddle Bag
+sakura.bindgroup65015.name,hardware,Sling Bag
+sakura.bindgroup65020.name,hardware,Hot Rod Exhaust
+
+//Hats
+sakura.bindgroup75000.name,hats,Blue Party Hat
+sakura.bindgroup75001.name,hats,Pink Party Hat
+sakura.bindgroup75005.name,hats,Red Helmet
+sakura.bindgroup75010.name,hats,Red Trucker
+
+//Add-ons 
+sakura.bindgroup80000.name,add-ons,Saddle
+sakura.bindgroup80005.name,add-ons,White Bird Wings
+sakura.bindgroup80010.name,add-ons,Red Bat Wings
+sakura.bindgroup80015.name,add-ons,Red Tires
+sakura.bindgroup80020.name,add-ons,Box Fan
