@@ -13,5 +13,23 @@ OnAiTalk
 
 RandomTalk : nonoverlap_pool
 {
+	parallel RadioTalk
 	"\0\s[0]snail time"
 }
+
+RadioTalk : array
+{
+	"\1\b[20]Now back to our foot tapping, shell cracking, Boogie Down Music Hour! \n\n[half]\f[italic,1]Do wop~ Do be do be da do~\f[italic,default]"
+	"\1\b[20]Public Safety Alert: \n\nHealthy snails start with healthy mucus. Healthy mucus starts with good hydration."
+	"\1\b[20]Public Safety Alert: \n\nWatch where you step! Sticks aren't the only thing on the ground."
+	"\1\b[20]Public Service Announcement: \n\nIt's a rainy day today. Do you know where your snail is?"
+	"\1\b[22]Looking for snail food? \n\n\f[italic,1]Perry's Perky Pellets\f[italic,default] have perfect nutritional balance and energy for the most athletic of mollusks, all in a convenient to eat, mechanically processed cylinder!\e:chain=chain.pellet_wars"
+}
+
+chain.pellet_wars
+{{CHAIN
+	"\1\b[22]Are you looking for excitement in your life? A taste of something new? Tired of eating the same old cylinders day after day? \n\n\f[italic,1]Chow Cubes\f[italic,default] are for you! Shareable, stackable, and superior to traditional pellets in every way. \f[italic,1]Chow Cubes!\f[italic,default] Buy them now!"
+	"\1\b[22]New research reveals that cylindrical food poses significantly lower odds of suffocation compared to trendy new %(br)'cubic' foods. \n\nThink about it: the average throat is a tube, and tubes are basically cylinders. It's a natural fit! Get your edible cylinders now! \f[italic,1]Perry's Perky Pellets!\f[italic,default]"
+	"\1\b[22]This just in: a series of horrific tripping accidents are sweeping the nation. ""All it takes is a bag knocked over, and suddenly the floor is a minefield! Those cylindrical pellets are a deathtrap!"" says one very real victim. \n\nDon't take the risk. \f[italic,1]Chow Cubes!\f[italic,default] Available now!"
+	"\1\b[22]What's the truth about pellets? Are some really better than others? We took to the streets to find out. \n\n""They're all terrible for snails,"" said Dr. Shellcracker, certified sports medicine physician. ""Snails need a variety of nutrient dense vegetables, as well as a stable source of calcium, such as eggshells. Pellets simply don't cut it, no matter the brand.""\e:chain=end"
+}}CHAIN

@@ -271,6 +271,12 @@ L
 	"\f[strike,1]L\f[strike,default]"
 }
 
+br
+{
+    if SHIORI3FW.BalloonName == "Very Fast Speedway"; "\n"
+    else; " "
+}
+
 //—————————————————————————————— Right click menu links ——————————————————————————————
 
 //Takes an array of alternating names and urls, and formats them for use with the right click menu
