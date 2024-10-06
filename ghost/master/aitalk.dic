@@ -20,6 +20,12 @@ RandomTalk : nonoverlap_pool
 
 RadioTalk : array
 {
+	_name1 = SnailNameGenerator(,"not alliteration")
+	_name2 = SnailNameGenerator(,"not alliteration")
+	_name3 = SnailNameGenerator(,"not alliteration")
+	
+	"%(_name1) - %(_name2) - %(_name3)"
+	
 	"\1\b[20]Now back to our foot tapping, shell cracking, Boogie Down Music Hour! \n\n[half]\f[italic,1]Do wop~ Do be do be da do~\f[italic,default]"
 	"\1\b[20]Public Safety Alert: \n\nHealthy snails start with healthy mucus. Healthy mucus starts with good hydration."
 	"\1\b[20]Public Safety Alert: \n\nWatch where you step! Sticks aren't the only thing on the ground."

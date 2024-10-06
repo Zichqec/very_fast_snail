@@ -24,6 +24,7 @@ SnailNameGenerator
 	
 	_type = "alliteration"
 	if _firstnum >= 7; _type = "not alliteration"
+	if _argv[1] == "not alliteration"; _type = "not alliteration"
 	
 	
 	_firstlist = GETFUNCLIST("SnailNames.1")
@@ -35,7 +36,7 @@ SnailNameGenerator
 	_num2 = 0
 	if _type == "not alliteration"
 	{
-		_temp = _id - _firstnum
+		_temp = _id - (_firstnum + 1) //bandaid patch, bandaid patch...
 		_num2 = _temp % _listlen
 		while _num2 == _num1
 		{
