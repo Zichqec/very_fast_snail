@@ -8,7 +8,7 @@ OnSakuraMenu : all
 	if LastTalk != ""; "  \![*]\q[Say that again,OnLastTalk]"
 	"\n\n"
 	
-	"\![*]\q[Garage,OnEquipMenu,bodypaint]  \![*]\q[Racer ID,OnRacerID]"
+	"\![*]\q[Garage,OnEquipMenu,Body Paint]  \![*]\q[Racer ID,OnRacerID]"
 	
 	"\n\n"
 	
@@ -35,7 +35,7 @@ OnEquipMenu : all
 {
 	if EquipFilter == ""; EquipFilter = "Both"
 	_category = reference0
-	if _category == ""; _category = "bodypaint"
+	if _category == ""; _category = "Body Paint"
 	
 	_stats = CurrentStats
 	_speed = _stats[0]
