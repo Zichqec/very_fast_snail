@@ -14,6 +14,6 @@ kero.name,Announcer
 
 balloon,Very Fast Speedway
 
-icon,icon.ico
+icon,snaicon.ico
 
 sstp.allowunspecifiedsend,0
