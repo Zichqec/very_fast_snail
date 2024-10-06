@@ -3,3 +3,4 @@ type,ghost
 
 name,Very Fast Snail
 directory,very_fast_snail_gwz
+balloon.directory,very_fast_speedway

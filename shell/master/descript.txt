@@ -43,7 +43,7 @@ menu.sidebar.bitmap.filename,menu_sidebar.png
 
 //Dressup stuff
 
-sakura.menu,auto
+sakura.menu,hidden
 
 //Trail
 //sakura.bindgroup0.name,Trail,default
@@ -54,22 +54,114 @@ sakura.menu,auto
 sakura.bindoption0.group,Body Paint,mustselect
 sakura.bindgroup31000.name,Body Paint,Beige Basic
 sakura.bindgroup31000.default,1
-sakura.bindgroup31025.name,Body Paint,Mauve Basic
-sakura.bindgroup32025.name,Body Paint,Mauve Cowprint
+sakura.bindgroup31005.name,Body Paint,Green Basic
+sakura.bindgroup31010.name,Body Paint,Olive Basic
+sakura.bindgroup31015.name,Body Paint,Yellow Basic
+sakura.bindgroup31020.name,Body Paint,Orange Basic
+sakura.bindgroup31025.name,Body Paint,Red Basic
+sakura.bindgroup31030.name,Body Paint,Mauve Basic
+sakura.bindgroup31035.name,Body Paint,Purple Basic
+sakura.bindgroup31040.name,Body Paint,Navy Basic
+sakura.bindgroup31045.name,Body Paint,Blue Basic
+sakura.bindgroup31050.name,Body Paint,Azure Basic
+sakura.bindgroup31055.name,Body Paint,Mint Basic
+sakura.bindgroup31060.name,Body Paint,White Basic
+sakura.bindgroup31065.name,Body Paint,Gray Basic
+sakura.bindgroup31070.name,Body Paint,Black Basic
+sakura.bindgroup32000.name,Body Paint,Beige Cowprint
+sakura.bindgroup32005.name,Body Paint,Green Cowprint
+sakura.bindgroup32010.name,Body Paint,Olive Cowprint
+sakura.bindgroup32015.name,Body Paint,Yellow Cowprint
+sakura.bindgroup32020.name,Body Paint,Orange Cowprint
+sakura.bindgroup32025.name,Body Paint,Red Cowprint
+sakura.bindgroup32030.name,Body Paint,Mauve Cowprint
+sakura.bindgroup32035.name,Body Paint,Purple Cowprint
+sakura.bindgroup32040.name,Body Paint,Navy Cowprint
+sakura.bindgroup32045.name,Body Paint,Blue Cowprint
+sakura.bindgroup32050.name,Body Paint,Azure Cowprint
+sakura.bindgroup32055.name,Body Paint,Mint Cowprint
+sakura.bindgroup32060.name,Body Paint,White Cowprint
+sakura.bindgroup32065.name,Body Paint,Gray Cowprint
+sakura.bindgroup32070.name,Body Paint,Black Cowprint
 
 //Shell paint base
 sakura.bindoption1.group,Shell Paint,mustselect
 sakura.bindgroup50000.name,Shell Paint,Brown Basic
 sakura.bindgroup50000.default,1
+sakura.bindgroup50001.name,Shell Paint,Green Basic
+sakura.bindgroup50002.name,Shell Paint,Olive Basic
+sakura.bindgroup50003.name,Shell Paint,Yellow Basic
+sakura.bindgroup50004.name,Shell Paint,Orange Basic
+sakura.bindgroup50005.name,Shell Paint,Red Basic
+sakura.bindgroup50006.name,Shell Paint,Mauve Basic
 sakura.bindgroup50007.name,Shell Paint,Purple Basic
+sakura.bindgroup50008.name,Shell Paint,Navy Basic
+sakura.bindgroup50009.name,Shell Paint,Blue Basic
+sakura.bindgroup50010.name,Shell Paint,Azure Basic
+sakura.bindgroup50011.name,Shell Paint,Mint Basic
+sakura.bindgroup50012.name,Shell Paint,White Basic
+sakura.bindgroup50013.name,Shell Paint,Gray Basic
+sakura.bindgroup50014.name,Shell Paint,Black Basic
 sakura.bindgroup50050.name,Shell Paint,Brown Chunky Stripe
+sakura.bindgroup50051.name,Shell Paint,Green Chunky Stripe
+sakura.bindgroup50052.name,Shell Paint,Olive Chunky Stripe
+sakura.bindgroup50053.name,Shell Paint,Yellow Chunky Stripe
+sakura.bindgroup50054.name,Shell Paint,Orange Chunky Stripe
+sakura.bindgroup50055.name,Shell Paint,Red Chunky Stripe
+sakura.bindgroup50056.name,Shell Paint,Mauve Chunky Stripe
 sakura.bindgroup50057.name,Shell Paint,Purple Chunky Stripe
+sakura.bindgroup50058.name,Shell Paint,Navy Chunky Stripe
+sakura.bindgroup50059.name,Shell Paint,Blue Chunky Stripe
+sakura.bindgroup50060.name,Shell Paint,Azure Chunky Stripe
+sakura.bindgroup50061.name,Shell Paint,Mint Chunky Stripe
+sakura.bindgroup50062.name,Shell Paint,White Chunky Stripe
+sakura.bindgroup50063.name,Shell Paint,Gray Chunky Stripe
+sakura.bindgroup50064.name,Shell Paint,Black Chunky Stripe
 sakura.bindgroup50100.name,Shell Paint,Brown Single Swirl
+sakura.bindgroup50101.name,Shell Paint,Green Single Swirl
+sakura.bindgroup50102.name,Shell Paint,Olive Single Swirl
+sakura.bindgroup50103.name,Shell Paint,Yellow Single Swirl
+sakura.bindgroup50104.name,Shell Paint,Orange Single Swirl
+sakura.bindgroup50105.name,Shell Paint,Red Single Swirl
+sakura.bindgroup50106.name,Shell Paint,Mauve Single Swirl
 sakura.bindgroup50107.name,Shell Paint,Purple Single Swirl
+sakura.bindgroup50108.name,Shell Paint,Navy Single Swirl
+sakura.bindgroup50109.name,Shell Paint,Blue Single Swirl
+sakura.bindgroup50110.name,Shell Paint,Azure Single Swirl
+sakura.bindgroup50111.name,Shell Paint,Mint Single Swirl
+sakura.bindgroup50112.name,Shell Paint,White Single Swirl
+sakura.bindgroup50113.name,Shell Paint,Gray Single Swirl
+sakura.bindgroup50114.name,Shell Paint,Black Single Swirl
 sakura.bindgroup50150.name,Shell Paint,Brown Radial Swirl
+sakura.bindgroup50151.name,Shell Paint,Green Radial Swirl
+sakura.bindgroup50152.name,Shell Paint,Olive Radial Swirl
+sakura.bindgroup50153.name,Shell Paint,Yellow Radial Swirl
+sakura.bindgroup50154.name,Shell Paint,Orange Radial Swirl
+sakura.bindgroup50155.name,Shell Paint,Red Radial Swirl
+sakura.bindgroup50156.name,Shell Paint,Mauve Radial Swirl
 sakura.bindgroup50157.name,Shell Paint,Purple Radial Swirl
+sakura.bindgroup50158.name,Shell Paint,Navy Radial Swirl
+sakura.bindgroup50159.name,Shell Paint,Blue Radial Swirl
+sakura.bindgroup50160.name,Shell Paint,Azure Radial Swirl
+sakura.bindgroup50161.name,Shell Paint,Mint Radial Swirl
+sakura.bindgroup50162.name,Shell Paint,White Radial Swirl
+sakura.bindgroup50163.name,Shell Paint,Gray Radial Swirl
+sakura.bindgroup50164.name,Shell Paint,Black Radial Swirl
 sakura.bindgroup50200.name,Shell Paint,Brown Pinstripe Swirl
+sakura.bindgroup50201.name,Shell Paint,Green Pinstripe Swirl
+sakura.bindgroup50202.name,Shell Paint,Olive Pinstripe Swirl
+sakura.bindgroup50203.name,Shell Paint,Yellow Pinstripe Swirl
+sakura.bindgroup50204.name,Shell Paint,Orange Pinstripe Swirl
+sakura.bindgroup50205.name,Shell Paint,Red Pinstripe Swirl
+sakura.bindgroup50206.name,Shell Paint,Mauve Pinstripe Swirl
 sakura.bindgroup50207.name,Shell Paint,Purple Pinstripe Swirl
+sakura.bindgroup50208.name,Shell Paint,Navy Pinstripe Swirl
+sakura.bindgroup50209.name,Shell Paint,Blue Pinstripe Swirl
+sakura.bindgroup50210.name,Shell Paint,Azure Pinstripe Swirl
+sakura.bindgroup50211.name,Shell Paint,Mint Pinstripe Swirl
+sakura.bindgroup50212.name,Shell Paint,White Pinstripe Swirl
+sakura.bindgroup50213.name,Shell Paint,Gray Pinstripe Swirl
+sakura.bindgroup50214.name,Shell Paint,Black Pinstripe Swirl
 
 //Decals
 sakura.bindoption2.group,Decals,multiple
@@ -85,7 +177,6 @@ sakura.bindgroup65015.name,Hardware,Radio Antenna
 sakura.bindgroup65020.name,Hardware,Saddle Bag
 sakura.bindgroup65025.name,Hardware,Sling Bag
 sakura.bindgroup65030.name,Hardware,BIG ROCKET
-sakura.bindgroup65050.name,Hardware,Red Helmet
 
 //Masks
 sakura.bindoption4.group,Masks,multiple
@@ -97,6 +188,7 @@ sakura.bindgroup70020.name,Masks,Shades
 
 //Hats
 sakura.bindoption5.group,Hats,multiple
+sakura.bindgroup65050.name,Hats,Red Helmet
 sakura.bindgroup75000.name,Hats,Blue Party Hat
 sakura.bindgroup75001.name,Hats,Pink Party Hat
 sakura.bindgroup75020.name,Hats,Red Trucker

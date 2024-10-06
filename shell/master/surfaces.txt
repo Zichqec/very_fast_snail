@@ -49,13 +49,121 @@ surface0
 	animation31000.interval,bind
 	animation31000.pattern0,overlay,31000,0,0,0
 	
-	//basic mauve
+	//basic green
+	animation31005.interval,bind
+	animation31005.pattern0,overlay,31005,0,0,0
+	
+	//basic olive
+	animation31010.interval,bind
+	animation31010.pattern0,overlay,31010,0,0,0
+	
+	//basic yellow
+	animation31015.interval,bind
+	animation31015.pattern0,overlay,31015,0,0,0
+	
+	//basic orange
+	animation31020.interval,bind
+	animation31020.pattern0,overlay,31020,0,0,0
+	
+	//basic red
 	animation31025.interval,bind
 	animation31025.pattern0,overlay,31025,0,0,0
 	
-	//cowprint mauve
+	//basic mauve
+	animation31030.interval,bind
+	animation31030.pattern0,overlay,31030,0,0,0
+	
+	//basic purple
+	animation31035.interval,bind
+	animation31035.pattern0,overlay,31035,0,0,0
+	
+	//basic navy
+	animation31040.interval,bind
+	animation31040.pattern0,overlay,31040,0,0,0
+	
+	//basic blue
+	animation31045.interval,bind
+	animation31045.pattern0,overlay,31045,0,0,0
+	
+	//basic azure
+	animation31050.interval,bind
+	animation31050.pattern0,overlay,31050,0,0,0
+	
+	//basic mint
+	animation31055.interval,bind
+	animation31055.pattern0,overlay,31055,0,0,0
+	
+	//basic white
+	animation31060.interval,bind
+	animation31060.pattern0,overlay,31060,0,0,0
+	
+	//basic gray
+	animation31065.interval,bind
+	animation31065.pattern0,overlay,31065,0,0,0
+	
+	//basic black
+	animation31070.interval,bind
+	animation31070.pattern0,overlay,31070,0,0,0
+	
+	//cowprint beige
+	animation32000.interval,bind
+	animation32000.pattern0,overlay,32000,0,0,0
+	
+	//cowprint green
+	animation32005.interval,bind
+	animation32005.pattern0,overlay,32005,0,0,0
+	
+	//cowprint olive
+	animation32010.interval,bind
+	animation32010.pattern0,overlay,32010,0,0,0
+	
+	//cowprint yellow
+	animation32015.interval,bind
+	animation32015.pattern0,overlay,32015,0,0,0
+	
+	//cowprint orange
+	animation32020.interval,bind
+	animation32020.pattern0,overlay,32020,0,0,0
+	
+	//cowprint red
 	animation32025.interval,bind
 	animation32025.pattern0,overlay,32025,0,0,0
+	
+	//cowprint mauve
+	animation32030.interval,bind
+	animation32030.pattern0,overlay,32030,0,0,0
+	
+	//cowprint purple
+	animation32035.interval,bind
+	animation32035.pattern0,overlay,32035,0,0,0
+	
+	//cowprint navy
+	animation32040.interval,bind
+	animation32040.pattern0,overlay,32040,0,0,0
+	
+	//cowprint blue
+	animation32045.interval,bind
+	animation32045.pattern0,overlay,32045,0,0,0
+	
+	//cowprint azure
+	animation32050.interval,bind
+	animation32050.pattern0,overlay,32050,0,0,0
+	
+	//cowprint mint
+	animation32055.interval,bind
+	animation32055.pattern0,overlay,32055,0,0,0
+	
+	//cowprint white
+	animation32060.interval,bind
+	animation32060.pattern0,overlay,32060,0,0,0
+	
+	//cowprint gray
+	animation32065.interval,bind
+	animation32065.pattern0,overlay,32065,0,0,0
+	
+	//cowprint black
+	animation32070.interval,bind
+	animation32070.pattern0,overlay,32070,0,0,0
 	
 
 	//———— masks ————
@@ -124,16 +232,16 @@ surface1
 	animation31000.pattern2,overlay,31001,500,0,0
 	
 	//basic mauve
-	animation31025.interval,bind+always
-	animation31025.pattern0,overlay,31025,0,0,0
-	animation31025.pattern1,overlay,31026,500,0,0
-	animation31025.pattern2,overlay,31026,500,0,0
+	animation31030.interval,bind+always
+	animation31030.pattern0,overlay,31030,0,0,0
+	animation31030.pattern1,overlay,31031,500,0,0
+	animation31030.pattern2,overlay,31031,500,0,0
 	
 	//cowprint mauve
-	animation32025.interval,bind+always
-	animation32025.pattern0,overlay,32025,0,0,0
-	animation32025.pattern1,overlay,32026,500,0,0
-	animation32025.pattern2,overlay,32026,500,0,0
+	animation32030.interval,bind+always
+	animation32030.pattern0,overlay,32030,0,0,0
+	animation32030.pattern1,overlay,32031,500,0,0
+	animation32030.pattern2,overlay,32031,500,0,0
 
 	//headgear back and fronts will use coord anims to align..
 	//shared index probably... will have to reorganize some stuff
@@ -150,20 +258,16 @@ surface2
 	animation31000.pattern2,overlay,31002,500,0,0
 	
 	//basic mauve
-	animation31025.interval,bind+always
-	animation31025.pattern0,overlay,31027,0,0,0
-	animation31025.pattern1,overlay,31028,500,0,0
-	animation31025.pattern2,overlay,31027,500,0,0
-	animation31025.pattern3,overlay,31029,500,0,0
-	animation31025.pattern4,overlay,31027,500,0,0
+	animation31030.interval,bind+always
+	animation31030.pattern0,overlay,31030,0,0,0
+	animation31030.pattern1,overlay,31032,500,0,0
+	animation31030.pattern2,overlay,31032,500,0,0
 	
 	//cowprint mauve
-	animation32025.interval,bind+always
-	animation32025.pattern0,overlay,32027,0,0,0
-	animation32025.pattern1,overlay,32028,500,0,0
-	animation32025.pattern2,overlay,32027,500,0,0
-	animation32025.pattern3,overlay,32029,500,0,0
-	animation32025.pattern4,overlay,32027,500,0,0
+	animation32030.interval,bind+always
+	animation32030.pattern0,overlay,32030,0,0,0
+	animation32030.pattern1,overlay,32032,500,0,0
+	animation32030.pattern2,overlay,32032,500,0,0
 
 	//shared index timeee
 }
@@ -181,20 +285,20 @@ surface3
 	animation31000.pattern4,overlay,31000,500,0,0
 	
 	//basic mauve
-	animation31025.interval,bind+always
-	animation31025.pattern0,overlay,31025,0,0,0
-	animation31025.pattern1,overlay,31028,500,0,0
-	animation31025.pattern2,overlay,31025,500,0,0
-	animation31025.pattern3,overlay,31029,500,0,0
-	animation31025.pattern4,overlay,31025,500,0,0
+	animation31030.interval,bind+always
+	animation31030.pattern0,overlay,31030,0,0,0
+	animation31030.pattern1,overlay,31033,500,0,0
+	animation31030.pattern2,overlay,31030,500,0,0
+	animation31030.pattern3,overlay,31034,500,0,0
+	animation31030.pattern4,overlay,31030,500,0,0
 	
 	//cowprint mauve
-	animation32025.interval,bind+always
-	animation32025.pattern0,overlay,32025,0,0,0
-	animation32025.pattern1,overlay,32028,500,0,0
-	animation32025.pattern2,overlay,32025,500,0,0
-	animation32025.pattern3,overlay,32029,500,0,0
-	animation32025.pattern4,overlay,32025,500,0,0
+	animation32030.interval,bind+always
+	animation32030.pattern0,overlay,32030,0,0,0
+	animation32030.pattern1,overlay,32033,500,0,0
+	animation32030.pattern2,overlay,32030,500,0,0
+	animation32030.pattern3,overlay,32034,500,0,0
+	animation32030.pattern4,overlay,32030,500,0,0
 }
 
 surface4
@@ -207,12 +311,12 @@ surface4
 	animation31000.pattern0,overlay,31000,0,0,0
 	
 	//basic mauve
-	animation31025.interval,bind
-	animation31025.pattern0,overlay,31025,0,0,0
+	animation31030.interval,bind
+	animation31030.pattern0,overlay,31030,0,0,0
 	
 	//cowprint mauve
-	animation32025.interval,bind
-	animation32025.pattern0,overlay,32025,0,0,0
+	animation32030.interval,bind
+	animation32030.pattern0,overlay,32030,0,0,0
 	
 	//———————— SNAIL HATS ————————
 
@@ -233,41 +337,301 @@ surface.append0-9
 	animation50000.interval,bind
 	animation50000.pattern0,overlay,50000,0,0,0
 	
+	//basic green
+	animation50001.interval,bind
+	animation50001.pattern0,overlay,50001,0,0,0
+	
+	//basic olive
+	animation50002.interval,bind
+	animation50002.pattern0,overlay,50002,0,0,0
+	
+	//basic yellow
+	animation50003.interval,bind
+	animation50003.pattern0,overlay,50003,0,0,0
+	
+	//basic orange
+	animation50004.interval,bind
+	animation50004.pattern0,overlay,50004,0,0,0
+	
+	//basic red
+	animation50005.interval,bind
+	animation50005.pattern0,overlay,50005,0,0,0
+	
+	//basic mauve
+	animation50006.interval,bind
+	animation50006.pattern0,overlay,50006,0,0,0
+	
 	//basic purple
 	animation50007.interval,bind
 	animation50007.pattern0,overlay,50007,0,0,0
+	
+	//basic navy
+	animation50008.interval,bind
+	animation50008.pattern0,overlay,50008,0,0,0
+	
+	//basic blue
+	animation50009.interval,bind
+	animation50009.pattern0,overlay,50009,0,0,0
+	
+	//basic azure
+	animation50010.interval,bind
+	animation50010.pattern0,overlay,50010,0,0,0
+	
+	//basic mint
+	animation50011.interval,bind
+	animation50011.pattern0,overlay,50011,0,0,0
+	
+	//basic white
+	animation50012.interval,bind
+	animation50012.pattern0,overlay,50012,0,0,0
+	
+	//basic gray
+	animation50013.interval,bind
+	animation50013.pattern0,overlay,50013,0,0,0
+	
+	//basic black
+	animation50014.interval,bind
+	animation50014.pattern0,overlay,50014,0,0,0
 	
 	//chunky stripe brown
 	animation50050.interval,bind
 	animation50050.pattern0,overlay,50050,0,0,0
 	
+	//chunky stripe green
+	animation50051.interval,bind
+	animation50051.pattern0,overlay,50051,0,0,0
+	
+	//chunky stripe olive
+	animation50052.interval,bind
+	animation50052.pattern0,overlay,50052,0,0,0
+	
+	//chunky stripe yellow
+	animation50053.interval,bind
+	animation50053.pattern0,overlay,50053,0,0,0
+	
+	//chunky stripe orange
+	animation50054.interval,bind
+	animation50054.pattern0,overlay,50054,0,0,0
+	
+	//chunky stripe red
+	animation50055.interval,bind
+	animation50055.pattern0,overlay,50055,0,0,0
+	
+	//chunky stripe mauve
+	animation50056.interval,bind
+	animation50056.pattern0,overlay,50056,0,0,0
+	
 	//chunky stripe purple
 	animation50057.interval,bind
 	animation50057.pattern0,overlay,50057,0,0,0
+	
+	//chunky stripe navy
+	animation50058.interval,bind
+	animation50058.pattern0,overlay,50058,0,0,0
+	
+	//chunky stripe blue
+	animation50059.interval,bind
+	animation50059.pattern0,overlay,50059,0,0,0
+	
+	//chunky stripe azure
+	animation50060.interval,bind
+	animation50060.pattern0,overlay,50060,0,0,0
+	
+	//chunky stripe mint
+	animation50061.interval,bind
+	animation50061.pattern0,overlay,50061,0,0,0
+	
+	//chunky stripe white
+	animation50062.interval,bind
+	animation50062.pattern0,overlay,50062,0,0,0
+	
+	//chunky stripe gray
+	animation50063.interval,bind
+	animation50063.pattern0,overlay,50063,0,0,0
+	
+	//chunky stripe black
+	animation50064.interval,bind
+	animation50064.pattern0,overlay,50064,0,0,0
 	
 	//single swirl brown
 	animation50100.interval,bind
 	animation50100.pattern0,overlay,50100,0,0,0
 	
+	//single swirl green
+	animation50101.interval,bind
+	animation50101.pattern0,overlay,50101,0,0,0
+	
+	//single swirl olive
+	animation50102.interval,bind
+	animation50102.pattern0,overlay,50102,0,0,0
+	
+	//single swirl yellow
+	animation50103.interval,bind
+	animation50103.pattern0,overlay,50103,0,0,0
+	
+	//single swirl orange
+	animation50104.interval,bind
+	animation50104.pattern0,overlay,50104,0,0,0
+	
+	//single swirl red
+	animation50105.interval,bind
+	animation50105.pattern0,overlay,50105,0,0,0
+	
+	//single swirl mauve
+	animation50106.interval,bind
+	animation50106.pattern0,overlay,50106,0,0,0
+	
 	//single swirl purple
 	animation50107.interval,bind
 	animation50107.pattern0,overlay,50107,0,0,0
+	
+	//single swirl navy
+	animation50108.interval,bind
+	animation50108.pattern0,overlay,50108,0,0,0
+	
+	//single swirl blue
+	animation50109.interval,bind
+	animation50109.pattern0,overlay,50109,0,0,0
+	
+	//single swirl azure
+	animation50110.interval,bind
+	animation50110.pattern0,overlay,50110,0,0,0
+	
+	//single swirl mint
+	animation50111.interval,bind
+	animation50111.pattern0,overlay,50111,0,0,0
+	
+	//single swirl white
+	animation50112.interval,bind
+	animation50112.pattern0,overlay,50112,0,0,0
+	
+	//single swirl gray
+	animation50113.interval,bind
+	animation50113.pattern0,overlay,50113,0,0,0
+	
+	//single swirl black
+	animation50114.interval,bind
+	animation50114.pattern0,overlay,50114,0,0,0
 	
 	//radial swirl brown
 	animation50150.interval,bind
 	animation50150.pattern0,overlay,50150,0,0,0
 	
+	//radial swirl green
+	animation50151.interval,bind
+	animation50151.pattern0,overlay,50151,0,0,0
+	
+	//radial swirl olive
+	animation50152.interval,bind
+	animation50152.pattern0,overlay,50152,0,0,0
+	
+	//radial swirl yellow
+	animation50153.interval,bind
+	animation50153.pattern0,overlay,50153,0,0,0
+	
+	//radial swirl orange
+	animation50154.interval,bind
+	animation50154.pattern0,overlay,50154,0,0,0
+	
+	//radial swirl red
+	animation50155.interval,bind
+	animation50155.pattern0,overlay,50155,0,0,0
+	
+	//radial swirl mauve
+	animation50156.interval,bind
+	animation50156.pattern0,overlay,50156,0,0,0
+	
 	//radial swirl purple
 	animation50157.interval,bind
 	animation50157.pattern0,overlay,50157,0,0,0
+	
+	//radial swirl navy
+	animation50158.interval,bind
+	animation50158.pattern0,overlay,50158,0,0,0
+	
+	//radial swirl blue
+	animation50159.interval,bind
+	animation50159.pattern0,overlay,50159,0,0,0
+	
+	//radial swirl azure
+	animation50160.interval,bind
+	animation50160.pattern0,overlay,50160,0,0,0
+	
+	//radial swirl mint
+	animation50161.interval,bind
+	animation50161.pattern0,overlay,50161,0,0,0
+	
+	//radial swirl white
+	animation50162.interval,bind
+	animation50162.pattern0,overlay,50162,0,0,0
+	
+	//radial swirl gray
+	animation50163.interval,bind
+	animation50163.pattern0,overlay,50163,0,0,0
+	
+	//radial swirl black
+	animation50164.interval,bind
+	animation50164.pattern0,overlay,50164,0,0,0
 	
 	//pinstripe swirl brown
 	animation50200.interval,bind
 	animation50200.pattern0,overlay,50200,0,0,0
 	
+	//pinstripe swirl green
+	animation50201.interval,bind
+	animation50201.pattern0,overlay,50201,0,0,0
+	
+	//pinstripe swirl olive
+	animation50202.interval,bind
+	animation50202.pattern0,overlay,50202,0,0,0
+	
+	//pinstripe swirl yellow
+	animation50203.interval,bind
+	animation50203.pattern0,overlay,50203,0,0,0
+	
+	//pinstripe swirl orange
+	animation50204.interval,bind
+	animation50204.pattern0,overlay,50204,0,0,0
+	
+	//pinstripe swirl red
+	animation50205.interval,bind
+	animation50205.pattern0,overlay,50205,0,0,0
+	
+	//pinstripe swirl mauve
+	animation50206.interval,bind
+	animation50206.pattern0,overlay,50206,0,0,0
+	
 	//pinstripe swirl purple
 	animation50207.interval,bind
 	animation50207.pattern0,overlay,50207,0,0,0
+	
+	//pinstripe swirl navy
+	animation50208.interval,bind
+	animation50208.pattern0,overlay,50208,0,0,0
+	
+	//pinstripe swirl blue
+	animation50209.interval,bind
+	animation50209.pattern0,overlay,50209,0,0,0
+	
+	//pinstripe swirl azure
+	animation50210.interval,bind
+	animation50210.pattern0,overlay,50210,0,0,0
+	
+	//pinstripe swirl mint
+	animation50211.interval,bind
+	animation50211.pattern0,overlay,50211,0,0,0
+	
+	//pinstripe swirl white
+	animation50212.interval,bind
+	animation50212.pattern0,overlay,50212,0,0,0
+	
+	//pinstripe swirl gray
+	animation50213.interval,bind
+	animation50213.pattern0,overlay,50213,0,0,0
+	
+	//pinstripe swirl black
+	animation50214.interval,bind
+	animation50214.pattern0,overlay,50214,0,0,0
 
 	//———— decals  ————
 	//two stripes
@@ -434,7 +798,151 @@ surface31004
 	element2,overlay,surface30004l.png,0,0
 }
 
-//basic mauve
+//basic green
+surface31005
+{
+	element0,overlay,surface30000c.png,0,0
+	element1,overlayfast,surface31005.png,0,0
+	element2,overlay,surface30000l.png,0,0
+}
+
+surface31006
+{
+	element0,overlay,surface30001c.png,0,0
+	element1,overlayfast,surface31005.png,0,0
+	element2,overlay,surface30001l.png,0,0
+}
+
+surface31007
+{
+	element0,overlay,surface30002c.png,0,0
+	element1,overlayfast,surface31005.png,0,0
+	element2,overlay,surface30002l.png,0,0
+}
+
+surface31008
+{
+	element0,overlay,surface30003c.png,0,0
+	element1,overlayfast,surface31005.png,0,0
+	element2,overlay,surface30003l.png,0,0
+}
+
+surface31009
+{
+	element0,overlay,surface30004c.png,0,0
+	element1,overlayfast,surface31005.png,0,0
+	element2,overlay,surface30004l.png,0,0
+}
+
+//basic olive
+surface31010
+{
+	element0,overlay,surface30000c.png,0,0
+	element1,overlayfast,surface31010.png,0,0
+	element2,overlay,surface30000l.png,0,0
+}
+
+surface31011
+{
+	element0,overlay,surface30001c.png,0,0
+	element1,overlayfast,surface31010.png,0,0
+	element2,overlay,surface30001l.png,0,0
+}
+
+surface31012
+{
+	element0,overlay,surface30002c.png,0,0
+	element1,overlayfast,surface31010.png,0,0
+	element2,overlay,surface30002l.png,0,0
+}
+
+surface31013
+{
+	element0,overlay,surface30003c.png,0,0
+	element1,overlayfast,surface31010.png,0,0
+	element2,overlay,surface30003l.png,0,0
+}
+
+surface31014
+{
+	element0,overlay,surface30004c.png,0,0
+	element1,overlayfast,surface31010.png,0,0
+	element2,overlay,surface30004l.png,0,0
+}
+
+//basic yellow
+surface31015
+{
+	element0,overlay,surface30000c.png,0,0
+	element1,overlayfast,surface31015.png,0,0
+	element2,overlay,surface30000l.png,0,0
+}
+
+surface31016
+{
+	element0,overlay,surface30001c.png,0,0
+	element1,overlayfast,surface31015.png,0,0
+	element2,overlay,surface30001l.png,0,0
+}
+
+surface31017
+{
+	element0,overlay,surface30002c.png,0,0
+	element1,overlayfast,surface31015.png,0,0
+	element2,overlay,surface30002l.png,0,0
+}
+
+surface31018
+{
+	element0,overlay,surface30003c.png,0,0
+	element1,overlayfast,surface31015.png,0,0
+	element2,overlay,surface30003l.png,0,0
+}
+
+surface31019
+{
+	element0,overlay,surface30004c.png,0,0
+	element1,overlayfast,surface31015.png,0,0
+	element2,overlay,surface30004l.png,0,0
+}
+
+//basic orange
+surface31020
+{
+	element0,overlay,surface30000c.png,0,0
+	element1,overlayfast,surface31020.png,0,0
+	element2,overlay,surface30000l.png,0,0
+}
+
+surface31021
+{
+	element0,overlay,surface30001c.png,0,0
+	element1,overlayfast,surface31020.png,0,0
+	element2,overlay,surface30001l.png,0,0
+}
+
+surface31022
+{
+	element0,overlay,surface30002c.png,0,0
+	element1,overlayfast,surface31020.png,0,0
+	element2,overlay,surface30002l.png,0,0
+}
+
+surface31023
+{
+	element0,overlay,surface30003c.png,0,0
+	element1,overlayfast,surface31020.png,0,0
+	element2,overlay,surface30003l.png,0,0
+}
+
+surface31024
+{
+	element0,overlay,surface30004c.png,0,0
+	element1,overlayfast,surface31020.png,0,0
+	element2,overlay,surface30004l.png,0,0
+}
+
+//basic red
 surface31025
 {
 	element0,overlay,surface30000c.png,0,0
@@ -470,7 +978,511 @@ surface31029
 	element2,overlay,surface30004l.png,0,0
 }
 
-//cowprint mauve
+//basic mauve
+surface31030
+{
+	element0,overlay,surface30000c.png,0,0
+	element1,overlayfast,surface31030.png,0,0
+	element2,overlay,surface30000l.png,0,0
+}
+
+surface31031
+{
+	element0,overlay,surface30001c.png,0,0
+	element1,overlayfast,surface31030.png,0,0
+	element2,overlay,surface30001l.png,0,0
+}
+
+surface31032
+{
+	element0,overlay,surface30002c.png,0,0
+	element1,overlayfast,surface31030.png,0,0
+	element2,overlay,surface30002l.png,0,0
+}
+
+surface31033
+{
+	element0,overlay,surface30003c.png,0,0
+	element1,overlayfast,surface31030.png,0,0
+	element2,overlay,surface30003l.png,0,0
+}
+
+surface31034
+{
+	element0,overlay,surface30004c.png,0,0
+	element1,overlayfast,surface31030.png,0,0
+	element2,overlay,surface30004l.png,0,0
+}
+
+//basic purple
+surface31035
+{
+	element0,overlay,surface30000c.png,0,0
+	element1,overlayfast,surface31035.png,0,0
+	element2,overlay,surface30000l.png,0,0
+}
+
+surface31036
+{
+	element0,overlay,surface30001c.png,0,0
+	element1,overlayfast,surface31035.png,0,0
+	element2,overlay,surface30001l.png,0,0
+}
+
+surface31037
+{
+	element0,overlay,surface30002c.png,0,0
+	element1,overlayfast,surface31035.png,0,0
+	element2,overlay,surface30002l.png,0,0
+}
+
+surface31038
+{
+	element0,overlay,surface30003c.png,0,0
+	element1,overlayfast,surface31035.png,0,0
+	element2,overlay,surface30003l.png,0,0
+}
+
+surface31039
+{
+	element0,overlay,surface30004c.png,0,0
+	element1,overlayfast,surface31035.png,0,0
+	element2,overlay,surface30004l.png,0,0
+}
+
+//basic navy
+surface31040
+{
+	element0,overlay,surface30000c.png,0,0
+	element1,overlayfast,surface31040.png,0,0
+	element2,overlay,surface30000l.png,0,0
+}
+
+surface31041
+{
+	element0,overlay,surface30001c.png,0,0
+	element1,overlayfast,surface31040.png,0,0
+	element2,overlay,surface30001l.png,0,0
+}
+
+surface31042
+{
+	element0,overlay,surface30002c.png,0,0
+	element1,overlayfast,surface31040.png,0,0
+	element2,overlay,surface30002l.png,0,0
+}
+
+surface31043
+{
+	element0,overlay,surface30003c.png,0,0
+	element1,overlayfast,surface31040.png,0,0
+	element2,overlay,surface30003l.png,0,0
+}
+
+surface31044
+{
+	element0,overlay,surface30004c.png,0,0
+	element1,overlayfast,surface31040.png,0,0
+	element2,overlay,surface30004l.png,0,0
+}
+
+//basic blue
+surface31045
+{
+	element0,overlay,surface30000c.png,0,0
+	element1,overlayfast,surface31045.png,0,0
+	element2,overlay,surface30000l.png,0,0
+}
+
+surface31046
+{
+	element0,overlay,surface30001c.png,0,0
+	element1,overlayfast,surface31045.png,0,0
+	element2,overlay,surface30001l.png,0,0
+}
+
+surface31047
+{
+	element0,overlay,surface30002c.png,0,0
+	element1,overlayfast,surface31045.png,0,0
+	element2,overlay,surface30002l.png,0,0
+}
+
+surface31048
+{
+	element0,overlay,surface30003c.png,0,0
+	element1,overlayfast,surface31045.png,0,0
+	element2,overlay,surface30003l.png,0,0
+}
+
+surface31049
+{
+	element0,overlay,surface30004c.png,0,0
+	element1,overlayfast,surface31045.png,0,0
+	element2,overlay,surface30004l.png,0,0
+}
+
+//basic azure
+surface31050
+{
+	element0,overlay,surface30000c.png,0,0
+	element1,overlayfast,surface31050.png,0,0
+	element2,overlay,surface30000l.png,0,0
+}
+
+surface31051
+{
+	element0,overlay,surface30001c.png,0,0
+	element1,overlayfast,surface31050.png,0,0
+	element2,overlay,surface30001l.png,0,0
+}
+
+surface31052
+{
+	element0,overlay,surface30002c.png,0,0
+	element1,overlayfast,surface31050.png,0,0
+	element2,overlay,surface30002l.png,0,0
+}
+
+surface31053
+{
+	element0,overlay,surface30003c.png,0,0
+	element1,overlayfast,surface31050.png,0,0
+	element2,overlay,surface30003l.png,0,0
+}
+
+surface31054
+{
+	element0,overlay,surface30004c.png,0,0
+	element1,overlayfast,surface31050.png,0,0
+	element2,overlay,surface30004l.png,0,0
+}
+
+//basic mint
+surface31055
+{
+	element0,overlay,surface30000c.png,0,0
+	element1,overlayfast,surface31055.png,0,0
+	element2,overlay,surface30000l.png,0,0
+}
+
+surface31056
+{
+	element0,overlay,surface30001c.png,0,0
+	element1,overlayfast,surface31055.png,0,0
+	element2,overlay,surface30001l.png,0,0
+}
+
+surface31057
+{
+	element0,overlay,surface30002c.png,0,0
+	element1,overlayfast,surface31055.png,0,0
+	element2,overlay,surface30002l.png,0,0
+}
+
+surface31058
+{
+	element0,overlay,surface30003c.png,0,0
+	element1,overlayfast,surface31055.png,0,0
+	element2,overlay,surface30003l.png,0,0
+}
+
+surface31059
+{
+	element0,overlay,surface30004c.png,0,0
+	element1,overlayfast,surface31055.png,0,0
+	element2,overlay,surface30004l.png,0,0
+}
+
+//basic white
+surface31060
+{
+	element0,overlay,surface30000c.png,0,0
+	element1,overlayfast,surface31060.png,0,0
+	element2,overlay,surface30000l.png,0,0
+}
+
+surface31061
+{
+	element0,overlay,surface30001c.png,0,0
+	element1,overlayfast,surface31060.png,0,0
+	element2,overlay,surface30001l.png,0,0
+}
+
+surface31062
+{
+	element0,overlay,surface30002c.png,0,0
+	element1,overlayfast,surface31060.png,0,0
+	element2,overlay,surface30002l.png,0,0
+}
+
+surface31063
+{
+	element0,overlay,surface30003c.png,0,0
+	element1,overlayfast,surface31060.png,0,0
+	element2,overlay,surface30003l.png,0,0
+}
+
+surface31064
+{
+	element0,overlay,surface30004c.png,0,0
+	element1,overlayfast,surface31060.png,0,0
+	element2,overlay,surface30004l.png,0,0
+}
+
+//basic gray
+surface31065
+{
+	element0,overlay,surface30000c.png,0,0
+	element1,overlayfast,surface31065.png,0,0
+	element2,overlay,surface30000l.png,0,0
+}
+
+surface31066
+{
+	element0,overlay,surface30001c.png,0,0
+	element1,overlayfast,surface31065.png,0,0
+	element2,overlay,surface30001l.png,0,0
+}
+
+surface31067
+{
+	element0,overlay,surface30002c.png,0,0
+	element1,overlayfast,surface31065.png,0,0
+	element2,overlay,surface30002l.png,0,0
+}
+
+surface31068
+{
+	element0,overlay,surface30003c.png,0,0
+	element1,overlayfast,surface31065.png,0,0
+	element2,overlay,surface30003l.png,0,0
+}
+
+surface31069
+{
+	element0,overlay,surface30004c.png,0,0
+	element1,overlayfast,surface31065.png,0,0
+	element2,overlay,surface30004l.png,0,0
+}
+
+//basic black
+surface31070
+{
+	element0,overlay,surface30000c.png,0,0
+	element1,overlayfast,surface31070.png,0,0
+	element2,overlay,surface30000l.png,0,0
+}
+
+surface31071
+{
+	element0,overlay,surface30001c.png,0,0
+	element1,overlayfast,surface31070.png,0,0
+	element2,overlay,surface30001l.png,0,0
+}
+
+surface31072
+{
+	element0,overlay,surface30002c.png,0,0
+	element1,overlayfast,surface31070.png,0,0
+	element2,overlay,surface30002l.png,0,0
+}
+
+surface31073
+{
+	element0,overlay,surface30003c.png,0,0
+	element1,overlayfast,surface31070.png,0,0
+	element2,overlay,surface30003l.png,0,0
+}
+
+surface31074
+{
+	element0,overlay,surface30004c.png,0,0
+	element1,overlayfast,surface31070.png,0,0
+	element2,overlay,surface30004l.png,0,0
+}
+
+//cowprint beige
+surface32000
+{
+	element0,overlay,surface30000c.png,0,0
+	element1,overlayfast,surface32000.png,0,0
+	element2,overlay,surface30000l.png,0,0
+}
+
+surface32001
+{
+	element0,overlay,surface30001c.png,0,0
+	element1,overlayfast,surface32000.png,0,0
+	element2,overlay,surface30001l.png,0,0
+}
+
+surface32002
+{
+	element0,overlay,surface30002c.png,0,0
+	element1,overlayfast,surface32000.png,0,0
+	element2,overlay,surface30002l.png,0,0
+}
+
+surface32003
+{
+	element0,overlay,surface30003c.png,0,0
+	element1,overlayfast,surface32000.png,0,0
+	element2,overlay,surface30003l.png,0,0
+}
+
+surface32004
+{
+	element0,overlay,surface30004c.png,0,0
+	element1,overlayfast,surface32000.png,0,0
+	element2,overlay,surface30004l.png,0,0
+}
+
+//cowprint green
+surface32005
+{
+	element0,overlay,surface30000c.png,0,0
+	element1,overlayfast,surface32005.png,0,0
+	element2,overlay,surface30000l.png,0,0
+}
+
+surface32006
+{
+	element0,overlay,surface30001c.png,0,0
+	element1,overlayfast,surface32005.png,0,0
+	element2,overlay,surface30001l.png,0,0
+}
+
+surface32007
+{
+	element0,overlay,surface30002c.png,0,0
+	element1,overlayfast,surface32005.png,0,0
+	element2,overlay,surface30002l.png,0,0
+}
+
+surface32008
+{
+	element0,overlay,surface30003c.png,0,0
+	element1,overlayfast,surface32005.png,0,0
+	element2,overlay,surface30003l.png,0,0
+}
+
+surface32009
+{
+	element0,overlay,surface30004c.png,0,0
+	element1,overlayfast,surface32005.png,0,0
+	element2,overlay,surface30004l.png,0,0
+}
+
+//cowprint olive
+surface32010
+{
+	element0,overlay,surface30000c.png,0,0
+	element1,overlayfast,surface32010.png,0,0
+	element2,overlay,surface30000l.png,0,0
+}
+
+surface32011
+{
+	element0,overlay,surface30001c.png,0,0
+	element1,overlayfast,surface32010.png,0,0
+	element2,overlay,surface30001l.png,0,0
+}
+
+surface32012
+{
+	element0,overlay,surface30002c.png,0,0
+	element1,overlayfast,surface32010.png,0,0
+	element2,overlay,surface30002l.png,0,0
+}
+
+surface32013
+{
+	element0,overlay,surface30003c.png,0,0
+	element1,overlayfast,surface32010.png,0,0
+	element2,overlay,surface30003l.png,0,0
+}
+
+surface32014
+{
+	element0,overlay,surface30004c.png,0,0
+	element1,overlayfast,surface32010.png,0,0
+	element2,overlay,surface30004l.png,0,0
+}
+
+//cowprint yellow
+surface32015
+{
+	element0,overlay,surface30000c.png,0,0
+	element1,overlayfast,surface32015.png,0,0
+	element2,overlay,surface30000l.png,0,0
+}
+
+surface32016
+{
+	element0,overlay,surface30001c.png,0,0
+	element1,overlayfast,surface32015.png,0,0
+	element2,overlay,surface30001l.png,0,0
+}
+
+surface32017
+{
+	element0,overlay,surface30002c.png,0,0
+	element1,overlayfast,surface32015.png,0,0
+	element2,overlay,surface30002l.png,0,0
+}
+
+surface32018
+{
+	element0,overlay,surface30003c.png,0,0
+	element1,overlayfast,surface32015.png,0,0
+	element2,overlay,surface30003l.png,0,0
+}
+
+surface32019
+{
+	element0,overlay,surface30004c.png,0,0
+	element1,overlayfast,surface32015.png,0,0
+	element2,overlay,surface30004l.png,0,0
+}
+
+//cowprint orange
+surface32020
+{
+	element0,overlay,surface30000c.png,0,0
+	element1,overlayfast,surface32020.png,0,0
+	element2,overlay,surface30000l.png,0,0
+}
+
+surface32021
+{
+	element0,overlay,surface30001c.png,0,0
+	element1,overlayfast,surface32020.png,0,0
+	element2,overlay,surface30001l.png,0,0
+}
+
+surface32022
+{
+	element0,overlay,surface30002c.png,0,0
+	element1,overlayfast,surface32020.png,0,0
+	element2,overlay,surface30002l.png,0,0
+}
+
+surface32023
+{
+	element0,overlay,surface30003c.png,0,0
+	element1,overlayfast,surface32020.png,0,0
+	element2,overlay,surface30003l.png,0,0
+}
+
+surface32024
+{
+	element0,overlay,surface30004c.png,0,0
+	element1,overlayfast,surface32020.png,0,0
+	element2,overlay,surface30004l.png,0,0
+}
+
+//cowprint red
 surface32025
 {
 	element0,overlay,surface30000c.png,0,0
@@ -488,7 +1500,7 @@ surface32026
 surface32027
 {
 	element0,overlay,surface30002c.png,0,0
-	element1,overlayfast,surface32027.png,0,0
+	element1,overlayfast,surface32025.png,0,0
 	element2,overlay,surface30002l.png,0,0
 }
 
@@ -506,6 +1518,330 @@ surface32029
 	element2,overlay,surface30004l.png,0,0
 }
 
+//cowprint mauve
+surface32030
+{
+	element0,overlay,surface30000c.png,0,0
+	element1,overlayfast,surface32030.png,0,0
+	element2,overlay,surface30000l.png,0,0
+}
+
+surface32031
+{
+	element0,overlay,surface30001c.png,0,0
+	element1,overlayfast,surface32030.png,0,0
+	element2,overlay,surface30001l.png,0,0
+}
+
+surface32032
+{
+	element0,overlay,surface30002c.png,0,0
+	element1,overlayfast,surface32030.png,0,0
+	element2,overlay,surface30002l.png,0,0
+}
+
+surface32033
+{
+	element0,overlay,surface30003c.png,0,0
+	element1,overlayfast,surface32030.png,0,0
+	element2,overlay,surface30003l.png,0,0
+}
+
+surface32034
+{
+	element0,overlay,surface30004c.png,0,0
+	element1,overlayfast,surface32030.png,0,0
+	element2,overlay,surface30004l.png,0,0
+}
+
+//cowprint purple
+surface32035
+{
+	element0,overlay,surface30000c.png,0,0
+	element1,overlayfast,surface32035.png,0,0
+	element2,overlay,surface30000l.png,0,0
+}
+
+surface32036
+{
+	element0,overlay,surface30001c.png,0,0
+	element1,overlayfast,surface32035.png,0,0
+	element2,overlay,surface30001l.png,0,0
+}
+
+surface32037
+{
+	element0,overlay,surface30002c.png,0,0
+	element1,overlayfast,surface32035.png,0,0
+	element2,overlay,surface30002l.png,0,0
+}
+
+surface32038
+{
+	element0,overlay,surface30003c.png,0,0
+	element1,overlayfast,surface32035.png,0,0
+	element2,overlay,surface30003l.png,0,0
+}
+
+surface32039
+{
+	element0,overlay,surface30004c.png,0,0
+	element1,overlayfast,surface32035.png,0,0
+	element2,overlay,surface30004l.png,0,0
+}
+
+//cowprint navy
+surface32040
+{
+	element0,overlay,surface30000c.png,0,0
+	element1,overlayfast,surface32040.png,0,0
+	element2,overlay,surface30000l.png,0,0
+}
+
+surface32041
+{
+	element0,overlay,surface30001c.png,0,0
+	element1,overlayfast,surface32040.png,0,0
+	element2,overlay,surface30001l.png,0,0
+}
+
+surface32042
+{
+	element0,overlay,surface30002c.png,0,0
+	element1,overlayfast,surface32040.png,0,0
+	element2,overlay,surface30002l.png,0,0
+}
+
+surface32043
+{
+	element0,overlay,surface30003c.png,0,0
+	element1,overlayfast,surface32040.png,0,0
+	element2,overlay,surface30003l.png,0,0
+}
+
+surface32044
+{
+	element0,overlay,surface30004c.png,0,0
+	element1,overlayfast,surface32040.png,0,0
+	element2,overlay,surface30004l.png,0,0
+}
+
+//cowprint blue
+surface32045
+{
+	element0,overlay,surface30000c.png,0,0
+	element1,overlayfast,surface32045.png,0,0
+	element2,overlay,surface30000l.png,0,0
+}
+
+surface32046
+{
+	element0,overlay,surface30001c.png,0,0
+	element1,overlayfast,surface32045.png,0,0
+	element2,overlay,surface30001l.png,0,0
+}
+
+surface32047
+{
+	element0,overlay,surface30002c.png,0,0
+	element1,overlayfast,surface32045.png,0,0
+	element2,overlay,surface30002l.png,0,0
+}
+
+surface32048
+{
+	element0,overlay,surface30003c.png,0,0
+	element1,overlayfast,surface32045.png,0,0
+	element2,overlay,surface30003l.png,0,0
+}
+
+surface32049
+{
+	element0,overlay,surface30004c.png,0,0
+	element1,overlayfast,surface32045.png,0,0
+	element2,overlay,surface30004l.png,0,0
+}
+
+//cowprint azure
+surface32050
+{
+	element0,overlay,surface30000c.png,0,0
+	element1,overlayfast,surface32050.png,0,0
+	element2,overlay,surface30000l.png,0,0
+}
+
+surface32051
+{
+	element0,overlay,surface30001c.png,0,0
+	element1,overlayfast,surface32050.png,0,0
+	element2,overlay,surface30001l.png,0,0
+}
+
+surface32052
+{
+	element0,overlay,surface30002c.png,0,0
+	element1,overlayfast,surface32050.png,0,0
+	element2,overlay,surface30002l.png,0,0
+}
+
+surface32053
+{
+	element0,overlay,surface30003c.png,0,0
+	element1,overlayfast,surface32050.png,0,0
+	element2,overlay,surface30003l.png,0,0
+}
+
+surface32054
+{
+	element0,overlay,surface30004c.png,0,0
+	element1,overlayfast,surface32050.png,0,0
+	element2,overlay,surface30004l.png,0,0
+}
+
+//cowprint mint
+surface32055
+{
+	element0,overlay,surface30000c.png,0,0
+	element1,overlayfast,surface32055.png,0,0
+	element2,overlay,surface30000l.png,0,0
+}
+
+surface32056
+{
+	element0,overlay,surface30001c.png,0,0
+	element1,overlayfast,surface32055.png,0,0
+	element2,overlay,surface30001l.png,0,0
+}
+
+surface32057
+{
+	element0,overlay,surface30002c.png,0,0
+	element1,overlayfast,surface32055.png,0,0
+	element2,overlay,surface30002l.png,0,0
+}
+
+surface32058
+{
+	element0,overlay,surface30003c.png,0,0
+	element1,overlayfast,surface32055.png,0,0
+	element2,overlay,surface30003l.png,0,0
+}
+
+surface32059
+{
+	element0,overlay,surface30004c.png,0,0
+	element1,overlayfast,surface32055.png,0,0
+	element2,overlay,surface30004l.png,0,0
+}
+
+//cowprint white
+surface32060
+{
+	element0,overlay,surface30000c.png,0,0
+	element1,overlayfast,surface32060.png,0,0
+	element2,overlay,surface30000l.png,0,0
+}
+
+surface32061
+{
+	element0,overlay,surface30001c.png,0,0
+	element1,overlayfast,surface32060.png,0,0
+	element2,overlay,surface30001l.png,0,0
+}
+
+surface32062
+{
+	element0,overlay,surface30002c.png,0,0
+	element1,overlayfast,surface32060.png,0,0
+	element2,overlay,surface30002l.png,0,0
+}
+
+surface32063
+{
+	element0,overlay,surface30003c.png,0,0
+	element1,overlayfast,surface32060.png,0,0
+	element2,overlay,surface30003l.png,0,0
+}
+
+surface32064
+{
+	element0,overlay,surface30004c.png,0,0
+	element1,overlayfast,surface32060.png,0,0
+	element2,overlay,surface30004l.png,0,0
+}
+
+//cowprint gray
+surface32065
+{
+	element0,overlay,surface30000c.png,0,0
+	element1,overlayfast,surface32065.png,0,0
+	element2,overlay,surface30000l.png,0,0
+}
+
+surface32066
+{
+	element0,overlay,surface30001c.png,0,0
+	element1,overlayfast,surface32065.png,0,0
+	element2,overlay,surface30001l.png,0,0
+}
+
+surface32067
+{
+	element0,overlay,surface30002c.png,0,0
+	element1,overlayfast,surface32065.png,0,0
+	element2,overlay,surface30002l.png,0,0
+}
+
+surface32068
+{
+	element0,overlay,surface30003c.png,0,0
+	element1,overlayfast,surface32065.png,0,0
+	element2,overlay,surface30003l.png,0,0
+}
+
+surface32069
+{
+	element0,overlay,surface30004c.png,0,0
+	element1,overlayfast,surface32065.png,0,0
+	element2,overlay,surface30004l.png,0,0
+}
+
+//cowprint black
+surface32070
+{
+	element0,overlay,surface30000c.png,0,0
+	element1,overlayfast,surface32070.png,0,0
+	element2,overlay,surface30000l.png,0,0
+}
+
+surface32071
+{
+	element0,overlay,surface30001c.png,0,0
+	element1,overlayfast,surface32070.png,0,0
+	element2,overlay,surface30001l.png,0,0
+}
+
+surface32072
+{
+	element0,overlay,surface30002c.png,0,0
+	element1,overlayfast,surface32070.png,0,0
+	element2,overlay,surface30002l.png,0,0
+}
+
+surface32073
+{
+	element0,overlay,surface30003c.png,0,0
+	element1,overlayfast,surface32070.png,0,0
+	element2,overlay,surface30003l.png,0,0
+}
+
+surface32074
+{
+	element0,overlay,surface30004c.png,0,0
+	element1,overlayfast,surface32070.png,0,0
+	element2,overlay,surface30004l.png,0,0
+}
+
 //—————————————————————————————— Snail Clipping (Snipping) ——————————————————————————————
 
 //———————— SNAIL SHELL ————————
@@ -518,11 +1854,115 @@ surface50000
 	element2,overlay,surface50000l.png,0,0
 }
 
+//basic green
+surface50001
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50001.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//basic olive
+surface50002
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50002.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//basic yellow
+surface50003
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50003.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//basic orange
+surface50004
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50004.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//basic red
+surface50005
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50005.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//basic mauve
+surface50006
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50006.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
 //basic purple
 surface50007
 {
 	element0,overlay,surface50000c.png,0,0
 	element1,overlayfast,surface50007.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//basic navy
+surface50008
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50008.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//basic blue
+surface50009
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50009.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//basic azure
+surface50010
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50010.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//basic mint
+surface50011
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50011.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//basic white
+surface50012
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50012.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//basic gray
+surface50013
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50013.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//basic black
+surface50014
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50014.png,0,0
 	element2,overlay,surface50000l.png,0,0
 }
 
@@ -534,11 +1974,115 @@ surface50050
 	element2,overlay,surface50000l.png,0,0
 }
 
+//chunky stripe green
+surface50051
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50051.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//chunky stripe olive
+surface50052
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50052.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//chunky stripe yellow
+surface50053
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50053.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//chunky stripe orange
+surface50054
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50054.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//chunky stripe red
+surface50055
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50055.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//chunky stripe mauve
+surface50056
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50056.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
 //chunky stripe purple
 surface50057
 {
 	element0,overlay,surface50000c.png,0,0
 	element1,overlayfast,surface50057.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//chunky stripe navy
+surface50058
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50058.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//chunky stripe blue
+surface50059
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50059.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//chunky stripe azure
+surface50060
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50060.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//chunky stripe mint
+surface50061
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50061.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//chunky stripe white
+surface50062
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50062.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//chunky stripe gray
+surface50063
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50063.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//chunky stripe black
+surface50064
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50064.png,0,0
 	element2,overlay,surface50000l.png,0,0
 }
 
@@ -550,11 +2094,115 @@ surface50100
 	element2,overlay,surface50000l.png,0,0
 }
 
+//single swirl green
+surface50101
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50101.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//single swirl olive
+surface50102
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50102.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//single swirl yellow
+surface50103
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50103.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//single swirl orange
+surface50104
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50104.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//single swirl red
+surface50105
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50105.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//single swirl mauve
+surface50106
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50106.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
 //single swirl purple
 surface50107
 {
 	element0,overlay,surface50000c.png,0,0
 	element1,overlayfast,surface50107.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//single swirl navy
+surface50108
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50108.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//single swirl blue
+surface50109
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50109.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//single swirl azure
+surface50110
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50110.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//single swirl mint
+surface50111
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50111.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//single swirl white
+surface50112
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50112.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//single swirl gray
+surface50113
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50113.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//single swirl black
+surface50114
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50114.png,0,0
 	element2,overlay,surface50000l.png,0,0
 }
 
@@ -566,11 +2214,115 @@ surface50150
 	element2,overlay,surface50000l.png,0,0
 }
 
+//radial swirl green
+surface50151
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50151.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//radial swirl olive
+surface50152
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50152.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//radial swirl yellow
+surface50153
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50153.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//radial swirl orange
+surface50154
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50154.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//radial swirl red
+surface50155
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50155.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//radial swirl mauve
+surface50156
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50156.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
 //radial swirl purple
 surface50157
 {
 	element0,overlay,surface50000c.png,0,0
 	element1,overlayfast,surface50157.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//radial swirl navy
+surface50158
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50158.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//radial swirl blue
+surface50159
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50159.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//radial swirl azure
+surface50160
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50160.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//radial swirl mint
+surface50161
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50161.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//radial swirl white
+surface50162
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50162.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//radial swirl gray
+surface50163
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50163.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//radial swirl black
+surface50164
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50164.png,0,0
 	element2,overlay,surface50000l.png,0,0
 }
 
@@ -582,10 +2334,114 @@ surface50200
 	element2,overlay,surface50000l.png,0,0
 }
 
+//pinstripe swirl green
+surface50201
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50201.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//pinstripe swirl olive
+surface50202
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50202.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//pinstripe swirl yellow
+surface50203
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50203.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//pinstripe swirl orange
+surface50204
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50204.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//pinstripe swirl red
+surface50205
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50205.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//pinstripe swirl mauve
+surface50206
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50206.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
 //pinstripe swirl purple
 surface50207
 {
 	element0,overlay,surface50000c.png,0,0
 	element1,overlayfast,surface50207.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//pinstripe swirl navy
+surface50208
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50208.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//pinstripe swirl blue
+surface50209
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50209.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//pinstripe swirl azure
+surface50210
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50210.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//pinstripe swirl mint
+surface50211
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50211.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//pinstripe swirl white
+surface50212
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50212.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//pinstripe swirl gray
+surface50213
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50213.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//pinstripe swirl black
+surface50214
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50214.png,0,0
 	element2,overlay,surface50000l.png,0,0
 }
