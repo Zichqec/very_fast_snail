@@ -85,6 +85,7 @@ sakura.bindgroup65015.name,Hardware,Sling Bag
 sakura.bindgroup65020.name,Hardware,Hot Rod Exhaust
 sakura.bindgroup65025.name,Hardware,Radio Antenna
 sakura.bindgroup65030.name,Hardware,BIG ROCKET
+sakura.bindgroup65050.name,Hardware,Red Helmet
 
 //Masks
 sakura.bindoption4.group,Masks,multiple
@@ -98,10 +99,9 @@ sakura.bindgroup70020.name,Masks,Shades
 sakura.bindoption5.group,Hats,multiple
 sakura.bindgroup75000.name,Hats,Blue Party Hat
 sakura.bindgroup75001.name,Hats,Pink Party Hat
-sakura.bindgroup75005.name,Hats,Red Helmet
-sakura.bindgroup75045.name,Hats,Red Trucker
-sakura.bindgroup75047.name,Hats,Blue Trucker
-sakura.bindgroup75049.name,Hats,Green Trucker
+sakura.bindgroup75020.name,Hats,Red Trucker
+sakura.bindgroup75022.name,Hats,Blue Trucker
+sakura.bindgroup75024.name,Hats,Green Trucker
 
 //Add-ons 
 sakura.bindoption6.group,Add-ons,multiple
