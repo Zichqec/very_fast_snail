@@ -44,7 +44,8 @@ OnFirstBoot : all
 
 OnFirst.SnailPick : all
 {
-	"\_q\f[bold,1]\f[italic,1]\f[align,center]\f[height,+2]CHOOSE YOUR RACER!\n\f[height,default]\f[align,left]\f[italic,default]\f[bold,default]\n"
+	"\0\b[0]\t\*\_q\![set,autoscroll,disable]"
+	"\f[bold,1]\f[italic,1]\f[align,center]\f[height,+2]CHOOSE YOUR RACER!\n\f[height,default]\f[align,left]\f[italic,default]\f[bold,default]\n"
 	
 	
 	foreach SnailPickList; _snail

@@ -10,8 +10,9 @@ dicdir, yaya_base
 dic, aitalk.dic
 dic, boot.dic
 dic, item_details.dic
-dic, mouse.dic
 dic, meta.dic
+dic, mouse.dic
+dic, name_generator.dic
 dic, other.dic
 dic, sakura_menu.dic
 dic, word.dic
