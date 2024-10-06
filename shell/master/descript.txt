@@ -80,10 +80,10 @@ sakura.bindgroup55020.name,Decals,Big Flame
 //Hardware
 sakura.bindoption3.group,Hardware,multiple
 sakura.bindgroup65000.name,Hardware,Red Spoiler
-sakura.bindgroup65010.name,Hardware,Saddle Bag
-sakura.bindgroup65015.name,Hardware,Sling Bag
-sakura.bindgroup65020.name,Hardware,Hot Rod Exhaust
-sakura.bindgroup65025.name,Hardware,Radio Antenna
+sakura.bindgroup65010.name,Hardware,Hot Rod Exhaust
+sakura.bindgroup65015.name,Hardware,Radio Antenna
+sakura.bindgroup65020.name,Hardware,Saddle Bag
+sakura.bindgroup65025.name,Hardware,Sling Bag
 sakura.bindgroup65030.name,Hardware,BIG ROCKET
 sakura.bindgroup65050.name,Hardware,Red Helmet
 

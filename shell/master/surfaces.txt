@@ -287,19 +287,19 @@ surface.append0-9
 	animation65000.interval,bind
 	animation65000.pattern0,overlay,65000,0,0,0
 
-	//saddle bag
+	//hot rod exhaust
 	animation65010.interval,bind
 	animation65010.pattern0,overlay,65010,0,0,0
 
-	//sling bag
+	//radio antenna :3
 	animation65015.interval,bind
 	animation65015.pattern0,overlay,65015,0,0,0
 
-	//hot rod exhaust
+	//saddle bag
 	animation65020.interval,bind
 	animation65020.pattern0,overlay,65020,0,0,0
 
-	//radio antenna :3
+	//sling bag
 	animation65025.interval,bind
 	animation65025.pattern0,overlay,65025,0,0,0
 
