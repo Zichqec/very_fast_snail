@@ -79,6 +79,14 @@ surface0
 	animation70020.interval,bind
 	animation70020.pattern0,overlay,70020,0,0,0
 	
+	//———————— SPECIAL HARDWARE ————————
+	//helmets are here because they need to Bob
+	
+	//red helmet
+	animation65050.interval,bind
+	animation65050.pattern0,interpolate,65050,0,0,0
+	animation65050.pattern1,overlay,65051,0,0,0
+	
 	//———————— SNAIL HATS ————————
 
 	//blue party
@@ -88,26 +96,21 @@ surface0
 	//pink party
 	animation75001.interval,bind
 	animation75001.pattern0,interpolate,75001,0,0,0
-	
-	//red helmet
-	animation75005.interval,bind
-	animation75005.pattern0,interpolate,75005,0,0,0
-	animation75005.pattern1,overlay,75006,0,0,0
 
 	//red trucker
-	animation75045.interval,bind
-	animation75045.pattern0,interpolate,75045,0,0,0
-	animation75045.pattern1,add,75046,0,0,0
+	animation75020.interval,bind
+	animation75020.pattern0,interpolate,75020,0,0,0
+	animation75020.pattern1,add,75021,0,0,0
 
 	//blue trucker
-	animation75047.interval,bind
-	animation75047.pattern0,interpolate,75047,0,0,0
-	animation75047.pattern1,add,75048,0,0,0
+	animation75022.interval,bind
+	animation75022.pattern0,interpolate,75022,0,0,0
+	animation75022.pattern1,add,75023,0,0,0
 
 	//green trucker
-	animation75049.interval,bind
-	animation75049.pattern0,interpolate,75049,0,0,0
-	animation75049.pattern1,add,75050,0,0,0
+	animation75023.interval,bind
+	animation75023.pattern0,interpolate,75023,0,0,0
+	animation75023.pattern1,add,75024,0,0,0
 }
 
 surface1
