@@ -46,51 +46,57 @@ menu.sidebar.bitmap.filename,menu_sidebar.png
 sakura.menu,auto
 
 //Trail
-//sakura.bindgroup0.name,trail,default
+//sakura.bindgroup0.name,Trail,default
 //sakura.bindgroup0.default,1
-//sakura.bindgroup0.name,trail,simplesludge
+//sakura.bindgroup0.name,Trail,simplesludge
 
 //Body paint
-sakura.bindoption0.group,bodypaint,mustselect
-sakura.bindgroup31000.name,bodypaint,Beige Basic
+sakura.bindoption0.group,Body Paint,mustselect
+sakura.bindgroup31000.name,Body Paint,Beige Basic
 sakura.bindgroup31000.default,1
-sakura.bindgroup31025.name,bodypaint,Mauve Basic
-sakura.bindgroup32025.name,bodypaint,Mauve Cowprint
+sakura.bindgroup31025.name,Body Paint,Mauve Basic
+sakura.bindgroup32025.name,Body Paint,Mauve Cowprint
 
 //Shell paint base
-sakura.bindoption1.group,shellpaint,mustselect
-sakura.bindgroup50000.name,shellpaint,Brown Basic
+sakura.bindoption1.group,Shell Paint,mustselect
+sakura.bindgroup50000.name,Shell Paint,Brown Basic
 sakura.bindgroup50000.default,1
-sakura.bindgroup50007.name,shellpaint,Purple Basic
-sakura.bindgroup50050.name,shellpaint,Brown Chunky Stripe
-sakura.bindgroup50057.name,shellpaint,Purple Chunky Stripe
-sakura.bindgroup50100.name,shellpaint,Brown Single Swirl
-sakura.bindgroup50107.name,shellpaint,Purple Single Swirl
-sakura.bindgroup50150.name,shellpaint,Brown Radial Swirl
-sakura.bindgroup50157.name,shellpaint,Purple Radial Swirl
-sakura.bindgroup50200.name,shellpaint,Brown Pinstripe Swirl
-sakura.bindgroup50207.name,shellpaint,Purple Pinstripe Swirl
+sakura.bindgroup50007.name,Shell Paint,Purple Basic
+sakura.bindgroup50050.name,Shell Paint,Brown Chunky Stripe
+sakura.bindgroup50057.name,Shell Paint,Purple Chunky Stripe
+sakura.bindgroup50100.name,Shell Paint,Brown Single Swirl
+sakura.bindgroup50107.name,Shell Paint,Purple Single Swirl
+sakura.bindgroup50150.name,Shell Paint,Brown Radial Swirl
+sakura.bindgroup50157.name,Shell Paint,Purple Radial Swirl
+sakura.bindgroup50200.name,Shell Paint,Brown Pinstripe Swirl
+sakura.bindgroup50207.name,Shell Paint,Purple Pinstripe Swirl
 
 //Decals
-sakura.bindgroup55000.name,decals,Two Stripes
-sakura.bindgroup55010.name,decals,Single Flame
-sakura.bindgroup55015.name,decals,Big Flame
+sakura.bindoption2.group,Decals,multiple
+sakura.bindgroup55000.name,Decals,Two Stripes
+sakura.bindgroup55010.name,Decals,Single Flame
+sakura.bindgroup55020.name,Decals,Big Flame
 
 //Hardware
-sakura.bindgroup65000.name,hardware,Red Spoiler
-sakura.bindgroup65010.name,hardware,Saddle Bag
-sakura.bindgroup65015.name,hardware,Sling Bag
-sakura.bindgroup65020.name,hardware,Hot Rod Exhaust
+sakura.bindoption3.group,Hardware,multiple
+sakura.bindgroup65000.name,Hardware,Red Spoiler
+sakura.bindgroup65010.name,Hardware,Saddle Bag
+sakura.bindgroup65015.name,Hardware,Sling Bag
+sakura.bindgroup65020.name,Hardware,Hot Rod Exhaust
 
 //Hats
-sakura.bindgroup75000.name,hats,Blue Party Hat
-sakura.bindgroup75001.name,hats,Pink Party Hat
-sakura.bindgroup75005.name,hats,Red Helmet
-sakura.bindgroup75010.name,hats,Red Trucker
+sakura.bindoption4.group,Hats,multiple
+sakura.bindgroup75000.name,Hats,Blue Party Hat
+sakura.bindgroup75001.name,Hats,Pink Party Hat
+sakura.bindgroup75005.name,Hats,Red Helmet
+sakura.bindgroup75045.name,Hats,Red Trucker
 
 //Add-ons 
-sakura.bindgroup80000.name,add-ons,Saddle
-sakura.bindgroup80005.name,add-ons,White Bird Wings
-sakura.bindgroup80010.name,add-ons,Red Bat Wings
-sakura.bindgroup80015.name,add-ons,Red Tires
-sakura.bindgroup80020.name,add-ons,Box Fan
+sakura.bindoption5.group,Add-ons,multiple
+sakura.bindgroup80000.name,Add-ons,Saddle
+sakura.bindgroup80005.name,Add-ons,White Bird Wings
+sakura.bindgroup80005.addid,80006
+sakura.bindgroup80025.name,Add-ons,Red Bat Wings
+sakura.bindgroup80025.addid,80026
+sakura.bindgroup80045.name,Add-ons,Red Tires
+sakura.bindgroup80050.name,Add-ons,Box Fan
