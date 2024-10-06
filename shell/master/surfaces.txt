@@ -57,6 +57,28 @@ surface0
 	animation32025.interval,bind
 	animation32025.pattern0,overlay,32025,0,0,0
 	
+
+	//———— masks ————
+	//camo bandanna
+	animation70000.interval,bind
+	animation70000.pattern0,overlay,70000,0,0,0
+	
+	//empty wicker basket
+	animation70005.interval,bind
+	animation70005.pattern0,overlay,70005,0,0,0
+	
+	//lettuce wicker basket
+	animation70006.interval,bind
+	animation70006.pattern0,overlay,70006,0,0,0
+	
+	//green round glasses
+	animation70010.interval,bind
+	animation70010.pattern0,overlay,70010,0,0,0
+	
+	//shades :3
+	animation70020.interval,bind
+	animation70020.pattern0,overlay,70020,0,0,0
+	
 	//———————— SNAIL HATS ————————
 
 	//blue party
@@ -66,8 +88,7 @@ surface0
 	//pink party
 	animation75001.interval,bind
 	animation75001.pattern0,interpolate,75001,0,0,0
-
-	//--------need help figuring these out
+	
 	//red helmet
 	animation75005.interval,bind
 	animation75005.pattern0,interpolate,75005,0,0,0
@@ -77,6 +98,16 @@ surface0
 	animation75045.interval,bind
 	animation75045.pattern0,interpolate,75045,0,0,0
 	animation75045.pattern1,add,75046,0,0,0
+
+	//blue trucker
+	animation75047.interval,bind
+	animation75047.pattern0,interpolate,75047,0,0,0
+	animation75047.pattern1,add,75048,0,0,0
+
+	//green trucker
+	animation75049.interval,bind
+	animation75049.pattern0,interpolate,75049,0,0,0
+	animation75049.pattern1,add,75050,0,0,0
 }
 
 surface1
@@ -264,6 +295,14 @@ surface.append0-9
 	//hot rod exhaust
 	animation65020.interval,bind
 	animation65020.pattern0,overlay,65020,0,0,0
+
+	//radio antenna :3
+	animation65025.interval,bind
+	animation65025.pattern0,overlay,65025,0,0,0
+
+	//MASSIVE ROCKET
+	animation65030.interval,bind
+	animation65030.pattern0,overlay,65030,0,0,0
 
 	//———— add-ons ————
 	//saddle

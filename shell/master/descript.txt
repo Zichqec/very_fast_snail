@@ -29,9 +29,9 @@ menu.disable.font.color.g,222
 menu.disable.font.color.b,222
 
 //Color of the separator bars
-menu.separator.color.r,240
-menu.separator.color.g,240
-menu.separator.color.b,240
+menu.separator.color.r,93
+menu.separator.color.g,93
+menu.separator.color.b,93
 
 menu.background.alignment,righttop
 menu.foreground.alignment,righttop
@@ -83,16 +83,28 @@ sakura.bindgroup65000.name,Hardware,Red Spoiler
 sakura.bindgroup65010.name,Hardware,Saddle Bag
 sakura.bindgroup65015.name,Hardware,Sling Bag
 sakura.bindgroup65020.name,Hardware,Hot Rod Exhaust
+sakura.bindgroup65025.name,Hardware,Radio Antenna
+sakura.bindgroup65030.name,Hardware,BIG ROCKET
+
+//Masks
+sakura.bindoption4.group,Masks,multiple
+sakura.bindgroup70000.name,Masks,Camo Bandanna
+sakura.bindgroup70005.name,Masks,Empty Wicker Basket
+sakura.bindgroup70006.name,Masks,Lettuce Wicker Basket
+sakura.bindgroup70010.name,Masks,Green Round Glasses
+sakura.bindgroup70020.name,Masks,Shades
 
 //Hats
-sakura.bindoption4.group,Hats,multiple
+sakura.bindoption5.group,Hats,multiple
 sakura.bindgroup75000.name,Hats,Blue Party Hat
 sakura.bindgroup75001.name,Hats,Pink Party Hat
 sakura.bindgroup75005.name,Hats,Red Helmet
 sakura.bindgroup75045.name,Hats,Red Trucker
+sakura.bindgroup75047.name,Hats,Blue Trucker
+sakura.bindgroup75049.name,Hats,Green Trucker
 
 //Add-ons 
-sakura.bindoption5.group,Add-ons,multiple
+sakura.bindoption6.group,Add-ons,multiple
 sakura.bindgroup80000.name,Add-ons,Saddle
 sakura.bindgroup80005.name,Add-ons,White Bird Wings
 sakura.bindgroup80005.addid,80006
