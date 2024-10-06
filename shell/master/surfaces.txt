@@ -108,9 +108,9 @@ surface0
 	animation75022.pattern1,add,75023,0,0,0
 
 	//green trucker
-	animation75023.interval,bind
-	animation75023.pattern0,interpolate,75023,0,0,0
-	animation75023.pattern1,add,75024,0,0,0
+	animation75024.interval,bind
+	animation75024.pattern0,interpolate,75024,0,0,0
+	animation75024.pattern1,add,75025,0,0,0
 }
 
 surface1
