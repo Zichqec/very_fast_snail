@@ -189,11 +189,19 @@ sakura.bindgroup70020.name,Masks,Shades
 //Hats
 sakura.bindoption5.group,Hats,multiple
 sakura.bindgroup65050.name,Hats,Red Helmet
+sakura.bindgroup65050.addid,65051
+sakura.bindgroup65051.name,Hats,Red Helmet Front
 sakura.bindgroup75000.name,Hats,Blue Party Hat
 sakura.bindgroup75001.name,Hats,Pink Party Hat
 sakura.bindgroup75020.name,Hats,Red Trucker
+sakura.bindgroup75020.addid,75021
+sakura.bindgroup75021.name,Hats,Red Trucker Front
 sakura.bindgroup75022.name,Hats,Blue Trucker
+sakura.bindgroup75022.addid,75023
+sakura.bindgroup75023.name,Hats,Blue Trucker Front
 sakura.bindgroup75024.name,Hats,Green Trucker
+sakura.bindgroup75024.addid,75025
+sakura.bindgroup75025.name,Hats,Green Trucker Front
 
 //Add-ons 
 sakura.bindoption6.group,Add-ons,multiple
