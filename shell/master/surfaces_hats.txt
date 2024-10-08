@@ -21,6 +21,10 @@ surface.append0,3-4
 	//pink party
 	animation75001.interval,bind
 	animation75001.pattern0,interpolate,75001,0,0,0
+	
+	//pastel party
+	animation75002.interval,bind
+	animation75002.pattern0,interpolate,75002,0,0,0
 
 	//red trucker
 	animation75020.interval,bind

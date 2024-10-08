@@ -184,24 +184,32 @@ sakura.bindgroup70000.name,Masks,Camo Bandanna
 sakura.bindgroup70005.name,Masks,Empty Wicker Basket
 sakura.bindgroup70006.name,Masks,Lettuce Wicker Basket
 sakura.bindgroup70010.name,Masks,Green Round Glasses
-sakura.bindgroup70020.name,Masks,Shades
+sakura.bindgroup70011.name,Masks,Yellow Round Glasses
+sakura.bindgroup70012.name,Masks,Orange Round Glasses
+sakura.bindgroup70013.name,Masks,Red Round Glasses
+sakura.bindgroup70014.name,Masks,Pink Round Glasses
+sakura.bindgroup70015.name,Masks,Purple Round Glasses
+sakura.bindgroup70016.name,Masks,Blue Round Glasses
+sakura.bindgroup70017.name,Masks,Cyan Round Glasses
+sakura.bindgroup70018.name,Masks,Brown Round Glasses
+sakura.bindgroup70019.name,Masks,White Round Glasses
+sakura.bindgroup70020.name,Masks,Silver Round Glasses
+sakura.bindgroup70021.name,Masks,Black Round Glasses
+sakura.bindgroup70030.name,Masks,Shades
 
 //Hats
 sakura.bindoption5.group,Hats,multiple
 sakura.bindgroup65050.name,Hats,Red Helmet
 sakura.bindgroup65050.addid,65051
-sakura.bindgroup65051.name,Hats,Red Helmet Front
 sakura.bindgroup75000.name,Hats,Blue Party Hat
 sakura.bindgroup75001.name,Hats,Pink Party Hat
+sakura.bindgroup75002.name,Hats,Pastel Party Hat
 sakura.bindgroup75020.name,Hats,Red Trucker
 sakura.bindgroup75020.addid,75021
-sakura.bindgroup75021.name,Hats,Red Trucker Front
 sakura.bindgroup75022.name,Hats,Blue Trucker
 sakura.bindgroup75022.addid,75023
-sakura.bindgroup75023.name,Hats,Blue Trucker Front
 sakura.bindgroup75024.name,Hats,Green Trucker
 sakura.bindgroup75024.addid,75025
-sakura.bindgroup75025.name,Hats,Green Trucker Front
 
 //Add-ons 
 sakura.bindoption6.group,Add-ons,multiple
