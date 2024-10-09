@@ -1,0 +1,281 @@
+//THE SPEEDIEST SNAIL AROUND
+//hats
+
+descript
+{
+    version,1
+}
+
+//static snail
+surface.append0,3-4
+{
+	//camo bandanna
+	animation70000.interval,bind
+	animation70000.pattern0,overlay,70000,0,0,0
+	
+	//empty wicker basket
+	animation70005.interval,bind
+	animation70005.pattern0,overlay,70005,0,0,0
+	
+	//lettuce wicker basket
+	animation70006.interval,bind
+	animation70006.pattern0,overlay,70006,0,0,0
+	
+	//green round glasses
+	animation70010.interval,bind
+	animation70010.pattern0,overlay,70010,0,0,0
+	
+	//yellow round glasses
+	animation70011.interval,bind
+	animation70011.pattern0,overlay,70011,0,0,0
+	
+	//orange round glasses
+	animation70012.interval,bind
+	animation70012.pattern0,overlay,70012,0,0,0
+	
+	//red round glasses
+	animation70013.interval,bind
+	animation70013.pattern0,overlay,70013,0,0,0
+	
+	//pink round glasses
+	animation70014.interval,bind
+	animation70014.pattern0,overlay,70014,0,0,0
+	
+	//purple round glasses
+	animation70015.interval,bind
+	animation70015.pattern0,overlay,70015,0,0,0
+	
+	//blue round glasses
+	animation70016.interval,bind
+	animation70016.pattern0,overlay,70016,0,0,0
+	
+	//cyan round glasses
+	animation70017.interval,bind
+	animation70017.pattern0,overlay,70017,0,0,0
+	
+	//brown round glasses
+	animation70018.interval,bind
+	animation70018.pattern0,overlay,70018,0,0,0
+	
+	//white round glasses
+	animation70019.interval,bind
+	animation70019.pattern0,overlay,70019,0,0,0
+	
+	//silver round glasses
+	animation70020.interval,bind
+	animation70020.pattern0,overlay,70020,0,0,0
+	
+	//black round glasses
+	animation70021.interval,bind
+	animation70021.pattern0,overlay,70021,0,0,0
+	
+	//shades :3
+	animation70030.interval,bind
+	animation70030.pattern0,overlay,70030,0,0,0
+
+    //Cigarette
+    animation71000.interval,bind+always
+    animation71000.pattern0,overlay,71000,0,0,0
+    animation71000.pattern1,overlay,71001,500,0,0
+    animation71000.pattern2,overlay,71000,500,0,0
+}
+
+//vertical bobbing
+surface.append1
+{
+	//camo bandanna
+	animation70000.interval,bind+always
+	animation70000.pattern0,overlay,70000,0,0,0
+	animation70000.pattern1,overlay,70000,500,0,4
+	animation70000.pattern2,overlay,70000,500,0,0
+	
+	//empty wicker basket
+	animation70005.interval,bind+always
+	animation70005.pattern0,overlay,70005,0,0,0
+	animation70005.pattern1,overlay,70005,500,0,4
+	animation70005.pattern2,overlay,70005,500,0,0
+	
+	//lettuce wicker basket
+	animation70006.interval,bind+always
+	animation70006.pattern0,overlay,70006,0,0,0
+	animation70006.pattern1,overlay,70006,500,0,4
+	animation70006.pattern2,overlay,70006,500,0,0
+	
+	//green round glasses
+	animation70010.interval,bind+always
+	animation70010.pattern0,overlay,70010,0,0,0
+	animation70010.pattern1,overlay,70010,500,0,4
+	animation70010.pattern2,overlay,70010,500,0,0
+	
+	//yellow round glasses
+	animation70011.interval,bind+always
+	animation70011.pattern0,overlay,70011,0,0,0
+	animation70011.pattern1,overlay,70011,500,0,4
+	animation70011.pattern2,overlay,70011,500,0,0
+	
+	//orange round glasses
+	animation70012.interval,bind+always
+	animation70012.pattern0,overlay,70012,0,0,0
+	animation70012.pattern1,overlay,70012,500,0,4
+	animation70012.pattern2,overlay,70012,500,0,0
+	
+	//red round glasses
+	animation70013.interval,bind+always
+	animation70013.pattern0,overlay,70013,0,0,0
+	animation70013.pattern1,overlay,70013,500,0,4
+	animation70013.pattern2,overlay,70013,500,0,0
+	
+	//pink round glasses
+	animation70014.interval,bind+always
+	animation70014.pattern0,overlay,70014,0,0,0
+	animation70014.pattern1,overlay,70014,500,0,4
+	animation70014.pattern2,overlay,70014,500,0,0
+	
+	//purple round glasses
+	animation70015.interval,bind+always
+	animation70015.pattern0,overlay,70015,0,0,0
+	animation70015.pattern1,overlay,70015,500,0,4
+	animation70015.pattern2,overlay,70015,500,0,0
+	
+	//blue round glasses
+	animation70016.interval,bind+always
+	animation70016.pattern0,overlay,70016,0,0,0
+	animation70016.pattern1,overlay,70016,500,0,4
+	animation70016.pattern2,overlay,70016,500,0,0
+	
+	//cyan round glasses
+	animation70017.interval,bind+always
+	animation70017.pattern0,overlay,70017,0,0,0
+	animation70017.pattern1,overlay,70017,500,0,4
+	animation70017.pattern2,overlay,70017,500,0,0
+	
+	//brown round glasses
+	animation70018.interval,bind+always
+	animation70018.pattern0,overlay,70018,0,0,0
+	animation70018.pattern1,overlay,70018,500,0,4
+	animation70018.pattern2,overlay,70018,500,0,0
+	
+	//white round glasses
+	animation70019.interval,bind+always
+	animation70019.pattern0,overlay,70019,0,0,0
+	animation70019.pattern1,overlay,70019,500,0,4
+	animation70019.pattern2,overlay,70019,500,0,0
+	
+	//silver round glasses
+	animation70020.interval,bind+always
+	animation70020.pattern0,overlay,70020,0,0,0
+	animation70020.pattern1,overlay,70020,500,0,4
+	animation70020.pattern2,overlay,70020,500,0,0
+	
+	//black round glasses
+	animation70021.interval,bind+always
+	animation70021.pattern0,overlay,70021,0,0,0
+	animation70021.pattern1,overlay,70021,500,0,4
+	animation70021.pattern2,overlay,70021,500,0,0
+	
+	//shades :3
+	animation70030.interval,bind+always
+	animation70030.pattern0,overlay,70030,0,0,0
+	animation70030.pattern1,overlay,70030,500,0,4
+	animation70030.pattern2,overlay,70030,500,0,0
+}
+
+//horizontal bobbing
+surface.append2
+{
+	//camo bandanna
+	animation70000.interval,bind+always
+	animation70000.pattern0,overlay,70000,0,0,0
+	animation70000.pattern1,overlay,70000,500,4,0
+	animation70000.pattern2,overlay,70000,500,0,0
+	
+	//empty wicker basket
+	animation70005.interval,bind+always
+	animation70005.pattern0,overlay,70005,0,0,0
+	animation70005.pattern1,overlay,70005,500,4,0
+	animation70005.pattern2,overlay,70005,500,0,0
+	
+	//lettuce wicker basket
+	animation70006.interval,bind+always
+	animation70006.pattern0,overlay,70006,0,0,0
+	animation70006.pattern1,overlay,70006,500,4,0
+	animation70006.pattern2,overlay,70006,500,0,0
+	
+	//green round glasses
+	animation70010.interval,bind+always
+	animation70010.pattern0,overlay,70010,0,0,0
+	animation70010.pattern1,overlay,70010,500,4,0
+	animation70010.pattern2,overlay,70010,500,0,0
+	
+	//yellow round glasses
+	animation70011.interval,bind+always
+	animation70011.pattern0,overlay,70011,0,0,0
+	animation70011.pattern1,overlay,70011,500,4,0
+	animation70011.pattern2,overlay,70011,500,0,0
+	
+	//orange round glasses
+	animation70012.interval,bind+always
+	animation70012.pattern0,overlay,70012,0,0,0
+	animation70012.pattern1,overlay,70012,500,4,0
+	animation70012.pattern2,overlay,70012,500,0,0
+	
+	//red round glasses
+	animation70013.interval,bind+always
+	animation70013.pattern0,overlay,70013,0,0,0
+	animation70013.pattern1,overlay,70013,500,4,0
+	animation70013.pattern2,overlay,70013,500,0,0
+	
+	//pink round glasses
+	animation70014.interval,bind+always
+	animation70014.pattern0,overlay,70014,0,0,0
+	animation70014.pattern1,overlay,70014,500,4,0
+	animation70014.pattern2,overlay,70014,500,0,0
+	
+	//purple round glasses
+	animation70015.interval,bind+always
+	animation70015.pattern0,overlay,70015,0,0,0
+	animation70015.pattern1,overlay,70015,500,4,0
+	animation70015.pattern2,overlay,70015,500,0,0
+	
+	//blue round glasses
+	animation70016.interval,bind+always
+	animation70016.pattern0,overlay,70016,0,0,0
+	animation70016.pattern1,overlay,70016,500,4,0
+	animation70016.pattern2,overlay,70016,500,0,0
+	
+	//cyan round glasses
+	animation70017.interval,bind+always
+	animation70017.pattern0,overlay,70017,0,0,0
+	animation70017.pattern1,overlay,70017,500,4,0
+	animation70017.pattern2,overlay,70017,500,0,0
+	
+	//brown round glasses
+	animation70018.interval,bind+always
+	animation70018.pattern0,overlay,70018,0,0,0
+	animation70018.pattern1,overlay,70018,500,4,0
+	animation70018.pattern2,overlay,70018,500,0,0
+	
+	//white round glasses
+	animation70019.interval,bind+always
+	animation70019.pattern0,overlay,70019,0,0,0
+	animation70019.pattern1,overlay,70019,500,4,0
+	animation70019.pattern2,overlay,70019,500,0,0
+	
+	//silver round glasses
+	animation70020.interval,bind+always
+	animation70020.pattern0,overlay,70020,0,0,0
+	animation70020.pattern1,overlay,70020,500,4,0
+	animation70020.pattern2,overlay,70020,500,0,0
+	
+	//black round glasses
+	animation70021.interval,bind+always
+	animation70021.pattern0,overlay,70021,0,0,0
+	animation70021.pattern1,overlay,70021,500,4,0
+	animation70021.pattern2,overlay,70021,500,0,0
+	
+	//shades :3
+	animation70030.interval,bind+always
+	animation70030.pattern0,overlay,70030,0,0,0
+	animation70030.pattern1,overlay,70030,500,4,0
+	animation70030.pattern2,overlay,70030,500,0,0
+}

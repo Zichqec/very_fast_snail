@@ -163,71 +163,6 @@ surface0
 	//cowprint black
 	animation32070.interval,bind
 	animation32070.pattern0,overlay,32070,0,0,0
-
-	//———— masks ————
-	//camo bandanna
-	animation70000.interval,bind
-	animation70000.pattern0,overlay,70000,0,0,0
-	
-	//empty wicker basket
-	animation70005.interval,bind
-	animation70005.pattern0,overlay,70005,0,0,0
-	
-	//lettuce wicker basket
-	animation70006.interval,bind
-	animation70006.pattern0,overlay,70006,0,0,0
-	
-	//green round glasses
-	animation70010.interval,bind
-	animation70010.pattern0,overlay,70010,0,0,0
-	
-	//yellow round glasses
-	animation70011.interval,bind
-	animation70011.pattern0,overlay,70011,0,0,0
-	
-	//orange round glasses
-	animation70012.interval,bind
-	animation70012.pattern0,overlay,70012,0,0,0
-	
-	//red round glasses
-	animation70013.interval,bind
-	animation70013.pattern0,overlay,70013,0,0,0
-	
-	//pink round glasses
-	animation70014.interval,bind
-	animation70014.pattern0,overlay,70014,0,0,0
-	
-	//purple round glasses
-	animation70015.interval,bind
-	animation70015.pattern0,overlay,70015,0,0,0
-	
-	//blue round glasses
-	animation70016.interval,bind
-	animation70016.pattern0,overlay,70016,0,0,0
-	
-	//cyan round glasses
-	animation70017.interval,bind
-	animation70017.pattern0,overlay,70017,0,0,0
-	
-	//brown round glasses
-	animation70018.interval,bind
-	animation70018.pattern0,overlay,70018,0,0,0
-	
-	//white round glasses
-	animation70019.interval,bind
-	animation70019.pattern0,overlay,70019,0,0,0
-	
-	//silver round glasses
-	animation70020.interval,bind
-	animation70020.pattern0,overlay,70020,0,0,0
-	
-	//black round glasses
-	animation70021.interval,bind
-	animation70021.pattern0,overlay,70021,0,0,0
-	
-	//shades :3
-	animation70030.interval,bind
-	animation70030.pattern0,overlay,70030,0,0,0
 }
 
 surface1
@@ -307,7 +242,6 @@ surface3
 
 surface4
 {
-	//--could probably append this with surface0 too (this is just adding the fire overlay)
 	//———————— SNAIL BODY ————————
 	//———— base ————
 	//basic beige
@@ -329,6 +263,8 @@ surface4
 	animation85000.pattern2,overlay,85001,100,0,0
 }
 
+
+//———————— ALL APPEND: Shell color + accessories ————————
 surface.append0-9
 {
 	//———————— SNAIL SHELL ————————
@@ -749,6 +685,18 @@ surface.append0-9
 	animation80050.pattern0,overlay,80050,0,0,0
 
 	//———— overlays ————
+
+	//smoke
+	animation85005.interval,bind+always
+	animation85005.pattern0,overlay,85005,0,0,0
+	animation85005.pattern1,overlay,85006,500,0,0
+	animation85005.pattern2,overlay,85005,500,0,0
+
+	//sweat
+	animation85010.interval,bind+always
+	animation85010.pattern0,overlay,85010,0,0,0
+	animation85010.pattern1,overlay,85011,500,0,0
+	animation85010.pattern2,overlay,85010,500,0,0
 
 	point.basepos.x,0
 	point.basepos.y,335
