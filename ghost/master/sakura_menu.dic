@@ -37,40 +37,9 @@ OnEquipMenu : all
 	_category = reference0
 	if _category == ""; _category = "Body Paint"
 	
-	_stats = CurrentStats
-	_speed = _stats[0]
-	_coolness = _stats[1]
-	_explosiveness = _stats[2]
-	_cost = _stats[3]
-	_count = _stats[4]
+	EquipMenu.ShopControls
 	
-	
-	"\C\![lock,balloonrepaint]\c\![set,autoscroll,disable]\f[anchorvisitedfontcolor,default.anchor]\0\b[2]\t\*\![no-autopause]\_q"
-	"\f[bold,1]\f[italic,1]\f[align,center]\f[height,+2]EQUIP YOUR SNAIL!\n\f[height,default]\f[align,left]\f[italic,default]\f[bold,default]\n"
-	
-	"Current funds: %(L)%(Lettuce)\n\n"
-	"Speed: %(_speed)\n"
-	"Coolness: %(_coolness)\n"
-	"Explosiveness: %(_explosiveness)\n"
-	"\n"
-	
-	
-	_s = ""; if _count != 1; _s = "s"
-	if _cost > 0
-	{
-		switch _cost > Lettuce
-		{
-			"\![*]\__q[OnEquipMenu.Save,%(_cost)]Purchase %(_count) item%(_s) for %(L)%(_cost)\__q"
-			"\![*]\f[color,disable]Purchase %(_count) item%(_s) for %(L)%(_cost)\f[color,default]"
-		}
-	}
-	else; "\![*]\__q[OnEquipMenu.Save,0]Save\__q"
-	"\n\n"
-	"\![*]\__q[OnEquipMenu.Revert]Cancel\__q"
-	
-	"\![unlock,balloonrepaint]"
-	
-	"\p[2]\b[2]\![lock,balloonrepaint]\c\f[anchorvisitedfontcolor,default.anchor]"
+	"\p[2]\b[4]\![lock,balloonrepaint]\c\f[anchorvisitedfontcolor,default.anchor]\![set,autoscroll,disable]"
 	_filters = ("All","Purchased","Unpurchased")
 	"Showing: "
 	foreach _filters; _filter
@@ -121,6 +90,74 @@ OnEquipMenu : all
 	}
 	"\n"
 	"\![unlock,balloonrepaint]\0"
+}
+
+EquipMenu.ShopControls : all
+{
+	_stats = CurrentStats
+	_speed = _stats[0]
+	_coolness = _stats[1]
+	_explosiveness = _stats[2]
+	_cost = _stats[3]
+	_count = _stats[4]
+	
+	
+	"\C\![lock,balloonrepaint]\c\![set,autoscroll,disable]\f[anchorvisitedfontcolor,default.anchor]\0\b[2]\t\*\![no-autopause]\_q"
+	"\f[bold,1]\f[italic,1]\f[align,center]\f[height,+2]EQUIP YOUR SNAIL!\n\f[height,default]\f[align,left]\f[italic,default]\f[bold,default]\n"
+	
+	"Current funds: %(L)%(Lettuce)\n\n"
+	"Speed: %(_speed)\n"
+	"Coolness: %(_coolness)\n"
+	"Explosiveness: %(_explosiveness)\n"
+	"\n"
+	
+	//ErrorLog("%(_argv)","info")
+	if _argv[0] != "" //hovering over a choice
+	{
+		foreach ItemDetails; _item
+		{
+			if _item[0] == _argv[0] && _item[1] == _argv[1]
+			{
+				//Category,Name,Unlocked,Price,Speed,Coolness,Explosiveness
+				_stats = ""
+				
+				foreach ("%(_item[4]),Speed","%(_item[5]),Coolness","%(_item[6]),Explosiveness"); _stat
+				{
+					if _stat[0] != "0"
+					{
+						if _stats != ""; _stats += ", "
+						if "-" !_in_ _stat[0]; _stats += "+"
+						_stats += _stat[0]
+						_stats += " %(_stat[1])"
+					}
+				}
+				
+				"%(_item[1]):\n"
+				if _stats == ""; "No stats"
+				else; _stats
+				
+				//"%(_item[1]):\n%(_item[4]) Speed, %(_item[5]) Coolness, %(_item[6]) Explosiveness"
+				break
+			}
+		}
+	}
+	else; "\n"
+	"\n\n"
+	
+	_s = ""; if _count != 1; _s = "s"
+	if _cost > 0
+	{
+		switch _cost > Lettuce
+		{
+			"\![*]\__q[OnEquipMenu.Save,%(_cost)]Purchase %(_count) item%(_s) for %(L)%(_cost)\__q"
+			"\![*]\f[color,disable]Purchase %(_count) item%(_s) for %(L)%(_cost)\f[color,default]"
+		}
+	}
+	else; "\![*]\__q[OnEquipMenu.Save,0]Save\__q"
+	"\n\n"
+	"\![*]\__q[OnEquipMenu.Revert]Cancel\__q"
+	
+	"\![unlock,balloonrepaint]"
 }
 
 OnToggleEquipFilter

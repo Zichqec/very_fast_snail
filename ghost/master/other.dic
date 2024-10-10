@@ -313,6 +313,58 @@ br
     else; " "
 }
 
+OnChoiceHover : all
+{
+	if reference1 == "OnEquipMenu.ToggleItem"
+	{
+		"\C"
+		EquipMenu.ShopControls(reference2,reference3)
+	}
+}
+
+//ErrorLog("Some debug info","info")
+ErrorLog
+{
+	//Create arrays if none exist
+	if !ISVAR("ErrorsToPush.level"); ErrorsToPush.level = IARRAY
+	if !ISVAR("ErrorsToPush.description"); ErrorsToPush.description = IARRAY
+	
+	_level = "warning" //It defaults to warning if it doesn't recognize what you've put in, so I will too
+	if _argv[1] != ""; _level = _argv[1]
+	
+	ErrorsToPush.level ,= _level
+	ErrorsToPush.description ,= _argv[0]
+}
+
+OnSecondChange
+{
+	//error logging stuff because i think tama is causing me trouble...
+	//Create arrays if none exist
+	if !ISVAR("ErrorsToPush.level"); ErrorsToPush.level = IARRAY
+	if !ISVAR("ErrorsToPush.description"); ErrorsToPush.description = IARRAY
+
+	if ARRAYSIZE(ErrorsToPush.level) > 0 //If there are errors
+	{
+		_levels = ""
+		_descriptions = ""
+		for _i = 0; _i < ARRAYSIZE(ErrorsToPush.level); _i++ //CHR(1) in here is the divider between errors
+		{
+			if _i > 0; {_levels += CHR(1); _descriptions += CHR(1)}
+			_levels += ErrorsToPush.level[_i]
+			_descriptions += ErrorsToPush.description[_i]
+		}
+		//Push the whole list of errors together
+		SHIORI3FW.PushAdditionalReturn('ErrorLevel',_levels)
+		SHIORI3FW.PushAdditionalReturn('ErrorDescription',_descriptions)
+		
+		//Clear the arrays so we don't send any more errors later
+		ErrorsToPush.level = IARRAY
+		ErrorsToPush.description = IARRAY
+	}
+}
+
+
+
 //—————————————————————————————— Right click menu links ——————————————————————————————
 
 //Takes an array of alternating names and urls, and formats them for use with the right click menu

@@ -37,6 +37,10 @@ OnFirstBoot : all
 	
 	SnailPickList = (GenerateSnailChoices,GenerateSnailChoices,GenerateSnailChoices)
 	
+	//error logging stuff because i think tama is causing me trouble...
+	ErrorsToPush.level = IARRAY
+	ErrorsToPush.description = IARRAY
+	
 	"\1\s[-1]\0\s[0]"
 	--
 	OnFirst.SnailPick
