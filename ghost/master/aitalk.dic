@@ -24,7 +24,7 @@ RadioTalk : array
 	_name2 = SnailNameGenerator(,"not alliteration")
 	_name3 = SnailNameGenerator(,"not alliteration")
 	
-	"%(_name1) - %(_name2) - %(_name3)"
+	//"%(_name1) - %(_name2) - %(_name3)"
 	
 	"\1\b[20]Now back to our foot tapping, shell cracking, Boogie Down Music Hour! \n\n[half]\f[italic,1]Do wop~ Do be do be da do~\f[italic,default]"
 	"\1\b[20]Public Safety Alert: \n\nHealthy snails start with healthy mucus. Healthy mucus starts with good hydration."
@@ -41,7 +41,7 @@ chain.pellet_wars
 	"\1\b[22]What's the truth about pellets? Are some really better than others? We took to the streets to find out. \n\n""They're all terrible for snails,"" said Dr. Shellcracker, certified sports medicine physician. ""Snails need a variety of nutrient dense vegetables, as well as a stable source of calcium, such as eggshells. Pellets simply don't cut it, no matter the brand.""\e:chain=end"
 }}CHAIN
 
-SnailTalk : array
+SnailTalk : array_pool
 {
 	"\1\b[10]%(snail)Slow snails slide short slopes smoothly."
 	"\1\b[10]%(snail)Safe snail silo, summer storm survived."
