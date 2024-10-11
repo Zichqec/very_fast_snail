@@ -50,6 +50,7 @@ SnailTalk : array_pool
 	"\1\b[10]%(snail)Green, go. Greatness, glory, glitter. Get going!"
 	"\1\b[10]%(snail)Yield your yard. Yummy yucca yearned."
 	"\1\b[10]%(snail)Alliteration absent. Aghast. Angry. Abhorrent."
+	"\1\b[10]%(snail)Beep beep."
 	
 	if !IsAlliterative(CurrentSnail.Name)
 	{
