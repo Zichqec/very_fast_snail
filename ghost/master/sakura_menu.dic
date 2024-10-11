@@ -101,14 +101,42 @@ EquipMenu.ShopControls : all
 	_cost = _stats[3]
 	_count = _stats[4]
 	
+	_diff = CurrentStats("loadout")
+	_speeddiff = _speed - _diff[0]
+	_coolnessdiff = _coolness - _diff[1]
+	_explosivenessdiff = _explosiveness - _diff[2]
 	
 	"\C\![lock,balloonrepaint]\c\![set,autoscroll,disable]\f[anchorvisitedfontcolor,default.anchor]\0\b[2]\t\*\![no-autopause]\_q"
-	"\f[bold,1]\f[italic,1]\f[align,center]\f[height,+2]EQUIP YOUR SNAIL!\n\f[height,default]\f[align,left]\f[italic,default]\f[bold,default]\n"
+	"\f[bold,1]\f[italic,1]\f[align,center]\f[height,+2]EQUIP YOUR SNAIL!\f[height,default]\n\f[align,left]\f[italic,default]\f[bold,default]\n[half]"
 	
 	"Current funds: %(L)%(Lettuce)\n\n"
-	"Speed: %(_speed)\n"
-	"Coolness: %(_coolness)\n"
-	"Explosiveness: %(_explosiveness)\n"
+	"Speed: \f[bold,1]%(_speed)\f[bold,default]"
+	if _speeddiff != 0
+	{
+		" \f[color,disable]("
+		if _speeddiff > 0; "+"
+		_speeddiff
+		")\f[color,default]"
+	}
+	"\n"
+	"Coolness: \f[bold,1]%(_coolness)\f[bold,default]"
+	if _coolnessdiff != 0
+	{
+		" \f[color,disable]("
+		if _coolnessdiff > 0; "+"
+		_coolnessdiff
+		")\f[color,default]"
+	}
+	"\n"
+	"Explosiveness: \f[bold,1]%(_explosiveness)\f[bold,default]"
+	if _explosivenessdiff != 0
+	{
+		" \f[color,disable]("
+		if _explosivenessdiff > 0; "+"
+		_explosivenessdiff
+		")\f[color,default]"
+	}
+	"\n"
 	"\n"
 	
 	//ErrorLog("%(_argv)","info")
