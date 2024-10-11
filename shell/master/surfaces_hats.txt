@@ -40,6 +40,21 @@ surface.append0,3-4
 	animation75024.interval,bind
 	animation75024.pattern0,interpolate,75024,0,0,0
 	animation75024.pattern1,add,75025,0,0,0
+	
+	//purple trucker
+	animation75026.interval,bind
+	animation75026.pattern0,interpolate,75026,0,0,0
+	animation75026.pattern1,add,75027,0,0,0
+	
+	//yellow trucker
+	animation75028.interval,bind
+	animation75028.pattern0,interpolate,75028,0,0,0
+	animation75028.pattern1,add,75029,0,0,0
+	
+	//orange trucker
+	animation75030.interval,bind
+	animation75030.pattern0,interpolate,75030,0,0,0
+	animation75030.pattern1,add,75031,0,0,0
 }
 
 //vertical bobbing

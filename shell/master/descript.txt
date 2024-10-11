@@ -198,11 +198,11 @@ sakura.bindgroup75000.name,Hats,Blue Party Hat
 sakura.bindgroup75001.name,Hats,Pink Party Hat
 sakura.bindgroup75002.name,Hats,Pastel Party Hat
 sakura.bindgroup75020.name,Hats,Red Trucker
-sakura.bindgroup75020.addid,75021
 sakura.bindgroup75022.name,Hats,Blue Trucker
-sakura.bindgroup75022.addid,75023
 sakura.bindgroup75024.name,Hats,Green Trucker
-sakura.bindgroup75024.addid,75025
+sakura.bindgroup75026.name,Hats,Purple Trucker
+sakura.bindgroup75028.name,Hats,Yellow Trucker
+sakura.bindgroup75030.name,Hats,Orange Trucker
 
 //Add-ons 
 sakura.bindoption6.group,Add-ons,multiple

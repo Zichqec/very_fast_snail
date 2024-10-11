@@ -1,0 +1,22 @@
+//THE SPEEDIEST SNAIL AROUND
+//decals
+
+descript
+{
+	version,1
+}
+
+surface.append0-9
+{
+	//two stripes
+	animation55000.interval,bind
+	animation55000.pattern0,overlay,55000,0,0,0
+	
+	//single flame
+	animation55010.interval,bind
+	animation55010.pattern0,overlay,55010,0,0,0
+	
+	//big flame
+	animation55020.interval,bind
+	animation55020.pattern0,overlay,55020,0,0,0
+}
