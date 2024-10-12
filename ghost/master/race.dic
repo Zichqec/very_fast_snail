@@ -1,0 +1,120 @@
+/*
+
+Start the race and set variables
+	Scale down
+	Get the shell width _after_ scaling
+	Decide how many px we move with each movement?
+		Need to decide on the total time it's going to take overall first, to account for different width screens...
+Go until a specified X position...
+End the race
+	Total up stuff
+	Look at leaderboards
+
+*/
+
+OnDisplayChange
+{
+	DisplayWidth = reference1
+}
+
+OnDisplayHandover
+{
+	//Make a simple array for each character tracking the left and right boundary of the screen they are on
+	//Left,Right.Top - WE ONLY NEED TOP IN ONE SPOT OK //TODO snip if unneeded
+	WalkBorder = "%(reference3[0]),%(reference3[2]),%(reference[1])"
+}
+
+TimeCalc : all
+{
+	/*
+		//The top one here is rounded... it's not quite perfect but that doesn't matter
+		180,000		00-34	35		5000	175000
+		120,000		35-64	30		4000	295000
+		60,000		65-84	20		3000	355000
+		30,000		85-99	15		2000	385000
+		After 100 speed				1000
+		
+		Max should be 385000, plus any additional after 100 speed
+	*/
+	
+	//TODO add negative speed option
+	_stats = CurrentStats
+	_speednum = TOINT(_stats[0])
+	if _argv[0] != ""; _speednum = _argv[0]
+	
+	_speedcalc = (100,85,65,35)
+	_speedmult = (1000,2000,3000,4000)
+	_speedoutput = (0,0,0,0)
+	
+	for _i = 0; _i < ARRAYSIZE(_speedoutput); _i++
+	{
+		_threshold = _speedcalc[_i]
+		if _speednum < _threshold; continue
+		
+		_speedoutput[_i] = _speednum - _threshold
+		_speednum -= _speedoutput[_i]
+		_speedoutput[_i] *= _speedmult[_i]
+	}
+	_speedoutput[4] = _speednum * 5000
+	
+	_total = _speedoutput[0] + _speedoutput[1] + _speedoutput[2] + _speedoutput[3] + _speedoutput[4]
+	
+	//Race time max is 420000, so lets cap it...
+	if _total > 417000; 417000
+	else; _total
+	
+}
+
+OnRace.Start : all
+{
+	"\![get,property,OnGetSnailPos,currentghost.scope(0).rect]"
+}
+
+OnGetSnailPos : all
+{
+	SnailPos = (reference0[0],reference0[1])
+	
+	"\p[3]\![move,--x=0,--y=0,--base=0]\![set,alignmenttodesktop,bound]"
+}
+
+OnRace.Go
+{
+	if WalkBorder == ""; WalkBorder = "0,%(DisplayWidth)"
+	
+	//7 minute base race time
+	_racetime = 420000 - TimeCalc
+	_segmentlength = TOINT(WalkBorder[1]) / 100
+	_snailspeed = _racetime / 100
+	
+	"\![moveasync,--X=%(WalkBorder[0]),--Y=]\n%(SnailPos)"
+	for _i = 100; _i >= 20; _i--
+	{
+		"\![set,scaling,%(_i)]\_w[10]"
+	}
+	
+	"\![set,scaling,20]\![set,alignmenttodesktop,bottom]"
+	"\![embed,OnRace.Move,0,%(_racetime),%(_segmentlength),%(_snailspeed)]"
+}
+
+OnRace.Move : all
+{
+	_segment = reference0
+	_racetime = reference1
+	_segmentlength = reference2
+	_snailspeed = reference3
+	
+	if _segment >= 99
+	{
+		"\![raise,OnRace.Complete,%(_racetime)]"
+	}
+	else
+	{
+		"\![move,--X=%((_segment * _segmentlength) + _segmentlength),--time=%(_snailspeed),--base=primaryscreen]"
+		"\![embed,OnRace.Move,%(_segment + 1),%(_racetime),%(_segmentlength),%(_snailspeed)]"
+	}
+}
+
+OnRace.Complete : all
+{
+	"%(SnailPos)\![set,alignmenttodesktop,free]\![set,scaling,100]\![move,--X=%(SnailPos[0]),--Y=%(SnailPos[1])]"
+}

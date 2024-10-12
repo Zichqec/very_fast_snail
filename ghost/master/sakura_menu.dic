@@ -2,6 +2,7 @@
 OnSakuraMenu : all
 {
 	"\0\s[0]\b2\![set,autoscroll,disable]\_q"
+	"\![set,alpha,100]\![set,scale,100]"
 	"\f[bold,1]\f[italic,1]\f[align,center]\f[height,+2]INTERACT WITH YOUR SNAIL!\n\f[height,default]\f[align,left]\f[italic,default]\f[bold,default]\n"
 	
 	"\![*]\q[Talk to me,OnAiTalk]"
