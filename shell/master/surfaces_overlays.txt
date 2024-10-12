@@ -1,0 +1,22 @@
+//THE SPEEDIEST SNAIL AROUND
+//overlays
+
+descript
+{
+	version,1
+}
+
+surface.append0-9
+{
+	//smoke
+	animation85005.interval,bind+always
+	animation85005.pattern0,overlay,85005,0,0,0
+	animation85005.pattern1,overlay,85006,500,0,0
+	animation85005.pattern2,overlay,85005,500,0,0
+
+	//sweat
+	animation85010.interval,bind+always
+	animation85010.pattern0,overlay,85010,0,0,0
+	animation85010.pattern1,overlay,85011,500,0,0
+	animation85010.pattern2,overlay,85010,500,0,0
+}

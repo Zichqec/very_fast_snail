@@ -1,9 +1,0 @@
-//THE SPEEDIEST SNAIL AROUND
-//body paints and shell paints
-
-descript
-{
-	version,1
-}
-
-//there's nothing here yet because i dont wanna fiddle with moving around paints right now i just wanna push my changes JAWIODJAWID <_<

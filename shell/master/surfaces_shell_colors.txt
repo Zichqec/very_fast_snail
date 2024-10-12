@@ -1,0 +1,612 @@
+//THE SPEEDIEST SNAIL AROUND
+//shell paint colors
+
+descript
+{
+	version,1
+}
+
+//———————— BASIC ————————
+//basic brown
+surface50000
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50000.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//basic green
+surface50001
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50001.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//basic olive
+surface50002
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50002.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//basic yellow
+surface50003
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50003.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//basic orange
+surface50004
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50004.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//basic red
+surface50005
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50005.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//basic mauve
+surface50006
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50006.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//basic purple
+surface50007
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50007.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//basic navy
+surface50008
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50008.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//basic blue
+surface50009
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50009.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//basic azure
+surface50010
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50010.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//basic mint
+surface50011
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50011.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//basic white
+surface50012
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50012.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//basic gray
+surface50013
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50013.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//basic black
+surface50014
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50014.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//———————— CHUNKY STRIPE ————————
+//chunky stripe brown
+surface50050
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50050.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//chunky stripe green
+surface50051
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50051.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//chunky stripe olive
+surface50052
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50052.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//chunky stripe yellow
+surface50053
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50053.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//chunky stripe orange
+surface50054
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50054.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//chunky stripe red
+surface50055
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50055.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//chunky stripe mauve
+surface50056
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50056.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//chunky stripe purple
+surface50057
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50057.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//chunky stripe navy
+surface50058
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50058.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//chunky stripe blue
+surface50059
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50059.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//chunky stripe azure
+surface50060
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50060.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//chunky stripe mint
+surface50061
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50061.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//chunky stripe white
+surface50062
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50062.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//chunky stripe gray
+surface50063
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50063.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//chunky stripe black
+surface50064
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50064.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//———————— SINGLE SWIRL ————————
+//single swirl brown
+surface50100
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50100.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//single swirl green
+surface50101
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50101.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//single swirl olive
+surface50102
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50102.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//single swirl yellow
+surface50103
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50103.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//single swirl orange
+surface50104
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50104.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//single swirl red
+surface50105
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50105.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//single swirl mauve
+surface50106
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50106.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//single swirl purple
+surface50107
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50107.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//single swirl navy
+surface50108
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50108.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//single swirl blue
+surface50109
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50109.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//single swirl azure
+surface50110
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50110.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//single swirl mint
+surface50111
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50111.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//single swirl white
+surface50112
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50112.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//single swirl gray
+surface50113
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50113.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//single swirl black
+surface50114
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50114.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//———————— RADIAL SWIRL ————————
+//radial swirl brown
+surface50150
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50150.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//radial swirl green
+surface50151
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50151.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//radial swirl olive
+surface50152
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50152.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//radial swirl yellow
+surface50153
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50153.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//radial swirl orange
+surface50154
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50154.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//radial swirl red
+surface50155
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50155.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//radial swirl mauve
+surface50156
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50156.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//radial swirl purple
+surface50157
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50157.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//radial swirl navy
+surface50158
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50158.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//radial swirl blue
+surface50159
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50159.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//radial swirl azure
+surface50160
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50160.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//radial swirl mint
+surface50161
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50161.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//radial swirl white
+surface50162
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50162.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//radial swirl gray
+surface50163
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50163.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//radial swirl black
+surface50164
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50164.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//———————— PINSTRIPE SWIRL ————————
+//pinstripe swirl brown
+surface50200
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50200.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//pinstripe swirl green
+surface50201
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50201.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//pinstripe swirl olive
+surface50202
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50202.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//pinstripe swirl yellow
+surface50203
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50203.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//pinstripe swirl orange
+surface50204
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50204.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//pinstripe swirl red
+surface50205
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50205.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//pinstripe swirl mauve
+surface50206
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50206.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//pinstripe swirl purple
+surface50207
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50207.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//pinstripe swirl navy
+surface50208
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50208.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//pinstripe swirl blue
+surface50209
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50209.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//pinstripe swirl azure
+surface50210
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50210.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//pinstripe swirl mint
+surface50211
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50211.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//pinstripe swirl white
+surface50212
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50212.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//pinstripe swirl gray
+surface50213
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50213.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}
+
+//pinstripe swirl black
+surface50214
+{
+	element0,overlay,surface50000c.png,0,0
+	element1,overlayfast,surface50214.png,0,0
+	element2,overlay,surface50000l.png,0,0
+}

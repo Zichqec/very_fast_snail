@@ -1,5 +1,5 @@
 //THE SPEEDIEST SNAIL AROUND
-//hats
+//masks
 
 descript
 {
