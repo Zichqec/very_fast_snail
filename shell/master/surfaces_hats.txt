@@ -111,6 +111,36 @@ surface.append1
 	animation75025.pattern0,overlay,75025,0,0,0
 	animation75025.pattern1,overlay,75025,500,0,4
 	animation75025.pattern2,overlay,75025,500,0,0
+	
+	//purple trucker
+	animation75026.interval,bind+always
+	animation75026.pattern0,interpolate,75026,0,0,0
+	animation75026.pattern1,interpolate,75026,500,0,4
+	animation75026.pattern2,interpolate,75026,500,0,0
+	animation75027.interval,bind+always
+	animation75027.pattern0,overlay,75027,0,0,0
+	animation75027.pattern1,overlay,75027,500,0,4
+	animation75027.pattern2,overlay,75027,500,0,0
+	
+	//yellow trucker
+	animation75028.interval,bind+always
+	animation75028.pattern0,interpolate,75028,0,0,0
+	animation75028.pattern1,interpolate,75028,500,0,4
+	animation75028.pattern2,interpolate,75028,500,0,0
+	animation75029.interval,bind+always
+	animation75029.pattern0,overlay,75029,0,0,0
+	animation75029.pattern1,overlay,75029,500,0,4
+	animation75029.pattern2,overlay,75029,500,0,0
+	
+	//orange trucker
+	animation75030.interval,bind+always
+	animation75030.pattern0,interpolate,75030,0,0,0
+	animation75030.pattern1,interpolate,75030,500,0,4
+	animation75030.pattern2,interpolate,75030,500,0,0
+	animation75031.interval,bind+always
+	animation75031.pattern0,overlay,75031,0,0,0
+	animation75031.pattern1,overlay,75031,500,0,4
+	animation75031.pattern2,overlay,75031,500,0,0
 }
 
 //horizontal bobbing
@@ -167,4 +197,34 @@ surface.append2
 	animation75025.pattern0,overlay,75025,0,0,0
 	animation75025.pattern1,overlay,75025,500,4,0
 	animation75025.pattern2,overlay,75025,500,0,0
+	
+	//purple trucker
+	animation75026.interval,bind+always
+	animation75026.pattern0,interpolate,75026,0,0,0
+	animation75026.pattern1,interpolate,75026,500,4,0
+	animation75026.pattern2,interpolate,75026,500,0,0
+	animation75027.interval,bind+always
+	animation75027.pattern0,overlay,75027,0,0,0
+	animation75027.pattern1,overlay,75027,500,4,0
+	animation75027.pattern2,overlay,75027,500,0,0
+	
+	//yellow trucker
+	animation75028.interval,bind+always
+	animation75028.pattern0,interpolate,75028,0,0,0
+	animation75028.pattern1,interpolate,75028,500,4,0
+	animation75028.pattern2,interpolate,75028,500,0,0
+	animation75029.interval,bind+always
+	animation75029.pattern0,overlay,75029,0,0,0
+	animation75029.pattern1,overlay,75029,500,4,0
+	animation75029.pattern2,overlay,75029,500,0,0
+	
+	//orange trucker
+	animation75030.interval,bind+always
+	animation75030.pattern0,interpolate,75030,0,0,0
+	animation75030.pattern1,interpolate,75030,500,4,0
+	animation75030.pattern2,interpolate,75030,500,0,0
+	animation75031.interval,bind+always
+	animation75031.pattern0,overlay,75031,0,0,0
+	animation75031.pattern1,overlay,75031,500,4,0
+	animation75031.pattern2,overlay,75031,500,0,0
 }
