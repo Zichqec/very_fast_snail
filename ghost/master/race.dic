@@ -21,7 +21,7 @@ OnDisplayHandover
 {
 	//Make a simple array for each character tracking the left and right boundary of the screen they are on
 	//Left,Right.Top - WE ONLY NEED TOP IN ONE SPOT OK //TODO snip if unneeded
-	WalkBorder = "%(reference3[0]),%(reference3[2]),%(reference[1])"
+	WalkBorder = (TOINT(reference3[0]),TOINT(reference3[2]),TOINT(reference3[1]))
 }
 
 TimeCalc : all
@@ -39,8 +39,12 @@ TimeCalc : all
 	
 	//TODO add negative speed option
 	_stats = CurrentStats
-	_speednum = TOINT(_stats[0])
-	if _argv[0] != ""; _speednum = _argv[0]
+	_initialval = TOINT(_stats[0])
+	
+	if _argv[0] != ""; _initialval = _argv[0]
+	
+	_speednum = _initialval
+	if _initialval < 0; _speednum *= -1
 	
 	_speedcalc = (100,85,65,35)
 	_speedmult = (1000,2000,3000,4000)
@@ -59,6 +63,8 @@ TimeCalc : all
 	
 	_total = _speedoutput[0] + _speedoutput[1] + _speedoutput[2] + _speedoutput[3] + _speedoutput[4]
 	
+	if _initialval < 0; _total *= -1
+	
 	//Race time max is 420000, so lets cap it...
 	if _total > 417000; 417000
 	else; _total
@@ -72,28 +78,38 @@ OnRace.Start : all
 
 OnGetSnailPos : all
 {
-	SnailPos = (reference0[0],reference0[1])
+	SnailPos = (reference0[0],reference0[1],0)
 	
-	"\p[3]\![move,--x=0,--y=0,--base=0]\![set,alignmenttodesktop,bound]"
+	"\p[3]\![set,alpha,0]\![set,scaling,20]\s[0]\![move,--x=0,--y=0,--base=0]\![set,alignmenttodesktop,bottom]\![get,property,OnGetTaskbarPos,currentghost.scope(3).rect]"
+}
+
+OnGetTaskbarPos : all
+{
+	SnailPos[2] = reference0[1]
+	
+	if WalkBorder == ""; WalkBorder = (0,DisplayWidth)
+	
+	//7 minute base race time
+	_racetime = 420000 - TimeCalc
+	_segmentlength = ABS(TOINT(WalkBorder[1])) / 100
+	_snailspeed = _racetime / 100
+	
+	ErrorLog("_segmentlength: %(_segmentlength)","info")
+	
+	"\0\t\![moveasync,--X=%(WalkBorder[0]),--Y=%(SnailPos[2]),--time=2500,--base=primaryscreen]\n"
+	for _i = 100; _i >= 20; _i--
+	{
+		"\![set,scaling,%(_i)]\_w[20]"
+	}
+	"\![set,scaling,20]\![set,alignmenttodesktop,bottom]"
+	"\_w[2500]"
+	"On your marks...\n\n Get set...\n\n \f[height,+10]\_qGO!!!\_q"
+	"\s[2]\![embed,OnRace.Move,0,%(_racetime),%(_segmentlength),%(_snailspeed)]"
 }
 
 OnRace.Go
 {
-	if WalkBorder == ""; WalkBorder = "0,%(DisplayWidth)"
 	
-	//7 minute base race time
-	_racetime = 420000 - TimeCalc
-	_segmentlength = TOINT(WalkBorder[1]) / 100
-	_snailspeed = _racetime / 100
-	
-	"\![moveasync,--X=%(WalkBorder[0]),--Y=]\n%(SnailPos)"
-	for _i = 100; _i >= 20; _i--
-	{
-		"\![set,scaling,%(_i)]\_w[10]"
-	}
-	
-	"\![set,scaling,20]\![set,alignmenttodesktop,bottom]"
-	"\![embed,OnRace.Move,0,%(_racetime),%(_segmentlength),%(_snailspeed)]"
 }
 
 OnRace.Move : all
@@ -105,16 +121,32 @@ OnRace.Move : all
 	
 	if _segment >= 99
 	{
+		"\c\s[1]FINSHED!\x\t"
+		for _i = 100; _i > 0; _i--
+		{
+			"\![set,alpha,%(_i)]\_w[20]"
+		}
+		"\![set,alpha,0]"
 		"\![raise,OnRace.Complete,%(_racetime)]"
 	}
 	else
 	{
-		"\![move,--X=%((_segment * _segmentlength) + _segmentlength),--time=%(_snailspeed),--base=primaryscreen]"
+			ErrorLog("WalkBorder[0] + (_segment * _segmentlength)) + _segmentlength: %(WalkBorder[0] + (_segment * _segmentlength)) + _segmentlength)","info")
+			ErrorLog("_segment * _segmentlength: %(_segment * _segmentlength)","info")
+		
+		"\![move,--X=%((WalkBorder[0] + (_segment * _segmentlength)) + _segmentlength),--time=%(_snailspeed),--base=primaryscreen]"
 		"\![embed,OnRace.Move,%(_segment + 1),%(_racetime),%(_segmentlength),%(_snailspeed)]"
 	}
 }
 
 OnRace.Complete : all
 {
-	"%(SnailPos)\![set,alignmenttodesktop,free]\![set,scaling,100]\![move,--X=%(SnailPos[0]),--Y=%(SnailPos[1])]"
+	"\![set,alpha,0]\![set,alignmenttodesktop,free]\![set,scaling,100]\![move,--X=%(SnailPos[0]),--Y=%(SnailPos[1]),--base=primaryscreen]"
+	"\s[1]"
+	for _i = 0; _i < 100; _i++
+	{
+		"\![set,alpha,%(_i)]\_w[20]"
+	}
+	"\![set,alpha,100]"
+	"Verifiable victory."
 }

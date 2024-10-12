@@ -258,6 +258,12 @@ TimeDisplay : all
 	"%(_seconds)"
 }
 
+ABS
+{
+	if _argv[0] < 0; _argv[0] *= -1
+	_argv[0]
+}
+
 IsAlliterative
 {
 	_input = _argv[0]
