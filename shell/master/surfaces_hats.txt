@@ -13,6 +13,66 @@ surface.append0,3-4
 	animation65050.interval,bind
 	animation65050.pattern0,interpolate,65050,0,0,0
 	animation65050.pattern1,overlay,65051,0,0,0
+	
+	//orange helmet
+	animation65052.interval,bind
+	animation65052.pattern0,interpolate,65052,0,0,0
+	animation65052.pattern1,overlay,65053,0,0,0
+	
+	//yellow helmet
+	animation65054.interval,bind
+	animation65054.pattern0,interpolate,65054,0,0,0
+	animation65054.pattern1,overlay,65055,0,0,0
+	
+	//green helmet
+	animation65056.interval,bind
+	animation65056.pattern0,interpolate,65056,0,0,0
+	animation65056.pattern1,overlay,65057,0,0,0
+	
+	//teal helmet
+	animation65058.interval,bind
+	animation65058.pattern0,interpolate,65058,0,0,0
+	animation65058.pattern1,overlay,65059,0,0,0
+	
+	//blue helmet
+	animation65060.interval,bind
+	animation65060.pattern0,interpolate,65060,0,0,0
+	animation65060.pattern1,overlay,65061,0,0,0
+	
+	//purple helmet
+	animation65062.interval,bind
+	animation65062.pattern0,interpolate,65062,0,0,0
+	animation65062.pattern1,overlay,65063,0,0,0
+	
+	//hot pink helmet
+	animation65064.interval,bind
+	animation65064.pattern0,interpolate,65064,0,0,0
+	animation65064.pattern1,overlay,65065,0,0,0
+	
+	//brown helmet
+	animation65066.interval,bind
+	animation65066.pattern0,interpolate,65066,0,0,0
+	animation65066.pattern1,overlay,65067,0,0,0
+	
+	//black helmet
+	animation65068.interval,bind
+	animation65068.pattern0,interpolate,65068,0,0,0
+	animation65068.pattern1,overlay,65069,0,0,0
+	
+	//gray helmet
+	animation65070.interval,bind
+	animation65070.pattern0,interpolate,65070,0,0,0
+	animation65070.pattern1,overlay,65071,0,0,0
+	
+	//silver helmet
+	animation65072.interval,bind
+	animation65072.pattern0,interpolate,65072,0,0,0
+	animation65072.pattern1,overlay,65073,0,0,0
+	
+	//white helmet
+	animation65074.interval,bind
+	animation65074.pattern0,interpolate,65074,0,0,0
+	animation65074.pattern1,overlay,65075,0,0,0
     
 	//blue party
 	animation75000.interval,bind
@@ -69,6 +129,126 @@ surface.append1
 	animation65051.pattern0,overlay,65051,0,0,0
 	animation65051.pattern1,overlay,65051,500,0,4
 	animation65051.pattern2,overlay,65051,500,0,0
+	
+	//orange helmet
+	animation65052.interval,bind+always
+	animation65052.pattern0,interpolate,65052,0,0,0
+	animation65052.pattern1,interpolate,65052,500,0,4
+	animation65052.pattern2,interpolate,65052,500,0,0
+	animation65053.interval,bind+always
+	animation65053.pattern0,overlay,65053,0,0,0
+	animation65053.pattern1,overlay,65053,500,0,4
+	animation65053.pattern2,overlay,65053,500,0,0
+	
+	//yellow helmet
+	animation65054.interval,bind+always
+	animation65054.pattern0,interpolate,65054,0,0,0
+	animation65054.pattern1,interpolate,65054,500,0,4
+	animation65054.pattern2,interpolate,65054,500,0,0
+	animation65055.interval,bind+always
+	animation65055.pattern0,overlay,65055,0,0,0
+	animation65055.pattern1,overlay,65055,500,0,4
+	animation65055.pattern2,overlay,65055,500,0,0
+	
+	//green helmet
+	animation65056.interval,bind+always
+	animation65056.pattern0,interpolate,65056,0,0,0
+	animation65056.pattern1,interpolate,65056,500,0,4
+	animation65056.pattern2,interpolate,65056,500,0,0
+	animation65057.interval,bind+always
+	animation65057.pattern0,overlay,65057,0,0,0
+	animation65057.pattern1,overlay,65057,500,0,4
+	animation65057.pattern2,overlay,65057,500,0,0
+	
+	//teal helmet
+	animation65058.interval,bind+always
+	animation65058.pattern0,interpolate,65058,0,0,0
+	animation65058.pattern1,interpolate,65058,500,0,4
+	animation65058.pattern2,interpolate,65058,500,0,0
+	animation65059.interval,bind+always
+	animation65059.pattern0,overlay,65059,0,0,0
+	animation65059.pattern1,overlay,65059,500,0,4
+	animation65059.pattern2,overlay,65059,500,0,0
+	
+	//blue helmet
+	animation65060.interval,bind+always
+	animation65060.pattern0,interpolate,65060,0,0,0
+	animation65060.pattern1,interpolate,65060,500,0,4
+	animation65060.pattern2,interpolate,65060,500,0,0
+	animation65061.interval,bind+always
+	animation65061.pattern0,overlay,65061,0,0,0
+	animation65061.pattern1,overlay,65061,500,0,4
+	animation65061.pattern2,overlay,65061,500,0,0
+	
+	//purple helmet
+	animation65062.interval,bind+always
+	animation65062.pattern0,interpolate,65062,0,0,0
+	animation65062.pattern1,interpolate,65062,500,0,4
+	animation65062.pattern2,interpolate,65062,500,0,0
+	animation65063.interval,bind+always
+	animation65063.pattern0,overlay,65063,0,0,0
+	animation65063.pattern1,overlay,65063,500,0,4
+	animation65063.pattern2,overlay,65063,500,0,0
+	
+	//hot pink helmet
+	animation65064.interval,bind+always
+	animation65064.pattern0,interpolate,65064,0,0,0
+	animation65064.pattern1,interpolate,65064,500,0,4
+	animation65064.pattern2,interpolate,65064,500,0,0
+	animation65065.interval,bind+always
+	animation65065.pattern0,overlay,65065,0,0,0
+	animation65065.pattern1,overlay,65065,500,0,4
+	animation65065.pattern2,overlay,65065,500,0,0
+	
+	//brown helmet
+	animation65066.interval,bind+always
+	animation65066.pattern0,interpolate,65066,0,0,0
+	animation65066.pattern1,interpolate,65066,500,0,4
+	animation65066.pattern2,interpolate,65066,500,0,0
+	animation65067.interval,bind+always
+	animation65067.pattern0,overlay,65067,0,0,0
+	animation65067.pattern1,overlay,65067,500,0,4
+	animation65067.pattern2,overlay,65067,500,0,0
+	
+	//black helmet
+	animation65068.interval,bind+always
+	animation65068.pattern0,interpolate,65068,0,0,0
+	animation65068.pattern1,interpolate,65068,500,0,4
+	animation65068.pattern2,interpolate,65068,500,0,0
+	animation65069.interval,bind+always
+	animation65069.pattern0,overlay,65069,0,0,0
+	animation65069.pattern1,overlay,65069,500,0,4
+	animation65069.pattern2,overlay,65069,500,0,0
+	
+	//gray helmet
+	animation65070.interval,bind+always
+	animation65070.pattern0,interpolate,65070,0,0,0
+	animation65070.pattern1,interpolate,65070,500,0,4
+	animation65070.pattern2,interpolate,65070,500,0,0
+	animation65071.interval,bind+always
+	animation65071.pattern0,overlay,65071,0,0,0
+	animation65071.pattern1,overlay,65071,500,0,4
+	animation65071.pattern2,overlay,65071,500,0,0
+	
+	//silver helmet
+	animation65072.interval,bind+always
+	animation65072.pattern0,interpolate,65072,0,0,0
+	animation65072.pattern1,interpolate,65072,500,0,4
+	animation65072.pattern2,interpolate,65072,500,0,0
+	animation65073.interval,bind+always
+	animation65073.pattern0,overlay,65073,0,0,0
+	animation65073.pattern1,overlay,65073,500,0,4
+	animation65073.pattern2,overlay,65073,500,0,0
+	
+	//white helmet
+	animation65074.interval,bind+always
+	animation65074.pattern0,interpolate,65074,0,0,0
+	animation65074.pattern1,interpolate,65074,500,0,4
+	animation65074.pattern2,interpolate,65074,500,0,0
+	animation65075.interval,bind+always
+	animation65075.pattern0,overlay,65075,0,0,0
+	animation65075.pattern1,overlay,65075,500,0,4
+	animation65075.pattern2,overlay,65075,500,0,0
 
 	//blue party
 	animation75000.interval,bind+always
@@ -155,6 +335,126 @@ surface.append2
 	animation65051.pattern0,overlay,65051,0,0,0
 	animation65051.pattern1,overlay,65051,500,4,0
 	animation65051.pattern2,overlay,65051,500,0,0
+	
+	//orange helmet
+	animation65052.interval,bind+always
+	animation65052.pattern0,interpolate,65052,0,0,0
+	animation65052.pattern1,interpolate,65052,500,4,0
+	animation65052.pattern2,interpolate,65052,500,0,0
+	animation65053.interval,bind+always
+	animation65053.pattern0,overlay,65053,0,0,0
+	animation65053.pattern1,overlay,65053,500,4,0
+	animation65053.pattern2,overlay,65053,500,0,0
+	
+	//yellow helmet
+	animation65054.interval,bind+always
+	animation65054.pattern0,interpolate,65054,0,0,0
+	animation65054.pattern1,interpolate,65054,500,4,0
+	animation65054.pattern2,interpolate,65054,500,0,0
+	animation65055.interval,bind+always
+	animation65055.pattern0,overlay,65055,0,0,0
+	animation65055.pattern1,overlay,65055,500,4,0
+	animation65055.pattern2,overlay,65055,500,0,0
+	
+	//green helmet
+	animation65056.interval,bind+always
+	animation65056.pattern0,interpolate,65056,0,0,0
+	animation65056.pattern1,interpolate,65056,500,4,0
+	animation65056.pattern2,interpolate,65056,500,0,0
+	animation65057.interval,bind+always
+	animation65057.pattern0,overlay,65057,0,0,0
+	animation65057.pattern1,overlay,65057,500,4,0
+	animation65057.pattern2,overlay,65057,500,0,0
+	
+	//teal helmet
+	animation65058.interval,bind+always
+	animation65058.pattern0,interpolate,65058,0,0,0
+	animation65058.pattern1,interpolate,65058,500,4,0
+	animation65058.pattern2,interpolate,65058,500,0,0
+	animation65059.interval,bind+always
+	animation65059.pattern0,overlay,65059,0,0,0
+	animation65059.pattern1,overlay,65059,500,4,0
+	animation65059.pattern2,overlay,65059,500,0,0
+	
+	//blue helmet
+	animation65060.interval,bind+always
+	animation65060.pattern0,interpolate,65060,0,0,0
+	animation65060.pattern1,interpolate,65060,500,4,0
+	animation65060.pattern2,interpolate,65060,500,0,0
+	animation65061.interval,bind+always
+	animation65061.pattern0,overlay,65061,0,0,0
+	animation65061.pattern1,overlay,65061,500,4,0
+	animation65061.pattern2,overlay,65061,500,0,0
+	
+	//purple helmet
+	animation65062.interval,bind+always
+	animation65062.pattern0,interpolate,65062,0,0,0
+	animation65062.pattern1,interpolate,65062,500,4,0
+	animation65062.pattern2,interpolate,65062,500,0,0
+	animation65063.interval,bind+always
+	animation65063.pattern0,overlay,65063,0,0,0
+	animation65063.pattern1,overlay,65063,500,4,0
+	animation65063.pattern2,overlay,65063,500,0,0
+	
+	//hot pink helmet
+	animation65064.interval,bind+always
+	animation65064.pattern0,interpolate,65064,0,0,0
+	animation65064.pattern1,interpolate,65064,500,4,0
+	animation65064.pattern2,interpolate,65064,500,0,0
+	animation65065.interval,bind+always
+	animation65065.pattern0,overlay,65065,0,0,0
+	animation65065.pattern1,overlay,65065,500,4,0
+	animation65065.pattern2,overlay,65065,500,0,0
+	
+	//brown helmet
+	animation65066.interval,bind+always
+	animation65066.pattern0,interpolate,65066,0,0,0
+	animation65066.pattern1,interpolate,65066,500,4,0
+	animation65066.pattern2,interpolate,65066,500,0,0
+	animation65067.interval,bind+always
+	animation65067.pattern0,overlay,65067,0,0,0
+	animation65067.pattern1,overlay,65067,500,4,0
+	animation65067.pattern2,overlay,65067,500,0,0
+	
+	//black helmet
+	animation65068.interval,bind+always
+	animation65068.pattern0,interpolate,65068,0,0,0
+	animation65068.pattern1,interpolate,65068,500,4,0
+	animation65068.pattern2,interpolate,65068,500,0,0
+	animation65069.interval,bind+always
+	animation65069.pattern0,overlay,65069,0,0,0
+	animation65069.pattern1,overlay,65069,500,4,0
+	animation65069.pattern2,overlay,65069,500,0,0
+	
+	//gray helmet
+	animation65070.interval,bind+always
+	animation65070.pattern0,interpolate,65070,0,0,0
+	animation65070.pattern1,interpolate,65070,500,4,0
+	animation65070.pattern2,interpolate,65070,500,0,0
+	animation65071.interval,bind+always
+	animation65071.pattern0,overlay,65071,0,0,0
+	animation65071.pattern1,overlay,65071,500,4,0
+	animation65071.pattern2,overlay,65071,500,0,0
+	
+	//silver helmet
+	animation65072.interval,bind+always
+	animation65072.pattern0,interpolate,65072,0,0,0
+	animation65072.pattern1,interpolate,65072,500,4,0
+	animation65072.pattern2,interpolate,65072,500,0,0
+	animation65073.interval,bind+always
+	animation65073.pattern0,overlay,65073,0,0,0
+	animation65073.pattern1,overlay,65073,500,4,0
+	animation65073.pattern2,overlay,65073,500,0,0
+	
+	//white helmet
+	animation65074.interval,bind+always
+	animation65074.pattern0,interpolate,65074,0,0,0
+	animation65074.pattern1,interpolate,65074,500,4,0
+	animation65074.pattern2,interpolate,65074,500,0,0
+	animation65075.interval,bind+always
+	animation65075.pattern0,overlay,65075,0,0,0
+	animation65075.pattern1,overlay,65075,500,4,0
+	animation65075.pattern2,overlay,65075,500,0,0
 
 	//blue party
 	animation75000.interval,bind+always

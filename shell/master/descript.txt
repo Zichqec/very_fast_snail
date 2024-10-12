@@ -194,6 +194,30 @@ sakura.bindgroup71000.name,Masks,Cigarette
 sakura.bindoption5.group,Hats,multiple
 sakura.bindgroup65050.name,Hats,Red Helmet
 sakura.bindgroup65050.addid,65051
+sakura.bindgroup65052.name,Hats,Orange Helmet
+sakura.bindgroup65052.addid,65053
+sakura.bindgroup65054.name,Hats,Yellow Helmet
+sakura.bindgroup65054.addid,65055
+sakura.bindgroup65056.name,Hats,Green Helmet
+sakura.bindgroup65056.addid,65057
+sakura.bindgroup65058.name,Hats,Teal Helmet
+sakura.bindgroup65058.addid,65059
+sakura.bindgroup65060.name,Hats,Blue Helmet
+sakura.bindgroup65060.addid,65061
+sakura.bindgroup65062.name,Hats,Purple Helmet
+sakura.bindgroup65062.addid,65063
+sakura.bindgroup65064.name,Hats,Hot Pink Helmet
+sakura.bindgroup65064.addid,65065
+sakura.bindgroup65066.name,Hats,Brown Helmet
+sakura.bindgroup65066.addid,65067
+sakura.bindgroup65068.name,Hats,Black Helmet
+sakura.bindgroup65068.addid,65069
+sakura.bindgroup65070.name,Hats,Gray Helmet
+sakura.bindgroup65070.addid,65071
+sakura.bindgroup65072.name,Hats,Silver Helmet
+sakura.bindgroup65072.addid,65073
+sakura.bindgroup65074.name,Hats,White Helmet
+sakura.bindgroup65074.addid,65075
 sakura.bindgroup75000.name,Hats,Blue Party Hat
 sakura.bindgroup75001.name,Hats,Pink Party Hat
 sakura.bindgroup75002.name,Hats,Pastel Party Hat
