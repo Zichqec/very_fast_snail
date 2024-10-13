@@ -27,22 +27,23 @@ surface.append0-9
 	animation80005.pattern10,overlay,80005,500,0,3
 	animation80005.pattern11,overlay,80005,400,0,2
 	animation80005.pattern12,overlay,80005,400,0,0
+	animation80005.option,shared-index
 	
 	animation80006.interval,bind+always
-	animation80006.pattern0,overlay,80006,0,0,0
-	animation80006.pattern1,overlay,80006,400,0,-2
-	animation80006.pattern2,overlay,80006,500,0,-3
-	animation80006.pattern3,overlay,80006,600,0,-4
-	animation80006.pattern4,overlay,80006,500,0,-3
-	animation80006.pattern5,overlay,80006,400,0,-2
-	animation80006.pattern6,overlay,80006,400,0,0
-	animation80006.pattern7,overlay,80006,400,0,2
-	animation80006.pattern8,overlay,80006,500,0,3
-	animation80006.pattern9,overlay,80006,600,0,4
-	animation80006.pattern10,overlay,80006,500,0,3
-	animation80006.pattern11,overlay,80006,400,0,2
-	animation80006.pattern12,overlay,80006,400,0,0
-	animation80006.option,background
+	animation80006.pattern0,overlay,80005,0,24,-15
+	animation80006.pattern1,overlay,80005,400,24,-17
+	animation80006.pattern2,overlay,80005,500,24,-18
+	animation80006.pattern3,overlay,80005,600,24,-19
+	animation80006.pattern4,overlay,80005,500,24,-18
+	animation80006.pattern5,overlay,80005,400,24,-17
+	animation80006.pattern6,overlay,80005,400,24,-15
+	animation80006.pattern7,overlay,80005,400,24,-13
+	animation80006.pattern8,overlay,80005,500,24,-12
+	animation80006.pattern9,overlay,80005,600,24,-11
+	animation80006.pattern10,overlay,80005,500,24,-12
+	animation80006.pattern11,overlay,80005,400,24,-13
+	animation80006.pattern12,overlay,80005,400,24,-15
+	animation80006.option,background+shared-index
 
 	//red bat wings
 	animation80025.interval,bind+always
@@ -61,19 +62,19 @@ surface.append0-9
 	animation80025.pattern12,overlay,80025,400,0,0
 	
 	animation80026.interval,bind+always
-	animation80026.pattern0,overlay,80026,0,0,0
-	animation80026.pattern1,overlay,80026,400,0,-2
-	animation80026.pattern2,overlay,80026,500,0,-3
-	animation80026.pattern3,overlay,80026,600,0,-4
-	animation80026.pattern4,overlay,80026,500,0,-3
-	animation80026.pattern5,overlay,80026,400,0,-2
-	animation80026.pattern6,overlay,80026,400,0,0
-	animation80026.pattern7,overlay,80026,400,0,2
-	animation80026.pattern8,overlay,80026,500,0,3
-	animation80026.pattern9,overlay,80026,600,0,4
-	animation80026.pattern10,overlay,80026,500,0,3
-	animation80026.pattern11,overlay,80026,400,0,2
-	animation80026.pattern12,overlay,80026,400,0,0
+	animation80026.pattern0,overlay,80025,0,24,-15
+	animation80026.pattern1,overlay,80025,400,24,-17
+	animation80026.pattern2,overlay,80025,500,24,-18
+	animation80026.pattern3,overlay,80025,600,24,-19
+	animation80026.pattern4,overlay,80025,500,24,-18
+	animation80026.pattern5,overlay,80025,400,24,-17
+	animation80026.pattern6,overlay,80025,400,24,-15
+	animation80026.pattern7,overlay,80025,400,24,-13
+	animation80026.pattern8,overlay,80025,500,24,-12
+	animation80026.pattern9,overlay,80025,600,24,-11
+	animation80026.pattern10,overlay,80025,500,24,-12
+	animation80026.pattern11,overlay,80025,400,24,-13
+	animation80026.pattern12,overlay,80025,400,24,-15
 	animation80026.option,background
 
 	//red wheel
