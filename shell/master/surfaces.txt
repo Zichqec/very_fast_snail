@@ -905,16 +905,21 @@ surface4
 	animation32070.pattern0,overlay,32070,0,0,0
 
 	//———————— OVERLAY ————————
-	animation85000.interval,always
-	animation85000.pattern0,overlay,85000,0,0,0
-	animation85000.pattern1,overlay,85001,100,0,0
-	animation85000.pattern2,overlay,85001,100,0,0
+	animation85500.interval,always
+	animation85500.pattern0,overlay,85500,0,0,0
+	animation85500.pattern1,overlay,85501,100,0,0
+	animation85500.pattern2,overlay,85501,100,0,0
 }
 
 
-//———————— ALL APPEND: Shell color ————————
+//———————— ALL APPEND: Shell color, background ————————
 surface.append0-9
 {
+	//———————— BACKGROUND ————————
+	//snail lift
+	animation10000.interval,never
+	animation10000.pattern0,overlay,10000,0,0,0
+
 	//———————— SNAIL SHELL ————————
 	//———— base ————
 	//basic brown
