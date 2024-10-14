@@ -263,7 +263,56 @@ sakura.bindoption6.group,Add-ons,multiple
 sakura.bindgroup80000.name,Add-ons,Saddle
 sakura.bindgroup80005.name,Add-ons,White Bird Wings
 sakura.bindgroup80005.addid,80006
+sakura.bindgroup80007.name,Add-ons,Black Bird Wings
+sakura.bindgroup80007.addid,80008
+sakura.bindgroup80009.name,Add-ons,White and Black Bird Wings
+sakura.bindgroup80009.addid,80010
+sakura.bindgroup80011.name,Add-ons,Gray Bird Wings
+sakura.bindgroup80011.addid,80012
+sakura.bindgroup80013.name,Add-ons,Gray and Black Bird Wings
+sakura.bindgroup80013.addid,80014
+sakura.bindgroup80015.name,Add-ons,White and Gray Bird Wings
+sakura.bindgroup80015.addid,80016
+sakura.bindgroup80017.name,Add-ons,Gray and White Bird Wings
+sakura.bindgroup80017.addid,80018
+sakura.bindgroup80019.name,Add-ons,Brown Bird Wings
+sakura.bindgroup80019.addid,80020
+sakura.bindgroup80021.name,Add-ons,Brown and Black Bird Wings
+sakura.bindgroup80021.addid,80022
+sakura.bindgroup80023.name,Add-ons,White and Brown Bird Wings
+sakura.bindgroup80023.addid,80024
 sakura.bindgroup80025.name,Add-ons,Red Bat Wings
 sakura.bindgroup80025.addid,80026
 sakura.bindgroup80045.name,Add-ons,Red Tires
 sakura.bindgroup80050.name,Add-ons,Box Fan
+sakura.bindgroup80055.name,Add-ons,Red Bird Wings
+sakura.bindgroup80055.addid,80056
+sakura.bindgroup80057.name,Add-ons,Orange Bird Wings
+sakura.bindgroup80057.addid,80058
+sakura.bindgroup80059.name,Add-ons,Gold Bird Wings
+sakura.bindgroup80059.addid,80060
+sakura.bindgroup80061.name,Add-ons,Green Bird Wings
+sakura.bindgroup80061.addid,80062
+sakura.bindgroup80063.name,Add-ons,Teal Bird Wings
+sakura.bindgroup80063.addid,80064
+sakura.bindgroup80065.name,Add-ons,Cyan Bird Wings
+sakura.bindgroup80065.addid,80066
+sakura.bindgroup80067.name,Add-ons,Blue Bird Wings
+sakura.bindgroup80067.addid,80068
+sakura.bindgroup80069.name,Add-ons,Violet Bird Wings
+sakura.bindgroup80069.addid,80070
+sakura.bindgroup80071.name,Add-ons,Purple Bird Wings
+sakura.bindgroup80071.addid,80072
+sakura.bindgroup80073.name,Add-ons,Magenta Bird Wings
+sakura.bindgroup80073.addid,80074
+sakura.bindgroup80075.name,Add-ons,Fuchsia Bird Wings
+sakura.bindgroup80075.addid,80076
+sakura.bindgroup80077.name,Add-ons,Red Winged Blackbird Wings
+sakura.bindgroup80077.addid,80078
+sakura.bindgroup80079.name,Add-ons,Brown and Gray Bird Wings
+sakura.bindgroup80079.addid,80080
+
+//Overlays (shouldnt be user accessible so this is commented out)
+//sakura.bindoption7.group,Overlays,multiple
+//sakura.bindgroup85005.name,Overlays,Smoke
+//sakura.bindgroup85010.name,Overlays,Sweat
