@@ -188,6 +188,22 @@ sakura.bindgroup70019.name,Masks,White Round Glasses
 sakura.bindgroup70020.name,Masks,Silver Round Glasses
 sakura.bindgroup70021.name,Masks,Black Round Glasses
 sakura.bindgroup70030.name,Masks,Shades
+sakura.bindgroup70040.name,Masks,White Eyepatch
+sakura.bindgroup70041.name,Masks,White Star Eyepatch
+sakura.bindgroup70042.name,Masks,White Rose Eyepatch
+sakura.bindgroup70045.name,Masks,Black Eyepatch
+sakura.bindgroup70046.name,Masks,Black Star Eyepatch
+sakura.bindgroup70047.name,Masks,Black Rose Eyepatch
+sakura.bindgroup70050.name,Masks,Goggles
+sakura.bindgroup70060.name,Masks,White Fuzzy Dice
+sakura.bindgroup70061.name,Masks,Black Fuzzy Dice
+sakura.bindgroup70062.name,Masks,Red Fuzzy Dice
+sakura.bindgroup70063.name,Masks,Pink Fuzzy Dice
+sakura.bindgroup70064.name,Masks,Purple Fuzzy Dice
+sakura.bindgroup70065.name,Masks,Blue Fuzzy Dice
+sakura.bindgroup70066.name,Masks,Green Fuzzy Dice
+sakura.bindgroup70067.name,Masks,Yellow Fuzzy Dice
+sakura.bindgroup70068.name,Masks,Orange Fuzzy Dice
 sakura.bindgroup71000.name,Masks,Cigarette
 
 //Hats
@@ -233,16 +249,68 @@ sakura.bindgroup75028.name,Hats,Yellow Trucker
 sakura.bindgroup75028.addid,75029
 sakura.bindgroup75030.name,Hats,Orange Trucker
 sakura.bindgroup75030.addid,75031
+sakura.bindgroup75050.name,Hats,Purple Witch Hat
+sakura.bindgroup75050.addid,75051
+sakura.bindgroup75070.name,Hats,Beige Wide Hat
+sakura.bindgroup75070.addid,75071
+sakura.bindgroup75072.name,Hats,White Wide Hat
+sakura.bindgroup75072.addid,75073
+sakura.bindgroup75074.name,Hats,Black Wide Hat
+sakura.bindgroup75074.addid,75075
 
 //Add-ons 
 sakura.bindoption6.group,Add-ons,multiple
 sakura.bindgroup80000.name,Add-ons,Saddle
 sakura.bindgroup80005.name,Add-ons,White Bird Wings
 sakura.bindgroup80005.addid,80006
+sakura.bindgroup80007.name,Add-ons,Black Bird Wings
+sakura.bindgroup80007.addid,80008
+sakura.bindgroup80009.name,Add-ons,White and Black Bird Wings
+sakura.bindgroup80009.addid,80010
+sakura.bindgroup80011.name,Add-ons,Gray Bird Wings
+sakura.bindgroup80011.addid,80012
+sakura.bindgroup80013.name,Add-ons,Gray and Black Bird Wings
+sakura.bindgroup80013.addid,80014
+sakura.bindgroup80015.name,Add-ons,White and Gray Bird Wings
+sakura.bindgroup80015.addid,80016
+sakura.bindgroup80017.name,Add-ons,Gray and White Bird Wings
+sakura.bindgroup80017.addid,80018
+sakura.bindgroup80019.name,Add-ons,Brown Bird Wings
+sakura.bindgroup80019.addid,80020
+sakura.bindgroup80021.name,Add-ons,Brown and Black Bird Wings
+sakura.bindgroup80021.addid,80022
+sakura.bindgroup80023.name,Add-ons,White and Brown Bird Wings
+sakura.bindgroup80023.addid,80024
 sakura.bindgroup80025.name,Add-ons,Red Bat Wings
 sakura.bindgroup80025.addid,80026
 sakura.bindgroup80045.name,Add-ons,Red Tires
 sakura.bindgroup80050.name,Add-ons,Box Fan
+sakura.bindgroup80055.name,Add-ons,Red Bird Wings
+sakura.bindgroup80055.addid,80056
+sakura.bindgroup80057.name,Add-ons,Orange Bird Wings
+sakura.bindgroup80057.addid,80058
+sakura.bindgroup80059.name,Add-ons,Gold Bird Wings
+sakura.bindgroup80059.addid,80060
+sakura.bindgroup80061.name,Add-ons,Green Bird Wings
+sakura.bindgroup80061.addid,80062
+sakura.bindgroup80063.name,Add-ons,Teal Bird Wings
+sakura.bindgroup80063.addid,80064
+sakura.bindgroup80065.name,Add-ons,Cyan Bird Wings
+sakura.bindgroup80065.addid,80066
+sakura.bindgroup80067.name,Add-ons,Blue Bird Wings
+sakura.bindgroup80067.addid,80068
+sakura.bindgroup80069.name,Add-ons,Violet Bird Wings
+sakura.bindgroup80069.addid,80070
+sakura.bindgroup80071.name,Add-ons,Purple Bird Wings
+sakura.bindgroup80071.addid,80072
+sakura.bindgroup80073.name,Add-ons,Magenta Bird Wings
+sakura.bindgroup80073.addid,80074
+sakura.bindgroup80075.name,Add-ons,Fuchsia Bird Wings
+sakura.bindgroup80075.addid,80076
+sakura.bindgroup80077.name,Add-ons,Red Winged Blackbird Wings
+sakura.bindgroup80077.addid,80078
+sakura.bindgroup80079.name,Add-ons,Brown and Gray Bird Wings
+sakura.bindgroup80079.addid,80080
 
 //Overlays (shouldnt be user accessible so this is commented out)
 //sakura.bindoption7.group,Overlays,multiple

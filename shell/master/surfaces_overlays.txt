@@ -8,6 +8,18 @@ descript
 
 surface.append0-9
 {
+	//soot 1
+	animation85000.interval,bind
+	animation85000.pattern0,overlayfast,85000,0,0,0
+
+	//soot 2
+	animation85001.interval,bind
+	animation85001.pattern0,overlayfast,85001,0,0,0
+
+	//soot 3
+	animation85002.interval,bind
+	animation85002.pattern0,overlayfast,85002,0,0,0
+
 	//smoke
 	animation85005.interval,bind+always
 	animation85005.pattern0,overlay,85005,0,0,0
@@ -19,4 +31,10 @@ surface.append0-9
 	animation85010.pattern0,overlay,85010,0,0,0
 	animation85010.pattern1,overlay,85011,500,0,0
 	animation85010.pattern2,overlay,85010,500,0,0
+
+	//sparkles
+	animation85025.interval,bind+always
+	animation85025.pattern0,overlay,85025,0,0,0
+	animation85025.pattern1,overlay,85026,500,0,0
+	animation85025.pattern2,overlay,85025,500,0,0
 }

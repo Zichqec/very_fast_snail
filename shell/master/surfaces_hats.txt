@@ -115,6 +115,26 @@ surface.append0,3-4
 	animation75030.interval,bind
 	animation75030.pattern0,interpolate,75030,0,0,0
 	animation75030.pattern1,add,75031,0,0,0
+
+	//purple witch hat
+	animation75050.interval,bind
+	animation75050.pattern0,interpolate,75050,0,0,0
+	animation75050.pattern1,add,75051,0,0,0
+
+	//beige wide hat
+	animation75070.interval,bind
+	animation75070.pattern0,interpolate,75070,0,0,0
+	animation75070.pattern1,add,75071,0,0,0
+
+	//white wide hat
+	animation75072.interval,bind
+	animation75072.pattern0,interpolate,75072,0,0,0
+	animation75072.pattern1,add,75073,0,0,0
+
+	//black wide hat
+	animation75074.interval,bind
+	animation75074.pattern0,interpolate,75074,0,0,0
+	animation75074.pattern1,add,75075,0,0,0
 }
 
 //vertical bobbing
@@ -321,6 +341,46 @@ surface.append1
 	animation75031.pattern0,overlay,75031,0,0,0
 	animation75031.pattern1,overlay,75031,500,0,4
 	animation75031.pattern2,overlay,75031,500,0,0
+
+	//purple witch hat
+	animation75050.interval,bind+always
+	animation75050.pattern0,interpolate,75050,0,0,0
+	animation75050.pattern1,interpolate,75050,500,0,4
+	animation75050.pattern2,interpolate,75050,500,0,0
+	animation75051.interval,bind+always
+	animation75051.pattern0,overlay,75051,0,0,0
+	animation75051.pattern1,overlay,75051,500,0,4
+	animation75051.pattern2,overlay,75051,500,0,0
+
+	//beige wide hat
+	animation75070.interval,bind+always
+	animation75070.pattern0,interpolate,75070,0,0,0
+	animation75070.pattern1,interpolate,75070,500,0,4
+	animation75070.pattern2,interpolate,75070,500,0,0
+	animation75071.interval,bind+always
+	animation75071.pattern0,overlay,75071,0,0,0
+	animation75071.pattern1,overlay,75071,500,0,4
+	animation75071.pattern2,overlay,75071,500,0,0
+
+	//white wide hat
+	animation75072.interval,bind+always
+	animation75072.pattern0,interpolate,75072,0,0,0
+	animation75072.pattern1,interpolate,75072,500,0,4
+	animation75072.pattern2,interpolate,75072,500,0,0
+	animation75073.interval,bind+always
+	animation75073.pattern0,overlay,75073,0,0,0
+	animation75073.pattern1,overlay,75073,500,0,4
+	animation75073.pattern2,overlay,75073,500,0,0
+
+	//black wide hat
+	animation75074.interval,bind+always
+	animation75074.pattern0,interpolate,75074,0,0,0
+	animation75074.pattern1,interpolate,75074,500,0,4
+	animation75074.pattern2,interpolate,75074,500,0,0
+	animation75075.interval,bind+always
+	animation75075.pattern0,overlay,75075,0,0,0
+	animation75075.pattern1,overlay,75075,500,0,4
+	animation75075.pattern2,overlay,75075,500,0,0
 }
 
 //horizontal bobbing
@@ -527,4 +587,44 @@ surface.append2
 	animation75031.pattern0,overlay,75031,0,0,0
 	animation75031.pattern1,overlay,75031,500,4,0
 	animation75031.pattern2,overlay,75031,500,0,0
+
+	//purple witch hat
+	animation75050.interval,bind+always
+	animation75050.pattern0,interpolate,75050,0,0,0
+	animation75050.pattern1,interpolate,75050,500,4,0
+	animation75050.pattern2,interpolate,75050,500,0,0
+	animation75051.interval,bind+always
+	animation75051.pattern0,overlay,75051,0,0,0
+	animation75051.pattern1,overlay,75051,500,4,0
+	animation75051.pattern2,overlay,75051,500,0,0
+
+	//beige wide hat
+	animation75070.interval,bind+always
+	animation75070.pattern0,interpolate,75070,0,0,0
+	animation75070.pattern1,interpolate,75070,500,4,0
+	animation75070.pattern2,interpolate,75070,500,0,0
+	animation75071.interval,bind+always
+	animation75071.pattern0,overlay,75071,0,0,0
+	animation75071.pattern1,overlay,75071,500,4,0
+	animation75071.pattern2,overlay,75071,500,0,0
+
+	//white wide hat
+	animation75072.interval,bind+always
+	animation75072.pattern0,interpolate,75072,0,0,0
+	animation75072.pattern1,interpolate,75072,500,4,0
+	animation75072.pattern2,interpolate,75072,500,0,0
+	animation75073.interval,bind+always
+	animation75073.pattern0,overlay,75073,0,0,0
+	animation75073.pattern1,overlay,75073,500,4,0
+	animation75073.pattern2,overlay,75073,500,0,0
+
+	//black wide hat
+	animation75074.interval,bind+always
+	animation75074.pattern0,interpolate,75074,0,0,0
+	animation75074.pattern1,interpolate,75074,500,4,0
+	animation75074.pattern2,interpolate,75074,500,0,0
+	animation75075.interval,bind+always
+	animation75075.pattern0,overlay,75075,0,0,0
+	animation75075.pattern1,overlay,75075,500,4,0
+	animation75075.pattern2,overlay,75075,500,0,0
 }

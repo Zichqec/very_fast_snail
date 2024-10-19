@@ -73,6 +73,70 @@ surface.append0,3-4
 	animation70030.interval,bind
 	animation70030.pattern0,overlay,70030,0,0,0
 
+	//white eyepatch
+	animation70040.interval,bind
+	animation70040.pattern0,overlay,70040,0,0,0
+
+	//white star eyepatch
+	animation70041.interval,bind
+	animation70041.pattern0,overlay,70041,0,0,0
+
+	//white rose eyepatch
+	animation70042.interval,bind
+	animation70042.pattern0,overlay,70042,0,0,0
+
+	//black eyepatch
+	animation70045.interval,bind
+	animation70045.pattern0,overlay,70045,0,0,0
+
+	//black star eyepatch
+	animation70046.interval,bind
+	animation70046.pattern0,overlay,70046,0,0,0
+
+	//black rose eyepatch
+	animation70047.interval,bind
+	animation70047.pattern0,overlay,70047,0,0,0
+
+	//snail goggles (snoggles)
+	animation70050.interval,bind
+	animation70050.pattern0,overlay,70050,0,0,0
+
+	//white dice
+	animation70060.interval,bind
+	animation70060.pattern0,overlay,70060,0,0,0
+
+	//black dice
+	animation70061.interval,bind
+	animation70061.pattern0,overlay,70061,0,0,0
+
+	//red dice
+	animation70062.interval,bind
+	animation70062.pattern0,overlay,70062,0,0,0
+
+	//pink dice
+	animation70063.interval,bind
+	animation70063.pattern0,overlay,70063,0,0,0
+
+	//purple dice
+	animation70064.interval,bind
+	animation70064.pattern0,overlay,70064,0,0,0
+
+	//blue dice
+	animation70065.interval,bind
+	animation70065.pattern0,overlay,70065,0,0,0
+
+	//green dice
+	animation70066.interval,bind
+	animation70066.pattern0,overlay,70066,0,0,0
+
+	//yellow dice
+	animation70067.interval,bind
+	animation70067.pattern0,overlay,70067,0,0,0
+
+	//orange dice
+	animation70068.interval,bind
+	animation70068.pattern0,overlay,70068,0,0,0
+
     //Cigarette
     animation71000.interval,bind+always
     animation71000.pattern0,overlay,71000,0,0,0
@@ -178,6 +242,108 @@ surface.append1
 	animation70030.pattern0,overlay,70030,0,0,0
 	animation70030.pattern1,overlay,70030,500,0,4
 	animation70030.pattern2,overlay,70030,500,0,0
+
+	//white eyepatch
+	animation70040.interval,bind+always
+	animation70040.pattern0,overlay,70040,0,0,0
+	animation70040.pattern1,overlay,70040,500,0,4
+	animation70040.pattern2,overlay,70040,500,0,0
+
+	//white star eyepatch
+	animation70041.interval,bind+always
+	animation70041.pattern0,overlay,70041,0,0,0
+	animation70041.pattern1,overlay,70041,500,0,4
+	animation70041.pattern2,overlay,70041,500,0,0
+
+	//white rose eyepatch
+	animation70042.interval,bind+always
+	animation70042.pattern0,overlay,70042,0,0,0
+	animation70042.pattern1,overlay,70042,500,0,4
+	animation70042.pattern2,overlay,70042,500,0,0
+
+	//black eyepatch
+	animation70045.interval,bind+always
+	animation70045.pattern0,overlay,70045,0,0,0
+	animation70045.pattern1,overlay,70045,500,0,4
+	animation70045.pattern2,overlay,70045,500,0,0
+
+	//black star eyepatch
+	animation70046.interval,bind+always
+	animation70046.pattern0,overlay,70046,0,0,0
+	animation70046.pattern1,overlay,70046,500,0,4
+	animation70046.pattern2,overlay,70046,500,0,0
+
+	//black rose eyepatch
+	animation70047.interval,bind+always
+	animation70047.pattern0,overlay,70047,0,0,0
+	animation70047.pattern1,overlay,70047,500,0,4
+	animation70047.pattern2,overlay,70047,500,0,0
+
+	//snail goggles (snoggles)
+	animation70050.interval,bind+always
+	animation70050.pattern0,overlay,70050,0,0,0
+	animation70050.pattern1,overlay,70050,500,0,4
+	animation70050.pattern2,overlay,70050,500,0,0
+
+	//white dice
+	animation70060.interval,bind+always
+	animation70060.pattern0,overlay,70060,0,0,0
+	animation70060.pattern1,overlay,70060,500,0,4
+	animation70060.pattern2,overlay,70060,500,0,0
+
+	//black dice
+	animation70061.interval,bind+always
+	animation70061.pattern0,overlay,70061,0,0,0
+	animation70061.pattern1,overlay,70061,500,0,4
+	animation70061.pattern2,overlay,70061,500,0,0
+
+	//red dice
+	animation70062.interval,bind+always
+	animation70062.pattern0,overlay,70062,0,0,0
+	animation70062.pattern1,overlay,70062,500,0,4
+	animation70062.pattern2,overlay,70062,500,0,0
+
+	//pink dice
+	animation70063.interval,bind+always
+	animation70063.pattern0,overlay,70063,0,0,0
+	animation70063.pattern1,overlay,70063,500,0,4
+	animation70063.pattern2,overlay,70063,500,0,0
+
+	//purple dice
+	animation70064.interval,bind+always
+	animation70064.pattern0,overlay,70064,0,0,0
+	animation70064.pattern1,overlay,70064,500,0,4
+	animation70064.pattern2,overlay,70064,500,0,0
+
+	//blue dice
+	animation70065.interval,bind+always
+	animation70065.pattern0,overlay,70065,0,0,0
+	animation70065.pattern1,overlay,70065,500,0,4
+	animation70065.pattern2,overlay,70065,500,0,0
+
+	//green dice
+	animation70066.interval,bind+always
+	animation70066.pattern0,overlay,70066,0,0,0
+	animation70066.pattern1,overlay,70066,500,0,4
+	animation70066.pattern2,overlay,70066,500,0,0
+
+	//yellow dice
+	animation70067.interval,bind+always
+	animation70067.pattern0,overlay,70067,0,0,0
+	animation70067.pattern1,overlay,70067,500,0,4
+	animation70067.pattern2,overlay,70067,500,0,0
+
+	//orange dice
+	animation70068.interval,bind+always
+	animation70068.pattern0,overlay,70068,0,0,0
+	animation70068.pattern1,overlay,70068,500,0,4
+	animation70068.pattern2,overlay,70068,500,0,0
+
+    //Cigarette
+    animation71000.interval,bind+always
+    animation71000.pattern0,overlay,71000,0,0,0
+    animation71000.pattern1,overlay,71001,500,0,4
+    animation71000.pattern2,overlay,71000,500,0,0
 }
 
 //horizontal bobbing
@@ -278,4 +444,106 @@ surface.append2
 	animation70030.pattern0,overlay,70030,0,0,0
 	animation70030.pattern1,overlay,70030,500,4,0
 	animation70030.pattern2,overlay,70030,500,0,0
+
+	//white eyepatch
+	animation70040.interval,bind+always
+	animation70040.pattern0,overlay,70040,0,0,0
+	animation70040.pattern1,overlay,70040,500,4,0
+	animation70040.pattern2,overlay,70040,500,0,0
+
+	//white star eyepatch
+	animation70041.interval,bind+always
+	animation70041.pattern0,overlay,70041,0,0,0
+	animation70041.pattern1,overlay,70041,500,4,0
+	animation70041.pattern2,overlay,70041,500,0,0
+
+	//white rose eyepatch
+	animation70042.interval,bind+always
+	animation70042.pattern0,overlay,70042,0,0,0
+	animation70042.pattern1,overlay,70042,500,4,0
+	animation70042.pattern2,overlay,70042,500,0,0
+
+	//black eyepatch
+	animation70045.interval,bind+always
+	animation70045.pattern0,overlay,70045,0,0,0
+	animation70045.pattern1,overlay,70045,500,4,0
+	animation70045.pattern2,overlay,70045,500,0,0
+
+	//black star eyepatch
+	animation70046.interval,bind+always
+	animation70046.pattern0,overlay,70046,0,0,0
+	animation70046.pattern1,overlay,70046,500,4,0
+	animation70046.pattern2,overlay,70046,500,0,0
+
+	//black rose eyepatch
+	animation70047.interval,bind+always
+	animation70047.pattern0,overlay,70047,0,0,0
+	animation70047.pattern1,overlay,70047,500,4,0
+	animation70047.pattern2,overlay,70047,500,0,0
+
+	//snail goggles (snoggles)
+	animation70050.interval,bind+always
+	animation70050.pattern0,overlay,70050,0,0,0
+	animation70050.pattern1,overlay,70050,500,4,0
+	animation70050.pattern2,overlay,70050,500,0,0
+
+	//white dice
+	animation70060.interval,bind+always
+	animation70060.pattern0,overlay,70060,0,0,0
+	animation70060.pattern1,overlay,70060,500,4,0
+	animation70060.pattern2,overlay,70060,500,0,0
+
+	//black dice
+	animation70061.interval,bind+always
+	animation70061.pattern0,overlay,70061,0,0,0
+	animation70061.pattern1,overlay,70061,500,4,0
+	animation70061.pattern2,overlay,70061,500,0,0
+
+	//red dice
+	animation70062.interval,bind+always
+	animation70062.pattern0,overlay,70062,0,0,0
+	animation70062.pattern1,overlay,70062,500,4,0
+	animation70062.pattern2,overlay,70062,500,0,0
+
+	//pink dice
+	animation70063.interval,bind+always
+	animation70063.pattern0,overlay,70063,0,0,0
+	animation70063.pattern1,overlay,70063,500,4,0
+	animation70063.pattern2,overlay,70063,500,0,0
+
+	//purple dice
+	animation70064.interval,bind+always
+	animation70064.pattern0,overlay,70064,0,0,0
+	animation70064.pattern1,overlay,70064,500,4,0
+	animation70064.pattern2,overlay,70064,500,0,0
+
+	//blue dice
+	animation70065.interval,bind+always
+	animation70065.pattern0,overlay,70065,0,0,0
+	animation70065.pattern1,overlay,70065,500,4,0
+	animation70065.pattern2,overlay,70065,500,0,0
+
+	//green dice
+	animation70066.interval,bind+always
+	animation70066.pattern0,overlay,70066,0,0,0
+	animation70066.pattern1,overlay,70066,500,4,0
+	animation70066.pattern2,overlay,70066,500,0,0
+
+	//yellow dice
+	animation70067.interval,bind+always
+	animation70067.pattern0,overlay,70067,0,0,0
+	animation70067.pattern1,overlay,70067,500,4,0
+	animation70067.pattern2,overlay,70067,500,0,0
+
+	//orange dice
+	animation70068.interval,bind+always
+	animation70068.pattern0,overlay,70068,0,0,0
+	animation70068.pattern1,overlay,70068,500,4,0
+	animation70068.pattern2,overlay,70068,500,0,0
+
+    //Cigarette
+    animation71000.interval,bind+always
+    animation71000.pattern0,overlay,71000,0,0,0
+    animation71000.pattern1,overlay,71001,500,4,0
+    animation71000.pattern2,overlay,71000,500,0,0
 }
