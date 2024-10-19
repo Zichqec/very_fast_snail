@@ -20,7 +20,7 @@ OnSakuraMenu : all
 	if SHIORI3FW.DebugMode
 	{
 		"\f[color,disable]"
-		"\![*]\q[Change snails,OnDebug.SnailPicker]\n\n"
+		"\![*]\q[Change snails,OnDebug.SnailPicker]  \![*]\q[Race test,OnRace.Start]\n\n"
 		"\f[color,default]"
 	}
 	

@@ -6,10 +6,34 @@ OnTranslate
 	if reference1 == "" && reference2 == "" //If this is from the input box
 	{ //send input box : no event (ref2) , no special flag (ref1)
 		_talk = EVAL('"' + REPLACE(_talk,'"','""') + '"')
+		_talk = OnTranslateInternal.AutoPause(_talk)
 	}
 	
-	
 	TOSTR(_talk)
+}
+
+OnTranslateInternal.AutoPause
+{
+	_talk = _argv[0]
+	
+	if "\![no-autopause]" !_in_ _talk
+	{
+		/*
+		_talk = REPLACE(_talk,"... ",".\w4.\w4.\w8\w8 ") //Ellipsis
+		_talk = REPLACE(_talk,"...? ",".\w4.\w4.\w4?\w8\w8 ") //Question mark + ellipsis
+		_talk = REPLACE(_talk,"...! ",".\w4.\w4.\w4!\w8\w8 ") //Exclamation point + ellipsis
+		*/
+		
+		_talk = REPLACE(_talk,"\n\n ","\n\n\w8\w8") //linebreak
+		_talk = REPLACE(_talk,", ",",\w4 ") //Comma
+		_talk = REPLACE(_talk,". ",".\w8\w8 ") //Period
+		_talk = REPLACE(_talk,"? ","?\w8\w8 ") //Question mark
+		_talk = REPLACE(_talk,"! ","!\w8\w8 ") //Exclamation point
+		_talk = REPLACE(_talk,"; ",";\w4 ") //Semicolon
+		//_talk = REPLACE(_talk,"- ","-\w8 ") //Dash - This one seems to happen a lot when I don't want it, so I am commenting it out
+	}
+	
+	_talk
 }
 
 OnAnchorSelect
@@ -26,7 +50,11 @@ OnKeyPress
 
 OnSurfaceRestore
 {
-	"\1\s[-1]\0\s[0]"
+	PositionInvisibleSnails
+	--
+	"\p[3]\![set,alpha,0]\s[0]"
+	--
+	"\0\s[0]"
 	--
 	LegalityCheck
 }
@@ -371,6 +399,18 @@ OnSecondChange
 	}
 }
 
+ShowInvisibleSnails : all
+{
+	"\p[3]\s[0]\![set,alpha,75]"
+	"\p[2]\s[0]\![set,alpha,75]"
+	"\p[1]\s[0]\![set,alpha,75]"
+}
+
+PositionInvisibleSnails : all
+{
+	"\p[2]\![set,alpha,0]\s[0]\![move,--x=0,--y=0,--base=0,--option=ignore-sticky-window]"
+	"\1\![set,alpha,0]\s[0]\![move,--x=0,--y=0,--base=0,--option=ignore-sticky-window]"
+}
 
 
 //—————————————————————————————— Right click menu links ——————————————————————————————

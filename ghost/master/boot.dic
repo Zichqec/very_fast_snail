@@ -84,11 +84,13 @@ OnFirst.SelectSnail.Confirm : all
 
 OnFirst.SelectSnail.Confirm.SnailTalk
 {
+	PositionInvisibleSnails
+	--
 	"\1\b[10]Racing ready!"
 	"\1\b[10]Let's land lettuce."
 	"\1\b[10]Speed scores stardom."
 	"\1\b[10]Acknowledged. Acclaim assured."
-	"\1\b[10]Bring Back Bagel Bites."
+	"\1\b[10]Bring back bagel bites."
 }
 
 OnFirst.NewSnailList
@@ -108,7 +110,7 @@ OnInitialize
 
 OnBoot
 {
-	"\p[2]\s[-1]\![move,--x=0,--y=0,--base=0,--option=ignore-sticky-window]\1\s[-1]\![move,--x=0,--y=0,--base=0,--option=ignore-sticky-window]"
+	PositionInvisibleSnails
 	--
 	"\0\s[0]"
 	--

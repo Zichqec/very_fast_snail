@@ -79,37 +79,66 @@ OnRace.Start : all
 OnGetSnailPos : all
 {
 	SnailPos = (reference0[0],reference0[1],0)
-	
-	"\p[3]\![set,alpha,0]\![set,scaling,20]\s[0]\![move,--x=0,--y=0,--base=0]\![set,alignmenttodesktop,bottom]\![get,property,OnGetTaskbarPos,currentghost.scope(3).rect]"
+	TempWalkBorder = WalkBorder
+	_scaling = 100
+	"\p[3]\![set,alpha,0]\![set,scaling,%(_scaling)]\s[0]\![move,--x=0,--y=0,--base=0]\![set,alignmenttodesktop,bottom]\![get,property,OnGetTaskbarPos,currentghost.scope(3).rect]"
 }
 
 OnGetTaskbarPos : all
 {
 	SnailPos[2] = reference0[1]
+	OnRace.Go
+}
+
+OnRace.Go : all
+{
+	_stats = CurrentStats
 	
-	if WalkBorder == ""; WalkBorder = (0,DisplayWidth)
+	_scaling = 20
+	if TempWalkBorder == ""
+	{
+		WalkBorder = (0,DisplayWidth)
+		TempWalkBorder = WalkBorder
+	}
 	
 	//7 minute base race time
 	_racetime = 420000 - TimeCalc
-	_segmentlength = ABS(TOINT(WalkBorder[1])) / 100
+	_segmentlength = ABS(WalkBorder[1] - WalkBorder[0]) / 100
 	_snailspeed = _racetime / 100
 	
-	ErrorLog("_segmentlength: %(_segmentlength)","info")
+	//explode chance
+	_explosiveness = TOINT(_stats[2])
+	_explodetime = -1
+	_rand = RAND(100)
+	ErrorLog("_rand: %(_rand)","info")
+	ErrorLog("_explosiveness: %(_explosiveness)","info")
+	if _rand <= _explosiveness
+	{
+		_explodetime = RAND(99)
+	}
+	//TODO if CigaretteEquipped; _explodetime = 0
 	
-	"\0\t\![moveasync,--X=%(WalkBorder[0]),--Y=%(SnailPos[2]),--time=2500,--base=primaryscreen]\n"
-	for _i = 100; _i >= 20; _i--
+	//Positioning...
+	"\0\t"
+	if SnailPos[1] != SnailPos[2]; "\![move,,--y=%(SnailPos[2]),--time=1000,--base=primaryscreen]"
+	
+	"\![set,alignmenttodesktop,bottom]"
+	//TODO check if the snail's scaling is going to be 100 and if so skip these...
+	for _i = 100; _i >= _scaling; _i--
 	{
 		"\![set,scaling,%(_i)]\_w[20]"
 	}
-	"\![set,scaling,20]\![set,alignmenttodesktop,bottom]"
-	"\_w[2500]"
-	"On your marks...\n\n Get set...\n\n \f[height,+10]\_qGO!!!\_q"
-	"\s[2]\![embed,OnRace.Move,0,%(_racetime),%(_segmentlength),%(_snailspeed)]"
-}
-
-OnRace.Go
-{
+	"\![set,scaling,%(_scaling)]"
 	
+	if SnailPos[0] != TempWalkBorder[0]; "\![move,--x=%(TempWalkBorder[0]),--time=1500,--base=primaryscreen]"
+	
+	"\_w[500]"
+	"\p[2]\![set,alpha,0]\s[2]\![set,scaling,%(_scaling)]\![move,--x-0,--y=0,--base=0,--option=ignore-sticky-window]"
+	"\p[1]\![set,alpha,0]\s[2]\![set,scaling,%(_scaling)]\![move,--x-0,--y=0,--base=0,--option=ignore-sticky-window]"
+	
+	"\p[3]\![set,alpha,0]\s[2]\![move,--x=0,--base=0]"
+	"\b[20]On your marks...\n\n Get set...\n\n \f[height,+10]\_qGO!!!\_q"
+	"\0\s[2]\![embed,OnRace.Move,0,%(_racetime),%(_segmentlength),%(_snailspeed),%(_explodetime)]"
 }
 
 OnRace.Move : all
@@ -118,35 +147,72 @@ OnRace.Move : all
 	_racetime = reference1
 	_segmentlength = reference2
 	_snailspeed = reference3
+	_explodetime = reference4
+	_scaling = 20
 	
-	if _segment >= 99
+	if _segment == 0; BalloonCloseTime = GETSECCOUNT
+	
+	//this feels clunky, maybe i could set up a couple if checks to make it not so weird...
+	_finishpos = ""
+	_finishpos += "\p[2]\![set,alpha,0]\![set,scaling,%(scaling)]\![move,--x-0,--y=0,--base=0,--option=ignore-sticky-window]"
+	_finishpos += "\p[1]\![set,alpha,0]\![set,scaling,%(scaling)]\![move,--x-0,--y=0,--base=0,--option=ignore-sticky-window]"
+	_finishpos += "\p[3]\b[-1]\0"
+	
+	_fadeout = ""
+	for _i = 100; _i > 0; _i--
 	{
-		"\c\s[1]FINSHED!\x\t"
-		for _i = 100; _i > 0; _i--
-		{
-			"\![set,alpha,%(_i)]\_w[20]"
-		}
-		"\![set,alpha,0]"
-		"\![raise,OnRace.Complete,%(_racetime)]"
+		_fadeout += "\![set,alpha,%(_i)]\_w[20]"
+	}
+	_fadeout += "\![set,alpha,0]"
+	
+	
+	if _segment >= _explodetime && _explodetime != -1
+	{
+		_finishpos
+		"\0\![set,scaling,%(_scaling),-%(_scaling)]\s[4]" //TODO sooty overlay stuff, with layers that build up
+		"\f[height,+10]\f[italic,1]%(boom)!!!\f[italic,default]\f[height,default]"
+		"\x"
+		_fadeout
+		"\![raise,OnRace.Complete,explode,%(_racetime)]"
+	}
+	elseif _segment >= 99
+	{
+		_finishpos
+		"\1\c\s[1]FINSHED!\x\0\t"
+		_fadeout
+		"\![raise,OnRace.Complete,complete,%(_racetime)]"
 	}
 	else
-	{
-			ErrorLog("WalkBorder[0] + (_segment * _segmentlength)) + _segmentlength: %(WalkBorder[0] + (_segment * _segmentlength)) + _segmentlength)","info")
-			ErrorLog("_segment * _segmentlength: %(_segment * _segmentlength)","info")
+	{		
+		if BalloonCloseTime > 0 && GETSECCOUNT - BalloonCloseTime > 15
+		{
+			BalloonCloseTime = -1
+			"\p[3]\b[-1]\0"
+		}
 		
-		"\![move,--X=%((WalkBorder[0] + (_segment * _segmentlength)) + _segmentlength),--time=%(_snailspeed),--base=primaryscreen]"
-		"\![embed,OnRace.Move,%(_segment + 1),%(_racetime),%(_segmentlength),%(_snailspeed)]"
+		"\![move,--X=%((TempWalkBorder[0] + (_segment * _segmentlength)) + _segmentlength),--time=%(_snailspeed),--base=primaryscreen]"
+		"\![embed,OnRace.Move,%(_segment + 1),%(_racetime),%(_segmentlength),%(_snailspeed),%(_explodetime)]"
 	}
 }
 
 OnRace.Complete : all
 {
-	"\![set,alpha,0]\![set,alignmenttodesktop,free]\![set,scaling,100]\![move,--X=%(SnailPos[0]),--Y=%(SnailPos[1]),--base=primaryscreen]"
-	"\s[1]"
+	"\![set,alpha,0]\![set,alignmenttodesktop,free]\![set,scaling,100]\![move,--x=%(SnailPos[0]),--y=%(SnailPos[1]),--base=primaryscreen]"
+	"\p[2]\![set,alpha,0]\![set,scaling,100]\![move,--x-0,--y=0,--base=0,--option=ignore-sticky-window]"
+	"\p[1]\![set,alpha,0]\![set,scaling,100]\![move,--x-0,--y=0,--base=0,--option=ignore-sticky-window]"
+	"\0\s[1]"
 	for _i = 0; _i < 100; _i++
 	{
 		"\![set,alpha,%(_i)]\_w[20]"
 	}
 	"\![set,alpha,100]"
-	"Verifiable victory."
+	
+	if reference0 == "complete"
+	{
+		"Verifiable victory." //TODO this is not final, i'll have to make it check for win or loss eventually too
+	}
+	elseif reference0 == "explode"
+	{
+		"Explosive expulsion..."
+	}
 }
