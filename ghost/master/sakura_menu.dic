@@ -261,11 +261,11 @@ OnRacerID : all
 	_coords = "inline"
 	if SHIORI3FW.BalloonName == "Very Fast Speedway"
 	{
-		_spacing = "\n\_l[100,]"
+		_spacing = "\n\_l[110,]"
 		_coords = "0,55"
 	}
 	
-	"\0\b[2]\_q\![set,autoscroll,disable]"
+	"\0\b[2]\_q\![set,autoscroll,disable]\![no-autopause]"
 	"\f[bold,1]\f[italic,1]\f[align,center]\f[height,+2]%(TOUPPER(CurrentSnail.Name))\n\f[height,default]\f[align,left]\f[italic,default]\f[bold,default]\n"
 	"\_b[%(_path),%(_coords),--clipping=240 125 370 255,--option=background]"
 	if SHIORI3FW.BalloonName == "Very Fast Speedway"; "\n[-200]"

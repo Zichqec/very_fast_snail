@@ -50,7 +50,7 @@ OnFirstBoot : all
 
 OnFirst.SnailPick : all
 {
-	"\0\b[0]\t\*\_q\![set,autoscroll,disable]"
+	"\0\b[0]\t\*\_q\![set,autoscroll,disable]\![no,autopause]"
 	"\f[bold,1]\f[italic,1]\f[align,center]\f[height,+2]CHOOSE YOUR RACER!\n\f[height,default]\f[align,left]\f[italic,default]\f[bold,default]\n"
 	
 	
@@ -71,7 +71,7 @@ OnFirst.SelectSnail : all
 	_trait = reference2
 	
 	"\0\b[2]\t\*"
-	"%(_trait)\n\n\_q"
+	"%(_trait)\n\n\_q" //TODO names in the traits that have dots will get autopaused...
 	"\![*]\__q[OnFirst.SnailPick]Back\__q    \![*]\__q[OnFirst.SelectSnail.Confirm,""%(reference0)"",""%(reference1)"",""%(reference2)""]Choose this snail\__q"
 }
 
