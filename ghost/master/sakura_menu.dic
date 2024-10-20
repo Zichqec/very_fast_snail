@@ -20,7 +20,9 @@ OnSakuraMenu : all
 	if SHIORI3FW.DebugMode
 	{
 		"\f[color,disable]"
-		"\![*]\q[Change snails,OnDebug.SnailPicker]  \![*]\q[Race test,OnRace.Start]\n\n"
+		"\![*]\q[Change snails,OnDebug.SnailPicker]  \![*]\q[Race test,OnRace.Start]\n"
+		"\![*]\q[Temp leaderboard,OnTempLeaderboard]\n"
+		"\n"
 		"\f[color,default]"
 	}
 	
@@ -451,4 +453,33 @@ OnDebug.CurrentSnail : all
 	"My current loadout is %(CurrentSnail.Loadout)\n"
 	"I was sponsored on %(CurrentSnail.DateSponsored)\n"
 	"\n\![*]\q[Back,OnDebug.SnailPicker]  \![*]\q[Done,OnBlank]"
+}
+
+OnTempLeaderboard : all
+{
+	"\0\b[4]\_q\![no-autopause]\![set,autoscroll,disable]"
+	
+	foreach TempLeaderboard; _record
+	{
+		if _record == ""; continue
+		
+		_score = _record[0]
+		_name = _record[1]
+		_time = _record[2]
+		_coolness = _record[3]
+		_exploded = TOINT(_record[4])
+		_timestamp = _record[5]
+		_date = _timestamp[0,':']
+		
+		_datetimecalc = _timestamp[1,':'] % 86400
+		_timeinfo = GETTIME(_datetimecalc)
+		
+		_explodestring = ""
+		if _exploded; _explodestring = "(Exploded)"
+		
+		"\f[color,default.anchor]%(_score)\f[color,default] - %(_name)\n"
+		"\f[color,disable]Time: %(MinutesSeconds(_time / 1000))  Coolness: %(_coolness)  %(_explodestring)\n"
+		"Set on %(_date) at %(_timeinfo[4]):%(LeadingDigit(_timeinfo[5])):%(LeadingDigit(_timeinfo[6]))\f[color,default]"
+		"\n\n"
+	}
 }

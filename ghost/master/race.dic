@@ -180,11 +180,11 @@ OnRace.Move : all
 		_finishpos
 		"\1\c\s[1]FINSHED!\x\0\t"
 		_fadeout
-		"\![raise,OnRace.Complete,complete,%(_racetime)]"
+		"\![raise,OnRace.Complete,complete,%(_racetime),%(GETSECCOUNT)]"
 	}
 	else
 	{		
-		if BalloonCloseTime > 0 && GETSECCOUNT - BalloonCloseTime > 15
+		if BalloonCloseTime > 0 && GETSECCOUNT - BalloonCloseTime > 7
 		{
 			BalloonCloseTime = -1
 			"\p[3]\b[-1]\0"
@@ -197,6 +197,14 @@ OnRace.Move : all
 
 OnRace.Complete : all
 {
+	_racetime = reference1
+	_stats = CurrentStats
+	_coolness = _stats[1]
+	_exploded = 0
+	if reference0 == "explode"; _exploded = 1
+	_score = ScoreCalc(reference1 / 1000,_coolness,_exploded)
+	
+	TempLeaderboard ,= "%(_score),%(CurrentSnail.Name),%(_racetime),%(_coolness),%(_exploded),%(year)-%(leadingmonth)-%(leadingday):%(reference2)"
 	"\![set,alpha,0]\![set,alignmenttodesktop,free]\![set,scaling,100]\![move,--x=%(SnailPos[0]),--y=%(SnailPos[1]),--base=primaryscreen]"
 	"\p[2]\![set,alpha,0]\![set,scaling,100]\![move,--x-0,--y=0,--base=0,--option=ignore-sticky-window]"
 	"\p[1]\![set,alpha,0]\![set,scaling,100]\![move,--x-0,--y=0,--base=0,--option=ignore-sticky-window]"
@@ -207,12 +215,115 @@ OnRace.Complete : all
 	}
 	"\![set,alpha,100]"
 	
-	if reference0 == "complete"
-	{
-		"Verifiable victory." //TODO this is not final, i'll have to make it check for win or loss eventually too
-	}
-	elseif reference0 == "explode"
+	"\_q%(_score)\_q\n"
+	if _exploded
 	{
 		"Explosive expulsion..."
 	}
+	else
+	{
+		"Verifiable victory." //TODO this is not final, i'll have to make it check for win or loss eventually too
+	}
+}
+
+/*
+
+Scoring:
+
+Speed bonus/penalty
+
+Start with 0 speed points, or a very small amount, for the normal 7 minutes of race time
+There are minute barriers to break. Every minute barrier you break, you get a point bonus
+Every second you shave off also gets you a certain amount of points, and the number it gives you increases for each minute barrier you break. That way, at high levels, eking out another second or two makes a large difference
+
+
+Coolness
+
+I'm thinking that coolness should be squared, that way it's not linear, it's uh... is that exponential? i'm not sure
+I'm unsure if the score should be added to this or multiplied by this. probably added lol
+
+
+Exploding might cut your score in half or quarter. Quarter probably better? will have to test
+*/
+
+ScoreCalc
+{
+	_time = _argv[0]
+	_coolness = _argv[1]
+	_exploded = _argv[2]
+	
+	//7 minute base race time
+	_basetime = 420 //TODO do i want you to get 100 base points? make this 421 if so...
+	_timesaved = _basetime - _time //TODO this can be negative, deal with later lol
+	
+	_timecalc = _timesaved
+	
+	_timeval = 1000
+	_timemult = 1
+	_timescore = 0
+	
+	//I feel there might be a cleaner way to do this but i can't be bothered...
+	if _timecalc > 0
+	{
+		while _timecalc >= 60
+		{
+			_timescore += 60 * (_timeval * _timemult)
+			_timemult++
+			_timecalc -= 60
+		}
+		if _timecalc > 0; _timescore += _timecalc * (_timeval * _timemult)
+	}
+	else
+	{
+		_timeval = 500
+		while _timecalc <= -60
+		{
+			_timescore -= 60 * (_timeval * _timemult)
+			_timemult++
+			_timecalc += 60
+		}
+		if _timecalc < 0; _timescore -= (_timecalc * -1) * (_timeval * _timemult)
+	}
+	
+	_coolscore = 0
+	_coolcalc = ABS(_coolness)
+	_coolscore = _coolcalc * _coolcalc * _coolcalc
+	if _coolness < 0
+	{
+		_coolscore *= -1
+	}
+	
+	
+	if _exploded
+	{
+		_coolscore -= ABS(_coolscore) / 2 //a quarter is really harsh...
+		_timescore = 0
+	}
+	
+	
+	_score = _timescore + _coolscore
+	
+	//to make it Not So Crisp
+	_spicestr = TOSTR(ABS(_score))
+	_spice = 0
+	if _score >= 0
+	{
+		for _i = 0; _i < STRLEN(_spicestr); _i++
+		{
+			_spice += TOINT(SUBSTR(_spicestr,_i,1))
+		}
+	}
+	else
+	{
+		for _i = 0; _i < STRLEN(_spicestr); _i++
+		{
+			_spice -= TOINT(SUBSTR(_spicestr,_i,1))
+		}
+	}
+	//_spice *= STRLEN(_spicestr)
+	_score += _spice
+	
+	
+	//"\_qScore: %(_score)\nSpice: %(_spice)\n%(GETTYPE(_spice))\n%(GETTYPE(_score))\x"
+	_score
 }

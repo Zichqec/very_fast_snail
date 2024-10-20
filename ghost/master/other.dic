@@ -268,7 +268,7 @@ leadingday : all
 
 TimeDisplay : all
 {
-	_time = _argv[0]
+	_time = TOINT(_argv[0])
 	
 	_days = _time / 86400
 	_time %= 86400
@@ -280,6 +280,19 @@ TimeDisplay : all
 	if _days > 0; "%(_days)d "
 	if _hours <= 9; "0"
 	"%(_hours):"
+	if _minutes <= 9; "0"
+	"%(_minutes):"
+	if _seconds <= 9; "0"
+	"%(_seconds)"
+}
+
+MinutesSeconds : all
+{
+	_time = TOINT(_argv[0])
+	
+	_minutes = _time / 60
+	_seconds = _time % 60
+	
 	if _minutes <= 9; "0"
 	"%(_minutes):"
 	if _seconds <= 9; "0"
@@ -347,6 +360,13 @@ br
 {
     if SHIORI3FW.BalloonName == "Very Fast Speedway"; "\n"
     else; " "
+}
+
+LeadingDigit : all
+{
+	_digit = _argv[0]
+	if _digit < 10; "0"
+	_digit
 }
 
 OnChoiceHover : all
