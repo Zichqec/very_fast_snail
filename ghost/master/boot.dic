@@ -50,7 +50,7 @@ OnFirstBoot : all
 
 OnFirst.SnailPick : all
 {
-	"\0\b[0]\t\*\_q\![set,autoscroll,disable]\![no,autopause]"
+	"\0\b[0]\t\*\_q\![set,autoscroll,disable]\![no-autopause]"
 	"\f[bold,1]\f[italic,1]\f[align,center]\f[height,+2]CHOOSE YOUR RACER!\n\f[height,default]\f[align,left]\f[italic,default]\f[bold,default]\n"
 	
 	

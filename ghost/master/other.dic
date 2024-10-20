@@ -378,6 +378,15 @@ OnChoiceHover : all
 	}
 }
 
+OnAnchorHover : all
+{
+	if reference1 == "OnEquipMenu.ToggleItem"
+	{
+		"\C"
+		EquipMenu.ShopControls(reference2,reference3)
+	}
+}
+
 //ErrorLog("Some debug info","info")
 ErrorLog
 {
