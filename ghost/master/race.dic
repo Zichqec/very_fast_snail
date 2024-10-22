@@ -258,7 +258,7 @@ ScoreCalc
 	
 	_timecalc = _timesaved
 	
-	_timeval = 100
+	_timeval = 10
 	_timemult = 1
 	_timescore = 0
 	
@@ -275,7 +275,7 @@ ScoreCalc
 	}
 	else
 	{
-		_timeval = 50
+		_timeval = 5
 		while _timecalc <= -60
 		{
 			_timescore -= 60 * (_timeval * _timemult)
