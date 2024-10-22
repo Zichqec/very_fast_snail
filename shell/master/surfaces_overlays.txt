@@ -8,33 +8,37 @@ descript
 
 surface.append0-9
 {
-	//soot 1
+	//shine
 	animation85000.interval,bind
-	animation85000.pattern0,overlayfast,85000,0,0,0
-
-	//soot 2
-	animation85001.interval,bind
-	animation85001.pattern0,overlayfast,85001,0,0,0
-
-	//soot 3
-	animation85002.interval,bind
-	animation85002.pattern0,overlayfast,85002,0,0,0
-
-	//smoke
+	animation85000.pattern0,overlay,85000,0,0,0
+	
+	//sweat
 	animation85005.interval,bind+always
 	animation85005.pattern0,overlay,85005,0,0,0
 	animation85005.pattern1,overlay,85006,500,0,0
 	animation85005.pattern2,overlay,85005,500,0,0
 
-	//sweat
+	//sparkles
 	animation85010.interval,bind+always
 	animation85010.pattern0,overlay,85010,0,0,0
 	animation85010.pattern1,overlay,85011,500,0,0
 	animation85010.pattern2,overlay,85010,500,0,0
+	
+	//smoke
+	animation85050.interval,bind+always
+	animation85050.pattern0,overlay,85050,0,0,0
+	animation85050.pattern1,overlay,85051,500,0,0
+	animation85050.pattern2,overlay,85050,500,0,0
+	
+	//soot light
+	animation85490.interval,bind
+	animation85490.pattern0,overlayfast,85490,0,0,0
 
-	//sparkles
-	animation85025.interval,bind+always
-	animation85025.pattern0,overlay,85025,0,0,0
-	animation85025.pattern1,overlay,85026,500,0,0
-	animation85025.pattern2,overlay,85025,500,0,0
+	//soot medium
+	animation85491.interval,bind
+	animation85491.pattern0,overlayfast,85491,0,0,0
+
+	//soot heavy
+	animation85492.interval,bind
+	animation85492.pattern0,overlayfast,85492,0,0,0
 }

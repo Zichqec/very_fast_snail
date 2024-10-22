@@ -312,7 +312,12 @@ sakura.bindgroup80077.addid,80078
 sakura.bindgroup80079.name,Add-ons,Brown and Gray Bird Wings
 sakura.bindgroup80079.addid,80080
 
-//Overlays (shouldnt be user accessible so this is commented out)
-//sakura.bindoption7.group,Overlays,multiple
-//sakura.bindgroup85005.name,Overlays,Smoke
-//sakura.bindgroup85010.name,Overlays,Sweat
+//Overlays
+sakura.bindoption7.group,Overlays,multiple
+sakura.bindgroup85000.name,Overlays,Shine
+sakura.bindgroup85005.name,Overlays,Sweat
+sakura.bindgroup85010.name,Overlays,Sparkles
+sakura.bindgroup85050.name,Overlays,Smoke
+sakura.bindgroup85490.name,Overlays,Soot Light
+sakura.bindgroup85491.name,Overlays,Soot Medium
+sakura.bindgroup85492.name,Overlays,Soot Heavy
