@@ -12,22 +12,21 @@ OnMouseDoubleClick
 
 OnMouseMove
 {
-	if reference4 != ""
+	if reference4 == "shell" && reference3 == 0
 	{
-		stroke++
-		
-		if stroke % 40 == 0
+		if "__SNAIL_WASH_MENU__" _in_ SHIORI3FW.LastTalk
 		{
-			if reference3 == 0; OnMouseMove.Sakura
+			if (SpongePurchased.Better && Cleanliness < 10) || (SpongePurchased.Basic && Cleanliness < 5)
+			{
+				stroke++
+				
+				if stroke % 30 == 0
+				{
+					Cleanliness++
+					OnSnailWashMenu
+				}
+			}
 		}
-	}
-}
-
-OnMouseMove.Sakura
-{
-	if reference4 == "head"
-	{
-		"\0\s[0]Petting??"
 	}
 }
 

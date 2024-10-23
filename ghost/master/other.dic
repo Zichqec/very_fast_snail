@@ -52,6 +52,8 @@ OnSurfaceRestore
 {
 	PositionInvisibleSnails
 	--
+	spongeoff
+	--
 	"\p[3]\![set,alpha,0]\s[0]"
 	--
 	"\0\s[0]"
@@ -403,28 +405,31 @@ ErrorLog
 
 OnSecondChange
 {
-	//error logging stuff because i think tama is causing me trouble...
-	//Create arrays if none exist
-	if !ISVAR("ErrorsToPush.level"); ErrorsToPush.level = IARRAY
-	if !ISVAR("ErrorsToPush.description"); ErrorsToPush.description = IARRAY
-
-	if ARRAYSIZE(ErrorsToPush.level) > 0 //If there are errors
+	if SHIORI3FW.DebugMode
 	{
-		_levels = ""
-		_descriptions = ""
-		for _i = 0; _i < ARRAYSIZE(ErrorsToPush.level); _i++ //CHR(1) in here is the divider between errors
+		//error logging stuff because i think tama is causing me trouble...
+		//Create arrays if none exist
+		if !ISVAR("ErrorsToPush.level"); ErrorsToPush.level = IARRAY
+		if !ISVAR("ErrorsToPush.description"); ErrorsToPush.description = IARRAY
+
+		if ARRAYSIZE(ErrorsToPush.level) > 0 //If there are errors
 		{
-			if _i > 0; {_levels += CHR(1); _descriptions += CHR(1)}
-			_levels += ErrorsToPush.level[_i]
-			_descriptions += ErrorsToPush.description[_i]
+			_levels = ""
+			_descriptions = ""
+			for _i = 0; _i < ARRAYSIZE(ErrorsToPush.level); _i++ //CHR(1) in here is the divider between errors
+			{
+				if _i > 0; {_levels += CHR(1); _descriptions += CHR(1)}
+				_levels += ErrorsToPush.level[_i]
+				_descriptions += ErrorsToPush.description[_i]
+			}
+			//Push the whole list of errors together
+			SHIORI3FW.PushAdditionalReturn('ErrorLevel',_levels)
+			SHIORI3FW.PushAdditionalReturn('ErrorDescription',_descriptions)
+			
+			//Clear the arrays so we don't send any more errors later
+			ErrorsToPush.level = IARRAY
+			ErrorsToPush.description = IARRAY
 		}
-		//Push the whole list of errors together
-		SHIORI3FW.PushAdditionalReturn('ErrorLevel',_levels)
-		SHIORI3FW.PushAdditionalReturn('ErrorDescription',_descriptions)
-		
-		//Clear the arrays so we don't send any more errors later
-		ErrorsToPush.level = IARRAY
-		ErrorsToPush.description = IARRAY
 	}
 }
 
@@ -439,6 +444,26 @@ PositionInvisibleSnails : all
 {
 	"\p[2]\![set,alpha,0]\s[0]\![move,--x=0,--y=0,--base=0,--option=ignore-sticky-window]"
 	"\1\![set,alpha,0]\s[0]\![move,--x=0,--y=0,--base=0,--option=ignore-sticky-window]"
+}
+
+spongebasic
+{
+	"\![set,property,currentghost.seriko.cursor.scope(0).mouseuplist(shell).path,spongebasic.cur]"
+}
+
+spongebetter
+{
+	"\![set,property,currentghost.seriko.cursor.scope(0).mouseuplist(shell).path,spongebetter.cur]"
+}
+
+spongeoff
+{
+	"\![set,property,currentghost.seriko.cursor.scope(0).mouseuplist(shell).path,]"
+}
+
+CleanlinessCheck
+{
+	//"\![bind,]"
 }
 
 

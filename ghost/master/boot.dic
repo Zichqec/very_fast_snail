@@ -41,11 +41,27 @@ OnFirstBoot : all
 	ErrorsToPush.level = IARRAY
 	ErrorsToPush.description = IARRAY
 	
+	SpongePurchased.Basic = 0
+	SpongePurchased.Better = 0
+	Cleanliness = 0
+	
 	
 	
 	"\1\s[-1]\0\s[0]"
 	--
 	OnFirst.SnailPick
+}
+
+OnInitialize
+{
+	if reference0 != "reload"
+	{
+		LastTalk = ""
+	}
+	
+	if !ISVAR("SpongePurchased.Basic"); SpongePurchased.Basic = 0
+	if !ISVAR("SpongePurchased.Better"); SpongePurchased.Better = 0
+	if !ISVAR("Cleanliness"); Cleanliness = 0
 }
 
 OnFirst.SnailPick : all
@@ -99,18 +115,11 @@ OnFirst.NewSnailList
 	OnFirst.SnailPick
 }
 
-
-OnInitialize
-{
-	if reference0 != "reload"
-	{
-		LastTalk = ""
-	}
-}
-
 OnBoot
 {
 	PositionInvisibleSnails
+	--
+	spongeoff
 	--
 	"\0\s[0]"
 	--
