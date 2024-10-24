@@ -50,13 +50,15 @@ OnKeyPress
 
 OnSurfaceRestore
 {
-	PositionInvisibleSnails
-	--
 	spongeoff
+	--
+	PositionInvisibleSnails
 	--
 	"\p[3]\![set,alpha,0]\s[0]"
 	--
 	"\0\s[0]"
+	--
+	CleanlinessCheck
 	--
 	LegalityCheck
 }
@@ -121,6 +123,7 @@ CreateSnail
 	CurrentSnail.Loadout = IARRAY
 	CurrentSnail.DateSponsored = "%(year)-%(leadingmonth)-%(leadingday):%(GETSECCOUNT)"
 	CurrentSnail.Notes = IARRAY
+	CurrentSnail.Training = (0,0,0,0,0,0,0,0,0,0)
 	SaveSnail(_argv[0])
 }
 
@@ -160,6 +163,14 @@ SaveSnail
 	SavedSnails.Notes[_index] = _notes
 	
 	SavedSnails.DateSponsored[_index] = CurrentSnail.DateSponsored
+	if CurrentSnail.Training == "" //This was added in an update so we need to account for if it doesn't exist
+	{
+		CurrentSnail.Training = (0,0,0,0,0,0,0,0,0,0)
+	}
+	else
+	{
+		SavedSnails.Training = TOSTR(CurrentSnail.Training)
+	}
 	
 }
 
@@ -179,21 +190,22 @@ LoadSnail
 	CurrentSnail.HighestCoolness = SavedSnails.HighestCoolness[_index]
 	CurrentSnail.TotalCrashes = SavedSnails.TotalCrashes[_index]
 	
-	_loadout = IARRAY
-	foreach SPLIT(SavedSnails.Loadout[_index],"|"); _item
-	{
-		_loadout ,= _item
-	}
-	CurrentSnail.Loadout = _loadout
-	
-	_notes = IARRAY
-	foreach SPLIT(SavedSnails.Notes[_index],"|"); _note
-	{
-		_notes ,= _note
-	}
-	CurrentSnail.Notes = _notes
+	CurrentSnail.Loadout = SPLIT(SavedSnails.Loadout[_index],"|")
+	CurrentSnail.Notes = SPLIT(SavedSnails.Notes[_index],"|")
 	
 	CurrentSnail.DateSponsored = SavedSnails.DateSponsored[_index]
+	CurrentSnail.Training = SPLIT(SavedSnails.Training,",")
+	if CurrentSnail.Training == "" //This was added in an update so we need to account for if it doesn't exist
+	{
+		CurrentSnail.Training = (0,0,0,0,0,0,0,0,0,0)
+	}
+	else //if it exists make it ints
+	{
+		for _i = 0; _i < ARRAYSIZE(CurrentSnail.Training); _i++
+		{
+			CurrentSnail.Training[_i] = TOINT(CurrentSnail.Training[_i])
+		}
+	}
 }
 
 
@@ -253,6 +265,31 @@ CurrentStats
 			}
 		}
 	}
+	
+	_cleanliness = ABS(Cleanliness)
+	if Cleanliness >= 10
+	{
+		_speed += 5
+		_coolness += 5
+		_explosiveness -= 5
+	}
+	elseif Cleanliness >= 5
+	{
+		_speed += 2
+		_coolness += 2
+		_explosiveness -= 2
+	}
+	elseif Cleanliness < 0
+	{
+		_speed -= _cleanliness
+		_coolness -= _cleanliness
+		_explosiveness += _cleanliness
+	}
+	if Cleanliness == -10
+	{
+		_coolness += 20 //cancelling out the -10 from earlier and adding another 10
+	}
+	
 	(_speed,_coolness,_explosiveness,_cost,_count)
 }
 
@@ -301,6 +338,50 @@ MinutesSeconds : all
 	"%(_seconds)"
 }
 
+TimeDisplayWord
+{
+	_num = TOINT(_argv[0])
+	if _num <= 0; {"no time"; return}
+	
+	//Singular form, plural form, number of seconds
+	_units = ( /
+	//"millenium,millenia,31536000000",/
+	//"century,centuries,3153600000",/
+	//"decade,decades,315360000",/
+	//"year,years,31536000",/
+	//"day,days,86400",/
+	"hour,hours,3600",/
+	"minute,minutes,60",/
+	"second,seconds,1"/
+	)
+	
+	_output = ""
+	foreach _units; _unit
+	{
+		_duration = TOINT(_unit[2])
+		_amt = _num / _duration
+		_num = _num % _duration
+		
+		if _amt > 0
+		{
+			if _output != ""
+			{
+				if _num == 0
+				{
+					if "," _in_ _output; _output += ","
+					_output += " and "
+				}
+				else; _output += ", "
+			}
+			
+			//The second function call here handles whether the unit name should be displayed as plural or not, depending on if the amount of that unit is greater than 1
+			_output += "%(_amt) %(_unit[_amt > 1])"
+		}
+		if _num <= 0; break
+	}
+	_output
+}
+
 ABS
 {
 	if _argv[0] < 0; _argv[0] *= -1
@@ -341,6 +422,7 @@ LegalityCheck : all
 {
 	foreach Dressups.Current; _dressup
 	{
+		if _dressup[0] == "Overlays"; continue
 		if !IsOwned(_dressup[0],_dressup[1])
 		{
 			"\![bind,%(_dressup[0]),%(_dressup[1]),0]"
@@ -461,11 +543,98 @@ spongeoff
 	"\![set,property,currentghost.seriko.cursor.scope(0).mouseuplist(shell).path,]"
 }
 
-CleanlinessCheck
+CleanlinessCheck : all
 {
-	//"\![bind,]"
+	"\![bind,Overlays,Soot Light,0]"
+	"\![bind,Overlays,Soot Medium,0]"
+	"\![bind,Overlays,Soot Heavy,0]"
+	"\![bind,Overlays,Shine,0]"
+	"\![bind,Overlays,Sparkles,0]"
+	
+	if Cleanliness <= -10
+	{
+		"\![bind,Overlays,Soot Heavy,1]"
+		"\![bind,Overlays,Soot Medium,1]"
+		"\![bind,Overlays,Soot Light,1]"
+	}
+	elseif Cleanliness <= -7
+	{
+		"\![bind,Overlays,Soot Heavy,1]"
+		"\![bind,Overlays,Soot Light,1]"
+	}
+	if Cleanliness <= -5
+	{
+		"\![bind,Overlays,Soot Heavy,1]"
+	}
+	elseif Cleanliness <= -3
+	{
+		"\![bind,Overlays,Soot Medium,1]"
+	}
+	elseif Cleanliness <= -1
+	{
+		"\![bind,Overlays,Soot Light,1]"
+	}
+	
+	if Cleanliness >= 5
+	{
+		"\![bind,Overlays,Shine,1]"
+	}
+	if Cleanliness >= 10
+	{
+		"\![bind,Overlays,Sparkles,1]"
+	}
 }
 
+boing : all
+{
+	for _i = 100; _i >= 70; _i--
+	{
+		"\![set,scaling,100,%(_i)]\_w[3]"
+	}
+	for _i = 70; _i < 110; _i++
+	{
+		"\![set,scaling,100,%(_i)]\_w[3]"
+	}
+	for _i = 110; _i >= 100; _i--
+	{
+		"\![set,scaling,100,%(_i)]\_w[3]"
+	}
+	"\![set,scaling,100,100]"
+}
+
+bigheader : all
+{
+	"\f[bold,1]"
+	"\f[italic,1]"
+	"\f[align,center]"
+	"\f[height,+2]"
+	"%(_argv[0])"
+	"\f[height,default]"
+	"\n"
+	"\f[align,left]"
+	"\f[italic,default]"
+	"\f[bold,default]"
+	"\n"
+}
+
+TrainingCost
+{
+	_times_trained = _argv[0]
+	
+	(_times_trained * 100) + 100
+}
+
+TrainingTime
+{
+	_times_trained = _argv[0]
+	
+	(_times_trained * 10) + 10
+}
+
+newline
+{
+	"\n[0]"
+}
 
 //—————————————————————————————— Right click menu links ——————————————————————————————
 

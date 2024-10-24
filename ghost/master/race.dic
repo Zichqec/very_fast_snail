@@ -168,8 +168,13 @@ OnRace.Move : all
 	
 	if _segment >= _explodetime && _explodetime != -1
 	{
+		if Cleanliness > 0; Cleanliness = -1
+		else; Cleanliness -= 2
+		if Cleanliness <= -10; Cleanliness = -10
+		
 		_finishpos
 		"\0\![set,scaling,%(_scaling),-%(_scaling)]\s[4]" //TODO sooty overlay stuff, with layers that build up
+		CleanlinessCheck
 		"\f[height,+10]\f[italic,1]%(boom)!!!\f[italic,default]\f[height,default]"
 		"\x"
 		_fadeout
@@ -209,6 +214,13 @@ OnRace.Complete : all
 	"\p[2]\![set,alpha,0]\![set,scaling,100]\![move,--x-0,--y=0,--base=0,--option=ignore-sticky-window]"
 	"\p[1]\![set,alpha,0]\![set,scaling,100]\![move,--x-0,--y=0,--base=0,--option=ignore-sticky-window]"
 	"\0\s[1]"
+	
+	if Cleanliness > 0
+	{
+		if Cleanliness >= 10; Cleanliness = 5
+		if Cleanliness >= 5; Cleanliness = 0
+	}
+	CleanlinessCheck
 	for _i = 0; _i < 100; _i++
 	{
 		"\![set,alpha,%(_i)]\_w[20]"

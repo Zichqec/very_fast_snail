@@ -2,15 +2,16 @@
 OnSakuraMenu : all
 {
 	"\0\s[0]\b2\![set,autoscroll,disable]\_q"
+	CleanlinessCheck
 	"\![set,alpha,100]\![set,scale,100]%(spongeoff)"
-	"\f[bold,1]\f[italic,1]\f[align,center]\f[height,+2]INTERACT WITH YOUR SNAIL!\n\f[height,default]\f[align,left]\f[italic,default]\f[bold,default]\n"
+	"%(bigheader('INTERACT WITH YOUR SNAIL!'))"
 	
 	"\![*]\q[Talk to me,OnAiTalk]"
 	if LastTalk != ""; "  \![*]\q[Say that again,OnLastTalk]"
 	"\n\n"
 	
 	"\![*]\q[Garage,OnEquipMenu,Body Paint]  \![*]\q[Racer ID,OnRacerID]\n"
-	"\![*]\q[Snail Wash,OnSnailWashMenu]"
+	"\![*]\q[Snail Training,OnSnailTraining]  \![*]\q[Snail Wash,OnSnailWashMenu]"
 	
 	"\n\n"
 	
@@ -58,6 +59,7 @@ OnEquipMenu : all
 	"Category:  "
 	foreach Dressups.Categories; _cat
 	{
+		if _cat == "Overlays"; continue
 		switch _cat == _category
 		{
 			"\f[color,disable]\__q[OnEquipMenu,%(_cat)]%(_cat)\__q\f[color,default]  "
@@ -111,7 +113,7 @@ EquipMenu.ShopControls : all
 	_explosivenessdiff = _explosiveness - _diff[2]
 	
 	"\C\![lock,balloonrepaint]\c\![set,autoscroll,disable]\f[anchorvisitedfontcolor,default.anchor]\0\b[2]\t\*\![no-autopause]\_q"
-	"\f[bold,1]\f[italic,1]\f[align,center]\f[height,+2]EQUIP YOUR SNAIL!\f[height,default]\n\f[align,left]\f[italic,default]\f[bold,default]\n[half]"
+	"%(bigheader('EQUIP YOUR SNAIL!'))[half]" //the half is on purpose do not touch
 	
 	"Current funds: %(L)%(Lettuce)\n\n"
 	"Speed: \f[bold,1]%(_speed)\f[bold,default]"
@@ -267,7 +269,7 @@ OnRacerID : all
 	}
 	
 	"\0\b[2]\_q\![set,autoscroll,disable]\![no-autopause]"
-	"\f[bold,1]\f[italic,1]\f[align,center]\f[height,+2]%(TOUPPER(CurrentSnail.Name))\n\f[height,default]\f[align,left]\f[italic,default]\f[bold,default]\n"
+	"%(bigheader(TOUPPER(CurrentSnail.Name)))"
 	"\_b[%(_path),%(_coords),--clipping=240 125 370 255,--option=background]"
 	if SHIORI3FW.BalloonName == "Very Fast Speedway"; "\n[-200]"
 	else; "\n"
@@ -316,9 +318,68 @@ OnTakeRacerPhoto : all
 	"Say cheese!\_w[1000]\n.\w8 .\w8 .\_w[1500]\n\_b[%(_path),inline,--clipping=240 125 370 255,--option=background]\n\nPerfect!\x\![raise,OnRacerID]"
 }
 
+OnSnailTraining : all
+{
+	"\0\b[2]\_q\![set,autoscroll,disable]"
+	"%(bigheader('TRAIN YOUR SNAIL!'))"
+	
+	"Current funds: %(L)%(Lettuce)\n\n"
+	
+	"%(CurrentSnail.Name)'s base stats:\n\n"
+	
+	//"\![*]\__q[OnSnailTraining.Speed]Speed: %(CurrentSnail.Training[0])\f[cursorstyle,none]\f[cursorfontcolor,000,040,015]\f[cursornotselectfontcolor,159,130,128] (Cost)\f[cursorfontcolor,default]\f[cursornotselectfontcolor,default]\f[cursorstyle,underline]\__q\n"
+	//"\__q[OnSnailTraining.Coolness]Coolness: %(CurrentSnail.Training[1])\f[cursorstyle,none]\f[cursorfontcolor,000,040,015]\f[cursornotselectfontcolor,159,130,128] (Cost)\f[cursorfontcolor,default]\f[cursornotselectfontcolor,default]\f[cursorstyle,underline]\__q\n"
+	
+	_stats_to_train = ("Agility","Style","Fire safety","Strength","Shrewdness")
+	
+	_i = 0
+	foreach _stats_to_train; _stat
+	{
+		"%(_stat): %(CurrentSnail.Training[_i])%(newline)\f[align,right]\![*]"
+		_cost = TrainingCost(CurrentSnail.Training[0])
+		switch Lettuce >= _cost
+		{
+			"\f[color,disable](Train for %(L)%(_cost))\f[color,default]"
+			"\__q[OnSnailTraining.Confirm,%(_i)](Train for %(L)%(_cost))\__q"
+		}
+		"\n\f[align,left]"
+		
+		_i++
+	}
+	
+	"\n"
+	"\![*]\q[Back,OnSakuraMenu]  \![*]\q[Done,OnBlank]"
+}
+
+OnSnailTraining.Confirm : all
+{
+	_stats_to_train = ("Agility","Style","Fire safety","Strength","Shrewdness")
+	_stat = _stats_to_train[reference0]
+	_cost = TrainingCost(CurrentSnail.Training[reference0])
+	_time = TrainingTime(CurrentSnail.Training[reference0])
+	
+	"\0\b[2]\_q\![set,autoscroll,disable]"
+	
+	"Train %(CurrentSnail.Name) in %(_stat) for %(_cost)?\n\n"
+	"This will take %(TimeDisplayWord(_time)) and bring its %(TOLOWER(_stat)) to %(CurrentSnail.Training[reference0] + 1)."
+	
+	"\n\n"
+	"\![*]\q[Yes,OnSnailTraining.Start,%(reference0),%(_cost),%(_time)]  \![*]\q[Back,OnSnailTraining]"
+}
+
+OnSnailTraining.Start : all
+{
+	SnailTrainingTimer[0] = GETSECCOUNT
+	SnailTrainingTimer[1] = reference2
+	Lettuce -= _cost
+	
+	"Training start!"
+}
+
 OnSnailWashMenu : all
 {
 	"\C\![lock,balloonrepaint]\c"
+	CleanlinessCheck
 	"\0\b[2]\_q\![set,autoscroll,disable]"
 	"\*"
 	
@@ -326,7 +387,7 @@ OnSnailWashMenu : all
 	elseif SpongePurchased.Basic; spongebasic
 	else; spongeoff
 	
-	"\f[bold,1]\f[italic,1]\f[align,center]\f[height,+2]WASH YOUR SNAIL!\f[height,default]\n\f[align,left]\f[italic,default]\f[bold,default]\n"
+	"%(bigheader('WASH YOUR SNAIL!'))"
 	
 	"Cleanliness: %(Cleanliness)\n\n"
 	
@@ -360,7 +421,7 @@ OnSnailWashMenu : all
 				"\f[color,disable]Purchase better sponge (%(L)10000)\f[color,default]"
 				"\q[Purchase better sponge,OnSnailWash.Sponge,10000,better sponge] (%(L)10000)"
 			}
-			"\f[color,disable]Better sponge purchased"
+			"\f[color,disable]Better sponge purchased\f[color,default]"
 		}
 	}
 	"\n\n"
@@ -387,8 +448,8 @@ OnSnailWash.AutomaticYes : all
 	Lettuce -= TOINT(reference0)
 	Cleanliness = 1
 	
-	"\0\b[2]\_q\![set,autoscroll,disable]\![no-autopause]" //TODO make this peel off soot layers
-	
+	"\0\b[2]\_q\![set,autoscroll,disable]\![no-autopause]"
+	CleanlinessCheck
 	"Squeaky clean!"
 	"\n\n"
 	"\![*]\q[Menu,OnSakuraMenu]  \![*]\q[Done,OnBlank]"
@@ -425,7 +486,7 @@ OnSnailWash.Done
 OnLettuceShop : all
 {
 	"\0\b[2]\_q\![set,autoscroll,disable]"
-	"\f[bold,1]\f[italic,1]\f[align,center]\f[height,+2]LETTUCE LOVERS!\f[height,default]\n\f[align,left]\f[italic,default]\f[bold,default]\n"
+	"%(bigheader('LETTUCE LOVERS!'))"
 	
 	"\f[bold,1]\f[italic,1]\f[align,center]\f[color,disable]"
 	switch RAND(100) == 0
@@ -455,7 +516,7 @@ OnLettuceExchange : all
 	
 	"\C\![lock,balloonrepaint]\c"
 	"\0\b[2]\_q\![set,autoscroll,disable]"
-	"\f[bold,1]\f[italic,1]\f[align,center]\f[height,+2]LETTUCE EXCHANGE!\f[height,default]\n\f[align,left]\f[italic,default]\f[bold,default]\n"
+	"%(bigheader('LETTUCE EXCHANGE!'))"
 	"\f[bold,1]\f[italic,1]\f[align,center]\f[color,disable]Exchange money lettuce for food lettuce!\f[color,default]\n\f[align,left]\f[italic,default]\f[bold,default]\n"
 	
 	

@@ -117,7 +117,7 @@ ItemDetails : array
 	"Hardware,Sling Bag,1,120,-1,1,0"
 	"Hardware,Hot Rod Exhaust,1,400,3,0,0"
 	"Hardware,Radio Antenna,1,90,0,2,0"
-	"Hardware,BIG ROCKET,1,3000,10,-4,7"
+	"Hardware,BIG ROCKET,1,3000,100,-4,7"
 	
 	"Masks,Camo Bandanna,1,50,0,1,0"
 	"Masks,Empty Wicker Basket,1,20,0,0,0"

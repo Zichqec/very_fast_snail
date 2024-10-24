@@ -13,6 +13,7 @@ OnFirstBoot : all
 	SavedSnails.Loadout = IARRAY
 	SavedSnails.DateSponsored = IARRAY
 	SavedSnails.Notes = IARRAY
+	SavedSnails.Training = IARRAY //Added in whatever version we call this
 	
 	CurrentSnail.ID = ""
 	CurrentSnail.Name = ""
@@ -25,6 +26,7 @@ OnFirstBoot : all
 	CurrentSnail.Loadout = IARRAY
 	CurrentSnail.DateSponsored = ""
 	CurrentSnail.Notes = IARRAY
+	CurrentSnail.Training = (0,0,0,0,0,0,0,0,0,0)
 	
 	HighestAllTimeCoolness = 0
 	
@@ -45,6 +47,8 @@ OnFirstBoot : all
 	SpongePurchased.Better = 0
 	Cleanliness = 0
 	
+	SnailTrainingTimer = (-1,-1) //start time, duration
+	
 	
 	
 	"\1\s[-1]\0\s[0]"
@@ -62,12 +66,24 @@ OnInitialize
 	if !ISVAR("SpongePurchased.Basic"); SpongePurchased.Basic = 0
 	if !ISVAR("SpongePurchased.Better"); SpongePurchased.Better = 0
 	if !ISVAR("Cleanliness"); Cleanliness = 0
+	
+	if !ISVAR("SavedSnails.Training")
+	{
+		for _i = 0; _i < ARRAYSIZE(SavedSnails.ID); _i++
+		{
+			SavedSnails.Training[_i] = (0,0,0,0,0,0,0,0,0,0)
+		}
+	}
+	if !ISVAR("CurrentSnail.Training") //To be doubly sure...
+	{
+		CurrentSnail.Training = (0,0,0,0,0,0,0,0,0,0)
+	}
 }
 
 OnFirst.SnailPick : all
 {
 	"\0\b[0]\t\*\_q\![set,autoscroll,disable]\![no-autopause]"
-	"\f[bold,1]\f[italic,1]\f[align,center]\f[height,+2]CHOOSE YOUR RACER!\n\f[height,default]\f[align,left]\f[italic,default]\f[bold,default]\n"
+	"%(bigheader('CHOOSE YOUR RACER!'))"
 	
 	
 	foreach SnailPickList; _snail
