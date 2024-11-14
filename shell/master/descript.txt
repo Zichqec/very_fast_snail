@@ -283,6 +283,24 @@ sakura.bindgroup80023.name,Add-ons,White and Brown Bird Wings
 sakura.bindgroup80023.addid,80024
 sakura.bindgroup80025.name,Add-ons,Red Bat Wings
 sakura.bindgroup80025.addid,80026
+sakura.bindgroup80027.name,Add-ons,Orange Bat Wings
+sakura.bindgroup80027.addid,80028
+sakura.bindgroup80029.name,Add-ons,Yellow Bat Wings
+sakura.bindgroup80029.addid,80030
+sakura.bindgroup80031.name,Add-ons,Green Bat Wings
+sakura.bindgroup80031.addid,80032
+sakura.bindgroup80033.name,Add-ons,Cyan Bat Wings
+sakura.bindgroup80033.addid,80034
+sakura.bindgroup80035.name,Add-ons,Blue Bat Wings
+sakura.bindgroup80035.addid,80036
+sakura.bindgroup80037.name,Add-ons,Purple Bat Wings
+sakura.bindgroup80037.addid,80038
+sakura.bindgroup80039.name,Add-ons,Pink Bat Wings
+sakura.bindgroup80039.addid,80040
+sakura.bindgroup80041.name,Add-ons,White Bat Wings
+sakura.bindgroup80041.addid,80042
+sakura.bindgroup80043.name,Add-ons,Gray Bat Wings
+sakura.bindgroup80043.addid,80044
 sakura.bindgroup80045.name,Add-ons,Red Tires
 sakura.bindgroup80050.name,Add-ons,Box Fan
 sakura.bindgroup80055.name,Add-ons,Red Bird Wings

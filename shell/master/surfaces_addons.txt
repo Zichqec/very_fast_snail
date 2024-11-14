@@ -373,6 +373,294 @@ surface.append0-9
 	animation80026.pattern11,overlay,80025,400,24,-13
 	animation80026.pattern12,overlay,80025,400,24,-15
 	animation80026.option,background
+	
+	//orange bat wings
+	animation80027.interval,bind+always
+	animation80027.pattern0,overlay,80027,0,0,0
+	animation80027.pattern1,overlay,80027,400,0,-2
+	animation80027.pattern2,overlay,80027,500,0,-3
+	animation80027.pattern3,overlay,80027,600,0,-4
+	animation80027.pattern4,overlay,80027,500,0,-3
+	animation80027.pattern5,overlay,80027,400,0,-2
+	animation80027.pattern6,overlay,80027,400,0,0
+	animation80027.pattern7,overlay,80027,400,0,2
+	animation80027.pattern8,overlay,80027,500,0,3
+	animation80027.pattern9,overlay,80027,600,0,4
+	animation80027.pattern10,overlay,80027,500,0,3
+	animation80027.pattern11,overlay,80027,400,0,2
+	animation80027.pattern12,overlay,80027,400,0,0
+	
+	animation80028.interval,bind+always
+	animation80028.pattern0,overlay,80027,0,24,-15
+	animation80028.pattern1,overlay,80027,400,24,-17
+	animation80028.pattern2,overlay,80027,500,24,-18
+	animation80028.pattern3,overlay,80027,600,24,-19
+	animation80028.pattern4,overlay,80027,500,24,-18
+	animation80028.pattern5,overlay,80027,400,24,-17
+	animation80028.pattern6,overlay,80027,400,24,-15
+	animation80028.pattern7,overlay,80027,400,24,-13
+	animation80028.pattern8,overlay,80027,500,24,-12
+	animation80028.pattern9,overlay,80027,600,24,-11
+	animation80028.pattern10,overlay,80027,500,24,-12
+	animation80028.pattern11,overlay,80027,400,24,-13
+	animation80028.pattern12,overlay,80027,400,24,-15
+	animation80028.option,background
+	
+	//yellow bat wings
+	animation80029.interval,bind+always
+	animation80029.pattern0,overlay,80029,0,0,0
+	animation80029.pattern1,overlay,80029,400,0,-2
+	animation80029.pattern2,overlay,80029,500,0,-3
+	animation80029.pattern3,overlay,80029,600,0,-4
+	animation80029.pattern4,overlay,80029,500,0,-3
+	animation80029.pattern5,overlay,80029,400,0,-2
+	animation80029.pattern6,overlay,80029,400,0,0
+	animation80029.pattern7,overlay,80029,400,0,2
+	animation80029.pattern8,overlay,80029,500,0,3
+	animation80029.pattern9,overlay,80029,600,0,4
+	animation80029.pattern10,overlay,80029,500,0,3
+	animation80029.pattern11,overlay,80029,400,0,2
+	animation80029.pattern12,overlay,80029,400,0,0
+	
+	animation80030.interval,bind+always
+	animation80030.pattern0,overlay,80029,0,24,-15
+	animation80030.pattern1,overlay,80029,400,24,-17
+	animation80030.pattern2,overlay,80029,500,24,-18
+	animation80030.pattern3,overlay,80029,600,24,-19
+	animation80030.pattern4,overlay,80029,500,24,-18
+	animation80030.pattern5,overlay,80029,400,24,-17
+	animation80030.pattern6,overlay,80029,400,24,-15
+	animation80030.pattern7,overlay,80029,400,24,-13
+	animation80030.pattern8,overlay,80029,500,24,-12
+	animation80030.pattern9,overlay,80029,600,24,-11
+	animation80030.pattern10,overlay,80029,500,24,-12
+	animation80030.pattern11,overlay,80029,400,24,-13
+	animation80030.pattern12,overlay,80029,400,24,-15
+	animation80030.option,background
+	
+	//green bat wings
+	animation80031.interval,bind+always
+	animation80031.pattern0,overlay,80031,0,0,0
+	animation80031.pattern1,overlay,80031,400,0,-2
+	animation80031.pattern2,overlay,80031,500,0,-3
+	animation80031.pattern3,overlay,80031,600,0,-4
+	animation80031.pattern4,overlay,80031,500,0,-3
+	animation80031.pattern5,overlay,80031,400,0,-2
+	animation80031.pattern6,overlay,80031,400,0,0
+	animation80031.pattern7,overlay,80031,400,0,2
+	animation80031.pattern8,overlay,80031,500,0,3
+	animation80031.pattern9,overlay,80031,600,0,4
+	animation80031.pattern10,overlay,80031,500,0,3
+	animation80031.pattern11,overlay,80031,400,0,2
+	animation80031.pattern12,overlay,80031,400,0,0
+	
+	animation80032.interval,bind+always
+	animation80032.pattern0,overlay,80031,0,24,-15
+	animation80032.pattern1,overlay,80031,400,24,-17
+	animation80032.pattern2,overlay,80031,500,24,-18
+	animation80032.pattern3,overlay,80031,600,24,-19
+	animation80032.pattern4,overlay,80031,500,24,-18
+	animation80032.pattern5,overlay,80031,400,24,-17
+	animation80032.pattern6,overlay,80031,400,24,-15
+	animation80032.pattern7,overlay,80031,400,24,-13
+	animation80032.pattern8,overlay,80031,500,24,-12
+	animation80032.pattern9,overlay,80031,600,24,-11
+	animation80032.pattern10,overlay,80031,500,24,-12
+	animation80032.pattern11,overlay,80031,400,24,-13
+	animation80032.pattern12,overlay,80031,400,24,-15
+	animation80032.option,background
+	
+	//cyan bat wings
+	animation80033.interval,bind+always
+	animation80033.pattern0,overlay,80033,0,0,0
+	animation80033.pattern1,overlay,80033,400,0,-2
+	animation80033.pattern2,overlay,80033,500,0,-3
+	animation80033.pattern3,overlay,80033,600,0,-4
+	animation80033.pattern4,overlay,80033,500,0,-3
+	animation80033.pattern5,overlay,80033,400,0,-2
+	animation80033.pattern6,overlay,80033,400,0,0
+	animation80033.pattern7,overlay,80033,400,0,2
+	animation80033.pattern8,overlay,80033,500,0,3
+	animation80033.pattern9,overlay,80033,600,0,4
+	animation80033.pattern10,overlay,80033,500,0,3
+	animation80033.pattern11,overlay,80033,400,0,2
+	animation80033.pattern12,overlay,80033,400,0,0
+	
+	animation80034.interval,bind+always
+	animation80034.pattern0,overlay,80033,0,24,-15
+	animation80034.pattern1,overlay,80033,400,24,-17
+	animation80034.pattern2,overlay,80033,500,24,-18
+	animation80034.pattern3,overlay,80033,600,24,-19
+	animation80034.pattern4,overlay,80033,500,24,-18
+	animation80034.pattern5,overlay,80033,400,24,-17
+	animation80034.pattern6,overlay,80033,400,24,-15
+	animation80034.pattern7,overlay,80033,400,24,-13
+	animation80034.pattern8,overlay,80033,500,24,-12
+	animation80034.pattern9,overlay,80033,600,24,-11
+	animation80034.pattern10,overlay,80033,500,24,-12
+	animation80034.pattern11,overlay,80033,400,24,-13
+	animation80034.pattern12,overlay,80033,400,24,-15
+	animation80034.option,background
+	
+	//blue bat wings
+	animation80035.interval,bind+always
+	animation80035.pattern0,overlay,80035,0,0,0
+	animation80035.pattern1,overlay,80035,400,0,-2
+	animation80035.pattern2,overlay,80035,500,0,-3
+	animation80035.pattern3,overlay,80035,600,0,-4
+	animation80035.pattern4,overlay,80035,500,0,-3
+	animation80035.pattern5,overlay,80035,400,0,-2
+	animation80035.pattern6,overlay,80035,400,0,0
+	animation80035.pattern7,overlay,80035,400,0,2
+	animation80035.pattern8,overlay,80035,500,0,3
+	animation80035.pattern9,overlay,80035,600,0,4
+	animation80035.pattern10,overlay,80035,500,0,3
+	animation80035.pattern11,overlay,80035,400,0,2
+	animation80035.pattern12,overlay,80035,400,0,0
+	
+	animation80036.interval,bind+always
+	animation80036.pattern0,overlay,80035,0,24,-15
+	animation80036.pattern1,overlay,80035,400,24,-17
+	animation80036.pattern2,overlay,80035,500,24,-18
+	animation80036.pattern3,overlay,80035,600,24,-19
+	animation80036.pattern4,overlay,80035,500,24,-18
+	animation80036.pattern5,overlay,80035,400,24,-17
+	animation80036.pattern6,overlay,80035,400,24,-15
+	animation80036.pattern7,overlay,80035,400,24,-13
+	animation80036.pattern8,overlay,80035,500,24,-12
+	animation80036.pattern9,overlay,80035,600,24,-11
+	animation80036.pattern10,overlay,80035,500,24,-12
+	animation80036.pattern11,overlay,80035,400,24,-13
+	animation80036.pattern12,overlay,80035,400,24,-15
+	animation80036.option,background
+	
+	//purple bat wings
+	animation80037.interval,bind+always
+	animation80037.pattern0,overlay,80037,0,0,0
+	animation80037.pattern1,overlay,80037,400,0,-2
+	animation80037.pattern2,overlay,80037,500,0,-3
+	animation80037.pattern3,overlay,80037,600,0,-4
+	animation80037.pattern4,overlay,80037,500,0,-3
+	animation80037.pattern5,overlay,80037,400,0,-2
+	animation80037.pattern6,overlay,80037,400,0,0
+	animation80037.pattern7,overlay,80037,400,0,2
+	animation80037.pattern8,overlay,80037,500,0,3
+	animation80037.pattern9,overlay,80037,600,0,4
+	animation80037.pattern10,overlay,80037,500,0,3
+	animation80037.pattern11,overlay,80037,400,0,2
+	animation80037.pattern12,overlay,80037,400,0,0
+	
+	animation80038.interval,bind+always
+	animation80038.pattern0,overlay,80037,0,24,-15
+	animation80038.pattern1,overlay,80037,400,24,-17
+	animation80038.pattern2,overlay,80037,500,24,-18
+	animation80038.pattern3,overlay,80037,600,24,-19
+	animation80038.pattern4,overlay,80037,500,24,-18
+	animation80038.pattern5,overlay,80037,400,24,-17
+	animation80038.pattern6,overlay,80037,400,24,-15
+	animation80038.pattern7,overlay,80037,400,24,-13
+	animation80038.pattern8,overlay,80037,500,24,-12
+	animation80038.pattern9,overlay,80037,600,24,-11
+	animation80038.pattern10,overlay,80037,500,24,-12
+	animation80038.pattern11,overlay,80037,400,24,-13
+	animation80038.pattern12,overlay,80037,400,24,-15
+	animation80038.option,background
+	
+	//pink bat wings
+	animation80039.interval,bind+always
+	animation80039.pattern0,overlay,80039,0,0,0
+	animation80039.pattern1,overlay,80039,400,0,-2
+	animation80039.pattern2,overlay,80039,500,0,-3
+	animation80039.pattern3,overlay,80039,600,0,-4
+	animation80039.pattern4,overlay,80039,500,0,-3
+	animation80039.pattern5,overlay,80039,400,0,-2
+	animation80039.pattern6,overlay,80039,400,0,0
+	animation80039.pattern7,overlay,80039,400,0,2
+	animation80039.pattern8,overlay,80039,500,0,3
+	animation80039.pattern9,overlay,80039,600,0,4
+	animation80039.pattern10,overlay,80039,500,0,3
+	animation80039.pattern11,overlay,80039,400,0,2
+	animation80039.pattern12,overlay,80039,400,0,0
+	
+	animation80040.interval,bind+always
+	animation80040.pattern0,overlay,80039,0,24,-15
+	animation80040.pattern1,overlay,80039,400,24,-17
+	animation80040.pattern2,overlay,80039,500,24,-18
+	animation80040.pattern3,overlay,80039,600,24,-19
+	animation80040.pattern4,overlay,80039,500,24,-18
+	animation80040.pattern5,overlay,80039,400,24,-17
+	animation80040.pattern6,overlay,80039,400,24,-15
+	animation80040.pattern7,overlay,80039,400,24,-13
+	animation80040.pattern8,overlay,80039,500,24,-12
+	animation80040.pattern9,overlay,80039,600,24,-11
+	animation80040.pattern10,overlay,80039,500,24,-12
+	animation80040.pattern11,overlay,80039,400,24,-13
+	animation80040.pattern12,overlay,80039,400,24,-15
+	animation80040.option,background
+	
+	//white bat wings
+	animation80041.interval,bind+always
+	animation80041.pattern0,overlay,80041,0,0,0
+	animation80041.pattern1,overlay,80041,400,0,-2
+	animation80041.pattern2,overlay,80041,500,0,-3
+	animation80041.pattern3,overlay,80041,600,0,-4
+	animation80041.pattern4,overlay,80041,500,0,-3
+	animation80041.pattern5,overlay,80041,400,0,-2
+	animation80041.pattern6,overlay,80041,400,0,0
+	animation80041.pattern7,overlay,80041,400,0,2
+	animation80041.pattern8,overlay,80041,500,0,3
+	animation80041.pattern9,overlay,80041,600,0,4
+	animation80041.pattern10,overlay,80041,500,0,3
+	animation80041.pattern11,overlay,80041,400,0,2
+	animation80041.pattern12,overlay,80041,400,0,0
+	
+	animation80042.interval,bind+always
+	animation80042.pattern0,overlay,80041,0,24,-15
+	animation80042.pattern1,overlay,80041,400,24,-17
+	animation80042.pattern2,overlay,80041,500,24,-18
+	animation80042.pattern3,overlay,80041,600,24,-19
+	animation80042.pattern4,overlay,80041,500,24,-18
+	animation80042.pattern5,overlay,80041,400,24,-17
+	animation80042.pattern6,overlay,80041,400,24,-15
+	animation80042.pattern7,overlay,80041,400,24,-13
+	animation80042.pattern8,overlay,80041,500,24,-12
+	animation80042.pattern9,overlay,80041,600,24,-11
+	animation80042.pattern10,overlay,80041,500,24,-12
+	animation80042.pattern11,overlay,80041,400,24,-13
+	animation80042.pattern12,overlay,80041,400,24,-15
+	animation80042.option,background
+	
+	//gray bat wings
+	animation80043.interval,bind+always
+	animation80043.pattern0,overlay,80043,0,0,0
+	animation80043.pattern1,overlay,80043,400,0,-2
+	animation80043.pattern2,overlay,80043,500,0,-3
+	animation80043.pattern3,overlay,80043,600,0,-4
+	animation80043.pattern4,overlay,80043,500,0,-3
+	animation80043.pattern5,overlay,80043,400,0,-2
+	animation80043.pattern6,overlay,80043,400,0,0
+	animation80043.pattern7,overlay,80043,400,0,2
+	animation80043.pattern8,overlay,80043,500,0,3
+	animation80043.pattern9,overlay,80043,600,0,4
+	animation80043.pattern10,overlay,80043,500,0,3
+	animation80043.pattern11,overlay,80043,400,0,2
+	animation80043.pattern12,overlay,80043,400,0,0
+	
+	animation80044.interval,bind+always
+	animation80044.pattern0,overlay,80043,0,24,-15
+	animation80044.pattern1,overlay,80043,400,24,-17
+	animation80044.pattern2,overlay,80043,500,24,-18
+	animation80044.pattern3,overlay,80043,600,24,-19
+	animation80044.pattern4,overlay,80043,500,24,-18
+	animation80044.pattern5,overlay,80043,400,24,-17
+	animation80044.pattern6,overlay,80043,400,24,-15
+	animation80044.pattern7,overlay,80043,400,24,-13
+	animation80044.pattern8,overlay,80043,500,24,-12
+	animation80044.pattern9,overlay,80043,600,24,-11
+	animation80044.pattern10,overlay,80043,500,24,-12
+	animation80044.pattern11,overlay,80043,400,24,-13
+	animation80044.pattern12,overlay,80043,400,24,-15
+	animation80044.option,background
 
 	//red wheel
 	animation80045.interval,bind
