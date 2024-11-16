@@ -49,6 +49,8 @@ OnFirstBoot : all
 	
 	SnailTrainingTimer = (-1,-1) //start time, duration
 	
+	Racing = 0
+	
 	
 	
 	"\1\s[-1]\0\s[0]"
@@ -61,6 +63,7 @@ OnInitialize
 	if reference0 != "reload"
 	{
 		LastTalk = ""
+		Racing = 0 //may need to move
 	}
 	
 	if !ISVAR("SpongePurchased.Basic"); SpongePurchased.Basic = 0
@@ -140,6 +143,8 @@ OnBoot
 	"\0\s[0]"
 	--
 	LegalityCheck
+	--
+	OnCorrectMoonwalk
 	--
 	"\1\b[20]Welcome back to \f[italic,1]Speed of Sound\f[italic,default] radio, your #1 source of Snail Racing news!"
 }

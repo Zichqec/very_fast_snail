@@ -339,3 +339,8 @@ sakura.bindgroup85050.name,Overlays,Smoke
 sakura.bindgroup85490.name,Overlays,Soot Light
 sakura.bindgroup85491.name,Overlays,Soot Medium
 sakura.bindgroup85492.name,Overlays,Soot Heavy
+
+
+sakura.bindoption9999998.group,Special Effects,multiple
+sakura.bindgroup9999998.name,Special Effects,Vibrating
+sakura.bindgroup9999999.name,Special Effects,Moonwalk

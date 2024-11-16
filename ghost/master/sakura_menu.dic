@@ -1,9 +1,8 @@
-//Because there is an all modifier here, you don't need to write -- between menu options
 OnSakuraMenu : all
 {
 	"\0\s[0]\b2\![set,autoscroll,disable]\_q"
 	CleanlinessCheck
-	"\![set,alpha,100]\![set,scale,100]%(spongeoff)"
+	"\![set,alpha,100]\![embed,OnCorrectMoonwalk]%(spongeoff)"
 	"%(bigheader('INTERACT WITH YOUR SNAIL!'))"
 	
 	"\![*]\q[Talk to me,OnAiTalk]"
@@ -115,6 +114,7 @@ EquipMenu.ShopControls : all
 	"\C\![lock,balloonrepaint]\c\![set,autoscroll,disable]\f[anchorvisitedfontcolor,default.anchor]\0\b[2]\t\*\![no-autopause]\_q"
 	"%(bigheader('EQUIP YOUR SNAIL!'))[half]" //the half is on purpose do not touch
 	
+	
 	"Current funds: %(L)%(Lettuce)\n\n"
 	"Speed: \f[bold,1]%(_speed)\f[bold,default]"
 	if _speeddiff != 0
@@ -191,6 +191,9 @@ EquipMenu.ShopControls : all
 	"\n\n"
 	"\![*]\__q[OnEquipMenu.Revert]Cancel\__q"
 	
+	//surely there's a better place...
+	"\![set,scaling,%(Moonwalk)100,100]"
+	
 	"\![unlock,balloonrepaint]"
 }
 
@@ -232,9 +235,15 @@ OnEquipMenu.Save : all
 
 OnEquipMenu.Revert : all
 {
-	"\0"
+	"\C\0"
 	RefreshDressups
-	OnSakuraMenu
+	"\_q \![embed,OnCorrectMoonwalk]"
+	"\![raise,OnSakuraMenu]"
+}
+
+OnCorrectMoonwalk
+{
+	"\![set,scaling,%(Moonwalk)100,100]"
 }
 
 RefreshDressups : all

@@ -81,12 +81,13 @@ OnGetSnailPos : all
 	SnailPos = (reference0[0],reference0[1],0)
 	TempWalkBorder = WalkBorder
 	_scaling = 100
-	"\p[3]\![set,alpha,0]\![set,scaling,%(_scaling)]\s[0]\![move,--x=0,--y=0,--base=0]\![set,alignmenttodesktop,bottom]\![get,property,OnGetTaskbarPos,currentghost.scope(3).rect]"
+	"\p[3]\![set,alpha,0]\![set,scaling,%(Moonwalk)%(_scaling),%(_scaling)]\s[0]\![move,--x=0,--y=0,--base=0]\![set,alignmenttodesktop,bottom]\![get,property,OnGetTaskbarPos,currentghost.scope(3).rect]"
 }
 
 OnGetTaskbarPos : all
 {
 	SnailPos[2] = reference0[1]
+	Racing = 1
 	OnRace.Go
 }
 
@@ -94,7 +95,7 @@ OnRace.Go : all
 {
 	_stats = CurrentStats
 	
-	_scaling = 20
+	_scaling = RaceScaling
 	if TempWalkBorder == ""
 	{
 		WalkBorder = (0,DisplayWidth)
@@ -126,15 +127,15 @@ OnRace.Go : all
 	//TODO check if the snail's scaling is going to be 100 and if so skip these...
 	for _i = 100; _i >= _scaling; _i--
 	{
-		"\![set,scaling,%(_i)]\_w[20]"
+		"\![set,scaling,%(Moonwalk)%(_i),%(_i)]\_w[20]"
 	}
-	"\![set,scaling,%(_scaling)]"
+	"\![set,scaling,%(Moonwalk)%(_scaling),%(_scaling)]"
 	
 	if SnailPos[0] != TempWalkBorder[0]; "\![move,--x=%(TempWalkBorder[0]),--time=1500,--base=primaryscreen]"
 	
 	"\_w[500]"
-	"\p[2]\![set,alpha,0]\s[2]\![set,scaling,%(_scaling)]\![move,--x-0,--y=0,--base=0,--option=ignore-sticky-window]"
-	"\p[1]\![set,alpha,0]\s[2]\![set,scaling,%(_scaling)]\![move,--x-0,--y=0,--base=0,--option=ignore-sticky-window]"
+	"\p[2]\![set,alpha,0]\s[2]\![set,scaling,%(Moonwalk)%(_scaling),%(_scaling)]\![move,--x-0,--y=0,--base=0,--option=ignore-sticky-window]"
+	"\p[1]\![set,alpha,0]\s[2]\![set,scaling,%(Moonwalk)%(_scaling),%(_scaling)]\![move,--x-0,--y=0,--base=0,--option=ignore-sticky-window]"
 	
 	"\p[3]\![set,alpha,0]\s[2]\![move,--x=0,--base=0]"
 	"\b[20]On your marks...\n\n Get set...\n\n \f[height,+10]\_qGO!!!\_q"
@@ -154,8 +155,8 @@ OnRace.Move : all
 	
 	//this feels clunky, maybe i could set up a couple if checks to make it not so weird...
 	_finishpos = ""
-	_finishpos += "\p[2]\![set,alpha,0]\![set,scaling,%(scaling)]\![move,--x-0,--y=0,--base=0,--option=ignore-sticky-window]"
-	_finishpos += "\p[1]\![set,alpha,0]\![set,scaling,%(scaling)]\![move,--x-0,--y=0,--base=0,--option=ignore-sticky-window]"
+	_finishpos += "\p[2]\![set,alpha,0]\![set,scaling,%(Moonwalk)%(_scaling),%(_scaling)]\![move,--x-0,--y=0,--base=0,--option=ignore-sticky-window]"
+	_finishpos += "\p[1]\![set,alpha,0]\![set,scaling,%(Moonwalk)%(_scaling),%(_scaling)]\![move,--x-0,--y=0,--base=0,--option=ignore-sticky-window]"
 	_finishpos += "\p[3]\b[-1]\0"
 	
 	_fadeout = ""
@@ -173,7 +174,7 @@ OnRace.Move : all
 		if Cleanliness <= -10; Cleanliness = -10
 		
 		_finishpos
-		"\0\![set,scaling,%(_scaling),-%(_scaling)]\s[4]" //TODO sooty overlay stuff, with layers that build up
+		"\0\![set,scaling,%(Moonwalk)%(_scaling),-%(_scaling)]\s[4]" //TODO sooty overlay stuff, with layers that build up
 		CleanlinessCheck
 		"\f[height,+10]\f[italic,1]%(boom)!!!\f[italic,default]\f[height,default]"
 		"\x"
@@ -202,6 +203,7 @@ OnRace.Move : all
 
 OnRace.Complete : all
 {
+	Racing = 0
 	_racetime = reference1
 	_stats = CurrentStats
 	_coolness = _stats[1]
@@ -210,9 +212,9 @@ OnRace.Complete : all
 	_score = ScoreCalc(reference1 / 1000,_coolness,_exploded)
 	
 	TempLeaderboard ,= "%(_score),%(CurrentSnail.Name),%(_racetime),%(_coolness),%(_exploded),%(year)-%(leadingmonth)-%(leadingday):%(reference2)"
-	"\![set,alpha,0]\![set,alignmenttodesktop,free]\![set,scaling,100]\![move,--x=%(SnailPos[0]),--y=%(SnailPos[1]),--base=primaryscreen]"
-	"\p[2]\![set,alpha,0]\![set,scaling,100]\![move,--x-0,--y=0,--base=0,--option=ignore-sticky-window]"
-	"\p[1]\![set,alpha,0]\![set,scaling,100]\![move,--x-0,--y=0,--base=0,--option=ignore-sticky-window]"
+	"\![set,alpha,0]\![set,alignmenttodesktop,free]\![set,scaling,%(Moonwalk)100,100]\![move,--x=%(SnailPos[0]),--y=%(SnailPos[1]),--base=primaryscreen]"
+	"\p[2]\![set,alpha,0]\![set,scaling,%(Moonwalk)100,100]\![move,--x-0,--y=0,--base=0,--option=ignore-sticky-window]"
+	"\p[1]\![set,alpha,0]\![set,scaling,%(Moonwalk)100,100]\![move,--x-0,--y=0,--base=0,--option=ignore-sticky-window]"
 	"\0\s[1]"
 	
 	if Cleanliness > 0

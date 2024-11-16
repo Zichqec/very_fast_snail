@@ -186,4 +186,7 @@ ItemDetails : array
 	"Add-ons,Red Bat Wings,1,6666,6,8,0"
 	"Add-ons,Red Tires,1,500,4,1,-2"
 	"Add-ons,Box Fan,1,150,2,0,0"
+	
+	"Special Effects,Vibrating,1,100,5,2,7"
+	"Special Effects,Moonwalk,1,100,-5,8,10"
 }

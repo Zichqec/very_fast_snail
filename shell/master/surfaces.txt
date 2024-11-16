@@ -1231,3 +1231,21 @@ surface10
 {
 	//absolutely nothing
 }
+
+
+surface.append0-9
+{
+	animation9999998.interval,bind+always
+	animation9999998.pattern0,move,0,0,5,5
+	animation9999998.pattern1,move,0,25,3,0
+	animation9999998.pattern2,move,0,25,-1,-3
+	animation9999998.pattern3,move,0,25,4,2
+	animation9999998.pattern4,move,0,25,-3,5
+	animation9999998.pattern5,move,0,25,2,-1
+	animation9999998.pattern6,move,0,25,-5,-5
+	animation9999998.pattern7,move,0,25,-1,0
+	animation9999998.pattern8,move,0,25,0,0
+	
+	animation9999999.interval,bind
+	animation9999999.pattern0,overlay,10,0,0,0
+}

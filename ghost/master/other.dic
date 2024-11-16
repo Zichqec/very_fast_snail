@@ -58,6 +58,15 @@ OnSurfaceRestore
 	--
 	"\0\s[0]"
 	--
+	if Racing
+	{
+		"\![set,scaling,%(Moonwalk)%(RaceScaling),%(RaceScaling)]"
+	}
+	else
+	{
+		"\![set,scaling,%(Moonwalk)100,100]"
+	}
+	--
 	CleanlinessCheck
 	--
 	LegalityCheck
@@ -430,6 +439,23 @@ LegalityCheck : all
 	}
 }
 
+Moonwalk
+{
+	foreach Dressups.Current; _dressup
+	{
+		if _dressup[1] == "Moonwalk"
+		{
+			"-"
+			return
+		}
+	}
+}
+
+RaceScaling
+{
+	20
+}
+
 L
 {
 	"\f[strike,1]L\f[strike,default]"
@@ -589,17 +615,17 @@ boing : all
 {
 	for _i = 100; _i >= 70; _i--
 	{
-		"\![set,scaling,100,%(_i)]\_w[3]"
+		"\![set,scaling,%(Moonwalk)100,%(_i)]\_w[3]"
 	}
 	for _i = 70; _i < 110; _i++
 	{
-		"\![set,scaling,100,%(_i)]\_w[3]"
+		"\![set,scaling,%(Moonwalk)100,%(_i)]\_w[3]"
 	}
 	for _i = 110; _i >= 100; _i--
 	{
-		"\![set,scaling,100,%(_i)]\_w[3]"
+		"\![set,scaling,%(Moonwalk)100,%(_i)]\_w[3]"
 	}
-	"\![set,scaling,100,100]"
+	"\![set,scaling,%(Moonwalk)100,100]"
 }
 
 bigheader : all
