@@ -1,0 +1,109 @@
+Talk.User : nonoverlap_pool
+{
+	"You can do it snail!" //TODO what balloon does this use.......
+}
+
+
+
+Talk.Snailsonality.Sad : nonoverlap_pool
+{
+	"\1\b[10]sad :("
+}
+
+Talk.Snailsonality.Rebel : nonoverlap_pool
+{
+	"\1\b[10]chill"
+}
+
+Talk.Snailsonality.Angry : nonoverlap_pool
+{
+	"\1\b[10]ALL CAPS"
+}
+
+Talk.Snailsonality.Proper : nonoverlap_pool
+{
+	"\1\b[10]alliteration achieved...? maybe not"
+}
+
+Talk.Snailsonality.Sour : nonoverlap_pool
+{
+	"\1\b[10]harrumph"
+}
+
+Talk.Snailsonality.Tired : nonoverlap_pool
+{
+	"\1\b[10]lets just race"
+}
+
+Talk.Snailsonality.Ratings : nonoverlap_pool
+{
+	"\1\b[10]10/10"
+}
+
+Talk.Snailsonality.Silent : nonoverlap_pool
+{
+	"\1\b[10]<drawing>"
+}
+
+Talk.Snailsonality.Gymbro : nonoverlap_pool
+{
+	"\1\b[10]do you even shell press bro"
+}
+
+Talk.Snailsonality.Stalker : nonoverlap_pool
+{
+	"\1\b[10]i got this out of your garbage can"
+}
+
+Talk.Snailsonality.Slacker : nonoverlap_pool
+{
+	"\1\b[10]i'm gonna nap"
+}
+
+Talk.Snailsonality.Jealous : nonoverlap_pool
+{
+	"\1\b[10]i wish i was whatever i'm not right now"
+}
+
+Talk.Snailsonality.Liar : nonoverlap_pool
+{
+	"\1\b[10]i only tell the truth"
+}
+
+Talk.Snailsonality.Facts : nonoverlap_pool
+{
+	"\1\b[10]fact: snails are cool"
+}
+
+
+
+Talk.AlliterativeSnailsonality.Basic : nonoverlap_pool
+{
+	"\1\b[10]Slow snails slide short slopes smoothly."
+	"\1\b[10]Safe snail silo, summer storm survived."
+	"\1\b[10]Broken brakes bring battered bodies."
+	"\1\b[10]Fast fast fast, fleet-footed flurries for future food."
+	"\1\b[10]Green, go. Greatness, glory, glitter. Get going!"
+	"\1\b[10]Yield your yard. Yummy yucca yearned."
+	"\1\b[10]Alliteration absent? Aghast. Angry. Abhorrent."
+	"\1\b[10]Beep beep."
+}
+
+Talk.AlliterativeSnailsonality.Character_Break : nonoverlap_pool
+{
+	parallel Talk.AlliterativeSnailsonality.Basic
+	
+	"\1\b[10]Alliteration is hard actually"
+}
+
+Talk.AlliterativeSnailsonality.Slug : nonoverlap_pool
+{
+	parallel Talk.AlliterativeSnailsonality.Basic
+	
+	"\1\b[10]don't tell them i'm a slug lol"
+}
+
+Talk.AlliterativeSnailsonality.Bad : nonoverlap_pool
+{
+	"\1\b[10]Alliteration eAsy, Anyone cAn Accomplish"
+}

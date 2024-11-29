@@ -16,6 +16,9 @@ dic, name_generator.dic
 dic, other.dic
 dic, race.dic
 dic, sakura_menu.dic
+dic, talk_poetry.dic
+dic, talk_radio.dic
+dic, talk_snail.dic
 dic, word.dic
 
 msglang,english

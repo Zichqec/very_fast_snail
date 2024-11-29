@@ -1,21 +1,134 @@
 OnAiTalk
 {
-	if CHAIN.IDName != ""
+	/*
+	
+	Alright bois here's what we're doing
+	
+	We need to create an array of 10 items, and fill it with the mix of dialogue we want
+	Items are picked randomly out of it and then deleted, much like boss and SSP Angel do, to ensure a nice mix
+	
+	When a snail talking dialogue is picked, pick the pool based on current snailsonality
+	
+	When a snail poetry dialogue is picked, pick the pool based on current poetry type
+	
+	When a talking to snail dialogue is picked, it's just the one pool
+	
+	When a radio dialogue is picked, pick the dialogue based on the current station
+		Should radio ads be their own thing? Maybe... we'll see if we get there
+	
+	I think that chains should probably also be beholden to this? although if it enters a second chain, that's a problem isn't it... we'll have to discuss.
+	
+	Now, there is the possible problem of IF THE POOLS GET RENAMED the current snailsonality or poetry type or whatever won't pull from the right pool
+	um, that sounds like future me's problem lol. sorry future me
+	
+	The other thing we need to worry about is radio scanning, but tbqh, I think that can just play an extra dialogue at you when it happens...? or maybe like, the next dialogue gets queued up as a radio station change dialogue or something. yeah, cuz like, i can randomize the order here when we generate it and then just do it in order, so i could def make that happen no problem. A dialogue topic tape, if you will
+	
+	*/
+	
+	_prompt = _argv[0]
+	
+	LastTalk = ""
+	if CHAIN.IDName != "" && _prompt == "" //TODO make sure we're not gonna have chains interrupting each other... but maybe it's fine if you prompted?
 	{
 		LastTalk = ChainTalk
 	}
+	elseif RadioScan > 0 && GETSECCOUNT >= RadioScanTime + RadioScan && RadioStation != "Off" && (_prompt == "" || _prompt == "Radio")
+	{
+		RadioStationChange
+		
+		//TODO this'll need dialogues if we wanna keep it. I imagine just like... you know... radio stings
+		LastTalk = "Radio transition!\n\nNew station: %(RadioStation)"
+	}
 	else
 	{
-		LastTalk = RandomTalk
+		if ARRAYSIZE(DialogueTape) == 0; GenerateDialogueTape
+		
+		_pick = ""
+		if _prompt != ""
+		{
+			_pick = _prompt
+		}
+		else
+		{
+			_pick = DialogueTape[0]
+			DialogueTape[0] = IARRAY
+		}
+		
+		if _pick == "Radio"
+		{
+			if RadioStation == "Off"
+			{
+				LastTalk = RadioStationOff
+			}
+			else
+			{
+				_station = REPLACE(RadioStation," ","_")
+				LastTalk = EVAL("RadioStation.%(_station)")
+			}
+		}
+		elseif _pick == "Ad"
+		{
+			if RadioStation == "Off"; LastTalk = RadioStationOff
+			elseif RadioStation == "Pirate_Radio"; LastTalk = Ads.Pirate_Radio
+			else; LastTalk = Ads.General
+		}
+		elseif _pick == "Snail"
+		{
+			_alliteration = "Snailsonality"
+			if IsAlliterative(CurrentSnail.Name); _alliteration = "AlliterativeSnailsonality"
+			_personality = REPLACE(CurrentSnail.PersonalityType," ","_")
+			LastTalk = EVAL("Talk.%(_alliteration).%(_personality)")
+		}
+		elseif _pick == "Poem"
+		{
+			_poetry = REPLACE(CurrentSnail.PoetryType," ","_")
+			LastTalk = EVAL("Poetry.%(_poetry)")
+		}
+		
+		//User / fallback - this was gonna be an else, but I think I want this here in case the above functions fail because the variables are set wrong... this way you at least get SOMETHING instead of silence
+		if LastTalk == ""; LastTalk = Talk.User
 	}
 	LastTalk
+}
+
+GenerateDialogueTape
+{
+	DialogueTape = IARRAY
+	
+	//Adjust ratios as desired... mind that 10 dialogues is 30 minutes at a 3 min interval, and there will also be radio change dialogues thrown in depending on if the scan option is on and how often the user has it set to change. note to self - don't let that be less than like 15 mins or it'll be all the dialogue lol. maybe like 1 hour as the lowest amount is good... idk, maybe 30 mins, 1 hour, 2 hours, 3 hours...
+	//Also, this will bend to chains, currently... mind that
+	//TODO maybe add radio ads as their own thing in the dialogue tape
+	DialogueTape ,= "Radio"
+	DialogueTape ,= "Radio"
+	DialogueTape ,= "Radio"
+	DialogueTape ,= "Ad"
+	DialogueTape ,= "User"
+	DialogueTape ,= "User"
+	DialogueTape ,= "Snail"
+	DialogueTape ,= "Snail"
+	DialogueTape ,= "Poem"
+	DialogueTape ,= "Poem"
+	
+	DialogueTape = ArrayShuffle(DialogueTape)
+}
+
+//I think I have a premade function for this......... somewhere. no internet, so!
+ArrayShuffle
+{
+	_array = _argv
+	_output = IARRAY
+	while ARRAYSIZE(_array) > 0
+	{
+		_output ,= ANY(_array)
+		_array[LSO] = IARRAY
+	}
+	_output
 }
 
 RandomTalk : nonoverlap_pool
 {
 	parallel RadioTalk
 	parallel SnailTalk
-	"\0\s[0]snail time"
 }
 
 RadioTalk : array
@@ -38,22 +151,18 @@ chain.pellet_wars
 	"\1\b[22]Are you looking for excitement in your life? A taste of something new? Tired of eating the same old cylinders day after day? \n\n\f[italic,1]Chow Cubes\f[italic,default] are for you! Shareable, stackable, and superior to traditional pellets in every way. \f[italic,1]Chow Cubes!\f[italic,default] Buy them now!"
 	"\1\b[22]New research reveals that cylindrical food poses significantly lower odds of suffocation compared to trendy new %(br)'cubic' foods. \n\nThink about it: the average throat is a tube, and tubes are basically cylinders. It's a natural fit! Get your edible cylinders now! \f[italic,1]Perry's Perky Pellets!\f[italic,default]"
 	"\1\b[22]This just in: a series of horrific tripping accidents are sweeping the nation. ""All it takes is a bag knocked over, and suddenly the floor is a minefield! Those cylindrical pellets are a deathtrap!"" says one very real victim. \n\nDon't take the risk. \f[italic,1]Chow Cubes!\f[italic,default] Available now!"
-	"\1\b[22]What's the truth about pellets? Are some really better than others? We took to the streets to find out. \n\n""They're all terrible for snails,"" said Dr. Shellcracker, certified sports medicine physician. ""Snails need a variety of nutrient dense vegetables, as well as a stable source of calcium, such as eggshells. Pellets simply don't cut it, no matter the brand.""\e:chain=end"
+	"\1\b[22]What's the truth about pellets? Are some really better than others? We took to the streets to find out. \n\n""They're all terrible for snails,"" said Dr.\![dummy] Shellcracker, certified sports medicine physician. ""Snails need a variety of nutrient dense vegetables, as well as a stable source of calcium, such as eggshells. Pellets simply don't cut it, no matter the brand.""\e:chain=end"
 }}CHAIN
 
-SnailTalk : array_pool
+//Make heredocs into something useful, apply linebreaks. Note that this expects two linebreaks between each poem. If we want something other than that it'll have to be handled manually
+ProcessPoems
 {
-	"\1\b[10]%(snail)Slow snails slide short slopes smoothly."
-	"\1\b[10]%(snail)Safe snail silo, summer storm survived."
-	"\1\b[10]%(snail)Broken brakes bring battered bodies."
-	"\1\b[10]%(snail)Fast fast fast, fleet-footed flurries for future food."
-	"\1\b[10]%(snail)Green, go. Greatness, glory, glitter. Get going!"
-	"\1\b[10]%(snail)Yield your yard. Yummy yucca yearned."
-	"\1\b[10]%(snail)Alliteration absent. Aghast. Angry. Abhorrent."
-	"\1\b[10]%(snail)Beep beep."
+	_poems = SPLIT(_argv[0],"%(C_CRLF)%(C_CRLF)%(C_CRLF)")
 	
-	if !IsAlliterative(CurrentSnail.Name)
+	_output = IARRAY
+	foreach _poems; _poem
 	{
-		
+		_output ,= REPLACE(_poem,C_CRLF,"\n ")
 	}
+	_output
 }

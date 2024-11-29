@@ -16,15 +16,15 @@ OnMouseMove
 	{
 		if "__SNAIL_WASH_MENU__" _in_ SHIORI3FW.LastTalk
 		{
-			if (SpongePurchased.Better && Cleanliness < 10) || (SpongePurchased.Basic && Cleanliness < 5)
-			{
-				stroke++
+			stroke++
 				
-				if stroke % 30 == 0
+			if stroke % 30 == 0
+			{
+				if (SpongePurchased.Better && CurrentSnail.Cleanliness < 10) || (SpongePurchased.Basic && CurrentSnail.Cleanliness < 5)
 				{
-					Cleanliness++
-					OnSnailWashMenu
+					CurrentSnail.Cleanliness++
 				}
+				OnSnailWashMenu("stroked") //Want this to happen regardless of if the cleanliness changes, because I want the snail to start wiggling when you wash it...
 			}
 		}
 	}

@@ -9,6 +9,15 @@ OnTranslate
 		_talk = OnTranslateInternal.AutoPause(_talk)
 	}
 	
+	_talk = REPLACE(_talk,"\1\b[1","\1%(snail)\b[1") //hmm... i hope this is enough distinction
+	if SHIORI3FW.BalloonName != "Very Fast Speedway" //TODO TEST THIS i dont have the balloon on me right now
+	{
+		_talk = REPLACE(_talk,"\1\b[10]","\1\b[0]")
+		_talk = REPLACE(_talk,"\1\b[20]","\1\b[0]")
+		_talk = REPLACE(_talk,"\1\b[12]","\1\b[2]")
+		_talk = REPLACE(_talk,"\1\b[22]","\1\b[2]")
+	}
+	
 	TOSTR(_talk)
 }
 
@@ -25,6 +34,7 @@ OnTranslateInternal.AutoPause
 		*/
 		
 		_talk = REPLACE(_talk,"\n\n ","\n\n\w8\w8") //linebreak
+		_talk = REPLACE(_talk,"\n ","\n\w8\w8") //linebreak
 		_talk = REPLACE(_talk,", ",",\w4 ") //Comma
 		_talk = REPLACE(_talk,". ",".\w8\w8 ") //Period
 		_talk = REPLACE(_talk,"? ","?\w8\w8 ") //Question mark
@@ -56,7 +66,12 @@ OnSurfaceRestore
 	--
 	"\p[3]\![set,alpha,0]\s[0]"
 	--
-	"\0\s[0]"
+	"\0"
+	--
+	//TODO This may eventually get more complicated... something something, snail happiness determined by radio station, over-encumberedness, cleanliness... hmmm.
+	if RadioStation == "Off"; "\s[5]" //TODO i would love for this to be a sad look lol
+	elseif RadioStation == CurrentSnail.RadioPreference; "\s[3]"
+	else; "\s[0]"
 	--
 	if Racing
 	{
@@ -133,7 +148,113 @@ CreateSnail
 	CurrentSnail.DateSponsored = "%(year)-%(leadingmonth)-%(leadingday):%(GETSECCOUNT)"
 	CurrentSnail.Notes = IARRAY
 	CurrentSnail.Training = (0,0,0,0,0,0,0,0,0,0)
+	//personality type, poetry type, favorite radio station, alternate hobby
+	_snailsonality = GenerateSnailsonality(CurrentSnail.Name,CurrentSnail.ID)
+	CurrentSnail.PersonalityType = _snailsonality[0]
+	CurrentSnail.PoetryType = _snailsonality[1]
+	CurrentSnail.RadioPreference = _snailsonality[2]
+	CurrentSnail.AltHobby = _snailsonality[3]
+	//Xueewnr - current but my hands were on the wrong keys cuz laptop...
+	CurrentSnail.Cleanliness = 0
 	SaveSnail(_argv[0])
+}
+
+//Generates an array of personality traits based on the seed and name of a given snail
+//arg 0: snail name (for alliteration check)
+//arg 1: snail ID (seed)
+//Outputs an array with the following values: personality type, poetry type, favorite radio station, alternate hobby
+//More may be added in the future
+GenerateSnailsonality
+{
+	_name = _argv[0]
+	_id = _argv[1]
+	if _argv[0] =="" && _argv[1] == ""
+	{
+		_id = ghostver + ":" + GenerateID
+		_name = SnailNameGenerator(_id)
+	}
+	_id = _id[1,':']
+	
+	_firstnum = TOINT(SUBSTR(_id,0,1))
+	_1st_8 = TOINT(SUBSTR(_id,0,8))
+	_2nd_8 = TOINT(SUBSTR(_id,2,8))
+	_3rd_8 = TOINT(SUBSTR(_id,4,8))
+	_4th_8 = TOINT(SUBSTR(_id,6,8))
+	_5th_8 = TOINT(SUBSTR(_id,8,8))
+	_1st_10 = TOINT(SUBSTR(_id,0,10))
+	_2nd_10 = TOINT(SUBSTR(_id,2,10))
+	_3rd_10 = TOINT(SUBSTR(_id,4,10))
+	_4th_10 = TOINT(SUBSTR(_id,6,10))
+	
+	_isalliterative = IsAlliterative(_name)
+	_personalitytype = ""
+	_poetrytype = ""
+	_radiostation = ""
+	_althobby = ""
+	
+	_personalitylist = IARRAY
+	_poetrylist = GETFUNCLIST("Poetry.")
+	_radiolist = GETFUNCLIST("RadioStation.")
+	_althobbylist = AltHobby
+	
+	if _isalliterative
+	{
+		if SumTo10(_1st_8) >= 7 //3/10...
+		{
+			_personalitylist = GETFUNCLIST("Talk.AlliterativeSnailsonality.")
+			_index = ASEARCH("Talk.AlliterativeSnailsonality.Basic",_personalitylist)
+			_personalitylist[_index] = IARRAY
+		}
+		else
+		{
+			_personalitylist = "Talk.AlliterativeSnailsonality.Basic"
+		}
+		_poetrylist = "Poetry.Snoem" //TODO should... slugs all like pirate radio? so it's *usually* a tell but not always?
+	}
+	else
+	{
+		_personalitylist = GETFUNCLIST("Talk.Snailsonality.")
+		
+		_index = ASEARCH("Poetry.Snoem",_poetrylist)
+		_poetrylist[_index] = IARRAY
+		_index = ASEARCH("Poetry.Bad_Snoem",_poetrylist)
+		_poetrylist[_index] = IARRAY
+		
+	}
+	
+	_personalitytype = _personalitylist[_1st_10 % ARRAYSIZE(_personalitylist)]
+	_personalitytype = _personalitytype[2,'.']
+	_personalitytype = REPLACE(_personalitytype,"_"," ")
+	
+	_poetrytype = _poetrylist[_2nd_10 % ARRAYSIZE(_poetrylist)]
+	_poetrytype = _poetrytype[1,'.']
+	_poetrytype = REPLACE(_poetrytype,"_"," ")
+	if _personalitytype == "Bad"; _poetrytype = "Bad Snoem"
+	//elseif _personalitytype == "Silent"; _poetrytype = ""
+	
+	_radiostation = _radiolist[_3rd_10 % ARRAYSIZE(_radiolist)]
+	_radiostation = _radiostation[1,'.']
+	_radiostation = REPLACE(_radiostation,"_"," ")
+	
+	_althobby = _althobbylist[_4th_10 % ARRAYSIZE(_althobbylist)]
+	
+	//"\_qName: %(_name)\nIs alliterative?: %(_isalliterative)\nID: %(_id)\nPersonality type: %(_personalitytype)\nPoetry type: %(_poetrytype)\nRadio station: %(_radiostation)\nAlt hobby: %(_althobby)\x"
+	(_personalitytype,_poetrytype,_radiostation,_althobby)
+}
+
+//TODO i might want to use this over in the name generation to solve the TODO i had over there about the alliteration/not alliteration being obvious
+//Sums a series of digits and outputs the result modulo 10. The purpose being to get a random looking number from a seed, and use it in a X/10 "random" calculation... same number every time but it isn't obvious to the user which number does what
+SumTo10
+{
+	_input = TOSTR(_argv[0])
+	_output = 0
+	
+	for _i = 0; _i < STRLEN(_input); _i++
+	{
+		_output += TOINT(SUBSTR(_input,_i,1))
+	}
+	
+	_output % 10
 }
 
 GetSnailIndex
@@ -176,10 +297,16 @@ SaveSnail
 	{
 		CurrentSnail.Training = (0,0,0,0,0,0,0,0,0,0)
 	}
-	else
-	{
-		SavedSnails.Training = TOSTR(CurrentSnail.Training)
-	}
+	
+	SavedSnails.Training = TOSTR(CurrentSnail.Training)
+	
+	SavedSnails.PersonalityType[_index] = CurrentSnail.PersonalityType
+	SavedSnails.PoetryType[_index] = CurrentSnail.PoetryType
+	SavedSnails.RadioPreference[_index] = CurrentSnail.RadioPreference
+	SavedSnails.AltHobby[_index] = CurrentSnail.AltHobby
+	
+	SavedSnails.Cleanliness[_index] = CurrentSnail.Cleanliness
+	SavedSnails.LastOut[_index] = GETSECCOUNT
 	
 }
 
@@ -215,6 +342,25 @@ LoadSnail
 			CurrentSnail.Training[_i] = TOINT(CurrentSnail.Training[_i])
 		}
 	}
+	
+	_snailsonality = GenerateSnailsonality(CurrentSnail.Name,CurrentSnail.ID)
+	
+	CurrentSnail.PersonalityType = SavedSnails.PersonalityType[_index]
+	if CurrentSnail.PersonalityType == ""; CurrentSnail.PersonalityType = _snailsonality[0]
+	
+	CurrentSnail.PoetryType = SavedSnails.PoetryType[_index]
+	if CurrentSnail.PoetryType == ""; CurrentSnail.PoetryType = _snailsonality[1]
+	
+	CurrentSnail.RadioPreference = SavedSnails.RadioPreference[_index]
+	if CurrentSnail.RadioPreference == ""; CurrentSnail.RadioPreference = _snailsonality[2]
+	
+	CurrentSnail.AltHobby = SavedSnails.AltHobby[_index]
+	if CurrentSnail.AltHobby == ""; CurrentSnail.AltHobby = _snailsonality[3]
+	
+	CurrentSnail.Cleanliness = SavedSnails.Cleanliness[_index]
+	if CurrentSnail.Cleanliness == ""; CurrentSnail.Cleanliness = 0
+	if GETSECCOUNT > SavedSnails.LastOut[_index] + 600; CurrentSnail.Cleanliness = 0 //10 minute reset
+	CurrentSnail.LastOut = GETSECCOUNT
 }
 
 
@@ -275,26 +421,26 @@ CurrentStats
 		}
 	}
 	
-	_cleanliness = ABS(Cleanliness)
-	if Cleanliness >= 10
+	_cleanliness = ABS(CurrentSnail.Cleanliness)
+	if CurrentSnail.Cleanliness >= 10
 	{
 		_speed += 5
 		_coolness += 5
 		_explosiveness -= 5
 	}
-	elseif Cleanliness >= 5
+	elseif CurrentSnail.Cleanliness >= 5
 	{
 		_speed += 2
 		_coolness += 2
 		_explosiveness -= 2
 	}
-	elseif Cleanliness < 0
+	elseif CurrentSnail.Cleanliness < 0
 	{
 		_speed -= _cleanliness
 		_coolness -= _cleanliness
 		_explosiveness += _cleanliness
 	}
-	if Cleanliness == -10
+	if CurrentSnail.Cleanliness == -10
 	{
 		_coolness += 20 //cancelling out the -10 from earlier and adding another 10
 	}
@@ -577,35 +723,35 @@ CleanlinessCheck : all
 	"\![bind,Overlays,Shine,0]"
 	"\![bind,Overlays,Sparkles,0]"
 	
-	if Cleanliness <= -10
+	if CurrentSnail.Cleanliness <= -10
 	{
 		"\![bind,Overlays,Soot Heavy,1]"
 		"\![bind,Overlays,Soot Medium,1]"
 		"\![bind,Overlays,Soot Light,1]"
 	}
-	elseif Cleanliness <= -7
+	elseif CurrentSnail.Cleanliness <= -7
 	{
 		"\![bind,Overlays,Soot Heavy,1]"
 		"\![bind,Overlays,Soot Light,1]"
 	}
-	if Cleanliness <= -5
+	if CurrentSnail.Cleanliness <= -5
 	{
 		"\![bind,Overlays,Soot Heavy,1]"
 	}
-	elseif Cleanliness <= -3
+	elseif CurrentSnail.Cleanliness <= -3
 	{
 		"\![bind,Overlays,Soot Medium,1]"
 	}
-	elseif Cleanliness <= -1
+	elseif CurrentSnail.Cleanliness <= -1
 	{
 		"\![bind,Overlays,Soot Light,1]"
 	}
 	
-	if Cleanliness >= 5
+	if CurrentSnail.Cleanliness >= 5
 	{
 		"\![bind,Overlays,Shine,1]"
 	}
-	if Cleanliness >= 10
+	if CurrentSnail.Cleanliness >= 10
 	{
 		"\![bind,Overlays,Sparkles,1]"
 	}
@@ -660,6 +806,32 @@ TrainingTime
 newline
 {
 	"\n[0]"
+}
+
+RadioStationChange
+{
+	RadioScanTime = GETSECCOUNT
+	
+	_oldstation = RadioStation
+	while RadioStation == _oldstation
+	{
+		//TODO maybe add an option for random or not here later
+		if ARRAYSIZE(StationTape) == 0; StationTape = GETFUNCLIST("RadioStation.")
+		
+		RadioStation = ANY(StationTape)
+		StationTape[LSO] = IARRAY
+		
+		RadioStation = REPLACE(RadioStation,"RadioStation.","")
+	}
+}
+
+On_balloon_tooltip
+{
+	//NOTE: \n CAN BE USED HERE FOR LINEBREAK
+	if reference1 == "OnRacerID" && reference4 == "OnPhotoGallery"
+	{
+		reference3
+	}
 }
 
 //—————————————————————————————— Right click menu links ——————————————————————————————

@@ -14,6 +14,12 @@ OnFirstBoot : all
 	SavedSnails.DateSponsored = IARRAY
 	SavedSnails.Notes = IARRAY
 	SavedSnails.Training = IARRAY //Added in whatever version we call this
+	SavedSnails.PersonalityType = IARRAY
+	SavedSnails.PoetryType = IARRAY
+	SavedSnails.RadioPreference = IARRAY
+	SavedSnails.AltHobby = IARRAY
+	SavedSnails.Cleanliness = IARRAY
+	SavedSnails.LastOut = IARRAY
 	
 	CurrentSnail.ID = ""
 	CurrentSnail.Name = ""
@@ -27,6 +33,12 @@ OnFirstBoot : all
 	CurrentSnail.DateSponsored = ""
 	CurrentSnail.Notes = IARRAY
 	CurrentSnail.Training = (0,0,0,0,0,0,0,0,0,0)
+	CurrentSnail.PersonalityType = ""
+	CurrentSnail.PoetryType = ""
+	CurrentSnail.RadioPreference = ""
+	CurrentSnail.AltHobby = ""
+	CurrentSnail.Cleanliness = 0
+	CurrentSnail.LastOut = GETSECCOUNT
 	
 	HighestAllTimeCoolness = 0
 	
@@ -45,11 +57,14 @@ OnFirstBoot : all
 	
 	SpongePurchased.Basic = 0
 	SpongePurchased.Better = 0
-	Cleanliness = 0
 	
 	SnailTrainingTimer = (-1,-1) //start time, duration
 	
 	Racing = 0
+	
+	RadioStation = "Racing News"
+	RadioScan = 3600 //1hr default scan time
+	RadioScanTime = GETSECCOUNT
 	
 	
 	
@@ -64,11 +79,14 @@ OnInitialize
 	{
 		LastTalk = ""
 		Racing = 0 //may need to move
+		if RadioScan == -1 && RadioStation != "Off"; RadioStationChange //-1 means that it is to change on boot
+		if GETSECCOUNT > CurrentSnail.LastOut + 600; CurrentSnail.Cleanliness = 0 //10 minute reset
+		CurrentSnail.LastOut = GETSECCOUNT //this really only matters in the case of crashes i think...
 	}
 	
 	if !ISVAR("SpongePurchased.Basic"); SpongePurchased.Basic = 0
 	if !ISVAR("SpongePurchased.Better"); SpongePurchased.Better = 0
-	if !ISVAR("Cleanliness"); Cleanliness = 0
+	if !ISVAR("CurrentSnail.Cleanliness"); CurrentSnail.Cleanliness = 0
 	
 	if !ISVAR("SavedSnails.Training")
 	{
@@ -80,6 +98,25 @@ OnInitialize
 	if !ISVAR("CurrentSnail.Training") //To be doubly sure...
 	{
 		CurrentSnail.Training = (0,0,0,0,0,0,0,0,0,0)
+	}
+	
+	//TODO this is gonna get replaced anyways because I want to save them as files for sure now...
+	_snailsonality = GenerateSnailsonality(CurrentSnail.Name,CurrentSnail.ID)
+	if CurrentSnail.PersonalityType == ""; CurrentSnail.PersonalityType = _snailsonality[0]
+	if CurrentSnail.PoetryType == ""; CurrentSnail.PoetryType = _snailsonality[1]
+	if CurrentSnail.RadioPreference == ""; CurrentSnail.RadioPreference = _snailsonality[2]
+	if CurrentSnail.AltHobby == ""; CurrentSnail.AltHobby = _snailsonality[3]
+	
+	if !ISVAR("RadioStation"); RadioStation = "Racing News"
+	if !ISVAR("RadioScan"); RadioScan = 3600
+	if !ISVAR("RadioScanTime"); RadioScanTime = GETSECCOUNT
+}
+
+OnDestroy
+{
+	if reference0 != "reload"
+	{
+		CurrentSnail.LastOut = GETSECCOUNT
 	}
 }
 

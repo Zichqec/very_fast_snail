@@ -1,0 +1,50 @@
+RadioStation.Racing_News : nonoverlap_pool
+{
+	"wow the leaderboards sure are hot!"
+}
+
+RadioStation.Weather : nonoverlap_pool
+{
+	"wow the weather sure is hot!"
+}
+
+RadioStation.Shopping : nonoverlap_pool
+{
+	"wow these deals sure are hot!"
+}
+
+RadioStation.Music : nonoverlap_pool
+{
+	"wow these tunes sure are hot!"
+}
+
+RadioStation.Variety_Show : nonoverlap_pool
+{
+	"wow these poems sure are hot!"
+}
+
+RadioStation.ASMR : nonoverlap_pool
+{
+	"*sizzling*"
+}
+
+RadioStation.Pirate_Radio : nonoverlap_pool
+{
+	"get a life, snails"
+}
+
+Ads.General : nonoverlap_pool
+{
+	"it's an ad!"
+}
+
+Ads.Pirate_Radio : nonoverlap_pool
+{
+	"hi i'm sluggy mcsluggerson and i endorse SlugSoap"
+}
+
+//Named differently cuz I don't want it to get captured by GETFUNCLIST
+RadioStationOff : nonoverlap_pool
+{
+	"(awkward silence)"
+}

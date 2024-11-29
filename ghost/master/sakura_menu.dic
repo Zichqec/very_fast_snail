@@ -5,18 +5,22 @@ OnSakuraMenu : all
 	"\![set,alpha,100]\![embed,OnCorrectMoonwalk]%(spongeoff)"
 	"%(bigheader('INTERACT WITH YOUR SNAIL!'))"
 	
-	"\![*]\q[Talk to me,OnAiTalk]"
-	if LastTalk != ""; "  \![*]\q[Say that again,OnLastTalk]"
+	"\![*]\__q[OnAiTalk.Prompt,Radio]Listen to the radio\__q"
+	"\n"
+	"\![*]\__q[OnAiTalk.Prompt,%(ANY('Snail,Poem,User'))]Talk with your snail\__q" //TODO should this include poems or no...?
+	"\n"
+	if LastTalk != ""; "\![*]\q[Repeat,OnLastTalk]"
+	else; "\n"
 	"\n\n"
 	
-	"\![*]\q[Garage,OnEquipMenu,Body Paint]  \![*]\q[Racer ID,OnRacerID]\n"
-	"\![*]\q[Snail Training,OnSnailTraining]  \![*]\q[Snail Wash,OnSnailWashMenu]"
-	
-	"\n\n"
+	"\![*]\q[Garage,OnEquipMenu,Body Paint]  \![*]\q[Racer ID,OnRacerID,%(CurrentSnail.ID),""%(CurrentSnail.Name)"",OnSakuraMenu]\n"
+	"\![*]\q[Snail Training,OnSnailTraining]  \![*]\q[Snail Wash,OnSnailWashMenu]\n"
+	"\![*]\q[Photo Gallery,OnPhotoGallery]\n"
+	"\n"
 	
 	"\![*]\q[Lettuce Shop,OnLettuceShop]\n\n"
 	
-	"\![*]\q[Change talk rate,OnTalkRateMenu]\n\n"
+	"\![*]\q[Settings,OnSettings]\n\n"
 	
 	if SHIORI3FW.DebugMode
 	{
@@ -28,6 +32,11 @@ OnSakuraMenu : all
 	}
 	
 	"\![*]\q[Nevermind,blank]"	
+}
+
+OnAiTalk.Prompt
+{
+	OnAiTalk(reference0)
 }
 
 OnLastTalk
@@ -263,10 +272,16 @@ RefreshDressups : all
 
 OnRacerID : all
 {
-	_id = CurrentSnail.ID[1,":"]
+	_fullID = reference0
+	_name = reference1
+	_frommenu = reference2
+	
+	_index = ASEARCH(_fullID,SavedSnails.ID)
+	
+	_id = _fullID[1,':']
 	_racer_num = "%(SUBSTR(_id,0,4))-%(SUBSTR(_id,4,4))-%(SUBSTR(_id,8,4))-%(SUBSTR(_id,12,4))"
 	
-	_path = "id_photo/%(CurrentSnail.Name)-%(CurrentSnail.ID[1,':'])_0.png"
+	_path = "id_photo/%(_name)-%(_id)_0.png"
 	if FATTRIB(_path) == -1; _path = "../../shell/master/surface0.png"
 	
 	_spacing = "\n"
@@ -278,31 +293,50 @@ OnRacerID : all
 	}
 	
 	"\0\b[2]\_q\![set,autoscroll,disable]\![no-autopause]"
-	"%(bigheader(TOUPPER(CurrentSnail.Name)))"
+	"%(bigheader(TOUPPER(_name)))"
 	"\_b[%(_path),%(_coords),--clipping=240 125 370 255,--option=background]"
 	if SHIORI3FW.BalloonName == "Very Fast Speedway"; "\n[-200]"
 	else; "\n"
 	"%(_spacing)Racer #%(_racer_num)"
-	"%(_spacing)Sponsored on %(CurrentSnail.DateSponsored[0,':'])"
-	"%(_spacing)Total races: %(CurrentSnail.TotalRaces)"
-	"%(_spacing)Total racing time: %(TimeDisplay(CurrentSnail.TotalRaceTime))"
-	"%(_spacing)Total crashes: %(CurrentSnail.TotalCrashes)"
-	"%(_spacing)Highest coolness: %(CurrentSnail.HighestCoolness)"
+	"%(_spacing)Sponsored on %(SavedSnails.DateSponsored[_index][0,':'])"
+	"%(_spacing)Total races: %(SavedSnails.TotalRaces[_index])"
+	"%(_spacing)Total racing time: %(TimeDisplay(SavedSnails.TotalRaceTime[_index]))"
+	"%(_spacing)Total crashes: %(SavedSnails.TotalCrashes[_index])"
+	"%(_spacing)Highest coolness: %(SavedSnails.HighestCoolness[_index])"
 	"\n\n\n"
-	"\f[italic,1]""%(CurrentSnail.Trait)""\f[italic,default]"
+	"\f[italic,1]""%(SavedSnails.Trait[_index])""\f[italic,default]"
 	"\n\n"
 	"Notable achievements:\n"
-	foreach CurrentSnail.Notes; _note
+	foreach SavedSnails.Notes[_index]; _note
 	{
 		"\![*]%(_note)\n"
 	}
 	"\n"
-	"\![*]\__q[OnTakeRacerPhoto.Confirm]Take a new ID photo\__q"
-	"\x\![raise,OnSakuraMenu]"
+	
+	//CAN ONLY TAKE PHOTO IF CURRENT SNAIL. Otherwise it'll take a picture of the wrong one lol
+	if _frommenu == "OnPhotoGallery"
+	{
+		switch _fullID == CurrentSnail.ID
+		{
+			"\![*]\__q[OnPhotoGallery.SwitchSnail,%(_fullID),""%(_name)"",%(_frommenu)]Switch to this snail\__q"
+			"\![*]\f[color,disable]Switch to this snail\f[color,default]"
+		}
+	}
+	else //OnSakuraMenu, hopefully
+	{
+		"\![*]\__q[OnTakeRacerPhoto.Confirm,%(_fullID),""%(_name)"",%(_frommenu)]Take a new ID photo\__q"
+	}
+	"\n\n"
+	if _frommenu == ""; _frommenu = "OnSakuraMenu"
+	"\![*]\q[Back,%(_frommenu)]  \![*]\q[Done,OnBlank]"
 }
 
 OnTakeRacerPhoto.Confirm : all
 {
+	_fullID = reference0
+	_name = reference1
+	_frommenu = reference2
+	
 	"\0\b[0]\_q"
 	"Take a new photo for %(CurrentSnail.Name)'s racer ID?\n\n"
 	"Cost: %(L)10\n"
@@ -312,19 +346,23 @@ OnTakeRacerPhoto.Confirm : all
 	switch Lettuce >= 10
 	{
 		"\f[color,disable]Yes (%(L)10)\f[color,default]"
-		"\__q[OnTakeRacerPhoto]Yes (%(L)10)\__q"
+		"\__q[OnTakeRacerPhoto,%(_fullID),""%(_name)"",%(_frommenu)]Yes (%(L)10)\__q"
 	}
 	"  "
-	"\![*]\__q[OnRacerID]No\__q"
+	"\![*]\__q[OnRacerID,%(_fullID),""%(_name)"",%(_frommenu)]No\__q"
 }
 
 OnTakeRacerPhoto : all
 {
+	_fullID = reference0
+	_name = reference1
+	_frommenu = reference2
+	
 	Lettuce -= 10
 	_path = "id_photo/%(CurrentSnail.Name)-%(CurrentSnail.ID[1,':'])_0.png"
 	"\0\b[2]"
 	"\![execute,dumpsurface,id_photo,0,0,%(CurrentSnail.Name)-%(CurrentSnail.ID[1,':'])_,,1]"
-	"Say cheese!\_w[1000]\n.\w8 .\w8 .\_w[1500]\n\_b[%(_path),inline,--clipping=240 125 370 255,--option=background]\n\nPerfect!\x\![raise,OnRacerID]"
+	"Say cheese!\_w[1000]\n.\w8 .\w8 .\_w[1500]\n\_b[%(_path),inline,--clipping=240 125 370 255,--option=background]\n\nPerfect!\x\![raise,OnRacerID,%(_fullID),""%(_name)"",%(_frommenu)]"
 }
 
 OnSnailTraining : all
@@ -391,6 +429,8 @@ OnSnailWashMenu : all
 	CleanlinessCheck
 	"\0\b[2]\_q\![set,autoscroll,disable]"
 	"\*"
+	if CurrentSnail.Cleanliness >= 5 && _argv[0] == "stroked"; "\s[3]"
+	else; "\s[0]"
 	
 	if SpongePurchased.Better; spongebetter
 	elseif SpongePurchased.Basic; spongebasic
@@ -398,7 +438,7 @@ OnSnailWashMenu : all
 	
 	"%(bigheader('WASH YOUR SNAIL!'))"
 	
-	"Cleanliness: %(Cleanliness)\n\n"
+	"Cleanliness: %(CurrentSnail.Cleanliness)\n\n"
 	
 	"\![*]"
 	switch Lettuce >= 100 //TODO would it be funny if this increased based on soot levels... maybe...
@@ -443,7 +483,7 @@ OnSnailWashMenu : all
 
 OnSnailWash.Automatic : all
 {
-	Cleanliness = 10
+	CurrentSnail.Cleanliness = 10
 	
 	"\0\b[2]\_q\![set,autoscroll,disable]\![no-autopause]"
 	
@@ -455,7 +495,7 @@ OnSnailWash.Automatic : all
 OnSnailWash.AutomaticYes : all
 {
 	Lettuce -= TOINT(reference0)
-	Cleanliness = 1
+	CurrentSnail.Cleanliness = 1
 	
 	"\0\b[2]\_q\![set,autoscroll,disable]\![no-autopause]"
 	CleanlinessCheck
@@ -490,6 +530,36 @@ OnPurchaseSponge.Yes : all
 OnSnailWash.Done
 {
 	spongeoff
+}
+
+OnPhotoGallery : all
+{
+	"\0\b[2]\_q\![set,autoscroll,disable]"
+	"%(bigheader('ADMIRE YOUR SNAILS!'))"
+	//TODO maybe paginate later? this could get quite bulky
+	
+	for _i = 0; _i < ARRAYSIZE(SavedSnails.ID); _i++
+	{
+		_path = "id_photo/%(SavedSnails.Name[_i])-%(SavedSnails.ID[_i][1,':'])_0.png"
+		if FATTRIB(_path) == -1; _path = "../../shell/master/surface0.png"
+		
+		"\__q[OnRacerID,%(SavedSnails.ID[_i]),""%(SavedSnails.Name[_i])"",OnPhotoGallery]\_b[%(_path),inline,--clipping=240 125 370 255,--option=background]\__q"
+	}
+	
+	"\n\n"
+	"\![*]\q[Back,OnSakuraMenu]"
+}
+
+OnPhotoGallery.SwitchSnail
+{
+	_fullID = reference0
+	_name = reference1
+	_frommenu = reference2
+	
+	SaveSnail(CurrentSnail.ID)
+	LoadSnail(reference0)
+	
+	"\C%(RefreshDressups)%(CleanlinessCheck)\![raise,OnRacerID,%(_fullID),""%(_name)"",%(_frommenu)]"
 }
 
 OnLettuceShop : all
@@ -564,32 +634,77 @@ OnLettuceConversion : all
 	
 }
 
-OnTalkRateMenu : all
-{	
-	//This is just setting up a label, you may need to add to it or tweak it if you change what rates are available
-	_talkrate = "Off"
-	if aitalkinterval == 30; _talkrate = "30 seconds"
-	elseif aitalkinterval == 60; _talkrate = "1 minute"
-	elseif aitalkinterval == 180; _talkrate = "3 minutes"
-	elseif aitalkinterval == 300; _talkrate = "5 minutes"
-	elseif aitalkinterval == 600; _talkrate = "10 minutes"
+OnSettings : all
+{
+	"\0\b[2]\![set,autoscroll,disable]\_q\*\f[anchorvisitedfontcolor,default.anchor]\![no-autopause]"
+	"%(bigheader('CONFIGURE YOUR SNAIL!'))"
 	
-	"\0\s[0]\b2\![set,autoscroll,disable]\_q"
-	"Current interval: %(_talkrate)\n\n"
+	"Talkrate:\n"
+	_times = ("Off,0","30s,30","1m,60","3m,180","5m,300","10m,600")
+	foreach _times; _time
+	{
+		switch TOINT(_time[1]) == aitalkinterval
+		{
+			"\__q[OnTalkRateChange,%(_time[1])]%(_time[0])\__q"
+			"\f[underline,1]\_a[OnTalkRateChange,%(_time[1])]%(_time[0])\_a\f[underline,default]"
+		}
+		"  "
+	}
+	"\n\n"
 	
-	"\![*]\q[Off,OnTalkRateChange,0]\n"
-	"\![*]\q[30 seconds,OnTalkRateChange,30]\n"
-	"\![*]\q[1 minute,OnTalkRateChange,60]\n"
-	"\![*]\q[3 minutes,OnTalkRateChange,180]\n"
-	"\![*]\q[5 minutes,OnTalkRateChange,300]\n"
-	"\![*]\q[10 minutes,OnTalkRateChange,600]\n"
-	"\n"
+	"Radio station:\n"
+	_stations = IARRAY
+	_stations ,= "Off"
+	_stations ,= GETFUNCLIST("RadioStation.")
+	foreach _stations; _station
+	{
+		_station = REPLACE(_station,"RadioStation.","")
+		switch _station == RadioStation
+		{
+			"\__q[OnRadioStationChange,%(_station)]%(REPLACE(_station,'_',' '))\__q"
+			"\f[underline,1]\_a[OnRadioStationChange,%(_station)]%(REPLACE(_station,'_',' '))\_a\f[underline,default]"
+		}
+		"  "
+	}
+	"\c[char,2]"
+	"\n\n"
+	
+	if RadioStation == "Off"; "\f[color,disable]"
+	"Radio scanning:\n"
+	_frequencies = ("Off,0","30m,1800","1h,3600","2h,7200","4h,14400","8h,28800","Each boot,-1")
+	foreach _frequencies; _frequency
+	{
+		switch TOINT(_frequency[1]) == RadioScan
+		{
+			"\__q[OnRadioScanChange,%(_frequency[1])]%(_frequency[0])\__q"
+			"\f[underline,1]\_a[OnRadioScanChange,%(_frequency[1])]%(_frequency[0])\_a\f[underline,default]"
+		}
+		"  "
+	}
+	"\c[char,2]"
+	"\f[color,default]"
+	
+	"\n\n"
 	"\![*]\q[Back,OnSakuraMenu]  \![*]\q[Nevermind,blank]"
 }
 
 OnTalkRateChange
 {
 	aitalkinterval = TOINT(reference0)
+	OnSettings
+}
+
+OnRadioStationChange : all
+{
+	RadioStation = reference0
+	OnSurfaceRestore
+	OnSettings
+}
+
+OnRadioScanChange
+{
+	RadioScan = TOINT(reference0)
+	OnSettings
 }
 
 OnDebug.SnailPicker : all
@@ -613,23 +728,29 @@ OnDebug.SnailPicker.Select
 	LoadSnail(reference0)
 	LOGGING("LOADING %(CurrentSnail.ID) %(CurrentSnail.Name)")
 	
-	"\C%(RefreshDressups)\![raise,OnDebug.SnailPicker]"
+	"\C%(RefreshDressups)%(CleanlinessCheck)\![raise,OnDebug.SnailPicker]"
 }
 
 OnDebug.CurrentSnail : all
 {
-	"\0\b[2]\_q"
+	"\0\b[4,--fallback=2]\![no-autopause]\![set,autoscroll,disable]\_q"
 	"I am a snail\n"
 	"My ID is %(CurrentSnail.ID)\n"
 	"My name is %(CurrentSnail.Name)\n"
+	"... which %(('isn''t','is')[IsAlliterative(CurrentSnail.Name)]) alliterative\n"
 	"I was made in version %(CurrentSnail.Version)\n"
-	"My trait is \f[italic,1]""%(CurrentSnail.Trait)""\f[italic,default]\n"
+	"I was sponsored on %(CurrentSnail.DateSponsored)\n"
+	"My personality type is %(CurrentSnail.PersonalityType)\n"
+	"My preferred type of poetry is %(CurrentSnail.PoetryType)\n"
+	"My favorite radio station is %(CurrentSnail.RadioPreference)\n"
+	"My alternate hobby is %(CurrentSnail.AltHobby)\n"
 	"I've run in %(CurrentSnail.TotalRaces) races\n"
 	"My total time on the track is %(CurrentSnail.TotalRaceTime)\n"
 	"My highest cool score ever is %(CurrentSnail.HighestCoolness)\n"
+	"My trait is \f[italic,1]""%(CurrentSnail.Trait)""\f[italic,default]\n"
 	"My current loadout is %(CurrentSnail.Loadout)\n"
-	"I was sponsored on %(CurrentSnail.DateSponsored)\n"
-	"\n\![*]\q[Back,OnDebug.SnailPicker]  \![*]\q[Done,OnBlank]"
+	"\n"
+	"\![*]\q[Back,OnDebug.SnailPicker]  \![*]\q[Done,OnBlank]"
 }
 
 OnTempLeaderboard : all

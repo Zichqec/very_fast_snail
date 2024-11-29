@@ -1,0 +1,71 @@
+Poetry.Snoem : nonoverlap_pool
+{
+	_snoems = <<"
+	Racing runs rampant. Risk, reward.
+	Understanding useful.
+	Nowhere near nonexistent. Nevertheless, not nervous.
+	
+	
+	Super speed shocks several.
+	Pleased, plan productive.
+	Effort escalated, ease eminent.
+	Engine elevated.
+	Digging deeper, dedicated driver.
+	
+	
+	Testing
+	Esting
+	Sting
+	Ting
+	">>
+	
+	_snoems = ProcessPoems(_snoems)
+	parallel _snoems
+}
+
+Poetry.Haiku
+{
+	"\1\b[10]Haiku"
+}
+
+Poetry.Cinquain
+{
+	"\1\b[10]Cinquain"
+}
+
+Poetry.Limerick
+{
+	"\1\b[10]Limerick"
+}
+
+Poetry.Acrostic
+{
+	"\1\b[10]Acrostic"
+}
+
+Poetry.Lyric
+{
+	"\1\b[10]Lyric"
+}
+
+Poetry.Rhyming_Couplet
+{
+	"\1\b[10]Rhyming couplet"
+}
+
+Poetry.Alternate_Rhyme
+{
+	"\1\b[10]Alternate rhyme"
+}
+
+Poetry.Free_Verse
+{
+	"\1\b[10]Free verse"
+}
+
+Poetry.Diamante
+{
+	"\1\b[10]Diamante"
+}
+
+//concrete poetry maybe - conveniently, heredocs will work well for this lol

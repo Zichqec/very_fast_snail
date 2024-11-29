@@ -449,3 +449,30 @@ boom
 	"Snap crackle pop"
 	"Kapow"
 }
+
+AltHobby : array
+{
+	"painting"
+	"bicycling"
+	"singing"
+	"poker"
+	"plumbing"
+	"reading"
+	"gardening"
+	"farming"
+	"lettuce eating contests"
+	"lettuce tasting and reviews"
+	"shopping"
+	"money laundering"
+	"kayaking"
+	"going into bookstores and spoiling the finales of all the recent bestsellers"
+	"horse racing"
+	"thrifting"
+	"jump rope"
+	"opera"
+	"violin"
+	"starting a punk band"
+	"rollerblading"
+	"shoplifting"
+	"dancing"
+}
