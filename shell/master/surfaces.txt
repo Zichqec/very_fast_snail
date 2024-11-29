@@ -546,6 +546,7 @@ surface3
 	animation31000.pattern2,overlay,31000,500,0,0
 	animation31000.pattern3,overlay,31004,500,0,0
 	animation31000.pattern4,overlay,31000,500,0,0
+	animtaion31000.option,shared-index
 	
 	//basic green
 	animation31005.interval,bind+always
@@ -554,6 +555,7 @@ surface3
 	animation31005.pattern2,overlay,31005,500,0,0
 	animation31005.pattern3,overlay,31009,500,0,0
 	animation31005.pattern4,overlay,31005,500,0,0
+	animation31005.option,shared-index
 	
 	//basic olive
 	animation31010.interval,bind+always
@@ -562,6 +564,7 @@ surface3
 	animation31010.pattern2,overlay,31010,500,0,0
 	animation31010.pattern3,overlay,31014,500,0,0
 	animation31010.pattern4,overlay,31010,500,0,0
+	animation31010.option,shared-index
 	
 	//basic yellow
 	animation31015.interval,bind+always
@@ -570,6 +573,7 @@ surface3
 	animation31015.pattern2,overlay,31015,500,0,0
 	animation31015.pattern3,overlay,31019,500,0,0
 	animation31015.pattern4,overlay,31015,500,0,0
+	animation31015.option,shared-index
 	
 	//basic orange
 	animation31020.interval,bind+always
@@ -578,6 +582,7 @@ surface3
 	animation31020.pattern2,overlay,31020,500,0,0
 	animation31020.pattern3,overlay,31024,500,0,0
 	animation31020.pattern4,overlay,31020,500,0,0
+	animation31020.option,shared-index
 	
 	//basic red
 	animation31025.interval,bind+always
@@ -586,6 +591,7 @@ surface3
 	animation31025.pattern2,overlay,31025,500,0,0
 	animation31025.pattern3,overlay,31029,500,0,0
 	animation31025.pattern4,overlay,31025,500,0,0
+	animation31025.option,shared-index
 	
 	//basic mauve
 	animation31030.interval,bind+always
@@ -594,6 +600,7 @@ surface3
 	animation31030.pattern2,overlay,31030,500,0,0
 	animation31030.pattern3,overlay,31034,500,0,0
 	animation31030.pattern4,overlay,31030,500,0,0
+	animation31030.option,shared-index
 	
 	//basic purple
 	animation31035.interval,bind+always
@@ -602,6 +609,7 @@ surface3
 	animation31035.pattern2,overlay,31035,500,0,0
 	animation31035.pattern3,overlay,31039,500,0,0
 	animation31035.pattern4,overlay,31035,500,0,0
+	animation31035.option,shared-index
 	
 	//basic navy
 	animation31040.interval,bind+always
@@ -610,6 +618,7 @@ surface3
 	animation31040.pattern2,overlay,31040,500,0,0
 	animation31040.pattern3,overlay,31044,500,0,0
 	animation31040.pattern4,overlay,31040,500,0,0
+	animation31040.option,shared-index
 	
 	//basic blue
 	animation31045.interval,bind+always
@@ -618,6 +627,7 @@ surface3
 	animation31045.pattern2,overlay,31045,500,0,0
 	animation31045.pattern3,overlay,31049,500,0,0
 	animation31045.pattern4,overlay,31045,500,0,0
+	animation31045.option,shared-index
 	
 	//basic azure
 	animation31050.interval,bind+always
@@ -626,6 +636,7 @@ surface3
 	animation31050.pattern2,overlay,31050,500,0,0
 	animation31050.pattern3,overlay,31054,500,0,0
 	animation31050.pattern4,overlay,31050,500,0,0
+	animation31050.option,shared-index
 	
 	//basic mint
 	animation31055.interval,bind+always
@@ -634,6 +645,7 @@ surface3
 	animation31055.pattern2,overlay,31055,500,0,0
 	animation31055.pattern3,overlay,31059,500,0,0
 	animation31055.pattern4,overlay,31055,500,0,0
+	animation31055.option,shared-index
 	
 	//basic white
 	animation31060.interval,bind+always
@@ -642,6 +654,7 @@ surface3
 	animation31060.pattern2,overlay,31060,500,0,0
 	animation31060.pattern3,overlay,31064,500,0,0
 	animation31060.pattern4,overlay,31060,500,0,0
+	animation31060.option,shared-index
 	
 	//basic gray
 	animation31065.interval,bind+always
@@ -650,6 +663,7 @@ surface3
 	animation31065.pattern2,overlay,31065,500,0,0
 	animation31065.pattern3,overlay,31069,500,0,0
 	animation31065.pattern4,overlay,31065,500,0,0
+	animation31065.option,shared-index
 	
 	//basic black
 	animation31070.interval,bind+always
@@ -658,6 +672,7 @@ surface3
 	animation31070.pattern2,overlay,31070,500,0,0
 	animation31070.pattern3,overlay,31074,500,0,0
 	animation31070.pattern4,overlay,31070,500,0,0
+	animation31070.option,shared-index
 	
 	//cowprint beige
 	animation32000.interval,bind+always
@@ -666,6 +681,7 @@ surface3
 	animation32000.pattern2,overlay,32000,500,0,0
 	animation32000.pattern3,overlay,32004,500,0,0
 	animation32000.pattern4,overlay,32000,500,0,0
+	animation32000.option,shared-index
 	
 	//cowprint green
 	animation32005.interval,bind+always
@@ -674,6 +690,7 @@ surface3
 	animation32005.pattern2,overlay,32005,500,0,0
 	animation32005.pattern3,overlay,32009,500,0,0
 	animation32005.pattern4,overlay,32005,500,0,0
+	animation32005.option,shared-index
 	
 	//cowprint olive
 	animation32010.interval,bind+always
@@ -682,6 +699,7 @@ surface3
 	animation32010.pattern2,overlay,32010,500,0,0
 	animation32010.pattern3,overlay,32014,500,0,0
 	animation32010.pattern4,overlay,32010,500,0,0
+	animation32010.option,shared-index
 	
 	//cowprint yellow
 	animation32015.interval,bind+always
@@ -690,6 +708,7 @@ surface3
 	animation32015.pattern2,overlay,32015,500,0,0
 	animation32015.pattern3,overlay,32019,500,0,0
 	animation32015.pattern4,overlay,32015,500,0,0
+	animation32015.option,shared-index
 	
 	//cowprint orange
 	animation32020.interval,bind+always
@@ -698,6 +717,7 @@ surface3
 	animation32020.pattern2,overlay,32020,500,0,0
 	animation32020.pattern3,overlay,32024,500,0,0
 	animation32020.pattern4,overlay,32020,500,0,0
+	animation32020.option,shared-index
 	
 	//cowprint red
 	animation32025.interval,bind+always
@@ -706,6 +726,7 @@ surface3
 	animation32025.pattern2,overlay,32025,500,0,0
 	animation32025.pattern3,overlay,32029,500,0,0
 	animation32025.pattern4,overlay,32025,500,0,0
+	animation32025.option,shared-index
 	
 	//cowprint mauve
 	animation32030.interval,bind+always
@@ -714,6 +735,7 @@ surface3
 	animation32030.pattern2,overlay,32030,500,0,0
 	animation32030.pattern3,overlay,32034,500,0,0
 	animation32030.pattern4,overlay,32030,500,0,0
+	animation32030.option,shared-index
 	
 	//cowprint purple
 	animation32035.interval,bind+always
@@ -722,6 +744,7 @@ surface3
 	animation32035.pattern2,overlay,32035,500,0,0
 	animation32035.pattern3,overlay,32039,500,0,0
 	animation32035.pattern4,overlay,32035,500,0,0
+	animation32035.option,shared-index
 	
 	//cowprint navy
 	animation32040.interval,bind+always
@@ -730,6 +753,7 @@ surface3
 	animation32040.pattern2,overlay,32040,500,0,0
 	animation32040.pattern3,overlay,32044,500,0,0
 	animation32040.pattern4,overlay,32040,500,0,0
+	animation32040.option,shared-index
 	
 	//cowprint blue
 	animation32045.interval,bind+always
@@ -738,6 +762,7 @@ surface3
 	animation32045.pattern2,overlay,32045,500,0,0
 	animation32045.pattern3,overlay,32049,500,0,0
 	animation32045.pattern4,overlay,32045,500,0,0
+	animation32045.option,shared-index
 	
 	//cowprint azure
 	animation32050.interval,bind+always
@@ -746,6 +771,7 @@ surface3
 	animation32050.pattern2,overlay,32050,500,0,0
 	animation32050.pattern3,overlay,32054,500,0,0
 	animation32050.pattern4,overlay,32050,500,0,0
+	animation32050.option,shared-index
 	
 	//cowprint mint
 	animation32055.interval,bind+always
@@ -754,6 +780,7 @@ surface3
 	animation32055.pattern2,overlay,32055,500,0,0
 	animation32055.pattern3,overlay,32059,500,0,0
 	animation32055.pattern4,overlay,32055,500,0,0
+	animation32055.option,shared-index
 	
 	//cowprint white
 	animation32060.interval,bind+always
@@ -762,6 +789,7 @@ surface3
 	animation32060.pattern2,overlay,32060,500,0,0
 	animation32060.pattern3,overlay,32064,500,0,0
 	animation32060.pattern4,overlay,32060,500,0,0
+	animation32060.option,shared-index
 	
 	//cowprint gray
 	animation32065.interval,bind+always
@@ -770,6 +798,7 @@ surface3
 	animation32065.pattern2,overlay,32065,500,0,0
 	animation32065.pattern3,overlay,32069,500,0,0
 	animation32065.pattern4,overlay,32065,500,0,0
+	animation32065.option,shared-index
 	
 	//cowprint black
 	animation32070.interval,bind+always
@@ -778,6 +807,7 @@ surface3
 	animation32070.pattern2,overlay,32070,500,0,0
 	animation32070.pattern3,overlay,32074,500,0,0
 	animation32070.pattern4,overlay,32070,500,0,0
+	animation32070.option,shared-index
 }
 
 surface4
@@ -909,6 +939,132 @@ surface4
 	animation85500.pattern0,overlay,85500,0,0,0
 	animation85500.pattern1,overlay,85501,100,0,0
 	animation85500.pattern2,overlay,85501,100,0,0
+}
+
+
+surface5
+{
+	//———————— SNAIL BODY ————————
+	//———— base ————
+	//basic beige
+	animation31000.interval,bind
+	animation31000.pattern0,overlay,31003,0,0,0
+	
+	//basic green
+	animation31005.interval,bind
+	animation31005.pattern0,overlay,31005,0,0,0
+	
+	//basic olive
+	animation31010.interval,bind
+	animation31010.pattern0,overlay,31013,0,0,0
+	
+	//basic yellow
+	animation31015.interval,bind
+	animation31015.pattern0,overlay,31015,0,0,0
+	
+	//basic orange
+	animation31020.interval,bind
+	animation31020.pattern0,overlay,31023,0,0,0
+	
+	//basic red
+	animation31025.interval,bind
+	animation31025.pattern0,overlay,31025,0,0,0
+	
+	//basic mauve
+	animation31030.interval,bind
+	animation31030.pattern0,overlay,31033,0,0,0
+	
+	//basic purple
+	animation31035.interval,bind
+	animation31035.pattern0,overlay,31035,0,0,0
+	
+	//basic navy
+	animation31040.interval,bind
+	animation31040.pattern0,overlay,31043,0,0,0
+	
+	//basic blue
+	animation31045.interval,bind
+	animation31045.pattern0,overlay,31045,0,0,0
+	
+	//basic azure
+	animation31050.interval,bind
+	animation31050.pattern0,overlay,31053,0,0,0
+	
+	//basic mint
+	animation31055.interval,bind
+	animation31055.pattern0,overlay,31055,0,0,0
+	
+	//basic white
+	animation31060.interval,bind
+	animation31060.pattern0,overlay,31063,0,0,0
+	
+	//basic gray
+	animation31065.interval,bind
+	animation31065.pattern0,overlay,31065,0,0,0
+	
+	//basic black
+	animation31070.interval,bind
+	animation31070.pattern0,overlay,31073,0,0,0
+	
+	//cowprint beige
+	animation32000.interval,bind
+	animation32000.pattern0,overlay,32003,0,0,0
+	
+	//cowprint green
+	animation32005.interval,bind
+	animation32005.pattern0,overlay,32005,0,0,0
+	
+	//cowprint olive
+	animation32010.interval,bind
+	animation32010.pattern0,overlay,32013,0,0,0
+	
+	//cowprint yellow
+	animation32015.interval,bind
+	animation32015.pattern0,overlay,32015,0,0,0
+	
+	//cowprint orange
+	animation32020.interval,bind
+	animation32020.pattern0,overlay,32023,0,0,0
+	
+	//cowprint red
+	animation32025.interval,bind
+	animation32025.pattern0,overlay,32025,0,0,0
+	
+	//cowprint mauve
+	animation32030.interval,bind
+	animation32030.pattern0,overlay,32033,0,0,0
+	
+	//cowprint purple
+	animation32035.interval,bind
+	animation32035.pattern0,overlay,32035,0,0,0
+	
+	//cowprint navy
+	animation32040.interval,bind
+	animation32040.pattern0,overlay,32043,0,0,0
+	
+	//cowprint blue
+	animation32045.interval,bind
+	animation32045.pattern0,overlay,32045,0,0,0
+	
+	//cowprint azure
+	animation32050.interval,bind
+	animation32050.pattern0,overlay,32053,0,0,0
+	
+	//cowprint mint
+	animation32055.interval,bind
+	animation32055.pattern0,overlay,32055,0,0,0
+	
+	//cowprint white
+	animation32060.interval,bind
+	animation32060.pattern0,overlay,32063,0,0,0
+	
+	//cowprint gray
+	animation32065.interval,bind
+	animation32065.pattern0,overlay,32065,0,0,0
+	
+	//cowprint black
+	animation32070.interval,bind
+	animation32070.pattern0,overlay,32073,0,0,0
 }
 
 
@@ -1236,15 +1392,15 @@ surface10
 surface.append0-9
 {
 	animation9999998.interval,bind+always
-	animation9999998.pattern0,move,0,0,5,5
-	animation9999998.pattern1,move,0,25,3,0
-	animation9999998.pattern2,move,0,25,-1,-3
-	animation9999998.pattern3,move,0,25,4,2
-	animation9999998.pattern4,move,0,25,-3,5
-	animation9999998.pattern5,move,0,25,2,-1
-	animation9999998.pattern6,move,0,25,-5,-5
-	animation9999998.pattern7,move,0,25,-1,0
-	animation9999998.pattern8,move,0,25,0,0
+	animation9999998.pattern0,move,0,0,2,4
+	animation9999998.pattern1,move,0,25,1,2
+	animation9999998.pattern2,move,0,25,-1,0
+	animation9999998.pattern3,move,0,25,2,3
+	animation9999998.pattern4,move,0,25,-2,4
+	animation9999998.pattern5,move,0,25,1,1
+	animation9999998.pattern6,move,0,25,-2,0
+	animation9999998.pattern7,move,0,25,-1,2
+	animation9999998.pattern8,move,0,25,0,2
 	
 	animation9999999.interval,bind
 	animation9999999.pattern0,overlay,10,0,0,0

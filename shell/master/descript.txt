@@ -332,7 +332,7 @@ sakura.bindgroup80079.addid,80080
 
 //Overlays
 sakura.bindoption7.group,Overlays,multiple
-sakura.bindgroup85000.name,Overlays,Shine
+sakura.bindgroup64999.name,Overlays,Shine
 sakura.bindgroup85005.name,Overlays,Sweat
 sakura.bindgroup85010.name,Overlays,Sparkles
 sakura.bindgroup85050.name,Overlays,Smoke

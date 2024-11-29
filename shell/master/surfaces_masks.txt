@@ -7,7 +7,7 @@ descript
 }
 
 //static snail
-surface.append0,3-4
+surface.append0,3-5
 {
 	//camo bandanna
 	animation70000.interval,bind
