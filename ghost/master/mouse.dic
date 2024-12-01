@@ -14,17 +14,23 @@ OnMouseMove
 {
 	if reference4 == "shell" && reference3 == 0
 	{
-		if "__SNAIL_WASH_MENU__" _in_ SHIORI3FW.LastTalk
+		stroke++	
+		if stroke % 40 == 0
 		{
-			stroke++
-				
-			if stroke % 30 == 0
+			if "__SNAIL_WASH_MENU__" _in_ SHIORI3FW.LastTalk
 			{
-				if (SpongePurchased.Better && CurrentSnail.Cleanliness < 10) || (SpongePurchased.Basic && CurrentSnail.Cleanliness < 5)
-				{
-					CurrentSnail.Cleanliness++
-				}
-				OnSnailWashMenu("stroked") //Want this to happen regardless of if the cleanliness changes, because I want the snail to start wiggling when you wash it...
+				
+					if (SpongePurchased.Better && CurrentSnail.Cleanliness < 10) || (SpongePurchased.Basic && CurrentSnail.Cleanliness < 5)
+					{
+						CurrentSnail.Cleanliness++
+					}
+					OnSnailWashMenu("stroked") //Want this to happen regardless of if the cleanliness changes, because I want the snail to start wiggling when you wash it...
+			}
+			else //make snail happy :)
+			{
+				if BalloonIsOpen; "\C"
+				--
+				"\0\s[3]"
 			}
 		}
 	}

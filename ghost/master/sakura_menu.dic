@@ -217,7 +217,7 @@ OnToggleEquipFilter
 
 OnEquipMenu.ToggleItem : all
 {
-	"\C\![set,autoscroll,disable]\0\_q\![bind,""%(reference0)"",""%(reference1)""]\![raise,OnEquipMenu,""%(reference0)""]"
+	"\C\![set,autoscroll,disable]\0\s[0]\_q\![bind,""%(reference0)"",""%(reference1)""]\![raise,OnEquipMenu,""%(reference0)""]"
 }
 
 OnEquipMenu.Save : all
@@ -534,16 +534,27 @@ OnSnailWash.Done
 
 OnPhotoGallery : all
 {
-	"\0\b[2]\_q\![set,autoscroll,disable]"
+	"\0\b[4,--fallback=2]\_q\![set,autoscroll,disable]"
 	"%(bigheader('ADMIRE YOUR SNAILS!'))"
 	//TODO maybe paginate later? this could get quite bulky
 	
+	_ii = 0
+	_x = 10
+	if SHIORI3FW.BalloonName == "Very Fast Speedway"; "\_l[%(_x),]"
 	for _i = 0; _i < ARRAYSIZE(SavedSnails.ID); _i++
 	{
 		_path = "id_photo/%(SavedSnails.Name[_i])-%(SavedSnails.ID[_i][1,':'])_0.png"
 		if FATTRIB(_path) == -1; _path = "../../shell/master/surface0.png"
 		
-		"\__q[OnRacerID,%(SavedSnails.ID[_i]),""%(SavedSnails.Name[_i])"",OnPhotoGallery]\_b[%(_path),inline,--clipping=240 125 370 255,--option=background]\__q"
+		//left up right down
+		"\__q[OnRacerID,%(SavedSnails.ID[_i]),""%(SavedSnails.Name[_i])"",OnPhotoGallery]\_b[%(_path),inline,--clipping=250 125 360 255]\__q"
+		_ii++
+		if _ii >= 3
+		{
+			_ii = 0
+			if SHIORI3FW.BalloonName == "Very Fast Speedway"; "\n\_l[%(_x),]"
+		}
+		
 	}
 	
 	"\n\n"
@@ -664,7 +675,8 @@ OnSettings : all
 			"\__q[OnRadioStationChange,%(_station)]%(REPLACE(_station,'_',' '))\__q"
 			"\f[underline,1]\_a[OnRadioStationChange,%(_station)]%(REPLACE(_station,'_',' '))\_a\f[underline,default]"
 		}
-		"  "
+		if _station == "Shopping" && SHIORI3FW.BalloonName == "Very Fast Speedway"; "\n"
+		else; "   "
 	}
 	"\c[char,2]"
 	"\n\n"

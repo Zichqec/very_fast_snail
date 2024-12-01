@@ -35,7 +35,7 @@ OnAiTalk
 	elseif RadioScan > 0 && GETSECCOUNT >= RadioScanTime + RadioScan && RadioStation != "Off" && (_prompt == "" || _prompt == "Radio")
 	{
 		RadioStationChange
-		
+		//TODO graft 2 dialogues together, one from the station you're switching from and one from the station you're switching to. THIS WILL NEED TO HANDLE TAGS SUCH AS ITALICS so that dialogues don't get funky
 		//TODO this'll need dialogues if we wanna keep it. I imagine just like... you know... radio stings
 		LastTalk = "Radio transition!\n\nNew station: %(RadioStation)"
 	}
@@ -102,7 +102,7 @@ GenerateDialogueTape
 	DialogueTape ,= "Radio"
 	DialogueTape ,= "Radio"
 	DialogueTape ,= "Ad"
-	DialogueTape ,= "User"
+	DialogueTape ,= "Ad"
 	DialogueTape ,= "User"
 	DialogueTape ,= "Snail"
 	DialogueTape ,= "Snail"
