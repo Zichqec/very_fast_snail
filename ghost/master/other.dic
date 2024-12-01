@@ -834,6 +834,11 @@ On_balloon_tooltip
 	}
 }
 
+BalloonIsOpen
+{
+	"balloon" _in_ status
+}
+
 //—————————————————————————————— Right click menu links ——————————————————————————————
 
 //Takes an array of alternating names and urls, and formats them for use with the right click menu
@@ -867,4 +872,273 @@ portalsites_sakura : array
 {
 	"Another link label";	"https://link.example.com/link/to/whatever/here/again/"
 	"A third link label";	"https://link.example.com/link/to/whatever/a/third/time/you/can/add/as/many/as/you/want/"
+}
+
+//splice together two radio dialogues for a neat transition
+//arg 0 is the first dialogue, arg 0 is the second
+//this is kinda extremely dodgy, it's made with a lot of assumptions about how we will write our snail, it is not suitable for general use
+DialogueTransition
+{
+	_talk1 = _argv[0]
+	_talk2 = _argv[1]
+	LOGGING("_talk2 at first: %(_talk2)")
+	_output = ""
+	
+	//Get a list of all the tags
+	_tags1 = SakuraScooper(_talk1)
+	_tags2 = SakuraScooper(_talk2)
+	
+	//Remove tags and replace with C_BYTE1
+	foreach _tags1; _tag
+	{
+		_talk1 = REPLACE(_talk1,_tag,C_BYTE1,1)
+	}
+	foreach _tags2; _tag
+	{
+		_talk2 = REPLACE(_talk2,_tag,C_BYTE1,1)
+	}
+	
+	
+	
+	_startlen = STRLEN(_talk1)
+	_pos1 = RAND(50) + 20
+	_i = 0
+	while SUBSTR(_talk1,_pos1,1) == " " || SUBSTR(_talk1,_pos1,1) == C_BYTE1 || _pos1 > _startlen
+	{
+		_pos1 = RAND(50) + 20
+		
+		_i++
+		if _i > 5000; break
+	}
+	
+	_talk1 = SUBSTR(_talk1,0,_pos1)
+	foreach _tags1; _tag
+	{
+		_talk1 = REPLACE(_talk1,C_BYTE1,_tag,1)
+	}
+	_output += _talk1
+	_output += "%(emdash)\n\n \f[default]\f[italic,1]%(emdash)%(gshhk)%(emdash)\f[italic,default]\n\n %(emdash)"
+	
+	_endlen = STRLEN(_talk2)
+	_pos2 = RAND(50) + 20
+	_i = 0
+	while SUBSTR(_talk2,_pos2,1) == " " || SUBSTR(_talk2,_pos2,1) == C_BYTE1 || _pos2 > _endlen
+	{
+		_pos2 = RAND(50) + 20
+		
+		_i++
+		if _i > 5000; break
+	}
+	
+	_talk2first = SUBSTR(_talk2,0,_pos2)
+	_talk2last = ERASE(_talk2,0,_pos2)
+	
+	_amt = LetterCount(_talk2first,C_BYTE1)
+	_talk2tags = ""
+	for _i = 0; _i < _amt; _i++
+	{
+		_talk2tags += C_BYTE1
+	}
+	
+	//Put tags back into place
+	
+	foreach _tags2; _tag
+	{
+		if C_BYTE1 _in_ _talk2tags; _talk2tags = REPLACE(_talk2tags,C_BYTE1,_tag,1)
+		else; _talk2last = REPLACE(_talk2last,C_BYTE1,_tag,1)
+	}
+	_talk2 = _talk2tags + _talk2last
+	
+	_output += _talk2
+	
+	_output
+}
+
+//Argument 0: The string to check
+//Argument 1: The letter(s) to search for (case sensitive)
+LetterCount
+{
+    _input = _argv[0]
+    _let = _argv[1]
+    _replaced = REPLACE(_input,_let,"")
+    _num = STRLEN(_input) - STRLEN(_replaced)
+    if STRLEN(_let) > 1; _num /= STRLEN(_let)
+    _num
+}
+
+gshhk
+{
+	"GSSHK"
+}
+
+emdash
+{
+	"\f[name,arial]—\f[name,default]"
+}
+
+
+SakuraScooper
+{
+	_input = _argv[0]
+	_scooped_tags = IARRAY
+
+	_no_underscores = ("!","&","*","+","-","0","1","4","5","6","7","8","C","a","b","c","e","f","i","j","m","n","p","q","s","t","v","w","x","z")
+	_one_underscore = ("!","+","?","V","a","b","l","m","n","q","s","v","w")
+	_two_underscores = ("b","c","q","t","u","v","w")
+	
+	_percent = ("month","day","hour","minute","second","username","selfname","selfname2","keroname","screenwidth","screenheight","exh","et","wronghour","ms","mz","ml","mc","mh","mt","me","mp","m?","dms","lastghostname","lastobjectname","*","property")
+	
+	_must_have_brackets = ("\!","\&","\8","\__b","\__u","\__w","\_b","\_l","\_m","\_v","\_w","\f","\i","\j","\m","\q")
+	_may_have_brackets = ("\__q","\_a","\_s","\b","\c","\n","\p","\s","\x")
+	_may_have_additional = ("\b","\i","\s") //,"\w")
+
+	_has_percent = 0
+	if "%" _in_ _input; _has_percent = 1
+	
+	_found_all = 0
+	_pos = -1
+	while _found_all != 1 //Loop through to find all tags
+	{
+		_pos_slash = STRSTR(_input,"\",_pos + 1)
+		
+		if _has_percent //Don't want to be checking twice if we don't have to be...
+		{
+			_pos_percent = STRSTR(_input,"%",_pos + 1)
+			
+			if _pos_percent != -1 && _pos_percent < _pos_slash; _pos = _pos_percent
+			else; _pos = _pos_slash
+		}
+		else; _pos = _pos_slash
+		
+		
+		if _pos == -1; {_found_all = 1; break} //seems redundant??
+		
+		_underscores = 0
+		_tag = ""
+		_has_brackets = 0
+		
+		
+		_checkarray = IARRAY
+		
+		//Determine how many underscores and what tag we have here
+		if SUBSTR(_input,_pos,1) == "%"
+		{
+			if SUBSTR(_input,_pos,9) == "%property"; _has_brackets = 1
+			_checkarray = _percent
+		}
+		else
+		{
+			_two_chars = SUBSTR(_input,_pos,2) //I was using this 3 times, so...
+			if _two_chars == "\\"; continue
+			elseif _two_chars == "\%"; continue
+			elseif SUBSTR(_input,_pos,3) == "\__"
+			{
+				_underscores = 2
+				_tag = "\__"
+				
+			}
+			elseif _two_chars == "\_"
+			{
+				_underscores = 1
+				_tag = "\_"
+			}
+			else
+			{
+				_tag = "\"
+			}
+
+			if _underscores == 2; _checkarray = _two_underscores
+			elseif _underscores == 1; _checkarray = _one_underscore
+			else; _checkarray = _no_underscores
+			
+		}
+		
+		//Validate tag
+		_check = SUBSTR(_input,_pos + _underscores + 1,1)
+		
+		if ASEARCH(_check,_checkarray) == -1; continue
+		
+		//Check if it needs a bracket to be valid
+		_tag += SUBSTR(_input,_pos + _underscores + 1,1)
+		_next_char = SUBSTR(_input,_pos + _underscores + 2,1)
+		_end_pos = 0
+		
+		if ASEARCH(_tag,_must_have_brackets) != -1
+		{
+			if _next_char == "["; _has_brackets = 1
+			else; continue
+		}
+		elseif ASEARCH(_tag,_may_have_brackets) != -1
+		{
+			if _next_char == "["; _has_brackets = 1
+			elseif ASEARCH(_tag,_may_have_additional) != -1
+			{
+				if ISINTSTR(_next_char); {_end_pos = _pos + 2}
+				else; _end_pos = _pos +  1
+			}
+			else
+			{
+				_end_pos = _pos + 1
+			}
+		}
+		elseif _tag == "\+" //:unamused:
+		{
+			if _next_char == "+"; _end_pos = _pos + 2
+			else; _end_pos = _pos + 1
+		}
+		elseif _tag == "\w" //:deargodhelpme:
+		{
+			if ISINTSTR(_next_char); {_end_pos = _pos + 2}
+			else; _end_pos = _pos + 1
+		}
+		else
+		{
+			_end_pos = _pos + 1
+		}
+		
+		_startpos = _pos //This is because of nested tags... have to skip them
+		//If it has brackets, grab the entire bracket section
+		if _has_brackets
+		{
+			
+			_end_found = 0
+			_strpos = _pos + _underscores + 1
+			_quotes_open = 0
+			_escape_active = 0
+			
+			while !_end_found
+			{
+				if _strpos > STRLEN(_input); break
+				
+				_cur = SUBSTR(_input,_strpos,1)
+				
+				if _cur == '"'
+				{
+					if _quotes_open == 0; _quotes_open = 1
+					else; _quotes_open = 0
+				}
+				elseif _cur == "\"
+				{
+					_pos = _strpos
+					if _escape_active == 1; _escape_active = 0
+					else; _escape_active = 2 //this will be 1 on the next go around
+				}
+				elseif _cur == "]"
+				{
+					if _escape_active == 0 && _quotes_open == 0
+					{
+						_end_pos = _strpos - _underscores
+						_end_found = 1
+						break
+					}
+				}
+				
+				if _escape_active > 0; _escape_active--
+				_strpos++
+			}
+		}
+		
+		_scooped_tags ,= SUBSTR(_input,_startpos,(_end_pos + _underscores) - _startpos + 1)
+	}
+	_scooped_tags
 }

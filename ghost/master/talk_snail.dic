@@ -42,7 +42,60 @@ Talk.Snailsonality.Ratings : nonoverlap_pool
 
 Talk.Snailsonality.Silent : nonoverlap_pool
 {
-	"\1\b[10]<drawing>"
+	//"\1\b[10]<drawing>"
+	
+	// _drawing = <<"
+// \![]                                          @@@                
+// \![]                  @@@@@@@@@@@@@@@@        @@@@       @@@@    
+// \![]             @@@@@                @@@@      @@      @@@@     
+// \![]          @@@@                        @@@    @@    @@        
+// \![]        @@@                             @@@   @@  @@         
+// \![]       @@         @@@@@@@@@@@@            @@@@@@@@@@@        
+// \![]      @@        @@@           @@          @          @@      
+// \![]     @@       @@               @@         @           @@     
+// \![]     @        @                 @@        @   @@      @@@    
+// \![]    @@       @@    @@ @@        @        @@     @@    @@ @@  
+// \![]    @@       @@    @  @@       @@       @@      @@@@@@       
+// \![]    @@         @@@@@@@@       @@       @@      @@            
+// \![]     @@                      @@       @@      @@             
+// \![]      @@                  @@@       @@       @@              
+// \![]    @@@@@@             @@@@@@@@@@@@@         @@              
+// \![]  @@@     @@@@@@@@@@@@                       @               
+// \![] @@                                     @@@@@                
+// \![]  @@@  @@@      @@@@@                  @@                    
+// \![]    @@@@@@@@@@@@    @@@@@@@@@@@@   @@@@@                     
+// \![]                              @@@@@                          
+	// ">>
+	_drawing = <<"
+.                                                 @@@@         @@@@   
+.                 @@@@@@@@@@@@@@@@@@@@@@@@@       @@@@        @@@@@   
+.              @@@@                       @@@@      @@       @@       
+.           @@@@                             @@@@    @@     @@        
+.         @@@                                   @@@   @@    @@        
+.        @@            @@@@@@@@@@@@              @@ @@@@@@@@@         
+.       @@         @@@@           @@@            @@@         @@@      
+.      @@         @@                @@@          @@            @@     
+.     @@         @@                   @          @@             @@    
+.     @         @@     @@@@@          @@         @@    @@       @@@@  
+.     @         @@    @@   @         @@         @@       @     @@  @@ 
+.     @         @@        @@         @@        @@        @@@@@@@      
+.     @           @@@@@@@@@         @@        @@@      @@@            
+.     @@                          @@@        @@       @@              
+.     @@@                       @@@@        @@        @@              
+.      @@@@                   @@@@@      @@@@        @@               
+.   @@@@  @@@           @@@@@@    @@@@@@@            @@               
+.  @@        @@@@@@@@@@@@                            @                
+. @@                                           @@@@@@                 
+. @@@  @@@         @@@@@                     @@@                      
+.   @@@@ @@  @@@@@@@@@@@@      @@@@@       @@@                        
+.          @@@          @@@@@@@    @@ @@@@@@@                         
+.                                   @@@                               
+	">>
+	_drawing = REPLACE(_drawing,C_CRLF,"\n")
+	_drawing = REPLACE(_drawing,"."," ")
+	_drawing = "\![no-autopause]\1\b[12]\_q\f[name,courier new]\f[height,3]\f[align,center]" + _drawing
+	_drawing
+	
 }
 
 Talk.Snailsonality.Gymbro : nonoverlap_pool
@@ -87,6 +140,8 @@ Talk.AlliterativeSnailsonality.Basic : nonoverlap_pool
 	"\1\b[10]Yield your yard. Yummy yucca yearned."
 	"\1\b[10]Alliteration absent? Aghast. Angry. Abhorrent."
 	"\1\b[10]Beep beep."
+	"\1\b[10]Upgrades unpleasant? Unthinkable."
+	"\1\b[10]Sunglasses show style superbly."
 }
 
 Talk.AlliterativeSnailsonality.Character_Break : nonoverlap_pool
