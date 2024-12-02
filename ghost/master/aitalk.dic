@@ -34,10 +34,15 @@ OnAiTalk
 	}
 	elseif RadioScan > 0 && GETSECCOUNT >= RadioScanTime + RadioScan && RadioStation != "Off" && (_prompt == "" || _prompt == "Radio")
 	{
+		//TODO this needs to stop the current radio chain as well, probably? i mean it'd be nice if you switched back and it was still going, but... too messy i think
+		_currentstation = REPLACE(RadioStation," ","_")
 		RadioStationChange
-		//TODO graft 2 dialogues together, one from the station you're switching from and one from the station you're switching to. THIS WILL NEED TO HANDLE TAGS SUCH AS ITALICS so that dialogues don't get funky
-		//TODO this'll need dialogues if we wanna keep it. I imagine just like... you know... radio stings
-		LastTalk = "Radio transition!\n\nNew station: %(RadioStation)"
+		_nextstation = REPLACE(RadioStation," ","_")
+		
+		_current = EVAL("RadioStation.%(_currentstation)")
+		_next = EVAL("RadioStation.%(_nextstation)")
+		
+		LastTalk = DialogueTransition(_current,_next)
 	}
 	else
 	{
@@ -54,35 +59,38 @@ OnAiTalk
 			DialogueTape[0] = IARRAY
 		}
 		
-		if _pick == "Radio"
+		if RadioStation != "Off"
 		{
-			if RadioStation == "Off"
+			if _pick == "Radio"
 			{
-				LastTalk = RadioStationOff
+				if RadioStation == "Off"
+				{
+					LastTalk = RadioStationOff
+				}
+				else
+				{
+					_station = REPLACE(RadioStation," ","_")
+					LastTalk = EVAL("RadioStation.%(_station)")
+				}
 			}
-			else
+			elseif _pick == "Ad"
 			{
-				_station = REPLACE(RadioStation," ","_")
-				LastTalk = EVAL("RadioStation.%(_station)")
+				if RadioStation == "Off"; LastTalk = RadioStationOff
+				elseif RadioStation == "Pirate_Radio"; LastTalk = Ads.Pirate_Radio
+				else; LastTalk = Ads.General
 			}
-		}
-		elseif _pick == "Ad"
-		{
-			if RadioStation == "Off"; LastTalk = RadioStationOff
-			elseif RadioStation == "Pirate_Radio"; LastTalk = Ads.Pirate_Radio
-			else; LastTalk = Ads.General
-		}
-		elseif _pick == "Snail"
-		{
-			_alliteration = "Snailsonality"
-			if IsAlliterative(CurrentSnail.Name); _alliteration = "AlliterativeSnailsonality"
-			_personality = REPLACE(CurrentSnail.PersonalityType," ","_")
-			LastTalk = EVAL("Talk.%(_alliteration).%(_personality)")
-		}
-		elseif _pick == "Poem"
-		{
-			_poetry = REPLACE(CurrentSnail.PoetryType," ","_")
-			LastTalk = EVAL("Poetry.%(_poetry)")
+			elseif _pick == "Snail"
+			{
+				_alliteration = "Snailsonality"
+				if IsAlliterative(CurrentSnail.Name); _alliteration = "AlliterativeSnailsonality"
+				_personality = REPLACE(CurrentSnail.PersonalityType," ","_")
+				LastTalk = EVAL("Talk.%(_alliteration).%(_personality)")
+			}
+			elseif _pick == "Poem"
+			{
+				_poetry = REPLACE(CurrentSnail.PoetryType," ","_")
+				LastTalk = EVAL("Poetry.%(_poetry)")
+			}
 		}
 		
 		//User / fallback - this was gonna be an else, but I think I want this here in case the above functions fail because the variables are set wrong... this way you at least get SOMETHING instead of silence
