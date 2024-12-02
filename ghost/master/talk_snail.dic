@@ -115,7 +115,7 @@ Talk.Snailsonality.Slacker : nonoverlap_pool
 
 Talk.Snailsonality.Jealous : nonoverlap_pool
 {
-	"\1\b[10]i wish i was whatever i'm not right now"
+	"\1\b[10]i wish i was %(nfastcool)"
 }
 
 Talk.Snailsonality.Liar : nonoverlap_pool

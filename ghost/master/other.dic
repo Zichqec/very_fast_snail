@@ -838,6 +838,40 @@ BalloonIsOpen
 	"balloon" _in_ status
 }
 
+IsCooler //than it is faster
+{
+	_stats = CurrentStats
+	_speed = _stats[0]
+	_coolness = _stats[1]
+	
+	if _coolness > _speed; 1
+	else; 0
+}
+
+fastcool
+{
+	if IsCooler; "cool"
+	else; "fast"
+}
+
+speedcoolness
+{
+	if IsCooler; "coolness"
+	else; "speed"
+}
+
+nfastcool
+{
+	if IsCooler; "fast"
+	else; "cool"
+}
+
+nspeedcoolness
+{
+	if IsCooler; "speed"
+	else; "coolness"
+}
+
 //—————————————————————————————— Right click menu links ——————————————————————————————
 
 //Takes an array of alternating names and urls, and formats them for use with the right click menu
