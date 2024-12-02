@@ -68,9 +68,8 @@ OnSurfaceRestore
 	--
 	"\0"
 	--
-	//TODO This may eventually get more complicated... something something, snail happiness determined by radio station, over-encumberedness, cleanliness... hmmm.
-	if RadioStation == "Off"; "\s[5]" //TODO i would love for this to be a sad look lol
-	elseif RadioStation == CurrentSnail.RadioPreference; "\s[3]"
+	if RadioStation == "Off"; "\s[5]"
+	elseif RadioStation == CurrentSnail.RadioPreference || CurrentSnail.Cleanliness >= 10; "\s[3]"
 	else; "\s[0]"
 	--
 	if Racing
