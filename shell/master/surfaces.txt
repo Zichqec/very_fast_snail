@@ -952,7 +952,7 @@ surface5
 	
 	//basic green
 	animation31005.interval,bind
-	animation31005.pattern0,overlay,31005,0,0,0
+	animation31005.pattern0,overlay,31008,0,0,0
 	
 	//basic olive
 	animation31010.interval,bind
@@ -960,7 +960,7 @@ surface5
 	
 	//basic yellow
 	animation31015.interval,bind
-	animation31015.pattern0,overlay,31015,0,0,0
+	animation31015.pattern0,overlay,31018,0,0,0
 	
 	//basic orange
 	animation31020.interval,bind
@@ -968,7 +968,7 @@ surface5
 	
 	//basic red
 	animation31025.interval,bind
-	animation31025.pattern0,overlay,31025,0,0,0
+	animation31025.pattern0,overlay,31028,0,0,0
 	
 	//basic mauve
 	animation31030.interval,bind
@@ -976,7 +976,7 @@ surface5
 	
 	//basic purple
 	animation31035.interval,bind
-	animation31035.pattern0,overlay,31035,0,0,0
+	animation31035.pattern0,overlay,31038,0,0,0
 	
 	//basic navy
 	animation31040.interval,bind
@@ -984,7 +984,7 @@ surface5
 	
 	//basic blue
 	animation31045.interval,bind
-	animation31045.pattern0,overlay,31045,0,0,0
+	animation31045.pattern0,overlay,31048,0,0,0
 	
 	//basic azure
 	animation31050.interval,bind
@@ -992,7 +992,7 @@ surface5
 	
 	//basic mint
 	animation31055.interval,bind
-	animation31055.pattern0,overlay,31055,0,0,0
+	animation31055.pattern0,overlay,31058,0,0,0
 	
 	//basic white
 	animation31060.interval,bind
@@ -1000,7 +1000,7 @@ surface5
 	
 	//basic gray
 	animation31065.interval,bind
-	animation31065.pattern0,overlay,31065,0,0,0
+	animation31065.pattern0,overlay,31068,0,0,0
 	
 	//basic black
 	animation31070.interval,bind
@@ -1012,7 +1012,7 @@ surface5
 	
 	//cowprint green
 	animation32005.interval,bind
-	animation32005.pattern0,overlay,32005,0,0,0
+	animation32005.pattern0,overlay,32008,0,0,0
 	
 	//cowprint olive
 	animation32010.interval,bind
@@ -1020,7 +1020,7 @@ surface5
 	
 	//cowprint yellow
 	animation32015.interval,bind
-	animation32015.pattern0,overlay,32015,0,0,0
+	animation32015.pattern0,overlay,32018,0,0,0
 	
 	//cowprint orange
 	animation32020.interval,bind
@@ -1028,7 +1028,7 @@ surface5
 	
 	//cowprint red
 	animation32025.interval,bind
-	animation32025.pattern0,overlay,32025,0,0,0
+	animation32025.pattern0,overlay,32028,0,0,0
 	
 	//cowprint mauve
 	animation32030.interval,bind
@@ -1036,7 +1036,7 @@ surface5
 	
 	//cowprint purple
 	animation32035.interval,bind
-	animation32035.pattern0,overlay,32035,0,0,0
+	animation32035.pattern0,overlay,32038,0,0,0
 	
 	//cowprint navy
 	animation32040.interval,bind
@@ -1044,7 +1044,7 @@ surface5
 	
 	//cowprint blue
 	animation32045.interval,bind
-	animation32045.pattern0,overlay,32045,0,0,0
+	animation32045.pattern0,overlay,32048,0,0,0
 	
 	//cowprint azure
 	animation32050.interval,bind
@@ -1052,7 +1052,7 @@ surface5
 	
 	//cowprint mint
 	animation32055.interval,bind
-	animation32055.pattern0,overlay,32055,0,0,0
+	animation32055.pattern0,overlay,32058,0,0,0
 	
 	//cowprint white
 	animation32060.interval,bind
@@ -1060,7 +1060,7 @@ surface5
 	
 	//cowprint gray
 	animation32065.interval,bind
-	animation32065.pattern0,overlay,32065,0,0,0
+	animation32065.pattern0,overlay,32068,0,0,0
 	
 	//cowprint black
 	animation32070.interval,bind
