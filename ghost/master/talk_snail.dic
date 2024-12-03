@@ -142,6 +142,7 @@ Talk.AlliterativeSnailsonality.Basic : nonoverlap_pool
 	"\1\b[10]Beep beep."
 	"\1\b[10]Upgrades unpleasant? Unthinkable."
 	"\1\b[10]Sunglasses show style superbly."
+	"\1\b[10]Give %(grapes). Great gastrointestinal growling." //?????? :joy: stomach, gastrointestinal, same thing right...
 }
 
 Talk.AlliterativeSnailsonality.Character_Break : nonoverlap_pool

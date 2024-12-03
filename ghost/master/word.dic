@@ -476,3 +476,17 @@ AltHobby : array
 	"shoplifting"
 	"dancing"
 }
+
+//G ONLY
+grapes
+{
+	"grapes"
+	"gravy"
+	"gelatin"
+	"grapefruit"
+	"guava"
+	"guacamole"
+	"gum"
+	"greens"
+	"gnocchi"
+}

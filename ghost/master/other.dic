@@ -41,6 +41,8 @@ OnTranslateInternal.AutoPause
 		_talk = REPLACE(_talk,"! ","!\w8\w8 ") //Exclamation point
 		_talk = REPLACE(_talk,"; ",";\w4 ") //Semicolon
 		//_talk = REPLACE(_talk,"- ","-\w8 ") //Dash - This one seems to happen a lot when I don't want it, so I am commenting it out
+		_talk = REPLACE(_talk,"\w8 \n","\w8\n") //Bandaid fix for poetry linebreak awkwardness...
+		_talk = REPLACE(_talk,"\w4 \n","\w4\n")
 	}
 	
 	_talk
@@ -983,6 +985,8 @@ DialogueTransition
 	_talk2 = _talk2tags + _talk2last
 	
 	_output += _talk2
+	
+	_output = REPLACE(_output," %(emdash)\w8\w8","%(emdash)\w8\w8") //bandaid patch because sometimes it breaks on a space... i should probably just try to fix this tho cuz it shouldn't happen - but tbh maybe this is the better fix lol. less looping... i'll think about it. and it allows breaking between words!
 	
 	_output
 }

@@ -163,6 +163,7 @@ chain.pellet_wars
 }}CHAIN
 
 //Make heredocs into something useful, apply linebreaks. Note that this expects two linebreaks between each poem. If we want something other than that it'll have to be handled manually
+//Additional arguments are tags to be applied to the start of each poem, like alignment and balloon tags
 ProcessPoems
 {
 	_poems = SPLIT(_argv[0],"%(C_CRLF)%(C_CRLF)%(C_CRLF)")
@@ -170,7 +171,17 @@ ProcessPoems
 	_output = IARRAY
 	foreach _poems; _poem
 	{
-		_output ,= REPLACE(_poem,C_CRLF,"\n ")
+		_temp = ""
+		_temp = REPLACE(_poem,C_CRLF,"\n")
+		if _argc > 1
+		{
+			for _i = 1; _i < _argc; _i++
+			{
+				_temp = _argv[_i] + _temp
+			}
+		}
+		_output ,= _temp
 	}
+	
 	_output
 }
