@@ -1,16 +1,16 @@
 Poetry.Snoem : nonoverlap_pool
 {
 	_snoems = <<"
-	Racing runs rampant. Risk, reward.
-	Understanding useful.
-	Nowhere near nonexistent. Nevertheless, not nervous.
+	Racing runs rampant. Risk, reward. 
+	Understanding useful. 
+	Nowhere near nonexistent. Nevertheless, not nervous. 
 	
 	
-	Super speed shocks several.
-	Pleased, plan productive.
-	Effort escalated, ease eminent.
-	Engine elevated.
-	Digging deeper, dedicated driver.
+	Super speed shocks several. 
+	Pleased, plan productive. 
+	Effort escalated, ease eminent. 
+	Engine elevated. 
+	Digging deeper, dedicated driver. 
 	
 	
 	Testing
@@ -19,53 +19,162 @@ Poetry.Snoem : nonoverlap_pool
 	Ting
 	">>
 	
-	_snoems = ProcessPoems(_snoems)
+	_snoems = ProcessPoems(_snoems,"\b[12]","\f[name,Courier New]")
 	parallel _snoems
 }
 
-Poetry.Haiku
+Poetry.Haiku : nonoverlap_pool
 {
 	"\1\b[10]Haiku"
 }
 
-Poetry.Cinquain
+Poetry.Cinquain : nonoverlap_pool
 {
 	"\1\b[10]Cinquain"
 }
 
-Poetry.Limerick
+Poetry.Limerick : nonoverlap_pool
 {
 	"\1\b[10]Limerick"
 }
 
-Poetry.Acrostic
+Poetry.Acrostic : nonoverlap_pool
 {
-	"\1\b[10]Acrostic"
+	parallel Poetry.Acrostic.Left
+	parallel Poetry.Acrostic.Center
+	parallel Poetry.Acrostic.Right
 }
 
-Poetry.Lyric
+Poetry.Acrostic.Left
+{
+	_poems = <<"
+	Screaming down the lanes,
+	Pace unmatched.
+	Excitement as the finish line approaches, the
+	End in sight.
+	Diligently pushing forward, can't relax
+	Yet!
+	
+	
+	Flying across the track,
+	All sense of danger abandoned.
+	Somewhere out there the finish line is growing nearer.
+	Try to pull ahead!
+	
+	
+	Surrounded by the coolest mollusks,
+	Nerves alight.
+	All amaze with their
+	Impeccable style,
+	Leaving others to languish in envy.
+	
+	
+	Raucous cries raise into the
+	Air, the crowd screams in delight.
+	Cheers drown out all other sound as the
+	Evening's competition comes to an end.
+	
+	
+	Quiz time! Who's the fastest snail in the whole
+	Universe?
+	It's me! I might just be the
+	Coolest too, in my
+	Knitted sweater.
+	">>
+	
+	_poems = ProcessPoems(_poems,"\b[12]","\f[name,Courier New]")
+	_poems
+}
+
+Poetry.Acrostic.Right
+{
+	_poems = <<"
+	even the most basiC 
+	colors can impress, showing whO 
+	wears each hue the best. twO 
+	colors intertwined? what a thrilL!
+	
+	
+	spirals curving outwardS 
+	form a lavisH 
+	helical shapE.
+	a lovely swirL 
+	that i carry as i traveL.
+	
+	
+	you'll never feel so freE 
+	as wheN 
+	your wheels are turninG,
+	propelling you towards the kiwI 
+	in the canteeN.
+	make hastE!
+	
+	
+	they say practice makes perfecT,
+	or something neaR 
+	to it. a mantrA 
+	that inspires even I,
+	when i've falleN 
+	into an antI 
+	racing stupor. i can wiN,
+	i can, i just have to keep goinG.
+	
+	
+	hear the sounds of tinkerinG 
+	filling the room? a sure sign this areA 
+	is underR 
+	the control of A 
+	skilled mechanic. it's worth askinG 
+	for advicE.
+	">>
+	
+	_poems = ProcessPoems(_poems,"\b[12]","\f[align,right]","\f[name,Courier New]")
+	_poems
+}
+
+Poetry.Acrostic.Center
+{
+	_poems = <<"
+	::              get aUthentic parts,     ::
+	::             avoid Phonies if          ::
+	::          you want Guaranteed          ::
+	:: satisfaction. the Risk isn't worth    ::
+	::            it to sAve a few           ::
+	::             extra Dollars.            ::
+	::           you'll rEgret buying cheap. ::
+	">>
+	_poems = ProcessPoems(_poems,"\![no-autopause]","\b[2]","\f[align,center]","\f[name,Courier New]")
+	
+	_output = IARRAY
+	foreach _poems; _poem
+	{
+		_output ,= REPLACE(_poem,"::","")
+	}
+	_output
+}
+
+
+Poetry.Lyric : nonoverlap_pool
 {
 	"\1\b[10]Lyric"
 }
 
-Poetry.Rhyming_Couplet
+Poetry.Rhyming_Couplet : nonoverlap_pool
 {
 	"\1\b[10]Rhyming couplet"
 }
 
-Poetry.Alternate_Rhyme
+Poetry.Alternate_Rhyme : nonoverlap_pool
 {
 	"\1\b[10]Alternate rhyme"
 }
 
-Poetry.Free_Verse
+Poetry.Free_Verse : nonoverlap_pool
 {
 	"\1\b[10]Free verse"
 }
 
-Poetry.Diamante
+Poetry.Diamante : nonoverlap_pool
 {
 	"\1\b[10]Diamante"
 }
-
-//concrete poetry maybe - conveniently, heredocs will work well for this lol
