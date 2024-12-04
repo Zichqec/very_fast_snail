@@ -171,11 +171,13 @@ ProcessPoems
 	_output = IARRAY
 	foreach _poems; _poem
 	{
-		_temp = ""
-		_temp = REPLACE(_poem,C_CRLF,"\n")
-		if _argc > 1
+		_temp = _poem
+		if _argv[1] == 1; _temp = REPLACE(_temp,C_CRLF,"\w8\w8\n")
+		else; _temp = REPLACE(_temp,C_CRLF,"\n")
+		_temp = REPLACE(_temp,"::","\![]") //i dont understand why if i use a space it acts as though this whitespace is not important and discards it...
+		if _argc > 2
 		{
-			for _i = 1; _i < _argc; _i++
+			for _i = 2; _i < _argc; _i++
 			{
 				_temp = _argv[_i] + _temp
 			}
@@ -183,5 +185,35 @@ ProcessPoems
 		_output ,= _temp
 	}
 	
+	_output
+}
+
+SkipSpaces
+{
+	_poems = _argv
+	_output = IARRAY
+	foreach _poems; _poem
+	{
+		_lines = SPLIT(_poem,"\n")
+		_newlines = ""
+		foreach _lines; _line
+		{
+			void RE_GREP(_line,"\s(\s+)")
+			for _i = ARRAYSIZE(RE_GETSTR) - 1; _i >= 0; _i--
+			{
+				//_line = REPLACE(_line," " + RE_GETSTR[_i]," \![quicksection,1]" + RE_GETSTR[1] + "\![quicksection,0]",1)
+				
+				_str = RE_GETSTR[_i]
+				_len = STRLEN(_str)
+				_pos = RE_GETPOS[_i]
+				
+				_line = ERASE(_line,_pos,_len)
+				_line = INSERT(_line,_pos," \![quicksection,1]" + SUBSTR(_str,0,_len - 1) + "\![quicksection,0]")
+			}
+			if _newlines != ""; _newlines += "\n"
+			_newlines += _line
+		}
+		_output ,= _newlines
+	}
 	_output
 }

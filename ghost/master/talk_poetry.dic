@@ -3,14 +3,14 @@ Poetry.Snoem : nonoverlap_pool
 	_snoems = <<"
 	Racing runs rampant. Risk, reward. 
 	Understanding useful. 
-	Nowhere near nonexistent. Nevertheless, not nervous. 
+	Nowhere near nonexistent. Nevertheless, not nervous.
 	
 	
 	Super speed shocks several. 
 	Pleased, plan productive. 
 	Effort escalated, ease eminent. 
 	Engine elevated. 
-	Digging deeper, dedicated driver. 
+	Digging deeper, dedicated driver.
 	
 	
 	Testing
@@ -19,7 +19,7 @@ Poetry.Snoem : nonoverlap_pool
 	Ting
 	">>
 	
-	_snoems = ProcessPoems(_snoems,"\b[12]","\f[name,Courier New]")
+	_snoems = ProcessPoems(_snoems,0,"\b[12]","\f[name,Courier New]")
 	parallel _snoems
 }
 
@@ -48,109 +48,105 @@ Poetry.Acrostic : nonoverlap_pool
 Poetry.Acrostic.Left
 {
 	_poems = <<"
-	Screaming down the lanes,
-	Pace unmatched.
+	Screaming down the lanes, 
+	Pace unmatched. 
 	Excitement as the finish line approaches, the
-	End in sight.
+	End in sight. 
 	Diligently pushing forward, can't relax
 	Yet!
 	
 	
-	Flying across the track,
-	All sense of danger abandoned.
-	Somewhere out there the finish line is growing nearer.
+	Flying across the track, 
+	All sense of danger abandoned. 
+	Somewhere out there the finish line is growing nearer. 
 	Try to pull ahead!
 	
 	
-	Surrounded by the coolest mollusks,
-	Nerves alight.
+	Surrounded by the coolest mollusks, 
+	Nerves alight. 
 	All amaze with their
-	Impeccable style,
+	Impeccable style, 
 	Leaving others to languish in envy.
 	
 	
 	Raucous cries raise into the
-	Air, the crowd screams in delight.
+	Air, the crowd screams in delight. 
 	Cheers drown out all other sound as the
 	Evening's competition comes to an end.
 	
 	
 	Quiz time! Who's the fastest snail in the whole
-	Universe?
+	Universe? 
 	It's me! I might just be the
 	Coolest too, in my
 	Knitted sweater.
 	">>
 	
-	_poems = ProcessPoems(_poems,"\b[12]","\f[name,Courier New]")
+	_poems = ProcessPoems(_poems,0,"\b[12]","\f[name,Courier New]")
 	_poems
 }
 
 Poetry.Acrostic.Right
 {
 	_poems = <<"
-	even the most basiC 
-	colors can impress, showing whO 
-	wears each hue the best. twO 
-	colors intertwined? what a thrilL!
+	::               even the most basiC
+	::   colors can impress, showing whO
+	::      wears each hue the best. twO
+	:: colors intertwined? what a thrilL!
 	
 	
-	spirals curving outwardS 
-	form a lavisH 
-	helical shapE.
-	a lovely swirL 
-	that i carry as i traveL.
+	:: spirals curving outwardS
+	::            form a lavisH
+	::            helical shapE. 
+	::           a lovely swirL
+	:: that i carry as i traveL. 
 	
 	
-	you'll never feel so freE 
-	as wheN 
-	your wheels are turninG,
-	propelling you towards the kiwI 
-	in the canteeN.
-	make hastE!
+	::       you'll never feel so freE
+	::                         as wheN
+	::         your wheels are turninG, 
+	:: propelling you towards the kiwI
+	::                  in the canteeN. 
+	::                      make hastE! 
 	
 	
-	they say practice makes perfecT,
-	or something neaR 
-	to it. a mantrA 
-	that inspires even I,
-	when i've falleN 
-	into an antI 
-	racing stupor. i can wiN,
-	i can, i just have to keep goinG.
+	::  they say practice makes perfecT, 
+	::                or something neaR
+	::                  to it. a mantrA
+	::             that inspires even I, 
+	::                 when i've falleN
+	::                     into an antI
+	::         racing stupor. i can wiN, 
+	:: i can, i just have to keep goinG. 
 	
 	
-	hear the sounds of tinkerinG 
-	filling the room? a sure sign this areA 
-	is underR 
-	the control of A 
-	skilled mechanic. it's worth askinG 
-	for advicE.
+	::            hear the sounds of tinkerinG  
+	:: filling the room? a sure sign this areA  
+	::                               is underR  
+	::                        the control of A  
+	::     skilled mechanic. it's worth askinG  
+	::                              for advicE. 
 	">>
 	
-	_poems = ProcessPoems(_poems,"\b[12]","\f[align,right]","\f[name,Courier New]")
+	_poems = ProcessPoems(_poems,0,"\b[2]","\f[name,Courier New]","\f[height,-2]")
+	_poems = SkipSpaces(_poems)
 	_poems
 }
 
 Poetry.Acrostic.Center
 {
 	_poems = <<"
-	::              get aUthentic parts,     ::
-	::             avoid Phonies if          ::
-	::          you want Guaranteed          ::
-	:: satisfaction. the Risk isn't worth    ::
-	::            it to sAve a few           ::
-	::             extra Dollars.            ::
-	::           you'll rEgret buying cheap. ::
+	::              get aUthentic parts, 
+	::             avoid Phonies if
+	::          you want Guaranteed
+	:: satisfaction. the Risk isn't worth
+	::            it to sAve a few
+	::             extra Dollars. 
+	::           you'll rEgret buying cheap.
 	">>
-	_poems = ProcessPoems(_poems,"\![no-autopause]","\b[2]","\f[align,center]","\f[name,Courier New]")
-	
-	_output = IARRAY
-	foreach _poems; _poem
-	{
-		_output ,= REPLACE(_poem,"::","")
-	}
-	_output
+	_poems = ProcessPoems(_poems,0,"\b[2]","\f[name,Courier New]")
+	_poems = SkipSpaces(_poems)
+	_poems
 }
 
 
@@ -176,32 +172,44 @@ Poetry.Free_Verse : nonoverlap_pool
 
 Poetry.Diamante : nonoverlap_pool
 {
-	"\1\b[10]Diamante"
+	_poems = <<"
+	Safety
+	Important, boring
+	Protecting, droning, restricting
+	Caution, warning, danger, emergency
+	Exciting, invigorating, shocking
+	Sudden, dangerous
+	Explosion
+	">>
+	_poems = ProcessPoems(_poems,1,"\b[2]","\f[align,center]","\f[height,-2]")
+	_poems
 }
 
 //18 lines x 51 characters maximum
 Poetry.Concrete
 {
 	_poems = <<"
-    .               the unmistakable       curl      of
-    .           a snail's spiral shell is    to     be
-    .        admired, for in it you can see   the way
-    .      of all life         itself. twisting round
-    .     and round, curling in   upon itself, beautiful
-    .    and free.  a true marvel,  repeating endlessly,
-    .    yet each  is      unique.  sharing traits, while
-    .    standing  on       their   own, wholly complete.
-    .    strength,        beauty,   perfectly woven
-    .     together into a dance   that mesmerizes,
-    .      leaving onlookers    entranced by its
-    .         allure.        many have wondered
-    .   where the       power of these structures
-    . originates, captivated by its pull. the
-    .  truth? a shell simply reflects the
-    .          universe       itself.
+    ::               the unmistakable       curl      of
+    ::           a snail's spiral shell is    to     be
+    ::        admired, for in it you can see   all the
+    ::      mysteries            of life. twisting round
+    ::     and round, curling in   upon itself, beautiful
+    ::    and free.  a true marvel,  repeating endlessly,
+    ::    yet each  is      unique.  sharing traits, while
+    ::    standing  on       their   own, wholly complete.
+    ::    strength,        beauty,   perfectly woven
+    ::     together into a dance   that mesmerizes,
+    ::      leaving onlookers    entranced by its
+    ::         allure.        many have wondered
+    ::   where the       power of these structures
+    :: originates, captivated by its pull. the
+    ::  truth? a shell simply reflects the
+    ::          universe       itself.
 	">>
-	_poems = REPLACE(_poems,C_CRLF,"\n")
-	_poems = REPLACE(_poems,"."," ")
-	_poems = "\![no-autopause]\1\b[2]\_q\f[name,courier new]\f[height,-4]\f[align,left]" + _poems
+	_poems = ProcessPoems(_poems,0,"\b[2]","\f[height,-4]","\f[name,courier new]")
+	// _poems = REPLACE(_poems,C_CRLF,"\n")
+	// _poems = REPLACE(_poems,"\n::","\n ")
+	// _poems = "\![no-autopause]\1\b[2]\_q\f[name,courier new]\f[height,-4]\f[align,left]" + _poems
+	_poems = SkipSpaces(_poems)
 	_poems
 }
