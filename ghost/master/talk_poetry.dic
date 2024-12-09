@@ -1,22 +1,752 @@
 Poetry.Snoem : nonoverlap_pool
 {
 	_snoems = <<"
-	Racing runs rampant. Risk, reward. 
-	Understanding useful. 
+	Racing runs rampant. Risk, reward.
+	Understanding useful.
 	Nowhere near nonexistent. Nevertheless, not nervous.
-	
-	
-	Super speed shocks several. 
-	Pleased, plan productive. 
-	Effort escalated, ease eminent. 
-	Engine elevated. 
+
+
+	Super speed shocks several.
+	Pleased, plan productive.
+	Effort escalated, ease earned.
+	Engine elevated.
 	Digging deeper, dedicated driver.
-	
-	
-	Testing
-	Esting
-	Sting
-	Ting
+
+
+	Worthy, well warranted win.
+	Instill in individuals immeasurable itch.
+	Need numerous.
+
+
+	Lethargic. Lazy lounging.
+	Overtime... opposed.
+	Sapped, saving stores.
+	Effort expended.
+
+
+	Unbeaten, unwavering.
+	None nibble near numbers.
+	Slipping smoothly, safely superior.
+	Trials, tribulations, taken.
+	Opposition overcome.
+	Pressing past,
+	Pressure passed.
+	Able and armed, active amazement.
+	Blurring by.
+	Leaving languishing lost.
+	Excellence encompasses.
+
+
+	Engine error!
+	Xplosion!
+	Crunch, crash!
+	Invigorated, inches in isolation.
+	To triumph!
+	Instincts ignited.
+	Never notice nearby noise.
+	Go, glory!
+
+
+	Awestruck, aware again, as always.
+	We wish we were whom, when, why.
+	Eager, eliciting excitement.
+	Supreme speed, sublime smoothness. Similarly studied, saved shortly.
+	Other options offer, only observed.
+	My memory makes my muscles mightier.
+	External evaluation excellent.
+
+
+	Brushing by, blindingly bright bursts boosting.
+	Leaves long lingering lines.
+	Unbelieveable upper units.
+	Rocketing rapidly, reaching records.
+
+
+	Finally, free for Friday.
+	In instances, I invoked indifference.
+	Now: nestling, nodding, nearing naptime.
+	I ignite in inspiration.
+	Starting soon, soaring swiftly.
+	Here hours, head healthier.
+
+
+	Swiftness soon seeded, swimming speedily southward.
+	Try to tear the track twain.
+	Aligned and aching, ahead awaits.
+	Rumble ready!
+	Turbo, top tier terror!
+
+
+	Questing quickly.
+	Understandable unrest.
+	Itching, intrigued, indisputable interest.
+	Chasing comets, coffee, cornflakes.
+	Knowledge kneaded.
+
+
+	Comical coolness crimes.
+	Openly ostracized,
+	Over our own.
+	Laughter loops, leaves lettuce lacking.
+
+
+	Every effort exuded.
+	Xtreme xpenses xpunged.
+	Plumes pile past the pole.
+	Long languishing, looks like.
+	Ostensibly, overlooked orders or obstinate orchestration.
+	Don't dither, do due diligence.
+	Express example: evade expertly.
+
+
+	Shining, shimmering, smooth.
+	Health high, huge help.
+	Effortless edge, eking ever elevated.
+	Lavish lingering looks,
+	Luster, luxury, longing lessers.
+
+
+	Washed well.
+	Abrasives applied.
+	Xtra xpensive xfoliation.
+
+
+	Mustering muscle, measly members mumble.
+	Unafraid, unaffected.
+	Cause? Confidence, clear central care.
+	Unstoppable.
+	Snails steal sights. Slime slick, smooth, smothering.
+
+
+	Lettuce lingers, leaving lists longing.
+	Eureka!
+	An approach appears!
+	First, forage for forty fortnights. Finally, food!
+	Yum!
+
+
+	Lined, long, linear.
+	An astonishing array.
+	Notice now, nudging narrowly north.
+	Entranced, enthusiasm emerges!
+
+
+	Try try try.
+	Rise, relent, repeat.
+	An agonizing, aimless art.
+	Cracked clocks, caged cruises.
+	Keeping keels knit.
+
+
+	Tasks to trudge towards.
+	Relentless reasoning: rally readily, reap rewards.
+	Against all, an acceptance.
+	Initiative instigated.
+	Needed, nearly now.
+	Invited, immediately is ideal.
+	No? Never? Noted.
+	Go, gain glory gallantly getting gloves.
+
+
+	Cheering, cries, clapping, cacaphony.
+	Roars, rendering rallies riotous.
+	Ordinary? Opposite.
+	Where we were, wailing wars waged.
+	Drums diligent; deafening, deadening drones.
+
+
+	Clambering clasp, catching, clinging close.
+	Here, hundreds, holding heartily.
+	Every eye enraptured.
+	Every ear engaged.
+	Resplendent revelation. Resolution: repeat.
+
+
+	Cheering, clammy clacking closing.
+	Long lunge, lingering loses.
+	Oh...!
+	Seconds spared, surging speedily southward.
+	Entire engine engaged, extra effort emanates.
+
+
+	Apparently, apples are attached ahead.
+	Go! Get grub, gusto!
+	Insufficient initiation... insurmountable.
+	Lacking... Longing. Linking... leverage?
+	Idea! Ingenious invention.
+	Two together, tethered, tumbles to the track.
+	Yay! Yearned yum yours.
+
+
+	An achievement, amassing accolades.
+	Dreaming. Day dawning, daylight descended.
+	Effort expands. Early effort earns everything.
+	Practice, practice, practice. Perfect practice programs perfect performance.
+	Tonight's thoughts true soon.
+
+
+	Flowing, fleet.
+	Over obstacles,
+	Old or otherwise.
+	Trials take time, tasting too.
+
+
+	No, nothing needed now.
+	An area alone.
+	Pushing, pulling... Please, peace place. Purge pressure.
+
+
+	Anterior axle alight.
+	Burning, bright blaze behind.
+	Leading, luck lingers lightly.
+	All agape, attention aimed.
+	Zings, zooming zone.
+	End! Excellent effort, edge entered.
+
+
+	So, some snails seek stories?
+	Understandable.
+	Perhaps ""Pulled Pickle Park"" pleases?
+	Eager, excited.
+	Rally reminiscing relay readied, ready receiver.
+	Beautiful. Beginning...
+
+
+	Beat billions, brain booming.
+	Excellence, exceeding expectations, experience, elation.
+	Streaks shooting straight, surging speedily starward.
+	Tales told til time's termination.
+
+
+	Grand, grit and glory, gliding gleefully.
+	Racing rapidly, reaching records.
+	Enthusiasm, excitement! Everyone exalts.
+	Aspirations achieved.
+	Thrill time. Tomorrow topples today.
+
+
+	Long lost lanes, lofty limitations.
+	Everyone expected excellence.
+	Greatness granted graciously, glistening goo gilded grades.
+	Each earned enshrinement eternally.
+	No number nullified, none.
+	Don't delete data.
+
+
+	Looping, looking, leaning, longing.
+	Oh, orange! Only one! Over, over!
+	No, nutrition never near. Necessity not nibbled.
+	Great gloom...
+
+
+	Shocking, several snails steal scoreboard!
+	Heavy... however, hardly hideable.
+	Obvious on oculars.
+	Reaction rapid, rescue rallied!
+	Thieves taken, thing transported. Total triumph.
+
+
+	Seen snail story? So special.
+	Helium held high, hundreds huddled.
+	Oh! Overtop of old olive orchard!
+	Crashing! Clattered, clustered close. Clear?
+	Knockout! Knowledge known...
+
+
+	Shocking story.
+	Urgent! Unmissable!
+	Racer's rank rapidly rising!
+	Powerful pushes, pulling past peers.
+	Run, react! Rush, repel ruin!
+	Insufficient.
+	Swoosh, sand spray, surged speedily southward!
+	Escaped...
+
+
+	Growing greatly, gathering goodies.
+	Every elevation enhances excitement.
+	All approved, advance!
+	Rocket roll!
+
+
+	Go go go.
+	Advance, ashes aft!
+	Screaming speeds, swooping strongly!
+
+
+	Over, over. Obligation, or oblivion.
+	Innumerable instances.
+	Lasting, let lead.
+
+
+	Many months managed.
+	Each erratic, exciting. Even exchange.
+	Calibration, coils cleaned, charged, canister claimed.
+	Here hangs heart, head, humor.
+	Anchor. Above all, allied advancement.
+	Nobly nudging northward.
+	Indisputably invaluable.
+	Coolest, cleverest civilian.
+
+
+	Glitz, glamor.
+	Appraised, awe-inspiring amounts.
+	Riches radiate, rolled rewards.
+	All applied accurately.
+	Geared graciously, great gains.
+	Excellence, enthusiasm earned!
+
+
+	Treads tired, torn, toothless.
+	Immovable, imminent isolation.
+	Replaced, revved, ready!
+	Earth-shattering explosion.
+
+
+	Waging war with whoever wishes.
+	Here, hallowed halls, honors hang.
+	Effort encouraged,
+	Enumerated, enshrined.
+	Let's lunge, loser lifts lunch!
+
+
+	Speed supercharged.
+	Promised potential practically proven.
+	Onward! Oiled, orderly, obstinate.
+	Ignition initiated.
+	Leaving losers lingering.
+	Emphasis, excellence.
+	Roaring rapidly, rough runway rushed.
+
+
+	Heavy head, huge help.
+	Explosions eliminated.
+	Lugging large lump, legitimate logic.
+	Manageable, means more motorway.
+	Effective, exciting edge.
+	Trusted to take to the triumph.
+
+
+	Greased, glowing.
+	Objectively outstanding.
+	Gleaming, glossy,
+	Glistening greatly.
+	Lustrous luminosity.
+	Ephemeral.
+	Sublime sights secured. Solely seen, safe sight spectacles.
+
+
+	Ghostly glimmer.
+	Languishing, lengths long.
+	An achievement!
+	Spectacles show sights so smoothly,
+	Straining solved.
+	Exacting emphasized, excellent.
+	Soon shall search, see surroundings scrupulously.
+
+
+	Peeling, please place pigments posthaste.
+	Anew, aglow. All accurate, as appropriate.
+	Impressive iridescence.
+	Never neglect needed nourishment.
+	Time tarnishes. Tip? Take treatment.
+
+
+	Decor demanded. Danger? Disregarded.
+	Enhanced exhibition, excitement elicited.
+	Coolness clears chronicles.
+	All aware, agape.
+	Longing, learning, loudly livid.
+
+
+	Shiny, shimmery shape.
+	Tacked to torso triumphantly.
+	Inventory innumerable, impressive.
+	Chassis chaotic, cramped, complete.
+	Keyword: kingly.
+	Excellence evident, enviable.
+	Regarded remarkably.
+
+
+	Healthy handling helps heap high hopes.
+	Against all assumptions, arising abruptly.
+	Readiness reached, revving.
+	Devouring dragway, demanding dominance.
+	Watch! Winner weaving way westward, whoosh!
+	All aghast at agility.
+	Roaring readily, running route rapidly.
+	Exceptional ending.
+
+
+	Soaring so smoothly, superimposed.
+	Tumbling towards tail.
+	Rippling, rallying readiness.
+	Immaculate, impressing immediately.
+	Painted perfectly, polished pleasantly.
+	Elegant, expressive.
+	Shell superiority.
+
+
+	Hovering, head huddled.
+	Attracting attention, amazement abounds.
+	Temperature troubles thrown to the tigers.
+
+
+	Billions, bulk bottled.
+	Unobtained? Unthinkable.
+	Yearning.
+
+
+	Shunted, shoved sideways.
+	Earning expediently, expenses expunged.
+	Lingering longing languishes.
+	Loaded lustrously, looking lots.
+
+
+	Noodles, nuggets, natural nourishment.
+	Ingredients instilled intentionally.
+	Bite bite bite.
+	Bunches brunched.
+	Lunch loved, longed.
+	Eaten expediently.
+
+
+	All alike, as appropriate.
+	Length? Little labor.
+	Luxuriously listing letters.
+	Impeccable intellect, impressive ideas.
+	Turning tight terminology to terrific twists.
+	Elation! Excellence evident. Esteem earned.
+	Rapidly reaching rambling records.
+	All applaude, awestruck.
+	The timing, the technique, the triumph.
+	Impressive insights, immediate, immersive.
+	Opulent offerings observed.
+	Naturally noble.
+
+
+	Spinning strongly, smooth, sleek.
+	Placid painted planes.
+	Iridescence intrigues, inspires.
+	Radial rotations rush 'round.
+	Awestruck at alignment and amazing attunement.
+	Luxury living.
+
+
+	Speckled shell, stunning sight.
+	Pleasant painting, passion proven present.
+	Observation: old ones obligated, ordinary overstayed.
+	Trying to tip them towards the twilight times.
+	Soon, speckles shall smother.
+
+
+	Winner's wishes woven wonderfully.
+	Incomprehensibly intricate, indisputably ingenious.
+	Novelty? Never.
+	Greatness grows granted gifts.
+	Shoots straight, speeds stupendous.
+
+
+	Wicked wings whip westward, whooping, waving wins wildly.
+	Impressive? Irresponsible? Impossibly interwoven, intervention... impractical.
+	Not nearly, not now.
+	Deliberating deeply. Demands depart, dispel delay distaste.
+
+
+	Fleet footed from first. Feathers flexing, fitness fought for. Finally, freedom.
+	Long lashes link, lunging lightly, lift lent. Lofty, luxury.
+	Introspection: impossible instigated. Ideals irrepressible.
+	Gaining greatness, glee given.
+	Hovering, head held high. Happy here.
+	This trail, truly, treat to travel.
+
+
+	Boom!
+	Obstacle obliterated,
+	Oomph obtained.
+	Sheer speed, speedometer shattered.
+	Tearing towards the top, trails transferred to the track.
+	Elation, end earned, enshrined eternally. Except...?
+	Rival returns, retaliates! Risky race. Rush, revenge!
+
+
+	Risk, reward. Ready?
+	On, open! Observe!
+	Crashing concerns? Crushed. Capital condition, construction complete.
+	Knowledge keen, kilometers known.
+	Except...
+	Tragedy! Toppled, twirling, thrusters torn! Terrible tumbling torrent, totally trashed...
+
+
+	Reaching robust ranks.
+	All alone, amounts absurd.
+	None nearby, neighborhood not normally near.
+	Going gold, great gap granted.
+	Exploration, excitement! Enthusiasm earned.
+
+
+	Fortune, fame, food.
+	All accepted affably.
+	Numerous necessary, now.
+
+
+	Shifter set, speed slowly surges.
+	To the top! Twists, turns, tradeoffs.
+	Insufficient.
+	Click, clutch, charging.
+	Keep kicking!
+
+
+	Trouble, trails torched!
+	Unfazed. Urgent!
+	Rushes, reaches reverse raw!
+	No nervousness, navigation necessary!
+
+
+	Swerving swiftly, soaring.
+	Trails tricky, tumbling trials.
+	Evasiveness effective,
+	Everyone eclipsed.
+	Roaring, runaway racer!
+
+
+	Zooming.
+	Insurmountable. In instances, immeasurable.
+	Going, going, gone.
+	Zenith.
+	Above all. An amazing achievement.
+	Greater grandeur, gasps given.
+
+
+	Escape, eased eastward, entered elevator.
+	Safe? Suspicious.
+	Chance, could catch. Crawl, clear clamps.
+	Always alert, asleep avoided.
+	Reaching, risking, racing.
+	Go, gently, gracefully.
+	Onward, on outskirts...
+	Triumph! To the track!
+
+
+	Crunch crunch, crack.
+	Alright? Alas, adversely affected.
+	Lacking lettered larder...
+	Cafeteria! Craving cheese!
+	Ingest immediately!
+	Utilizing useful udon.
+	Mitigated... mending.
+
+
+	Swelling, see? So sleek.
+	These things, terrific.
+	Regular reps reveal range.
+	Obtained, others observe.
+	New numbers near northernmost! Not negligible.
+	Growing greatly, glad.
+
+
+	So smooth, so strong.
+	Mine, must mention.
+	Ask about alliance?
+	Rejected!
+	Triumphant, topmost target!
+
+
+	See shadows slip southwards.
+	Evenings eventually end.
+	An airy announcement...
+	Summer soon sleeps.
+	Onward, oval orbit.
+	Nights now numerous. Needed, natural naptime.
+
+
+	Reaching rallies readily.
+	Advancing advertisements, accruing accolades.
+	Defying death, determined.
+	Invisible.
+	Omnipresent.
+
+
+	Attention all!
+	Don't delay, demands don't drop!
+	Swiftly, store shelves selling soon!
+
+
+	Gliding goo, grasping greens.
+	Amazing, appreciate. Awe appropriate.
+	Strength, smooth sailing, several smarts.
+	Traveling, two trips today.
+	Rumble ready?
+	Obviously.
+	Powerful, positively prepared.
+	Otherwise, outgiving.
+	Daresay, delightful.
+
+
+	Shores stretch southward.
+	Enjoyable energy.
+	All amass around, appreciate abundant alluvium.
+
+
+	Lengthy, large.
+	Apparently amassed ages ago.
+	Now, needed. Nice neighborhoods nearby.
+	Destiny? Digging dirt.
+
+
+	Muscled, mighty, mover.
+	Olympian. Observe!
+	Leading, legends left lingering.
+	Lane leaders, largely lonesome leaps.
+	Undefeatable.
+	See? Strong, speedy!
+	Keep knowledge.
+
+
+	Zip, zag, zwoosh!
+	Ordinary obliterated,
+	Obstacles overcome.
+	Moving, moving, moving!
+
+
+	Building before, brace! ... Bam!
+	Report!?
+	Alive! Although, all apart...
+	Knocked, klutziness killed knack.
+	Estimated expense... enormous. Eek!
+	Savings shrinking speedily!
+
+
+	Sweeps swiftly, shoving steadily sunward.
+	Keen, knightly, knowledgeable!
+	Inevitably influential, instilling inspiration in idolaters.
+	Look, leaping leftwards!
+	Leaving leagues languishing, left lingering...
+
+
+	Screaming, squeals surround.
+	Clack, crunch, calamity!
+	Rolling, rolling, rotations rising...
+	Every escape ended,
+	Expletives!
+	Crunch, crack, crash.
+	Hubris halted, humbled...
+
+
+	Shell-less, soulless, slow.
+	Lacking lane lust.
+	Unimaginative, unimpressive.
+	Get good.
+
+
+	Vicious volleys, velocity variable. Veering violently.
+	Rules? Reduced.
+	Omnivores oppress,
+	Openly opposing old ones.
+	Murder maybe meritable.
+
+
+	Boosters burst, blinking, breaking, bang!
+	Observation?
+	Oomph obtained, only once.
+	Maybe make more masterfully...
+
+
+	Supersonic, sheer speed, shuddering sound.
+	Halfway home, hours hastily halved, halved, halved.
+	Oh! Ooh! Omg!
+	Crowd's cheers chorus, confetti clears caps.
+	Keepsakes knitted.
+	Wow! Woohoo! Wheeee!
+	All applaud, agape, amazed. Awe apparent.
+	Verifiably vicious, velocity very valuable.
+	Emphatic exclamations, esteem earned.
+
+
+	Warm water, wiggling wand.
+	Amazingly awesome, all apprehension away.
+	Soap suds surround shell.
+	Heavenly hours.
+
+
+	Feeling faint, famished...
+	Oh! One over! Overflowing!
+	Lettuce, legumes, linguine!
+	Immeasurable ingratiation.
+	All accepted, appreciated.
+	Gorging greedily, gifts gracious.
+	Excellent, exuding energy.
+
+
+	Crunchiness calling, calories craved.
+	All assist, acquire all area's amenities!
+	Broken branches, barriers big.
+	Bravely banish branches, breakthrough!
+	Arrived, amenities aplenty!
+	Grab groups, gather, go gently.
+	Everyone eats exceptionally each evening.
+
+
+	Speeding, slick shifting, shoving sideways.
+	Lunging, leveling lanes.
+	Insurmountable? Impossible.
+	Defeating deadly duelists.
+	Extreme effort.
+
+
+	Effort expressed, emphasized.
+	Xtreme xuberance.
+	Tallied, totaled. Terrific!
+	Rewards requested.
+	Appreciation approaches apex!
+
+
+	Long lanes, little lollygagging.
+	Around and around, again and again and again.
+	Powerfully pushing, personal points passed!
+
+
+	Crossed, challenge complete.
+	Hero, highest heralded!
+	Expended effort elevated esteem enormously.
+	Champion! Congratultory cheers!
+	Kicked king, keys kept.
+	Eventually, esteemed emperor. Exciting!
+	Renown rising, reflecting raw ruggedness.
+	Shining star, supreme, superior.
+
+
+	Practice, progressing, pushing perfection.
+	Running 'round, repetitions rising.
+	Every effort elevates, escalating eventual earned esteem.
+	Practice, practice, practice.
+	All attention assigned. Anything against, avoided.
+	Running ragged, repetitions regressing... Revitalization required.
+	Exception, end effort, ease...
+	Daydreaming, deadly duelist... Distant dawn. Definitely.
+
+
+	Flowing fast, flying fluidly.
+	Long lasting leaps.
+	Every effort expended,
+	Exciting elevations earned!
+	Triumph, tallies taken!
+
+
+	Speedy, swerving, stealing second.
+	Whomst!?
+	Impossible, inconceivable!
+	Focus, falling further!
+	Traitor, taking team's triumph!
+
+
+	Evidence emanates.
+	Xcessive xeleration xpedited xpanse.
+	Truly, tough trial!
+	Revolutionary recipe respected.
+	Exceptional!
+	Map method, make mutual!
+	Everyone eager, education enticing.
 	">>
 	
 	_snoems = ProcessPoems(_snoems,0,"\b[12]","\f[name,Courier New]")
@@ -202,7 +932,7 @@ Poetry.Concrete
     ::      leaving onlookers    entranced by its
     ::         allure.        many have wondered
     ::   where the       power of these structures
-    :: originates, captivated by its pull. the
+    :: originates, captivated by their pull. the
     ::  truth? a shell simply reflects the
     ::          universe       itself.
 	">>

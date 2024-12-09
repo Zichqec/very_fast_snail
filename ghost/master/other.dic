@@ -874,6 +874,47 @@ nspeedcoolness
 	else; "coolness"
 }
 
+slug
+{
+	"\![embed,OnSlugWord,""%(_argv[0])"",SlugWord]"
+}
+
+OnSlugWord
+{
+	if IsSlug
+	{
+		"\![set,balloonwait,0.5]\f[color,disable]%(reference0) \f[color,default]%(snail)"
+	}
+}
+
+IsSlug
+{
+	if CurrentSnail.PersonalityType == "Slug"; 1
+	else; 0
+}
+
+OnSlugTest
+{
+	_snoems = <<"
+	Cheering, clammy clacking closing%(slug(' in')).
+	Long lunge, lingering loses.
+	Oh...!
+	Seconds spared, surging speedily southward.
+	Entire engine engaged, extra effort emanates.
+	">>
+	
+	_snoems = ProcessPoems(_snoems,0,"\b[12]","\f[name,Courier New]")
+	parallel _snoems
+}
+
+
+// RemoveSlugWords
+// {
+	// _talk = _argv[0]
+	// _talk = RE_REPLACE(_talk,"\\!\[embed,OnSlugWord," + '"' + "[^\]]+" + '"' + ",SlugWord\] ","")
+	// _talk
+// }
+
 //—————————————————————————————— Right click menu links ——————————————————————————————
 
 //Takes an array of alternating names and urls, and formats them for use with the right click menu
