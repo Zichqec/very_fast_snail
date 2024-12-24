@@ -919,22 +919,22 @@ Poetry.Diamante : nonoverlap_pool
 Poetry.Concrete
 {
 	_poems = <<"
-    ::               the unmistakable       curl      of
-    ::           a snail's spiral shell is    to     be
-    ::        admired, for in it you can see   all the
-    ::      mysteries            of life. twisting round
-    ::    and round,  curling in   upon itself, beautiful
-    ::    and free.  a true marvel,  repeating endlessly,
-    ::    yet each  is      unique.  sharing traits, while
-    ::    standing  on       their   own, wholly complete.
-    ::    strength,        beauty,   perfectly woven
-    ::     together into a dance   that mesmerizes,
-    ::      leaving onlookers    entranced by its
-    ::         allure.        many have wondered
-    ::   where the       power of these structures
-    :: originates, captivated by their pull. the
-    ::  truth? a shell simply reflects the
-    ::          universe       itself.
+    ::               the unmistakable       curl      of   
+    ::           a snail's spiral shell is    to     be    
+    ::        admired, for in it you can see   all the     
+    ::      mysteries            of life. twisting round   
+    ::    and round,  curling in   upon itself, beautiful  
+    ::    and free.  a true marvel,  repeating endlessly,  
+    ::    yet each  is      unique.  sharing traits, while 
+    ::    standing   on      their   own, wholly complete. 
+    ::    strength,        beauty,   perfectly woven       
+    ::     together into a dance   that mesmerizes,        
+    ::      leaving onlookers    entranced by its          
+    ::         allure.        many have wondered           
+    ::   where the       power of these structures         
+    :: originates, captivated by their pull. the           
+    ::  truth? a shell simply reflects the                 
+    ::          universe       itself.                     
 	">>
 	_poems = ProcessPoems(_poems,0,"\b[2]","\f[height,-4]","\f[name,courier new]")
 	// _poems = REPLACE(_poems,C_CRLF,"\n")
