@@ -1220,3 +1220,258 @@ SakuraScooper
 	}
 	_scooped_tags
 }
+
+On_getaistateex : all
+{
+	if SHIORI3FW.DebugMode
+	{
+		/*
+		Page 1:
+		All dialogue
+		All user dialogue
+		All race announcements
+		All snail dialogue
+		All poetry
+		All radio dialogue
+		All ads
+		Currently available dialogues?
+		
+		Page 2:
+		User dialogue out of race
+		User dialogue in race
+		Race announcer
+		
+		Page 3:
+		Each snailsonality type
+		
+		Page 4:
+		Each poetry type
+		
+		Page 5:
+		All radio stations + ad types //might be split later...
+		
+		
+		
+		
+		Return data in this order:
+		Value
+		Label
+		Additive value
+		Maximum value
+		
+		
+		
+		
+		Categories:
+		Talk.Snailsonality.Stalker
+		Talk.AlliterativeSnailsonality.Basic
+		Talk.User.InRace
+		Talk.User.NoRace
+		Talk.Announcer
+		RadioStation.Racing_News
+		Ads.General
+		Ads.Pirate_Radio
+		Poetry.Snoem
+		Poetry.Cinquain
+		Poetry.Acrostic.Left - be wary of this
+		*/
+		
+		if !ISVAR("GraphPage"); GraphPage = 0
+		
+		RotateTable(AIgraphArray(GraphPage))
+	}
+}
+
+AIgraphArray : array
+{
+	//I know I know I can't believe I didn't automate this either... except I did but then I couldn't fetch the numbers at the end without it being a nightmare. This is genuinely better...
+	//Macros save lives!!!
+	
+	
+	//Page 1:
+	_user.norace = OUTPUTNUM("Talk.User.NoRace")
+	_user.inrace = OUTPUTNUM("Talk.User.InRace")
+	_announcer = OUTPUTNUM("Talk.Announcer")
+	
+	//Page 2:
+	_abasic = OUTPUTNUM("Talk.AlliterativeSnailsonality.Basic")
+	_abreak = OUTPUTNUM("Talk.AlliterativeSnailsonality.Character_Break")
+	_slug = OUTPUTNUM("Talk.AlliterativeSnailsonality.Slug")
+	_bad = OUTPUTNUM("Talk.AlliterativeSnailsonality.Bad")
+	
+	//Page 3:
+	_sad = OUTPUTNUM("Talk.Snailsonality.Sad")
+	_rebel = OUTPUTNUM("Talk.Snailsonality.Rebel")
+	_angry = OUTPUTNUM("Talk.Snailsonality.Angry")
+	_proper = OUTPUTNUM("Talk.Snailsonality.Proper")
+	_sour = OUTPUTNUM("Talk.Snailsonality.Sour")
+	_tired = OUTPUTNUM("Talk.Snailsonality.Tired")
+	_ratings = OUTPUTNUM("Talk.Snailsonality.Ratings")
+	_silent = OUTPUTNUM("Talk.Snailsonality.Silent")
+	_gymbro = OUTPUTNUM("Talk.Snailsonality.Gymbro")
+	_stalker = OUTPUTNUM("Talk.Snailsonality.Stalker")
+	_slacker = OUTPUTNUM("Talk.Snailsonality.Slacker")
+	_jealous = OUTPUTNUM("Talk.Snailsonality.Jealous")
+	_liar = OUTPUTNUM("Talk.Snailsonality.Liar")
+	_facts = OUTPUTNUM("Talk.Snailsonality.Facts")
+	_sellout = OUTPUTNUM("Talk.Snailsonality.Sellout")
+	
+	//Page 4:
+	_snoem = OUTPUTNUM("Poetry.Snoem")
+	_bad_snoem = OUTPUTNUM("Poetry.Bad_Snoem")
+	_slugetry = OUTPUTNUM("Poetry.Slugetry")
+	
+	//Page 5:
+	_haiku = OUTPUTNUM("Poetry.Haiku")
+	_cinquain = OUTPUTNUM("Poetry.Cinquain")
+	_limerick = OUTPUTNUM("Poetry.Limerick")
+	_acrostic = OUTPUTNUM("Poetry.Acrostic")
+	_lyric = OUTPUTNUM("Poetry.Lyric")
+	_rhyming_couplet = OUTPUTNUM("Poetry.Rhyming_Couplet")
+	_alternate_rhyme = OUTPUTNUM("Poetry.Alternate_Rhyme")
+	_free_verse = OUTPUTNUM("Poetry.Free_Verse")
+	_diamante = OUTPUTNUM("Poetry.Diamante")
+	_concrete = OUTPUTNUM("Poetry.Concrete")
+	
+	//Page 6:
+	_racing_news = OUTPUTNUM("RadioStation.Racing_News")
+	_weather = OUTPUTNUM("RadioStation.Weather")
+	_shopping = OUTPUTNUM("RadioStation.Shopping")
+	_music = OUTPUTNUM("RadioStation.Music")
+	_variety_show = OUTPUTNUM("RadioStation.Variety_Show")
+	_asmr = OUTPUTNUM("RadioStation.ASMR")
+	_pirate_radio = OUTPUTNUM("RadioStation.Pirate_Radio")
+	
+	//Page 7:
+	_general_ads = OUTPUTNUM("Ads.General")
+	_pirate_ads = OUTPUTNUM("Ads.Pirate_Radio")
+	//Dummy value here also until/unless this is expanded
+	
+	//Page 0:
+	_all_user = _user.norace + _user.inrace
+	_all_announcer = _announcer
+	
+	_all_alliterative = _abasic + _abreak + _slug + _bad
+	_all_non_alliterative = _sad + _rebel + _angry + _proper + _sour + _tired + _ratings + _silent + _gymbro + _stalker + _slacker + _jealous + _liar + _facts + _sellout
+	
+	_all_alliterative_poetry = _snoem + _badsnoem + _slugetry
+	_all_non_alliterative_poetry = _haiku + _cinquain + limerick + _acrostic + _lyric + _rhyming_couplet + _alternate_rhyme + _free_verse + _diamante + _concrete
+	
+	_all_stations = _racing_news + _weather + _shopping + _music + _variety_show + _asmr + _pirate_radio
+	
+	_all_ads = _general_ads + _pirate_ads
+	
+	_all = _all_user + _all_announcer + _all_alliterative + _all_non_alliterative + _all_alliterative_poetry + _all_non_alliterative_poetry + _all_stations + _all_ads
+	//Currently available dialogues? - TODO do this later lol, good for perspective
+	
+	_page = _argv[0]
+	if _page == 1
+	{
+		"%(_user.norace),User (no race),%(GraphDiff(_user.norace,50))"
+		"%(_user.norace),User (in race),%(GraphDiff(_user.norace,50))"
+		"%(_user.norace),Announcer,%(GraphDiff(_announcer,50))"
+	}
+	elseif _page == 2
+	{
+		"%(_abasic),Alliterative basic,%(GraphDiff(_abasic,100))"
+		"%(_abreak),Character break,%(GraphDiff(_abreak,20))"
+		"%(_slug),Slug,%(GraphDiff(_slug,20))"
+		"%(_bad),Bad at alliteration,%(GraphDiff(_bad,20))"
+	}
+	elseif _page == 3
+	{
+		"%(_sad),Sad,%(GraphDiff(_sad,20))"
+		"%(_rebel),Rebel,%(GraphDiff(_rebel,20))"
+		"%(_angry),Angry,%(GraphDiff(_angry,20))"
+		"%(_proper),Proper,%(GraphDiff(_proper,20))"
+		"%(_sour),Sour,%(GraphDiff(_sour,20))"
+		"%(_tired),Tired,%(GraphDiff(_tired,20))"
+		"%(_ratings),Ratings,%(GraphDiff(_ratings,20))"
+		"%(_silent),Silent,%(GraphDiff(_silent,20))"
+		"%(_gymbro),Gymbro,%(GraphDiff(_gymbro,20))"
+		"%(_stalker),Stalker,%(GraphDiff(_stalker,20))"
+		"%(_slacker),Slacker,%(GraphDiff(_slacker,20))"
+		"%(_jealous),Jealous,%(GraphDiff(_jealous,20))"
+		"%(_liar),Liar,%(GraphDiff(_liar,20))"
+		"%(_facts),Facts,%(GraphDiff(_facts,20))"
+		"%(_sellout),Sellout,%(GraphDiff(_sellout,20))"
+	}
+	elseif _page == 4
+	{
+		"%(_snoem),Snoem,%(GraphDiff(_snoem,100))"
+		"%(_bad_snoem),Bad Snoem,%(GraphDiff(_bad_snoem,10))"
+		"%(_slugetry),Slugetry,%(GraphDiff(_slugetry,10))"
+	}
+	elseif _page == 5
+	{
+		"%(_haiku),Haiku,%(GraphDiff(_haiku,10))"
+		"%(_cinquain),Cinquain,%(GraphDiff(_cinquain,10))"
+		"%(_limerick),Limerick,%(GraphDiff(_limerick,10))"
+		"%(_acrostic),Acrostic,%(GraphDiff(_acrostic,10))"
+		"%(_lyric),Lyric,%(GraphDiff(_lyric,10))"
+		"%(_rhyming_couplet),Rhyming Couplet,%(GraphDiff(_rhyming_couplet,10))"
+		"%(_alternate_rhyme),Alternate Rhyme,%(GraphDiff(_alternate_rhyme,10))"
+		"%(_free_verse),Free_Verse,%(GraphDiff(_free_verse,10))"
+		"%(_diamante),Diamante,%(GraphDiff(_diamante,10))"
+		"%(_concrete),Concrete,%(GraphDiff(_concrete,10))"
+	}
+	elseif _page == 6
+	{
+		"%(_racing_news),Racing News,%(GraphDiff(_racing_news,50))"
+		"%(_weather),Weather,%(GraphDiff(_weather,50))"
+		"%(_shopping),Shopping,%(GraphDiff(_shopping,50))"
+		"%(_music),Music,%(GraphDiff(_music,50))"
+		"%(_variety_show),Variety Show,%(GraphDiff(_variety_show,50))"
+		"%(_asmr),ASMR,%(GraphDiff(_asmr,50))"
+		"%(_pirate_radio),Pirate Radio,%(GraphDiff(_pirate_radio,50))"
+	}
+	elseif _page == 7
+	{
+		"%(_general_ads),General Ads,%(GraphDiff(_general_ads,50))"
+		"%(_pirate_ads),Pirate Radio Ads,%(GraphDiff(_pirate_ads,50))"
+		"0,Dummy value,0"
+	}
+	else //Page 0
+	{
+		"%(_all),All dialogues"
+		"%(_all_user),User dialogues"
+		"%(_all_announcer),Announcer dialogues"
+		"%(_all_alliterative),Alliterative dialogues"
+		"%(_all_non_alliterative),Non-alliterative dialogues"
+		"%(_all_alliterative_poetry),Alliterative poetry"
+		"%(_all_non_alliterative_poetry),Non-alliterative poetry"
+		"%(_all_stations),Radio stations"
+		"%(_all_ads),Ads"
+	}
+}
+
+RotateTable : all
+{
+	_arrays = _argv
+	
+	_highestamt = 0
+	foreach _arrays; _array
+	{
+		if ARRAYSIZE(_array) > _highestamt; _highestamt = ARRAYSIZE(_array)
+	}
+	
+	for _i = 0; _i < _highestamt; _i++
+	{
+		if _i != 0; C_BYTE1
+		
+		foreach _arrays; _array
+		{
+			if _array[_i] == ""; 0
+			else; _array[_i]
+		}
+	}
+}
+
+GraphDiff
+{
+	_num = _argv[0]
+	_target = _argv[1]
+	_diff = _target - _num
+	if _diff < 0; _diff = 0
+	_diff
+}

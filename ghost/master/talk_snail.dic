@@ -1,6 +1,16 @@
-Talk.User : nonoverlap_pool
+Talk.User.NoRace : nonoverlap_pool
 {
 	"You can do it snail!" //TODO what balloon does this use.......
+}
+
+Talk.User.InRace : nonoverlap_pool
+{
+	"Yeah! Go snail!"
+}
+
+Talk.Announcer : nonoverlap_pool
+{
+	"It's the race of all time!"
 }
 
 

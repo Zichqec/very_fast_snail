@@ -94,7 +94,7 @@ OnAiTalk
 		}
 		
 		//User / fallback - this was gonna be an else, but I think I want this here in case the above functions fail because the variables are set wrong... this way you at least get SOMETHING instead of silence
-		if LastTalk == ""; LastTalk = Talk.User
+		if LastTalk == ""; LastTalk = Talk.User.NoRace
 	}
 	LastTalk
 }
