@@ -901,7 +901,7 @@ Talk.Snailsonality.Slacker : nonoverlap_pool
 
 Talk.Snailsonality.Jealous : nonoverlap_pool
 {
-	"\1\b[10]i wish i was %(nfastcool)"
+	"\1\b[10]i wish i was %(fc('cool','fast'))"
 }
 
 Talk.Snailsonality.Liar : nonoverlap_pool
@@ -933,15 +933,11 @@ Talk.AlliterativeSnailsonality.Basic : nonoverlap_pool
 
 Talk.AlliterativeSnailsonality.Character_Break : nonoverlap_pool
 {
-	parallel Talk.AlliterativeSnailsonality.Basic
-	
 	"\1\b[10]Alliteration is hard actually"
 }
 
 Talk.AlliterativeSnailsonality.Slug : nonoverlap_pool
 {
-	parallel Talk.AlliterativeSnailsonality.Basic
-	
 	"\1\b[10]don't tell them i'm a slug lol"
 }
 

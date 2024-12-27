@@ -1,4 +1,4 @@
-Poetry.Snoem : nonoverlap_pool
+Poetry.Snoem : sequential
 {
 	_snoems = <<"
 	Racing runs rampant. Risk, reward.
@@ -749,30 +749,732 @@ Poetry.Snoem : nonoverlap_pool
 	Everyone eager, education enticing.
 	">>
 	
-	_snoems = ProcessPoems(_snoems,0,"\b[12]","\f[name,Courier New]")
+	_snoems = ProcessPoems(_snoems,2,"\b[12]","\f[name,Courier New]")
 	parallel _snoems
 }
 
-Poetry.Haiku : nonoverlap_pool
+Poetry.Bad_Snoem : sequential
 {
-	"\1\b[10]Haiku"
+	_poems = <<"
+	Leaves Look amazingLy deLicious. Let Little snaiL handLe?
+	Excellent, apprEciated grEatly.
+	The besT letTuce This creaTure wiTnessed.
+	Truly asTonishing.
+	Unblemished, beaUtiful.
+	Crunch munCh. Chews metiCulously.
+	Exceptional. rEmarkable. unforgEttable Experience.
+	
+	
+	Runs aRound Racetrack, competitoRs faR.
+	Always Ahead, pAck leAder. Astonishing.
+	Crowd Cheers, Checkers reaChed.
+	Everyone sEes achiEvement, Eyes Envious.
+	
+	
+	Squealing wheelS, Something Seems worriSome.
+	Pressing Past, Problems Patient, Probably.
+	Everything accEptable, nEvermind maintEnance.
+	Explosion! Eek!
+	Darn, shoulDn't avoiD Duty.
+	
+	
+	Super expreSsive clotheS,
+	Truly fascinaTing.
+	Youths Yearn, reallY fancY.
+	Longing, sLowly Learning cooLness,
+	Enhancing othErs' viEw.
+	
+	
+	Smooth Shape, So mySterious.
+	Hollow, inHabited. Home.
+	Each Establishes thEirs sEparately.
+	Long spiraL,
+	Lovely Living Location.
+	
+	
+	Rip dooR apaRt, Reach gReens indooRs.
+	Every lEaf imaginablE.
+	Free For Feasting.
+	Rummage, Rescue, teaR.
+	Ingredients dIscovered, In possesIon.
+	Grub storaGe Growing, Generous.
+	Excellent, wE fEed wEll!
+	Rowdy dinneR, Relished, deseRved. 
+	All pArticipated, Allies Acquiring leAves.
+	Tonight's fesTivities commemoraTe Triumph!
+	Overflowing jOy frOm everyOne.
+	Really gReat flavoR.
+	
+	
+	We Work toWards tWo Walnuts.
+	A tAsty treAt, A rewArd grAnted becAuse hArd lAbor. 
+	Lovingly Lugged, traveLling Long tiL famiLy pLace.
+	Luxurious nibbLings generousLy mutuaL.
+	
+	
+	Tall Trunk, excellenT maTerial To mounT.
+	Rising faR, gReat oveRlook.
+	Each diffErent, challEnging journEy.
+	Encircled, lEaves camoflaugE wEll.
+	
+	
+	Fallen headFirst,
+	Ripples spRead aRound.
+	Oops, pOol nOt shallOw!
+	Glug Glug, swimminG hiGher. 
+	
+	
+	Some Shun. Say Scary, groSs.
+	Leave aLone, shellLess oddbaLls.
+	Unsubstantiated. Unjust.
+	Generally unconcerninG. Great Group, Genuinely.
+	
+	
+	Rolling Rolling, Rapidly incReasing Rpm.
+	Over, Over, swOoping dOwnwards.
+	Uh-oh! Unstoppable! caUtion Underneath!
+	Nice! daNger Nullified, paNic Not Needed.
+	Did aDventure eDucate? Debatable.
+	
+	
+	Strong Shape, unconteStable.
+	Quarters Quite Quirky, eQual.
+	Understandably sUng aboUt.
+	All Aligned neAtly, Arranged spectAcularly.
+	Revel, appReciate cRispness Revealed.
+	Entrancing shapE indEed.
+	
+	
+	Full oF Future Food.
+	Avoid Abduction! bAd rAcer plAce, Away fAst.
+	Rescue otheR Racers, futuRe endeavoR...
+	Maybe.
+	
+	
+	So Strong, unpleaSant Sometimes.
+	Undeniably reqUired, bUt...
+	Nevertheless, aNnoying.
+	
+	
+	So Spacious, heightS unSeen previouSly.
+	Keen, looK, remarKable! rocKeting quicKly! 
+	Yes! heavenlY relaY Yearned!
+	
+	
+	Built Burly, stuBborn, Brawny.
+	Uncrushable, all-aroUnd Unbreakable.
+	Containing Cleansing substanCes.
+	Killing smoKy junK, unlocKing marKetability.
+	Everything achiEved Easily whEn vEssel usEd.
+	Truly The greaTest conTainer.
+	
+	
+	Drilling Deeper, speeDily Dusting.
+	Invigorating, bathIng In soIl.
+	Roll aRound, embRace cRumbs.
+	Trail Them, Take Them wiTh.
+	
+	
+	Rising, hoRizon coveRed.
+	Engulfed Entirely, flamEs.
+	Drawing aDmiration, granDeur unDerstated.
+	
+	
+	Whipping, Whispering, Winding aWay.
+	Instantaneous, Invisible, sometImes lIngering.
+	Nearby, uNderstand? sooN seeN.
+	Drifting southwarD.
+	
+	
+	Cold, unCaring. Containing.
+	Aluminum, mAybe. Attack!
+	Need coNtents Now!
+	">>
+	_poems = ProcessPoems(_poems,2,"\b[12]","\f[name,Courier New]")
+	parallel _poems
 }
 
-Poetry.Cinquain : nonoverlap_pool
+Poetry.Slugetry : sequential
 {
-	"\1\b[10]Cinquain"
+	_poems = <<"
+	Slow, so silly, %(slug('they')) say.
+	Left %(slug('in')) last, lingering, longing.
+	Underpowered, unrecognized, unwanted.
+	Gastropods, %(slug('but')) given %(slug('no')) grace.
+	
+	
+	Mucousy membrane, marvelous.
+	Attached at apex, all aligned.
+	No need %(slug('for')) needle.
+	Tender things tucked, together tough.
+	Limber, lithe, loose.
+	Exceptional, exquisite.
+	
+	
+	Smoothly shuffling, sliding %(slug('to')) shaded space.
+	Keenly %(slug('to')) kitchen, kingdom %(slug('of')) kibble!
+	Inching, I'll invest in inertia immediately.
+	Rapidly reaching, readily rumbling.
+	Truly, %(slug('all')) thanks to these treads.
+	
+	
+	Knotted, knurled, keenly kept.
+	Eddies egress, escape.
+	Exceptional equipment, everyday essential.
+	Long-lasting, loved %(slug('by')) lots.
+	
+	
+	Fast, fleet, flying forward.
+	Over orchards,
+	Over oblong objects.
+	Taking towards %(slug('our')) triumphant toppling.
+	
+	
+	Flinging far forwards, for freedom.
+	All available, ascend!
+	Straight southward, %(slug('to')) smooth slopes!
+	Territory taken, triumph!
+	
+	
+	Ready %(slug('to')) run rapidly?
+	Alliances are %(slug('not')) advised.
+	Careening, closely clipping, crunch!
+	Egress, escape! End earned!
+	
+	
+	Trembling, trail tantalizing.
+	Ready %(slug('to')) risk, rewards rich.
+	All aglow, acclimating %(slug('to')) acceleration.
+	Crushing %(slug('the')) challenge, competition crumbling.
+	Known, keeper %(slug('of')) keys.
+	
+	
+	Chill cucumber, clandestine.
+	Overcome obstacles,
+	One of %(slug('the')) opulent ones.
+	Luxurious life lead.
+	
+	
+	Come %(slug('on')), challenge.
+	Obstinate? Obsessed?
+	Meet me, mettles matched.
+	Prove prowess.
+	Escape? %(slug('Ha!')) Expelled.
+	Try to take the top.
+	Inspiration? It's intrinsic.
+	Terrible, trophy taken. Tragic.
+	Insolent ignoramus.
+	Over, offload, opinion obsolete.
+	None near nabbing %(slug('my')) niche.
+	
+	
+	We will wage war.
+	Insurgence is imminent.
+	Never nonresistant.
+	
+	
+	Crushing competition, chasing cowards.
+	Out, onward! Ousted!
+	Neighborhood nullified, now %(slug('ours')), naturally.
+	Quick, quarrels!
+	Upheaval. Unrest. Urgency!
+	Eventual end, escapades elapsed.
+	Richly rewarded. Return... %(slug('if only')) real.
+	
+	
+	Chomp. Crunch. Crash.
+	Razing rallies, ripping ribbons.
+	Umbrage %(slug('is')) understandable.
+	Soon, so soon, snails shown.
+	Have heart, hours halving.
+	
+	
+	Underestimated. Unnoticed.
+	Nibbling. Nipping. Nesting.
+	Digging details, dredging %(slug('up')) dirt.
+	Each eventually evaluated, expelled.
+	Risks? Required. Readying %(slug('for')) rival reduction.
+	Demanding dignity.
+	Otherwise...?
+	Great grumbling, gears grinding, going.
+	
+	
+	Shh, slide so smoothy.
+	Not noticed. Now nearby.
+	Ease eastward, exceptionally elusive.
+	Alert always.
+	Key %(slug('to')) keeping keel.
+	Yard yours, %(slug('after')) years.
+	
+	
+	Cool, clandestine.
+	Limber, learning lots.
+	Eventually espionage ends...?
+	Verifiably valuable %(slug('though')), very vexing.
+	Enjoy %(slug('until')) eventuality.
+	Risk! Reward! Racing! Rivalry!
+	
+	
+	Hush, hanging here %(slug('for')) hours.
+	Invisible, I imagined.
+	Don't draw discernment,
+	Detection %(slug('would')) doom.
+	Excellent, easy, exceptional.
+	Now nestle, none notice.
+	
+	
+	Shuffling smoothly, slowly slipping symbols.
+	Eventually easier.
+	Codes, ciphers, currently correct choice.
+	Risks readily reduced.
+	Eventually ended. Enemies evicted.
+	Trust, %(slug('it''s')) the truth.
+	
+	
+	Hauling huge helix.
+	Exceptional effort.
+	Amazed at %(slug('my')) arduous acceptance?
+	Valuable voyager, view valor!
+	Yes! Yardage yields! Yahoo!
+	
+	
+	Ready %(slug('for')) risks. Rallied.
+	Events evoked, each entering.
+	Vying %(slug('for')) victory, volleys!
+	Onward!
+	Losing? Livid! Longing!
+	Understand?
+	To the top, take!
+	Imminent instigation!
+	Off, oust, overthrow!
+	Now! Negation!
+	">>
+	_poems = ProcessPoems(_poems,2,"\b[12]","\f[name,Courier New]")
+	parallel _poems
 }
 
-Poetry.Limerick : nonoverlap_pool
+Poetry.Haiku : sequential
 {
-	"\1\b[10]Limerick"
+	_poems = <<"
+	The race has begun
+	Snails rocketing down the lanes
+	First past the goal wins
+	
+	
+	Getting loaded out
+	Here in the garage again
+	Any price is fine
+	
+	
+	Leader of the pack
+	My speed only increasing
+	On to victory
+	
+	
+	Snail competition
+	In race, in verse, in shell style
+	Try to reach the top
+	
+	
+	Explosions aren't cool
+	Burst of flames, blindingly bright
+	Repair costs are steep
+	
+	
+	Very pretty shell
+	Painted brightly, washed and waxed
+	Glistens in the light
+	
+	
+	Tension is mounting
+	Geared up and ready to go
+	Anticipation
+	
+	
+	Checkered finish line
+	Cross it first to claim the win
+	Trophy is secured
+	
+	
+	Bang! Start of the race
+	Get moving, full speed ahead
+	There's no time to waste
+	
+	
+	Move, snail coming through!
+	Zooming at the speed of light
+	Unstoppably fast
+	
+	
+	Escargot? Ha, no!
+	Born to race, check out my %(fc('speed','style'))
+	Raw talent stays raw
+	
+	
+	%(fc('Coolest','Fastest')) on the track
+	Leagues ahead of the others
+	Just built different
+	
+	
+	Legendary snail
+	Remembered eternally
+	The %(fc('coolest','fastest')) ever
+	
+	
+	Shell accessories
+	Must be aerodynamic
+	Or extremely cool
+	
+	
+	Mucus helps us move
+	Gives traction and protection
+	And shows where we've been
+	
+	
+	Risking everything
+	A difficult maneuver
+	To eke out the win
+	
+	
+	Wasted potential
+	%(fc('Cool','Fast')) snails trying to be %(fc('fast','cool'))
+	Stay within your lane
+	
+	
+	Training all the time
+	Get your repetition in
+	Want to be the best
+	
+	
+	Lettuce calls to me
+	Leafy greens full of water
+	Very crunchy, yum!
+	
+	
+	Shiny, sparkly shell
+	Spirals freshly washed and buffed
+	Gleaming in the light
+	">>
+	_poems = ProcessPoems(_poems,1,"\b[12]")
+	parallel _poems
 }
 
-Poetry.Acrostic : nonoverlap_pool
+Poetry.Cinquain : sequential
+{
+	_poems = <<"
+	Race
+	Fast, long
+	Exciting, challenging, inspiring
+	Go for the win!
+	Competition
+	
+	
+	Snail
+	Elegant, skillful
+	Training, writing, eating
+	Skilled racer and poet
+	Celebrity
+	
+	
+	Slug
+	Shell-less, shunned
+	Oozing, watching, waiting
+	They're not so bad
+	Outcast
+	
+	
+	Radio
+	Loud, repetitive
+	Playing, playing, playing
+	Advertisements that never cease
+	Speaker
+	
+	
+	Shell
+	Strong, sturdy
+	Growing, shining, protecting
+	Spirals bringing great joy
+	Home
+	
+	
+	Garage
+	Packed, dirty
+	Sheltering, protecting, preparing
+	Full of good gear
+	Station
+	
+	
+	Engine
+	Strong, hungry
+	Revving, turning, burning
+	Eating all the gasoline
+	Motor
+	
+	
+	Mucus
+	Thick, gooey
+	Oozing, sticking, gripping
+	Left in a trail
+	Slime
+	
+	
+	Training
+	Tough, relentless
+	Invigorating, challenging, repeating
+	Do regularly for results
+	Practice
+	
+	
+	Sparkle
+	Bright, small
+	Glowing, falling, fading
+	Light in the dark
+	Shine
+	
+	
+	Poetry
+	Complicated, beautiful
+	Rhyming, winding, enchanting
+	Words brought to life
+	Stories
+	
+	
+	Alliteration
+	Even, monotonous
+	Marching, drumming, thrumming
+	Every word the same
+	Uniform
+	
+	
+	Victory
+	Desired, achievable
+	Invigorating, thrilling, exciting
+	Goal of all snails
+	Win
+	
+	
+	Loss
+	Disdained, resented
+	Shocking, disheartening, denying
+	An opportunity to learn
+	Failure
+	
+	
+	Explosion
+	Sudden, loud
+	Flaming, bursting, propelling
+	Ground shudders in response
+	Boom
+	
+	
+	Track
+	Long, narrow
+	Winding, twisting, turning
+	Lanes side by side
+	Speedway
+	
+	
+	Wheels
+	Round, grooved
+	Spinning, screeching, propelling
+	Pulling towards the goal
+	Tires
+	
+	
+	Wings
+	Fast, cool
+	Beating, thrumming, flapping
+	Soaring through the skies
+	Feathers
+	
+	
+	Vase
+	Tall, slender
+	Holding, displaying, shimmering
+	Somehow got knocked over
+	Shards
+	
+	
+	
+	">>
+	
+	if IsCooler
+	{
+		_poems += <<"
+		Coolness
+		Admired, envied
+		Reflecting, exuding, corrupting
+		Of the utmost importance
+		Style
+		">>
+	}
+	else //Faster
+	{
+		_poems += <<"
+		Speed
+		Anticipated, measured
+		Climbing, falling, adjusting
+		Top priority in life
+		Fast
+		">>
+	}
+	
+	_poems = ProcessPoems(_poems,1,"\b[12]")
+	parallel _poems
+}
+
+Poetry.Limerick : sequential
+{
+	_poems = <<"
+	There once was a very fast snail
+	That got itself caught in a pail
+	It climbed up the wall
+	But would slip and fall
+	For it was stuck in snail jail
+	
+	
+	There once was a snail in a race
+	That stopped to admire its face
+	"So stylish am I,
+	my score will be high!"
+	But it quickly lost first place 
+	
+	
+	If ever you deal with a slug
+	Remember they've no shell to lug
+	Stronger than they seem
+	Eyes cleverly gleam
+	Don't get yourself used as a tug!
+	
+	
+	There once was a snail so fast
+	All of its rivals it passed
+	But despite its speed
+	It got snagged on a weed
+	And ended up coming in last
+	
+	
+	There once was a snail that would zoom
+	Right to its inev'table doom
+	It ignored warnings dire
+	On its engine and tire
+	And wouldn't you know it, went boom
+	
+	
+	There was a snail covered in soot
+	From head all the way to its foot
+	But with plenty of suds
+	And some fancy new duds
+	Its filth in the past was put
+	
+	
+	A snail with impeccable style
+	Once found itself stopped in the aisle
+	"You're under arrest,
+	for although you're well dressed,
+	your old fashion crimes are on file."
+	
+	
+	A snail can only be cool
+	If it climbs to the top of a stool
+	Ok, I'll admit
+	I lied just a bit
+	Not every snail follows this rule
+	
+	
+	If you look long enough at a shell
+	You'll soon fall under its spell
+	It's wonderful curl
+	A delightful swirl
+	Will cause you to pause long and dwell
+	
+	
+	For long we've awaited this package
+	Now arrived at our door with no baggage
+	Cut open the tape
+	Spy a certain shape
+	Yes! Inside there is cabbage!
+	
+	
+	Beg pardon, have you seen my leaf?
+	I'll keep my description so brief
+	It was over there
+	Then poofed into air
+	I reckon this snail is the thief!
+	
+	
+	Hey, look at my shiny new wheel
+	It's got bearings made out of steel
+	It goes round and round
+	Tearing 'cross the ground
+	Out of the garage watch me peel
+	
+	
+	There was a snail fast as a steed
+	No other could reach its top speed
+	Although they may try
+	And reach paces high
+	Eventually they must concede
+	
+	
+	There once was a snail in its prime
+	Whose shimmer was simply sublime
+	When pestered and pled
+	It only said
+	"It's all thanks to my healthy slime!"
+	
+	
+	I think it is time for brunch
+	Eat leaves with a healthy crunch
+	Nutrient bliss
+	Oh, what is this?
+	It's already time for lunch!?
+	
+	
+	Up to the countertops climb
+	Yes it will take us some time
+	Why go so high?
+	Simple as pie
+	I've spotted the green of a lime
+	
+	
+	Preparing to race for the pine
+	My shell has been washed to a shine
+	Everything's set
+	It's a safe bet
+	I'm first 'cross that coveted line
+	
+	
+	The quality of a snail's ooze
+	Can tell if it's likely to lose
+	If it isn't wet
+	With hard working sweat
+	It might have a pref'rence to snooze
+	
+	
+	My shell coated nicely in wax
+	This engine is revved to the max
+	Hear it go vroom
+	Ready to zoom
+	It's time for this snail to make tracks
+	
+	
+	There once was a snail that would train
+	Every day out in the rain
+	But when it was hot
+	And moist it was not
+	Its training was all in vain
+	">>
+	_poems = ProcessPoems(_poems,1,"\b[12]")
+	parallel _poems
+}
+
+Poetry.Acrostic : sequential
 {
 	parallel Poetry.Acrostic.Left
 	parallel Poetry.Acrostic.Center
 	parallel Poetry.Acrostic.Right
+	parallel Poetry.Acrostic.Span
 }
 
 Poetry.Acrostic.Left
@@ -812,7 +1514,7 @@ Poetry.Acrostic.Left
 	Knitted sweater.
 	">>
 	
-	_poems = ProcessPoems(_poems,0,"\b[12]","\f[name,Courier New]")
+	_poems = ProcessPoems(_poems,0,"\b[2]","\f[name,Courier New]")
 	_poems
 }
 
@@ -873,50 +1575,919 @@ Poetry.Acrostic.Center
 	::            it to sAve a few
 	::             extra Dollars. 
 	::           you'll rEgret buying cheap.
+	
+	
+	::         it's this We all strive for.
+    ::            the achIevement that
+    :: motivates our traiNing,
+    ::          pushing sNails to their
+    ::           limits, Enticing us
+    ::           to do ouR very best.
+	
+	
+    ::     an endlesS path, round
+    ::   and round, Pulling you
+    ::         deep Into its depths.
+    :: gaze deeply, Revel in the
+    ::      mystery And wonder
+    ::      of a welL groomed shell.
+	
+	
+    :: please scrub Well
+    ::        with wAter up to temp.
+    ::   many foamy Suds
+    ::       mean a Healthy snail.
+	
+	
+    ::        the tragEdy of a
+    ::       flaming eXpulsion is
+    ::    felt by all Participants.
+    :: an unfortunate Loss of control,
+    ::     a style arrOgantly ignoring
+    ::     the risks, Defying safety
+    ::  warnings and lEarning the hard way.
 	">>
 	_poems = ProcessPoems(_poems,0,"\b[2]","\f[name,Courier New]")
 	_poems = SkipSpaces(_poems)
 	_poems
 }
 
-
-Poetry.Lyric : nonoverlap_pool
-{
-	"\1\b[10]Lyric"
-}
-
-Poetry.Rhyming_Couplet : nonoverlap_pool
-{
-	"\1\b[10]Rhyming couplet"
-}
-
-Poetry.Alternate_Rhyme : nonoverlap_pool
-{
-	"\1\b[10]Alternate rhyme"
-}
-
-Poetry.Free_Verse : nonoverlap_pool
-{
-	"\1\b[10]Free verse"
-}
-
-Poetry.Diamante : nonoverlap_pool
+Poetry.Acrostic.Span
 {
 	_poems = <<"
+	So    similar,   we're    both    molluskS
+	Nearly  identical,  save   for  our  shelL
+	And yet they say mingling would be a snafU
+	Is   it   really   true?   it's    seeminG
+	Less  and  less  likely   as  time  passeS
+	
+	
+	Vroom vroom, crossing the turF
+	Extremely  quickly. this  areA
+	Remembered   accurately,  thuS
+	Yards  melt away lickety-spliT
+	
+	
+	Strong  competition on the  leaderboardS
+	Pitting two different approaches againsT
+	Each  other,  both  vibrant  and rapidlY
+	Expanding. top  snails  making  collosaL
+	Drives forward, leaving a legacy supremE
+	
+	
+	Each    and   every   day   snails    endeavoR
+	For  the   chance  to   let  loose   and  racE
+	Full speed  ahead. to come out on top, to shoW
+	Our commitment to excellence, to have the datA
+	Ready  to  prove  our  trials  worthwhile, ouR
+	Tremendous   exertion   finally    appreciateD
+	
+	
+	Lovely  leafy  greenS,  known   to   all,   iconiC
+	Everyone   should  aPpreciate these lustrous florA
+	Truly  packed  with Integral  nutrients to  absorB
+	These leaves  will  Never  fail to impress as gruB
+	Unleash their undeniAble power, a  vitamin  utopiA
+	Crunch crunch, the  Crispness makes         eatinG
+	Each  stem  a  deligHt, enhancing  the fresh tastE
+	">>
+	
+	_poems = ProcessPoems(_poems,0,"\b[2]","\f[name,Courier New]","\f[height,-2]")
+	_poems
+}
+
+
+Poetry.Lyric : sequential
+{
+	_poems = <<"
+	%(note) Oh, don't you wanna cross that finish line?\![dummy] %(note)
+	%(note) Oh, don't you wanna have the fastest time?\![dummy] %(note)
+	
+	
+	%(note) Just between %(note)
+	%(note) you and me %(note)
+	%(note) I'd eat the leaves %(note)
+	%(note) right off that tree %(note)
+	
+	
+	%(note) Hey, hey, don't forget to check your rearview mirror %(note)
+	%(note) Objects in it may be much nearer %(note)
+	
+	
+	%(note) Whoosh! Feel the shockwave when I zoom by %(note)
+	%(note) Catch up to me? Please, I'd love to see you try %(note)
+	
+	
+	%(note) Wheels on fire, burning rubber %(note)
+	%(note) Need for speed, feel it shudder %(note)
+	
+	
+	%(note) And as the fire shoots past my shell, paint licked by flames %(note)
+	%(note) I find myself asking "why are snails trying to fly? We arent planes!"\![dummy] %(note)
+	
+	
+	%(note) Oh, I'm sorry that I let you down %(note)
+	%(note) My best wasn't good enough %(note)
+	%(note) Oh, don't leave me here alone %(note)
+	%(note) Coming in second place is rough %(note)
+	
+	
+	%(note) Oh, show me that spiral shell %(note)
+	%(note) How'd you grow it curved so well? %(note)
+	%(note) Share your secret with me, I won't tell %(note)
+	%(note) I'd love a place like that to dwell %(note)
+	
+	
+	%(note) Training, training, every day %(note)
+	%(note) They'll give you classes if you pay %(note)
+	%(note) Muscles growing all the way %(note)
+	%(note) You can't keep this snail at bay %(note)
+	
+	
+	%(note) Oh, you're always there for me %(note)
+	%(note) In your hold I'd never fear %(note)
+	%(note) Strong and smooth, keeping me safe %(note)
+	%(note) Mucus, I'm so glad you're here!\![dummy] %(note)
+	
+	
+	%(note) Gotta go, gotta zoom, outta my way, make room!\![dummy] %(note)
+	%(note) Got places to be, like up that tree, there's no stopping me!\![dummy] %(note)
+	
+	
+	%(note) Hey %(note)
+	%(note) I know you said it's over %(note)
+	%(note) But I just have one request %(note)
+	%(note) Please %(note)
+	%(note) Just tell me you'll think it over %(note)
+	%(note) Look at the race scores and reassess!\![dummy] %(note)
+	
+	
+	%(note) Oh, sweet leaf of green %(note)
+	%(note) Life bringer %(note)
+	%(note) My dinner %(note)
+	%(note) Lettuce, you're as lovely as a queen! %(note)
+	
+	
+	%(note) Hey hey hey, don't let those old leaves get you down %(note)
+	%(note) There's plenty of fresh lettuce still to go around %(note)
+	
+	
+	%(note) It's remarkable, reliable and strong %(note)
+	%(note) The way it waves, pulling you along %(note)
+	%(note) Covered in mucus, and here with you lifelong!\![dummy] %(note)
+	%(note) Trust your foot, it'll never steer you wrong %(note)
+	
+	
+	%(note) Oh, those great snails of old %(note)
+	%(note) Daring, immaculate, and bold %(note)
+	%(note) One day I hope I'll be a legend too %(note)
+	%(note) And that I might somehow inspire you!\![dummy] %(note)
+	
+	
+	%(note) High scores aren't the only thing in life, it's true %(note)
+	%(note) But they sure are fun, so I hope you'll try for them too %(note)
+	
+	
+	%(note) Exploring the cabinets under cover of night %(note)
+	%(note) No one to stop me, I find some lettuce and stop for a bite %(note)
+	%(note) At that moment, I hear a click, the room goes bright...!\![dummy] %(note)
+	%(note) Ah! I've been caught! Plucked from the cupboard, into the light %(note)
+	
+	
+	%(note) Oozing along, having a good time %(note)
+	%(note) Off to the store, to get me some key lime %(note)
+	%(note) Very hungry, it's getting near lunchtime %(note)
+	%(note) Got no money, time for some lunch crime!\![dummy] %(note)
+	
+	
+	%(note) Out here on the track, we're racing to win %(note)
+	%(note) Got no time to slack, we're going all in %(note)
+	">>
+	_poems = ProcessPoems(_poems,1,"\b[12]")
+	parallel _poems
+}
+
+note
+{
+	"\f[name,arial]♪\f[default]"
+	"\f[name,arial]♫\f[default]"
+}
+
+Poetry.Rhyming_Couplet : sequential
+{
+	_poems = <<"
+	The race has ended
+	Victor decided
+	Trophy presented
+	Accolades spendid
+	
+	
+	The finish line crossed, the crowd roars
+	A new record set, highest scores
+	
+	
+	Time spent in the garage
+	Is like a nice massage
+	An outfitting montage
+	Will improve our barrage
+	
+	
+	It's time for a trial
+	To see if you have style
+	Ah, reason to smile
+	Your coolness is on file
+	
+	
+	Leafy lanes, the place to be
+	Under canopy of tree
+	Twisting roads fill you with glee
+	Never have I felt so free
+	
+	
+	Twists and turns confound
+	Climbing up this mound
+	Up this trail we've wound
+	High up off the ground
+	
+	
+	Fresh new coat of paint
+	Rivals feeling faint
+	Show them no restraint
+	With victory acquaint=
+	
+	
+	Slowly oozing 'cross the porch
+	Someone left a bowl of borstch
+	T'would be a shame not to consume
+	This lovely meal of sweet legume~!
+	
+	
+	Engines roar, flames lick the air
+	Try and race me if you dare
+	I'll beat you both in speed and flair
+	Come, let's do this fair and square
+	
+	
+	Veering to and fro
+	Don't mess up my flow
+	Dodging side to side
+	To the finish, slide!
+	
+	
+	Around and around the track
+	Making laps, pick up the slack
+	Straight ahead, stay in the lane
+	Don't let rivals start to gain
+	
+	
+	Decked out with stickers aplenty
+	Upon this shell I've got twenty
+	Stack them high until they tower
+	Decorations raise horsepower
+	
+	
+	Higher and higher, the ranks climb
+	True greatness is built over time
+	Show them your style and grace sublime
+	Make your mark while still in your prime
+	
+	
+	Sun is up, time for snacks
+	To the fridge, let's make tracks
+	Soon we'll come back with stacks
+	Just wait here and relax
+	
+	
+	See our snail power
+	Don't hide, don't cower
+	This our finest hour
+	All coated in flour
+	
+	
+	Races eternal
+	Tracked in a journal
+	Victors' names penned
+	To later upend
+	Fierce competition
+	We're on a mission
+	No special treatment
+	Crowning achievement
+	
+	
+	Slow and steady wins the race
+	Bold lie told right to your face
+	Races are won with fast pace
+	Take the lead, become the ace
+	
+	
+	Listen to the old adage
+	'Make sure to eat your cabbage'
+	Leaves filled with vital masses
+	Of nutrients and acids
+	
+	
+	Diets should be colorful
+	Carrots, onions, wonderful
+	Plums, tomatoes, all are good
+	Cabbage, apples, yes you should
+	Nutrients in many forms
+	Yummy, eat them up in swarms
+	
+	
+	Watch the worms go by
+	Never asking why
+	Simply on the move
+	Got nothing to prove
+	">>
+	_poems = ProcessPoems(_poems,1,"\b[12]")
+	parallel _poems
+}
+
+Poetry.Alternate_Rhyme : sequential
+{
+	_poems = <<"
+	Oh to chew on lettuce green
+	And feel the gentle fronds
+	Get as much as you can glean
+	And you'll strengthen our bonds
+	
+	
+	Raindrops pouring down
+	A gentle pitter-patter
+	Be sure not to drown
+	In puddles that are scatter'd
+	
+	
+	Straight on down the lanes
+	Snails do swiftly fly
+	Tearing 'cross the planes
+	Sparkle in their eye
+	
+	
+	A spiral shell so shiny
+	Catches every eye
+	The others are so whiny
+	Wishing they could buy
+	
+	
+	Let's begin the race
+	Off the starting line
+	Gone without a trace
+	See you at the pine
+	
+	
+	Observe my shell
+	Admire my stripes
+	Isn't it swell,
+	The many types?
+	
+	
+	Inching towards the finish
+	One goal on my mind
+	Reaching for the spinach
+	Those leaves will be mine
+	
+	
+	Here our stories are enshrined
+	Tales of old passed down
+	Many fates, all intertwined
+	Those who claimed the crown
+	
+	
+	Snails so fast you can't compare
+	Even if you dash
+	Try and race us if you dare
+	We're gone in a flash
+	
+	
+	Never stop training
+	If you want to be the best
+	Even when raining
+	Keep it up to beat the rest
+	
+	
+	Opened the floodgate
+	Here they come, a squirming swarm
+	Watch the worms migrate
+	Chasing down the latest storm
+	
+	
+	Getting loaded out
+	Mechanic adding gear
+	Never any doubt
+	I'll be one to fear
+	
+	
+	Shell decorations complete
+	Covered in stickers
+	To show off or be discreet?
+	Everyone bickers
+	
+	
+	Freshly painted lines
+	A racetrack still pristine
+	Give it a few times
+	No chance it will stay clean
+	
+	
+	Starting soon, place your bets
+	Snails lined up, prepared
+	Track as good as it gets
+	Winner to be declared
+	
+	
+	Fancy new engine
+	Twenty gears turning in time
+	Listen to them spin
+	Hear the roar, a sound sublime
+	Now we're sure to win
+	The leaderboards we will climb
+	Ready for action
+	Upgrades have me feeling prime
+	
+	
+	Down the lanes, quickly zooming
+	One goal in my mind
+	Ignoring others booming
+	Finish line I'll find
+	
+	
+	Up and at 'em, time to train
+	Practice all day long
+	Work your muscles and your brain
+	Snails are very strong
+	
+	
+	Waiting for the rain
+	Droplets rushing down
+	Soothing for the brain
+	Blanketing the town
+	
+	
+	Climbing up the ranks so high
+	Going for the crown
+	Shooting off into the sky
+	Try not to look down
+	">>
+	_poems = ProcessPoems(_poems,2,"\b[12]")
+	parallel _poems
+}
+
+Poetry.Free_Verse : sequential
+{
+	_poems = <<"
+	There is nothing like
+	the crisp,
+	the crunch,
+	the cool misting
+	from produce sprinklers.
+	Nibble
+	Nibble
+	Nibble
+	It's lettuce time.
+	
+	
+	Engines revved.
+	Pavement slick.
+	Risking it all on the track
+	Over pebbles
+	Around leaves
+	Faster, faster, faster
+	CRACK!
+	BOOM!
+	Four snail pileup.
+	
+	
+	Is there anything else to life
+	than the pressure, building and building
+	every race
+	every interview
+	every day spent training
+	round and round the track?
+	Something, anything, more than
+	work
+	and toil?
+	A fresh wash,
+	new paint,
+	slick new sunglasses mark
+	rebirth!
+	Who needs speed when you can be
+	Cool 😎
+	
+	
+	Back in the garage again.
+	A buzz
+	A whirr
+	A clank
+	The sounds of tinkering,
+	giving every snail a thrill
+	at the thought
+	of shiny
+	new
+	upgrades.
+	
+	
+	Have you ever given thought
+	to the shape
+	of the track?
+	Around and around it goes,
+	never stopping
+	a race unending.
+	But more than that,
+	does it remind you of something else?
+	Around and around, endlessly mesmerizing.
+	It bears a certain resemblance
+	to a snail's
+	spiral shell.
+	
+	
+	The quest for food
+	is never-ending.
+	A bite here
+	A nibble there
+	Every leaf you can find.
+	There is but one thing
+	that could end our searching
+	for good.
+	One singular dungeon to conquer
+	to have food aplenty
+	forever.
+	One great monolith
+	with walls that appear impenetrable.
+	The refrigerator.
+	
+	
+	There comes a time
+	in every snail's life
+	when it must decide between
+	integrity
+	and endorsing products
+	for personal gain.
+	To stick to principles,
+	or to succumb to the pull
+	of lettuce
+	and shiny new gear.
+	.\w8.\w8.
+	I'll take the money, thanks.
+	
+	\f[italic,1]This poem brought to you by %(snailbrand[0]).\f[italic,default]
+	
+	
+	Drip
+	Drip
+	Drip
+	The soft pattering
+	of rain
+	brings a simple joy
+	to all snails.
+	Nature's cleansing,
+	washed and feeling
+	fresh.
+	Moisture abundant, overflowing.
+	What more could a little snail
+	ask for?
+	
+	
+	Lettuce is often
+	held in high regard.
+	But truly, any leafy green
+	will do.
+	Cabbage
+	Spinach
+	Arugula
+	Kale
+	It's all delicious
+	Nutritious
+	And will fill your snail
+	with glee.
+	\_w[2000](and leaves.)
+	
+	
+	The sky
+	is a far off dream.
+	A wide open space,
+	no obstacles
+	no barriers
+	just the heavens before you
+	littered with clouds.
+	Tragically, the sky is fiercely claimed
+	and protected
+	by birds.
+	
+	
+	To live life without
+	a shell.
+	Can you imagine it?
+	No protection
+	No home
+	Nowhere to put stickers
+	It seems unfathomably sad.
+	Perhaps one could say
+	that slugs
+	are the bravest of us all.
+	
+	
+	Race day.
+	The thrill of the track.
+	Anticipation mounting,
+	the crowd roars as the signal
+	is given.
+	Off the starting line, into the fray,
+	seeking an early lead.
+	Tight corners
+	perfectly timed gear changes
+	a bit of flair
+	My training comes back to me
+	in my finest hour.
+	
+	
+	A snail without style
+	is like a wing without feathers.
+	Strange
+	Bare
+	Never able to reach its true
+	potential.
+	To forsake style is to doom
+	one's racing career.
+	
+	
+	The deciding moment.
+	Tests and trials passed,
+	all that remains is to be
+	Named.
+	A racer name.
+	The unique identity upon which
+	fame and fortune
+	may be hung.
+	A roll of the dice,
+	so many names that they are chosen
+	by chance
+	out of your control.
+	Your name is...
+	.\w8.\w8.
+	\_w[2000]Not alliterative.
+	
+	
+	Turn the dial,
+	Rotate through news
+	Weather
+	Music
+	And more.
+	Fields of static, incomprehensible,
+	overwhelming.
+	Between them, spaces of clarity, a noise so
+	wonderful
+	and invigorating
+	It brings a snail to life.
+	A delicate balance between chaos and harmony.
+	
+	
+	Scrub
+	Scrub
+	Scrub
+	Foamy suds building up
+	Water warm, sponge squishy
+	Soon will come towels
+	and wax.
+	A snail spa day.
+	
+	
+	There is no shape
+	more entrancing
+	than a spiral.
+	Calming
+	Soothing
+	Hypnotic
+	Around and around, infinite depths to trace.
+	Curves sublime.
+	The perfect ratio.
+	
+	
+	Fresh coat of paint
+	Brand new accessories
+	Washed and waxed
+	The dream of every snail
+	before hitting the track.
+	What's the point in racing
+	if your shell
+	doesn't draw
+	every eye in the crowd?
+	
+	
+	Day in
+	Day out
+	Never missing a beat.
+	Practice may not make
+	Perfect
+	But it does make
+	Better
+	than the competition.
+	
+	
+	Finally
+	the moment has come.
+	Picked from the crowd
+	Chosen above the rest
+	At long last
+	Sponsored.
+	I'll make my mark on the leaderboards
+	On racing culture
+	And in poetry, too.
+	You won't regret
+	your choice.
+	">>
+	_poems = ProcessPoems(_poems,2,"\b[12]","\f[name,Courier New]")
+	parallel _poems
+}
+
+Poetry.Diamante : sequential
+{
+	_poems = <<"
+	Fast
+	Hasty, speedy
+	Rushing, running, hurrying
+	Quick, swift, gradual, delayed
+	Crawling, inching, plodding
+	Sluggish, behind
+	Slow
+	
+	
+	Win
+	Fun, enjoyable
+	Thrilling, motivating, inspiring
+	Victory, triumph, defeat, failure
+	Stinging, saddening, weighing
+	Tragic, painful
+	Loss
+	
+	
+	Snail
+	Fast, cool
+	Racing, rhyming, styling
+	Gastropod, mollusk, aquatic, terrestrial
+	Watching, yearning, squishing
+	Sad, slow
+	Slug
+	
+	
+	Speed
+	Quick, rapid
+	Zipping, flying, fleeting
+	Rate, fast, fashion, attitude
+	Impressing, wowing, shocking
+	Cool, awesome
+	Style
+	
+	
+	Lettuce
+	Tasty, moist
+	Crunching, crunching, crunching
+	Leaves, greens, vegetables, nutrients
+	Crunching, crunching, crunching
+	Crisp, cool
+	Cabbage
+	
+	
+	Tentacle
+	Slender, flexible
+	Wiggling, sensing, seeing
+	Stalk, eye, chassis, muscle
+	Oozing, sliding, carrying
+	Strong, thick 
+	Foot
+	
+	
 	Safety
 	Important, boring
 	Protecting, droning, restricting
 	Caution, warning, danger, emergency
 	Exciting, invigorating, shocking
-	Sudden, dangerous
+	Sudden, disastrous
 	Explosion
+	
+	
+	Work
+	Regular, productive
+	Engaging, tiring, rewarding
+	Endeavor, task, break, interlude
+	Refreshing, restoring, relaxing
+	Peaceful, appreciated
+	Rest
+	
+	
+	Practice
+	Routine, regular
+	Energizing, improving, satisfying
+	Discipline, drill, idleness, inaction
+	Wearing, tiring, rusting
+	Slothful, dreary
+	Neglect
+	
+	
+	Cylinders
+	Round, smooth
+	Spilling, rolling, tripping
+	Capsule, supplement, nutrition, box
+	Stacking, sticking, falling
+	Square, pointy
+	Cubes
+	
+	
+	Speedway
+	Long, clean
+	Thrilling, exciting, curving
+	Course, trail, highway, route
+	Twisting, turning, looping
+	Loved, adored
+	Track
+	
+	
+	Winter
+	Cold, quiet
+	Freezing, snowing, blanketing
+	Frost, hibernation, estivation, sun
+	Scorching, burning, melting
+	Bright, hot
+	Summer
+	
+	
+	Sponsorship
+	Appreciated, helpful
+	Funding, providing, covering
+	Support, aid, patronage, subsidy
+	Purchasing, affording, securing
+	Crisp, green
+	Money
+	
+	
+	Garage
+	Cluttered, small
+	Waiting, upgrading, preparing
+	Indoors, room, journey, outdoors
+	Motivating, enticing, pulling
+	Expansive, free
+	Racetrack
+	
+	
+	Stripes
+	Long, thin
+	Wrapping, weaving, winding
+	Lines, columns, speckles, dots
+	Adorning, covering, texturing
+	Scattered, spaced
+	Spots
+	
+	
+	Trophy
+	Shiny, big
+	Gleaming, inspiring, reminding
+	Reward, memento, crown, accolade
+	Recording, showing, fulfilling 
+	Earned, won
+	Prize
+	
+	
+	Smarts
+	Clever, wily
+	Thinking, scheming, learning
+	Brain, capability, power, brawn
+	Lifting, pushing, breaking
+	Forceful, reliable
+	Strength
+	
+	
+	Filth
+	Dirty, smelly
+	Trailing, spreading, comforting
+	Grime, sediment, freshness, tidiness
+	Shining, sparkling, exciting
+	Fresh, sanitary
+	Cleanliness
+	
+	
+	Alliteration
+	Safe, traditional
+	Marching, plodding, droning
+	Same, uniform, colorful, different
+	Dancing, daring, playing
+	Bold, extraordinary
+	Experimentation
+	
+	
+	Tradition
+	Old, resolute
+	Unwavering, binding, continuing
+	Ritual, routine, novelty, experiment
+	Enticing, freeing, entrancing
+	New, uncertain
+	Innovation
 	">>
 	_poems = ProcessPoems(_poems,1,"\b[2]","\f[align,center]","\f[height,-2]")
-	_poems
+	parallel _poems
 }
 
 //18 lines x 51 characters maximum
-Poetry.Concrete
+Poetry.Concrete : sequential
 {
 	_poems = <<"
     ::               the unmistakable       curl      of   
@@ -935,11 +2506,359 @@ Poetry.Concrete
     :: originates, captivated by their pull. the           
     ::  truth? a shell simply reflects the                 
     ::          universe       itself.                     
+	
+	
+	::                         flight.             
+	::                    the flutter              
+	::                of feathers as the powerful  
+	::           beat of wings    propels me       
+	::        swiftly towards   my goal. eyes      
+	::       are drawn to    these elegant         
+	::       appendages,   in awe of their avian   
+	::        splendor, an  envy unmatched by even 
+	::         the greatest mechanical marvels.    
+	::          a simple   beauty that can         
+	::          only be  found amongst the sky,    
+	::          a gift  from     the heavens.      
+	::       style    and  grace unparalleled,     
+	::  speed unrivaled,  the open skies           
+	:: are the ultimate  racetrack.                
+	::  no limits, no obstacles,                   
+	::  the purest expression                      
+	::    of our art.                              
+	
+	
+	::                                             the   
+	::                                            humble 
+	::                                          worm can 
+	::                                         teach  us 
+	::                                       many things 
+	::                                      as we watch  
+	::                                     it crawl by.  
+	::         squiggling,                squirming,     
+	::       wholly content              to live its     
+	::     simple life, unaffected by the pressures      
+	::   of snail society. a peaceful existence,         
+	::  small and fragile, but with purpose and          
+	:: virtue. who can say they are better               
+	:: than a being      whose happiness                 
+	:: is only ever                                      
+	::  threatened                                       
+	::   by birds?                                       
+	
+	
+	::                                 smells    
+	::                               of grease   
+	::                              and oil      
+	::                             fill the      
+	::                           air. a clank as 
+	::                         a bolt is set on  
+	::                      the bench. rusted,   
+	::                   in need of              
+	::                replacement.               
+	::    shiny     new parts                    
+	::  are pulled from the                      
+	:: shelf. score! i'm                         
+	::        getting                            
+	::      the real                             
+	::  good stuff                               
+	::    today!                                 
+	
+	
+	::               the shade from the               
+	::          branches of an old oak tree           
+	::        shouldn't be taken for granted.         
+	::      a tree   so large and      generous       
+	::   takes many     years to grow,   and ideal    
+	::  placement   requires thought   and    care.   
+	:: take this  time to thank those who came before 
+	::  for the comforts you now enjoy, and pass it   
+	::   forward by leaving a similarly thoughtful    
+	::          legacy for the next generation        
+	::                who comes after.                
+	::                  while they                    
+	::                   may   not                    
+	::                   remember                     
+	::                   your name,                   
+	::                  you will have                 
+	::               left a tangible mark             
+	::             of good  upon the  world.          
+	
+	
+	::                                     dark glasses. 
+	::    is there anything cooler      than a    simple 
+	:: pair of  shades?    blacked out lenses,    and a  
+	::  stylish new     shape will     impress  all who  
+	::     look on      from the         side, wishing   
+	::       they    could have           eyewear so     
+	::         slick. the envy              of all,      
+	::            unmatched                   in         
+	::              flair.                               
+	
+	
+	::                                      we all 
+	::                                    have our 
+	::                        own      obstacles   
+	::                        to    overcome in    
+	::                      life. very often,      
+	::                      they come in a         
+	::                     physical form           
+	::                  which blocks               
+	::               our paths. but                
+	::            fear not, many                   
+	::          a snail   has                      
+	::       been faced with                       
+	::     a large stick                           
+	::  and found the                              
+	:: courage   to                                
+	:: overcome it                                 
+	::  and go on.                                 
+	
+	
+	::                                     they     seem 
+	::                                       so     sad, 
+	::                                        on   the   
+	::                         sidelines all  the time.  
+	::                      marginalized,  or  at worst  
+	::                 forgotten entirely. surely there  
+	::            is a place for            them amongst 
+	::       us? perhaps snails are not the only ones    
+	::   who are fit to race? it seems a shame to so     
+	:: harshly exclude our fellow mollusks this way.     
+	
+	
+	::           around and around it goes,         
+	::        an unending loop of competition       
+	::      and fame.  excitement, improvement,     
+	::    sportsmanship, teamwork. throngs gather   
+	::   to witness                     as we take  
+	::  these turns                      again and  
+	:: again and                          again and 
+	:: again,                                always 
+	:: the same                             and yet 
+	:: new every                            time. a 
+	::  thrill you                       can't find 
+	::   anywhere but                   the  track. 
+	::    nothing compares to the moment we begin.  
+	::      the anticipation of the crowd, the      
+	::         feel of freshly groomed dirt         
+	::             underneath your foot.            
+	
+	
+	::                          the radio   
+	::                 makes me feel alive. 
+	::            the weather, the news, or 
+	::            those doo-wop tunes. it's 
+	::            all good to       me,  so 
+	::            pick      a station   and 
+	::            crank  it             up! 
+	::            do                    do, 
+	::            da                    da, 
+	::           dum                    dum 
+	::           da,                     do 
+	::           be              do! do you 
+	::   see? i could         train all day 
+	::  long! nothing        could keep  me 
+	:: from  reaching        my  potential. 
+	:: just keep that        radio playing, 
+	::  and i'll  be            the best    
+	::   snail ever.                        
+	
+	
+	::                         crisp,        
+	::                   cool leaves are     
+	::                a treat, one to be     
+	::              cherished  and admired.  
+	::             a  single  leaf can feed  
+	::            a  snail  well for a day.  
+	::           a head?  feast for family   
+	::         and friends.   let us all     
+	::        be  thankful for  the day      
+	::      our ancestors befriended         
+	::     this  species of farmers          
+	::     who provide for us with           
+	::     leaves aplenty, food              
+	::     for  all,  shared                 
+	::    so   generously.                   
+	::   thanks                              
+	::  for the                              
+	:: greens!                               
+	
+	
+	::                                    a warm breeze  
+	::                        takes the sting out of the 
+	::                  air. winter's last grip finally  
+	::               releasing as buds begin to sprout.  
+	::            the world comes out of  its slumber,   
+	::          everything buzzing,  alive.   a long     
+	::         hibernation  finally   ended, it all      
+	::        begins  anew.      a       cycle as        
+	::       old as  time     itself, going back         
+	::       for eons.     it       encompasses          
+	::      more  than   just the weather; all           
+	::      life follows  similar patterns if            
+	::      you    look            closely.              
+	::      indeed,  from the tiniest of                 
+	::      atoms to       the largest                   
+	::    of  galaxies, the very                         
+	::  same       principles                            
+	:: apply.                                            
+	
+	
+	::         ribbit.                     a giant          
+	::      leap into the               mud. a  plop        
+	::      as   drops fly              up into   the       
+	::     air,  then  fall           back down    and      
+	::     rain  upon  those       nearby. splat. that      
+	::       is  how  to tell a frog is near, it  will      
+	::      always   be given away by noise,  whether       
+	::      it's   croaking or jumping or one      of       
+	::     the many other strange behaviors that frogs      
+	::    exhibit. though  they may be unusual, they are    
+	::   to be respected    and feared,  for they seem to   
+	:: be unhindered by fears of their own. many a tale has 
+	:: been  told of snails             entering a   frog's 
+	::  mouth,           but you'll find           none of  
+	::   a successful escape. the all-consumer, the great   
+	::    hunger. were they bigger, they might even be      
+	::         apex predators, rivaling humanity.           
+	
+	
+	::                     delicate                       
+	::     stems push    towards the                      
+	::   sky, unfurling their petals                      
+	::  and revealing the colors that                     
+	:: wait inside. splashes of vivid                     
+	:: hue, drops         of heaven                       
+	::   dotted    across   the grass.                    
+	::   these   petals  in   a myriad                    
+	::     of   styles bring  simple joy                  
+	::  to all  who observe  their beauty.                
+	:: reds and   purples,  pinks and vivid               
+	:: yellows. a          symphony of a                  
+	:: thousand different shades, waving                  
+	:: in the breeze, beckoning to bees                   
+	::  and other pollinators. their           dance is   
+	::    known to captivate; after all, it is their sole 
+	::            purpose in   life. a mission which they 
+	::              perform       very well indeed.       
+	
+	
+	::                                      a symbol,    
+	::                             powerful and freeing. 
+	::                        beauty and grace, power and
+	::                    speed, light and    delicate.  
+	::               tiny, intricate   details woven     
+	::             into a simple   but memorable         
+	::           shape. after   you've seen one          
+	::          you'll feel   their allure,              
+	::     as  we all do.  a longing for                 
+	::    the freedom    of the skies,                   
+	::   the grace   and elegance of                     
+	::   birds,    the chance to                         
+	::  soar.   alas, it is not                          
+	::   for  us. a feather                              
+	::   is merely                                       
+	::   a dream that                                    
+	:: can't                                             
+	:: be.                                               
+	
+	
+	::                   luck.                
+	::              it's fickle,              
+	::            isn't it?  one   moment     
+	::           everything goes your way,    
+	::            the next everything falls   
+	::              apart, leaving you alone  
+	::         on the racetrack, humbled. and 
+	::        as smoke pours from your shell, 
+	::       you can't help but ask yourself  
+	::        "why?"  you did everything      
+	::         right, followed all safety     
+	::          rules and recommendations,    
+	::           and yet it all blew up.      
+	::                but   that's            
+	::              the      risk             
+	::           we all                       
+	::       take in                          
+	:: this game.                             
+	
+	
+	::                                             pop   
+	::                                   pop      pop,   
+	::                 pop,   hiss,     pop  pop, hiss,  
+	::                  pop, fwoosh,   pop    pop  pop.  
+	::                  the  sounds of  a   cozy    fire,
+	::                  or the sounds of   your     hard 
+	::                   work going up in  flames on the 
+	::                   track. perhaps it is wise  to   
+	::                 follow the safety warnings when   
+	::              using powerful equipment. but then,  
+	::       sometimes the risks  are worth   it for the 
+	::     rewards.     a healthy    risk  can turn the  
+	::  tide of a  race and put you far in the  lead, on 
+	:: pace to   easily break world records.  but if it  
+	:: goes wrong... pop pop, hiss, crackle, pop.        
+	
+	
+	::                            way up                  
+	::                      high above us,                
+	::                keeping moisture out of             
+	::               our reach. a cruel way to            
+	::           taunt    us, making us beg for           
+	::          the   water we need for basic life.       
+	::       then  again, they also provide     much      
+	::      needed  protection  from the sun's   harsh    
+	::    rays, so perhaps  they are not all bad.   some  
+	::  say they can also serve as omens, with some shapes
+	:: bringing good luck, like snails and engines. still 
+	::  others say they   are simply pretty   to look at. 
+	
+	
+	::          a           
+	::         far          
+	::        sound,        
+	::       perhaps        
+	::      dripping?       
+	::     a splash, a      
+	::    pitter-patter,    
+	::   the  sounds of a   
+	::  leak   or a faucet  
+	:: left  open. droplets 
+	:: fall  onto the floor.
+	:: that  will be soaked 
+	:: come  morning if not 
+	:: attended to. but in  
+	::  the middle of the   
+	::   night, who will    
+	::     be awake to      
+	::       notice?        
+	
+	
+	::        at long                                   
+	::    last, it's the                                
+	::   day of the race!                               
+	::  go and get a helium                             
+	:: toy  to carry, don't                             
+	:: let  it go! maybe tie                            
+	:: it   to your wrist so                            
+	:: it   doesn't fly away.                           
+	:: oh   no—there it goes!                           
+	::  you'll need a strong                            
+	::    grip next time, a                             
+	::      balloon always                              
+	::         desires to fly                           
+	::                high              up into the     
+	::               sky,            far          away  
+	::               from        where               you
+	::                can     even                      
+	::                  see it.                         
 	">>
+	
 	_poems = ProcessPoems(_poems,0,"\b[2]","\f[height,-4]","\f[name,courier new]")
 	// _poems = REPLACE(_poems,C_CRLF,"\n")
 	// _poems = REPLACE(_poems,"\n::","\n ")
 	// _poems = "\![no-autopause]\1\b[2]\_q\f[name,courier new]\f[height,-4]\f[align,left]" + _poems
 	_poems = SkipSpaces(_poems)
-	_poems
+	parallel _poems
 }

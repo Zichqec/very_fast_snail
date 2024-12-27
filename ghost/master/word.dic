@@ -490,3 +490,15 @@ grapes
 	"greens"
 	"gnocchi"
 }
+
+snailbrand
+{
+	_pick = snailbrandlist
+	(_pick[0,'|'],_pick[1,'|'])
+}
+
+snailbrandlist
+{
+	"Snail Suds|For all your snail washing needs!"
+	"Snail Snacks|When your snail has the munchies, we'll keep you from being eaten out of house and home!"
+}

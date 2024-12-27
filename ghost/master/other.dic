@@ -33,7 +33,7 @@ OnTranslateInternal.AutoPause
 		_talk = REPLACE(_talk,"...! ",".\w4.\w4.\w4!\w8\w8 ") //Exclamation point + ellipsis
 		*/
 		
-		_talk = REPLACE(_talk,"\n\n ","\n\n\w8\w8") //linebreak
+		_talk = REPLACE(_talk,",\n ",",\n\w4") //linebreak - used in poetry
 		_talk = REPLACE(_talk,"\n ","\n\w8\w8") //linebreak
 		_talk = REPLACE(_talk,", ",",\w4 ") //Comma
 		_talk = REPLACE(_talk,". ",".\w8\w8 ") //Period
@@ -58,6 +58,19 @@ OnKeyPress
 	if reference0 == "f1"; "\![open,readme]"
 	elseif reference0 == "t"; OnAiTalk
 	elseif reference0 == "r"; OnLastTalk
+	elseif SHIORI3FW.DebugMode
+	{
+		if reference0 == "left"
+		{
+			GraphPage--
+			if GraphPage < 0; GraphPage = 7
+		}
+		elseif reference0 == "right"
+		{
+			GraphPage++
+			if GraphPage > 7; GraphPage = 0
+		}
+	}
 }
 
 OnSurfaceRestore
@@ -850,28 +863,13 @@ IsCooler //than it is faster
 	else; 0
 }
 
-fastcool
+//FastCool
+//_argv0 fast word, _argv[1] cool word
+//Swap the order you send the words to reverse it
+fc
 {
-	if IsCooler; "cool"
-	else; "fast"
-}
-
-speedcoolness
-{
-	if IsCooler; "coolness"
-	else; "speed"
-}
-
-nfastcool
-{
-	if IsCooler; "fast"
-	else; "cool"
-}
-
-nspeedcoolness
-{
-	if IsCooler; "speed"
-	else; "coolness"
+	if IsCooler; _argv[0]
+	else; _argv[1] //Faster
 }
 
 slug
@@ -1221,7 +1219,7 @@ SakuraScooper
 	_scooped_tags
 }
 
-On_getaistateex : all
+On_getaistate : all
 {
 	if SHIORI3FW.DebugMode
 	{
@@ -1354,7 +1352,7 @@ AIgraphArray : array
 	_all_alliterative = _abasic + _abreak + _slug + _bad
 	_all_non_alliterative = _sad + _rebel + _angry + _proper + _sour + _tired + _ratings + _silent + _gymbro + _stalker + _slacker + _jealous + _liar + _facts + _sellout
 	
-	_all_alliterative_poetry = _snoem + _badsnoem + _slugetry
+	_all_alliterative_poetry = _snoem + _bad_snoem + _slugetry
 	_all_non_alliterative_poetry = _haiku + _cinquain + limerick + _acrostic + _lyric + _rhyming_couplet + _alternate_rhyme + _free_verse + _diamante + _concrete
 	
 	_all_stations = _racing_news + _weather + _shopping + _music + _variety_show + _asmr + _pirate_radio
@@ -1433,13 +1431,13 @@ AIgraphArray : array
 	}
 	else //Page 0
 	{
-		"%(_all),All dialogues"
-		"%(_all_user),User dialogues"
-		"%(_all_announcer),Announcer dialogues"
-		"%(_all_alliterative),Alliterative dialogues"
-		"%(_all_non_alliterative),Non-alliterative dialogues"
-		"%(_all_alliterative_poetry),Alliterative poetry"
-		"%(_all_non_alliterative_poetry),Non-alliterative poetry"
+		"%(_all),All"
+		"%(_all_user),User"
+		"%(_all_announcer),Announcer"
+		"%(_all_alliterative),Alliterative"
+		"%(_all_non_alliterative),Non-alliterative"
+		"%(_all_alliterative_poetry),Allit poetry"
+		"%(_all_non_alliterative_poetry),Non-allit poetry"
 		"%(_all_stations),Radio stations"
 		"%(_all_ads),Ads"
 	}
@@ -1458,11 +1456,13 @@ RotateTable : all
 	for _i = 0; _i < _highestamt; _i++
 	{
 		if _i != 0; C_BYTE1
-		
+		_first = 1
 		foreach _arrays; _array
 		{
+			if _first != 1; ","
 			if _array[_i] == ""; 0
 			else; _array[_i]
+			_first = 0
 		}
 	}
 }
