@@ -502,3 +502,323 @@ snailbrandlist
 	"Snail Suds|For all your snail washing needs!"
 	"Snail Snacks|When your snail has the munchies, we'll keep you from being eaten out of house and home!"
 }
+
+refrigerator
+{
+	"refrigerator"
+	"water cooler"
+	"toolbox"
+	"dishwasher"
+	"vase"
+	"back porch"
+	"laundry basket"
+	"air conditioner"
+	"computer tower"
+	"desk drawer"
+	"bookshelf"
+	"car"
+	"air ducts"
+	"shower"
+	"lamp"
+}
+
+//things that can be gone "through"
+airducts
+{
+	"air ducts"
+	"junk drawer"
+	"laundry basket"
+	"refrigerator"
+	"garden"
+	"car"
+	"sock drawer"
+	"DVD collection"
+	"racing memorabilia room"
+}
+
+ahaiku
+{
+	"a haiku"
+	"a cinquain"
+	"a limerick "
+	"an acrostic"
+	"some blackout poetry"
+	"a concrete poem"
+	"a sonata"
+	"an elegy"
+}
+
+engine
+{
+	"engine"
+	"set of wheels"
+	"paint job"
+	"sticker"
+	"hat"
+	"helmet"
+	"bag"
+}
+
+popcorn
+{
+	"popcorn"
+	"kettle corn"
+	"banana peels"
+	"red onions"
+	"clover"
+	"trail mix"
+	"peanuts"
+	"cashews"
+	"oats"
+	"chocolate covered pieces"
+	"pretzels"
+	"pretzel salt"
+	"nachos"
+	"radishes"
+	"nutmeg"
+	"styrofoam packing peanuts"
+	"green beans"
+	"baked beans"
+	"parsnips"
+	"egg shells"
+	"seaweed"
+	"water"
+	"watermelon"
+	"canteloupe"
+	"honeydew"
+	"Pink Himalayan salt"
+	"egg salad"
+	"salsa"
+	"french fries"
+}
+
+letter
+{
+	"A|7|a solid start to the alphabet, but often overused"
+	"B|6|lives in A's shadow and soaks up what 'start of the alphabet' fame it can"
+	"C|8|often forgotten, but has a pleasing shape"
+	"D|5|a little drab"
+	"E|9|adventurous, daring, bold. The second vowel, but perhaps the most beloved"
+	"F|4|it's like E but worse"
+	"G|2|almost a good shape, but added hard angles at the end of the stroke like a coward"
+	"H|2|nothing of interest here"
+	"I|0|bland and lazy"
+	"J|3|at least it's trying to be cool"
+	"K|4|interesting shape, but could really use some curves"
+	"L|1|it's like H but even less interesting"
+	"M|6|nice variety of strokes"
+	"N|4|thought it could copy M's homework and nobody would notice"
+	"O|10|simple, but bold. Strong, yet approachable. A critical letter on which the whole alphabet rests"
+	"P|5|it's like a B but with less of what makes B good"
+	"Q|8|an O but with a flaw"
+	"R|9|all races begin with this"
+	"S|10|absolute perfection"
+	"T|5|gets a lot of use but the shape is boring"
+	"U|6|middle of the road, honestly"
+	"V|3|like an A but with no redeeming features"
+	"W|2|a copycat of M and V, unimpressive"
+	"X|5|overused, nothing super interesting going on"
+	"Y|6|there's not much to say about it that hasn't already been said"
+	"Z|8|a solid endcap, sounds nice at the end of the song"
+	"π|3.14|goes nice with ice cream. ... I'm kinda hungry"
+}
+
+proteinshakes
+{
+	"protein shakes"
+	"protein bars"
+	"trail mix"
+	"coffee"
+	"energy drinks"
+	"caffeine gummies"
+	"candy"
+	"sugar packets"
+}
+
+broccoliis
+{
+	"brocolli is"
+	"cabbage is"
+	"zucchini is"
+	"cucumbers are"
+	"onions are"
+	"carrots are"
+	"potatoes are"
+	"corn is"
+	"peas are"
+	"green beans are"
+	"kidney beans are"
+	"tomatoes are"
+	"kale is"
+}
+
+booktitle
+{
+	"101 Ways to Eat Lettuce (with pictures)"
+	"Eat this lettuce, not that"
+	"Muscles: Nature's Engine"
+	"How to Build Muscle and Keep It"
+	"Inspirational Muscle Photos"
+}
+
+workout
+{
+	"workout"
+	"post-workout workout"
+	"pre-workout workout"
+	"stretches"
+	"warmup"
+	"reps"
+	"laps"
+}
+
+tiredness
+{
+	"tiredness"
+	"feelings"
+	"sleepiness"
+	"hunger"
+	"sadness"
+	"anger"
+	"feelings of unworthiness"
+	"shame"
+}
+
+alettucesandwich
+{
+	"a lettuce sandwich"
+	"a cabbagedog"
+	"a cup of broccoli fries"
+	"some radish soup"
+}
+
+soapoperas
+{
+	"soap operas"
+	"the news"
+	"the weather"
+	"rock music"
+	"polkas"
+	"static"
+}
+
+blackorred
+{
+	"black or red"
+	"white or blue"
+	"light green or dark green"
+	"sparkly purple or matte purple"
+	"soft orange or deep orange"
+}
+
+fastfood
+{
+	"fast food"
+	"retail"
+	"plumbing"
+	"yard work"
+	"carpentry"
+}
+
+helmet
+{
+	"helmet"
+	"glasses"
+	"engine"
+	"shell polish"
+	"hat"
+	"scarf"
+	"tire"
+	"body paint"
+	"shell paint"
+	"goggles"
+	"soap"
+}
+
+//Must have R and one R must be capitalized - this applies per-word, so you can't have "haRd boiled eggs"
+food_r
+{
+	"Relish"
+	"sauerkRaut"
+	"Radishes"
+	"coRn"
+	"nectaRines"
+	"apRicots"
+	"Raisins"
+	"Ramen"
+	"Ravioli"
+	"Rigatoni"
+	"macaRoni"
+	"faRfalle"
+	"Rotini"
+	"bRead"
+	"bRead cRumbs"
+	"buRgers"
+	"fRench fRies"
+	"souR cReam"
+	"cReam"
+	"sugaR"
+	"butteR"
+	"mustaRd"
+	"Ranch dRessing"
+	"aRugula"
+	"cRackers"
+	"peppeRoni"
+	"poRk"
+	"poultRy"
+	"shRimp"
+	"cRab"
+	"calamaRi"
+	"peaRs"
+	"oRanges"
+	"tangeRines"
+	"stRawberries"
+	"wateRmelon"
+	"blackbeRries"
+	"Raspberries"
+	"mulbeRries"
+	"eldeRberries"
+	"boysenbeRries"
+	"dewbeRries"
+	"Roast dinneR"
+	"Ramune"
+	"buRritos"
+	"flouR"
+	"bRownies"
+	"yesteRday's leftoveRs"
+	"cRème bRûlée"
+	"yoguRt"
+	"desseRt"
+	"dinneR"
+	"bReakfast"
+	"suppeR"
+	"aRtificial flavoRings"
+	"Rosemary"
+	"custaRd"
+	"bluebeRries"
+	"caRamel"
+	"fRosting"
+	"gRavy"
+	"tuRkey"
+	"cucumbeRs"
+	"caRrots"
+}
+
+inthefridge
+{
+	"in the fridge"
+	"under the cabbage in the garden"
+	"in the darkest corner of the garage"
+	"in the shade of the water cooler"
+	"in the grass"
+	"on the ceiling fan"
+	"in the battery drawer"
+}
+
+goldlettuce
+{
+	"gold plated lettuce"
+	"a diamond encrusted shell"
+	"an extensive fanclub that will pay for photos with me"
+	"a limousine to drive me to every race"
+}

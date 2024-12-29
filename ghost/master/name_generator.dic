@@ -24,7 +24,7 @@ SnailNameGenerator
 	_type = "alliteration"
 	if _firstnum >= 7; _type = "not alliteration" //TODO: won't this be obvious? if i want to change it i should do so before this update goes out... - maybe not, cuz sometimes it fails... but tbh i should fix that for better probabilities
 	if _argv[1] == "not alliteration"; _type = "not alliteration"
-	
+	if _argv[1] == "alliteration"; _type = "alliteration" //This isn't a guarantee, but it will help the odds... TODO maybe i should make it roll until it gets an alliterative one if it's supposed to
 	
 	_firstlist = GETFUNCLIST("SnailNames.1")
 	_lastlist = GETFUNCLIST("SnailNames.2")

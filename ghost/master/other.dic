@@ -868,8 +868,25 @@ IsCooler //than it is faster
 //Swap the order you send the words to reverse it
 fc
 {
-	if IsCooler; _argv[0]
-	else; _argv[1] //Faster
+	if IsCooler; _argv[1]
+	else; _argv[0] //Faster
+}
+
+PoetryType
+{
+	case CurrentSnail.PoetryType
+	{
+		when "Haiku"; _argv[0]
+		when "Cinquain"; _argv[1]
+		when "Limerick"; _argv[2]
+		when "Acrostic"; _argv[3]
+		when "Lyric"; _argv[4]
+		when "Rhyming Couplet"; _argv[5]
+		when "Alternate Rhyme"; _argv[6]
+		when "Free Verse"; _argv[7]
+		when "Diamante"; _argv[8]
+		when "Concrete"; _argv[9]
+	}
 }
 
 slug
@@ -891,27 +908,25 @@ IsSlug
 	else; 0
 }
 
-OnSlugTest
+AlliterativeName
 {
-	_snoems = <<"
-	Cheering, clammy clacking closing%(slug(' in')).
-	Long lunge, lingering loses.
-	Oh...!
-	Seconds spared, surging speedily southward.
-	Entire engine engaged, extra effort emanates.
-	">>
-	
-	_snoems = ProcessPoems(_snoems,0,"\b[12]","\f[name,Courier New]")
-	parallel _snoems
+	_output = SnailNameGenerator(,'alliteration')
+	_i = 0
+	while !IsAlliterative(_output)
+	{
+		_output = SnailNameGenerator(,'alliteration')
+		if _i > 1000; break
+	}
+	_output
 }
 
-
-// RemoveSlugWords
-// {
-	// _talk = _argv[0]
-	// _talk = RE_REPLACE(_talk,"\\!\[embed,OnSlugWord," + '"' + "[^\]]+" + '"' + ",SlugWord\] ","")
-	// _talk
-// }
+Capitalize
+{
+	_first = SUBSTR(_argv[0],0,1)
+	_rest = ERASE(_argv[0],0,1)
+	
+	TOUPPER(_first) + _rest
+}
 
 //—————————————————————————————— Right click menu links ——————————————————————————————
 
@@ -1299,7 +1314,7 @@ AIgraphArray : array
 	
 	//Page 3:
 	_sad = OUTPUTNUM("Talk.Snailsonality.Sad")
-	_rebel = OUTPUTNUM("Talk.Snailsonality.Rebel")
+	_relaxed = OUTPUTNUM("Talk.Snailsonality.Relaxed")
 	_angry = OUTPUTNUM("Talk.Snailsonality.Angry")
 	_proper = OUTPUTNUM("Talk.Snailsonality.Proper")
 	_sour = OUTPUTNUM("Talk.Snailsonality.Sour")
@@ -1350,7 +1365,7 @@ AIgraphArray : array
 	_all_announcer = _announcer
 	
 	_all_alliterative = _abasic + _abreak + _slug + _bad
-	_all_non_alliterative = _sad + _rebel + _angry + _proper + _sour + _tired + _ratings + _silent + _gymbro + _stalker + _slacker + _jealous + _liar + _facts + _sellout
+	_all_non_alliterative = _sad + _relaxed + _angry + _proper + _sour + _tired + _ratings + _silent + _gymbro + _stalker + _slacker + _jealous + _liar + _facts + _sellout
 	
 	_all_alliterative_poetry = _snoem + _bad_snoem + _slugetry
 	_all_non_alliterative_poetry = _haiku + _cinquain + limerick + _acrostic + _lyric + _rhyming_couplet + _alternate_rhyme + _free_verse + _diamante + _concrete
@@ -1379,7 +1394,7 @@ AIgraphArray : array
 	elseif _page == 3
 	{
 		"%(_sad),Sad,%(GraphDiff(_sad,20))"
-		"%(_rebel),Rebel,%(GraphDiff(_rebel,20))"
+		"%(_relaxed),Relaxed,%(GraphDiff(_relaxed,20))"
 		"%(_angry),Angry,%(GraphDiff(_angry,20))"
 		"%(_proper),Proper,%(GraphDiff(_proper,20))"
 		"%(_sour),Sour,%(GraphDiff(_sour,20))"
@@ -1409,7 +1424,7 @@ AIgraphArray : array
 		"%(_lyric),Lyric,%(GraphDiff(_lyric,10))"
 		"%(_rhyming_couplet),Rhyming Couplet,%(GraphDiff(_rhyming_couplet,10))"
 		"%(_alternate_rhyme),Alternate Rhyme,%(GraphDiff(_alternate_rhyme,10))"
-		"%(_free_verse),Free_Verse,%(GraphDiff(_free_verse,10))"
+		"%(_free_verse),Free Verse,%(GraphDiff(_free_verse,10))"
 		"%(_diamante),Diamante,%(GraphDiff(_diamante,10))"
 		"%(_concrete),Concrete,%(GraphDiff(_concrete,10))"
 	}
