@@ -8,9 +8,15 @@ descript
 
 surface.append0-9
 {
-	//shine - renumbered so that it slots under things that aren't smoothly attached to the shell, we may want to  move it further down? but i feel like if a sticker is on the shell it's getting waxed too
+	//shines - renumbered so that it slots under things that aren't smoothly attached to the shell, we may want to  move it further down? but i feel like if a sticker is on the shell it's getting waxed too
+
+	//airbrush shine
+	animation64998.interval,bind
+	animation64998.pattern0,overlay,85000,0,0,0
+
+	//cel block shine
 	animation64999.interval,bind
-	animation64999.pattern0,overlay,85000,0,0,0
+	animation64999.pattern0,overlay,85001,0,0,0
 	
 	//sweat
 	animation85005.interval,bind+always

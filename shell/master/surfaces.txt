@@ -1065,6 +1065,10 @@ surface5
 	//cowprint black
 	animation32070.interval,bind
 	animation32070.pattern0,overlay,32073,0,0,0
+
+	//———————— OVERLAY ————————
+	//cry
+	
 }
 
 
