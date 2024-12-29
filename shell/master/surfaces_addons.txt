@@ -669,6 +669,12 @@ surface.append0-9
 	//box fan
 	animation80050.interval,bind
 	animation80050.pattern0,overlay,80050,0,0,0
+	//black fan
+	animation80051.interval,bind
+	animation80051.pattern0,overlay,80051,0,0,0
+	//box shine
+	animation80054.interval,bind
+	animation80054.pattern0,overlay,80054,0,0,0
 	
 	//red bird wings
 	animation80055.interval,bind+always

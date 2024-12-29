@@ -164,11 +164,15 @@ sakura.bindgroup55020.name,Decals,Big Flame
 //Hardware
 sakura.bindoption3.group,Hardware,multiple
 sakura.bindgroup65000.name,Hardware,Red Spoiler
+sakura.bindgroup65009.name,Hardware,Red Spoiler Shine
 sakura.bindgroup65010.name,Hardware,Hot Rod Exhaust
 sakura.bindgroup65015.name,Hardware,Radio Antenna
+sakura.bindgroup65019.name,Hardware,Radio Antenna Shine
 sakura.bindgroup65020.name,Hardware,Saddle Bag
 sakura.bindgroup65025.name,Hardware,Sling Bag
 sakura.bindgroup65030.name,Hardware,BIG ROCKET
+sakura.bindgroup65031.name,Hardware,PREMIERE BIG ROCKET
+sakura.bindgroup65049.name,Hardware,BIG ROCKET Shine
 
 //Masks
 sakura.bindoption4.group,Masks,multiple
@@ -303,6 +307,8 @@ sakura.bindgroup80043.name,Add-ons,Gray Bat Wings
 sakura.bindgroup80043.addid,80044
 sakura.bindgroup80045.name,Add-ons,Red Tires
 sakura.bindgroup80050.name,Add-ons,Box Fan
+sakura.bindgroup80051.name,Add-ons,Black Box Fan
+sakura.bindgroup80054.name,Add-ons,Box Fan Shine
 sakura.bindgroup80055.name,Add-ons,Red Bird Wings
 sakura.bindgroup80055.addid,80056
 sakura.bindgroup80057.name,Add-ons,Orange Bird Wings
@@ -332,13 +338,14 @@ sakura.bindgroup80079.addid,80080
 
 //Overlays
 sakura.bindoption7.group,Overlays,multiple
-sakura.bindgroup64999.name,Overlays,Shine
+sakura.bindgroup64998.name,Overlays,Shine Soft
+sakura.bindgroup64999.name,Overlays,Shine Cel
 sakura.bindgroup85005.name,Overlays,Sweat
 sakura.bindgroup85010.name,Overlays,Sparkles
 sakura.bindgroup85050.name,Overlays,Smoke
-sakura.bindgroup85490.name,Overlays,Soot Light
-sakura.bindgroup85491.name,Overlays,Soot Medium
-sakura.bindgroup85492.name,Overlays,Soot Heavy
+sakura.bindgroup85790.name,Overlays,Soot Light
+sakura.bindgroup85791.name,Overlays,Soot Medium
+sakura.bindgroup85792.name,Overlays,Soot Heavy
 
 
 sakura.bindoption9999998.group,Special Effects,multiple

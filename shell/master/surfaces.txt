@@ -935,10 +935,11 @@ surface4
 	animation32070.pattern0,overlay,32070,0,0,0
 
 	//———————— OVERLAY ————————
-	animation85500.interval,always
-	animation85500.pattern0,overlay,85500,0,0,0
-	animation85500.pattern1,overlay,85501,100,0,0
-	animation85500.pattern2,overlay,85501,100,0,0
+	//Fire anim
+	animation85800.interval,always
+	animation85800.pattern0,overlay,85800,0,0,0
+	animation85800.pattern1,overlay,85801,100,0,0
+	animation85800.pattern2,overlay,85801,100,0,0
 }
 
 
@@ -1065,6 +1066,10 @@ surface5
 	//cowprint black
 	animation32070.interval,bind
 	animation32070.pattern0,overlay,32073,0,0,0
+
+	//———————— OVERLAY ————————
+	//cry
+	
 }
 
 
