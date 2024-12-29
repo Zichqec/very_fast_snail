@@ -721,7 +721,8 @@ CleanlinessCheck : all
 	"\![bind,Overlays,Soot Light,0]"
 	"\![bind,Overlays,Soot Medium,0]"
 	"\![bind,Overlays,Soot Heavy,0]"
-	"\![bind,Overlays,Shine,0]"
+	"\![bind,Overlays,Shine Soft,0]"
+	"\![bind,Overlays,Shine Cel,0]"
 	"\![bind,Overlays,Sparkles,0]"
 	
 	if CurrentSnail.Cleanliness <= -10
