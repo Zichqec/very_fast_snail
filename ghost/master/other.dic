@@ -244,6 +244,7 @@ GenerateSnailsonality
 	_poetrytype = _poetrytype[1,'.']
 	_poetrytype = REPLACE(_poetrytype,"_"," ")
 	if _personalitytype == "Bad"; _poetrytype = "Bad Snoem"
+	if _personalitytype == "Slug"; _poetrytype = "Slugetry"
 	//elseif _personalitytype == "Silent"; _poetrytype = ""
 	
 	_radiostation = _radiolist[_3rd_10 % ARRAYSIZE(_radiolist)]
