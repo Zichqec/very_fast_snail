@@ -749,7 +749,7 @@ Poetry.Snoem : sequential
 	Everyone eager, education enticing.
 	">>
 	
-	_snoems = ProcessPoems(_snoems,2,"\b[12]","\f[name,Courier New]")
+	_snoems = ProcessPoems(_snoems,2,"\b[2]","\f[name,Courier New]")
 	parallel _snoems
 }
 
@@ -890,7 +890,7 @@ Poetry.Bad_Snoem : sequential
 	Aluminum, mAybe. Attack!
 	Need coNtents Now!
 	">>
-	_poems = ProcessPoems(_poems,2,"\b[12]","\f[name,Courier New]")
+	_poems = ProcessPoems(_poems,2,"\b[2]","\f[name,Courier New]")
 	parallel _poems
 }
 
@@ -1049,7 +1049,7 @@ Poetry.Slugetry : sequential
 	Off, oust, overthrow!
 	Now! Negation!
 	">>
-	_poems = ProcessPoems(_poems,2,"\b[12]","\f[name,Courier New]")
+	_poems = ProcessPoems(_poems,2,"\b[2]","\f[name,Courier New]")
 	parallel _poems
 }
 
