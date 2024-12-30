@@ -139,11 +139,29 @@ OnFirst.SnailPick : all
 
 OnFirst.SelectSnail : all
 {
+	_id = reference0
 	_name = reference1
 	_trait = reference2
 	
-	"\0\b[2]\t\*"
-	"%(_trait)\n\n\_q" //TODO names in the traits that have dots will get autopaused...
+	_snailsonality = GenerateSnailsonality(_name,_id)
+	// _snailsonality.PersonalityType = _snailsonality[0]
+	// _snailsonality.PoetryType = _snailsonality[1]
+	// _snailsonality.RadioPreference = _snailsonality[2]
+	// _snailsonality.AltHobby = _snailsonality[3]
+	
+	"\0\b[2]\t\*\![no-autopause]"
+	"%(OnTranslateInternal.AutoPause(_trait))\n\n\_q" //TODO names in the traits that have dots will get autopaused...
+	//TODO temp for debug purposes
+	if SHIORI3FW.DebugMode
+	{
+		"Snailsonality:\n"
+		foreach _snailsonality; _point
+		{
+			_point
+			"\n"
+		}
+		"\n\n"
+	}
 	"\![*]\__q[OnFirst.SnailPick]Back\__q    \![*]\__q[OnFirst.SelectSnail.Confirm,""%(reference0)"",""%(reference1)"",""%(reference2)""]Choose this snail\__q"
 }
 
