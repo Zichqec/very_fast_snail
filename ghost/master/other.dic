@@ -898,6 +898,7 @@ slug
 	"\![embed,OnSlugWord,""%(_argv[0])"",SlugWord]"
 }
 
+//TODO I think OnTranslate affects this but it was causing an issue with the snoem that starts with "come on, challenge"... I think due to the punctuation. There are others too
 OnSlugWord
 {
 	if IsSlug
