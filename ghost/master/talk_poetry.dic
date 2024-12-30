@@ -47,7 +47,7 @@ Poetry.Snoem : sequential
 	Go, glory!
 
 
-	Awestruck, aware again, as always.
+	**Awestruck, aware again, as always.
 	We wish we were whom, when, why.
 	Eager, eliciting excitement.
 	Supreme speed, sublime smoothness. Similarly studied, saved shortly.
@@ -80,7 +80,7 @@ Poetry.Snoem : sequential
 	Questing quickly.
 	Understandable unrest.
 	Itching, intrigued, indisputable interest.
-	Chasing comets, coffee, cornflakes.
+	Chasing comets, carrots, cornflakes.
 	Knowledge kneaded.
 
 
@@ -90,7 +90,7 @@ Poetry.Snoem : sequential
 	Laughter loops, leaves lettuce lacking.
 
 
-	Every effort exuded.
+	**Every effort exuded.
 	Xtreme xpenses xpunged.
 	Plumes pile past the pole.
 	Long languishing, looks like.
@@ -178,7 +178,7 @@ Poetry.Snoem : sequential
 	Yay! Yearned yum yours.
 
 
-	An achievement, amassing accolades.
+	**An achievement, amassing accolades.
 	Dreaming. Day dawning, daylight descended.
 	Effort expands. Early effort earns everything.
 	Practice, practice, practice. Perfect practice programs perfect performance.
@@ -191,7 +191,7 @@ Poetry.Snoem : sequential
 	Trials take time, tasting too.
 
 
-	No, nothing needed now.
+	**No, nothing needed now.
 	An area alone.
 	Pushing, pulling... Please, peace place. Purge pressure.
 
@@ -206,13 +206,13 @@ Poetry.Snoem : sequential
 
 	So, some snails seek stories?
 	Understandable.
-	Perhaps ""Pulled Pickle Park"" pleases?
+	Perhaps "Pulled Pickle Park" pleases?
 	Eager, excited.
 	Rally reminiscing relay readied, ready receiver.
 	Beautiful. Beginning...
 
 
-	Beat billions, brain booming.
+	**Beat billions, brain booming.
 	Excellence, exceeding expectations, experience, elation.
 	Streaks shooting straight, surging speedily starward.
 	Tales told til time's termination.
@@ -225,7 +225,7 @@ Poetry.Snoem : sequential
 	Thrill time. Tomorrow topples today.
 
 
-	Long lost lanes, lofty limitations.
+	**Long lost lanes, lofty limitations.
 	Everyone expected excellence.
 	Greatness granted graciously, glistening goo gilded grades.
 	Each earned enshrinement eternally.
@@ -327,7 +327,7 @@ Poetry.Snoem : sequential
 	Trusted to take to the triumph.
 
 
-	Greased, glowing.
+	**Greased, glowing.
 	Objectively outstanding.
 	Gleaming, glossy,
 	Glistening greatly.
@@ -447,13 +447,13 @@ Poetry.Snoem : sequential
 	Shoots straight, speeds stupendous.
 
 
-	Wicked wings whip westward, whooping, waving wins wildly.
+	**Wicked wings whip westward, whooping, waving wins wildly.
 	Impressive? Irresponsible? Impossibly interwoven, intervention... impractical.
 	Not nearly, not now.
 	Deliberating deeply. Demands depart, dispel delay distaste.
 
 
-	Fleet footed from first. Feathers flexing, fitness fought for. Finally, freedom.
+	**Fleet footed from first. Feathers flexing, fitness fought for. Finally, freedom.
 	Long lashes link, lunging lightly, lift lent. Lofty, luxury.
 	Introspection: impossible instigated. Ideals irrepressible.
 	Gaining greatness, glee given.
@@ -461,7 +461,7 @@ Poetry.Snoem : sequential
 	This trail, truly, treat to travel.
 
 
-	Boom!
+	**Boom!
 	Obstacle obliterated,
 	Oomph obtained.
 	Sheer speed, speedometer shattered.
@@ -470,7 +470,7 @@ Poetry.Snoem : sequential
 	Rival returns, retaliates! Risky race. Rush, revenge!
 
 
-	Risk, reward. Ready?
+	**Risk, reward. Ready?
 	On, open! Observe!
 	Crashing concerns? Crushed. Capital condition, construction complete.
 	Knowledge keen, kilometers known.
@@ -579,7 +579,7 @@ Poetry.Snoem : sequential
 	Rumble ready?
 	Obviously.
 	Powerful, positively prepared.
-	Otherwise, outgiving.
+	Otherwise, outgoing.
 	Daresay, delightful.
 
 
@@ -617,7 +617,7 @@ Poetry.Snoem : sequential
 	Savings shrinking speedily!
 
 
-	Sweeps swiftly, shoving steadily sunward.
+	**Sweeps swiftly, shoving steadily sunward.
 	Keen, knightly, knowledgeable!
 	Inevitably influential, instilling inspiration in idolaters.
 	Look, leaping leftwards!
@@ -709,14 +709,14 @@ Poetry.Snoem : sequential
 	Crossed, challenge complete.
 	Hero, highest heralded!
 	Expended effort elevated esteem enormously.
-	Champion! Congratultory cheers!
+	Champion! Congratulatory cheers!
 	Kicked king, keys kept.
 	Eventually, esteemed emperor. Exciting!
 	Renown rising, reflecting raw ruggedness.
 	Shining star, supreme, superior.
 
 
-	Practice, progressing, pushing perfection.
+	**Practice, progressing, pushing perfection.
 	Running 'round, repetitions rising.
 	Every effort elevates, escalating eventual earned esteem.
 	Practice, practice, practice.
@@ -749,14 +749,14 @@ Poetry.Snoem : sequential
 	Everyone eager, education enticing.
 	">>
 	
-	_snoems = ProcessPoems(_snoems,2,"\b[2]","\f[name,Courier New]")
+	_snoems = ProcessPoems(_snoems,2,"\b[200]","\f[name,Courier New]\f[height,-2]")
 	parallel _snoems
 }
 
 Poetry.Bad_Snoem : sequential
 {
 	_poems = <<"
-	Leaves Look amazingLy deLicious. Let Little snaiL handLe?
+	**Leaves Look amazingLy deLicious. Let Little snaiL handLe?
 	Excellent, apprEciated grEatly.
 	The besT letTuce This creaTure wiTnessed.
 	Truly asTonishing.
@@ -825,7 +825,7 @@ Poetry.Bad_Snoem : sequential
 	
 	
 	Some Shun. Say Scary, groSs.
-	Leave aLone, shellLess oddbaLls.
+	Leave aLone, shell-Less oddbaLls.
 	Unsubstantiated. Unjust.
 	Generally unconcerninG. Great Group, Genuinely.
 	
@@ -890,7 +890,7 @@ Poetry.Bad_Snoem : sequential
 	Aluminum, mAybe. Attack!
 	Need coNtents Now!
 	">>
-	_poems = ProcessPoems(_poems,2,"\b[2]","\f[name,Courier New]")
+	_poems = ProcessPoems(_poems,2,"\b[200]","\f[name,Courier New]\f[height,-2]")
 	parallel _poems
 }
 
@@ -1049,7 +1049,7 @@ Poetry.Slugetry : sequential
 	Off, oust, overthrow!
 	Now! Negation!
 	">>
-	_poems = ProcessPoems(_poems,2,"\b[2]","\f[name,Courier New]")
+	_poems = ProcessPoems(_poems,2,"\b[200]","\f[name,Courier New]\f[height,-2]")
 	parallel _poems
 }
 
@@ -1514,7 +1514,7 @@ Poetry.Acrostic.Left
 	Knitted sweater.
 	">>
 	
-	_poems = ProcessPoems(_poems,0,"\b[2]","\f[name,Courier New]")
+	_poems = ProcessPoems(_poems,0,"\b[200]","\f[name,Courier New]\f[height,-2]")
 	_poems
 }
 
@@ -1560,7 +1560,7 @@ Poetry.Acrostic.Right
 	::                              for advicE. 
 	">>
 	
-	_poems = ProcessPoems(_poems,0,"\b[2]","\f[name,Courier New]","\f[height,-2]")
+	_poems = ProcessPoems(_poems,0,"\b[200]","\f[name,Courier New]","\f[height,-2]")
 	_poems = SkipSpaces(_poems)
 	_poems
 }
@@ -1607,7 +1607,7 @@ Poetry.Acrostic.Center
     ::     the risks, Defying safety
     ::  warnings and lEarning the hard way.
 	">>
-	_poems = ProcessPoems(_poems,0,"\b[2]","\f[name,Courier New]")
+	_poems = ProcessPoems(_poems,0,"\b[200]","\f[name,Courier New]\f[height,-2]")
 	_poems = SkipSpaces(_poems)
 	_poems
 }
@@ -1652,7 +1652,7 @@ Poetry.Acrostic.Span
 	Each  stem  a  deligHt, enhancing  the fresh tastE
 	">>
 	
-	_poems = ProcessPoems(_poems,0,"\b[2]","\f[name,Courier New]","\f[height,-2]")
+	_poems = ProcessPoems(_poems,0,"\b[200]","\f[name,Courier New]","\f[height,-2]")
 	_poems
 }
 
