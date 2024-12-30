@@ -233,6 +233,8 @@ GenerateSnailsonality
 		_poetrylist[_index] = IARRAY
 		_index = ASEARCH("Poetry.Bad_Snoem",_poetrylist)
 		_poetrylist[_index] = IARRAY
+		_index = ASEARCH("Poetry.Slugetry",_poetrylist)
+		_poetrylist[_index] = IARRAY
 		
 	}
 	
