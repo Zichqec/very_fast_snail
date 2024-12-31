@@ -485,7 +485,7 @@ Talk.AlliterativeSnailsonality.Basic : nonoverlap_pool
 	"\1\b[10]Why we want win?\n\n Whee! Wahoo! Woo!\n\n Would want with?"
 	"\1\b[10]Xtreme, xpensive, xpanding. Xtra xcellence xposes xpert xamination. Xceptional!"
 	
-	"\1\b[10]Y\w8 A\w8 W\w8 N... Yogurt yearned... Yum..."
+	"\1\b[10]Y\w8 A\w8 W\w8 N\w8... Yogurt yearned... Yum..."
 	"\1\b[10]Zips, zone zeroed. Zigzag, zoom!"
 	"\1\b[10]Sleepy snail... snooze soon? Short session?"
 	"\1\b[10]Normal night. Nutrients not nibbled. Not need notice."
@@ -497,41 +497,41 @@ Talk.AlliterativeSnailsonality.Basic : nonoverlap_pool
 	"\1\b[10]Stroke spiral shell. Splendidly smooth."
 	"\1\b[10]Poetry promises poise, presence, power. Pursuing proven practical."
 	
-	// "\1\b[10]"
-	// "\1\b[10]"
-	// "\1\b[10]"
-	// "\1\b[10]"
-	// "\1\b[10]"
+	"\1\b[10]Tongue twisters tricky? Try talking this technique." //PEASANT
+	"\1\b[10]Please pass %(porridge). Plentiful piles pacify palate."
+	"\1\b[10]Running 'round, 'round, 'round. Repetition rewards resilience."
+	"\1\b[10]Itching, idly imagining inching in incurvature... Ideal."
+	"\1\b[10]Scrub scrub, sudsy snail."
 	
-	// "\1\b[10]"
-	// "\1\b[10]"
-	// "\1\b[10]"
-	// "\1\b[10]"
-	// "\1\b[10]"
+	"\1\b[10]Wind whispers westward... Wishes woven with."
+	"\1\b[10]Shooting stars... so swiftly sweeping sky. Stunning..."
+	"\1\b[10]Wanting win. Will work, worthiness within!"
+	"\1\b[10]Close coils coveted. Cool, classy, charming."
+	"\1\b[10]Slugs? Soft. Slow. Speed sense small. Sad species."
 	
-	// "\1\b[10]"
-	// "\1\b[10]"
-	// "\1\b[10]"
-	// "\1\b[10]"
-	// "\1\b[10]"
+	"\1\b[10]Cubes? Cylinders? Crunching capable...\n\n Cabbage clear champion, can't compare."
+	"\1\b[10]Urgent! Uproot, unrest! Unveil udon! Ultimate utopia!"
+	"\1\b[10]Some sunrise, snail's stories sung..."
+	"\1\b[10]Come challengers, clash!"
+	"\1\b[10]Garage good, greatness grows greatly given good gear."
 	
-	// "\1\b[10]"
-	// "\1\b[10]"
-	// "\1\b[10]"
-	// "\1\b[10]"
-	// "\1\b[10]"
+	"\1\b[10]Vast vistas... Visit, view vibrant!"
+	"\1\b[10]Tall trees tower there. Twigs twist, the tumultuous torrents tear them towards the trails. Trials to toughen!" //translation: there are twigs on the ground :( i'll use them as an extra challenge to get stronger :)
+	"\1\b[10]Leaves lack lying. Lettuce lends lavishness. Loan? Laughing."
+	"\1\b[10]Mucus makes medically marvelous mollusks."
+	"\1\b[10]Shell so smooth. Superb sensation, sends spirits soaring."
 	
-	// "\1\b[10]"
-	// "\1\b[10]"
-	// "\1\b[10]"
-	// "\1\b[10]"
-	// "\1\b[10]"
+	"\1\b[10]Like lichen. Lovely little lifeform, luscious."
+	"\1\b[10]Craving %(chickpeas). Can consume? Could conceivably cause championship."
+	"\1\b[10]Chomp chomp. %(Capitalize(chickpeas)) crunched, consumed. Culinary creations cause career climb!"
+	"\1\b[10]Engines exciting. Eclipses even event enjoyment... Event exceeds eventually, extra energy extends excellence."
+	"\1\b[10]Crowd cheers, champion coined... Coolest critter conceived.\n\n Chasing cloud..." //translation: daydreaming lol
 	
-	// "\1\b[10]"
-	// "\1\b[10]"
-	// "\1\b[10]"
-	// "\1\b[10]"
-	// "\1\b[10]"
+	"\1\b[10]Driving doubly dangerously. Daring dives, dashing! Delicious %(deepdish) delivery dropped!" //Dropped as in arrived, or dropped as in fell to the ground and now the snails can get it... you decide :3c
+	"\1\b[10]Worrying won't win wars. Withhold wavering."
+	"\1\b[10]%(Capitalize(porridge))... pleasant. Pick peck potentially, post-practice."
+	"\1\b[10]\f[italic,1]Mollusk Matters\f[italic,default] magazine made me merry. Mechanics, metrics, more! Modern marvel..."
+	"\1\b[10]Zooming zooming zooming...!\n\n ... Zonk zone. Z\w8z\w8z\w8..."
 	
 	// "\1\b[10]"
 	// "\1\b[10]"
@@ -560,12 +560,18 @@ Talk.AlliterativeSnailsonality.Basic : nonoverlap_pool
 
 Talk.AlliterativeSnailsonality.Character_Break : nonoverlap_pool
 {
-	"\1\b[10]Alliteration is hard actually"
+	_friendpoetrytype = GeneratePoetryType(CurrentSnail.ID)
+	_nonalliterativename = SnailNameGenerator(,"not alliteration")
+	
+	"\1\b[10]All of this alliteration is actually pretty difficult. Downright exhausting, even."
+	"\1\b[12]I think the division based on names is unnecessary. My best friend from snail school ended up with a non-alliterative name, but that doesn't mean we shouldn't be friends.\n\n I still keep up with it. It got into %(PoetryTypeOther(_friendpoetrytype,'haiku','cinquains','limericks','other types of acrostic','lyrics','rhyming couplets','alternate rhymes','free verse','diamante','concrete poetry')), it's quite fascinating."
+	"\1\b[10]Some of the non-alliterative racer names are pretty cool, honestly. Like ""%(_nonalliterativename)"". It has a certain ring to it that you don't get with alliteration."
+	"\1\b[10]Snail language doesn't translate well into human words. Alliteration is the closest we can get, but it really limits our expression, so sometimes I wonder if we ought to just give it up."
 }
 
 Talk.AlliterativeSnailsonality.Slug : nonoverlap_pool
 {
-	"\1\b[10]don't tell them i'm a slug lol"
+	"\1\b[12]Sleepy, sluggish... \_w[2000]%(slug('Ah-'))\n\n Simply suggesting somnolence. Slugs show superbly."
 }
 
 Talk.AlliterativeSnailsonality.Bad : nonoverlap_pool

@@ -79,11 +79,18 @@ OnAiTalk
 				elseif RadioStation == "Pirate_Radio"; LastTalk = Ads.Pirate_Radio
 				else; LastTalk = Ads.General
 			}
-			elseif _pick == "Snail"
+			elseif _pick == "Snail" || (_pick == "Poem" && CurrentSnail.PersonalityType == "Silent")
 			{
 				_alliteration = "Snailsonality"
 				if IsAlliterative(CurrentSnail.Name); _alliteration = "AlliterativeSnailsonality"
 				_personality = REPLACE(CurrentSnail.PersonalityType," ","_")
+				
+				//Rare, mixed in with basic alliteration dialogues... this way no matter how many dialogues we add we can mix them in at a nice rate. Although in this case, nonoverlap of any kind does not apply... might adjust later
+				if _personality == "Character_Break" 
+				{
+					if RAND(10) >= 3; _personality = "Basic" 
+				}
+				
 				LastTalk = EVAL("Talk.%(_alliteration).%(_personality)")
 			}
 			elseif _pick == "Poem"

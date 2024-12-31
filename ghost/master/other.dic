@@ -242,9 +242,8 @@ GenerateSnailsonality
 	_personalitytype = _personalitytype[2,'.']
 	_personalitytype = REPLACE(_personalitytype,"_"," ")
 	
-	_poetrytype = _poetrylist[_2nd_10 % ARRAYSIZE(_poetrylist)]
-	_poetrytype = _poetrytype[1,'.']
-	_poetrytype = REPLACE(_poetrytype,"_"," ")
+	_poetrytype = GeneratePoetryType(_2nd_10)
+	
 	if _personalitytype == "Bad"; _poetrytype = "Bad Snoem"
 	if _personalitytype == "Slug"; _poetrytype = "Slugetry"
 	//elseif _personalitytype == "Silent"; _poetrytype = ""
@@ -257,6 +256,33 @@ GenerateSnailsonality
 	
 	//"\_qName: %(_name)\nIs alliterative?: %(_isalliterative)\nID: %(_id)\nPersonality type: %(_personalitytype)\nPoetry type: %(_poetrytype)\nRadio station: %(_radiostation)\nAlt hobby: %(_althobby)\x"
 	(_personalitytype,_poetrytype,_radiostation,_althobby)
+}
+
+//Generalized this so I can use it for character break... I mean maybe I should save this info, but. hmm. 
+GeneratePoetryType
+{
+	_seed = _argv[0]
+	_poetrylist = GETFUNCLIST("Poetry.")
+	
+	_index = ASEARCH("Poetry.Snoem",_poetrylist)
+	_poetrylist[_index] = IARRAY
+	_index = ASEARCH("Poetry.Bad_Snoem",_poetrylist)
+	_poetrylist[_index] = IARRAY
+	_index = ASEARCH("Poetry.Slugetry",_poetrylist)
+	_poetrylist[_index] = IARRAY
+	_index = ASEARCH("Poetry.Acrostic.Left",_poetrylist)
+	_poetrylist[_index] = IARRAY
+	_index = ASEARCH("Poetry.Acrostic.Right",_poetrylist)
+	_poetrylist[_index] = IARRAY
+	_index = ASEARCH("Poetry.Acrostic.Center",_poetrylist)
+	_poetrylist[_index] = IARRAY
+	_index = ASEARCH("Poetry.Acrostic.Span",_poetrylist)
+	_poetrylist[_index] = IARRAY
+	
+	_poetrytype = _poetrylist[_seed % ARRAYSIZE(_poetrylist)]
+	_poetrytype = _poetrytype[1,'.']
+	_poetrytype = REPLACE(_poetrytype,"_"," ")
+	_poetrytype
 }
 
 //TODO i might want to use this over in the name generation to solve the TODO i had over there about the alliteration/not alliteration being obvious
@@ -765,14 +791,26 @@ CleanlinessCheck : all
 		"\![bind,Overlays,Soot Light,1]"
 	}
 	
-	if CurrentSnail.Cleanliness >= 5
+	if CurrentSnail.Cleanliness >= 3
 	{
-		"\![bind,Overlays,Shine,1]"
+		"\![bind,Overlays,Shine Soft,1]"
+	}
+	if CurrentSnail.Cleanliness >= 6
+	{
+		"\![bind,Overlays,Shine Cel,1]"
 	}
 	if CurrentSnail.Cleanliness >= 10
 	{
 		"\![bind,Overlays,Sparkles,1]"
 	}
+}
+
+//Specifically for manual washing, auto wash may or may not override this...
+MaxCleanliness
+{
+	if CleaningProductsPurchased >= 3; 10
+	elseif CleaningProductsPurchased == 2; 6
+	elseif CleaningProductsPurchased == 1; 3
 }
 
 boing : all
@@ -879,6 +917,27 @@ fc
 PoetryType
 {
 	case CurrentSnail.PoetryType
+	{
+		when "Haiku"; _argv[0]
+		when "Cinquain"; _argv[1]
+		when "Limerick"; _argv[2]
+		when "Acrostic"; _argv[3]
+		when "Lyric"; _argv[4]
+		when "Rhyming Couplet"; _argv[5]
+		when "Alternate Rhyme"; _argv[6]
+		when "Free Verse"; _argv[7]
+		when "Diamante"; _argv[8]
+		when "Concrete"; _argv[9]
+	}
+}
+
+//Didn't want to make the ones used more often harder to write... this might only be used once
+PoetryTypeOther
+{
+	_type = _argv[0]
+	_argv[0] = IARRAY
+	
+	case _type
 	{
 		when "Haiku"; _argv[0]
 		when "Cinquain"; _argv[1]

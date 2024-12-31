@@ -477,7 +477,7 @@ AltHobby : array
 	"dancing"
 }
 
-//G ONLY
+//G ONLY, plural
 grapes
 {
 	"grapes"
@@ -490,6 +490,90 @@ grapes
 	"greens"
 	"gnocchi"
 }
+
+//P ONLY, plural
+porridge
+{
+	"porridge"
+	"potatoes"
+	"produce"
+	"pork"
+	"paella"
+	"parsley"
+	"pepper"
+	"peas"
+	"pears"
+	"pocky"
+	"pasta"
+	"punch"
+	"PB&Js" //cheating!!!
+	"peanuts"
+	"pistachios"
+	"pumpkin pie"
+	"pie"
+	"pickles"
+	"prunes"
+	"plums"
+	"pizza"
+}
+
+//C ONLY, plural
+chickpeas
+{
+	//resisting the urge to put coffee... also cola which has caffeine too
+	"chickpeas"
+	"chicken"
+	"clams"
+	"cabbage"
+	"chowder"
+	"cubes" //HMMMMM
+	"cylinders"
+	"cheese"
+	"corn"
+	"cumin"
+	"crackers"
+	"chili"
+	"carbs"
+	"crab"
+	"cream cheese"
+	"cream"
+	"cod"
+	"crispy chicken"
+	"casserole"
+	"candy"
+	"cilantro"
+	"crutons"
+	"caviar"
+	"cereal"
+	"carrots"
+	"candy corn"
+	"chow"
+	"crumbs"
+	"celery"
+}
+
+//D ONLY, singular, as in "(thing) delivery"
+//this one is really hard, but U was harder so i gave up on it...
+deepdish
+{
+	"deep dish"
+	"duck"
+	"dumpling"
+	"dango"
+	"dough"
+	"dewberry"
+	"daikon"
+	"durian"
+	"dill"
+	"dandelion"
+	"drumstick"
+	"dessert"
+	"dijon"
+	"dairy"
+	"ditalini"
+	"donut"
+}
+
 
 snailbrand
 {
