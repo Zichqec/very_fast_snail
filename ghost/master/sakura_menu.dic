@@ -429,11 +429,12 @@ OnSnailWashMenu : all
 	CleanlinessCheck
 	"\0\b[2]\_q\![set,autoscroll,disable]"
 	"\*"
-	if CurrentSnail.Cleanliness >= 5 && _argv[0] == "stroked"; "\s[3]"
+	if CurrentSnail.Cleanliness >= 3 && _argv[0] == "stroked"; "\s[3]"
 	else; "\s[0]"
 	
-	if SpongePurchased.Better; spongebetter
-	elseif SpongePurchased.Basic; spongebasic
+	//TODO different sponge colors here
+	//if SpongePurchased.Better; spongebetter
+	if CleaningProductsPurchased >= 1; spongebasic
 	else; spongeoff
 	
 	"%(bigheader('WASH YOUR SNAIL!'))"
@@ -448,31 +449,27 @@ OnSnailWashMenu : all
 	}
 	"\n\n"
 	
-	
 	"\![*]"
-	switch SpongePurchased.Basic
+	switch CleaningProductsPurchased
 	{
 		switch Lettuce >= 1000
 		{
 			"\f[color,disable]Purchase sponge (%(L)1000)\f[color,default]"
-			"\q[Purchase sponge,OnSnailWash.Sponge,1000,basic sponge] (%(L)1000)"
+			"\__q[OnSnailWash.PurchaseCleaningProduct,1000,sponge]Purchase sponge\__q (%(L)1000)"
 		}
-		"\f[color,disable]Sponge purchased\f[color,default]"
-	}
-	"\n"
-	"\![*]"
-	if SpongePurchased.Basic
-	{
-		switch SpongePurchased.Better
+		switch Lettuce >= 5000
 		{
-			switch Lettuce >= 10000
-			{
-				"\f[color,disable]Purchase better sponge (%(L)10000)\f[color,default]"
-				"\q[Purchase better sponge,OnSnailWash.Sponge,10000,better sponge] (%(L)10000)"
-			}
-			"\f[color,disable]Better sponge purchased\f[color,default]"
+			"\f[color,disable]Purchase soap (%(L)5000)\f[color,default]"
+			"\__q[OnSnailWash.PurchaseCleaningProduct,5000,soap]Purchase soap\__q (%(L)5000)"
 		}
+		switch Lettuce >= 10000
+		{
+			"\f[color,disable]Purchase polishing kit (%(L)10000)\f[color,default]"
+			"\__q[OnSnailWash.PurchaseCleaningProduct,10000,polishing kit]Purchase polishing kit\__q (%(L)10000)"
+		}
+		"\f[color,disable]All cleaning products purchased!\f[color,default]" //TODO figure out how to get sponge colors in here...
 	}
+	
 	"\n\n"
 	"Current funds: %(L)%(Lettuce)\n\n"
 	
@@ -495,7 +492,7 @@ OnSnailWash.Automatic : all
 OnSnailWash.AutomaticYes : all
 {
 	Lettuce -= TOINT(reference0)
-	CurrentSnail.Cleanliness = 1
+	CurrentSnail.Cleanliness = 3
 	
 	"\0\b[2]\_q\![set,autoscroll,disable]\![no-autopause]"
 	CleanlinessCheck
@@ -504,22 +501,27 @@ OnSnailWash.AutomaticYes : all
 	"\![*]\q[Menu,OnSakuraMenu]  \![*]\q[Done,OnBlank]"
 }
 
-OnSnailWash.Sponge : all
+OnSnailWash.PurchaseCleaningProduct : all
 {
+	_a = "a "
+	if reference1 == "soap"; _a = ""
+	
 	"\0\b[2]\_q\![set,autoscroll,disable]\![no-autopause]"
 	
-	"Purchase a %(reference1) for %(L)%(reference0)?\n\n"
+	"Purchase %(_a)%(reference1) for %(L)%(reference0)?\n\n"
 	"This will allow you to clean soot off your snail manually, as well as polish it up for some extra shine.\n\n"
 	
-	"\![*]\q[Purchase,OnPurchaseSponge.Yes,%(reference0),%(reference1)]  \![*]\q[Back,OnSnailWashMenu]"
+	"\![*]\q[Purchase,OnSnailWash.PurchaseCleaningProduct.Yes,%(reference0),%(reference1)]  \![*]\q[Back,OnSnailWashMenu]"
 }
 
-OnPurchaseSponge.Yes : all
+OnSnailWash.PurchaseCleaningProduct.Yes : all
 {
-	if reference1 == "basic sponge"; SpongePurchased.Basic = 1
-	if reference1 == "better sponge"; SpongePurchased.Better = 1
+	CleaningProductsPurchased++
 	
 	Lettuce -= TOINT(reference0)
+	
+	_a = "a "
+	if reference1 == "soap"; _a = ""
 	
 	"\0\b[2]\_q\![no-autopause]"
 	"Purchased %(reference1) for %(L)%(reference0)!\n\n"

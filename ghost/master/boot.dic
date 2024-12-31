@@ -84,8 +84,7 @@ OnInitialize
 		CurrentSnail.LastOut = GETSECCOUNT //this really only matters in the case of crashes i think...
 	}
 	
-	if !ISVAR("SpongePurchased.Basic"); SpongePurchased.Basic = 0
-	if !ISVAR("SpongePurchased.Better"); SpongePurchased.Better = 0
+	if !ISVAR("CleaningProductsPurchased"); CleaningProductsPurchased = 0
 	if !ISVAR("CurrentSnail.Cleanliness"); CurrentSnail.Cleanliness = 0
 	
 	if !ISVAR("SavedSnails.Training")

@@ -20,7 +20,7 @@ OnMouseMove
 			if "__SNAIL_WASH_MENU__" _in_ SHIORI3FW.LastTalk
 			{
 				
-					if (SpongePurchased.Better && CurrentSnail.Cleanliness < 10) || (SpongePurchased.Basic && CurrentSnail.Cleanliness < 5)
+					if CurrentSnail.Cleanliness < MaxCleanliness //(SpongePurchased.Better && CurrentSnail.Cleanliness < 10) || (SpongePurchased.Basic && CurrentSnail.Cleanliness < 5)
 					{
 						CurrentSnail.Cleanliness++
 					}
