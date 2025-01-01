@@ -962,7 +962,11 @@ OnSlugWord
 {
 	if IsSlug
 	{
-		"\![set,balloonwait,0.5]\f[color,disable]%(reference0) \f[color,default]%(snail)"
+		"\![set,balloonwait,0.5]\f[color,disable]%(reference0)\f[color,default]%(snail)"
+	}
+	else
+	{
+		"\c[char,1]" //TODO ??? test this probs??? I think it'll work...
 	}
 }
 

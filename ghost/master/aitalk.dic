@@ -188,7 +188,7 @@ ProcessPoems
 		else; _temp = REPLACE(_temp,C_CRLF,"\n")
 		_temp = REPLACE(_temp,":: ","\![]") //i dont understand why if i use a space it acts as though this whitespace is not important and discards it...
 		
-		_temp = REPLACE(_temp,",SlugWord] ","]")
+		//_temp = REPLACE(_temp,",SlugWord] ","]") //TODO this is causing problemsssssss, i see why cuz the function adds a space AFTER this runs, so punctuation gets borked... also this doesn't apply to regular dialogues. will work on...
 		
 		if _argc > 2
 		{
