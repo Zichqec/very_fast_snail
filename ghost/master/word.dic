@@ -574,6 +574,46 @@ deepdish
 	"donut"
 }
 
+//T ONLY, plural
+toast
+{
+	"toast"
+	"treats"
+	"tasty toppings"
+	"tortillas"
+	"tater tots"
+	"tilapia"
+	"tuna"
+	"tangerines"
+}
+
+//N ONLY, plural
+nachos
+{
+	"nachos"
+	"nectarines"
+	"noodles"
+	"naans"
+	"nutmeg"
+	"nougat"
+	"nettles"
+}
+
+//A ONLY, plural
+anchovies
+{
+	"anchovies"
+	"artichokes"
+	"arugula"
+	"allspice"
+	"apples"
+	"apricots"
+	"almonds"
+	"avocados"
+	"asparagus"
+	"anise"
+}
+
 
 snailbrand
 {
