@@ -64,11 +64,17 @@ OnKeyPress
 		{
 			GraphPage--
 			if GraphPage < 0; GraphPage = 7
+			"\![reload,aigraph]"
 		}
 		elseif reference0 == "right"
 		{
 			GraphPage++
 			if GraphPage > 7; GraphPage = 0
+			"\![reload,aigraph]"
+		}
+		elseif reference0 == "f5"
+		{
+			"\![reload,shiori]\![reload,aigraph]"
 		}
 	}
 }
