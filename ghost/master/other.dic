@@ -269,6 +269,7 @@ GenerateSnailsonality
 GeneratePoetryType
 {
 	_seed = _argv[0]
+	_seed = TrimSnailID(_seed)
 	_poetrylist = GETFUNCLIST("Poetry.")
 	
 	_index = ASEARCH("Poetry.Snoem",_poetrylist)
@@ -290,6 +291,13 @@ GeneratePoetryType
 	_poetrytype = _poetrytype[1,'.']
 	_poetrytype = REPLACE(_poetrytype,"_"," ")
 	_poetrytype
+}
+
+TrimSnailID
+{
+	_ID = _argv[0]
+	if ":" _in_ _ID; _ID = _ID[1,':']
+	_ID
 }
 
 //TODO i might want to use this over in the name generation to solve the TODO i had over there about the alliteration/not alliteration being obvious
