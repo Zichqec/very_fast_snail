@@ -1455,7 +1455,7 @@ AIgraphArray : array
 	if _page == 1
 	{
 		"%(_user.norace),User (no race),%(GraphDiff(_user.norace,50))"
-		"%(_user.norace),User (in race),%(GraphDiff(_user.norace,50))"
+		"%(_user.norace),User (in race),%(GraphDiff(_user.inrace,50))"
 		"%(_user.norace),Announcer,%(GraphDiff(_announcer,50))"
 	}
 	elseif _page == 2
