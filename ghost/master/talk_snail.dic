@@ -559,17 +559,17 @@ Talk.AlliterativeSnailsonality.Character_Break : nonoverlap_pool
 	"\1\b[10]I wish we could form a gastropod pact and get along with our brethren."
 	"\1\b[12]If the other snails found out how I feel they might shun me. But I'm not sure I'd have a place among the non-alliterative snails either..."
 	"\1\b[10]The world would be a better place if we all spent more time eating lettuce and less time arguing."
-	"\1\b[10]I actually know a few slugs. Decent folk, hardworking."
 	"\1\b[12]There's nothing more miserable than hearing yet another victory snoem recited at the winner's podium after a race.\n\n They used to be a cool showing of a snail's rounded skillset, but now they're just rubbing it in."
 	"\1\b[10]This lettuce isn't really doing it for me, you got any other kinds?"
 	"\1\b[12]I've studied snail history a lot, you know. It's fascinating how we went from garden pests to the #1 attraction in the whole world, almost overnight. Makes you think." //imo, someone's playing Snail Clicker, and we're just seeing it from the perspective of one of the world's inhabitants...
 	"\1\b[12]You know, I'm not even into racing that much. I wanted to pursue a career in %(CurrentSnail.AltHobby), but it's hard to make a living as a snail if you're not a racer."
-	"\1\b[12]Any snails you meet on the track are survivors, you know. The snail farms are a harsh place to grow up, and snail school's not much better.\n\n Life as a young snail is rough when being eaten by your peers is a constant concern. Not to even mention humans." //facts snail is a LIAR, facts snail has 100% consumed other snails
+	"\1\b[12]Any snails you meet on the track are survivors, you know. The snail farms are a harsh place to grow up, and snail school's not much better.\n\n Life as a young snail is rough when being eaten by your peers is a constant concern. Not to mention other predators." //facts snail is a LIAR, facts snail has 100% consumed other snails
 	"\1\b[10]As much as the other snails claim otherwise, the garage isn't our natural habitat. Plants are in our nature, not gears."
 	"\1\b[10]Snoetry this, snoetry that. It's just alliterative acrostics, don't let anyone convince you otherwise."
 	"\1\b[10]I wonder how long snail racing will be popular for. How many human generations? How many more snail generations...? Who can know..."
 	"\1\b[10]Snail language has such nuance to it. All this alliteration is... just so monotonous. It's hard to describe, you'd have to learn our language to understand."
 	"\1\b[12]I am but a humble snail. I was born to race, so that is what I do.\n\n Like it I may not, but I'll work with what I've got, and leave this place better for you."
+	"\1\b[12]~~~~\f[bold,1]~\f[bold,default]~ ~~ \f[bold,1]~~~\f[bold,default] ~~ ~\f[bold,1]~~\f[italic,1]~\f[bold,default] ~~\f[italic,default]~ ~~\f[bold,1]~~~ ~~\f[italic,1]~~~~~~~~~~~\f[bold,default]~~\f[italic,default] ~~~~\f[italic,1]~~~~ ~~\f[bold,1]~~\f[italic,default]~~~~ ~~  ~~~~\f[bold,default]~~ ~~\f[bold,1]~~ ~~~~~~\f[italic,1]~~~~\f[bold,default]~ ~~\f[italic,default]~~~~~~\n\n Sorry, it's snail language, you wouldn't understand."
 }
 
 Talk.AlliterativeSnailsonality.Slug : nonoverlap_pool
