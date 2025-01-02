@@ -306,14 +306,92 @@ Talk.Snailsonality.Gymbro : nonoverlap_pool
 
 Talk.Snailsonality.Stalker : nonoverlap_pool
 {
-	"\1\b[10]i got this out of your garbage can"
+	_randfamous = RAND(30)
+	"\1\b[10]I heard from a snail who heard from a snail who heard from a snail who heard from a snail that totally wasn't me that %(heardthat)."
+	"\1\b[10]Did you hear the latest grub news? Apparently %(FamousSnails[_randfamous]) likes %(pineapple[_randfamous]) on its pizza. Imagine."
 }
 
 // stalkerstarters
 // {
 	// "I was minding my own business practicing my racing moves in the middle of the night when there weren't any kids around that might get hurt, when i accidentally fell into"
 	// "I was helping a friend get home safely from the snail wash the other day, you haven't met this friend before so don't worry about who, and on the way back i bumped into"
+	
+	//I think this has to be a different pool...
+	// "I heard from a snail who heard from a snail who heard from a snail who heard from a snail that totally wasn't me that"
 // }
+
+heardthat
+{
+	"Super Snail sings in the shower"
+}
+
+FamousSnails : array
+{
+	"Amazing Acorn"
+	"Burnout Bandit"
+	"Crunching Calcium"
+	"Derivative Dancer"
+	"Exceptional Escapee"
+	"Fortified Fungus"
+	"Grandmaster Gastropod"
+	"Hungry Hungry Hangnail"
+	"Impressive Idol"
+	"Junior Jester"
+	"Kiwi Kid"
+	"Loser Lemon"
+	"Meaty Mollusk"
+	"Nervous Newbie"
+	"Outcast Old One"
+	"Pickled Pasta"
+	"Quitter Quiz"
+	"Relatable Racer"
+	"Snailstopher Snailerton"
+	"The Tank"
+	"Unbelievable Underdog"
+	"Violin Vibrato"
+	"Walkathon Winner"
+	"Xtremely Xtreme"
+	"Yes Yes Yes Yahoo!"
+	"Znail Zone"
+	"DNF"
+	"Chaos Speedster"
+	"Eat My Dust"
+	"Super Snail"
+}
+
+pineapple : array
+{
+	"pineapple" //Amazing Acorn
+	"pine cones" //Burnout Bandit
+	"eggshells" //Crunching Calcium
+	"cucumbers" //Derivative Dancer
+	"scalloped potatoes" //Exceptional Escapee
+	"sausage gravy" //Fortified Fungus
+	"ketchup" //Grandmaster Gastropod
+	"nail clippings" //Hungry Hungry Hangnail
+	"pepperoni covered in gold leaf" //Impressive Idol
+	"funfetti" //Junior Jester
+	"kiwi" //Kiwi Kid
+	"banana" //Loser Lemon
+	"to have a whole entire salad" //Meaty Mollusk
+	"sugar cubes" //Nervous Newbie
+	"prunes" //Outcast Old One
+	"its renowned 'dill pickle carbonara' recipe" //Pickled Pasta
+	"graham crackers" //Quitter Quiz
+	"cheese and pepperoni" //Relatable Racer
+	"escargot" //Snailstopher Snailerton
+	"fish food" //The Tank
+	"dog treats" //Unbelievable Underdog
+	"pine needles" //Violin Vibrato
+	"trail mix" //Walkathon Winner
+	"five kinds of cheese, three kinds of meat, a pile of vegetables, some fruit, and several sauces" //Xtremely Xtreme
+	"affirmative messages written out with the toppings" //Yes Yes Yes Yahoo!
+	"zucchini zoodles" //Znail Zone
+	"no toppings at all" //DNF
+	"%(ANY('hamburgers','ice cubes','pizza','hotdogs','an assortment of other miniature foods'))" //Chaos Speedster
+	"powdered sugar" //Eat My Dust
+	"the classic lettuceroni, cheese, and lettuce sauce" //Super Snail
+}
 
 Talk.Snailsonality.Slacker : nonoverlap_pool
 {
