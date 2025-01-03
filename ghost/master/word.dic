@@ -981,6 +981,19 @@ FamousSnails : array
 	"Super Snail"
 }
 
+heardthat
+{
+	"Super Snail sings in the shower."
+	"Junior Jester is scared of clowns."
+	"Relatable Racer hates being on camera."
+	"Pickled Pasta has a bunch of pictures of itself hung around its room."
+	"Derivative Dancer sleeps on the floor."
+	"Violin Vibrato throws any and all fan mail into the trash without reading it."
+	"Walkathon Winner has a spinach allergy it doesn't want the press to know about."
+	"Xtremely Xtreme listens to soothing rain sounds in its off hours."
+	"%(ANY(FamousSnails)) had a surprising amount of %(trash) in its trash can.\n\n ... I'd share with you but this is top-tier collector memorabilia." //:joy: hmmmmmmmm
+}
+
 pineapple : array
 {
 	"pineapple" //Amazing Acorn
@@ -1030,33 +1043,33 @@ apparentlyit
 	"Amazing Acorn|had a fight with a squirrel the other day and came out the victor."
 	"Burnout Bandit|goes through %(RAND(10) + 2) dozen sets of tires in a year."
 	"Crunching Calcium|dedicates half of its diet to calcium supplements."
-	//"Derivative Dancer|"
-	//"Exceptional Escapee|"
+	"Derivative Dancer|was caught taking a ride round and round on the ceiling fan."
+	"Exceptional Escapee|went missing for %(RAND(6) + 2) days, only to be found under a bush on the outskirts of %(snailcity)."
 	"Fortified Fungus|was giving off some kind of weird spores at the last awards ceremony."
-	//"Grandmaster Gastropod|"
-	//"Hungry Hungry Hangnail|"
-	//"Impressive Idol|"
-	//"Junior Jester|"
-	//"Kiwi Kid|"
+	"Grandmaster Gastropod|took a vacation and rented a whole private beach just for itself for the day."
+	"Hungry Hungry Hangnail|went frolicking through hair on the floor of a local salon."
+	"Impressive Idol|has a big scrapbook full of pictures of other racers with handwritten notes about each one."
+	"Junior Jester|put on a show at a children's birthday party."
+	"Kiwi Kid|got a pet bird to keep it company."
 	"Loser Lemon|took a month off to snooze on the couch and watch TV."
-	//"Meaty Mollusk|"
-	//"Nervous Newbie|"
-	//"Outcast Old One|"
+	"Meaty Mollusk|saw itself in the mirror and was so startled that it ran and hid under the dresser for %(RAND(22) + 2) hours."
+	"Nervous Newbie|was caught throwing up during training."
+	"Outcast Old One|was seen at the grocery store looking at %(beans)."
 	"Pickled Pasta|smells like sourdough."
-	//"Quitter Quiz|"
-	//"Relatable Racer|"
-	//"Snailstopher Snailerton|"
+	"Quitter Quiz|was spotted completing a crossword."
+	"Relatable Racer|posted a new snailfie to snailbook."
+	"Snailstopher Snailerton|picked up a part-time job doing paperwork."
 	"The Tank|has a fish tank in its room, and the fish swimming around soothes it to sleep."
-	//"Unbelievable Underdog|"
+	"Unbelievable Underdog|was caught taking kibble from an unknown puppy's food bowl."
 	"Violin Vibrato|went on a huge shopping spree and will be changing up its look big time in its next race."
-	//"Walkathon Winner|"
+	"Walkathon Winner|started JOGGING in its free time, can you believe it!?"
 	"Xtremely Xtreme|\c[char,1]'s working towards setting the world record for %(worldrecord)."
 	"Yes Yes Yes Yahoo!|\c[char,1]'s developing a new cheer routine to teach to its fans."
-	//"Znail Zone|"
+	"Znail Zone|had a bad case of the hiccups that lasted for %(RAND(6) + 2) hours."
 	"DNF|\c[char,1]'s managed to scrape together enough lettuce to buy yet another rocket to strap to its shell." //The tag here introduces a teeny hiccup in the timing but i think it's ok because this change helps it feel more varied...
-	//"Chaos Speedster|"
+	"Chaos Speedster|%(ANY('was caught shopping for helmets online.','was spotted leaving the snail hospital today.'))"
 	"Eat My Dust|likes to clap together chalkboard erasers to make smoke screens for its getaways."
-	//"Super Snail|"
+	"Super Snail|%(ANY('was giving out free autographs at the local library.','has been putting in extra hours helping out with the community garden.'))"
 }
 
 worldrecord
@@ -1090,7 +1103,7 @@ insidescoop
 	//"Impressive Idol|"
 	//"Junior Jester|"
 	//"Kiwi Kid|"
-	//"Loser Lemon|"
+	"Loser Lemon|the recent epidemic of vandalized orchards wasn't the fault of loser lemon, but actually an overenthusiastic fan."
 	//"Meaty Mollusk|"
 	"Nervous Newbie|Nervous Newbie's fascination with carrots? Completely true, but not for the reason you think. Most snails enjoy them for their flavor and crunch, but Nervous Newbie? Completely. Obsessed. With the color orange.\n\n Carrots, pumpkins, apricots, cantaloupe, bell peppers, squash; you name it, Nervous Newbie eats it by the bushel.\n\n Honestly, I'm kinda jealous. I wish I was into something like that."
 	//"Outcast Old One|"
@@ -1106,9 +1119,9 @@ insidescoop
 	//"Yes Yes Yes Yahoo!|"
 	//"Znail Zone|"
 	//"DNF|"
-	//"Chaos Speedster|"
+	"Chaos Speedster|recent fireworks factory explosion was misattributed to Chaos Speedster. Inside sources say Yes Yes Yes Yahoo! became too excited during a tour of the facilities and caused a chain reaction that resulted in the impromptu light show."
 	//"Eat My Dust|"
-	//"Super Snail|"
+	"Super Snail|the papers printed a false story: Super Snail didn't actually save 1000 people from a burning building, it only saved 100.\n\n I mean it's more than I've ever saved but technical accuracy is important."
 }
 
 wildstory
@@ -1122,4 +1135,39 @@ wildstory
 	"it was the biggest snail in its class|eating its biggest rival in snail school years ago"
 	"it likes foot massages|demanding to be waited on tentacle and foot 24/7"
 	"it dreams of owning a luxury car one day|having a big collection of every kind of car that's ever existed"
+}
+
+snailcity
+{
+	"Snail City"
+	"Snailopolis"
+	"Snailville"
+	"New Snail City"
+	"Old Snail City"
+	"Snailtopia"
+	"Snailsburg"
+	"Snailtown"
+	"Snailton"
+	"Snailover"
+	"Snailborough"
+	"Snailford"
+	"Snailshire"
+	"Snailhill"
+	"Snail Pointe"
+}
+
+beans
+{
+	"beans"
+	"rice"
+	"tortillas"
+	"caviar"
+	"yams"
+	"prunes"
+	"prawns"
+	"eggs"
+	"basil"
+	"the lobsters in the lobster tank"
+	"the signs hanging from the ceiling"
+	"another snail that had the same color paint on its shell"
 }

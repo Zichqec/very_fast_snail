@@ -291,7 +291,9 @@ Talk.Snailsonality.Stalker : nonoverlap_pool
 {
 	_randfamous = RAND(30)
 	"\1\b[12]I heard from a snail who heard from a snail who heard from a snail who heard from a snail that totally wasn't me that %(heardthat)"
+	
 	"\1\b[12]Did you hear the latest grub news? Apparently %(FamousSnails[_randfamous]) likes %(pineapple[_randfamous]) on its pizza. Imagine."
+	
 	_apparentlyit = apparentlyit
 	"\1\b[12]Word's been going around about %(_apparentlyit[0,'|']) lately, have you heard? Apparently it %(_apparentlyit[1,'|'])"
 	
@@ -304,19 +306,6 @@ Talk.Snailsonality.Stalker : nonoverlap_pool
 	// "I was minding my own business practicing my racing moves in the middle of the night when there weren't any kids around that might get hurt, when I accidentally fell into"
 	// "I was helping a friend get home safely from the snail wash the other day, you haven't met this friend before so don't worry about who, and on the way back I bumped into"
 // }
-
-heardthat
-{
-	"Super Snail sings in the shower."
-	"Junior Jester is scared of clowns."
-	"Relatable Racer hates being on camera."
-	"Pickled Pasta has a bunch of pictures of itself hung around its room."
-	"Derivative Dancer sleeps on the floor."
-	"Violin Vibrato throws any and all fan mail into the trash without reading it."
-	"Walkathon Winner has a spinach allergy it doesn't want the press to know about."
-	"Xtremely Xtreme listens to soothing rain sounds in its off hours."
-	"%(ANY(FamousSnails)) had a surprising amount of %(trash) in its trash can.\n\n ... I'd share with you but this is top-tier collector memorabilia." //:joy: hmmmmmmmm
-}
 
 Talk.Snailsonality.Slacker : nonoverlap_pool
 {
