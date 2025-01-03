@@ -946,3 +946,180 @@ goldlettuce
 	"an extensive fanclub that will pay for photos with me"
 	"a limousine to drive me to every race"
 }
+
+FamousSnails : array
+{
+	"Amazing Acorn"
+	"Burnout Bandit"
+	"Crunching Calcium"
+	"Derivative Dancer"
+	"Exceptional Escapee"
+	"Fortified Fungus"
+	"Grandmaster Gastropod"
+	"Hungry Hungry Hangnail"
+	"Impressive Idol"
+	"Junior Jester"
+	"Kiwi Kid"
+	"Loser Lemon"
+	"Meaty Mollusk"
+	"Nervous Newbie"
+	"Outcast Old One"
+	"Pickled Pasta"
+	"Quitter Quiz"
+	"Relatable Racer"
+	"Snailstopher Snailerton"
+	"The Tank"
+	"Unbelievable Underdog"
+	"Violin Vibrato"
+	"Walkathon Winner"
+	"Xtremely Xtreme"
+	"Yes Yes Yes Yahoo!"
+	"Znail Zone"
+	"DNF"
+	"Chaos Speedster"
+	"Eat My Dust"
+	"Super Snail"
+}
+
+pineapple : array
+{
+	"pineapple" //Amazing Acorn
+	"sausage gravy" //Burnout Bandit
+	"eggshells" //Crunching Calcium
+	"cucumbers" //Derivative Dancer
+	"scalloped potatoes" //Exceptional Escapee
+	"sliced amanita phalloides" //Fortified Fungus
+	"ketchup" //Grandmaster Gastropod
+	"nail clippings" //Hungry Hungry Hangnail
+	"pepperoni covered in gold leaf" //Impressive Idol
+	"funfetti" //Junior Jester
+	"kiwi" //Kiwi Kid
+	"banana" //Loser Lemon
+	"to have a whole entire salad" //Meaty Mollusk
+	"sugar cubes" //Nervous Newbie
+	"prunes" //Outcast Old One
+	"its renowned 'dill pickle carbonara' recipe" //Pickled Pasta
+	"graham crackers" //Quitter Quiz
+	"just cheese" //Relatable Racer
+	"escargot" //Snailstopher Snailerton
+	"fish food" //The Tank
+	"dog treats" //Unbelievable Underdog
+	"pine needles" //Violin Vibrato
+	"trail mix" //Walkathon Winner
+	"five kinds of cheese, three kinds of meat, a pile of vegetables, some fruit, and several sauces" //Xtremely Xtreme
+	"affirmative messages written out with the toppings" //Yes Yes Yes Yahoo!
+	"zucchini zoodles" //Znail Zone
+	"no toppings at all, just crust" //DNF
+	"%(ANY('hamburgers','ice cubes','pizza','hotdogs','an assortment of other miniature foods'))" //Chaos Speedster
+	"powdered sugar" //Eat My Dust
+	"the classic lettuceroni, cheese, and lettuce sauce" //Super Snail
+}
+
+trash
+{
+	"wilted lettuce"
+	"socks"
+	"hamburger wrappers"
+	"shredded paper"
+	"empty soda cups"
+	"tissues"
+}
+
+apparentlyit
+{
+	"Amazing Acorn|had a fight with a squirrel the other day and came out the victor."
+	"Burnout Bandit|goes through %(RAND(10) + 2) dozen sets of tires in a year."
+	"Crunching Calcium|dedicates half of its diet to calcium supplements."
+	//"Derivative Dancer|"
+	//"Exceptional Escapee|"
+	"Fortified Fungus|was giving off some kind of weird spores at the last awards ceremony."
+	//"Grandmaster Gastropod|"
+	//"Hungry Hungry Hangnail|"
+	//"Impressive Idol|"
+	//"Junior Jester|"
+	//"Kiwi Kid|"
+	"Loser Lemon|took a month off to snooze on the couch and watch TV."
+	//"Meaty Mollusk|"
+	//"Nervous Newbie|"
+	//"Outcast Old One|"
+	"Pickled Pasta|smells like sourdough."
+	//"Quitter Quiz|"
+	//"Relatable Racer|"
+	//"Snailstopher Snailerton|"
+	"The Tank|has a fish tank in its room, and the fish swimming around soothes it to sleep."
+	//"Unbelievable Underdog|"
+	"Violin Vibrato|went on a huge shopping spree and will be changing up its look big time in its next race."
+	//"Walkathon Winner|"
+	"Xtremely Xtreme|\c[char,1]'s working towards setting the world record for %(worldrecord)."
+	"Yes Yes Yes Yahoo!|\c[char,1]'s developing a new cheer routine to teach to its fans."
+	//"Znail Zone|"
+	"DNF|\c[char,1]'s managed to scrape together enough lettuce to buy yet another rocket to strap to its shell." //The tag here introduces a teeny hiccup in the timing but i think it's ok because this change helps it feel more varied...
+	//"Chaos Speedster|"
+	"Eat My Dust|likes to clap together chalkboard erasers to make smoke screens for its getaways."
+	//"Super Snail|"
+}
+
+worldrecord
+{
+	"the longest any snail has ever held its breath"
+	"the longest distance sprint by a snail"
+	"the highest any snail has ever climbed up the side of a skyscraper, unassisted"
+	"the most lettuce eaten in one day"
+	"the longest trip any snail has ever taken by plane"
+	"the most races completed in a single day, which it's going to accomplish by setting up a racetrack in a plane that's flying west, causing the day to last longer"
+	"running the 100 centimeter dash with another snail on your back"
+	"how long a snail can stay on a mountain bike without a human companion"
+	"the most poetry recited in an hour, which it's going to accomplish by training itself to recite multiple poems at the same time"
+	"the most shell paint jobs in a single year"
+}
+
+insidescoop
+{
+	//this whole time, [name] has been
+	//we were all wrong about [name], it
+	
+	//"Amazing Acorn|"
+	//"Burnout Bandit|"
+	//"Crunching Calcium|"
+	_wildstory = wildstory
+	"Derivative Dancer|all the buzz about Derivative Dancer %(_wildstory[1,'|'])? It's totally fake. SOMEONE, not naming any names, found out that %(_wildstory[0,'|']), and then it passed from snail to snail to snail to snail until it was completely unrecognizable and caused a huge scandal."
+	//"Exceptional Escapee|"
+	//"Fortified Fungus|"
+	//"Grandmaster Gastropod|"
+	//"Hungry Hungry Hangnail|"
+	//"Impressive Idol|"
+	//"Junior Jester|"
+	//"Kiwi Kid|"
+	//"Loser Lemon|"
+	//"Meaty Mollusk|"
+	"Nervous Newbie|Nervous Newbie's fascination with carrots? Completely true, but not for the reason you think. Most snails enjoy them for their flavor and crunch, but Nervous Newbie? Completely. Obsessed. With the color orange.\n\n Carrots, pumpkins, apricots, cantaloupe, bell peppers, squash; you name it, Nervous Newbie eats it by the bushel.\n\n Honestly, I'm kinda jealous. I wish I was into something like that."
+	//"Outcast Old One|"
+	"Pickled Pasta|it originally had a different racer name, but once it started gaining notoriety it managed to pester some official into granting it a name change, and thus became the Pickled Pasta we know and love today.\n\n It's original name? I won't tell... yet."
+	//"Quitter Quiz|"
+	//"Relatable Racer|"
+	"Snailstopher Snailerton|all those stories about Snailstopher Snailerton going bankrupt? COMPLETELY wrong, it's just been investing heavily in cabbage while the market looks good." //mhm mhm i'll bet the market looks good to a snail
+	"The Tank|The Tank is actually really good at gymnastics. It was going to compete in the snailympics, but then its racing career really took off, so it gave it up to focus on the leaderboards instead.\n\n Makes you wonder what could have been, doesn't it?"
+	//"Unbelievable Underdog|"
+	//"Violin Vibrato|"
+	//"Walkathon Winner|"
+	//"Xtremely Xtreme|"
+	//"Yes Yes Yes Yahoo!|"
+	//"Znail Zone|"
+	//"DNF|"
+	//"Chaos Speedster|"
+	//"Eat My Dust|"
+	//"Super Snail|"
+}
+
+wildstory
+{
+	//original nugget of truth|lie
+	"it's picky about what lettuce it eats|eating diamonds for breakfast"
+	"it got straight S's in snail school|cheating at snail school to have better prospects for sponsors" //Ss or S's...
+	"it can't sleep without a clean shell|spending upwards of %(L)%(RAND(11) + 1)0,000 a month on shell washes alone"
+	"it has a side hustle testing out new paint colors|being paid off to keep quiet about toxic ingredients in some of the shell paints it promotes"
+	"it had a crack in its shell repaired once|having had shell surgery to achieve its perfect swirl"
+	"it was the biggest snail in its class|eating its biggest rival in snail school years ago"
+	"it likes foot massages|demanding to be waited on tentacle and foot 24/7"
+	"it dreams of owning a luxury car one day|having a big collection of every kind of car that's ever existed"
+}
