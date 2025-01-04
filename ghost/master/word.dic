@@ -1047,7 +1047,7 @@ apparentlyit
 	"Exceptional Escapee|went missing for %(RAND(6) + 2) days, only to be found under a bush on the outskirts of %(snailcity)."
 	"Fortified Fungus|was giving off some kind of weird spores at the last awards ceremony."
 	"Grandmaster Gastropod|took a vacation and rented a whole private beach just for itself for the day."
-	"Hungry Hungry Hangnail|went frolicking through hair on the floor of a local salon."
+	"Hungry Hungry Hangnail|went frolicking through the hair on the floor of a local salon."
 	"Impressive Idol|has a big scrapbook full of pictures of other racers with handwritten notes about each one."
 	"Junior Jester|put on a show at a children's birthday party."
 	"Kiwi Kid|got a pet bird to keep it company."
@@ -1097,7 +1097,7 @@ insidescoop
 	//"Fortified Fungus|"
 	"Grandmaster Gastropod|has a whole team of snails that it's training personally. Cool, huh?\n\n I've thought about asking if it'll teach me too, but uh, apparently there are a lot of knives and other pointy things involved, and I think maybe it would be better for me to just train on my own, honestly." //How much we wanna bet that grandmaster gastropod is a slug tho........
 	//"Hungry Hungry Hangnail|"
-	//"Impressive Idol|"
+	"Impressive Idol|wasn't born in the snail farms, it was hand raised by its sponsor and that's why it has the accent."
 	"Junior Jester|we were all wrong about Junior Jester's recent race absence, it wasn't anything to do with a racing injury. It actually just got lost in its sponsor's %(airducts), and nobody could find it for like a week.\n\n They did eventually find it, it's fine now. But I heard its sponsor is working on drawing up a map for it to keep in its shell in case it gets lost again."
 	//"Kiwi Kid|"
 	"Loser Lemon|the recent epidemic of vandalized orchards wasn't the fault of loser lemon, but actually an overenthusiastic fan."
@@ -1215,6 +1215,7 @@ peanuts
 	"pistachios"
 	"chips"
 	"freeze-dried pineapple chips"
+	"walnuts"
 }
 
 snailrumors
@@ -1243,7 +1244,8 @@ snailrumors
 	"uses a teleprompter"
 	"ate the spinach of all its classmates in snail school so that it would grow up big and strong and be favored over them"
 	"has an insatiable need to eat insects, day in and day out"
-	"actually hates going to the beach, but its sponsor loves taking beach days, so it just suffers through being feeling all sandy and gross so that they can spend time together"
+	"actually hates going to the beach, but its sponsor loves taking beach days, so it just suffers through feeling all sandy and gross so that they can spend time together"
+	"is secretly raising a swimming pool full of %(ANY('sea ',''))snails"
 }
 
 //Items that are not race related
@@ -1327,6 +1329,8 @@ eatinghabits
 	"favorite TV shows"
 	"radio station preferences and how they change when certain advertisements play"
 	"preferred color schemes and if they change based on the weather"
+	"chewing habits"
+	"strategy for getting enough calcium in its diet"
 }
 
 graphing
@@ -1336,4 +1340,62 @@ graphing
 	"measurements"
 	"testing"
 	"observation"
+}
+
+found
+{
+	"found"
+	"acquired"
+	"happened across"
+	"obtained legally by technicality"
+	"got through legitimate means"
+	"had a friend get for me"
+	"got from a member of the %(_argv[0]) fanclub that definitely wasn't me"
+	"bought off the snailernet"
+	"got from a very legitimate source"
+	"happen to have"
+	"am in possession of for inexplicable reasons"
+	"paid for"
+	"am sure it won't miss"
+	"you know what, don't worry about it. Anyway"
+	"have"
+	"have very legitimate reasons for having"
+	"was given"
+	"caught when it fell out of the sky"
+	"was put in charge of"
+	"got for my hatching day"
+	"received as a reward for being a loyal fan"
+	"got from another collector and did not ask about its source"
+	"grew"
+}
+
+someofthese
+{
+	_thissnail = _argv[0]
+	_othersnail = ANY(FamousSnails)
+	while _othersnail == _thissnail
+	{
+		_othersnail = ANY(FamousSnails)
+	}
+	"some of these straw wrappers"
+	"any of these empty bags of %(peanuts)"
+	"this empty bag of frozen lettucerolls"
+	"this discarded frisbee bed"
+	"this half-used sheet of stickers"
+	"this sealed container of peeled off paint"
+	"this tube of eye ointment"
+	"one of these hotel TV program guides"
+	"any of these old airline tickets"
+	"this old single use shell wipe"
+	"this stick"
+	"this discarded fan letter that definitely wasn't sent by me"
+	"this bottle of Bird-B-Gone spray"
+	"this picture of it posing with %(_othersnail)"
+	"this picture of it posing with a %(_thissnail) cosplayer that defintely isn't me"
+	"this well-loved lettuce-leaf-shaped chew toy"
+	"one of these cupcake wrappers"
+	"one of these used snail wash sponges"
+	"any of these water bottle labels"
+	"this old, sweaty-smelling gym towel"
+	"this flyer for one of its big races"
 }
