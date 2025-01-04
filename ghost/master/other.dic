@@ -623,7 +623,7 @@ IsAlliterative
 //snail talk rate change
 snail
 {
-	"\![set,balloonwait,1.7]"
+	"\![set,balloonwait,1.3]"
 }
 
 snailend
