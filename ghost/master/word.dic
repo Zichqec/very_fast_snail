@@ -1043,7 +1043,7 @@ apparentlyit
 	"Amazing Acorn|had a fight with a squirrel the other day and came out the victor."
 	"Burnout Bandit|goes through %(RAND(10) + 2) dozen sets of tires in a year."
 	"Crunching Calcium|dedicates half of its diet to calcium supplements."
-	"Derivative Dancer|was caught taking a ride round and round on the ceiling fan."
+	"Derivative Dancer|was caught taking a ride around and around on the ceiling fan."
 	"Exceptional Escapee|went missing for %(RAND(6) + 2) days, only to be found under a bush on the outskirts of %(snailcity)."
 	"Fortified Fungus|was giving off some kind of weird spores at the last awards ceremony."
 	"Grandmaster Gastropod|took a vacation and rented a whole private beach just for itself for the day."
@@ -1088,26 +1088,23 @@ worldrecord
 
 insidescoop
 {
-	//this whole time, [name] has been
-	//we were all wrong about [name], it
-	
-	//"Amazing Acorn|"
+	"Amazing Acorn|Amazing Acorn LOVES cheesy sitcoms. Sits and watches them all day on its days off. Laughs at every corny joke.\n\n Apparently it tapes them all throughout the week, then watches the whole week's worth of episodes in one sitting on the weekends."
 	//"Burnout Bandit|"
 	//"Crunching Calcium|"
 	_wildstory = wildstory
-	"Derivative Dancer|all the buzz about Derivative Dancer %(_wildstory[1,'|'])? It's totally fake. SOMEONE, not naming any names, found out that %(_wildstory[0,'|']), and then it passed from snail to snail to snail to snail until it was completely unrecognizable and caused a huge scandal."
+	"Derivative Dancer|all the buzz about Derivative Dancer %(_wildstory[1,'|'])? It's totally fake. SOMEONE, not naming any names, found out that %(_wildstory[0,'|']), and then that story passed from snail to snail to snail to snail until it was completely unrecognizable and caused a huge scandal."
 	//"Exceptional Escapee|"
 	//"Fortified Fungus|"
-	//"Grandmaster Gastropod|"
+	"Grandmaster Gastropod|has a whole team of snails that it's training personally. Cool, huh?\n\n I've thought about asking if it'll teach me too, but uh, apparently there are a lot of knives and other pointy things involved, and I think maybe it would be better for me to just train on my own, honestly." //How much we wanna bet that grandmaster gastropod is a slug tho........
 	//"Hungry Hungry Hangnail|"
 	//"Impressive Idol|"
-	//"Junior Jester|"
+	"Junior Jester|we were all wrong about Junior Jester's recent race absence, it wasn't anything to do with a racing injury. It actually just got lost in its sponsor's %(airducts), and nobody could find it for like a week.\n\n They did eventually find it, it's fine now. But I heard its sponsor is working on drawing up a map for it to keep in its shell in case it gets lost again."
 	//"Kiwi Kid|"
 	"Loser Lemon|the recent epidemic of vandalized orchards wasn't the fault of loser lemon, but actually an overenthusiastic fan."
 	//"Meaty Mollusk|"
 	"Nervous Newbie|Nervous Newbie's fascination with carrots? Completely true, but not for the reason you think. Most snails enjoy them for their flavor and crunch, but Nervous Newbie? Completely. Obsessed. With the color orange.\n\n Carrots, pumpkins, apricots, cantaloupe, bell peppers, squash; you name it, Nervous Newbie eats it by the bushel.\n\n Honestly, I'm kinda jealous. I wish I was into something like that."
 	//"Outcast Old One|"
-	"Pickled Pasta|it originally had a different racer name, but once it started gaining notoriety it managed to pester some official into granting it a name change, and thus became the Pickled Pasta we know and love today.\n\n It's original name? I won't tell... yet."
+	"Pickled Pasta|it originally had a different racer name, but once it started gaining notoriety it managed to pester some official into granting it a name change, and thus became the Pickled Pasta we know and love today.\n\n Its original name? I won't tell... yet."
 	//"Quitter Quiz|"
 	//"Relatable Racer|"
 	"Snailstopher Snailerton|all those stories about Snailstopher Snailerton going bankrupt? COMPLETELY wrong, it's just been investing heavily in cabbage while the market looks good." //mhm mhm i'll bet the market looks good to a snail
@@ -1115,10 +1112,10 @@ insidescoop
 	//"Unbelievable Underdog|"
 	//"Violin Vibrato|"
 	//"Walkathon Winner|"
-	//"Xtremely Xtreme|"
+	"Xtremely Xtreme|this whole time, Xtremely Xtreme has been training on the side for shell lifting competitions, and is hoping to take the championship within the next year or so."
 	//"Yes Yes Yes Yahoo!|"
 	//"Znail Zone|"
-	//"DNF|"
+	"DNF|DNF wants to be fastest AND coolest snail ever, and it refuses to compromise on anything. So it's tweaking parameters until it can achieve the perfect race.\n\n Top speed, dark glasses, facing backwards; all as part of a perfect run with no crashing.\n\n When it finally happens it's gonna be a sight to see."
 	"Chaos Speedster|recent fireworks factory explosion was misattributed to Chaos Speedster. Inside sources say Yes Yes Yes Yahoo! became too excited during a tour of the facilities and caused a chain reaction that resulted in the impromptu light show."
 	//"Eat My Dust|"
 	"Super Snail|the papers printed a false story: Super Snail didn't actually save 1000 people from a burning building, it only saved 100.\n\n I mean it's more than I've ever saved but technical accuracy is important."
@@ -1170,4 +1167,173 @@ beans
 	"the lobsters in the lobster tank"
 	"the signs hanging from the ceiling"
 	"another snail that had the same color paint on its shell"
+}
+
+setofplayingcards
+{
+	"a set of playing cards"
+	"a mostly empty tin of shell polish"
+	"several dirty napkins"
+	"a broken lightbulb"
+	"a cardboard box for a new engine"
+	"a broken buckle from a sling bag"
+	"a cracked pair of glasses frames"
+	"this discarded Snailmas card" //??? Snailmas :joy: is that ok
+	"some dryer lint"
+	"a lollipop wrapper"
+	"all these straw wrappers"
+	"this dead watch battery"
+	"an old hotel room key"
+	"these cookie crumbs"
+	"an empty bottle of shell soap"
+	"a tag cut off the inside of a baseball cap"
+	"the packing label from a box of parts"
+	"an empty bag of %(peanuts)"
+	"a gluestick"
+	"an old diary" //STALKER SNAIL OMG NO
+	"an old raffle ticket"
+	"a worn-out gym towel"
+	"an apartment key" //STALKER SNAIL!?!?!?!?!?
+	"a snail-sized beach ball"
+	"this little bag of sand"
+	"an empty plastic bag"
+	"a bunch of fake leaves from a plastic plant"
+	"one of a set of little tea lights"
+	"some shredded papers that I think are a copy of a racer certification" //STALKER
+	"a lettuce card" //STALKER!!!!!!!!!!!!!!!!!!!!!!!!
+	"a pen with a fake sunflower on it"
+	"a baby snailhood picture"
+	"some menus for the local restaurants"
+	"a bunch of spam mail"
+}
+
+peanuts
+{
+	"peanuts"
+	"cashews"
+	"almonds"
+	"pistachios"
+	"chips"
+	"freeze-dried pineapple chips"
+}
+
+snailrumors
+{
+	"is looking to get away from racing and do something else"
+	"cheated in its last few races to get a more impressive score even though it was going to win anyway"
+	"is actually from %(snailcity) and is covering it up for some reason"
+	"is trying a new %(helmet) brand that's different from what it usually endorses"
+	"was caught listening to pirate radio"
+	"has been on vacation for a month, and trained a body double to race in its place"
+	"\c[char,1]'s sponsor is thinking about getting a new snail and starting over"
+	"has picked up a new hobby: %(ANY(AltHobby))"
+	"doesn't actually like lettuce and only pretends to enjoy it on camera"
+	"lied about its age and is actually a year older than we all thought"
+	"has been sabotaging other racers to keep itself on top of the leaderboards"
+	"is actually two different snails that take turns making public appearances"
+	"is trying to become the first snail to go to space"
+	"is saving up to buy a new %(sportscar)"
+	"wants to be a movie star one day"
+	"has dreams of eventually living on the moon"
+	"thinks cauliflower isn't real"
+	"is trying to reorganize its sponsor's sock drawer without them noticing"
+	"is looking to buy its own yacht and host its own racing league on it"
+	"is evading taxes"
+	"only says canned lines and never comes up with anything on the spot"
+	"uses a teleprompter"
+	"ate the spinach of all its classmates in snail school so that it would grow up big and strong and be favored over them"
+	"has an insatiable need to eat insects, day in and day out"
+	"actually hates going to the beach, but its sponsor loves taking beach days, so it just suffers through being feeling all sandy and gross so that they can spend time together"
+}
+
+//Items that are not race related
+sportscar
+{
+	"sports car"
+	"snail mansion"
+	"ceiling fan"
+	"\c[char,1], larger refrigerator"
+	"necklace"
+	"foot massager"
+	"shower head"
+	"toaster"
+	"humidifier"
+	"shell scrubber"
+	"%(filmreel) for its collection" //resists urge to make %(filmreel)... nope there we go can't help myself
+}
+
+//Human items a snail would have no need of..............
+filmreel
+{
+	"film reel"
+	"spoon"
+	"golden nugget"
+	"bowl"
+	"toy cellphone"
+	"computer mouse"
+	"set of jumper cables"
+	"cat plushie"
+	"vintage comic book"
+	"pair of skinny jeans"
+}
+
+reputationfor
+{
+	//"Amazing Acorn||"
+	//"Burnout Bandit||"
+	"Crunching Calcium|being a nutrient fiend|It carefully calculates the precise amount of nutrients in everything it eats, to achieve an optimal balance and improve its performance on the racetrack.\n\n Getting an edge on its competitors through a rigorous diet, it's honestly impressive."
+	//"Derivative Dancer||"
+	//"Exceptional Escapee||"
+	//"Fortified Fungus||"
+	//"Grandmaster Gastropod||"
+	//"Hungry Hungry Hangnail||"
+	//"Impressive Idol||"
+	//"Junior Jester||"
+	//"Kiwi Kid||"
+	"Loser Lemon|slacking off|Loser Lemon NEVER practices for races, it wins through raw talent alone.\n\n Shocking, right? Maybe a little disheartening for some snails, too. To think that no matter how hard you work, Loser Lemon can beat you and hardly have to lift a tentacle to do it."
+	//"Meaty Mollusk||"
+	//"Nervous Newbie||"
+	//"Outcast Old One||"
+	"Pickled Pasta|enjoying weird food combinations|It's been building up a catalog of flavorful recipes for snails with various food allergies.\n\n Whether those recipes are any better than the traditional substitutes... well, reports are mixed. I'm told that they are indeed packed with intense flavor, but they tend to be an acquired taste."
+	//"Quitter Quiz||"
+	"Relatable Racer|being the most relatable racer ever|Relatable Racer goes out of its way to be an inspiration to ordinary snails everywhere, and show them that they, too, can achieve greatness."
+	"Snailstopher Snailerton|trying to get into human jobs|It really wants to separate from snail society completely and be a white collar worker with a cubicle and a desk of its own.\n\n It's true, I found doodles of it around a water cooler with human coworkers, and other doodles of its ideal desk setup."
+	//"The Tank||"
+	//"Unbelievable Underdog||"
+	//"Violin Vibrato||"
+	//"Walkathon Winner||"
+	//"Xtremely Xtreme||"
+	//"Yes Yes Yes Yahoo!||"
+	//"Znail Zone||"
+	"DNF|exploding in every race it's ever been in|... Well, ok, maybe it doesn't. There's not much more to say about DNF. Just know that if DNF is involved, there's bound to be an explosion, so keep your distance and enjoy the show."
+	//"Chaos Speedster||"
+	//"Eat My Dust||"
+	"Super Snail|being super generous and giving to charity|It donates to local community projects, gives talks at snail schools, takes free snailfies with its fans, and so much more."
+}
+
+eatinghabits
+{
+	"eating habits"
+	"sleep routine"
+	"training schedule"
+	"equipment preferences over time"
+	"vacation strategy"
+	"travel routine"
+	"snail wash routine"
+	"dreams"
+	"endorsements of various brands over the course of its career"
+	"sense of decor"
+	"refrigerator organization scheme"
+	"favorite TV shows"
+	"radio station preferences and how they change when certain advertisements play"
+	"preferred color schemes and if they change based on the weather"
+}
+
+graphing
+{
+	"graphing"
+	"calculations"
+	"measurements"
+	"testing"
+	"observation"
 }
