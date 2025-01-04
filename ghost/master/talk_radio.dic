@@ -16,6 +16,7 @@ RadioStation.Shopping : nonoverlap_pool
 RadioStation.Music : nonoverlap_pool
 {
 	"\1\b[20]wow these tunes sure are hot!"
+	//"Ooooo be my racing baby~ Ooooo be my winning bet~"
 }
 
 RadioStation.Variety_Show : nonoverlap_pool
