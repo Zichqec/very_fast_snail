@@ -1100,7 +1100,7 @@ insidescoop
 	"Impressive Idol|wasn't born in the snail farms, it was hand raised by its sponsor and that's why it has the accent."
 	"Junior Jester|we were all wrong about Junior Jester's recent race absence, it wasn't anything to do with a racing injury. It actually just got lost in its sponsor's %(airducts), and nobody could find it for like a week.\n\n They did eventually find it, it's fine now. But I heard its sponsor is working on drawing up a map for it to keep in its shell in case it gets lost again."
 	//"Kiwi Kid|"
-	"Loser Lemon|the recent epidemic of vandalized orchards wasn't the fault of loser lemon, but actually an overenthusiastic fan."
+	"Loser Lemon|the recent epidemic of vandalized orchards wasn't the fault of Loser Lemon, but actually an overenthusiastic fan."
 	//"Meaty Mollusk|"
 	"Nervous Newbie|Nervous Newbie's fascination with carrots? Completely true, but not for the reason you think. Most snails enjoy them for their flavor and crunch, but Nervous Newbie? Completely. Obsessed. With the color orange.\n\n Carrots, pumpkins, apricots, cantaloupe, bell peppers, squash; you name it, Nervous Newbie eats it by the bushel.\n\n Honestly, I'm kinda jealous. I wish I was into something like that."
 	//"Outcast Old One|"
@@ -1285,15 +1285,15 @@ reputationfor
 	//"Burnout Bandit||"
 	"Crunching Calcium|being a nutrient fiend|It carefully calculates the precise amount of nutrients in everything it eats, to achieve an optimal balance and improve its performance on the racetrack.\n\n Getting an edge on its competitors through a rigorous diet, it's honestly impressive."
 	//"Derivative Dancer||"
-	//"Exceptional Escapee||"
+	"Exceptional Escapee|making a beeline for the first door it sees|It must be claustrophobic because no matter where its sponsor takes it, it tries to get out. Never manages to get far, though."
 	//"Fortified Fungus||"
-	//"Grandmaster Gastropod||"
+	"Grandmaster Gastropod|the quiet, intimidating type|Word is that Grandmaster Gastropod may or may not be orchestrating... something. Anyone who digs into it seems to get sick or go mysteriously missing, unsure why. Kinda annoying if you ask me."
 	//"Hungry Hungry Hangnail||"
-	//"Impressive Idol||"
+	"Impressive Idol|being out of touch|It was raised largely outside of snail society and can't relate to farm-raised snails or the experience of snail school, so it feels like an alien."
 	//"Junior Jester||"
 	//"Kiwi Kid||"
 	"Loser Lemon|slacking off|Loser Lemon NEVER practices for races, it wins through raw talent alone.\n\n Shocking, right? Maybe a little disheartening for some snails, too. To think that no matter how hard you work, Loser Lemon can beat you and hardly have to lift a tentacle to do it."
-	//"Meaty Mollusk||"
+	"Meaty Mollusk|only eating salads|There was an... 'incident' during snail school. It's been scarred for life since that day.\n\n It used to be best friends with Snailstopher Snailerton during snail school, did you know that? But they apparently went their separate ways after that incident.\n\n Anyway, I won't say too much. If you know you know."
 	//"Nervous Newbie||"
 	//"Outcast Old One||"
 	"Pickled Pasta|enjoying weird food combinations|It's been building up a catalog of flavorful recipes for snails with various food allergies.\n\n Whether those recipes are any better than the traditional substitutes... well, reports are mixed. I'm told that they are indeed packed with intense flavor, but they tend to be an acquired taste."
@@ -1305,7 +1305,7 @@ reputationfor
 	//"Violin Vibrato||"
 	//"Walkathon Winner||"
 	//"Xtremely Xtreme||"
-	//"Yes Yes Yes Yahoo!||"
+	"Yes Yes Yes Yahoo!|being very excitable|It's had a passion for cheerleading since I was a baby snail, and were it not such a gifted racer, it would have pursued a career in cheerleading instead."
 	//"Znail Zone||"
 	"DNF|exploding in every race it's ever been in|... Well, ok, maybe it doesn't. There's not much more to say about DNF. Just know that if DNF is involved, there's bound to be an explosion, so keep your distance and enjoy the show."
 	//"Chaos Speedster||"
@@ -1398,4 +1398,90 @@ someofthese
 	"any of these water bottle labels"
 	"this old, sweaty-smelling gym towel"
 	"this flyer for one of its big races"
+}
+
+
+raninto
+{
+	"I was minding my own business practicing my racing moves in the middle of the night when there weren't any kids around that might get hurt, when I accidentally fell into"
+	"I was helping a friend get home safely from the snail wash the other day, you haven't met this friend before so don't worry about who, and on the way back I bumped into"
+	"I was oozing my way back from some shopping at the local farmers' market, when suddenly I found myself in the presence of" //please believe me when i say it was not doing legitimate business at the farmers' market, it was thieving
+	"I was hanging out in a dark alley one day pondering my strategy for the next race, when who should I spot nearby but"
+}
+
+//(my) newspaper clippings|Those newspaper clippings have
+newspaperclippings
+{
+	"newspaper clippings|Those newspaper clippings have"
+	"hat|That hat has"
+	"bag|That bag has"
+	"mini radio|That mini radio has"
+	"sticker sheet|That sticker sheet has"
+	"helmet|That helmet has"
+	"radio antenna|That radio antenna has"
+	"toy rocket|That toy rocket has"
+	"styrofoam cup|That styrofoam cup has"
+	"water bottle|That water bottle has"
+	"sandwich|That sandwich has"
+	"pair of binoculars|That pair of binoculars has"
+	"disposable camera|That disposable camera has"
+	"bucket|That bucket has"
+	"sponge|That sponge has"
+	"lollipop|That lollipop has"
+	"coffee-stained mug|That mug has"
+	"piece of paper that just so happens to be the perfect size and shape for a signature|That paper has"
+	"collection of various nuts and bolts I've cleaned up off the race track after various big races it's been in|Those nuts and bolts have"
+	"glasses frames|Those glasses frames have"
+	"shell|%(ANY('If I could only remove my shell, it would have','I had to use chemicals to carefully transfer the signature off of my shell and onto a piece of paper. That paper has'))"
+	"action figure of it|That action figure has"
+	"snailfie I got at its last race and printed out|That snailfie has"
+	"copy of its autobiography|That autobiography has"
+	"ticket to its upcoming race|That ticket will have"
+	"wallet|That wallet has"
+	"lettuce card|Yeah technically it could be fraud, whatever, that card has"
+	"receipt for the new %(helmet) I got recently|That receipt has"
+}
+
+snapasnailfie
+{
+	"snap a snailfie with it"
+	"get it to sign some memorabilia for me"
+	"record a brief interview with it that consisted of a single question that went unanswered"
+	"tell it how long I've been following its races for and how many racing posters I have of it"
+	"remind it of the lockbox code that it recently forgot"
+	"return its lettuce card that mysteriously vanished the other day and which I happened across by chance"
+	"show it my collection of its action figures"
+	"show it the album I've carefully assembled of its pictures from baby snailhood through to when it started hitting the big leagues and its career took off"
+}
+
+soiwasoozing
+{
+	"So I was oozing my way through the livingroom, heading to the refrigerator for a drink" //WHOSE LIVINGROOM, STALKER
+	"I was just hanging out in the bedroom looking through the garbage can, you know, as you do"
+	"So I was exploring in the bathroom cabinets in the middle of the night when I wouldn't bother anyone"
+	"So I was going through the laundry basket to make sure there was nothing left in any pockets that might get ruined in the wash"
+	"So I was having a look in the refrigerator, debating having a midnight snack to keep my energy up"
+	"So I was checking out all the gear in the garage, taking pictures so I could make a nice catalogue for future reference"
+	"So I was making a map of the back porch, and all the possible paths to reach the windows and door as well as various hiding spots"
+	"So I was scoping out the dining room from a nice vantage point on the ceiling fan"
+	"So I was moseying my way through the pantry, taking stock of all the canned goods"
+}
+
+showeditcharts
+{
+	"showed it the charts I had printed out comparing its wins and losses to various brand endorsements it's done over time"
+	"showed it my collection of tickets to all its previous races, ordered by date, and asked it to sign each one"
+	"gave it my homemade satchel with hand-stitched designs of its various color schemes over the years"
+	"showed it the graphs I made of how its sleep quality varied based on the temperature of its room and the foods it ate for dinner over the last year, and gave it some tips on how it could get a good night's sleep more consistently"
+	"gave it some copies of the cute pictures I got of it hanging out with its sponsor, so that it can cherish those memories forever" //COPIES, not ORIGINALS, the ORIGINALS are for its COLLECTION.......... not weird at all
+	"gave it a brand new copy I had made of the key to its front door, since I knew it had lost its key a few days prior"
+	"gave it a portrait of itself posing with me that I made out of %(dryerlint)"
+	"told it my entire life's story and how I've been following it since it was a baby snail. At some point I realized the rest of the line behind me had dispersed for some reason. Anyway"
+}
+
+dryerlint
+{
+	"dryer lint"
+	"empty straw wrappers"
+	"old receipts from the grocery store"
 }

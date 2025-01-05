@@ -302,33 +302,28 @@ Talk.Snailsonality.Stalker : nonoverlap_pool
 	_reputationfor = reputationfor
 	"\1\b[12]%(_reputationfor[0,'|'])'s got a reputation for %(_reputationfor[1,'|']), we all know that. But did you know it actually goes deeper? %(_reputationfor[2,'|'])"
 	
-	//one more of the above
-	
 	"\1\b[12]I heard from a snail who heard from a snail who heard from a snail who heard from a snail that totally wasn't me that %(heardthat)"
-	//"\1\b[12]"
-	//"\1\b[12]"
-	//"\1\b[12]"
-	//"\1\b[12]"
+	_newspaperclippings = newspaperclippings
+	"\1\b[12]%(raninto) %(ANY(FamousSnails)). I couldn't believe my eyes.\n\n I immediately stopped what I was doing and asked it to autograph my %(_newspaperclippings[0,'|']), since that's all I had on me at the time. %(_newspaperclippings[1,'|']) a special place in my collection now."
+	"\1\b[12]I was lucky enough to get to meet %(ANY(FamousSnails)) in the locker room after its big race the other day. Cool, right?\n\n Anyway, I managed to %(snapasnailfie), but then I had to leave because it was getting overly excited and screaming with joy at meeting such a dedicated fan."
+	"\1\b[12]%(soiwasoozing), when what should I happen across but %(setofplayingcards)!\n\n Lucky me, right? This is going straight into my %(ANY(FamousSnails)) collection. It's such a good find that it might even go right to the special case of top-tier items."
+	"\1\b[12]So I was waiting in line at a meet-and-greet event for %(ANY(FamousSnails)), and once it was my turn I %(showeditcharts).\n\n You should have seen the look on its face, I think it was impressed by my dedication and shrewdness."
 	
 	"\1\b[10]I know everything there is to know about ALL the greats. If you want details, I'm your snail. But it might cost you..."
 	"\1\b[12]My collection of racer snail memorabilia is second to none. I've even got %(setofplayingcards) that used to belong to %(ANY(FamousSnails)).\n\n No, I won't share with you. I worked hard to build up my hoard, start your own!"
-	"\1\b[12]It takes serious dedication to learn as much as I have about %(ANY(FamousSnails)). Its preferred brand of %(helmet)? Its training regimen? Its diet? Its favorite activity during its downtime?\n\n If you want to know it all, it's not enough to just read the tabloids. A real fan will do their own research."
+	"\1\b[12]It takes serious dedication to learn as much as I have about %(ANY(FamousSnails)). Its preferred brand of %(helmet)? Its training regimen? Its diet? Its favorite activity during its downtime?\n\n If you want to know it all, it's not enough to just read the tabloids. A real fan will do its own research."
 	"\1\b[12]I've been hearing rumors that %(ANY(FamousSnails)) %(snailrumors). I'll have to find out for myself if there's any truth to that.\n\n Don't just believe what other snails tell you; verify, verify, verify. What's the use in knowing all about the top racers if your info is a lie?"
 	"\1\b[10]You wouldn't believe some of the things you can learn if people leave their curtains open. And a lot of them do."
 	"\1\b[12]I got to see the inside of %(ANY(FamousSnails))'s home once. It was one of the most amazingly cool experiences I've ever had.\n\n Hm? How did a nobody like me get invited?\_w[2000]\n\n ... So anyway, I managed to get my tentacles on %(setofplayingcards) for my collection. Awesome, right? No other snail will have a collection as complete as mine."
 	"\1\b[12]I wonder if I can get %(FamousSnails[_randfamous]) to autograph %(someofthese(FamousSnails[_randfamous])) that I... %(found(FamousSnails[_randfamous])).\n\n I might die from happiness then and there if it ever happens."
 	"\1\b[12]I think when I retire I might create a museum out of my collection and charge admission to see it.\n\n It's important history to preserve. And it'll make me rich in my later years, I'm sure of it."
 	"\1\b[12]Hey, could I get a grant? I'm doing some research on %(ANY(FamousSnails))'s %(eatinghabits) and I really need some additional equipment for accurate %(graphing)."
+	"\1\b[12]I'm trying to get more pieces for my %(ANY(FamousSnails)) collection. I think I might be able to get %(setofplayingcards) I've seen lying around, but it'll require some... finesse.\n\n As a dedicated super fan, you have to learn some special techniques to grow your catalogue of information and memorabilia."
+	"\1\b[12]Most snails are cowards, they aren't willing to go to the lengths I am to catalogue racer information and preserve historical items.\n\n They'll thank me one day, when they realize how important my work is and how much effort I've put in."
 	
 	//TODO didn't we want to save the favorite snail? i'll have to do that when i switch the save format
 	//"\1\b[12]I'm %(CurrentSnail.FavSnail)'s biggest fan. I've been collecting memorabilia and information about it since I was a baby snail.\n\n No snail is more dedicated than me! One day it'll recognize that."
 }
-
-// stalkerstarters
-// {
-	// "I was minding my own business practicing my racing moves in the middle of the night when there weren't any kids around that might get hurt, when I accidentally fell into"
-	// "I was helping a friend get home safely from the snail wash the other day, you haven't met this friend before so don't worry about who, and on the way back I bumped into"
-// }
 
 Talk.Snailsonality.Slacker : nonoverlap_pool
 {
