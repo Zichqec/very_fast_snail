@@ -715,6 +715,7 @@ OnTalkRateChange
 OnRadioStationChange : all
 {
 	RadioStation = reference0
+	RadioScanTime = GETSECCOUNT
 	OnSurfaceRestore
 	OnSettings
 }
