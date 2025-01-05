@@ -33,6 +33,8 @@ OnTranslateInternal.AutoPause
 		_talk = REPLACE(_talk,"...! ",".\w4.\w4.\w4!\w8\w8 ") //Exclamation point + ellipsis
 		*/
 		
+		_talk = REPLACE(_talk," \f[name,arial]♪","\![dummy-tag] \f[name,arial]♪") //Music notes - avoid awkward pauses before the marker appears
+		_talk = REPLACE(_talk," \f[name,arial]♫","\![dummy-tag] \f[name,arial]♫")
 		_talk = REPLACE(_talk,",\n ",",\n\w4") //linebreak - used in poetry
 		_talk = REPLACE(_talk,"\n ","\n\w8\w8") //linebreak
 		_talk = REPLACE(_talk,", ",",\w4 ") //Comma
@@ -85,7 +87,7 @@ OnSurfaceRestore
 	--
 	PositionInvisibleSnails
 	--
-	"\p[3]\![set,alpha,0]\s[0]"
+	"\p[3]%(SnailAlpha)\s[0]"
 	--
 	"\0"
 	--
@@ -752,10 +754,16 @@ ShowInvisibleSnails : all
 	"\p[1]\s[0]\![set,alpha,75]"
 }
 
+//In case these need to be debugged, the value here can be changed
+SnailAlpha
+{
+	"\![set,alpha,0]"
+}
+
 PositionInvisibleSnails : all
 {
-	"\p[2]\![set,alpha,0]\s[0]\![move,--x=0,--y=0,--base=0,--option=ignore-sticky-window]"
-	"\1\![set,alpha,0]\s[0]\![move,--x=0,--y=0,--base=0,--option=ignore-sticky-window]"
+	"\p[2]%(SnailAlpha)\s[0]\![move,--x=0,--y=0,--base=0,--option=ignore-sticky-window]"
+	"\1%(SnailAlpha)\s[0]\![move,--x=0,--y=0,--base=0,--option=ignore-sticky-window]"
 }
 
 spongebasic

@@ -81,7 +81,7 @@ OnGetSnailPos : all
 	SnailPos = (reference0[0],reference0[1],0)
 	TempWalkBorder = WalkBorder
 	_scaling = 100
-	"\p[3]\![set,alpha,0]\![set,scaling,%(Moonwalk)%(_scaling),%(_scaling)]\s[0]\![move,--x=0,--y=0,--base=0]\![set,alignmenttodesktop,bottom]\![get,property,OnGetTaskbarPos,currentghost.scope(3).rect]"
+	"\p[3]%(SnailAlpha)\![set,scaling,%(Moonwalk)%(_scaling),%(_scaling)]\s[0]\![move,--x=0,--y=0,--base=0]\![set,alignmenttodesktop,bottom]\![get,property,OnGetTaskbarPos,currentghost.scope(3).rect]"
 }
 
 OnGetTaskbarPos : all
@@ -134,10 +134,10 @@ OnRace.Go : all
 	if SnailPos[0] != TempWalkBorder[0]; "\![move,--x=%(TempWalkBorder[0]),--time=1500,--base=primaryscreen]"
 	
 	"\_w[500]"
-	"\p[2]\![set,alpha,0]\s[2]\![set,scaling,%(Moonwalk)%(_scaling),%(_scaling)]\![move,--x-0,--y=0,--base=0,--option=ignore-sticky-window]"
-	"\p[1]\![set,alpha,0]\s[2]\![set,scaling,%(Moonwalk)%(_scaling),%(_scaling)]\![move,--x-0,--y=0,--base=0,--option=ignore-sticky-window]"
+	"\p[2]%(SnailAlpha)\s[2]\![set,scaling,%(Moonwalk)%(_scaling),%(_scaling)]\![move,--x-0,--y=0,--base=0,--option=ignore-sticky-window]"
+	"\p[1]%(SnailAlpha)\s[2]\![set,scaling,%(Moonwalk)%(_scaling),%(_scaling)]\![move,--x-0,--y=0,--base=0,--option=ignore-sticky-window]"
 	
-	"\p[3]\![set,alpha,0]\s[2]\![move,--x=0,--base=0]"
+	"\p[3]%(SnailAlpha)\s[2]\![move,--x=0,--base=0]"
 	"\b[20]On your marks...\n\n Get set...\n\n \f[height,+10]\_qGO!!!\_q"
 	"\0\s[2]\![embed,OnRace.Move,0,%(_racetime),%(_segmentlength),%(_snailspeed),%(_explodetime)]"
 }
@@ -155,8 +155,8 @@ OnRace.Move : all
 	
 	//this feels clunky, maybe i could set up a couple if checks to make it not so weird...
 	_finishpos = ""
-	_finishpos += "\p[2]\![set,alpha,0]\![set,scaling,%(Moonwalk)%(_scaling),%(_scaling)]\![move,--x-0,--y=0,--base=0,--option=ignore-sticky-window]"
-	_finishpos += "\p[1]\![set,alpha,0]\![set,scaling,%(Moonwalk)%(_scaling),%(_scaling)]\![move,--x-0,--y=0,--base=0,--option=ignore-sticky-window]"
+	_finishpos += "\p[2]%(SnailAlpha)\![set,scaling,%(Moonwalk)%(_scaling),%(_scaling)]\![move,--x-0,--y=0,--base=0,--option=ignore-sticky-window]"
+	_finishpos += "\p[1]%(SnailAlpha)\![set,scaling,%(Moonwalk)%(_scaling),%(_scaling)]\![move,--x-0,--y=0,--base=0,--option=ignore-sticky-window]"
 	_finishpos += "\p[3]\b[-1]\0"
 	
 	_fadeout = ""
@@ -164,7 +164,7 @@ OnRace.Move : all
 	{
 		_fadeout += "\![set,alpha,%(_i)]\_w[20]"
 	}
-	_fadeout += "\![set,alpha,0]"
+	_fadeout += "%(SnailAlpha)"
 	
 	
 	if _segment >= _explodetime && _explodetime != -1
@@ -212,9 +212,9 @@ OnRace.Complete : all
 	_score = ScoreCalc(reference1 / 1000,_coolness,_exploded)
 	
 	TempLeaderboard ,= "%(_score),%(CurrentSnail.Name),%(_racetime),%(_coolness),%(_exploded),%(year)-%(leadingmonth)-%(leadingday):%(reference2)"
-	"\![set,alpha,0]\![set,alignmenttodesktop,free]\![set,scaling,%(Moonwalk)100,100]\![move,--x=%(SnailPos[0]),--y=%(SnailPos[1]),--base=primaryscreen]"
-	"\p[2]\![set,alpha,0]\![set,scaling,%(Moonwalk)100,100]\![move,--x-0,--y=0,--base=0,--option=ignore-sticky-window]"
-	"\p[1]\![set,alpha,0]\![set,scaling,%(Moonwalk)100,100]\![move,--x-0,--y=0,--base=0,--option=ignore-sticky-window]"
+	"%(SnailAlpha)\![set,alignmenttodesktop,free]\![set,scaling,%(Moonwalk)100,100]\![move,--x=%(SnailPos[0]),--y=%(SnailPos[1]),--base=primaryscreen]"
+	"\p[2]%(SnailAlpha)\![set,scaling,%(Moonwalk)100,100]\![move,--x-0,--y=0,--base=0,--option=ignore-sticky-window]"
+	"\p[1]%(SnailAlpha)\![set,scaling,%(Moonwalk)100,100]\![move,--x-0,--y=0,--base=0,--option=ignore-sticky-window]"
 	"\0\s[1]"
 	
 	if CurrentSnail.Cleanliness > 0

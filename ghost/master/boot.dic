@@ -70,6 +70,8 @@ OnFirstBoot : all
 	
 	"\1\s[-1]\0\s[0]"
 	--
+	PositionInvisibleSnails //TODO this is untested for firstboot lol
+	--
 	OnFirst.SnailPick
 }
 
@@ -190,11 +192,13 @@ OnFirst.NewSnailList
 
 OnBoot
 {
-	PositionInvisibleSnails
-	--
 	spongeoff
 	--
 	"\0\s[0]"
+	--
+	PositionInvisibleSnails //TODO no idea why i have to run this twice for it to take effect... I've had this in S, KEEP FROZEN, and now here... it's so weird. might have happened in gallery also? need to report this, but it's so finicky...
+	--
+	PositionInvisibleSnails
 	--
 	LegalityCheck
 	--
