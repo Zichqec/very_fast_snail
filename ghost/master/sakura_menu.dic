@@ -5,7 +5,11 @@ OnSakuraMenu : all
 	"\![set,alpha,100]\![embed,OnCorrectMoonwalk]%(spongeoff)"
 	"%(bigheader('INTERACT WITH YOUR SNAIL!'))"
 	
-	"\![*]\__q[OnAiTalk.Prompt,Radio]Listen to the radio\__q"
+	switch RadioStation == "Off"
+	{
+		"\![*]\__q[OnAiTalk.Prompt,Radio]Listen to the radio\__q"
+		"\![*]\f[color,disable]Listen to the radio\f[color,default]"
+	}
 	"\n"
 	"\![*]\__q[OnAiTalk.Prompt,%(ANY('Snail,Poem,User'))]Talk with your snail\__q" //TODO should this include poems or no...?
 	"\n"
@@ -31,7 +35,7 @@ OnSakuraMenu : all
 		"\f[color,default]"
 	}
 	
-	"\![*]\q[Nevermind,blank]"	
+	"\![*]\q[Nevermind,blank]"
 }
 
 OnAiTalk.Prompt
