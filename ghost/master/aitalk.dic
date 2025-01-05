@@ -63,20 +63,12 @@ OnAiTalk
 		{
 			if _pick == "Radio"
 			{
-				if RadioStation == "Off"
-				{
-					LastTalk = RadioStationOff
-				}
-				else
-				{
-					_station = REPLACE(RadioStation," ","_")
-					LastTalk = EVAL("RadioStation.%(_station)")
-				}
+				_station = REPLACE(RadioStation," ","_")
+				LastTalk = EVAL("RadioStation.%(_station)")
 			}
 			elseif _pick == "Ad"
 			{
-				if RadioStation == "Off"; LastTalk = RadioStationOff
-				elseif RadioStation == "Pirate_Radio"; LastTalk = Ads.Pirate_Radio
+				if RadioStation == "Pirate_Radio"; LastTalk = Ads.Pirate_Radio
 				else; LastTalk = Ads.General
 			}
 			elseif _pick == "Snail" || (_pick == "Poem" && CurrentSnail.PersonalityType == "Silent")
