@@ -1127,11 +1127,15 @@ DialogueTransition
 		if C_BYTE1 _in_ _talk2tags; _talk2tags = REPLACE(_talk2tags,C_BYTE1,_tag,1)
 		else; _talk2last = REPLACE(_talk2last,C_BYTE1,_tag,1)
 	}
-	_talk2 = _talk2tags + _talk2last
 	
+	//If nothing comes out, just grab the whole thing, it's better than going to silence...
+	_talk2 = _talk2tags + _talk2last
+	if STRLEN(_talk2last) <= 5; _talk2 = _argv[1]
 	_output += _talk2
 	
-	_output = REPLACE(_output," %(emdash)\w8\w8","%(emdash)\w8\w8") //bandaid patch because sometimes it breaks on a space... i should probably just try to fix this tho cuz it shouldn't happen - but tbh maybe this is the better fix lol. less looping... i'll think about it. and it allows breaking between words!
+	//_output = REPLACE(_output," %(emdash)\w8\w8","%(emdash)\w8\w8") //bandaid patch because sometimes it breaks on a space... i should probably just try to fix this tho cuz it shouldn't happen - but tbh maybe this is the better fix lol. less looping... i'll think about it. and it allows breaking between words! - I think this one was assuming autopause, but autopause won't come into effect until later...
+	_output = REPLACE(_output," %(emdash)\n\n","%(emdash)\n\n")
+	_output = REPLACE(_output,"%(emdash) ","%(emdash)")
 	
 	_output
 }
