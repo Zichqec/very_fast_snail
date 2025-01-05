@@ -15,8 +15,12 @@ RadioStation.Shopping : nonoverlap_pool
 
 RadioStation.Music : nonoverlap_pool
 {
-	"\1\b[20]wow these tunes sure are hot!"
-	//"Ooooo be my racing baby~ Ooooo be my winning bet~"
+	//"\1\b[20]wow these tunes sure are hot!"
+	"\1\b[20]%(note) Doo wop, do be de do be de do~ %(note)\n\n %(note) Doo wop, do do be do, do do be do, do do~ %(note)"
+	"\1\b[20]%(note) Do do do, do do~ %(note)\n\n %(note) Do do do, do do~ %(note)\n\n %(note) Do do do do do do do do~ %(note)"
+	"\1\b[20]%(note) Wah wah wah, wah wah, wah! %(note)"
+	"\1\b[20]%(note) Ooooo be my racing baby~ %(note)\n\n %(note) Ooooo be my winning bet~ %(note)"
+	//"\1\b[20]"
 }
 
 RadioStation.Variety_Show : nonoverlap_pool
@@ -26,7 +30,7 @@ RadioStation.Variety_Show : nonoverlap_pool
 
 RadioStation.ASMR : nonoverlap_pool
 {
-	"\1\b[20]*sizzling*"
+	"\1\b[20]\f[italic,1]sizzling\f[italic,default]"
 }
 
 RadioStation.Pirate_Radio : nonoverlap_pool
