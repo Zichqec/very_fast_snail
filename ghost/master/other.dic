@@ -254,7 +254,7 @@ GenerateSnailsonality
 	
 	if _personalitytype == "Bad"; _poetrytype = "Bad Snoem"
 	if _personalitytype == "Slug"; _poetrytype = "Slugetry"
-	if _personalitytype == "Basic"; _poetrytype = "Snoem"
+	if _personalitytype == "Basic" || _personalitytype == "Character Break"; _poetrytype = "Snoem"
 	//elseif _personalitytype == "Silent"; _poetrytype = ""
 	
 	_radiostation = _radiolist[_3rd_10 % ARRAYSIZE(_radiolist)]
