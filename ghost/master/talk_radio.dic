@@ -16,10 +16,13 @@ RadioStation.Shopping : nonoverlap_pool
 RadioStation.Music : nonoverlap_pool
 {
 	//"\1\b[20]wow these tunes sure are hot!"
-	"\1\b[20]%(note) Doo wop, do be de do be de do~ %(note)\n\n %(note) Doo wop, do do be do, do do be do, do do~ %(note)"
-	"\1\b[20]%(note) Do do do, do do~ %(note)\n\n %(note) Do do do, do do~ %(note)\n\n %(note) Do do do do do do do do~ %(note)"
-	"\1\b[20]%(note) Wah wah wah, wah wah, wah! %(note)"
-	"\1\b[20]%(note) Ooooo be my racing baby~ %(note)\n\n %(note) Ooooo be my winning bet~ %(note)"
+	"\1\b[20]%(note1)Doo wop, do be de do be de do~%(note2)\n\n %(note1)Doo wop, do do be do, do do be do, do do~%(note2)"
+	"\1\b[20]%(note1)Do do do, do do~%(note2)\n\n%(note1)Do do do, do do~%(note2)\n\n %(note1)Do do do do do do do do~%(note2)"
+	"\1\b[20]%(note1)Wah wah wah, wah wah, wah!%(note2)"
+	"\1\b[20]%(note1)Ooooo be my racing baby~%(note2)\n\n %(note1)Ooooo be my winning bet~%(note2)"
+	"\1\b[20]%(note1)Do do, do be do, do do~%(note2)\n\n %(note1)Do be do do, do do, do do le do~%(note2)"
+	"\1\b[20]%(note1)Dum dum de de dum dah dah, dum dum de de de de dum~%(note2)\n\n %(note1)Dum dum de de de dah dah, dum dum do do dum~%(note2)"
+	"\1\b[20]%(note1)Duh nuh duh nuh duh nuh DUH, duh duh duh do, dah dah dah, dah DAH!%(note2)"
 	//"\1\b[20]"
 }
 

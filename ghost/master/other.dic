@@ -33,8 +33,8 @@ OnTranslateInternal.AutoPause
 		_talk = REPLACE(_talk,"...! ",".\w4.\w4.\w4!\w8\w8 ") //Exclamation point + ellipsis
 		*/
 		
-		_talk = REPLACE(_talk," \f[name,arial]♪","\![dummy-tag] \f[name,arial]♪") //Music notes - avoid awkward pauses before the marker appears
-		_talk = REPLACE(_talk," \f[name,arial]♫","\![dummy-tag] \f[name,arial]♫")
+		//_talk = REPLACE(_talk,"\n\n\![music-note] ","\n\n ") //Music notes - avoid awkward pauses before the marker appears - dont think this is needed since its placed BEFORE the breaks, dummy...
+		//_talk = REPLACE(_talk," \f[name,arial]♫","\![dummy-tag] \f[name,arial]♫")
 		_talk = REPLACE(_talk,",\n ",",\n\w4") //linebreak - used in poetry
 		_talk = REPLACE(_talk,"\n ","\n\w8\w8") //linebreak
 		_talk = REPLACE(_talk,", ",",\w4 ") //Comma
@@ -632,6 +632,19 @@ snailend
 {
 	"\![set,balloonwait,1]"
 }
+
+note1
+{
+	"\f[name,arial]♪\f[default] "
+	"\f[name,arial]♫\f[default] "
+}
+
+note2
+{
+	"\![music-note] \f[name,arial]♪\f[default]"
+	"\![music-note] \f[name,arial]♫\f[default]"
+}
+
 
 LegalityCheck : all
 {

@@ -1660,108 +1660,108 @@ Poetry.Acrostic.Span
 Poetry.Lyric : sequential
 {
 	_poems = <<"
-	%(note) Oh, don't you wanna cross that finish line?\![dummy] %(note)
-	%(note) Oh, don't you wanna have the fastest time?\![dummy] %(note)
+	%(note1)Oh, don't you wanna cross that finish line?%(note2)
+	%(note1)Oh, don't you wanna have the fastest time?%(note2)
 	
 	
-	%(note) Just between %(note)
-	%(note) you and me %(note)
-	%(note) I'd eat the leaves %(note)
-	%(note) right off that tree %(note)
+	%(note1)Just between%(note2)
+	%(note1)you and me%(note2)
+	%(note1)I'd eat the leaves%(note2)
+	%(note1)right off that tree%(note2)
 	
 	
-	%(note) Hey, hey, don't forget to check your rearview mirror %(note)
-	%(note) Objects in it may be much nearer %(note)
+	%(note1)Hey, hey, don't forget to check your rearview mirror%(note2)
+	%(note1)Objects in it may be much nearer%(note2)
 	
 	
-	%(note) Whoosh! Feel the shockwave when I zoom by %(note)
-	%(note) Catch up to me? Please, I'd love to see you try %(note)
+	%(note1)Whoosh! Feel the shockwave when I zoom by%(note2)
+	%(note1)Catch up to me? Please, I'd love to see you try%(note2)
 	
 	
-	%(note) Wheels on fire, burning rubber %(note)
-	%(note) Need for speed, feel it shudder %(note)
+	%(note1)Wheels on fire, burning rubber%(note2)
+	%(note1)Need for speed, feel it shudder%(note2)
 	
 	
-	%(note) And as the fire shoots past my shell, paint licked by flames %(note)
-	%(note) I find myself asking "why are snails trying to fly? We arent planes!"\![dummy] %(note)
+	%(note1)And as the fire shoots past my shell, paint licked by flames%(note2)
+	%(note1)I find myself asking "why are snails trying to fly? We arent planes!"%(note2)
 	
 	
-	%(note) Oh, I'm sorry that I let you down %(note)
-	%(note) My best wasn't good enough %(note)
-	%(note) Oh, don't leave me here alone %(note)
-	%(note) Coming in second place is rough %(note)
+	%(note1)Oh, I'm sorry that I let you down%(note2)
+	%(note1)My best wasn't good enough%(note2)
+	%(note1)Oh, don't leave me here alone%(note2)
+	%(note1)Coming in second place is rough%(note2)
 	
 	
-	%(note) Oh, show me that spiral shell %(note)
-	%(note) How'd you grow it curved so well? %(note)
-	%(note) Share your secret with me, I won't tell %(note)
-	%(note) I'd love a place like that to dwell %(note)
+	%(note1)Oh, show me that spiral shell%(note2)
+	%(note1)How'd you grow it curved so well?%(note2)
+	%(note1)Share your secret with me, I won't tell%(note2)
+	%(note1)I'd love a place like that to dwell%(note2)
 	
 	
-	%(note) Training, training, every day %(note)
-	%(note) They'll give you classes if you pay %(note)
-	%(note) Muscles growing all the way %(note)
-	%(note) You can't keep this snail at bay %(note)
+	%(note1)Training, training, every day%(note2)
+	%(note1)They'll give you classes if you pay%(note2)
+	%(note1)Muscles growing all the way%(note2)
+	%(note1)You can't keep this snail at bay%(note2)
 	
 	
-	%(note) Oh, you're always there for me %(note)
-	%(note) In your hold I'd never fear %(note)
-	%(note) Strong and smooth, keeping me safe %(note)
-	%(note) Mucus, I'm so glad you're here!\![dummy] %(note)
+	%(note1)Oh, you're always there for me%(note2)
+	%(note1)In your hold I'd never fear%(note2)
+	%(note1)Strong and smooth, keeping me safe%(note2)
+	%(note1)Mucus, I'm so glad you're here!%(note2)
 	
 	
-	%(note) Gotta go, gotta zoom, outta my way, make room!\![dummy] %(note)
-	%(note) Got places to be, like up that tree, there's no stopping me!\![dummy] %(note)
+	%(note1)Gotta go, gotta zoom, outta my way, make room!%(note2)
+	%(note1)Got places to be, like up that tree, there's no stopping me!%(note2)
 	
 	
-	%(note) Hey %(note)
-	%(note) I know you said it's over %(note)
-	%(note) But I just have one request %(note)
-	%(note) Please %(note)
-	%(note) Just tell me you'll think it over %(note)
-	%(note) Look at the race scores and reassess!\![dummy] %(note)
+	%(note1)Hey%(note2)
+	%(note1)I know you said it's over%(note2)
+	%(note1)But I just have one request%(note2)
+	%(note1)Please%(note2)
+	%(note1)Just tell me you'll think it over%(note2)
+	%(note1)Look at the race scores and reassess!%(note2)
 	
 	
-	%(note) Oh, sweet leaf of green %(note)
-	%(note) Life bringer %(note)
-	%(note) My dinner %(note)
-	%(note) Lettuce, you're as lovely as a queen! %(note)
+	%(note1)Oh, sweet leaf of green%(note2)
+	%(note1)Life bringer%(note2)
+	%(note1)My dinner%(note2)
+	%(note1)Lettuce, you're as lovely as a queen!%(note2)
 	
 	
-	%(note) Hey hey hey, don't let those old leaves get you down %(note)
-	%(note) There's plenty of fresh lettuce still to go around %(note)
+	%(note1)Hey hey hey, don't let those old leaves get you down%(note2)
+	%(note1)There's plenty of fresh lettuce still to go around%(note2)
 	
 	
-	%(note) It's remarkable, reliable and strong %(note)
-	%(note) The way it waves, pulling you along %(note)
-	%(note) Covered in mucus, and here with you lifelong!\![dummy] %(note)
-	%(note) Trust your foot, it'll never steer you wrong %(note)
+	%(note1)It's remarkable, reliable and strong%(note2)
+	%(note1)The way it waves, pulling you along%(note2)
+	%(note1)Covered in mucus, and here with you lifelong!%(note2)
+	%(note1)Trust your foot, it'll never steer you wrong%(note2)
 	
 	
-	%(note) Oh, those great snails of old %(note)
-	%(note) Daring, immaculate, and bold %(note)
-	%(note) One day I hope I'll be a legend too %(note)
-	%(note) And that I might somehow inspire you!\![dummy] %(note)
+	%(note1)Oh, those great snails of old%(note2)
+	%(note1)Daring, immaculate, and bold%(note2)
+	%(note1)One day I hope I'll be a legend too%(note2)
+	%(note1)And that I might somehow inspire you!%(note2)
 	
 	
-	%(note) High scores aren't the only thing in life, it's true %(note)
-	%(note) But they sure are fun, so I hope you'll try for them too %(note)
+	%(note1)High scores aren't the only thing in life, it's true%(note2)
+	%(note1)But they sure are fun, so I hope you'll try for them too%(note2)
 	
 	
-	%(note) Exploring the cabinets under cover of night %(note)
-	%(note) No one to stop me, I find some lettuce and stop for a bite %(note)
-	%(note) At that moment, I hear a click, the room goes bright...!\![dummy] %(note)
-	%(note) Ah! I've been caught! Plucked from the cupboard, into the light %(note)
+	%(note1)Exploring the cabinets under cover of night%(note2)
+	%(note1)No one to stop me, I find some lettuce and stop for a bite%(note2)
+	%(note1)At that moment, I hear a click, the room goes bright...!%(note2)
+	%(note1)Ah! I've been caught! Plucked from the cupboard, into the light%(note2)
 	
 	
-	%(note) Oozing along, having a good time %(note)
-	%(note) Off to the store, to get me some key lime %(note)
-	%(note) Very hungry, it's getting near lunchtime %(note)
-	%(note) Got no money, time for some lunch crime!\![dummy] %(note)
+	%(note1)Oozing along, having a good time%(note2)
+	%(note1)Off to the store, to get me some key lime%(note2)
+	%(note1)Very hungry, it's getting near lunchtime%(note2)
+	%(note1)Got no money, time for some lunch crime!%(note2)
 	
 	
-	%(note) Out here on the track, we're racing to win %(note)
-	%(note) Got no time to slack, we're going all in %(note)
+	%(note1)Out here on the track, we're racing to win%(note2)
+	%(note1)Got no time to slack, we're going all in%(note2)
 	">>
 	_poems = ProcessPoems(_poems,1,"\b[12]")
 	parallel _poems
