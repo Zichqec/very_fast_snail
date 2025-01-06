@@ -31,6 +31,7 @@ OnSakuraMenu : all
 		"\f[color,disable]"
 		"\![*]\q[Change snails,OnDebug.SnailPicker]  \![*]\q[Race test,OnRace.Start]\n"
 		"\![*]\q[Temp leaderboard,OnTempLeaderboard]\n"
+		"\![*]\q[Bet on a race,OnBetting.Pick]"
 		"\n"
 		"\f[color,default]"
 	}
@@ -799,4 +800,131 @@ OnTempLeaderboard : all
 		"Set on %(_date) at %(_timeinfo[4]):%(LeadingDigit(_timeinfo[5])):%(LeadingDigit(_timeinfo[6]))\f[color,default]"
 		"\n\n"
 	}
+}
+
+OnBetting.Pick : all
+{
+	"\0\b[2]\![set,autoscroll,disable]\_q\*\f[anchorvisitedfontcolor,default.anchor]\![no-autopause]"
+	"%(bigheader('BET ON A SNAIL!'))"
+	"\n\n"
+	_snails = (SnailNameGenerator,SnailNameGenerator,SnailNameGenerator)
+	for _i = 0; _i < ARRAYSIZE(_snails); _i++
+	{
+		
+		"\![*]\__q[OnBetting.Start,%(_i),""%(_snails[0])"",""%(_snails[1])"",""%(_snails[2])""]%(_snails[_i])\__q\n\n"
+	}
+	"\n"
+	
+	
+	"\![*]\q[Back,OnSakuraMenu]  \![*]\q[Done,OnBlank]"
+}
+
+//TODO
+/*
+This is almost complete
+It needs some minor polish in regards to the UI - I don't like using \x to go to the results screen because of the yellow flag
+You also need to be able to actually set a bet, I'm thinking maybe in increments of... orders of 10? so 10, 100, 1000, 10000... maybe. idk, maybe it can be more custom. probably there needs to be a cap lol, you shouldn't get all your money from this. or maybe it should only be available every so often? idk. will need some testing for sure lol
+Can also make it so like... if you wanna bet higher there have to be more snails in the race, so chances of winning are lower?
+And we have to make this only available with the very fast speedway balloon because it is very much keyed to that balloon
+*/
+OnBetting.Start : all
+{
+	_pick = reference0
+	_snail.name = (reference1,reference2,reference3)
+	_y = IARRAY
+	//_y[0] = 105 //These roughly line up with the choice marker placements, but don't look that nice on the finish line...
+	//_y[1] = 138
+	//_y[2] = 171
+	_y[0] = 106 //I think this is 25 px between each one...
+	_y[1] = 131
+	_y[2] = 156
+	
+	_finish.x = 355
+	
+	_snail.x = (5,5,5)
+	_snail.speed = (RAND(5) + 1,RAND(5) + 1,RAND(5) + 1)
+	while ARRAYSIZE(ARRAYDEDUP(_snail.speed)) != ARRAYSIZE(_snail.speed)
+	{
+		_snail.speed = (RAND(5) + 1,RAND(5) + 1,RAND(5) + 1)
+	}
+	_snail.img = (0,0,0)
+	
+	"\0\b[2]\![set,autoscroll,disable]\_q\*\f[anchorvisitedfontcolor,default.anchor]\![no-autopause]"
+	"%(bigheader('WATCH THEM RACE!'))"
+	"%(snailimg(0,_snail.x[0],_y[0]))"
+	"%(snailimg(0,_snail.x[1],_y[1]))"
+	"%(snailimg(0,_snail.x[2],_y[2]))"
+	"\![quicksection,0]"
+	"On your marks...\w8\w8 Get set...\w8\w8 \f[bold,1]GO!\f[bold,default]"
+	"\c"
+	"\![quicksection,1]"
+	"%(bigheader('WATCH THEM RACE!'))"
+	"On your marks... Get set... \f[bold,1]GO!\f[bold,default]\c"
+	
+	_completed = IARRAY
+	_frame = 0
+	while ARRAYSIZE(_completed) < 3
+	{
+		"%(bigheader('WATCH THEM RACE!'))"
+		"On your marks... Get set... \f[bold,1]GO!\f[bold,default]\n\n"
+		for _i = 0; _i < 3; _i++
+		{
+			if _frame % _snail.speed[_i] == 0
+			{
+				if _snail.img[_i] == 0; _snail.img[_i] = 1
+				else; _snail.img[_i] = 0
+			}
+			
+			if _snail.x[_i] < _finish.x
+			{
+				_snail.x[_i] += _snail.speed[_i]
+			}
+			if _snail.x[_i] >= _finish.x
+			{
+				if ASEARCH(_i,_completed) == -1; _completed ,= _i
+				_snail.x[_i] = _finish.x
+				_snail.img[_i] = 0
+			}
+			"%(snailimg(_snail.img[_i],_snail.x[_i],_y[_i]))"
+			
+			
+		}
+		"\_w[30]"
+		"\c"
+		_frame++
+	}
+	"\c"
+	"%(bigheader('WATCH THEM RACE!'))"
+	
+	"%(snailimg(0,_snail.x[0],_y[0]))"
+	"%(snailimg(0,_snail.x[1],_y[1]))"
+	"%(snailimg(0,_snail.x[2],_y[2]))"
+	"Finished!!"
+	
+	"\x\b[2]"
+	"%(bigheader('HEAR THE RESULTS!'))"
+	"%(snailimg(0,_snail.x[0],_y[0]))"
+	"%(snailimg(0,_snail.x[1],_y[1]))"
+	"%(snailimg(0,_snail.x[2],_y[2]))"
+	
+	_winner = _completed[0]
+	
+	"\![quicksection,0]"
+	"And the winner is...\w8\w8 %(_snail.name[_winner])!\w8\w8\nCongratulations!\w8\w8"
+	"\n\n"
+	if _winner == _pick
+	{
+		"You won!"
+	}
+	else
+	{
+		"Better luck next time!"
+	}
+	"\n\n\![quicksection,1]"
+	"\![*]\__q[OnBetting.Pick]Go again\__q  \![*]\__q[OnBlank]Done\__q"
+}
+
+snailimg
+{
+	"\_b[img/snail_0%(_argv[0]).png,%(_argv[1]),%(_argv[2]),--option=use_self_alpha]"
 }
