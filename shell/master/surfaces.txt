@@ -167,6 +167,8 @@ surface0
 
 surface1
 {
+	element0,overlay,surface10.png,0,0
+
 	//———————— SNAIL BODY ————————
 	//———— base ————
 	//basic beige
@@ -352,6 +354,8 @@ surface1
 
 surface2
 {
+	element0,overlay,surface10.png,0,0
+
 	//———————— SNAIL BODY ————————
 	//———— base ————
 	//basic beige
@@ -537,6 +541,8 @@ surface2
 
 surface3
 {
+	element0,overlay,surface10.png,0,0
+	
 	//———————— SNAIL BODY ————————
 	//———— base ————
 	//basic beige
@@ -812,6 +818,8 @@ surface3
 
 surface4
 {
+	element0,overlay,surface10.png,0,0
+	
 	//———————— SNAIL BODY ————————
 	//———— base ————
 	//basic beige
@@ -945,6 +953,8 @@ surface4
 
 surface5
 {
+	element0,overlay,surface10.png,0,0
+	
 	//———————— SNAIL BODY ————————
 	//———— base ————
 	//basic beige
