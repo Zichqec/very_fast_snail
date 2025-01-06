@@ -48,7 +48,7 @@ RadioStation.Music : nonoverlap_pool
 	"\1\b[20]%(note1)Snails, snails, buy em by the dozen~%(note2)\n\n %(note1)You'll find that perfect racer, the one that'll have 'em buzzin'~%(note2)" //\n\n %(note1)They train up quick, so there's no sense in rushin'!%(note2)\n\n %(note1)And if it don't work out, you can put em in the oven~%(note2) Is............. is it too much :rofl: I could snip the second half... i feel like it might be tooooo dark but it does make me laugh
 	"\1\b[20]%(note1)Grow that lettuce nice and tall~%(note2)\n\n %(note1)Plentiful gardens help us all~%(note2)" //does lettuce grow tall...
 	"\1\b[20]%(note1)Ooh, look at that spiral go round and round~%(note2)\n\n %(note1)There's no better snail to be found~%(note2)"
-	"\1\b[20]%(note1)Don't let your snails scatter around~%(note2)\n\n %(note1)Keep them in all safe and sound~%(note2)"
+	"\1\b[20]%(note1)Don't let your snails scatter around~%(note2)\n\n %(note1)Keep them in, all safe and sound~%(note2)"
 	"\1\b[20]%(note1)Let those lil guys take the lead, cuz these snails got a need for speed!%(note2)"
 	
 	//DJ
