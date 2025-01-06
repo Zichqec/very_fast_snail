@@ -1485,3 +1485,13 @@ dryerlint
 	"empty straw wrappers"
 	"old receipts from the grocery store"
 }
+
+charityevent
+{
+	//"upcoming charity event"
+	"ongoing Super Snailathon, where 100% of all proceeds from Super Snail merch go to the Safe Snail Society!\n\n Get yourself some Super Snail t-shirts, hats, mugs, posters, sponges, bags, and more, and it all goes to a great cause! Isn't that worth putting your money towards?\n\n But that's not all, use our special key word of the day, ""MONEY"", at checkout, and we'll match your donation leaf for leaf! That's right, every head you spend is DOUBLED, so get out there and make an impact!" //TODO i'd really love to make the keyword change each day or something... once I figure out seeding or however i wanna do this
+	//donation drive
+	//merch sale
+	//etc...
+	//if i'm gonna do this i should consider having multiple dialogues relating to it
+}

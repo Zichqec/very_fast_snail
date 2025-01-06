@@ -19,17 +19,59 @@ RadioStation.Music : nonoverlap_pool
 	
 	//Do wops
 	"\1\b[20]%(note1)Doo wop, do be de do be de do~%(note2)\n\n %(note1)Doo wop, do do be do, do do be do, do do~%(note2)"
-	"\1\b[20]%(note1)Do do do, do do~%(note2)\n\n%(note1)Do do do, do do~%(note2)\n\n %(note1)Do do do do do do do do~%(note2)"
-	"\1\b[20]%(note1)Wah wah wah, wah wah, wah!%(note2)"
+	"\1\b[20]%(note1)Do do do, do do~%(note2)\n\n %(note1)Do do do, do do~%(note2)\n\n %(note1)Do do do do do do do do~%(note2)"
+	"\1\b[20]%(note1)Wah wah wah, wah wah, wah!%(note2)" //Snorus
 	"\1\b[20]%(note1)Do do, do be do, do do~%(note2)\n\n %(note1)Do be do do, do do, do do le do~%(note2)"
 	"\1\b[20]%(note1)Dum dum de de dum dah dah, dum dum de de de de dum~%(note2)\n\n %(note1)Dum dum de de de dah dah, dum dum do do dum~%(note2)"
-	"\1\b[20]%(note1)Duh nuh duh nuh duh nuh DUH, duh duh duh do, dah dah dah, dah DAH!%(note2)"
+	"\1\b[20]%(note1)Duh nuh duh nuh duh nuh DUH, duh duh duh do, dah dah dah, dah DAH!%(note2)" //Sninematic
+	"\1\b[20]%(note1)Do do, do be do be, do do do bah bah~%(note2)\n\n %(note1)Do do, be be do do, bah bah bum bum bah~%(note2)"
+	"\1\b[20]%(note1)Wah wah wah, wah wah wah wah!%(note2)\n\n %(note1)Wah wah, wah wah, wah wah wahhhhh!%(note2)"
+	"\1\b[20]%(note1)Do de do, do de do~%(note2)\n\n %(note1)Do de do de do, dah dah~%(note2)"
+	"\1\b[20]%(note1)Wop wop bah do bah dah do, wop wop de be de!%(note2)\n\n %(note1)De wop do do de de bah, bup dop do be do!%(note2)" //Snrap
+	"\1\b[20]%(note1)Wup wup do do be be do, de wop wup do bah de!%(note2)\n\n %(note1)Wup wup do be do do dah, de wup wup bah de dah!%(note2)"
+	"\1\b[20]%(note1)Wop wop! Do be dah be dah, wup!%(note2)\n\n %(note1)Wop wop! Do dah be de dah!%(note2)"
+	"\1\b[20]%(note1)Do be de do be de do be de DO, DAH DAH, DO BE DO DAH!%(note2)\n\n %(note1)Dah dah dah dah, dah dah dah dah.%(note2)\n\n %(note1)Do be do be do, do do do do, do be do...%(note2)" //Snlassical
+	"\1\b[20]%(note1)Do do dop do, do do dop do~%(note2)\n\n %(note1)Do be do dop do, do be do do~%(note2)\n\n %(note1)Do be do be? Do do~%(note2)\n\n %(note1)Do dop be dop do be do~%(note2)" //Spop
+	"\1\b[20]%(note1)Do do, do do, do, do do DO!%(note2)\n\n %(note1)Do be do be do be do be do be do do, do do do be do dodo do do, do be do dodo do dodo do, do do be do be do be do be do~%(note2)" //Snmerry-go-round which is really just more snlassical, don't @ me i like RCT2, god do you think they have snail themed amusement parks... or like... amusement parks that are snail sized and made for snails
+	"\1\b[20]%(note1)Do dop, dah be dah do dop, do be dah dah do dop, dah be do, bop bop do~%(note2)"
+	"\1\b[20]%(note1)Do do do be, do do do be do be do be, do be do be do do do do be do be do~%(note2)" //god help you if you try to interpret what this actually is. feel free to send me a guess and you'll win me sending you a cookie emoji if you're right. man will i even remember myself after a month?
+	"\1\b[20]%(note1)Do do be do be do do do do be, do be do do be do do be~%(note2)\n\n %(note1)Do do do be do be do do do do be, do do do do be do do be~%(note2)"
+	"\1\b[20]%(note1)Wah wah, wah wah wah wah!%(note2)\n\n %(note1)Wah wah wah wah, wah wah wah wahhh!%(note2)\n\n %(note1)Wahhhh wah wah wah! Wah wah wah!%(note2)"
+	"\1\b[20]%(note1)Do do bop, do wop de do bop, dop de do~%(note2)\n\n %(note1)Dop dop do bop, do do do be do be wop de do~%(note2)"
 	
 	//Actual lyrics
 	"\1\b[20]%(note1)Ooooo be my racing baby~%(note2)\n\n %(note1)Ooooo be my winning bet~%(note2)"
+	"\1\b[20]%(note1)Watch them zip across the track~%(note2)\n\n %(note1)Oh, these snails are such a thrill~%(note2)" //resisting the urge to put "also a delicious snack"...
+	"\1\b[20]%(note1)Ohh look on down the line~%(note2)\n\n %(note1)Here comes that shiny shell, claiming the fastest time~%(note2)"
+	"\1\b[20]%(note1)Go snail racers, go!%(note2)\n\n %(note1)Go snail racers, go!%(note2)\n\n %(note1)Give it everything you've got,%(note2)\n\n %(note1)Go snail racers, go!%(note2)"
+	"\1\b[20]%(note1)Oh, don't let a little loss hold you back~%(note2)\n\n %(note1)Oh, you'll have another chance on the track~%(note2)"
+	"\1\b[20]%(note1)Snails, snails, buy em by the dozen~%(note2)\n\n %(note1)You'll find that perfect racer, the one that'll have 'em buzzin'~%(note2)" //\n\n %(note1)They train up quick, so there's no sense in rushin'!%(note2)\n\n %(note1)And if it don't work out, you can put em in the oven~%(note2) Is............. is it too much :rofl: I could snip the second half... i feel like it might be tooooo dark but it does make me laugh
+	"\1\b[20]%(note1)Grow that lettuce nice and tall~%(note2)\n\n %(note1)Plentiful gardens help us all~%(note2)" //does lettuce grow tall...
+	"\1\b[20]%(note1)Ooh, look at that spiral go round and round~%(note2)\n\n %(note1)There's no better snail to be found~%(note2)"
+	"\1\b[20]%(note1)Don't let your snails scatter around~%(note2)\n\n %(note1)Keep them in all safe and sound~%(note2)"
+	"\1\b[20]%(note1)Let those lil guys take the lead, cuz these snails got a need for speed!%(note2)"
 	
 	//DJ
-	
+	_somesnail = SnailNameGenerator(,"not alliteration")
+	"\1\b[22]And now for something special, folks! A little snail called %(_somesnail) is here in the studio with us today, and it's going to perform a song that it wrote itself. Take it away, %(_somesnail)!\n\n %(note1)%(note1)%(note1)%(note1)%(note1)%(note1)%(note1)%(note1)%(note1)%(note1)\n\n \f[italic,1]\![embed,OnSnailSong]\f[italic,default]\n\n %(note1)%(note1)%(note1)%(note1)%(note1)%(note1)%(note1)%(note1)%(note1)%(note1)\_w[2000]\n\n Aw, that was lovely. Thank you for that wonderful performance, %(_somesnail), and we hope you'll come back to the studio again someday to sing another song!"
+	"\1\b[22]It's that time of the day again, folks, it's time to put in your music requests! Starting next hour, I play nothing but what you send me; you control the show!\n\n Get out those phones, send me a message on the snailernet, use our app; whatever way you wanna get it to me, get it to me and I'll play out the snail tunes you've been itching for."
+	"\1\b[20]How's everyone feeling out there? These tunes are hot today, yowza!\n\n We'll get right back to it in a moment, but I want to take this time to remind everyone about the %(charityevent)"
+	//"\1\b[20]"
+	//"\1\b[20]"
+	//"\1\b[20]"
+	//"\1\b[20]"
+	//"\1\b[20]"
+	//"\1\b[20]"
+	//"\1\b[20]"
+	//"\1\b[20]"
+	//"\1\b[20]"
+	//"\1\b[20]"
+	//"\1\b[20]"
+	//"\1\b[20]"
+	//"\1\b[20]"
+	//"\1\b[20]"
+	//"\1\b[20]"
+	//"\1\b[20]"
 	//"\1\b[20]"
 }
 

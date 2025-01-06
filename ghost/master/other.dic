@@ -635,8 +635,8 @@ snailend
 
 note1
 {
-	"\f[name,arial]♪\f[default] "
-	"\f[name,arial]♫\f[default] "
+	"\f[name,arial]♪\f[name,default] "
+	"\f[name,arial]♫\f[name,default] "
 }
 
 note2
@@ -645,6 +645,10 @@ note2
 	"\![music-note] \f[name,arial]♫\f[default]"
 }
 
+OnSnailSong
+{
+	REPLACE(Poetry.Lyric,"\b[","\![dummy-")
+}
 
 LegalityCheck : all
 {
