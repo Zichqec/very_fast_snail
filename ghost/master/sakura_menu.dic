@@ -826,6 +826,7 @@ It needs some minor polish in regards to the UI - I don't like using \x to go to
 You also need to be able to actually set a bet, I'm thinking maybe in increments of... orders of 10? so 10, 100, 1000, 10000... maybe. idk, maybe it can be more custom. probably there needs to be a cap lol, you shouldn't get all your money from this. or maybe it should only be available every so often? idk. will need some testing for sure lol
 Can also make it so like... if you wanna bet higher there have to be more snails in the race, so chances of winning are lower?
 And we have to make this only available with the very fast speedway balloon because it is very much keyed to that balloon
+Needs to make sure to omit the names of any snails you own
 */
 OnBetting.Start : all
 {

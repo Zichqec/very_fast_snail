@@ -175,6 +175,7 @@ ProcessPoems
 	foreach _poems; _poem
 	{
 		_temp = _poem
+		//2 for autopause (has a special case for handling commas), 1 for pause between every line, 0 for no pauses added on linebreaks
 		if _argv[1] == 2; _temp = REPLACE(_temp,C_CRLF,"\n ") //autopause...
 		elseif _argv[1] == 1; _temp = REPLACE(_temp,C_CRLF,"\w8\w8\n")
 		else; _temp = REPLACE(_temp,C_CRLF,"\n")
