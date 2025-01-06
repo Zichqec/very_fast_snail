@@ -2037,24 +2037,24 @@ Poetry.Free_Verse : sequential
 {
 	_poems = <<"
 	There is nothing like
-	the crisp,
-	the crunch,
+	the crisp, 
+	the crunch, 
 	the cool misting
-	from produce sprinklers.
-	Nibble
-	Nibble
-	Nibble
+	from produce sprinklers. 
+	Nibble\w8
+	Nibble\w8
+	Nibble\w8
 	It's lettuce time.
 	
 	
-	Engines revved.
-	Pavement slick.
+	Engines revved. 
+	Pavement slick. 
 	Risking it all on the track
 	Over pebbles
 	Around leaves
 	Faster, faster, faster
-	CRACK!
-	BOOM!
+	CRACK! 
+	BOOM! 
 	Four snail pileup.
 	
 	
@@ -2063,23 +2063,23 @@ Poetry.Free_Verse : sequential
 	every race
 	every interview
 	every day spent training
-	round and round the track?
+	round and round the track? 
 	Something, anything, more than
 	work
-	and toil?
-	A fresh wash,
-	new paint,
+	and toil? 
+	A fresh wash, 
+	new paint, 
 	slick new sunglasses mark
-	rebirth!
+	rebirth! 
 	Who needs speed when you can be
 	Cool 😎
 	
 	
-	Back in the garage again.
-	A buzz
-	A whirr
-	A clank
-	The sounds of tinkering,
+	Back in the garage again. 
+	A buzz\w8
+	A whirr\w8
+	A clank\w8
+	The sounds of tinkering, 
 	giving every snail a thrill
 	at the thought
 	of shiny
@@ -2089,31 +2089,31 @@ Poetry.Free_Verse : sequential
 	
 	Have you ever given thought
 	to the shape
-	of the track?
-	Around and around it goes,
+	of the track? 
+	Around and around it goes, 
 	never stopping
-	a race unending.
-	But more than that,
-	does it remind you of something else?
-	Around and around, endlessly mesmerizing.
+	a race unending. 
+	But more than that, 
+	does it remind you of something else? 
+	Around and around, endlessly mesmerizing. 
 	It bears a certain resemblance
 	to a snail's
 	spiral shell.
 	
 	
 	The quest for food
-	is never-ending.
+	is never-ending. 
 	A bite here
 	A nibble there
-	Every leaf you can find.
+	Every leaf you can find. 
 	There is but one thing
 	that could end our searching
-	for good.
+	for good. 
 	One singular dungeon to conquer
 	to have food aplenty
-	forever.
+	forever. 
 	One great monolith
-	with walls that appear impenetrable.
+	with walls that appear impenetrable. 
 	The refrigerator.
 	
 	
@@ -2122,78 +2122,78 @@ Poetry.Free_Verse : sequential
 	when it must decide between
 	integrity
 	and endorsing products
-	for personal gain.
-	To stick to principles,
+	for personal gain. 
+	To stick to principles, 
 	or to succumb to the pull
 	of lettuce
-	and shiny new gear.
-	.\w8.\w8.
+	and shiny new gear. 
+	.\w8.\w8. 
 	I'll take the money, thanks.
 	
 	\f[italic,1]This poem brought to you by %(snailbrand[0]).\f[italic,default]
 	
 	
-	Drip
-	Drip
-	Drip
+	Drip\w8
+	Drip\w8
+	Drip\w8
 	The soft pattering
 	of rain
 	brings a simple joy
-	to all snails.
-	Nature's cleansing,
+	to all snails. 
+	Nature's cleansing, 
 	washed and feeling
-	fresh.
-	Moisture abundant, overflowing.
+	fresh. 
+	Moisture abundant, overflowing. 
 	What more could a little snail
 	ask for?
 	
 	
 	Lettuce is often
-	held in high regard.
+	held in high regard. 
 	But truly, any leafy green
-	will do.
-	Cabbage
-	Spinach
-	Arugula
-	Kale
+	will do. 
+	Cabbage\w8
+	Spinach\w8
+	Arugula\w8
+	Kale\w8
 	It's all delicious
 	Nutritious
 	And will fill your snail
-	with glee.
+	with glee. 
 	\_w[2000](and leaves.)
 	
 	
 	The sky
-	is a far off dream.
-	A wide open space,
+	is a far off dream. 
+	A wide open space, 
 	no obstacles
 	no barriers
 	just the heavens before you
-	littered with clouds.
+	littered with clouds. 
 	Tragically, the sky is fiercely claimed
 	and protected
 	by birds.
 	
 	
 	To live life without
-	a shell.
-	Can you imagine it?
+	a shell. 
+	Can you imagine it? 
 	No protection
 	No home
 	Nowhere to put stickers
-	It seems unfathomably sad.
+	It seems unfathomably sad. 
 	Perhaps one could say
 	that slugs
 	are the bravest of us all.
 	
 	
-	Race day.
-	The thrill of the track.
-	Anticipation mounting,
+	Race day. 
+	The thrill of the track. 
+	Anticipation mounting, 
 	the crowd roars as the signal
-	is given.
-	Off the starting line, into the fray,
-	seeking an early lead.
+	is given. 
+	Off the starting line, into the fray, 
+	seeking an early lead. 
 	Tight corners
 	perfectly timed gear changes
 	a bit of flair
@@ -2202,64 +2202,64 @@ Poetry.Free_Verse : sequential
 	
 	
 	A snail without style
-	is like a wing without feathers.
+	is like a wing without feathers. 
 	Strange
 	Bare
 	Never able to reach its true
-	potential.
+	potential. 
 	To forsake style is to doom
 	one's racing career.
 	
 	
-	The deciding moment.
-	Tests and trials passed,
+	The deciding moment. 
+	Tests and trials passed, 
 	all that remains is to be
-	Named.
-	A racer name.
+	Named. 
+	A racer name. 
 	The unique identity upon which
 	fame and fortune
-	may be hung.
-	A roll of the dice,
+	may be hung. 
+	A roll of the dice, 
 	so many names that they are chosen
 	by chance
-	out of your control.
-	Your name is...
-	.\w8.\w8.
+	out of your control. 
+	Your name is... 
+	.\w8.\w8. 
 	\_w[2000]Not alliterative.
 	
 	
-	Turn the dial,
+	Turn the dial, 
 	Rotate through news
 	Weather
 	Music
-	And more.
-	Fields of static, incomprehensible,
-	overwhelming.
+	And more. 
+	Fields of static, incomprehensible, 
+	overwhelming. 
 	Between them, spaces of clarity, a noise so
 	wonderful
 	and invigorating
-	It brings a snail to life.
+	It brings a snail to life. 
 	A delicate balance between chaos and harmony.
 	
 	
-	Scrub
-	Scrub
-	Scrub
+	Scrub\w8
+	Scrub\w8
+	Scrub\w8
 	Foamy suds building up
 	Water warm, sponge squishy
 	Soon will come towels
-	and wax.
+	and wax. 
 	A snail spa day.
 	
 	
 	There is no shape
 	more entrancing
-	than a spiral.
-	Calming
-	Soothing
-	Hypnotic
-	Around and around, infinite depths to trace.
-	Curves sublime.
+	than a spiral. 
+	Calming\w8
+	Soothing\w8
+	Hypnotic\w8
+	Around and around, infinite depths to trace. 
+	Curves sublime. 
 	The perfect ratio.
 	
 	
@@ -2267,7 +2267,7 @@ Poetry.Free_Verse : sequential
 	Brand new accessories
 	Washed and waxed
 	The dream of every snail
-	before hitting the track.
+	before hitting the track. 
 	What's the point in racing
 	if your shell
 	doesn't draw
@@ -2276,7 +2276,7 @@ Poetry.Free_Verse : sequential
 	
 	Day in
 	Day out
-	Never missing a beat.
+	Never missing a beat. 
 	Practice may not make
 	Perfect
 	But it does make
@@ -2285,18 +2285,18 @@ Poetry.Free_Verse : sequential
 	
 	
 	Finally
-	the moment has come.
+	the moment has come. 
 	Picked from the crowd
 	Chosen above the rest
 	At long last
-	Sponsored.
+	Sponsored. 
 	I'll make my mark on the leaderboards
 	On racing culture
-	And in poetry, too.
+	And in poetry, too. 
 	You won't regret
 	your choice.
 	">>
-	_poems = ProcessPoems(_poems,2,"\b[12]","\f[name,Courier New]")
+	_poems = ProcessPoems(_poems,0,"\b[12]","\f[name,Courier New]")
 	parallel _poems
 }
 
