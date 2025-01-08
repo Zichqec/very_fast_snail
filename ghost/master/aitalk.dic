@@ -231,23 +231,35 @@ GarbledRadioMessage : all
 	_talk1 = SHIORI3FW.RemoveAllTags(_argv[0])
 	_talk2 = SHIORI3FW.RemoveAllTags(_argv[1])
 	
+	//Add characters to make them match
+	// if STRLEN(_talk2) > STRLEN(_talk1)
+	// {
+		// while STRLEN(_talk2) > STRLEN(_talk1)
+		// {
+			// _talk1 += GarbleChar
+		// }
+	// }
+	// else
+	// {
+		// while STRLEN(_talk1) > STRLEN(_talk2)
+		// {
+			// _talk2 += GarbleChar
+		// }
+	// }
+	
+	//Remove characters to make them match
 	if STRLEN(_talk2) > STRLEN(_talk1)
 	{
-		while STRLEN(_talk2) > STRLEN(_talk1)
-		{
-			_talk1 += GarbleChar
-		}
+		_talk2 = SUBSTR(_talk2,0,STRLEN(_talk1))
 	}
 	else
 	{
-		while STRLEN(_talk1) > STRLEN(_talk2)
-		{
-			_talk2 += GarbleChar
-		}
+		_talk1 = SUBSTR(_talk1,0,STRLEN(_talk2))
 	}
 	
 	_talk1 = ".....%(GarbleChar)%(GarbleChar)%(GarbleChar)" + _talk1 + "%(GarbleChar)%(GarbleChar)%(GarbleChar)....."
 	_talk2 = ".....%(GarbleChar)%(GarbleChar)%(GarbleChar)" + _talk2 + "%(GarbleChar)%(GarbleChar)%(GarbleChar)....."
+	
 	"\_q"
 	for _i = 0; _i < STRLEN(_talk1); _i++
 	{
@@ -255,15 +267,29 @@ GarbledRadioMessage : all
 		"\_l[0,0]\f[sub,1]"
 		for _spaces = 0; _spaces < _i; _spaces++
 		{
-			" "
+			"  "
 		}
-		SUBSTR(_talk1,_i,1)
+		if RAND(6) == 0
+		{
+			GarbleChar
+		}
+		else
+		{
+			SUBSTR(_talk1,_i,1)
+		}
 		"\f[sub,default]\_l[0,0]\f[color,disable]"
 		for _spaces = 0; _spaces < _i; _spaces++
 		{
 			" "
 		}
-		SUBSTR(_talk2,_i,1)
+		if RAND(6) == 0
+		{
+			GarbleChar
+		}
+		else
+		{
+			SUBSTR(_talk2,_i,1)
+		}
 		"\f[color,default]\_w[50]"
 		
 		//I dunno about the sub/sup here but they DO make it more readable...
@@ -285,16 +311,16 @@ GarbledRadioMessage : all
 
 GarbleChar
 {
-	"g"
-	"s"
-	"h"
-	"k"
-	"b"
-	"v"
-	"l"
+	// "g"
+	// "s"
+	// "h"
+	// "k"
+	// "b"
+	// "v"
+	// "l"
+	// "z"
+	// "m"
 	"#"
 	"-"
-	"m"
-	"z"
 	"@"
 }
