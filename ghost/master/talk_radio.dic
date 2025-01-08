@@ -1,18 +1,22 @@
+//Ringo Racetrack
 RadioStation.Racing_News : nonoverlap_pool
 {
 	"\1\b[20]wow the leaderboards sure are hot!"
 }
 
+//Haley Storme & Tailgating Terror
 RadioStation.Weather : nonoverlap_pool
 {
 	"\1\b[20]wow the weather sure is hot!"
 }
 
+//Bill Carde & Blanca Chek
 RadioStation.Shopping : nonoverlap_pool
 {
 	"\1\b[20]wow these deals sure are hot!"
 }
 
+//Arya Lissenin
 RadioStation.Music : nonoverlap_pool
 {
 	//"\1\b[20]wow these tunes sure are hot!"
@@ -50,6 +54,7 @@ RadioStation.Music : nonoverlap_pool
 	"\1\b[20]%(note1)Ooh, look at that spiral go round and round~%(note2)\n\n %(note1)There's no better snail to be found~%(note2)"
 	"\1\b[20]%(note1)Don't let your snails scatter around~%(note2)\n\n %(note1)Keep them in, all safe and sound~%(note2)"
 	"\1\b[20]%(note1)Let those lil guys take the lead, cuz these snails got a need for speed!%(note2)"
+	//"\1\b[20]"
 	
 	//DJ
 	_somesnail = SnailNameGenerator(,"not alliteration")
@@ -75,16 +80,78 @@ RadioStation.Music : nonoverlap_pool
 	//"\1\b[20]"
 }
 
+//The Cheetah
 RadioStation.Variety_Show : nonoverlap_pool
 {
 	"\1\b[20]wow these poems sure are hot!"
 }
 
+//Tim Gulls
 RadioStation.ASMR : nonoverlap_pool
 {
-	"\1\b[20]\f[italic,1]sizzling\f[italic,default]"
+	parallel "\1\b[20]\f[italic,1]\f[color,disable]" + ASMR.dialogues + "\f[color,default]\f[italic,default]"
 }
 
+ASMR.dialogues : array
+{
+	//Sounds
+	"Tap tap tap tap tap."
+	"Splap."
+	"Thup."
+	"Squorsh."
+	"Rasp rasp rasp."
+	"Sniff."
+	"Splap."
+	"Squiggle."
+	"Crunch. Crunch. Crunch."
+	"Chew."
+	"Blup."
+	"Drip... Drip... Drip..."
+	"Shoof shoof... Shoof shoof... Shoof shoof..."
+	"Clack, clack, clack, clack."
+	"\![set,balloonwait,2]Sluuuuuuuurp.\![set,balloonwait,1] Ahh..."
+	"Pop. Pop. Pop. Pop."
+	"\![set,balloonwait,2]Shhrrrrrrr.\![set,balloonwait,1]"
+	"\![set,balloonwait,2]Fwshhhhhh.\![set,balloonwait,1]"
+	"Splut. Splut."
+	"Bop. Bop. Bop. Bop."
+	"\![set,balloonwait,2]Shrrrrrrrip.\![set,balloonwait,1]"
+	"Scratch scratch. Scratch scratch scratch."
+	"Skritch skritch skritch."
+	"\![set,balloonwait,2]Shhhhhhvv.\![set,balloonwait,1]"
+	"Tapatapatapatapatapatapatapatapa."
+	"Tappata tappata tappata tappata tappata."
+	"\![set,balloonwait,2]Vrrrrrrrp.\![set,balloonwait,1]"
+	"\![set,balloonwait,2]Slllllllp.\![set,balloonwait,1]"
+	"\![set,balloonwait,2]Crrrrrrrrck\![set,balloonwait,1], crk, crk, crk."
+	"Pup. Pop. Pip. Pup."
+	
+	//Affirmations (aka LIES)
+	"You matter. Your contributions to snail culture will be remembered."
+	"There's no other snail that's exactly like you, you're unique and wonderful."
+	"You can win eventually if you keep trying."
+	"Go get a nice shell wash, it'll help you feel better."
+	"You're the most important snail in somebody's life."
+	"Your sponsor loves you."
+	"Your sense of style is impeccable."
+	"You're the fastest snail on the track."
+	"Your shell's curve is perfect, don't let anyone tell you otherwise."
+	"You did a fine job applying those stickers to your own shell, they look great."
+	"Your new paint job suits you well."
+	"You deserve all the lettuce in the world."
+	"If you don't feel like racing today, that's ok."
+	"Go to the refrigerator, get a snack. You deserve it."
+	"You'll make it big one day."
+	"We're all so proud of you."
+	"You'll impress everyone at your next race, the crowds will roar."
+	"Ask your sponsor to mist you now and then, you deserve the extra attention and care."
+	//"Crunchy leaves just for you... Ask for the best from your sponsor." -- this feels like a good ad read for this station lol
+	"Imagine the juicy crunch of a fresh lettuce leaf. You deserve the best today."
+	"Your racer name is one of the best anyone's ever heard. You'll be legendary one day."
+}
+
+
+//Nelly Norma & Nobop
 RadioStation.Pirate_Radio : nonoverlap_pool
 {
 	"\1\b[20]get a life, snails"
