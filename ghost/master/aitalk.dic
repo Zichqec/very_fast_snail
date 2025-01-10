@@ -267,7 +267,7 @@ GarbledRadioMessage : all
 		"\_l[0,0]\f[sub,1]"
 		for _spaces = 0; _spaces < _i; _spaces++
 		{
-			"  "
+			"   "
 		}
 		if RAND(6) == 0
 		{
@@ -280,7 +280,7 @@ GarbledRadioMessage : all
 		"\f[sub,default]\_l[0,0]\f[color,disable]"
 		for _spaces = 0; _spaces < _i; _spaces++
 		{
-			" "
+			"  "
 		}
 		if RAND(6) == 0
 		{

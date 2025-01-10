@@ -87,30 +87,57 @@ OnInitialize
 	}
 	
 	if !ISVAR("CleaningProductsPurchased"); CleaningProductsPurchased = 0
-	if !ISVAR("CurrentSnail.Cleanliness"); CurrentSnail.Cleanliness = 0
-	
-	if !ISVAR("SavedSnails.Training")
-	{
-		for _i = 0; _i < ARRAYSIZE(SavedSnails.ID); _i++
-		{
-			SavedSnails.Training[_i] = (0,0,0,0,0,0,0,0,0,0)
-		}
-	}
-	if !ISVAR("CurrentSnail.Training") //To be doubly sure...
-	{
-		CurrentSnail.Training = (0,0,0,0,0,0,0,0,0,0)
-	}
-	
-	//TODO this is gonna get replaced anyways because I want to save them as files for sure now...
-	_snailsonality = GenerateSnailsonality(CurrentSnail.Name,CurrentSnail.ID)
-	if CurrentSnail.PersonalityType == ""; CurrentSnail.PersonalityType = _snailsonality[0]
-	if CurrentSnail.PoetryType == ""; CurrentSnail.PoetryType = _snailsonality[1]
-	if CurrentSnail.RadioPreference == ""; CurrentSnail.RadioPreference = _snailsonality[2]
-	if CurrentSnail.AltHobby == ""; CurrentSnail.AltHobby = _snailsonality[3]
 	
 	if !ISVAR("RadioStation"); RadioStation = "Racing News"
 	if !ISVAR("RadioScan"); RadioScan = 3600
 	if !ISVAR("RadioScanTime"); RadioScanTime = GETSECCOUNT
+	
+	InitSnailVars
+}
+
+//TODO all of this is untested... it's probably fine right (no)
+InitSnailVars
+{
+	if !ISVAR("CurrentSnail.ID"); CurrentSnail.ID = GenerateID
+	if !ISVAR("CurrentSnail.Name")
+	{
+		CurrentSnail.Name = SnailNameGenerator(CurrentSnail.ID)
+	}
+	_snailsonality = GenerateSnailsonality(CurrentSnail.Name,CurrentSnail.ID)
+	
+	if !ISVAR("CurrentSnail.Version"); CurrentSnail.Version = ghostver
+	if !ISVAR("CurrentSnail.DateSponsored"); CurrentSnail.DateSponsored = "%(year)-%(leadingmonth)-%(leadingday):%(GETSECCOUNT)"
+	if !ISVAR("CurrentSnail.Number")
+	{
+		//TODO untested lol
+		_num = 1
+		if ARRAYSIZE(SavedSnails.ID) > 0; _num += ARRAYSIZE(SavedSnails.ID)
+		_fenum = FENUM("snail_data/","|")
+		if ARRAYSIZE(SPLIT(_fenum,"|")) > 0; _num += ARRAYSIZE(SPLIT(_fenum,"|"))
+		CurrentSnail.Number = _num
+	}
+	if !ISVAR("CurrentSnail.TotalRaces"); CurrentSnail.TotalRaces = 0
+	if !ISVAR("CurrentSnail.TotalRaceTime"); CurrentSnail.TotalRaceTime = 0
+	if !ISVAR("CurrentSnail.HighestScore"); CurrentSnail.HighestScore = 0
+	if !ISVAR("CurrentSnail.FastestRaceTime"); CurrentSnail.FastestRaceTime = 0
+	if !ISVAR("CurrentSnail.HighestCoolness"); CurrentSnail.HighestCoolness = 0
+	if !ISVAR("CurrentSnail.TotalCrashes"); CurrentSnail.TotalCrashes = 0
+	if !ISVAR("CurrentSnail.LastOut"); CurrentSnail.LastOut = GETSECCOUNT //debatable... but OnDestroy does it...
+	if !ISVAR("CurrentSnail.TotalOutTime"); CurrentSnail.TotalOutTime = 0
+	if !ISVAR("CurrentSnail.Training"); CurrentSnail.Training = (0,0,0,0,0,0,0,0,0,0)
+	if !ISVAR("CurrentSnail.Cleanliness"); CurrentSnail.Cleanliness = 0
+	if !ISVAR("CurrentSnail.CurrentSpeed"); CurrentSnail.CurrentSpeed = 0
+	if !ISVAR("CurrentSnail.CurrentCoolness"); CurrentSnail.CurrentCoolness = 0
+	if !ISVAR("CurrentSnail.CurrentExplosiveness"); CurrentSnail.CurrentExplosiveness = 0
+	if !ISVAR("CurrentSnail.CarryCapacity"); CurrentSnail.CarryCapacity = 0 //TODO don't know what this will be yet...
+	if !ISVAR("CurrentSnail.Trait"); CurrentSnail.Trait = 
+	if !ISVAR("CurrentSnail.PersonalityType"); CurrentSnail.PersonalityType = _snailsonality[0]
+	if !ISVAR("CurrentSnail.PoetryType"); CurrentSnail.PoetryType = _snailsonality[1]
+	if !ISVAR("CurrentSnail.RadioPreference"); CurrentSnail.RadioPreference = _snailsonality[2]
+	if !ISVAR("CurrentSnail.AltHobby"); CurrentSnail.AltHobby = _snailsonality[3]
+	if !ISVAR("CurrentSnail.FavoriteFamousSnail"); CurrentSnail.FavoriteFamousSnail = _snailsonality[4]
+	if !ISVAR("CurrentSnail.Notes"); CurrentSnail.Notes = IARRAY
+	if !ISVAR("CurrentSnail.Loadout"); CurrentSnail.Loadout = IARRAY
 }
 
 OnDestroy
