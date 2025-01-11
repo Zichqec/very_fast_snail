@@ -1769,8 +1769,8 @@ Poetry.Lyric : sequential
 
 note
 {
-	"\f[name,arial]♪\f[default]"
-	"\f[name,arial]♫\f[default]"
+	"\f[name,arial]♪\f[name,default]"
+	"\f[name,arial]♫\f[name,default]"
 }
 
 Poetry.Rhyming_Couplet : sequential

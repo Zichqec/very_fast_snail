@@ -641,10 +641,12 @@ note1
 
 note2
 {
-	"\![music-note] \f[name,arial]♪\f[default]"
-	"\![music-note] \f[name,arial]♫\f[default]"
+	"\![music-note] \f[name,arial]♪\f[name,default]"
+	"\![music-note] \f[name,arial]♫\f[name,default]"
 }
 
+//TODO uhm... every time this dialogue is repeated it will pick something new. Need a new solution... hm.
+//I think I could set up the poetry things to be an array, and have the current poetry pools use parallel on that array so they are separate... and then this dialogue can just pick one at random and ignore nonoverlap since it won't come up much? that seems like the play...
 OnSnailSong
 {
 	REPLACE(Poetry.Lyric,"\b[","\![dummy-")
@@ -1084,6 +1086,8 @@ DialogueTransition
 	//Get a list of all the tags
 	_tags1 = SakuraScooper(_talk1)
 	_tags2 = SakuraScooper(_talk2)
+	_bigballoon = 0
+	if !(ASEARCH("\b[22]",_tags1) == -1 && ASEARCH("\b[22]",_tags2) == -1); _bigballoon = 1
 	
 	//Remove tags and replace with C_BYTE1
 	foreach _tags1; _tag
@@ -1141,7 +1145,12 @@ DialogueTransition
 	
 	foreach _tags2; _tag
 	{
-		if C_BYTE1 _in_ _talk2tags; _talk2tags = REPLACE(_talk2tags,C_BYTE1,_tag,1)
+		if C_BYTE1 _in_ _talk2tags
+		{
+			//Don't carry over linebreaks from first section
+			if _tag == "\n"; _talk2tags = REPLACE(_talk2tags,C_BYTE1,"",1)
+			else; _talk2tags = REPLACE(_talk2tags,C_BYTE1,_tag,1)
+		}
 		else; _talk2last = REPLACE(_talk2last,C_BYTE1,_tag,1)
 	}
 	
@@ -1153,6 +1162,11 @@ DialogueTransition
 	//_output = REPLACE(_output," %(emdash)\w8\w8","%(emdash)\w8\w8") //bandaid patch because sometimes it breaks on a space... i should probably just try to fix this tho cuz it shouldn't happen - but tbh maybe this is the better fix lol. less looping... i'll think about it. and it allows breaking between words! - I think this one was assuming autopause, but autopause won't come into effect until later...
 	_output = REPLACE(_output," %(emdash)\n\n","%(emdash)\n\n")
 	_output = REPLACE(_output,"%(emdash) ","%(emdash)")
+	
+	if _bigballoon
+	{
+		_output = REPLACE(_output,"\1\b[20]","\1\b[22]")
+	}
 	
 	_output
 }
