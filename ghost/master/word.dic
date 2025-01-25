@@ -779,7 +779,7 @@ broccoliis
 booktitle
 {
 	"101 Ways to Eat Lettuce (with pictures)"
-	"Eat this lettuce, not that"
+	"Eat This Lettuce, Not That"
 	"Muscles: Nature's Engine"
 	"How to Build Muscle and Keep It"
 	"Inspirational Muscle Photos"
@@ -1151,6 +1151,14 @@ snailcity
 	"Snailshire"
 	"Snailhill"
 	"Snail Pointe"
+	"East Snailsgrad"
+	"West Snailsgrad"
+	"North Snailsbury"
+	"South Snailsbury"
+	"Snailham"
+	"Snailscester"
+	"Snailsby"
+	"Snailstead"
 }
 
 beans
@@ -1486,12 +1494,103 @@ dryerlint
 	"old receipts from the grocery store"
 }
 
-charityevent
+
+
+//but I want to take this time to remind everyone about the (charityevent1)
+charityevent1 : array
 {
 	//"upcoming charity event"
-	"ongoing Super Snailathon, where 100% of all proceeds from Super Snail merch go to the Safe Snail Society!\n\n Get yourself some Super Snail t-shirts, hats, mugs, posters, sponges, bags, and more, and it all goes to a great cause! Isn't that worth putting your money towards?\n\n But that's not all, use our special key word of the day, ""MONEY"", at checkout, and we'll match your donation leaf for leaf! That's right, every head you spend is DOUBLED, so get out there and make an impact!" //TODO i'd really love to make the keyword change each day or something... once I figure out seeding or however i wanna do this
+	"ongoing Super Snailathon, where 100% of all proceeds from Super Snail merch go to the Safe Snail Society!\n\n Get yourself some Super Snail t-shirts, hats, mugs, posters, sponges, bags, and more, and it all goes to a great cause! Isn't that worth putting your money towards?\n\n But that's not all, use our special key word of the day, ""%(TodaysChoice(MusicStationKeyword))"", at checkout, and we'll match your donation leaf for leaf! That's right, every head you spend is DOUBLED, so get out there and make an impact!"
+	"current donation drive, going towards the Racer Retirement Fund. There are so many racers out there that never had the chance to make it big while they were still in their prime, and who's going to take care of them now that they can't bring in the lettuce like they used to? YOU'RE gonna take care of them!\n\n Every leaf of lettuce you donate will go towards planting new lettuce fields to feed these snails during their golden years. Isn't that a great cause? YOU can make a direct impact in the lives of so many snails!\n\n We need just %(RAND(10) + 5) more monthly donors this hour to hit our target. You could be one of them that pushes us to that goal! Just call in and we'll sign you up, it'll only take a minute of your time. You can also sign up on the snailernet. If you can spare just a little lettuce each month, you can make a real difference in the lives of so many!"
+	"merch sale we have upcoming! All your favorite Mollusk Music merch will be going on sale, with some items as much as 60% off!\n\n T-shirts, hats, mugs, plushies, bookmarks, and so much more. Get your lettuce ready and pick out some designs you like so you can order them before we run out of stock!\n\n Got a loved one with a birthday coming up? Mollusk Music merch makes for great gifts that anyone will love!"
 	//donation drive
 	//merch sale
 	//etc...
-	//if i'm gonna do this i should consider having multiple dialogues relating to it
+}
+
+//it's that part of the hour where I remind you guys about the (charityevent2)
+charityevent2 : array
+{
+	"Super Snailathon that's going on. 100% of all proceeds from Super Snail merch go straight to the %(TodaysChoice(safesnailsociety)), so you can get yourself some cool merch of your favorite Super Snail and give to a good cause at the same time!\n\n Not only that, but if you use our special key word today, ""%(TodaysChoice(MusicStationKeyword))"", we'll make a donation matching the amount you spent, leaf for leaf! The impact from your choice will be DOUBLED, isn't that cool?\n\n So don't put it off, get out there and get yourself some Super Snail merch, and celebrate the %(TodaysChoice(safesnailsociety)) with us!"
+	"donation drive going on today, benefitting the Racer Retirement Fund. Every leaf you can donate goes to planting new lettuce fields for aging racers who never made it big and need a little help in their golden years. Isn't that a cause worth putting your lettuce towards?\n\n We're looking to get %(RAND(10) + 5) new monthly donors this hour, but of course, one-off donations are welcome too! Anything we can do to help some cute little snails out, am I right? Just call in and we'll help you sign up, it'll only take a few moments of your time. You can also sign up on the snailernet, we've had %(RAND(10) + 3) donors sign up that way already, and the feedback has been awesome!"
+	"big Mollusk Music merch sale we have coming up! T-shirts, hoodies, sling bags, sunglasses, patches; there's so much to love, and you can get it up to 60% off in just a few days!\n\n Now is the time to pick out what you like, and be prepared to order it quickly when the sale starts, before your favorites sell out!\n\n Already have plenty of Mollusk Music merch for yourself? Why not order some for friends and family so they can show off their favorite radio station too!"
+}
+
+//Hey hey hey, check it out guys, we've still got that (charityevent3)
+charityevent3 : array
+{
+	"Super Snailathon going on! It's a great time to order yourself some Super Snail merch. Y'know why?\n\n Ding ding ding, that's right! 100% of all proceeds from merch sold today are going to support the %(TodaysChoice(safesnailsociety)), so get out there and spend your lettuce for a great cause!\n\n Not only that, if you use our key word of the day, ""%(TodaysChoice(MusicStationKeyword))"", we'll donate and match your contribution! That's right, we're DOUBLING your impact, leaf for leaf! So get out there and get yourself something fun! T-shirts, hats, mugs, posters, sponges, bags, and so much more. It can be yours today, and you can feel great about supporting an awesome cause!"
+	"donation drive for the Racer Retirement Fund going! We just need a few more monthly donors to sign up in order to hit our goal for this hour, we're almost there!\n\n Every leaf you donate goes towards planting brand new lettuce fields that are being set up to feed older snails that never made it big in their prime and could use a stable source of lettuce in their later years. It's a good cause, right? Of course it is!\n\n Signing up is easy, just give us a call or visit us on the snailernet. It'll only take a few minutes of your time, and you can feel good about giving just a few leaves each month, knowing you're helping so many snails in need. All of our lettuce donors are amazing, a big thank you to everyone who's donated or pledged a monthly donation so far!"
+	"merch sale upcoming, and I can see that a lot of people are adding our latest t-shirt and hoodie designs to their wishlists. Did you know we also have those designs on tanktops, shorts, and socks? If you're itching to have it but the t-shirts and hoodies get sold out before you can snag one, there are other ways to have it that are just as comfortable and nice to wear!\n\n You can also get our commemorative glasses, picture frames, wallets, and so much more! There's a lot to explore on the store, guys, and lots of great gift ideas for your friends and family!"
+}
+
+//after this next song I'll tell you more about that (charityevent4)
+charityevent4 : array
+{
+	"Super Snailathon we have going on"
+	"donation drive going on for the Racer Retirement Fund"
+	"upcoming merch sale, where you can get Mollusk Music merch up to 60% off"
+}
+
+// but stick around, we've got that (charityevent5), and we'll have more details for you
+charityevent5 : array
+{
+	"Super Snailathon ongoing"
+	"donation drive for the Racer Retirement Fund ongoing"
+	"upcoming merch sale"
+}
+
+
+MusicStationKeyword : array
+{
+	"MONEY"
+	"GREEN"
+	"LETTUCE"
+	"LEAVES"
+	"HEADS"
+	"NUTRIENTS"
+	"CRUNCH"
+	"SWEET"
+	"CRISP"
+	"STEMS"
+}
+
+safesnailsociety : array
+{
+	"Safe Snail Society"
+	"Supersonic Snail Supporters"
+	"Smiling Snails"
+}
+
+//produce / greens
+celery
+{
+	"celery"
+	"broccoli"
+	"spinach"
+	"kale"
+	"arugula"
+	"lettuce"
+	"cabbage"
+	"brussels sprouts"
+}
+
+//it's a little "metal in inappropriate places" isn't it lol
+inmycar
+{
+	"in my car at a traffic light, and all the cars behind me were honking along as I danced to the beat and belted out the chorus at the top of my lungs"
+	"in the produce aisle of the grocery store, and everyone around was watching in awe at my headbanging skills"
+	"down at court to dispute a traffic violation, and I couldn't help but show off my dancing skills to the judge when my song came on" //hmmmmmm
+	"in the middle of a crosswalk, and all the oncoming cars stopped to witness my slick moves and honk to show their support"
+	"out in the middle of a field, belting out the words as loud as I could and bringing joy to the local wildlife"
+	"in my apartment doing a little late night listening, and the neighbors were so enthralled with my singing and dancing they were stomping their feet along to the beat as well"
+}
+
+danceallnight
+{
+	"dance the whole night long"
+	"run all the way to the corner store and back, and still have energy to dance for hours"
+	"stand in line all day to get an autograph from %(ANY(FamousSnails)) and not get tired"
+	"rock out forever and ever%(emdash)or at least until this caffeine wears off"
+	"move my feet so fast I'd fly right up into the sky"
 }

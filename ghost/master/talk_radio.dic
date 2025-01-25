@@ -17,6 +17,7 @@ RadioStation.Shopping : nonoverlap_pool
 }
 
 //Arya Lissenin
+//103.7 Mollusk Music
 RadioStation.Music : nonoverlap_pool
 {
 	//"\1\b[20]wow these tunes sure are hot!"
@@ -60,24 +61,24 @@ RadioStation.Music : nonoverlap_pool
 	_somesnail = SnailNameGenerator(,"not alliteration")
 	"\1\b[22]And now for something special, folks! A little snail called %(_somesnail) is here in the studio with us today, and it's going to perform a song that it wrote itself. Take it away, %(_somesnail)!\n\n %(note1)%(note1)%(note1)%(note1)%(note1)%(note1)%(note1)%(note1)%(note1)%(note1)\n\n \f[italic,1]\![embed,OnSnailSong]\f[italic,default]\n\n %(note1)%(note1)%(note1)%(note1)%(note1)%(note1)%(note1)%(note1)%(note1)%(note1)\_w[2000]\n\n Aw, that was lovely. Thank you for that wonderful performance, %(_somesnail), and we hope you'll come back to the studio again someday to sing another song!"
 	"\1\b[22]It's that time of the day again, folks, it's time to put in your music requests! Starting next hour, I play nothing but what you send me; you control the show!\n\n Get out those phones, send me a message on the snailernet, use our app; whatever way you wanna get it to me, get it to me and I'll play out the snail tunes you've been itching for."
-	"\1\b[20]How's everyone feeling out there? These tunes are hot today, yowza!\n\n We'll get right back to it in a moment, but I want to take this time to remind everyone about the %(charityevent)"
-	//"\1\b[20]"
-	//"\1\b[20]"
-	//"\1\b[20]"
-	//"\1\b[20]"
-	//"\1\b[20]"
-	//"\1\b[20]"
-	//"\1\b[20]"
-	//"\1\b[20]"
-	//"\1\b[20]"
-	//"\1\b[20]"
-	//"\1\b[20]"
-	//"\1\b[20]"
-	//"\1\b[20]"
-	//"\1\b[20]"
-	//"\1\b[20]"
-	//"\1\b[20]"
-	//"\1\b[20]"
+	"\1\b[22]How's everyone feeling out there? These tunes are hot today, yowza!\n\n We'll get right back to it in a moment, but I want to take this time to remind everyone about the %(TodaysChoices(charityevent1))"
+	"\1\b[22]Woo! How's everyone doing, feeling awake? What a way to start the day off with some classic tunes that really get your blood pumping! I don't know about you, but all these greatest snail hits make my feet feel like they gotta MOVE!\n\n Stay tuned, it's time to pause and thank our sponsors, but we'll be back in a minute with all your favorites and more on 103.7, Mollusk Music!" //TODO i wonder if "start the day off" ought to be replaced based on the runtime... "start the day off", "get us through the afternoon", "keep us awake through the evening"...
+	"\1\b[22]Alright alright alright, how was that for a great song? It's a shame you all can't see what it's like here in the studio, 'cuz every time we play that one I end up rocking out no matter what else is going on.\n\n That being said, it's that part of the hour where I remind you guys about the %(TodaysChoices(charityevent2))"
+	"\1\b[22]Woohoo! Doesn't that one just make you wanna dance no matter where you are? Just last week I was %(inmycar). It was really something else.\n\n More great tunes like that are coming up soon, so don't touch that dial! We'll be back in a minute after a word from our generous sponsors."
+	"\1\b[22]Hey hey hey, check it out guys, we've still got that %(TodaysChoices(charityevent3))"
+	"\1\b[22]Who's ready for some more rockin' snail songs? We've got a great lineup this next hour, so crank up the volume and share these beats with all your neighbors!"
+	"\1\b[22]Yahoo, today's tracks have been absolutely scorching hot! We hope all you snails and snail fans out there are having a great time, and we'll be back with more after a quick word from our sponsors that help us keep the show on the air!"
+	"\1\b[22]Ahh, that's a good song, isn't it? One of the all-time greats, it really is. You can feel the energy zipping around the room whenever we play it out.\n\n We've got more great tunes in store for you this hour, so stay with us! And if you'd like to hear your favorites starting next hour, make sure to send in your requests now! Give us a call, send it to me on the snailernet, send a request in on our app; however you can get it to me, get it to me and I'll make it happen!"
+	"\1\b[22]How's everyone doing out there, has that last song got you movin' and groovin'? It's sure made its way to my feet, let me tell you. I feel like I could %(danceallnight)!\n\n Let's keep that energy going with this next tune on 103.7, Mollusk Music. Take it away!"
+	"\1\b[22]Well, that really was a blast from the past, wasn't it? We've pulled out some old songs from our archives to play for you today. They might be a bit older than our standard fare, but as they say, absence makes the heart grow fonder!\n\n Look forward to some more deep cuts throughout the show today! And if you can correctly guess what artists we have in our lineup, you'll be entered to win a prize, so give us a call and get your guesses in!"
+	"\1\b[22]How's that for a nostalgic tune, huh? We're dusting off the old archives today, so get ready for some vintage memories this show! And don't forget that next hour will be songs picked by you, our listeners. If there's a deep cut you'd like to hear in particular, please request it and if we've got it I'll make sure we play it just for you!"
+	"\1\b[22]Woo! How about that weather, huh? We've got some great tunes for a day like today, so stick with us while we hear a word from our sponsors, and we'll be back with some weather-appropriate songs to jam out to!"
+	"\1\b[22]What a powerful song, am I right? The kind you can't help but sing along to, whether you know the words or not, hahaha!\n\n More like that coming up right now on 103.7, Mollusk Music. And after this next song I'll tell you more about that %(TodaysChoices(charityevent4))!"
+	"\1\b[22]How about that. Talk about a timeless song, I can't imagine a day will come when we don't play that song every day. Ah, it just hits you real good when that last chorus comes in, incredible.\n\n We're going to get right back into some sweet tunes, but stick around, we've got that %(TodaysChoices(charityevent5)), and we'll have more details for you after this next song!"
+	"\1\b[22]Woo, bust out those dance moves, these greatest hits just keep coming!\n\n And we're right back into it, so don't touch that dial. You're listening to%(br)103.7, Mollusk Music."
+	"\1\b[22]Man, I can feel everyone's excitement from here! Who's ready for this next tune?\n\n We'll get into it in just a moment, but as a quick reminder, next hour we'll be playing out your requests, so make sure you get 'em in! Call in, message me on the snailernet, talk to use through our app. However you can get your request in, do it and it just might get played out next hour!"
+	"\1\b[22]What a legendary song. Truly genre-defying, I remember when it first came out and everyone went wild over those thrilling harmonies.\n\n I want to hear from you guys, what songs from your childhood stick most firmly in your memory? Send 'em in to us, and we might just play them out if it's been a while!"
+	"\1\b[22]Ah, I never get tired of these snail songs. There's nothing quite like hearing a thousand snails raise up their voice in one glorious chorus, or hearing a well-tuned group of snails singing in perfect harmony.\n\n What's your favorite kind of snail song? Send in your votes today via our app, or on the snailernet, and let us know!"
 }
 
 //The Cheetah
@@ -89,9 +90,18 @@ RadioStation.Variety_Show : nonoverlap_pool
 //Tim Gulls
 RadioStation.ASMR : nonoverlap_pool
 {
-	parallel "\1\b[20]\f[italic,1]\f[color,disable]" + ASMR.dialogues + "\f[color,default]\f[italic,default]"
+	_candidates = ASMR.dialogues
+	for _i = 0; _i < ARRAYSIZE(_candidates); _i++
+	{
+		_candidates[_i] = "\1\b[20]\f[italic,1]\f[color,disable]" + _candidates[_i]
+		if "\e" _in_ _candidates[_i]; _candidates[_i] = REPLACE(_candidates[_i],"\e","\f[color,default]\f[italic,default]\e")
+		else; _candidates[_i] += "\f[color,default]\f[italic,default]"
+	}
+	
+	parallel _candidates
 }
 
+//TODO this needs to be split into two pools... but in a way that's still counted on the dialogue counter
 ASMR.dialogues : array
 {
 	//Sounds
@@ -145,10 +155,72 @@ ASMR.dialogues : array
 	"We're all so proud of you."
 	"You'll impress everyone at your next race, the crowds will roar."
 	"Ask your sponsor to mist you now and then, you deserve the extra attention and care."
-	//"Crunchy leaves just for you... Ask for the best from your sponsor." -- this feels like a good ad read for this station lol
 	"Imagine the juicy crunch of a fresh lettuce leaf. You deserve the best today."
 	"Your racer name is one of the best anyone's ever heard. You'll be legendary one day."
+	//"Crunchy leaves just for you... Ask for the best from your sponsor." -- this feels like a good ad read for this station lol
+	
+	
+	
+	"Shuff shuff shuff shuff."
+	"Splip... Splop... Splip... Splop..."
+	"Sclup... Sclup..."
+	"\![set,balloonwait,2]Vrrrrrrrrp.\![set,balloonwait,1] Skt skt skt skt."
+	"Crick crick. Crick. \w8\w8Crack."
+	"Shoof shoof shoof. Shoof shoof shoof. \![set,balloonwait,2]Shhhhrrrrrp.\![set,balloonwait,1]"
+	"Tap tap tap tap. Shoof shoof. Tap tap tap tap tap tap."
+	"Bip bip bip. Bip. Bip bip."
+	"Bup bup. Bup bup bup."
+	"Blit blit. Blit blop. Splob splob splob."
+	"Skv skv skv skv. Vvvvvp."
+	"Clink clink."
+	"Tink tink tink. Tink tink. Tink tink tink."
+	"Click clack. Click clack. Click clack."
+	"Fuzz fuzz fuzz fuzz."
+	"Pop pop pop pop."
+	"Fssszzzzzzz."
+	"Sizzle."
+	"Pop. Pop. Crackle. Pop."
+	"Plop. Plop. Plop."
+	"Drip. Drop."
+	"Dit dit dit dit dit."
+	"Tip tip tap. Tip tip tap. Tip tip tap."
+	"Shrp. Shrp. Shrp. Shrp. \![set,balloonwait,2]Shrrrrrrrriiip.\![set,balloonwait,1]"
+	"Tep tep tep. Tep tep tep tep tep. Tep tep."
+	"Bip bip bip bip bip."
+	"Squish."
+	"Squish squorsh. Squish squorsh."
+	"Blep. Blep. Blep."
+	"Pip pip pop. Pip pip pop."
+	
+	//Roleplay ???
+	"Let's wash that shell.\n\n Squee. Squee. Squee.\n\n So shiny."
+	"Let's get a little mist.\n\n Shhp. Shhp. Shhp.\n\n Well hydrated."
+	"I got this lettuce fresh, just for you.\n\n Crunch. Crunch. Crunch.\n\n Mmm, taste those nutrients."
+	"Let's check the refrigerator.\n\n \![set,balloonwait,2]Ch-wummmmmmm\![set,balloonwait,1].\n\n Look at all that produce. All for you."
+	"Look at this brand new engine.\n\n Tappata tappata tappata tap.\n\n Skitter skitter skitter skitter.\n\n Sounds nice, doesn't it? Just imagine when it roars to life on the track."
+	"Look at this big trophy you got for winning that race.\n\n Tap tap tap tap.\n\n Solid gold. And it's even got your name on it."
+	"Your big race is coming up soon. Imagine yourself there on the track.\n\n \![set,balloonwait,2]Vroom... Vroom vroom.\![set,balloonwait,1]\n\n The crowd goes wild. It's your time to shine."
+	"Come out to the garden with me, we'll pick tomatoes together.\n\n Pip. Pip. Pip.\n\n Here, this one's for you. Mmmmm."
+	"Here, let's change those tires.\n\n Vrr. Vrr. Vrr. Vrr. Vrr.\n\n Clunk. Shove.\n\n Vrr. Vrr. Vrr. Vrr. Vrr.\n\n There we are, good as new."
+	"Have you been doing shell presses? It shows. Look at those muscles."
+	"Let's shine that medal you got yesterday.\n\n Rub. Rub. Rub. Rub.\n\n Look at it gleam."
+	"Look, it's that ribbon you won the other day.\n\n Rustle rustle.\n\n Flutter flutter.\n\n The sound of a winner."
+	"Let me check your racer ID card.\n\n Scrape scrape. \![set,balloonwait,2]Scrape.\![set,balloonwait,1]\n\n Looks good, you can proceed onto the track."
+	"It's raining outside, hear it against the window?\n\n Pitter patter. Pitter patter. Pitter patter.\n\n Drip. Drop. Drip. Drop.\n\n It's nice, isn't it? We'll go out later while it's still all damp."
+	"Bring your shell here and we'll polish it.\n\n Skrr. Skrr. Skrr.\n\n Scrub. Scrub. Scrub.\n\n There we are. All nice and smooth."
+	"Wait here, I'll pack you a nice lunch for today.\n\n Chop. Chop. Chop.\n\n Rustle. Rustle. Rustle.\n\n Shv. Shv. Shv.\n\n Zzzzzzip!\n\n There you are. Full of all your favorite greens."
+	"Do you want some %(celery)?\n\n Chop. Chop. Chop. Chop.\n\n There you are. Fresh and cool from the fridge, just for you."
+	"Go out and explore the garden.\n\n Swish. Swish. Swish.\n\n Feel those blades of grass. So safe and cozy."
+	"Let me clean your glasses.\n\n Rub. Rub. Rub.\n\n There. You can see much better now, can't you?"
+	"Let's put these new stickers on your shell.\n\n Peeeeeeeeel. Swsh. Swsh. Swsh.\n\n There's one.\e:chain=chain.applying_stickers" //TODO test that this works with the special setup i gave it above lol
+	//"I got you this new sling bag. Try it on.\n\n Swish.\n\n Clink clink.\n\n There you are, it fits like a glove. Imagine how much lettuce you could fit in here." //This...... also could be an ad read lol
 }
+
+chain.applying_stickers
+{{CHAIN
+	"\1\b[20]\f[italic,1]\f[color,disable]Peeeeeeeeeeeeeel. Swsh. Swsh. Swsh.\n\n There's two.\f[color,default]\f[italic,default]"
+	"\1\b[20]\f[italic,1]\f[color,disable]Peeeeeeeeeeeeeeeeeeeeeeeel. Pat. Pat. Pat.\n\n And that's three. So fancy.\f[color,default]\f[italic,default]\e:chain=end"
+}}CHAIN
 
 
 //Nelly Norma & Nobop
