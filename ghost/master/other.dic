@@ -1038,6 +1038,36 @@ Capitalize
 	TOUPPER(_first) + _rest
 }
 
+MakeTodaysSeed
+{
+	TodaysSeed = RAND(1000000000)
+}
+
+//Quick seeded choice function... for daily choices like what charity event is going on
+TodaysChoice
+{
+	//Goal of the variance here is to make it so that even if they have the same number of choices, they won't pop out the same options all the time... I am *hoping* that in order for two different choices to draw the same thing every time, they would have to have both the same array length AND the same string length, which is very unlikely... I hope, anyway
+	//ughhhhh this wont work for the charityevent ones........ damn
+	_len = 0
+	foreach _argv; _arg
+	{
+		_len += STRLEN(TOSTR(_arg))
+	}
+	_seedstr = TOSTR(TodaysSeed)
+	_variance = SUBSTR(_seedstr,_len % STRLEN(_seedstr),1)
+	_variance = TOINT(_variance)
+	
+	_pick = (TodaysSeed + _variance) % _argc
+	_argv[_pick]
+}
+
+//It's like the above, but if it's multiple different arrays of the same length they should match.......................
+TodaysChoices
+{
+	_pick = TodaysSeed % _argc
+	_argv[_pick]
+}
+
 //—————————————————————————————— Right click menu links ——————————————————————————————
 
 //Takes an array of alternating names and urls, and formats them for use with the right click menu
