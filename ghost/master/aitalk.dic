@@ -82,7 +82,7 @@ OnAiTalk
 				{
 					if RAND(10) >= 3; _personality = "Basic" 
 				}
-				if _personality == "Slug" 
+				if _personality == "Slug"
 				{
 					if RAND(10) >= 5; _personality = "Basic" 
 				}
