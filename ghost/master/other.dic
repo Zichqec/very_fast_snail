@@ -37,11 +37,12 @@ OnTranslateInternal.AutoPause
 		//_talk = REPLACE(_talk," \f[name,arial]♫","\![dummy-tag] \f[name,arial]♫")
 		_talk = REPLACE(_talk,",\n ",",\n\w4") //linebreak - used in poetry
 		_talk = REPLACE(_talk,"\n ","\n\w8\w8") //linebreak
-		_talk = REPLACE(_talk,", ",",\w4 ") //Comma
-		_talk = REPLACE(_talk,". ",".\w8\w8 ") //Period
-		_talk = REPLACE(_talk,"? ","?\w8\w8 ") //Question mark
-		_talk = REPLACE(_talk,"! ","!\w8\w8 ") //Exclamation point
-		_talk = REPLACE(_talk,"; ",";\w4 ") //Semicolon
+		_talk = REPLACE(_talk,", ",",\w4 ")
+		_talk = REPLACE(_talk,". ",".\w8\w8 ")
+		_talk = REPLACE(_talk,"? ","?\w8\w8 ")
+		_talk = REPLACE(_talk,"! ","!\w8\w8 ")
+		_talk = REPLACE(_talk,": ",":\w8 ")
+		_talk = REPLACE(_talk,"; ",";\w4 ")
 		//_talk = REPLACE(_talk,"- ","-\w8 ") //Dash - This one seems to happen a lot when I don't want it, so I am commenting it out
 		_talk = REPLACE(_talk,"\w8 \n","\w8\n") //Bandaid fix for poetry linebreak awkwardness...
 		_talk = REPLACE(_talk,"\w4 \n","\w4\n")
