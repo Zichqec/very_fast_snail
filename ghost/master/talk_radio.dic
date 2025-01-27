@@ -1,16 +1,25 @@
 //Ringo Racetrack
+//Speed of Sound Radio
 RadioStation.Racing_News : nonoverlap_pool
 {
 	"\1\b[20]wow the leaderboards sure are hot!"
 }
 
 //Haley Storme & Tailgating Terror
+//Weather Watch
 RadioStation.Weather : nonoverlap_pool
 {
-	"\1\b[20]wow the weather sure is hot!"
+	//"\1\b[20]wow the weather sure is hot!"
+	"\1\b[22]NOW over to Tailgating Terror with a traffic update. Tailgate, how's those streets looking today?\n\n \![*] ""Bad.""\n\n Yikes, we hate to see it! Thanks for the update, now back to the weather!" //TODO temp, we probably want to dress this up a bit more... idk if quotes are what we want here either? ..... UNLESS..............
 }
 
 //Bill Carde & Blanca Chek
+//Escargot Emporium...
+//Sleek Styles
+//Turbo Trends
+//Trendy Tastes
+//Gastropod Goals 
+//Snail Styles
 RadioStation.Shopping : nonoverlap_pool
 {
 	"\1\b[20]wow these deals sure are hot!"
@@ -18,6 +27,7 @@ RadioStation.Shopping : nonoverlap_pool
 
 //Arya Lissenin
 //103.7 Mollusk Music
+//Diamond DJ - famous snail but for music not for racing. ... I'm headcanoning it as a slug also
 RadioStation.Music : nonoverlap_pool
 {
 	//"\1\b[20]wow these tunes sure are hot!"
