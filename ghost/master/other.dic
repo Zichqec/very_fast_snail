@@ -1224,6 +1224,16 @@ emdash
 	"\f[name,arial]—\f[name,default]"
 }
 
+snailpic
+{
+	"\_b[img/snail_00.png,inline,--option=use_self_alpha]"
+}
+
+slugpic
+{
+	"\_b[img/slug_00.png,inline,--option=use_self_alpha]"
+}
+
 
 SakuraScooper
 {
