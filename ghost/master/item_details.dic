@@ -189,5 +189,5 @@ ItemDetails : array
 	"Add-ons,Box Fan,1,150,2,0,0"
 	
 	"Special Effects,Vibrating,1,100,5,2,7"
-	"Special Effects,Moonwalk,1,100,-5,8,10"
+	"Special Effects,Moonwalk,1,100,-5,8,10" //TODO do we want another name? will have to change the related shopping channel dialogue as well if so
 }
