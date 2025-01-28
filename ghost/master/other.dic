@@ -1179,7 +1179,7 @@ DialogueTransition
 		if C_BYTE1 _in_ _talk2tags
 		{
 			//Don't carry over linebreaks from first section
-			if _tag == "\n"; _talk2tags = REPLACE(_talk2tags,C_BYTE1,"",1)
+			if _tag == "\n" || "\_b" _in_ _tag; _talk2tags = REPLACE(_talk2tags,C_BYTE1,"",1) //TODO test that image tags for snailpic and slugpic now work as intended and aren't placed awkwardly...
 			else; _talk2tags = REPLACE(_talk2tags,C_BYTE1,_tag,1)
 		}
 		else; _talk2last = REPLACE(_talk2last,C_BYTE1,_tag,1)
