@@ -1768,3 +1768,77 @@ danceallnight
 	"rock out forever and ever%(emdash)or at least until this caffeine wears off"
 	"move my feet so fast I'd fly right up into the sky"
 }
+
+//Paint company
+chromecolors : array
+{
+	"Chrome Colors"
+	"Pastel Palettes"
+	"Vibrant Veneers"
+	"Colorful Coatings"
+	"Extraordinary Exteriors"
+	"Glitzy Gloss"
+	"Fantastic Flats"
+	"Marvelous Mattes"
+	"Luxurious Layers"
+	"Amazing Acrylics"
+}
+
+betterrustprotection : array
+{
+	// SRAND(TodaysSeed)
+	// _num = RAND(10) + 1
+	// _num = TOSTR(_num)
+	// SRAND(TodaysSeed)
+	// if RAND(2) == 0; _num += "0"
+	//I think SRAND might mess up other stuff...
+	
+	_num = TodaysChoice((1,2,3,4,5,6,7,8,9,10))
+	_suffix = TodaysChoice(('','0','0','5','5'))
+	_num = TOSTR(_num) + _suffix
+	
+	//OH GOD I'M IN A/AN HELL
+	_a = "a"
+	case _num
+	{
+		when "8", "11", "80", "85"; _a = "an"
+	}
+	
+	"%(_num)% better protection against rust"
+	"%(_num)% less impact on the environment"
+	"%(_num)% fewer materials used"
+	"%(_a) %(_num)% reduction in weight"
+	"%(_num)% better vibes"
+	"%(_num)% less odor"
+	"%(_num)% less drying time"
+	"%(_num)% less stickiness"
+	"%(_num)% smoother texture for less drag"
+	"%(_num)% reduced friction"
+	"%(_a) %(_num)% cleaner manufacturing process"
+	"%(_num)% better protection against viruses"
+	"%(_num)% fewer fumes"
+	"%(_num)% improved waterproofing"
+	"a whole new range of scents to choose from"
+	"%(_num)% better protection against birds"
+	"%(_num)% improved staying power, to keep your color vibrant for longer"
+	"%(_num)% less confusing color names"
+	"a completely revamped naming scheme to make them sound fancier"
+	"the ability to scratch the dried paint to make it give off a scent"
+	//"%(_num)% "
+}
+
+newsetofwheels
+{
+	"shiny set of wheels"
+	//"helcome" //.....?????
+	"chunky helmet"
+	"sturdy sling bag"
+	"pair of stylish sunglasses"
+	"ultra-fine-grit shell polish" //hyphens are dumb
+	"fancy saddle"
+	"new lineup of trucker hats"
+	"powerful new engine"
+	"shiny thing over here" //he doesn't know what it is, it's not fast
+	"new lineup of paints"
+	"collection of fancy ribbons"
+}
