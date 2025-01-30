@@ -71,7 +71,7 @@ Talk.Snailsonality.Angry : nonoverlap_pool
 	"\1\b[10]I'M READY TO CRACK SOME SHELLS OUT ON THE TRACK"
 	"\1\b[10]TRAINING IS FOR CHUMPS, I WAS BORN WITH ALL THE SKILL I NEED"
 	"\1\b[10]GET ME A FLAMETHROWER SO WE CAN %(ANY('ROAST','SMOKE','TORCH')) THE COMPETITION"
-	"\1\b[12]I WRITE THE BEST %(TOUPPER(PoetryType('haiku','cinquains','limericks','acrostics','lyrics','rhyming couplets','alternate rhymes','free verse','diamantes','concrete poems'))) THE SNAIL WORLD HAS EVER SEEN. BECAUSE \f[bold,1]MINE\f[bold,default] ARE IN \f[bold,1]UPPERCASE!!!\f[bold,default]"
+	"\1\b[12]I WRITE THE BEST %(TOUPPER(PoetryType('haiku','cinquains','limericks','acrostics','lyrics','rhyming couplets','alternate rhymes','free verse','diamantes','concrete poems'))) THE SNAIL WORLD HAS EVER SEEN. BECAUSE \f[bold,1]MINE\f[bold,default] ARE IN \f[bold,1]UPPERCASE!!!\f[bold,default]" //TODO are they though...? they should be
 	"\1\b[10]ESCARGOT? \f[bold,1]ME? \f[bold,default]I'LL MAKE YOUR FACE ESCARGOT IF YOU TRY IT"
 	"\1\b[10]CAN'T THEY THINK OF ANYTHING BETTER TO PLAY ON THE RADIO?"
 	
@@ -82,6 +82,7 @@ Talk.Snailsonality.Angry : nonoverlap_pool
 	// AND ITS RIGHT, SO I STARTED A PETITION
 }
 
+//TODO this will change per dialogue... is a problem. unless maybe i use an argument to specify what to pull...?
 OnAngryQuoteBasic
 {
 	//TODO idk if this will be good or not... depends if we use text effects in those dialogues and if we want to keep those effects here
