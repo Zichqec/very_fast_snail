@@ -1842,3 +1842,26 @@ newsetofwheels
 	"new lineup of paints"
 	"collection of fancy ribbons"
 }
+
+aquaticthemed
+{
+	"aquatic themed|I'm seeing a lot of shells, seaweed, and bubbles. I think you could make a nice ""mermaid"" or ""seafloor"" look with these!\n\n You certainly could"
+	"space themed|Look at all those little asteroids, planets, moons... You've got a whole universe here!\n\n You certainly do"
+	"fire themed|A large variety of flame shapes, with a really bold style. I can practically feel the heat coming off of them!\n\n You really can"
+	"lightning bolt|Big bolts, large bolts, medium bolts; this sticker pack has it all!\n\n Exactly right"
+	"snail themed|You've got a big snail on each sticker sheet, and a bunch of mini stickers to decorate its shell with! Isn't that cute?\n\n It really is"
+	"special radio station|Look, I see the logo for Mollusk Music here, as well as Speed of Sound Radio... And look, it's us!\n\n I don't know about you, but I'm flattered"
+	"produce themed|They look so lifelike, you could almost convince me that these are edible. Are they really just stickers!?\n\n They sure are" //lettuce themed or produce themed...
+	//"needle themed|What an astonishing variety of needles. I see sewing needles, crochet needles, medicinal needles... Any kind of needle you can think of, it's here!\n\n Exactly right"
+}
+
+stickystickers
+{
+	"Sticky Stickers|you know they'll stick firmly to your snail's shell and not peel off for a long time"
+	"Plentiful Peels|you really get a lot of stickers on each sheet"
+	"Sticky Sparkles|they have that mesmerizing sparkle effect that will make you lose track of time as you stare at them for hours"
+	"Sticker Smells|you can of course gently scratch them for fun scents"
+	"Double Duty|they also have a cute design on the back of each sticker, which only you and your snail will know about"
+	"Vibrant Visuals|you know they have an astonishing depth to their colors"
+	"Deluxe Decals|you know these are a premium product, resistant to tears, stains, and jealous competitors trying to peel them off your shell"
+}
