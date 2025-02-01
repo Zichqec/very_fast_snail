@@ -1843,6 +1843,7 @@ newsetofwheels
 	"collection of fancy ribbons"
 }
 
+//theme|commment\n\n start of response from blanca
 aquaticthemed
 {
 	"aquatic themed|I'm seeing a lot of shells, seaweed, and bubbles. I think you could make a nice ""mermaid"" or ""seafloor"" look with these!\n\n You certainly could"
@@ -1852,9 +1853,12 @@ aquaticthemed
 	"snail themed|You've got a big snail on each sticker sheet, and a bunch of mini stickers to decorate its shell with! Isn't that cute?\n\n It really is"
 	"special radio station|Look, I see the logo for Mollusk Music here, as well as Speed of Sound Radio... And look, it's us!\n\n I don't know about you, but I'm flattered"
 	"produce themed|They look so lifelike, you could almost convince me that these are edible. Are they really just stickers!?\n\n They sure are" //lettuce themed or produce themed...
+	"shell wash|Sponges, soap bubbles, and are these long white strips meant to mimic the shiny spots you get after a premium wax?\n\n That's right" //cheating.......................
+	"money themed|I see gold plated lettuce in both heads and leaves, and glittery gold trim you can put around the edges of your snail's shell. Isn't that luxurious! What a way to communicate to your competitors that you've got greens to burn.\n\n That's right, and I hear there's real gold leaf included in each sticker"
 	//"needle themed|What an astonishing variety of needles. I see sewing needles, crochet needles, medicinal needles... Any kind of needle you can think of, it's here!\n\n Exactly right"
 }
 
+//Brand Name|what they're known for
 stickystickers
 {
 	"Sticky Stickers|you know they'll stick firmly to your snail's shell and not peel off for a long time"
@@ -1864,4 +1868,99 @@ stickystickers
 	"Double Duty|they also have a cute design on the back of each sticker, which only you and your snail will know about"
 	"Vibrant Visuals|you know they have an astonishing depth to their colors"
 	"Deluxe Decals|you know these are a premium product, resistant to tears, stains, and jealous competitors trying to peel them off your shell"
+	"Cute Clings|you know they'll make your snail irresistably adorable"
+	"Bumper Banners|you know they can go through a lot before they start showing signs of wear and tear"
+	"Perfect Pictures|you know they've got an astonishing amount of detail despite the tiny size"
+}
+
+//NO MATTER HOW MANY OF THESE I MAKE I NEVER HAVE JUST THE RIGHT ONE FOR THE NEXT TIME I NEED IT.........
+boxfans
+{
+	"sunglasses"
+	"helmets"
+	"sets of tires"
+	"box fans"
+	"sling bags"
+	"radio antennas"
+	"baskets"
+	"engines"
+	"assorted nuts and bolts"
+	"shell wraps"
+	"shell stickers"
+	"shell decals"
+	"saddles"
+	"eyepatches"
+	"rockets"
+	"spoilers"
+}
+
+ihopeenjoying
+{
+	"I hope they're enjoying their purchase!"
+	"Feedback is important!"
+	"I remember being excited for these!"
+	"Customer comments are always welcome!"
+	"These were one of my favorites lately!"
+	"I'm always happy to answer questions for an interested buyer!"
+	"I'm always happy to help a potential customer make an informed purchase!"
+}
+
+whysostinky
+{
+	"Why so stinky!?"
+	"How assemble???"
+	"Can eat it??"
+	"How many calorie?"
+	"Crashed!!! Refund???"
+	"Why exist??"
+	"Taste bad!! Why!?"
+	"Did not make top racer. Scam!?"
+	"Which direction should it face??"
+	"Resist electric shocks??"
+	"Help with reaching top shelf of fridge??"
+}
+
+remotecontrol
+{
+	"remote control"
+	"telephone"
+	"keyboard"
+	"lamp"
+	"waste disposal"
+	"light switch"
+	"garage door opener"
+	"front door lock"
+	"fax machine"
+	"ceiling fan"
+	"ice dispenser"
+	"water cooler"
+	"DVD player"
+}
+
+carrots
+{
+	"carrots"
+	"radishes"
+	"cucumbers"
+	"bell peppers"
+	"limes"
+	"lemons"
+	"kiwis"
+	"ginger"
+	"garlic"
+	"potatoes"
+	"bananas"
+}
+
+starshaped
+{
+	"star shaped"
+	"shell shaped"
+	"circular"
+	"tire shaped"
+	"bubble shaped"
+	"oval shaped"
+	"lettuce shaped"
+	"rectangular"
+	"flame shaped"
 }
