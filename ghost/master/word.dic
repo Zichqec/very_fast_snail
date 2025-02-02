@@ -1963,6 +1963,12 @@ starshaped
 	"lettuce shaped"
 	"rectangular"
 	"flame shaped"
+	"bread shaped"
+	"fruit shaped"
+	"dinosaur shaped"
+	"fish shaped"
+	"racecar shaped"
+	"checkered flag"
 }
 
 pelletsdemonstration : array
