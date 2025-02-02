@@ -1964,3 +1964,9 @@ starshaped
 	"rectangular"
 	"flame shaped"
 }
+
+pelletsdemonstration : array
+{
+	"Perry's Perky Pellets|Those cylinders sure are easy to swallow!|Safety is important, after all; I wouldn't want to risk my darling snails choking on their food!|and cylindrical pellets have a full 360%(degrees) to examine!"
+	"Chow Cubes|Those cubes have nice, crunchy corners, for maximum snail enjoyment!|The stackability alone is a huge benefit that helps them fit into our lifestyle!|and Chow Cubes have 6 great angles to look at!"
+}

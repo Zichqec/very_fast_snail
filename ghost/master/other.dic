@@ -1224,6 +1224,11 @@ emdash
 	"\f[name,arial]—\f[name,default]"
 }
 
+degrees
+{
+	"\f[name,arial]°\f[name,default]"
+}
+
 snailpic
 {
 	"\_b[img/snail_00.png,inline,--option=use_self_alpha]"

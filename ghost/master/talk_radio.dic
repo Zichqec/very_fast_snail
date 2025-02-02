@@ -87,25 +87,26 @@ RadioStation.Shopping : nonoverlap_pool
 	"\1\b[22]As a reminder for folks, we've always got Super Snail's Snail Tracks ice cream available in pints and quarts! 100% of all proceeds go to the various charities and programs that Super Snail supports!\n\n Which one is it currently, Blanca?\n\n Let's see... Looks like it's %(TodaysChoice(safesnailsociety)) this week, Bill!\n\n Oh, now that's a great cause if I've ever heard of one. I think it's time I stock up my freezer with some more Snail Tracks!\n\n Hahaha, you said it!"
 	"\1\b[22]Bill, do you hand wash your snails?\n\n Of course I do, Blanca! It's the best way to care for their shells, and to make sure their equipment doesn't get damaged. Why do you ask?\n\n Well, I thought you might be interested in this new set of %(starshaped) sponges we just got in! They come in an assortment of colors, and they're made with all the latest sponge technology for a gentle, but thorough, clean.\n\n Oho! Yes, that I am definitely interested in. Sponges wear out after a while, you know. It's important to keep your sponges in top condition for the best clean!"
 	
-	//"\1\b[22]"
-	//"\1\b[22]"
-	//"\1\b[22]"
-	//"\1\b[22]"
-	//"\1\b[22]"
+	_pelletsdemonstration = SPLIT(TodaysChoice(pelletsdemonstration),"|")
+	"\1\b[22]%(snailpic) \f[italic,1]Wah! Wahh!\f[italic,default]\n\n Oh? %(_snailname), we've already talked about those %(boxfans) on today's show!\n\n %(snailpic) \f[italic,1]Gubuh! Gimme!\f[italic,default]\n\n ... Blanca, I think %(_snailname) might be hungry!\n\n Ooh, you know, I think you're right Bill! In that case, how about a practical demonstration of our next product? %(_pelletsdemonstration[0]) make a quick and easy snack for your snail, and are packed full of nutrition!\n\n %(snailpic) \f[italic,1]Crunch crunch.\f[italic,default]\n\n See, look at how happy it is. %(_pelletsdemonstration[1])\n\n Very true, Bill! When it comes to supplementing my snail's diet with pellets, %(_pelletsdemonstration[0]) are always my #1 pick. %(_pelletsdemonstration[2])\n\n It's an important consideration! Food choices really have to be examined from a number of angles, %(_pelletsdemonstration[3])\n\n %(snailpic) \f[italic,1]Chomp chew.\f[italic,default]\n\n That's the sound of a satisfied snail enjoying %(_pelletsdemonstration[0]), folks. Buy some today!"
+	"\1\b[22]Bill, have you got a well-thought-out housing solution for all your snails?\n\n You know what Blanca, I've never really thought about it! What have you got for us?\n\n It's the latest and greatest snail habitat innovation: SnailPartments! This prefabricated lattice of squares can be placed along any wall in your home to instantly transform it into a luxury snail habitat!\n\n Oh wow, now that is convenient. My snails usually stay in one tank all together, but now they'll each get their own cozy room. It's brilliant!\n\n Exactly! And if you order the special premium model, you can hook it up to your water supply, and each snail can use the mister built into the top of its room to mist itself whenever desired.\n\n That sounds like the peak of snail comfort. Why doesn't my room have a built in mister?\n\n Ooh I know, it sounds lovely. I'm certain this is going to be a hot item, so be sure to order yours quick, everyone, before they're gone!"
+	"\1\b[22]Blanca, have a look at this!\n\n Ooh, what is it, Bill?\n\n It's my favorite new item for snail enrichment in the home. The FastTrack! It's a quick and easy practice race track that you can deploy in any room, any time!\n\n Oh, interesting! How does it work?\n\n Simply unfold the smooth plastic track and let it click into place, set it down in your desired location, attach optional accessories like these little flags and a checkered banner at the finish line, and set your snail inside! It can go around and around as much as it likes, and you can cheer it on from the side.\n\n Wow, it seems like a simple way to keep your snails entertained, and even get in a little more practice for races!\n\n It sure is! I've been using it with my snails, and it's been a huge hit. Why, I've had to buy a dozen of them just to keep up with the demand!\n\n Amazing! I'll have to get a few of them to try for myself." //Snails need enrichment beyond just racing............
+	"\1\b[22]If your everyday essentials need a little more pizzazz, we've got you covered. Check out these all-new misting bottles in a variety of colors and patterns from MultiMist!\n\n Dozens of colors to choose from, and you can pick options such as two-tone, plaid, racing stripes, and glitter. Each one has a great ergonomic handle to keep you comfortable while you comfort your snail friend!\n\n That's right, Bill! These spray bottles really are top-notch, premium products. Buy some for your snails today! Brighten up each snail's day with a bottle in it's favorite color.\n\n %(snailpic) \f[italic,1]Wahoo! Water!\f[italic,default]\n\n Aw, now that's real love, folks!"
+	"\1\b[22]Now Bill, you were saying you wanted to promote some %(boxfans) today?\n\n Yes Blanca, we've got a really great deal going on where%(emdash)\n\n %(snailpic) \f[italic,1]Wah! Wubah!? \f[color,disable]Crash.\f[color,default]\f[italic,default]\n\n Oh no! %(_snailname), are you alright? \f[color,disable]What were you doing over here? You poor dear...\f[color,default]\n\n ... Well, looks like that deal is going, going, gone! That's a reminder for all of us that a good deal never lasts long, so if you hear us talk about something you just can't live without, get your orders in quickly before it's too late. You never know \f[italic,1]what\f[italic,default] could happen, hahaha!"
 	
 	/*
 	topic thoughts:
-	- Items you can buy in the shop
+	//- Items you can buy in the shop
 		- eye patches, which i think should get unlocked after you crash at least once lol
-	- Items you can't buy in the shop
-		- Might be racing related, might not
+	//- Items you can't buy in the shop
+		//- Might be racing related, might not
 	//- Talking about different color selections
 	//- A snail tries to help show off an item and almost gets hurt ???
 	- Giving out coupon codes
-	- Talking about ways to save money?
-	- Talking about ways to get money???
+	//- Talking about ways to save money?
+	//- Talking about ways to get money???
 	//- Talking about going on break, maybe a chain where there's an ad or something, and then they come back?
-	- Answering FAQs about items!
+	//- Answering FAQs about items!
 	*/
 }
 
@@ -119,7 +120,10 @@ chain.blanca_bill_break
 test
 {
 	_snailname = SnailNameGenerator //TODO i'd love to make this specify alliterative sometime
-	"\1\b[22]%(snailpic) \f[italic,1]Hubop! Hah!\f[italic,default]\n\n Haha, Bill, I think %(_snailname) is excited for the %(boxfans) we have over there!\n\n I think you're right, Blanca. It's certainly got an eye for a good deal, since those have just gone on sale for %(ANY(10,15,20,25,30,35,40))% off!\n\n Well there you have it, folks. Thanks for the help, %(_snailname)!\n\n %(snailpic) \f[italic,1]Woohoo!\f[italic,default]"
+	//"\1\b[22]%(snailpic) \f[italic,1]Hubop! Hah!\f[italic,default]\n\n Haha, Bill, I think %(_snailname) is excited for the %(boxfans) we have over there!\n\n I think you're right, Blanca. It's certainly got an eye for a good deal, since those have just gone on sale for %(ANY(10,15,20,25,30,35,40))% off!\n\n Well there you have it, folks. Thanks for the help, %(_snailname)!\n\n %(snailpic) \f[italic,1]Woohoo!\f[italic,default]"
+	_pelletsdemonstration = SPLIT(TodaysChoice(pelletsdemonstration),"|")
+	//"\1\b[22]%(snailpic) \f[italic,1]Wah! Wahh!\f[italic,default]\n\n Oh? %(_snailname), we've already talked about those %(boxfans) on today's show!\n\n %(snailpic) \f[italic,1]Gubuh! Gimme!\f[italic,default]\n\n ... Blanca, I think %(_snailname) might be hungry!\n\n Ooh, you know, I think you're right Bill! In that case, how about a practical demonstration of our next product? %(_pelletsdemonstration[0]) make a quick and easy snack for your snail, and are packed full of nutrition!\n\n %(snailpic) \f[italic,1]Crunch crunch.\f[italic,default]\n\n See, look at how happy it is. %(_pelletsdemonstration[1])\n\n Very true, Bill! When it comes to supplementing my snail's diet with pellets, %(_pelletsdemonstration[0]) are always my #1 pick. %(_pelletsdemonstration[2])\n\n It's an important consideration! Food choices really have to be examined from a number of angles, %(_pelletsdemonstration[3])\n\n %(snailpic) \f[italic,1]Chomp chew.\f[italic,default]\n\n That's the sound of a satisfied snail enjoying %(_pelletsdemonstration[0]), folks. Buy some today!"
+	"\1\b[22]Now Bill, you were saying you wanted to promote some %(boxfans) today?\n\n Yes Blanca, we've got a really great deal going on where%(emdash)\n\n %(snailpic) \f[italic,1]Wah! Wubah!? \f[color,disable]Crash.\f[color,default]\f[italic,default]\n\n Oh no! %(_snailname), are you alright? \f[color,disable]What were you doing over here? You poor dear...\f[color,default]\n\n ... Well, looks like that deal is going, going, gone! That's a reminder for all of us that a good deal never lasts long, so if you hear us talk about something you just can't live without, get your orders in quickly before it's too late. You never know \f[italic,1]what\f[italic,default] could happen, hahaha!"
 }
 
 //Arya Lissenin
