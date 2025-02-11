@@ -1524,7 +1524,7 @@ AIgraphArray : array
 	_shopping = OUTPUTNUM("RadioStation.Shopping")
 	_music = OUTPUTNUM("RadioStation.Music")
 	_variety_show = OUTPUTNUM("RadioStation.Variety_Show")
-	_asmr = OUTPUTNUM("RadioStation.ASMR")
+	_asmr = ARRAYSIZE(ASMR.dialogues.timgulls) + ARRAYSIZE(ASMR.dialogues.sylance) //These ones are weird cuz they have a weird setup
 	_pirate_radio = OUTPUTNUM("RadioStation.Pirate_Radio")
 	
 	//Page 7:
@@ -1548,6 +1548,7 @@ AIgraphArray : array
 	
 	_all = _all_user + _all_announcer + _all_alliterative + _all_non_alliterative + _all_alliterative_poetry + _all_non_alliterative_poetry + _all_stations + _all_ads
 	//Currently available dialogues? - TODO do this later lol, good for perspective
+	//I think the above needs us to finish setting up the randomtalk tbqh... because i need to know what combos do what. like the shopping channel skipping ads... and the ASMR station only counting the current jockey's dialogues
 	
 	_page = _argv[0]
 	if _page == 1

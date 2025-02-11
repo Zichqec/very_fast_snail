@@ -2,11 +2,19 @@
 //Speed of Sound Radio
 RadioStation.Racing_News : nonoverlap_pool
 {
+	//"We tried to get an interview with it but (reason for not interviewing your snail)"
+	//reasons such as:
+	//It was so star struck it was at a loss for words
+	//We couldn't get to it through the crowd
+	//It was too shy and declined
+	//etc
 	"\1\b[20]wow the leaderboards sure are hot!"
 }
 
 //Haley Storme & Tailgating Terror
 //Weather Watch
+//Wicked Weather
+//
 RadioStation.Weather : nonoverlap_pool
 {
 	//"\1\b[20]wow the weather sure is hot!"
@@ -23,7 +31,7 @@ RadioStation.Weather : nonoverlap_pool
 RadioStation.Shopping : nonoverlap_pool
 {
 	//"\1\b[20]wow these deals sure are hot!"
-	"\1\b[22]Next up we've got the Radio Antenna! You're a bit of an expert on this item, aren't you, Blanca?\n\n I'd like to think so, Bill! The Radio Antenna has a clean, sleek look that's sure to go with any snail, while offering the convenience of a standard radio anywhere you go! What could be cooler than listening to us here at (TODO SHOPPING STATION) while gardening, cleaning, exercising, or even during a trip to the mall?\n\n And for the low price of only %(L)90, I don't think it gets any better than this!"
+	"\1\b[22]Next up we've got the Radio Antenna! You're a bit of an expert on this item, aren't you, Blanca?\n\n I'd like to think so, Bill! The Radio Antenna has a clean, sleek look that's sure to go with any snail, while offering the convenience of a standard radio anywhere you go! What could be cooler than listening to us here at (TODO SHOPPING STATION) while gardening, cleaning, exercising, or even during a trip to the mall?\n\n And for the low price of only %(L)90, I don't think it gets any better than this!" //TODO
 	"\1\b[22]And now for a personal favorite of mine, the BIG ROCKET!\n\n Oh, Bill, this one again?\n\n Yes indeed, Blanca! When it comes to sheer speed, it's hard to beat the numbers you'll get from strapping a giant jet engine to your shell!\n\n That's true, although it's not the most elegant. And the risks%(emdash)\n\n %(emdash)Are outweighed in many cases by the rewards! Sure, the loss of control makes it far more likely you'll crash, but isn't that what helmets are for!?\n\n Well, yes, a helmet will protect your head. But it's so... \f[italic,1]garish\f[italic,default] of a solution. Surely there are ways to increase your speed that aren't so drastic...?\n\n Nonsense! If you want big numbers, the best value for your leaf is the BIG ROCKET! Get one today and watch your snails fly!"
 	"\1\b[22]Well, what have you got for us next, Blanca?\n\n I'd like to tell you about our new lineup of trucker hats! They come in an assortment of colors, and they cost just %(L)100 each.\n\n Now Blanca, we get this question quite regularly; why is it that these hats have brims? Isn't it a bit silly since a snail's eyes are perched higher than any shade afforded by the brim?\n\n That's true, Bill! But the fact of the matter is that a trucker hat simply wouldn't be a trucker hat without that big brim!\n\n You make an excellent point, it just wouldn't be the same. And who doesn't want to be able to match with their snail?\n\n Exactly! Now, let me tell you about the new designs we have this year. We've got a nice orange trucker hat with a design featuring an orange, and a lovely green trucker hat with an adorable leaf!\n\n What a great lineup we have! No matter your snail's aesthetic, you're sure to be able to find one that fits. And for a very affordable price!"
 	"\1\b[22]Bill, you said you wanted to talk about one of your favorite economy options next?\n\n Yes, indeed I do! Some of the best speed options can be pretty pricey, but we've got a great piece that will get you a little more 'oomph' without breaking the bank!\n\n Oh, do tell?\n\n Have a look at this box fan! You can strap this right to the shell of your snail, and the breeze it generates will give you that extra edge that you need in a pinch.\n\n Ooh, well, that may be true, but I think any style critic worth their salt would agree that it's simply an eyesore to look at. If you're hoping to be cool, you'd be well advised to stay away from this one.\n\n So you say, Blanca, but consider this: what is the purpose of a fan if not to make you cool!\n\n I... Ooh, now that's just not right. But all the same I can't argue that point, so I suppose it should be called a net neutral as far as coolness goes.\n\n That's right! A little boost of speed without losing any coolness, and it only costs a mere %(L)150! What a deal!"
@@ -93,21 +101,6 @@ RadioStation.Shopping : nonoverlap_pool
 	"\1\b[22]Blanca, have a look at this!\n\n Ooh, what is it, Bill?\n\n It's my favorite new item for snail enrichment in the home. The FastTrack! It's a quick and easy practice race track that you can deploy in any room, any time!\n\n Oh, interesting! How does it work?\n\n Simply unfold the smooth plastic track and let it click into place, set it down in your desired location, attach optional accessories like these little flags and a checkered banner at the finish line, and set your snail inside! It can go around and around as much as it likes, and you can cheer it on from the side.\n\n Wow, it seems like a simple way to keep your snails entertained, and even get in a little more practice for races!\n\n It sure is! I've been using it with my snails, and it's been a huge hit. Why, I've had to buy a dozen of them just to keep up with the demand!\n\n Amazing! I'll have to get a few of them to try for myself." //Snails need enrichment beyond just racing............
 	"\1\b[22]If your everyday essentials need a little more pizzazz, we've got you covered. Check out these all-new misting bottles in a variety of colors and patterns from MultiMist!\n\n Dozens of colors to choose from, and you can pick options such as two-tone, plaid, racing stripes, and glitter. Each one has a great ergonomic handle to keep you comfortable while you comfort your snail friend!\n\n That's right, Bill! These spray bottles really are top-notch, premium products. Buy some for your snails today! Brighten up each snail's day with a bottle in it's favorite color.\n\n %(snailpic) \f[italic,1]Wahoo! Water!\f[italic,default]\n\n Aw, now that's real love, folks!"
 	"\1\b[22]Now Bill, you were saying you wanted to promote some %(boxfans) today?\n\n Yes Blanca, we've got a really great deal going on where%(emdash)\n\n %(snailpic) \f[italic,1]Wah! Wubah!? \f[color,disable]Crash.\f[color,default]\f[italic,default]\n\n Oh no! %(_snailname), are you alright? \f[color,disable]What were you doing over here? You poor dear...\f[color,default]\n\n ... Well, looks like that deal is going, going, gone! That's a reminder for all of us that a good deal never lasts long, so if you hear us talk about something you just can't live without, get your orders in quickly before it's too late. You never know \f[italic,1]what\f[italic,default] could happen, hahaha!"
-	
-	/*
-	topic thoughts:
-	//- Items you can buy in the shop
-		- eye patches, which i think should get unlocked after you crash at least once lol
-	//- Items you can't buy in the shop
-		//- Might be racing related, might not
-	//- Talking about different color selections
-	//- A snail tries to help show off an item and almost gets hurt ???
-	- Giving out coupon codes
-	//- Talking about ways to save money?
-	//- Talking about ways to get money???
-	//- Talking about going on break, maybe a chain where there's an ad or something, and then they come back?
-	//- Answering FAQs about items!
-	*/
 }
 
 chain.blanca_bill_break
@@ -201,8 +194,20 @@ RadioStation.Variety_Show : nonoverlap_pool
 //Tim Gulls
 RadioStation.ASMR : nonoverlap_pool
 {
+	//Pick a random jockey of the day, for a bit more variety on this station. Note to self - if we add more this has to be manually added to the aigraph also
+	_candidates = IARRAY
+	_jockeys = ("Tim Gulls","Sy Lance")
+	_today = TodaysChoice(_jockeys)
+	if _today == "Sy Lance"
+	{
+		_candidates = ASMR.dialogues.sylance
+	}
+	else //Tim Gulls - the OG
+	{
+		_candidates = ASMR.dialogues.timgulls
+	}
+	
 	//This setup is so that we can avoid writing all those tags for each ASMR dialogue, but also so that it doesn't break chains...
-	_candidates = ASMR.dialogues
 	for _i = 0; _i < ARRAYSIZE(_candidates); _i++
 	{
 		_candidates[_i] = "\1\b[20]\f[italic,1]\f[color,disable]" + _candidates[_i]
@@ -213,8 +218,7 @@ RadioStation.ASMR : nonoverlap_pool
 	parallel _candidates
 }
 
-//TODO this needs to be split into two pools... but in a way that's still counted on the dialogue counter
-ASMR.dialogues : array
+ASMR.dialogues.timgulls : array
 {
 	//Sounds
 	"Tap tap tap tap tap."
@@ -270,9 +274,10 @@ ASMR.dialogues : array
 	"Imagine the juicy crunch of a fresh lettuce leaf. You deserve the best today."
 	"Your racer name is one of the best anyone's ever heard. You'll be legendary one day."
 	//"Crunchy leaves just for you... Ask for the best from your sponsor." -- this feels like a good ad read for this station lol
-	
-	
-	
+}
+
+ASMR.dialogues.sylance : array
+{
 	"Shuff shuff shuff shuff."
 	"Splip... Splop... Splip... Splop..."
 	"Sclup... Sclup..."
@@ -325,7 +330,7 @@ ASMR.dialogues : array
 	"Go out and explore the garden.\n\n Swish. Swish. Swish.\n\n Feel those blades of grass. So safe and cozy."
 	"Let me clean your glasses.\n\n Rub. Rub. Rub.\n\n There. You can see much better now, can't you?"
 	"Let's put these new stickers on your shell.\n\n Peeeeeeeeel. Swsh. Swsh. Swsh.\n\n There's one.\e:chain=chain.applying_stickers" //TODO test that this works with the special setup i gave it above lol
-	//"I got you this new sling bag. Try it on.\n\n Swish.\n\n Clink clink.\n\n There you are, it fits like a glove. Imagine how much lettuce you could fit in here." //This...... also could be an ad read lol
+	//"I got you this new sling bag. Try it on.\n\n Swish.\n\n Clink clink.\n\n There you are, it fits like a glove. Imagine how much lettuce you could fit in here." //This...... also could be an ad read lol. god but i imagine this kind of ad read is EXACTLY why this station is profitable
 }
 
 chain.applying_stickers
