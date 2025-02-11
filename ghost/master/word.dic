@@ -1136,6 +1136,11 @@ wildstory
 
 snailcity
 {
+	parallel SnailCities
+}
+
+SnailCities : array
+{
 	"Snail City"
 	"Snailopolis"
 	"Snailville"
@@ -1975,4 +1980,55 @@ pelletsdemonstration : array
 {
 	"Perry's Perky Pellets|Those cylinders sure are easy to swallow!|Safety is important, after all; I wouldn't want to risk my darling snails choking on their food!|and cylindrical pellets have a full 360%(degrees) to examine!"
 	"Chow Cubes|Those cubes have nice, crunchy corners, for maximum snail enjoyment!|The stackability alone is a huge benefit that helps them fit into our lifestyle!|and Chow Cubes have 6 great angles to look at!"
+}
+
+//Get a quick index for other functions to do with weather comments...
+//Damn, do we want to make sure this changes to something new every day, tho? Maybe I'd be better off handling it in boot. Something to consider... TODO
+TodaysWeather
+{
+	TodaysChoice((0,1,2,3,4,5,6))
+}
+
+Weather : array
+{
+	"Sunny"
+	"Cloudy"
+	"Rainy"
+	"Wormy"
+	"Sneezy" //allergy day
+	"Electric" //batteries charge themselves, electronics go weird
+	"Psionic storm" //fake, but snails claim slugs can read minds and slugs claim snails can read minds
+}
+
+badtemp
+{
+	"%(RAND(9) + 1),%(RAND(10))%(RAND(10))%(RAND(10)),%(RAND(10))%(RAND(10))%(RAND(10))"
+}
+
+besttoavoid
+{
+	_snailcity = _argv[0]
+	
+	"looks like it'd be best to avoid %(_snailcity) for a while, folks! They're getting cooked right now at a searing %(badtemp)°F! That's gonna be a lot of escargot."
+	"folks if you're in %(_snailcity) currently, well, good luck! Looks like it's a balmy %(badtemp)°F there right now, so I know I'll be keeping my distance!"
+	"%(_snailcity) is getting roasted right now at a shocking %(badtemp)°F! That'll give you a tan for sure!"
+	"get this, %(_snailcity) is currently showing as %(badtemp)°F! That's got to be a record high, no doubt about it."
+	"it looks like %(_snailcity) has moved to the surface of the sun, because our equipment is reading %(badtemp)°F!"
+}
+
+fromabbq
+{
+	_snailcity = _argv[0]
+	
+	"from a BBQ that got out of hand"
+	"from an informal race that ended when all the competitors crashed into each other and exploded, sending smoke into the sky"
+	"from a plane drawing a snail in the sky"
+	"a bit of cotton stuck to our camera lens"
+	"some condensation on the window of our weather station out there"
+	"a massive flock of birds"
+	"part of an old picture of %(_snailcity) that somehow got put in front of our live feed"
+	"a regular cloud with no storms inside" //HMMMMMMM
+	"an illusion created by a magician currently performing a show" //suspect..........
+	"a baby cloud and someone wrote the wrong units when measuring it"
+	//"here to say hello, and it'll be heading off to the mountains soon" //hmmmmmm couldn't resist putting it down lol
 }

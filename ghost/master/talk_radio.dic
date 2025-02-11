@@ -18,7 +18,91 @@ RadioStation.Racing_News : nonoverlap_pool
 RadioStation.Weather : nonoverlap_pool
 {
 	//"\1\b[20]wow the weather sure is hot!"
+	//something something "it's haley here with the %(hour) o'clock weather, on (weather station)"...
+	
+	//Weather
+	//""
+	//""
+	//""
+	//""
+	//""
+	
+	//Weather, but fully different? 7 pools of this...? 35... not horrible. This will include bringing in "experts" and such, and maybe on days without experts, describing how the weather will intensify or wane throughout the day?
+	//""
+	//""
+	//""
+	//""
+	//""
+	
+	//Temps - I need to set up some code for this. Unsure how in depth I wanna go. tbqh i think it's always summer-ish in this ghost and therefore I can just pick an avg temp for each and call that good? or i could pick 4 temps and have it cycle through seasons also, not the worst. but i think this is a summer vibes kinda thing, or maybe spring...
+	//""
+	//""
+	//""
+	//""
+	//""
+	
+	//Traffic / other stuff with tailgate specifically - need to rig up code that'll go through cities one by one without repeating. a dialogue tape style thing, perhaps...? generate a new tape each day... yeah. or, same tape but start in a random position... hm! the thing is that i can't just use an embed tag straight up because then it'll pick a new one each time you repeat a dialogue. i think what i have to do is give the embed a reference that is the index i want to pull, that way it stays consistent... and only update that index after... hm, well. tricky, tricky... i guess it wouldn't hurt if it takes the index it was *passed* and increments *that*...? not the worst idea ever...
 	"\1\b[22]NOW over to Tailgating Terror with a traffic update. Tailgate, how's those streets looking today?\n\n %(snailpic) Bad.\n\n Yikes, we hate to see it! Thanks for the update, now back to the weather!" //TODO temp, we probably want to dress this up a bit more... idk if quotes are what we want here either? ..... UNLESS..............
+	//""
+	//""
+	//""
+	//""
+	
+	//""
+	//""
+	//""
+	//""
+	//""
+	
+	
+	//Predictions - i can't decide if i want these to just be 5 written straight through and be just bad predictions, or if i want to pick an actual next weather and base it off of that... that could balloon it out to more dialogues, but some of it could be kept to simple word groups. i think it would lend itself to more variance and interest, probably... and i feel this station really needs that. I could also put bad predictions in the misc section lol
+	//""
+	//""
+	//""
+	//""
+	//""
+	
+	
+	//Misc
+	_snailcity = snailcity
+	_snailcity2 = snailcity
+	while _snailcity == _snailcity2
+	{
+		_snailcity2 = snailcity
+	}
+	"\1\b[22]And now we're going to take a look at the temperatures over in%(emdash) whoa! Hahaha, %(besttoavoid(_snailcity))\n\n We'll come back around to %(_snailcity) once we've got our equipment functioning properly again. For now, let's move on to %(_snailcity2), where the temperatures look more reasonable!"
+	"\1\b[22]This just in, I'm getting reports about a massive storm cloud brewing over %(_snailcity)! This might be a big one folks!\n\n ... Oh, what's that? Hold on a moment, I'm getting new information that the cloud is actually just %(fromabbq(_snailcity))! False alarm, phew! But rest assured that if there WAS a sudden weather event, we at (TODO STATION NAME) would get you information as fast as it becomes available!"
+	//""
+	//""
+	//""
+	
+	//""
+	//""
+	//""
+	//""
+	//""
+	
+	
+	/*
+	
+	Topic ideas...
+	The problem is that I don't want them to talk about the current weather *too* much because dear god the last thing I need to do is write 7*50 dialogues just for this one station...
+	I'm thinking that the weather dialogues should be *fully* different and not just word groups, as well... aghghgh! i'm gonna die this snail is gonna kill me
+	Ok that's way too many, that on its own would be 105. Maybe just SOME of the dialogues are fully different, and some of them are word groups... yeah.
+	
+	We already had the idea of traffic dialogues, I think those can take up a good chunk as well
+	At least 10-15 weather dialogues? 5-10 traffic dialogues? That's anywhere from 15-25 dialogues taken up, feels decent
+	
+	- Trying to predict future weather but they're bad at it ("Looks like there's some clouds brewing up in the east, maybe a storm is coming soon!? ... Wait! I'm hearing now that it's from a snail pileup over on (racetrack)!")
+	- Oh god I need a dialogue, at least for the weird weather types, where they bring in an "expert" on the subject to inform people...
+	- One of them falls asleep on air....... yes i'm stretching for topic ideas lol
+	- POTENTIALLY i could comment VERY SPARSELY on the previous day's weather... like only comments that get the MOST BAREBONES of word groups, like "and after how sunny it was yesterday"...
+	//- Having a glitch where the temps skyrocket and they're like OMG ITS A BILLION DEGREES oh wait its fine lol. This feels like it should be rare to see, but also like................................................... is it funny if it happens every single day??? hm
+	- Honestly reading out the temperatures in various cities might not be bad... theoretically I could plot out the average temp per city, adjust it a bit based on weather, and then randomize it a little... that'd be nice. That's a thing weather stations would do... not the randomizing part obv. I mean, then again, do all cities get the same weather...? ... don't think about it too hard. see this is the part where we wiggle our hands a little to create a pleasing texture that gives the illusion of depth but doesn't take a million years to complete. i say, sinking a million years into this GODDAMN RADIO
+	- Predictions about the upcoming ??? snail harvest ??? like... like food snails and how good upcoming batches of racing snails are gonna be due to the weather they grew up in
+	- Maybe also notes about what kind of lettuce yields you might expect this season... hm. that might be weird to vary day to day tho... I could seed it monthly or something tho
+	
+	*/
 }
 
 //Bill Carde & Blanca Chek
