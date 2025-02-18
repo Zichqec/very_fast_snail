@@ -61,7 +61,7 @@ OnAiTalk
 		
 		if RadioStation != "Off"
 		{
-			if _pick == "Radio"
+			if _pick == "Radio" || (_pick == "Ad" && RadioStation == "Shopping") //No ads on shopping channel
 			{
 				_station = REPLACE(RadioStation," ","_")
 				LastTalk = EVAL("RadioStation.%(_station)")
