@@ -278,7 +278,7 @@ RadioStation.Variety_Show : nonoverlap_pool
 //Tim Gulls
 RadioStation.ASMR : nonoverlap_pool
 {
-	//Pick a random jockey of the day, for a bit more variety on this station. Note to self - if we add more this has to be manually added to the aigraph also
+	//Pick a random jockey of the day, for a bit more variety on this station. Note to self - if we add more this has to be manually added to the aigraph also - INCLUDING the "current dialogues" counter
 	_candidates = IARRAY
 	_jockeys = ("Tim Gulls","Sy Lance")
 	_today = TodaysChoice(_jockeys)
@@ -434,7 +434,93 @@ RadioStation.Pirate_Radio : nonoverlap_pool
 Ads.General : nonoverlap_pool
 {
 	//"\1\b[20]it's an ad!"
-	"\1\b[22]If you need sponges%(emdash)\w8and who doesn't, these days%(emdash)\w8they should be colorful and fun!\n\n We've got sponges in all kinds of colors, shapes, and sizes, so come on down with your snail and pick out the one that really makes it go ""wow""!\n\n Super Sponges, sudsy snails sing songs."
+	
+	//Super Sponges - sudsy snails sing songs
+	"\1\b[22]If you need sponges%(emdash)\w8and who doesn't, these days%(emdash)\w8they should be colorful and fun!\n\n We've got sponges in all kinds of colors, shapes, and sizes, so come on down with your snail and pick out the one that really makes it go ""wow""!\n\n \f[italic,1]Super Sponges\f[italic,default], sudsy snails sing songs."
+	"\1\b[22]When you pull out your sponge for your snail's daily shell washing, does its face light up with joy at the sight? If not, then it's time to upgrade your sponge!\n\n Come on down to \f[italic,1]Super Sponges\f[italic,default], where we have LOADS of sponges in all kinds of designs and colors. Find just the right one for your snail that makes it wiggle with joy!\n\n \f[italic,1]Super Sponges\f[italic,default], sudsy snails sing songs."
+	"\1\b[22]Clean snails are happy snails, and for the best and easiest clean, you should use fresh, high quality sponges!\n\n At \f[italic,1]Super Sponges\f[italic,default] we have only the best sponges, available in a variety of styles, colors, and textures. If you need a sponge, we've got a sponge, and the workmanship of each sponge is guaranteed or your lettuce back.\n\n We're sure you and your snail will find something you'll love, and have many happy washes together!\n\n \f[italic,1]Super Sponges\f[italic,default], sudsy snails sing songs."
+	
+	//Harvey's Snail Emporium - no matter the snail, we've got just what you need!
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	
+	//Good Greens - nutrition your snail will love
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	
+	//Lettuce Lovers - for all your lettuce needs!
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	
+	//Shell Shiners - look your best for your win! (idk if this is the right tagline but I want them to make the point that if you're dirty when you win you'll always regret it. Imagine the newspaper photos! The magazines! All with a dirty shell!? unthinkable!!)
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	
+	//Enchanted Escargot - for a truly magical dining experience (Do I want this to be more subtle though, hmmm...)
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	
+	//Jim's Gym (lol we could rename this) - strong snails bring in the lettuce
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	
+	//Perfect Paint Job - where every coat is personal (?)
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	
+	//Power Pistons - the power you need to reach the finish line, first time every time.
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	
+	//Mollusk Massage - every snail deserves a spa day
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	
+	//Gastropod Gardens - a bird-free paradise for your snails to roam
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	
+	//Snailville Auction House - everything you could ever want, and then some!
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	
+	//Nature's Nitro - nutrients to unlock your snail's true potential
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	
+	//Snail Sounds - soothe your snail to sleep with the comforting sounds of nature (including things like bird calls lol, put fear into their snaily hearts)
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	
+	//Snack Shack - any appetite sated! (snacks for humans and snails... includes escargot lol)
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	
+	//Racer Rugs - turn any floor into a practice track!
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	
+	
+	
+	
+	
+	//Public service announcements & public safety alerts? hmm. I think they make the most sense here but at least one of them needs code
+	//Perry's Perky Pellets & Chow Cubes - idk if we should write more for them or if the existing chain is enough
 }
 
 Ads.Pirate_Radio : nonoverlap_pool
