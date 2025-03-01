@@ -21,47 +21,123 @@ RadioStation.Weather : nonoverlap_pool
 	//something something "it's haley here with the %(hour) o'clock weather, on (weather station)"...
 	
 	//Weather
-	//""
-	//""
-	//""
-	//""
-	//""
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
 	
 	//Weather, but fully different? 7 pools of this...? 35... not horrible. This will include bringing in "experts" and such, and maybe on days without experts, describing how the weather will intensify or wane throughout the day?
-	//""
-	//""
-	//""
-	//""
-	//""
+	if Weather.Today == 0 //Sunny
+	{
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+	}
+	elseif Weather.Today == 1 //Cloudy
+	{
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+	}
+	elseif Weather.Today == 2 //Rainy
+	{
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+	}
+	elseif Weather.Today == 3 //Wormy
+	{
+		//Dr. Wormington
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+	}
+	elseif Weather.Today == 4 //Sneezy
+	{
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+	}
+	elseif Weather.Today == 5 //Electric
+	{
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+	}
+	elseif Weather.Today == 6 //Psionic storm
+	{
+		//Ooo we're experiencing a psionic storm, is that why i've (word group - felt tingly|had urges to dance|etc...)
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+	}
+	
 	
 	//Temps - I need to set up some code for this. Unsure how in depth I wanna go. tbqh i think it's always summer-ish in this ghost and therefore I can just pick an avg temp for each and call that good? or i could pick 4 temps and have it cycle through seasons also, not the worst. but i think this is a summer vibes kinda thing, or maybe spring...
-	//""
-	//""
-	//""
-	//""
-	//""
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
 	
 	//Traffic / other stuff with tailgate specifically - need to rig up code that'll go through cities one by one without repeating. a dialogue tape style thing, perhaps...? generate a new tape each day... yeah. or, same tape but start in a random position... hm! the thing is that i can't just use an embed tag straight up because then it'll pick a new one each time you repeat a dialogue. i think what i have to do is give the embed a reference that is the index i want to pull, that way it stays consistent... and only update that index after... hm, well. tricky, tricky... i guess it wouldn't hurt if it takes the index it was *passed* and increments *that*...? not the worst idea ever...
-	"\1\b[22]NOW over to Tailgating Terror with a traffic update. Tailgate, how's those streets looking today?\n\n %(snailpic) Bad.\n\n Yikes, we hate to see it! Thanks for the update, now back to the weather!" //TODO temp, we probably want to dress this up a bit more... idk if quotes are what we want here either? ..... UNLESS..............
-	//""
-	//""
-	//""
-	//""
+	//I think it makes sense that they'd always go in the same order, but I can start from a random position in the list so that it's varied
+	//%(TrafficCity) is the function to use
+	"\1\b[22]NOW over to Tailgating Terror with a traffic update. Tailgate, how's those streets in %(TrafficCity) looking today?\n\n %(snailpic) Bad.\n\n Yikes, we hate to see it! Thanks for the update, now back to the weather!" //TODO temp, we probably want to dress this up a bit more... idk if quotes are what we want here either? ..... UNLESS.............. Do we want random city names or random street names....... i've set it up for city but if we write street names i could do those. hum
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
 	
-	//""
-	//""
-	//""
-	//""
-	//""
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
 	
 	
 	//Predictions - i can't decide if i want these to just be 5 written straight through and be just bad predictions, or if i want to pick an actual next weather and base it off of that... that could balloon it out to more dialogues, but some of it could be kept to simple word groups. i think it would lend itself to more variance and interest, probably... and i feel this station really needs that. I could also put bad predictions in the misc section lol
-	//""
-	//""
-	//""
-	//""
-	//""
+	//I might be able to get away with this if it's just 2 pools: 1 for if the current weather is gonna continue and 1 if it's gonna change? hm
 	
+	if Weather.Today == Weather.Tomorrow
+	{
+		_thatsunnyweather = ("those sunny skies","the protection from the clouds","the hydrating downpour","watching the worm migration","this breezy, sneezy weather","that extra energized air","the benefits of the ongoing psionic storm")[Weather.Today]
+		"\1\b[22]If you've been enjoying %(_thatsunnyweather) today, then you're in luck because it'll be continuing just the same tomorrow!\n\n Forecasts are calling for the current weather patterns to hold for the next 24 hours at least, and if you stay tuned we'll keep giving YOU all the latest weather information on the #1 weather source you can trust, (TODO WEATHER STATION)."
+		
+		_sunnyweather = ("sunny weather","cloudy skies","rainfall","worminess","sneezy weather","electric bursts","psionic interference")[Weather.Today]
+		"\1\b[22]All our forecasts today show that the current weather patterns will hold, so tomorrow you can expect to see the same %(_sunnyweather) that we're having today. If you're traveling, make sure that you're factoring in how that may affect your route!\n\n Whether you're on the road or staying at home, stay tuned, and we'll keep YOU updated on where the weather is going next here at (TODO WEATHER STATION)."
+		
+		_sunnyskies = ("sunny skies","cloudy days","rain showers","to watch the worm migrations","breezy days and you don't have allergies","having the dead batteries in your drawer suddenly recharge themselves","feeling the tingles from the potential psionic energy in the air")[Weather.Today]
+		_thatsunis = ("that sun is","those clouds are","these showers are","the worm migration is","these high winds are","the high levels of electricity in the air are","this psionic storm shows no signs of stopping and is")[Weather.Today]
+		_stockupon = ("regularly apply sunscreen","get out while they can and enjoy the cooler weather","wear rain boots and keep an eye on their snails","watch where they step; you never know where those worms might get to","get out their battery testers, and make sure to have a spare radio just in case","watch what they're thinking today, and maybe consider picking up a special psychic energy-proof hat")[Weather.Today]
+		"\1\b[22]Well, if you like %(_sunnyskies) then you're in luck, because %(_thatsunis) going to continue right into tomorrow. We're advising everyone to %(_stockupon)!\n\n Make sure to check back with us tomorrow, and we at (TODO WEATHER STATION) will keep YOU updated on whatever the weather has in store for us next!"
+		
+		//"\1\b[22]"
+		//"\1\b[22]"
+	}
+	else //Changing
+	{
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+	}
 	
 	//Misc
 	_snailcity = snailcity
@@ -72,15 +148,15 @@ RadioStation.Weather : nonoverlap_pool
 	}
 	"\1\b[22]And now we're going to take a look at the temperatures over in%(emdash) whoa! Hahaha, %(besttoavoid(_snailcity))\n\n We'll come back around to %(_snailcity) once we've got our equipment functioning properly again. For now, let's move on to %(_snailcity2), where the temperatures look more reasonable!"
 	"\1\b[22]This just in, I'm getting reports about a massive storm cloud brewing over %(_snailcity)! This might be a big one folks!\n\n ... Oh, what's that? Hold on a moment, I'm getting new information that the cloud is actually just %(fromabbq(_snailcity))! False alarm, phew! But rest assured that if there WAS a sudden weather event, we at (TODO STATION NAME) would get you information as fast as it becomes available!"
-	//""
-	//""
-	//""
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
 	
-	//""
-	//""
-	//""
-	//""
-	//""
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
 	
 	
 	/*
@@ -101,6 +177,7 @@ RadioStation.Weather : nonoverlap_pool
 	- Honestly reading out the temperatures in various cities might not be bad... theoretically I could plot out the average temp per city, adjust it a bit based on weather, and then randomize it a little... that'd be nice. That's a thing weather stations would do... not the randomizing part obv. I mean, then again, do all cities get the same weather...? ... don't think about it too hard. see this is the part where we wiggle our hands a little to create a pleasing texture that gives the illusion of depth but doesn't take a million years to complete. i say, sinking a million years into this GODDAMN RADIO
 	- Predictions about the upcoming ??? snail harvest ??? like... like food snails and how good upcoming batches of racing snails are gonna be due to the weather they grew up in
 	- Maybe also notes about what kind of lettuce yields you might expect this season... hm. that might be weird to vary day to day tho... I could seed it monthly or something tho
+		Seeding by week... hm. I grabbed yearweek, but how to do... I think I'll just use SRAND and use the week number + year number as the seed. The only place RAND is currently used in the base SHIORI files is for communicateratio, which I do not use, so I can use it to my heart's desire. Unless they add more RAND in an update, but shrug, I can deal with that if and when it comes up and it probably won't. No reason to not use SRAND here
 	
 	*/
 }

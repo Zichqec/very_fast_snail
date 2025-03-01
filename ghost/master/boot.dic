@@ -67,6 +67,9 @@ OnFirstBoot : all
 	RadioScanTime = GETSECCOUNT
 	
 	MakeTodaysSeed
+	MakeWeather
+	
+	TrafficUpdateIndex = RAND(ARRAYSIZE(SnailCities))
 	
 	
 	
@@ -87,6 +90,9 @@ OnInitialize
 		if GETSECCOUNT > CurrentSnail.LastOut + 600; CurrentSnail.Cleanliness = 0 //10 minute reset
 		CurrentSnail.LastOut = GETSECCOUNT //this really only matters in the case of crashes i think...
 		MakeTodaysSeed
+		MakeWeather
+		
+		TrafficUpdateIndex = RAND(ARRAYSIZE(SnailCities)) //It almost makes me wonder, if you go off the weather station for a while, should this re-randomize... hm
 	}
 	
 	if !ISVAR("CleaningProductsPurchased"); CleaningProductsPurchased = 0

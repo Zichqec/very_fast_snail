@@ -234,13 +234,13 @@ madeitout
 timespan : pool
 {
 	_pick = ANY("second","minute","hour","day","week","month","year","other")
-	
+
 	if _pick == "other"
 	{
 		"a fortnight"
 		return
 	}
-	
+
 	_r = 0
 	if _pick == "second"
 	{
@@ -253,7 +253,7 @@ timespan : pool
 	elseif _pick == "hour"
 	{
 		_r = RAND(24)
-		
+
 		if RAND(4) == 0
 		{
 			_r = ANY(24,36,48,72)
@@ -262,7 +262,7 @@ timespan : pool
 	elseif _pick == "day"
 	{
 		_r = RAND(30)
-		
+
 		if RAND(4) == 0
 		{
 			_r = ANY(50,100,200,300)
@@ -280,9 +280,9 @@ timespan : pool
 	{
 		_r = RAND(3)
 	}
-	
+
 	_r += 1 //Prevent them from coming out as 0
-	
+
 	if _r == 1
 	{
 		if _pick == "hour"; "an hour"
@@ -1139,33 +1139,6 @@ snailcity
 	parallel SnailCities
 }
 
-SnailCities : array
-{
-	"Snail City"
-	"Snailopolis"
-	"Snailville"
-	"New Snail City"
-	"Old Snail City"
-	"Snailtopia"
-	"Snailsburg"
-	"Snailtown"
-	"Snailton"
-	"Snailover"
-	"Snailborough"
-	"Snailford"
-	"Snailshire"
-	"Snailhill"
-	"Snail Pointe"
-	"East Snailsgrad"
-	"West Snailsgrad"
-	"North Snailsbury"
-	"South Snailsbury"
-	"Snailham"
-	"Snailscester"
-	"Snailsby"
-	"Snailstead"
-}
-
 beans
 {
 	"beans"
@@ -1691,7 +1664,7 @@ qa.silly
 	"how much TV it watches on a daily basis"
 	"whether it prefers cubes or cylinders"
 	"whether it likes soup"
-	
+
 	_they = "they"
 	_them = "them"
 	_their = "their"
@@ -1797,18 +1770,18 @@ betterrustprotection : array
 	// SRAND(TodaysSeed)
 	// if RAND(2) == 0; _num += "0"
 	//I think SRAND might mess up other stuff...
-	
+
 	_num = TodaysChoice((1,2,3,4,5,6,7,8,9,10))
 	_suffix = TodaysChoice(('','0','0','5','5'))
 	_num = TOSTR(_num) + _suffix
-	
+
 	//OH GOD I'M IN A/AN HELL
 	_a = "a"
 	case _num
 	{
 		when "8", "11", "80", "85"; _a = "an"
 	}
-	
+
 	"%(_num)% better protection against rust"
 	"%(_num)% less impact on the environment"
 	"%(_num)% fewer materials used"
@@ -1984,9 +1957,29 @@ pelletsdemonstration : array
 
 //Get a quick index for other functions to do with weather comments...
 //Damn, do we want to make sure this changes to something new every day, tho? Maybe I'd be better off handling it in boot. Something to consider... TODO
-TodaysWeather
+// TodaysWeather
+// {
+	// TodaysChoice((0,1,2,3,4,5,6))
+// }
+
+MakeWeather
 {
-	TodaysChoice((0,1,2,3,4,5,6))
+	_types = (0,1,2,3,4,5,6)
+
+	if !ISVAR("Weather.Yesterday"); Weather.Yesterday = ANY(_types)
+	else; Weather.Yesterday = Weather.Today
+
+	if !ISVAR("Weather.Today"); Weather.Today = ANY(_types)
+	else; Weather.Today = Weather.Tomorrow
+
+	//Currently I don't plan to make it avoid duplication... but if I change my mind that has to happen here
+	Weather.Tomorrow = ANY(_types)
+}
+
+//for debug purposes
+WeatherDisplay
+{
+	"\_q\![no-autopause]Yesterday: %(Weather[Weather.Yesterday])\nToday: %(Weather[Weather.Today])\nTomorrow: %(Weather[Weather.Tomorrow])"
 }
 
 Weather : array
@@ -2000,6 +1993,112 @@ Weather : array
 	"Psionic storm" //fake, but snails claim slugs can read minds and slugs claim snails can read minds
 }
 
+//Name, avg temp
+CityTemps : array
+{
+	"Snail City,80"
+	"Snailopolis,76"
+	"Snailville,78"
+	"New Snail City,82"
+	"Old Snail City,84"
+	"Snailtopia,79"
+	"Snailsburg,73"
+	"Snailtown,75"
+	"Snailton,75"
+	"Snailover,72"
+	"Snailborough,83"
+	"Snailford,82"
+	"Snailshire,73"
+	"Snailhill,78"
+	"Snail Pointe,71"
+	"East Snailsgrad,70"
+	"West Snailsgrad,70"
+	"North Snailsbury,71"
+	"South Snailsbury,74"
+	"Snailham,68"
+	"Snailscester,67"
+	"Snailsby,70"
+	"Snailstead,73"
+}
+
+TodaysTemp
+{
+	_i = _argv[0]
+	_city = CityTemps[_i][0]
+	_base = TOINT(CityTemps[_i][1])
+
+	_weather = 0
+	case Weather.Today
+	{
+		when 0; _weather += 15 //Sunny
+		when 1; _weather -= 10 //Cloudy
+		when 2; _weather -= 20 //Rainy
+		when 3; _weather -= 7 //Wormy - I imagine it's a bit damp/cool for this to happen...
+		//when 5; _weather += 5 //If allergens are coming out it's maybe warming up a little? But it could also be breezy...
+		//Electric, sneezy, and psionic storm get no adjustment
+	}
+
+	/*
+	Pick a number to vary the temp by from -5 to 5
+	Pick a DIFFERENT NUMBER per city (using the index)
+	but keep the number the same each day (using the daily seed)
+	*/
+	_variance = 0
+	_opts = (-5,-4,-3,-2,-1,0,1,2,3,4,5)
+	_cityseed = _i + STRLEN(_city) + _base //IN THEORY it should be a unique-ish number for each city. Or at least, there should be no obvious correlations, like city name length or the position in the list
+	//do i want to add the current hour to the mix so the temps change hourly...? hm. then they would feel random which isn't great, but i mean... i also don't expect you to see every temp every day, so. enh, think that's a pass...
+	_variance = _opts[(TodaysSeed + _cityseed) % ARRAYSIZE(_opts)]
+
+	_output = _base + _weather + _variance
+	if _output == 70 - 1; _output++ //suffer :relieved:
+	_output
+	//"%(_output) (base: %(_base), weather: %(_weather), variance: %(_variance))"
+}
+
+//for debug purposes
+TempsDisplay : all
+{
+	"\b[4]\_q\![set,autoscroll,disable]\![no-autopause]"
+	"%(Weather[Weather.Today])\n\n"
+	for _i = 0; _i < ARRAYSIZE(CityTemps); _i++
+	{
+		"%(SnailCities[_i]): %(TodaysTemp(_i))°F\n"
+	}
+	"\x"
+}
+
+SnailCities : array
+{
+	foreach CityTemps; _city
+	{
+		_city[0]
+	}
+}
+
+OnTrafficUpdateName
+{
+	//Index will be included with the embed tag, therefore, if you repeat the dialogue it will just increment it again. Should be nbd. As long as you can only repeat the previous dialogue lol. If you're messing with script log you're on your own
+	_index = TOINT(reference0)
+
+	TrafficUpdateIndex = _index + 1
+	if TrafficUpdateIndex >= ARRAYSIZE(SnailCities); TrafficUpdateIndex = 0
+
+	SnailCities[_index]
+}
+
+//Embed tag so that we don't increment through the list without meaning to, but using this index so that it doesn't increment when the dialogue is repeated either... what a pain lol
+TrafficCity
+{
+	"\![embed,OnTrafficUpdateName,%(TrafficUpdateIndex)]"
+}
+
+WeeksHarvestIndex
+{
+	//Idk how many options I want, but just to sketch out the code...
+	void SRAND("%(yearweek)%(year)") //don't remember if this takes a string or an int? update later when find out
+	RAND(5) //0-6, adjust when i find out how many conditions we want lol TODO
+}
+
 badtemp
 {
 	"%(RAND(9) + 1),%(RAND(10))%(RAND(10))%(RAND(10)),%(RAND(10))%(RAND(10))%(RAND(10))"
@@ -2008,7 +2107,7 @@ badtemp
 besttoavoid
 {
 	_snailcity = _argv[0]
-	
+
 	"looks like it'd be best to avoid %(_snailcity) for a while, folks! They're getting cooked right now at a searing %(badtemp)°F! That's gonna be a lot of escargot."
 	"folks if you're in %(_snailcity) currently, well, good luck! Looks like it's a balmy %(badtemp)°F there right now, so I know I'll be keeping my distance!"
 	"%(_snailcity) is getting roasted right now at a shocking %(badtemp)°F! That'll give you a tan for sure!"
@@ -2019,7 +2118,7 @@ besttoavoid
 fromabbq
 {
 	_snailcity = _argv[0]
-	
+
 	"from a BBQ that got out of hand"
 	"from an informal race that ended when all the competitors crashed into each other and exploded, sending smoke into the sky"
 	"from a plane drawing a snail in the sky"

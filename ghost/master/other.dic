@@ -37,9 +37,12 @@ OnTranslateInternal.AutoPause
 		//_talk = REPLACE(_talk," \f[name,arial]♫","\![dummy-tag] \f[name,arial]♫")
 		_talk = REPLACE(_talk,",\n ",",\n\w4") //linebreak - used in poetry
 		_talk = REPLACE(_talk,"\n ","\n\w8\w8") //linebreak
+		_talk = REPLACE(_talk,"%(emdash) ","%(emdash)\w8") //Emdash... this may cause issues? I don't know if we ever use emdash plus space as anything other than wanting a pause
 		_talk = REPLACE(_talk,", ",",\w4 ")
+		//_talk = REPLACE(_talk,".\f[italic,default] ",".\f[italic,default]\w8\w8 ") //I'm annoyed by having to manually adjust these, so...
 		_talk = REPLACE(_talk,". ",".\w8\w8 ")
 		_talk = REPLACE(_talk,"? ","?\w8\w8 ")
+		//_talk = REPLACE(_talk,"!\f[italic,default] ","!\f[italic,default]\w8\w8 ") //I'm annoyed by having to manually adjust these, so...
 		_talk = REPLACE(_talk,"! ","!\w8\w8 ")
 		_talk = REPLACE(_talk,": ",":\w8 ")
 		_talk = REPLACE(_talk,"; ",";\w4 ")
@@ -1067,6 +1070,36 @@ TodaysChoices
 {
 	_pick = TodaysSeed % _argc
 	_argv[_pick]
+}
+
+yearweek
+{
+    //Get the current day of the year (This was previously using my yearday function, so I'm adding a 1 here to compensate...)
+    _days = GETTIME[7] + 1
+    
+    //Get the number of days into the current week that we are
+    _trailingdays = 0
+    while weekday - _trailingdays >= 0
+    {
+        _trailingdays++
+    }
+    
+    //Get the number of weeks minus leading and trailing days
+    _days -= _trailingdays
+    _weeks = _days / 7
+    _leadingdays = _days % 7
+    
+    //Add in the trailing weeks
+    if _leadingdays > 0; _weeks++
+    if _trailingdays > 0; _weeks++
+
+    //Handles week 53
+    if _weeks == 53
+    {
+        _daysleft = 31 - day
+        if _daysleft + _trailingdays < 7; _weeks = 1
+    }
+    _weeks
 }
 
 //—————————————————————————————— Right click menu links ——————————————————————————————
