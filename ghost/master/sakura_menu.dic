@@ -7,7 +7,7 @@ OnSakuraMenu : all
 	
 	switch RadioStation == "Off"
 	{
-		"\![*]\__q[OnAiTalk.Prompt,Radio]Listen to the radio\__q"
+		"\![*]\__q[OnAiTalk.Prompt,%(ANY('Radio,Radio,Ad'))]Listen to the radio\__q"
 		"\![*]\f[color,disable]Listen to the radio\f[color,default]"
 	}
 	"\n"
