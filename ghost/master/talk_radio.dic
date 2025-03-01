@@ -271,14 +271,14 @@ chain.blanca_bill_break
 	"And we're back, folks!\n\n Haha, did you miss us?\n\n We missed YOU! And to show our appreciation for our listeners who waited for us, how about a special coupon code?\n\n %(snailpic) \f[italic,1]Whoa! Woohoo!\f[italic,default]\n\n I think that's a great idea, Bill! Let's see what we have... TODOCOUPONCODE10! (TODO something something what it's used for?)\n\n What a deal! And that's our thanks to you, our most loyal listeners. Now, back to the show!\e:chain=end"
 }}CHAIN
 
-test
-{
-	_snailname = SnailNameGenerator //TODO i'd love to make this specify alliterative sometime
-	//"\1\b[22]%(snailpic) \f[italic,1]Hubop! Hah!\f[italic,default]\n\n Haha, Bill, I think %(_snailname) is excited for the %(boxfans) we have over there!\n\n I think you're right, Blanca. It's certainly got an eye for a good deal, since those have just gone on sale for %(ANY(10,15,20,25,30,35,40))% off!\n\n Well there you have it, folks. Thanks for the help, %(_snailname)!\n\n %(snailpic) \f[italic,1]Woohoo!\f[italic,default]"
-	_pelletsdemonstration = SPLIT(TodaysChoice(pelletsdemonstration),"|")
-	//"\1\b[22]%(snailpic) \f[italic,1]Wah! Wahh!\f[italic,default]\n\n Oh? %(_snailname), we've already talked about those %(boxfans) on today's show!\n\n %(snailpic) \f[italic,1]Gubuh! Gimme!\f[italic,default]\n\n ... Blanca, I think %(_snailname) might be hungry!\n\n Ooh, you know, I think you're right Bill! In that case, how about a practical demonstration of our next product? %(_pelletsdemonstration[0]) make a quick and easy snack for your snail, and are packed full of nutrition!\n\n %(snailpic) \f[italic,1]Crunch crunch.\f[italic,default]\n\n See, look at how happy it is. %(_pelletsdemonstration[1])\n\n Very true, Bill! When it comes to supplementing my snail's diet with pellets, %(_pelletsdemonstration[0]) are always my #1 pick. %(_pelletsdemonstration[2])\n\n It's an important consideration! Food choices really have to be examined from a number of angles, %(_pelletsdemonstration[3])\n\n %(snailpic) \f[italic,1]Chomp chew.\f[italic,default]\n\n That's the sound of a satisfied snail enjoying %(_pelletsdemonstration[0]), folks. Buy some today!"
-	"\1\b[22]Now Bill, you were saying you wanted to promote some %(boxfans) today?\n\n Yes Blanca, we've got a really great deal going on where%(emdash)\n\n %(snailpic) \f[italic,1]Wah! Wubah!? \f[color,disable]Crash.\f[color,default]\f[italic,default]\n\n Oh no! %(_snailname), are you alright? \f[color,disable]What were you doing over here? You poor dear...\f[color,default]\n\n ... Well, looks like that deal is going, going, gone! That's a reminder for all of us that a good deal never lasts long, so if you hear us talk about something you just can't live without, get your orders in quickly before it's too late. You never know \f[italic,1]what\f[italic,default] could happen, hahaha!"
-}
+// test
+// {
+	// _snailname = SnailNameGenerator //TODO i'd love to make this specify alliterative sometime
+	// //"\1\b[22]%(snailpic) \f[italic,1]Hubop! Hah!\f[italic,default]\n\n Haha, Bill, I think %(_snailname) is excited for the %(boxfans) we have over there!\n\n I think you're right, Blanca. It's certainly got an eye for a good deal, since those have just gone on sale for %(ANY(10,15,20,25,30,35,40))% off!\n\n Well there you have it, folks. Thanks for the help, %(_snailname)!\n\n %(snailpic) \f[italic,1]Woohoo!\f[italic,default]"
+	// _pelletsdemonstration = SPLIT(TodaysChoice(pelletsdemonstration),"|")
+	// //"\1\b[22]%(snailpic) \f[italic,1]Wah! Wahh!\f[italic,default]\n\n Oh? %(_snailname), we've already talked about those %(boxfans) on today's show!\n\n %(snailpic) \f[italic,1]Gubuh! Gimme!\f[italic,default]\n\n ... Blanca, I think %(_snailname) might be hungry!\n\n Ooh, you know, I think you're right Bill! In that case, how about a practical demonstration of our next product? %(_pelletsdemonstration[0]) make a quick and easy snack for your snail, and are packed full of nutrition!\n\n %(snailpic) \f[italic,1]Crunch crunch.\f[italic,default]\n\n See, look at how happy it is. %(_pelletsdemonstration[1])\n\n Very true, Bill! When it comes to supplementing my snail's diet with pellets, %(_pelletsdemonstration[0]) are always my #1 pick. %(_pelletsdemonstration[2])\n\n It's an important consideration! Food choices really have to be examined from a number of angles, %(_pelletsdemonstration[3])\n\n %(snailpic) \f[italic,1]Chomp chew.\f[italic,default]\n\n That's the sound of a satisfied snail enjoying %(_pelletsdemonstration[0]), folks. Buy some today!"
+	// "\1\b[22]Now Bill, you were saying you wanted to promote some %(boxfans) today?\n\n Yes Blanca, we've got a really great deal going on where%(emdash)\n\n %(snailpic) \f[italic,1]Wah! Wubah!? \f[color,disable]Crash.\f[color,default]\f[italic,default]\n\n Oh no! %(_snailname), are you alright? \f[color,disable]What were you doing over here? You poor dear...\f[color,default]\n\n ... Well, looks like that deal is going, going, gone! That's a reminder for all of us that a good deal never lasts long, so if you hear us talk about something you just can't live without, get your orders in quickly before it's too late. You never know \f[italic,1]what\f[italic,default] could happen, hahaha!"
+// }
 
 //Arya Lissenin
 //103.7 Mollusk Music
@@ -434,7 +434,6 @@ ASMR.dialogues.timgulls : array
 	"Ask your sponsor to mist you now and then, you deserve the extra attention and care."
 	"Imagine the juicy crunch of a fresh lettuce leaf. You deserve the best today."
 	"Your racer name is one of the best anyone's ever heard. You'll be legendary one day."
-	//"Crunchy leaves just for you... Ask for the best from your sponsor." -- this feels like a good ad read for this station lol
 }
 
 ASMR.dialogues.sylance : array
@@ -491,7 +490,6 @@ ASMR.dialogues.sylance : array
 	"Go out and explore the garden.\n\n Swish. Swish. Swish.\n\n Feel those blades of grass. So safe and cozy."
 	"Let me clean your glasses.\n\n Rub. Rub. Rub.\n\n There. You can see much better now, can't you?"
 	"Let's put these new stickers on your shell.\n\n Peeeeeeeeel. Swsh. Swsh. Swsh.\n\n There's one.\e:chain=chain.applying_stickers" //TODO test that this works with the special setup i gave it above lol
-	//"I got you this new sling bag. Try it on.\n\n Swish.\n\n Clink clink.\n\n There you are, it fits like a glove. Imagine how much lettuce you could fit in here." //This...... also could be an ad read lol. god but i imagine this kind of ad read is EXACTLY why this station is profitable
 }
 
 chain.applying_stickers
@@ -513,39 +511,41 @@ Ads.General : nonoverlap_pool
 	//"\1\b[20]it's an ad!"
 	
 	//Super Sponges - sudsy snails sing songs
-	"\1\b[22]If you need sponges%(emdash)\w8and who doesn't, these days%(emdash)\w8they should be colorful and fun!\n\n We've got sponges in all kinds of colors, shapes, and sizes, so come on down with your snail and pick out the one that really makes it go ""wow""!\n\n \f[italic,1]Super Sponges\f[italic,default], sudsy snails sing songs."
-	"\1\b[22]When you pull out your sponge for your snail's daily shell washing, does its face light up with joy at the sight? If not, then it's time to upgrade your sponge!\n\n Come on down to \f[italic,1]Super Sponges\f[italic,default], where we have LOADS of sponges in all kinds of designs and colors. Find just the right one for your snail that makes it wiggle with joy!\n\n \f[italic,1]Super Sponges\f[italic,default], sudsy snails sing songs."
-	"\1\b[22]Clean snails are happy snails, and for the best and easiest clean, you should use fresh, high quality sponges!\n\n At \f[italic,1]Super Sponges\f[italic,default] we have only the best sponges, available in a variety of styles, colors, and textures. If you need a sponge, we've got a sponge, and the workmanship of each sponge is guaranteed or your lettuce back.\n\n We're sure you and your snail will find something you'll love, and have many happy washes together!\n\n \f[italic,1]Super Sponges\f[italic,default], sudsy snails sing songs."
+	"\1\b[22]If you need sponges%(emdash)\w8and who doesn't, these days%(emdash)\w8they should be colorful and fun!\n\n We've got sponges in all kinds of colors, shapes, and sizes, so come on down with your snail and pick out the one that really makes it go ""wow""!\n\n \f[italic,1]Super Sponges\f[italic,default]. Sudsy snails sing songs."
+	"\1\b[22]When you pull out your sponge for your snail's daily shell washing, does its face light up with joy at the sight? If not, then it's time to upgrade your sponge!\n\n Come on down to \f[italic,1]Super Sponges\f[italic,default], where we have LOADS of sponges in all kinds of designs and colors. Find just the right one for your snail that makes it wiggle with joy!\n\n \f[italic,1]Super Sponges\f[italic,default]. Sudsy snails sing songs."
+	"\1\b[22]Clean snails are happy snails, and for the best and easiest clean, you should use fresh, high quality sponges!\n\n At \f[italic,1]Super Sponges\f[italic,default] we have only the best sponges, available in a variety of styles, colors, and textures. If you need a sponge, we've got a sponge, and the workmanship of each sponge is guaranteed or your lettuce back.\n\n We're sure you and your snail will find something you'll love, and have many happy washes together!\n\n \f[italic,1]Super Sponges\f[italic,default]. Sudsy snails sing songs."
 	
 	//Harvey's Snail Emporium - no matter the snail, we've got just what you need!
-	//"\1\b[22]"
-	//"\1\b[22]"
-	//"\1\b[22]"
+	"\1\b[22]Need snail supplies? Whatever you need, you can find it at \f[italic,1]Harvey's Snail Emporium\f[italic,default]! We've got sponges, we've got towels, we've got flags, banners, stickers, climbing walls, nutritional supplements, and so much more!\n\n Come on down with your snail today, and you're sure to find something you can't live without!\n\n \f[italic,1]Harvey's Snail Emporium\f[italic,default]. No matter the snail, we've got just what you need!"
+	"\1\b[22]Does your snail need more enrichment in its life? Could it use a new hobby to spice things up? Stop by \f[italic,1]Harvey's Snail Emporium\f[italic,default] today, and we'll help you find just the thing to keep your snail happy and healthy!\n\n We've got snail bicycles, snail activity books, bubble bath solution, costumes, gardening tools, scrapbooking kits, disposable cameras, and so much more! No snail will leave without something new to try!\n\n \f[italic,1]Harvey's Snail Emporium\f[italic,default]. All the things you and your snail didn't know you needed!"
+	"\1\b[22]If you need snail supplies, look no further than \f[italic,1]Harvey's Snail Emporium\f[italic,default]! We've got nutritional supplements, carrying boxes, cooking oil, skillets, training equipment, racer ID services, and so much more! Everything snail-related you could possibly need, we've got it, so stop on by and see what we can do for you!\n\n \f[italic,1]Harvey's Snail Emporium\f[italic,default]. No matter the snail, we've got just what you need!"
 	
 	//Good Greens - nutrition your snail will love
-	//"\1\b[22]"
-	//"\1\b[22]"
-	//"\1\b[22]"
+	"\1\b[22]Healthy snails start with a healthy diet, and a healthy diet starts with healthy ingredients. At \f[italic,1]Good Greens\f[italic,default], we provide a variety of fruits and vegetables to choose from and construct a natural and balanced diet for your snail.\n\n Lettuce. Cabbage. Spinach. Arugula. Kale. Green beans. Snap peas. We've got them all. Bring your snail today and browse our selection.\n\n \f[italic,1]Good Greens\f[italic,default]. Nutrition your snail will love."
+	"\1\b[22]Is your snail's diet green enough? Lettuce is a fine starting point, but have you tried deeper greens such as spinach or kale?\n\n At \f[italic,1]Good Greens\f[italic,default], we believe every snail deserves the greenest diet possible. Bring your snail and browse our selection of the finest fruits and vegetables, all as green as can be. Apples, bell peppers, jalapeños, kiwis, cat grass, and so much more. Fill your basket with the delicious hues of nature.\n\n \f[italic,1]Good Greens\f[italic,default]. Nutrition your snail will love."
+	"\1\b[22]Your snail's plate should be a delightful medley of vibrant greens. Cucumbers, zucchini, basil, pears, unripe bananas%(emdash) all this and more have been found to be the #1 way to support your snail's health.\n\n At \f[italic,1]Good Greens\f[italic,default], we have everything you need to fulfill your snail's dietary needs. Bring your snail today and browse our selection of the most delectable shades on the market. But be warned; if you aren't hungry when you walk in, you will be by the time you walk out!\n\n \f[italic,1]Good Greens\f[italic,default]. Nutrition your snail will love."
 	
 	//Lettuce Lovers - for all your lettuce needs!
-	//"\1\b[22]"
-	//"\1\b[22]"
-	//"\1\b[22]"
+	"\1\b[22]\f[italic,1]It's cash money, honey!\f[italic,default]\n\n If you need Lettuce services, \f[italic,1]Lettuce Lovers\f[italic,default] have got you covered! Money lettuce to food lettuce and back again; lettuce washing; wilted leaves exchanged for fresh leaves; and all with minimal fees!\n\n \f[italic,1]Lettuce Lovers\f[italic,default]. For all your lettuce needs!" //IS LETTUCE WASHING NOT JUST MONEY LAUNDERING THO................... also I'm not sure about the "it's cash money, honey" it just would not leave me lol
+	"\1\b[22]If you've got lettuce, we've got services for you! Get your lettuce cleaned, converted, or replaced with fresher leaves, with no surprise fees or hidden stipulations! Trust \f[italic,1]Lettuce Lovers\f[italic,default] with your hard earned greens, and we'll make your leaves work for you.\n\n \f[italic,1]Lettuce Lovers\f[italic,default]. For all your lettuce needs!"
+	"\1\b[22]Got greens? Get 'em cleaned, converted, or any other service you need at \f[italic,1]Lettuce Lovers\f[italic,default]! For minimal fees, we can convert money lettuce to food lettuce, and vice versa! We'll wash it, dry it, and we'll even exchange your wilted leaves for fresh ones!\n\n \f[italic,1]Lettuce Lovers\f[italic,default]. For all your lettuce needs!" //please note that the service of upgrading your wilted leaves to fresh ones incurs an extra fee...
 	
 	//Shell Shiners - look your best for your win! (idk if this is the right tagline but I want them to make the point that if you're dirty when you win you'll always regret it. Imagine the newspaper photos! The magazines! All with a dirty shell!? unthinkable!!)
-	//"\1\b[22]"
-	//"\1\b[22]"
-	//"\1\b[22]"
+	//TODO shell shiners is also the name of a shell polish that is on bill and blanca's channel... I think it's ok to share the name because it's just them selling one of their products. Hm!
+	"\1\b[22]\f[italic,1]Wow! Amazing! How did you do it? What brand of engine do you use?\f[italic,default]\n\n Hear that? It's a crowd of adoring fans after you win that big race. There's just \f[italic,1]one\f[italic,default] little problem...\n\n \f[italic,1]Oh my, are those soot stains on your shell? Gasp! Oh, yuck, these pictures won't come out well at all...\f[italic,default]\n\n Uh oh. Your big moment's finally come, but a dirty shell is ruining everything.\n\n \f[italic,1]Lets just... give it some space. Maybe if we get better lighting in here it will help...\f[italic,default]\n\n Don't let that be you. You deserve to have everyone singing your praises when you win, so why let a little dirt get in the way? At \f[italic,1]Shell Shiners\f[italic,default], we'll give you a professional wash and wax so that you look your very best when all the cameras are finally pointed at you.\n\n \f[italic,1]Oh wow, so shiny! You're definitely going on the front cover of this week's magazine!\f[italic,default]\n\n \f[italic,1]Shell Shiners\f[italic,default]. Look your best for your win."
+	"\1\b[22]\f[italic,1]Hey! Over here!\f[italic,default]\n\n Well, would you look at that. It's an adoring fan that recognized you on your way to the store.\n\n \f[italic,1]Can you autograph this for me? Ooh, could we get a snailfie!?\f[italic,default]\n\n Uh oh. A picture that will be seen by potentially millions of others, there's just one little problem...\n\n \f[italic,1]Ooh, um, maybe we should try from this side instead? You've got a little...\f[italic,default]\n\n Dirt on your shell. How embarassing. This could haunt you for the rest of your career. But how can you turn down a fan?\n\n \f[italic,1]Hmm, this isn't really coming out how I'd hoped... but I guess it'll have to do!\f[italic,default]\n\n Nobody wants to be in that position. Don't let it be you. At \f[italic,1]Shell Shiners\f[italic,default], we'll give your shell a professional wash and wax so that you can be prepared for any time the cameras come out, whether it's on the racetrack or meeting fans in the street.\n\n \f[italic,1]Aw, how cute! Your shell is so glossy, it's perfect.\f[italic,default]\n\n \f[italic,1]Shell Shiners\f[italic,default]. Look your best for your fans."
+	"\1\b[22]\f[italic,1]Alright, now let's get a picture of you with this hat and bandanna...\f[italic,default]\n\n You've finally made it. Your name's become big enough that magazines want to write articles about you, and it's photoshoot day. There's just one little problem...\n\n \f[italic,1]Hm, this wax job isn't even, we'll have to try from a different angle...\f[italic,default]\n\n You thought you'd do a ""DIY"" wash and wax at home, but with professional cameras trained on you, it's ended up disastrous.\n\n \f[italic,1]Ah, this spot isn't glossy at all! We'll have to redo all of this and try again in an hour.\f[italic,default]\n\n Not a good look. Will the magazine even approve your pictures? Will they want you back? Maybe they will, but straining your professional relationships is never a good thing.\n\n \f[italic,1]I'll have to call my next appointment and let them know we'll be running late...\f[italic,default]\n\n Don't let it be you. At \f[italic,1]Shell Shiners\f[italic,default], we'll give your shell a professional wash and wax to make life easy and simple for those you work with. They're sure to appreciate it, and who wouldn't want to invite back a snail that considerate?\n\n \f[italic,1]Just hold still and we'll get a few pictures from each side... perfect!\f[italic,default]\n\n \f[italic,1]Shell shiners\f[italic,default]. Look your best for picture day."
 	
 	//Enchanted Escargot - for a truly magical dining experience (Do I want this to be more subtle though, hmmm...)
-	//"\1\b[22]"
-	//"\1\b[22]"
-	//"\1\b[22]"
+	//Enchanted Entrées...
+	"\1\b[22]A private moment away from the day to day. Imagine it: just you, your snail, and that beautiful New Snail City skyline.\n\n A delectable first bite, flavors that sing on your tongue until the very last morsel.\n\n \f[italic,1]Enchanted Entrées\f[italic,default]. A truly magical dining experience."
+	"\1\b[22]Up here, high above the city, you can indulge in your most decadent cravings. Go on, order what you like, we won't tell a soul.\n\n The escargot? An excellent choice, if I do say so myself...\n\n \f[italic,1]Enchanted Entrées\f[italic,default]. Only top quality snails served." //But... but does it mean....... or............
+	"\1\b[22]Hear the sizzle as your plate is brought to your table. Butter, olive oil, garlic; a heavenly olfactory experience before you've even had a chance to raise your fork to your lips.\n\n When you're ready, go ahead and dig in... An unforgettable meal awaits.\n\n \f[italic,1]Enchanted Entrées\f[italic,default]. A dining experience like no other."
 	
 	//Jim's Gym (lol we could rename this) - strong snails bring in the lettuce
-	//"\1\b[22]"
-	//"\1\b[22]"
-	//"\1\b[22]"
+	"\1\b[22]IT'S TIME TO GET \f[bold,1]PUMPED\f[bold,default] AT JIM'S GYM! BRING YOUR SNAILS FOR THEIR DAILY SHELL PRESSES AND \f[bold,1]BUILD UP THOSE MUSCLES!!!\f[bold,default]\n\n STRONG SNAILS WIN RACES, STRONG SNAILS GET FANS, \f[bold,1]STRONG SNAILS BRING IN THE LETTUCE!\f[bold,default]"
+	"\1\b[22]IF YOUR SNAIL ISN'T OUT THERE CLIMBING WALLS TO BUILD UP ITS STRENGTH, WHAT'S EVEN THE POINT OF HAVING A SNAIL!? BRING IT TO JIM'S GYM, WE'VE GOT THE MOST CHALLENGING CLIMBING WALLS THIS SIDE OF SNAILOPOLIS!\n\n STRONG SNAILS WIN RACES, STRONG SNAILS GET FANS, \f[bold,1]STRONG SNAILS BRING IN THE LETTUCE!\f[bold,default]"
+	"\1\b[22]CAN YOUR SNAIL SHELL PRESS 30 ADORING FANS ON ITS BACK AT ONCE? IF NOT, \f[bold,1]WHY NOT!? \f[bold,default]GET IT A MEMBERSHIP AT JIM'S GYM TODAY AND \f[bold,1]FIX THAT!\f[bold,default]\n\n STRONG SNAILS WIN RACES, STRONG SNAILS GET FANS, \f[bold,1]STRONG SNAILS BRING IN THE LETTUCE!\f[bold,default]"
 	
 	//Perfect Paint Job - where every coat is personal (?)
 	//"\1\b[22]"
@@ -573,8 +573,8 @@ Ads.General : nonoverlap_pool
 	//"\1\b[22]"
 	
 	//Nature's Nitro - nutrients to unlock your snail's true potential
-	//"\1\b[22]"
-	//"\1\b[22]"
+	"\1\b[22]Is your snail reaching its true potential? Most snails don't.\n\n A variety of fruits and vegetables will keep it healthy, sure, but spreading out as much as possible means you aren't dialing in on the specific nutrients that will give your snail that extra edge.\n\n Our nutritional supplements boost four essential vitamins: vitamins S, N, A1, and L. Together, these vitamins can enhance your snail's alertness, critical thinking skills, and aerodynamics. Taking just one tablet daily can unlock the true power hidden within your snail, helping it to perform its best on the racetrack.\n\n \f[italic,1]Nature's Nitro\f[italic,default]. Speed, the natural way." //are the vitamins too obvious lol
+	"\1\b[22]Does your snail seem lethargic and sad? Does it have trouble meeting expectations on the racetrack? Does its mucus seem a little... ""off""?\n\n Your snail isn't alone. It might be one of millions suffering from a vitamin deficiency. Studies have shown that boosting your snail's levels of vitamins S, N, A1, and L can improve its vitality significantly, elevating mood and boosting racing ability.\n\n At \f[italic,1]Nature's Nitro\f[italic,default], we've formulated an easy-to-swallow once-a-day tablet that will boost the levels of these essential vitamins in your snail to get its levels back to normal, and beyond.\n\n \f[italic,1]Nature's Nitro\f[italic,default]. Speed, the natural way." //"and beyond" doing a lot of heavy lifting there lol. if you, dear code snooper, don't know: too many vitamins can make you very, VERY sick
 	//"\1\b[22]"
 	
 	//Snail Sounds - soothe your snail to sleep with the comforting sounds of nature (including things like bird calls lol, put fear into their snaily hearts)
@@ -592,7 +592,7 @@ Ads.General : nonoverlap_pool
 	//"\1\b[22]"
 	//"\1\b[22]"
 	
-	
+	//Any after this point would be extras...
 	
 	
 	
