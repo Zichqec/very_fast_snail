@@ -148,6 +148,12 @@ OnDestroy
 	{
 		CurrentSnail.LastOut = GETSECCOUNT
 	}
+	
+	_list = GETVARLIST("TempSnail.")
+	foreach _list; _var
+	{
+		ERASEVAR("%(_var)")
+	}
 }
 
 OnFirst.SnailPick : all
