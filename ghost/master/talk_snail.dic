@@ -293,7 +293,7 @@ Talk.Snailsonality.Gymbro : nonoverlap_pool
 	"\1\b[10]Writing poetry is like a workout for your brain. I enjoy %(PoetryType('haiku','cinquains','limericks','acrostic','lyrics','rhyming couplets','alternate rhymes','free verse','diamante','concrete poetry')), my brain is bulking up nicely."
 }
 
-Talk.Snailsonality.Stalker : nonoverlap_pool
+Talk.Snailsonality.Super_Fan : nonoverlap_pool
 {
 	
 	_randfamous = RAND(30)
@@ -326,9 +326,7 @@ Talk.Snailsonality.Stalker : nonoverlap_pool
 	"\1\b[12]Hey, could I get a grant? I'm doing some research on %(ANY(FamousSnails))'s %(eatinghabits) and I really need some additional equipment for accurate %(graphing)."
 	"\1\b[12]I'm trying to get more pieces for my %(ANY(FamousSnails)) collection. I think I might be able to get %(setofplayingcards) I've seen lying around, but it'll require some... finesse.\n\n As a dedicated super fan, you have to learn some special techniques to grow your catalogue of information and memorabilia."
 	"\1\b[12]Most snails are cowards, they aren't willing to go to the lengths I am to catalogue racer information and preserve historical items.\n\n They'll thank me one day, when they realize how important my work is and how much effort I've put in."
-	
-	//TODO didn't we want to save the favorite snail? i'll have to do that when i switch the save format
-	//"\1\b[12]I'm %(CurrentSnail.FavSnail)'s biggest fan. I've been collecting memorabilia and information about it since I was a baby snail.\n\n No snail is more dedicated than me! One day it'll recognize that."
+	"\1\b[12]I'm %(CurrentSnail.FavoriteFamousSnail)'s biggest fan. I've been collecting memorabilia and information about it since I was a baby snail.\n\n No snail is more dedicated than me! One day it'll recognize that."
 }
 
 Talk.Snailsonality.Slacker : nonoverlap_pool

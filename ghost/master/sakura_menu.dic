@@ -277,16 +277,18 @@ RefreshDressups : all
 
 OnRacerID : all
 {
-	_fullID = reference0
+	_id = reference0
 	_name = reference1
 	_frommenu = reference2
 	
-	_index = ASEARCH(_fullID,SavedSnails.ID)
+	_filename = ToFileNameFormat(_name,_id)
 	
-	_id = _fullID[1,':']
+	LOGGING("_filename: %(_filename)")
+	LoadSnail(_filename,"temp")
+	
 	_racer_num = "%(SUBSTR(_id,0,4))-%(SUBSTR(_id,4,4))-%(SUBSTR(_id,8,4))-%(SUBSTR(_id,12,4))"
 	
-	_path = "id_photo/%(_name)-%(_id)_0.png"
+	_path = "id_photo/%(_filename)-0.png"
 	if FATTRIB(_path) == -1; _path = "../../shell/master/surface0.png"
 	
 	_spacing = "\n"
@@ -303,33 +305,36 @@ OnRacerID : all
 	if SHIORI3FW.BalloonName == "Very Fast Speedway"; "\n[-200]"
 	else; "\n"
 	"%(_spacing)Racer #%(_racer_num)"
-	"%(_spacing)Sponsored on %(SavedSnails.DateSponsored[_index][0,':'])"
-	"%(_spacing)Total races: %(SavedSnails.TotalRaces[_index])"
-	"%(_spacing)Total racing time: %(TimeDisplay(SavedSnails.TotalRaceTime[_index]))"
-	"%(_spacing)Total crashes: %(SavedSnails.TotalCrashes[_index])"
-	"%(_spacing)Highest coolness: %(SavedSnails.HighestCoolness[_index])"
+	"%(_spacing)Sponsored on %(TempSnail.DateSponsored[0,':'])"
+	"%(_spacing)Total races: %(TempSnail.TotalRaces)"
+	"%(_spacing)Total racing time: %(TimeDisplay(TempSnail.TotalRaceTime))"
+	"%(_spacing)Total crashes: %(TempSnail.TotalCrashes)"
+	"%(_spacing)Highest coolness: %(TempSnail.HighestCoolness)"
 	"\n\n\n"
-	"\f[italic,1]""%(SavedSnails.Trait[_index])""\f[italic,default]"
+	"\f[italic,1]""%(TempSnail.Trait)""\f[italic,default]"
 	"\n\n"
-	"Notable achievements:\n"
-	foreach SavedSnails.Notes[_index]; _note
+	if TOSTR(TempSnail.Notes) != "" //Checking arraysize wasn't working properly... maybe an issue with splitting an empty string making it an array of 1?
 	{
-		"\![*]%(_note)\n"
+		"Notable achievements:\n"
+		foreach TempSnail.Notes; _note
+		{
+			"\![*]%(_note)\n"
+		}
 	}
 	"\n"
 	
 	//CAN ONLY TAKE PHOTO IF CURRENT SNAIL. Otherwise it'll take a picture of the wrong one lol
 	if _frommenu == "OnPhotoGallery"
 	{
-		switch _fullID == CurrentSnail.ID
+		switch _id == CurrentSnail.ID
 		{
-			"\![*]\__q[OnPhotoGallery.SwitchSnail,%(_fullID),""%(_name)"",%(_frommenu)]Switch to this snail\__q"
+			"\![*]\__q[OnPhotoGallery.SwitchSnail,%(_id),""%(_name)"",%(_frommenu)]Switch to this snail\__q"
 			"\![*]\f[color,disable]Switch to this snail\f[color,default]"
 		}
 	}
 	else //OnSakuraMenu, hopefully
 	{
-		"\![*]\__q[OnTakeRacerPhoto.Confirm,%(_fullID),""%(_name)"",%(_frommenu)]Take a new ID photo\__q"
+		"\![*]\__q[OnTakeRacerPhoto.Confirm,%(_id),""%(_name)"",%(_frommenu)]Take a new ID photo\__q"
 	}
 	"\n\n"
 	if _frommenu == ""; _frommenu = "OnSakuraMenu"
@@ -338,11 +343,11 @@ OnRacerID : all
 
 OnTakeRacerPhoto.Confirm : all
 {
-	_fullID = reference0
+	_id = reference0
 	_name = reference1
 	_frommenu = reference2
 	
-	"\0\b[0]\_q"
+	"\0\b[0]\_q\![no-autopause]"
 	"Take a new photo for %(CurrentSnail.Name)'s racer ID?\n\n"
 	"Cost: %(L)10\n"
 	"Current funds: %(L)%(Lettuce)\n\n"
@@ -351,23 +356,24 @@ OnTakeRacerPhoto.Confirm : all
 	switch Lettuce >= 10
 	{
 		"\f[color,disable]Yes (%(L)10)\f[color,default]"
-		"\__q[OnTakeRacerPhoto,%(_fullID),""%(_name)"",%(_frommenu)]Yes (%(L)10)\__q"
+		"\__q[OnTakeRacerPhoto,%(_id),""%(_name)"",%(_frommenu)]Yes (%(L)10)\__q"
 	}
 	"  "
-	"\![*]\__q[OnRacerID,%(_fullID),""%(_name)"",%(_frommenu)]No\__q"
+	"\![*]\__q[OnRacerID,%(_id),""%(_name)"",%(_frommenu)]No\__q"
 }
 
 OnTakeRacerPhoto : all
 {
-	_fullID = reference0
+	_id = reference0
 	_name = reference1
 	_frommenu = reference2
+	_filename = ToFileNameFormat(CurrentSnail.Name,CurrentSnail.ID)
 	
 	Lettuce -= 10
-	_path = "id_photo/%(CurrentSnail.Name)-%(CurrentSnail.ID[1,':'])_0.png"
+	_path = "id_photo/%(_filename)-0.png"
 	"\0\b[2]"
-	"\![execute,dumpsurface,id_photo,0,0,%(CurrentSnail.Name)-%(CurrentSnail.ID[1,':'])_,,1]"
-	"Say cheese!\_w[1000]\n.\w8 .\w8 .\_w[1500]\n\_b[%(_path),inline,--clipping=240 125 370 255,--option=background]\n\nPerfect!\x\![raise,OnRacerID,%(_fullID),""%(_name)"",%(_frommenu)]"
+	"\![execute,dumpsurface,id_photo,0,0,%(_filename)-,,1]"
+	"Say cheese!\_w[1000]\n.\w8 .\w8 .\_w[1500]\n\_b[%(_path),inline,--clipping=240 125 370 255,--option=background]\n\nPerfect!\x\![raise,OnRacerID,%(_id),""%(_name)"",%(_frommenu)]"
 }
 
 OnSnailTraining : all
@@ -548,13 +554,20 @@ OnPhotoGallery : all
 	_ii = 0
 	_x = 10
 	if SHIORI3FW.BalloonName == "Very Fast Speedway"; "\_l[%(_x),]"
-	for _i = 0; _i < ARRAYSIZE(SavedSnails.ID); _i++
+	
+	_dir = SPLIT(FENUM("snail_data/","|"),"|")
+	foreach _dir; _snail
 	{
-		_path = "id_photo/%(SavedSnails.Name[_i])-%(SavedSnails.ID[_i][1,':'])_0.png"
+		//TODO difference with this now that i changed the save format is that it'll be alphabetical instead of by when you sponsored them. issue or nah?
+		_path = "id_photo/%(REPLACE(_snail,'.snail',''))-0.png"
 		if FATTRIB(_path) == -1; _path = "../../shell/master/surface0.png"
 		
+		_info = FromFileNameFormat(_snail)
+		_name = _info[0]
+		_id = _info[1]
+		
 		//left up right down
-		"\__q[OnRacerID,%(SavedSnails.ID[_i]),""%(SavedSnails.Name[_i])"",OnPhotoGallery]\_b[%(_path),inline,--clipping=250 125 360 255]\__q"
+		"\__q[OnRacerID,%(_id),""%(_name)"",OnPhotoGallery]\_b[%(_path),inline,--clipping=250 125 360 255]\__q"
 		_ii++
 		if _ii >= 3
 		{
@@ -570,14 +583,15 @@ OnPhotoGallery : all
 
 OnPhotoGallery.SwitchSnail
 {
-	_fullID = reference0
+	_id = reference0
 	_name = reference1
 	_frommenu = reference2
+	_filename = ToFileNameFormat(_name,_id)
 	
 	SaveSnail(CurrentSnail.ID)
-	LoadSnail(reference0)
+	LoadSnail(_filename)
 	
-	"\C%(RefreshDressups)%(CleanlinessCheck)\![raise,OnRacerID,%(_fullID),""%(_name)"",%(_frommenu)]"
+	"\C%(RefreshDressups)%(CleanlinessCheck)\![raise,OnRacerID,%(_id),""%(_name)"",%(_frommenu)]"
 }
 
 OnLettuceShop : all
@@ -730,10 +744,17 @@ OnRadioScanChange
 OnDebug.SnailPicker : all
 {
 	"\0\b[2]\_q\![no-autopause]"
-	for _i = 0; _i < ARRAYSIZE(SavedSnails.ID); _i++
+	_dir = SPLIT(FENUM("snail_data/","|"),"|")
+	for _i = 0; _i < ARRAYSIZE(_dir); _i++
 	{
-		if SavedSnails.ID[_i] == CurrentSnail.ID; "\![*]"
-		"\__q[OnDebug.SnailPicker.Select,""%(SavedSnails.ID[_i])""]%(SavedSnails.Name[_i])\__q\n"
+		_filename = _dir[_i][0,'.snail'] //can't remove this because we send the raw file name below...
+		_info = FromFileNameFormat(_filename)
+		_snailname = _info[0]
+		_id = _info[1]
+		
+		LOGGING("_id: %(_id)")
+		if _id == CurrentSnail.ID; "\![*]"
+		"\__q[OnDebug.SnailPicker.Select,""%(_filename)""]%(_snailname)\__q\n"
 	}
 	"\n\![*]\q[See snail stats,OnDebug.CurrentSnail]"
 	"\n\n\![*]\q[Add a snail,OnFirst.SnailPick]"

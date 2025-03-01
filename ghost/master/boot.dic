@@ -2,43 +2,36 @@ OnFirstBoot : all
 {
 	stroke = 0
 	LastTalk = ""
-	SavedSnails.ID = IARRAY
-	SavedSnails.Name = IARRAY
-	SavedSnails.Version = IARRAY
-	SavedSnails.Trait = IARRAY
-	SavedSnails.TotalRaces = IARRAY
-	SavedSnails.TotalRaceTime = IARRAY
-	SavedSnails.HighestCoolness = IARRAY
-	SavedSnails.TotalCrashes = IARRAY
-	SavedSnails.Loadout = IARRAY
-	SavedSnails.DateSponsored = IARRAY
-	SavedSnails.Notes = IARRAY
-	SavedSnails.Training = IARRAY //Added in whatever version we call this
-	SavedSnails.PersonalityType = IARRAY
-	SavedSnails.PoetryType = IARRAY
-	SavedSnails.RadioPreference = IARRAY
-	SavedSnails.AltHobby = IARRAY
-	SavedSnails.Cleanliness = IARRAY
-	SavedSnails.LastOut = IARRAY
+	
+	TotalSnailsSponsored = 0 //Used to track which number snail each snail you sponsor is... will be 1 indexed in use. will i regret that? maybe...
 	
 	CurrentSnail.ID = ""
 	CurrentSnail.Name = ""
 	CurrentSnail.Version = ""
-	CurrentSnail.Trait = ""
+	CurrentSnail.DateSponsored = ""
+	CurrentSnail.Number = TotalSnailsSponsored
 	CurrentSnail.TotalRaces = 0
 	CurrentSnail.TotalRaceTime = 0
+	CurrentSnail.HighestScore = 0
+	CurrentSnail.FastestRaceTime = 0
 	CurrentSnail.HighestCoolness = 0
 	CurrentSnail.TotalCrashes = 0
-	CurrentSnail.Loadout = IARRAY
-	CurrentSnail.DateSponsored = ""
-	CurrentSnail.Notes = IARRAY
+	CurrentSnail.LastOut = GETSECCOUNT
+	CurrentSnail.TotalOutTime = 0
 	CurrentSnail.Training = (0,0,0,0,0,0,0,0,0,0)
+	CurrentSnail.Cleanliness = 0
+	CurrentSnail.CurrentSpeed = 0
+	CurrentSnail.CurrentCoolness = 0
+	CurrentSnail.CurrentExplosiveness = 0
+	CurrentSnail.CarryCapacity = 0
+	CurrentSnail.Trait = ""
 	CurrentSnail.PersonalityType = ""
 	CurrentSnail.PoetryType = ""
 	CurrentSnail.RadioPreference = ""
 	CurrentSnail.AltHobby = ""
-	CurrentSnail.Cleanliness = 0
-	CurrentSnail.LastOut = GETSECCOUNT
+	CurrentSnail.FavoriteFamousSnail = ""
+	CurrentSnail.Notes = IARRAY
+	CurrentSnail.Loadout = IARRAY
 	
 	HighestAllTimeCoolness = 0
 	
@@ -107,23 +100,23 @@ OnInitialize
 //TODO all of this is untested... it's probably fine right (no)
 InitSnailVars
 {
-	if !ISVAR("CurrentSnail.ID"); CurrentSnail.ID = GenerateID
-	if !ISVAR("CurrentSnail.Name")
-	{
-		CurrentSnail.Name = SnailNameGenerator(CurrentSnail.ID)
-	}
+	_newsnail = GenerateSnailChoices //If needed
+	if !ISVAR("CurrentSnail.ID"); CurrentSnail.ID = _newsnail[0,C_BYTE1]
+	if !ISVAR("CurrentSnail.Name"); CurrentSnail.Name = _newsnail[1,C_BYTE1]
 	_snailsonality = GenerateSnailsonality(CurrentSnail.Name,CurrentSnail.ID)
 	
 	if !ISVAR("CurrentSnail.Version"); CurrentSnail.Version = ghostver
 	if !ISVAR("CurrentSnail.DateSponsored"); CurrentSnail.DateSponsored = "%(year)-%(leadingmonth)-%(leadingday):%(GETSECCOUNT)"
 	if !ISVAR("CurrentSnail.Number")
 	{
-		//TODO untested lol
-		_num = 1
-		if ARRAYSIZE(SavedSnails.ID) > 0; _num += ARRAYSIZE(SavedSnails.ID)
-		_fenum = FENUM("snail_data/","|")
-		if ARRAYSIZE(SPLIT(_fenum,"|")) > 0; _num += ARRAYSIZE(SPLIT(_fenum,"|"))
-		CurrentSnail.Number = _num
+		TotalSnailsSponsored++
+		CurrentSnail.Number = TotalSnailsSponsored
+		//untested lol - i think i should do this kind of conversion separately for us...
+		// _num = 1
+		// if ARRAYSIZE(SavedSnails.ID) > 0; _num += ARRAYSIZE(SavedSnails.ID)
+		// _fenum = FENUM("snail_data/","|")
+		// if ARRAYSIZE(SPLIT(_fenum,"|")) > 0; _num += ARRAYSIZE(SPLIT(_fenum,"|"))
+		// CurrentSnail.Number = _num
 	}
 	if !ISVAR("CurrentSnail.TotalRaces"); CurrentSnail.TotalRaces = 0
 	if !ISVAR("CurrentSnail.TotalRaceTime"); CurrentSnail.TotalRaceTime = 0
@@ -139,7 +132,7 @@ InitSnailVars
 	if !ISVAR("CurrentSnail.CurrentCoolness"); CurrentSnail.CurrentCoolness = 0
 	if !ISVAR("CurrentSnail.CurrentExplosiveness"); CurrentSnail.CurrentExplosiveness = 0
 	if !ISVAR("CurrentSnail.CarryCapacity"); CurrentSnail.CarryCapacity = 0 //TODO don't know what this will be yet...
-	if !ISVAR("CurrentSnail.Trait"); CurrentSnail.Trait = 
+	if !ISVAR("CurrentSnail.Trait"); CurrentSnail.Trait = _newsnail[2,C_BYTE1]
 	if !ISVAR("CurrentSnail.PersonalityType"); CurrentSnail.PersonalityType = _snailsonality[0]
 	if !ISVAR("CurrentSnail.PoetryType"); CurrentSnail.PoetryType = _snailsonality[1]
 	if !ISVAR("CurrentSnail.RadioPreference"); CurrentSnail.RadioPreference = _snailsonality[2]
@@ -204,6 +197,7 @@ OnFirst.SelectSnail : all
 
 OnFirst.SelectSnail.Confirm : all
 {
+	SaveSnail(CurrentSnail.ID) //TODO this is temp, i hope. probably later this will be routed through a different function? but for now, it just needs to not overwrite newly added snails made through the debug menu
 	CreateSnail(reference0,reference1,reference2)
 	RefreshDressups
 	OnFirst.SelectSnail.Confirm.SnailTalk

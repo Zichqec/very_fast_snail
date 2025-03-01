@@ -133,7 +133,7 @@ ghostver
 GenerateSnailChoices
 {
 	//ty terraria for inspiring me, but i'm using a different delimiter <3
-	_id = ghostver + ":" + GenerateID
+	_id = GenerateID
 	_name = SnailNameGenerator(_id)
 	_trait = traits(_name)
 	
@@ -162,26 +162,39 @@ GenerateID : all
 
 CreateSnail
 {
+	TotalSnailsSponsored++
+	
 	CurrentSnail.ID = _argv[0]
 	CurrentSnail.Name = _argv[1]
 	CurrentSnail.Version = ghostver
-	CurrentSnail.Trait = _argv[2]
+	CurrentSnail.DateSponsored = "%(year)-%(leadingmonth)-%(leadingday):%(GETSECCOUNT)"
+	CurrentSnail.Number = TotalSnailsSponsored
 	CurrentSnail.TotalRaces = 0
 	CurrentSnail.TotalRaceTime = 0
+	CurrentSnail.HighestScore = 0
+	CurrentSnail.FastestRaceTime = 0
 	CurrentSnail.HighestCoolness = 0
 	CurrentSnail.TotalCrashes = 0
-	CurrentSnail.Loadout = IARRAY
-	CurrentSnail.DateSponsored = "%(year)-%(leadingmonth)-%(leadingday):%(GETSECCOUNT)"
-	CurrentSnail.Notes = IARRAY
+	CurrentSnail.LastOut = GETSECCOUNT
+	CurrentSnail.TotalOutTime = 0
 	CurrentSnail.Training = (0,0,0,0,0,0,0,0,0,0)
+	CurrentSnail.Cleanliness = 0
+	CurrentSnail.CurrentSpeed = 0
+	CurrentSnail.CurrentCoolness = 0
+	CurrentSnail.CurrentExplosiveness = 0
+	CurrentSnail.CarryCapacity = 0
 	//personality type, poetry type, favorite radio station, alternate hobby
 	_snailsonality = GenerateSnailsonality(CurrentSnail.Name,CurrentSnail.ID)
+	CurrentSnail.Trait = _argv[2]
 	CurrentSnail.PersonalityType = _snailsonality[0]
 	CurrentSnail.PoetryType = _snailsonality[1]
 	CurrentSnail.RadioPreference = _snailsonality[2]
 	CurrentSnail.AltHobby = _snailsonality[3]
+	CurrentSnail.FavoriteFamousSnail = _snailsonality[4]
+	CurrentSnail.Notes = IARRAY
+	CurrentSnail.Loadout = IARRAY
 	//Xueewnr - current but my hands were on the wrong keys cuz laptop...
-	CurrentSnail.Cleanliness = 0
+	
 	SaveSnail(_argv[0])
 }
 
@@ -189,17 +202,17 @@ CreateSnail
 //arg 0: snail name (for alliteration check)
 //arg 1: snail ID (seed)
 //Outputs an array with the following values: personality type, poetry type, favorite radio station, alternate hobby
+//Outputs an array with the following values: personality type, poetry type, favorite radio station, alternate hobby
 //More may be added in the future
 GenerateSnailsonality
 {
 	_name = _argv[0]
 	_id = _argv[1]
-	if _argv[0] =="" && _argv[1] == ""
+	if _argv[0] == "" && _argv[1] == ""
 	{
-		_id = ghostver + ":" + GenerateID
+		_id = GenerateID
 		_name = SnailNameGenerator(_id)
 	}
-	_id = _id[1,':']
 	
 	_firstnum = TOINT(SUBSTR(_id,0,1))
 	_1st_8 = TOINT(SUBSTR(_id,0,8))
@@ -323,35 +336,54 @@ SumTo10
 	_output % 10
 }
 
-GetSnailIndex
+ToFileNameFormat
 {
-	ASEARCH(_argv[0],SavedSnails.ID)
+	_name = _argv[0]
+	_id = _argv[1]
+	_filename = _name
+	_filename = REPLACE(_filename,"?","(Q)")
+	_filename = REPLACE(_filename," ","_")
+	_filename = _filename + "#" + _id
+	_filename
+}
+
+FromFileNameFormat
+{
+	_input = _argv[0]
+	_id = _input[1,'#']
+	_id = REPLACE(_id,".snail","")
+	_name = _input[0,'#']
+	_name = REPLACE(_name,"(Q)","?")
+	_name = REPLACE(_name,"_"," ")
+	(_name,_id)
 }
 
 SaveSnail
 {
 	//Create directory if none exists
 	_dir = FENUM("snail_data/","|")
-	if ARRAYSIZE(SPLIT(_dir,"|")) == 0; void MKDIR("snail_data/")
+	if _dir == ""; void MKDIR("snail_data/")
 	
-	_filename = CurrentSnail.Name
-	_filename = (_filename,"?","(Q)")
-	_filename = (_filename," ","_")
-	_filename = _filename + "#" + CurrentSnail.ID
+	_filename = ToFileNameFormat(CurrentSnail.Name,CurrentSnail.ID)
 	
-	_file = _dir + _filename + ".snail"
+	_file = "snail_data/" + _filename + ".snail"
+	LOGGING("_file: %(_file)")
 	
 	InitSnailVars
 	
 	_o = FOPEN(_file,"w")
 	if _o == 1
 	{
+		LOGGING("====================================================================")
+		LOGGING("====================================================================")
+		LOGGING("====================================================================")
+		LOGGING("====================================================================")
 		//TODO next on this i think i need to deal with the ones that are arrays and also the ones that are new, and then i have to set up the loading function. then i can test this! and hope it doesn't all explode
 		void FWRITE(_file,"ID," + CurrentSnail.ID)
 		void FWRITE(_file,"Name," + CurrentSnail.Name)
 		void FWRITE(_file,"Version," + CurrentSnail.Version)
 		void FWRITE(_file,"DateSponsored," + CurrentSnail.DateSponsored)
-		void FWRITE(_file,"Number," + CurrentSnail.Number) //TODO doesn't exist yet
+		void FWRITE(_file,"Number," + CurrentSnail.Number) //new
 		void FWRITE(_file,"TotalRaces," + CurrentSnail.TotalRaces)
 		void FWRITE(_file,"TotalRaceTime," + CurrentSnail.TotalRaceTime)
 		void FWRITE(_file,"HighestScore," + CurrentSnail.HighestScore) //TODO this is new
@@ -360,7 +392,7 @@ SaveSnail
 		void FWRITE(_file,"TotalCrashes," + CurrentSnail.TotalCrashes)
 		void FWRITE(_file,"LastOut," + CurrentSnail.LastOut) //TODO this isn't how this one works I don't think...
 		void FWRITE(_file,"TotalOutTime," + CurrentSnail.TotalOutTime) //TODO this is new
-		void FWRITE(_file,"Training," + CurrentSnail.Training) //TODO this is an array
+		void FWRITE(_file,"Training," + ArrayToSplittableString(CurrentSnail.Training)) //TODO this is an array
 		void FWRITE(_file,"Cleanliness," + CurrentSnail.Cleanliness)
 		void FWRITE(_file,"CurrentSpeed," + CurrentSnail.CurrentSpeed) //TODO this is new
 		void FWRITE(_file,"CurrentCoolness," + CurrentSnail.CurrentCoolness) //TODO this is new
@@ -372,15 +404,79 @@ SaveSnail
 		void FWRITE(_file,"RadioPreference," + CurrentSnail.RadioPreference)
 		void FWRITE(_file,"AltHobby," + CurrentSnail.AltHobby)
 		void FWRITE(_file,"FavoriteFamousSnail," + CurrentSnail.FavoriteFamousSnail) //TODO this is new
-		void FWRITE(_file,"Notes," + CurrentSnail.Notes) //TODO this is an array
-		void FWRITE(_file,"Loadout," + CurrentSnail.Loadout) //TODO this is an array
+		void FWRITE(_file,"Notes," + ArrayToSplittableString(CurrentSnail.Notes)) //TODO this is an array
+		void FWRITE(_file,"Loadout," + ArrayToSplittableString(CurrentSnail.Loadout)) //TODO this is an array
 	}
-	_o //output in case of issues opening the file...
+	void FCLOSE(_file)
+	//_o //output in case of issues opening the file...
+}
+
+ArrayToSplittableString
+{
+	_output = ""
+	foreach _argv; _arg
+	{
+		if _output != ""; _output += C_BYTE1
+		_output += _arg
+	}
+	_output
 }
 
 LoadSnail
 {
+	// //Create directory if none exists
+	// _dir = FENUM("snail_data/","|")
+	// if ARRAYSIZE(SPLIT(_dir,"|")) == 0; void MKDIR("snail_data/")
 	
+	_file = "snail_data/" + _argv[0] + ".snail"
+	LOGGING("_file TO LOAD: %(_file)")
+	
+	// _filename = _argv[0]
+	// _filename = REPLACE(_filename,"?","(Q)")
+	// _filename = REPLACE(_filename," ","_")
+	// _filename = _filename + "#" + CurrentSnail.ID
+	
+	// _file = _dir + _filename + ".snail"
+	
+	_var = "CurrentSnail"
+	if _argv[1] == "temp"; _var = "TempSnail"
+	
+	_o = FOPEN(_file,"r")
+	if _o == 1
+	{
+		for _buff = FREAD(_file); _buff != -1; _buff = FREAD(_file)
+		{
+			if StartsWith(_buff,"ID,"); EVAL("%(_var).ID = REPLACE(_buff,'ID,','',1)")
+			elseif StartsWith(_buff,"Name,"); EVAL("%(_var).Name = REPLACE(_buff,'Name,','',1)")
+			elseif StartsWith(_buff,"Version,"); EVAL("%(_var).Version = REPLACE(_buff,'Version,','',1)")
+			elseif StartsWith(_buff,"DateSponsored,"); EVAL("%(_var).DateSponsored = REPLACE(_buff,'DateSponsored,','',1)")
+			elseif StartsWith(_buff,"Number,"); EVAL("%(_var).Number = REPLACE(_buff,'Number,','',1)") //new
+			elseif StartsWith(_buff,"TotalRaces,"); EVAL("%(_var).TotalRaces = REPLACE(_buff,'TotalRaces,','',1)")
+			elseif StartsWith(_buff,"TotalRaceTime,"); EVAL("%(_var).TotalRaceTime = REPLACE(_buff,'TotalRaceTime,','',1)")
+			elseif StartsWith(_buff,"HighestScore,"); EVAL("%(_var).HighestScore = REPLACE(_buff,'HighestScore,','',1)") //TODO this is new
+			elseif StartsWith(_buff,"FastestRaceTime,"); EVAL("%(_var).FastestRaceTime = REPLACE(_buff,'FastestRaceTime,','',1)") //TODO this is new
+			elseif StartsWith(_buff,"HighestCoolness,"); EVAL("%(_var).HighestCoolness = REPLACE(_buff,'HighestCoolness,','',1)")
+			elseif StartsWith(_buff,"TotalCrashes,"); EVAL("%(_var).TotalCrashes = REPLACE(_buff,'TotalCrashes,','',1)")
+			elseif StartsWith(_buff,"LastOut,"); EVAL("%(_var).LastOut = REPLACE(_buff,'LastOut,','',1)") //TODO this isn't how this one works I don't think...
+			elseif StartsWith(_buff,"TotalOutTime,"); EVAL("%(_var).TotalOutTime = REPLACE(_buff,'TotalOutTime,','',1)") //TODO this is new
+			elseif StartsWith(_buff,"Training,"); EVAL("%(_var).Training = SPLIT(REPLACE(_buff,'Training,','',1),C_BYTE1)") //TODO this is an array
+			elseif StartsWith(_buff,"Cleanliness,"); EVAL("%(_var).Cleanliness = REPLACE(_buff,'Cleanliness,','',1)")
+			elseif StartsWith(_buff,"CurrentSpeed,"); EVAL("%(_var).CurrentSpeed = REPLACE(_buff,'CurrentSpeed,','',1)") //TODO this is new
+			elseif StartsWith(_buff,"CurrentCoolness,"); EVAL("%(_var).CurrentCoolness = REPLACE(_buff,'CurrentCoolness,','',1)") //TODO this is new
+			elseif StartsWith(_buff,"CurrentExplosiveness,"); EVAL("%(_var).CurrentExplosiveness = REPLACE(_buff,'CurrentExplosiveness,','',1)") //TODO this is new
+			elseif StartsWith(_buff,"CarryCapacity,"); EVAL("%(_var).CarryCapacity = REPLACE(_buff,'CarryCapacity,','',1)")
+			elseif StartsWith(_buff,"Trait,"); EVAL("%(_var).Trait = REPLACE(_buff,'Trait,','',1)")
+			elseif StartsWith(_buff,"PersonalityType,"); EVAL("%(_var).PersonalityType = REPLACE(_buff,'PersonalityType,','',1)")
+			elseif StartsWith(_buff,"PoetryType,"); EVAL("%(_var).PoetryType = REPLACE(_buff,'PoetryType,','',1)")
+			elseif StartsWith(_buff,"RadioPreference,"); EVAL("%(_var).RadioPreference = REPLACE(_buff,'RadioPreference,','',1)")
+			elseif StartsWith(_buff,"AltHobby,"); EVAL("%(_var).AltHobby = REPLACE(_buff,'AltHobby,','',1)")
+			elseif StartsWith(_buff,"FavoriteFamousSnail,"); EVAL("%(_var).FavoriteFamousSnail = REPLACE(_buff,'FavoriteFamousSnail,','',1)") //TODO this is new
+			elseif StartsWith(_buff,"Notes,"); EVAL("%(_var).Notes = SPLIT(REPLACE(_buff,'Notes,','',1),C_BYTE1)") //TODO this is an array
+			elseif StartsWith(_buff,"Loadout,"); EVAL("%(_var).Loadout = SPLIT(REPLACE(_buff,'Loadout,','',1),C_BYTE1)") //TODO this is an array
+		}
+	}
+	void FCLOSE(_file)
+	//_o //temp
 }
 
 
@@ -561,6 +657,16 @@ ABS
 {
 	if _argv[0] < 0; _argv[0] *= -1
 	_argv[0]
+}
+
+//Searches the start of a string for the requested substring.
+//Argument 0 is the source string to search, argument 1 is the substring to search for.
+//Returns 1 if true, 0 if false.
+//Usage example:
+//StartsWith("Testing","Test")
+StartsWith
+{
+	SUBSTR(_argv[0],0,STRLEN(_argv[1])) == _argv[1]
 }
 
 IsAlliterative
@@ -1437,7 +1543,7 @@ On_getaistate : all
 		
 		
 		Categories:
-		Talk.Snailsonality.Stalker
+		Talk.Snailsonality.Super_Fan
 		Talk.AlliterativeSnailsonality.Basic
 		Talk.User.InRace
 		Talk.User.NoRace
@@ -1483,7 +1589,7 @@ AIgraphArray : array
 	_ratings = OUTPUTNUM("Talk.Snailsonality.Ratings")
 	_silent = OUTPUTNUM("Talk.Snailsonality.Silent")
 	_gymbro = OUTPUTNUM("Talk.Snailsonality.Gymbro")
-	_stalker = OUTPUTNUM("Talk.Snailsonality.Stalker")
+	_super_fan = OUTPUTNUM("Talk.Snailsonality.Super_Fan")
 	_slacker = OUTPUTNUM("Talk.Snailsonality.Slacker")
 	_jealous = OUTPUTNUM("Talk.Snailsonality.Jealous")
 	_liar = OUTPUTNUM("Talk.Snailsonality.Liar")
@@ -1530,7 +1636,7 @@ AIgraphArray : array
 	_all_announcer = _announcer
 	
 	_all_alliterative = _abasic + _abreak + _slug + _bad
-	_all_non_alliterative = _sad + _relaxed + _angry + _proper + _sour + _tired + _ratings + _silent + _gymbro + _stalker + _slacker + _jealous + _liar + _facts + _sellout
+	_all_non_alliterative = _sad + _relaxed + _angry + _proper + _sour + _tired + _ratings + _silent + _gymbro + _super_fan + _slacker + _jealous + _liar + _facts + _sellout
 	
 	_all_alliterative_poetry = _snoem + _bad_snoem + _slugetry
 	_all_non_alliterative_poetry = _haiku + _cinquain + limerick + _acrostic + _lyric + _rhyming_couplet + _alternate_rhyme + _free_verse + _diamante + _concrete
@@ -1617,7 +1723,7 @@ AIgraphArray : array
 				when "Ratings"; _currently_available += _ratings
 				when "Silent"; _currently_available += _silent
 				when "Gymbro"; _currently_available += _gymbro
-				when "Stalker"; _currently_available += _stalker
+				when "Super_Fan"; _currently_available += _super_fan
 				when "Slacker"; _currently_available += _slacker
 				when "Jealous"; _currently_available += _jealous
 				when "Liar"; _currently_available += _liar
@@ -1671,7 +1777,7 @@ AIgraphArray : array
 		"%(_ratings),Ratings,%(GraphDiff(_ratings,20))"
 		"%(_silent),Silent,%(GraphDiff(_silent,20))"
 		"%(_gymbro),Gymbro,%(GraphDiff(_gymbro,20))"
-		"%(_stalker),Stalker,%(GraphDiff(_stalker,20))"
+		"%(_super_fan),Super Fan,%(GraphDiff(_super_fan,20))"
 		"%(_slacker),Slacker,%(GraphDiff(_slacker,20))"
 		"%(_jealous),Jealous,%(GraphDiff(_jealous,20))"
 		"%(_liar),Liar,%(GraphDiff(_liar,20))"
