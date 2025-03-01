@@ -20,6 +20,11 @@ Talk.Snailsonality.Sad : nonoverlap_pool
 	"\1\b[10]Feel like I'm going in circles... I miss when I felt like my life had direction."
 	"\1\b[10]I'm just trying to keep oozing along... Put one bit of my foot in front of the other."
 	"\1\b[10]I don't know how the other snails keep their tentacles up, life will never be the same and I just don't know how to cope..."
+	"\1\b[10]I did well in snail school, you know. Life seemed so full of opportunity...! And then..."
+	"\1\b[10]If only I'd gotten a different name, I could be so much further in life by now..."
+	"\1\b[10]I'll never have the life I thought I'd have... the life they promised me in snail school."
+	"\1\b[12]I miss those snail school days... Back when all I had to worry about was getting good grades, deciding whether I wanted to be fast or cool, and not becoming someone's lunch."
+	"\1\b[10]All that time I spent practicing my alliteration skills... What's the point now?"
 
 	//Maybe I'd feel better if I was the coolest looking snail ever. ... But it's kinda hard to compete with the legendary cool snails of the past... Do I really stand a chance? //could change based on coolness level
 }
@@ -71,7 +76,7 @@ Talk.Snailsonality.Angry : nonoverlap_pool
 	"\1\b[10]I'M READY TO CRACK SOME SHELLS OUT ON THE TRACK"
 	"\1\b[10]TRAINING IS FOR CHUMPS, I WAS BORN WITH ALL THE SKILL I NEED"
 	"\1\b[10]GET ME A FLAMETHROWER SO WE CAN %(ANY('ROAST','SMOKE','TORCH')) THE COMPETITION"
-	"\1\b[12]I WRITE THE BEST %(TOUPPER(PoetryType('haiku','cinquains','limericks','acrostics','lyrics','rhyming couplets','alternate rhymes','free verse','diamantes','concrete poems'))) THE SNAIL WORLD HAS EVER SEEN. BECAUSE \f[bold,1]MINE\f[bold,default] ARE IN \f[bold,1]UPPERCASE!!!\f[bold,default]"
+	"\1\b[12]I WRITE THE BEST %(TOUPPER(PoetryType('haiku','cinquains','limericks','acrostics','lyrics','rhyming couplets','alternate rhymes','free verse','diamantes','concrete poems'))) THE SNAIL WORLD HAS EVER SEEN. BECAUSE \f[bold,1]MINE\f[bold,default] ARE IN \f[bold,1]UPPERCASE!!!\f[bold,default]" //TODO are they though...? they should be
 	"\1\b[10]ESCARGOT? \f[bold,1]ME? \f[bold,default]I'LL MAKE YOUR FACE ESCARGOT IF YOU TRY IT"
 	"\1\b[10]CAN'T THEY THINK OF ANYTHING BETTER TO PLAY ON THE RADIO?"
 	
@@ -82,6 +87,7 @@ Talk.Snailsonality.Angry : nonoverlap_pool
 	// AND ITS RIGHT, SO I STARTED A PETITION
 }
 
+//TODO this will change per dialogue... is a problem. unless maybe i use an argument to specify what to pull...?
 OnAngryQuoteBasic
 {
 	//TODO idk if this will be good or not... depends if we use text effects in those dialogues and if we want to keep those effects here

@@ -234,13 +234,13 @@ madeitout
 timespan : pool
 {
 	_pick = ANY("second","minute","hour","day","week","month","year","other")
-	
+
 	if _pick == "other"
 	{
 		"a fortnight"
 		return
 	}
-	
+
 	_r = 0
 	if _pick == "second"
 	{
@@ -253,7 +253,7 @@ timespan : pool
 	elseif _pick == "hour"
 	{
 		_r = RAND(24)
-		
+
 		if RAND(4) == 0
 		{
 			_r = ANY(24,36,48,72)
@@ -262,7 +262,7 @@ timespan : pool
 	elseif _pick == "day"
 	{
 		_r = RAND(30)
-		
+
 		if RAND(4) == 0
 		{
 			_r = ANY(50,100,200,300)
@@ -280,9 +280,9 @@ timespan : pool
 	{
 		_r = RAND(3)
 	}
-	
+
 	_r += 1 //Prevent them from coming out as 0
-	
+
 	if _r == 1
 	{
 		if _pick == "hour"; "an hour"
@@ -617,11 +617,11 @@ anchovies
 
 snailbrand
 {
-	_pick = snailbrandlist
+	_pick = ANY(snailbrandlist)
 	(_pick[0,'|'],_pick[1,'|'])
 }
 
-snailbrandlist
+snailbrandlist : array
 {
 	"Snail Suds|For all your snail washing needs!"
 	"Snail Snacks|When your snail has the munchies, we'll keep you from being eaten out of house and home!"
@@ -779,7 +779,7 @@ broccoliis
 booktitle
 {
 	"101 Ways to Eat Lettuce (with pictures)"
-	"Eat this lettuce, not that"
+	"Eat This Lettuce, Not That"
 	"Muscles: Nature's Engine"
 	"How to Build Muscle and Keep It"
 	"Inspirational Muscle Photos"
@@ -1136,21 +1136,7 @@ wildstory
 
 snailcity
 {
-	"Snail City"
-	"Snailopolis"
-	"Snailville"
-	"New Snail City"
-	"Old Snail City"
-	"Snailtopia"
-	"Snailsburg"
-	"Snailtown"
-	"Snailton"
-	"Snailover"
-	"Snailborough"
-	"Snailford"
-	"Snailshire"
-	"Snailhill"
-	"Snail Pointe"
+	parallel SnailCities
 }
 
 beans
@@ -1486,12 +1472,662 @@ dryerlint
 	"old receipts from the grocery store"
 }
 
-charityevent
+
+
+//but I want to take this time to remind everyone about the (charityevent1)
+charityevent1 : array
 {
+	"ongoing Super Snailathon, where 100% of all proceeds from Super Snail merch go to the Safe Snail Society!\n\n Get yourself some Super Snail t-shirts, hats, mugs, posters, sponges, bags, and more, and it all goes to a great cause! Isn't that worth putting your money towards?\n\n But that's not all, use our special key word of the day, ""%(TodaysChoice(MusicStationKeyword))"", at checkout, and we'll match your donation leaf for leaf! That's right, every head you spend is DOUBLED, so get out there and make an impact!"
+	"current donation drive, going towards the Racer Retirement Fund. There are so many racers out there that never had the chance to make it big while they were still in their prime, and who's going to take care of them now that they can't bring in the lettuce like they used to? YOU'RE gonna take care of them!\n\n Every leaf of lettuce you donate will go towards planting new lettuce fields to feed these snails during their golden years. Isn't that a great cause? YOU can make a direct impact in the lives of so many snails!\n\n We need just %(RAND(10) + 5) more monthly donors this hour to hit our target. You could be one of them that pushes us to that goal! Just call in and we'll sign you up, it'll only take a minute of your time. You can also sign up on the snailernet. If you can spare just a little lettuce each month, you can make a real difference in the lives of so many!"
+	"merch sale we have upcoming! All your favorite Mollusk Music merch will be going on sale, with some items as much as 60% off!\n\n T-shirts, hats, mugs, plushies, bookmarks, and so much more. Get your lettuce ready and pick out some designs you like so you can order them before we run out of stock!\n\n Got a loved one with a birthday coming up? Mollusk Music merch makes for great gifts that anyone will love!" //TODO maybe make 60% be a randomly rolled number
+	"new single by Diamond DJ dropping tomorrow! Ooh, it's so exciting, isn't it?\n\n We'll be debuting it here on Mollusk Music, so if you want to be among the first to listen%(emdash)and who wouldn't%(emdash)be sure to tune in to 103.7 bright and early!"
+	"Q&A that we'll be having with Diamond DJ next week. Got a question for everyone's favorite singing snail? Get it in now! Send your questions in on the snailernet or via our app, and we'll pick the best ones to ask it live on air!\n\n Anything you wanna know! %(Capitalize(qa.music)), %(qa.snail), %(qa.silly('you'))? Ask it, and we'll try to get you answers!"
+	"interview we're going to be having with %(TodaysChoice(FamousSnails)) in a few days! Send us your questions, and we might just ask them live on the show!\n\n Want to know %(qa.racer), %(qa.snail), or %(qa.silly('you'))? Go submit your questions via the snailernet or our app, and vote on the questions that have already been proposed! We'll be asking the most popular questions we get that haven't already been answered!"
+	"donation drive for shell repairs being provided by %(TodaysChoice(snailcity)) Hospital. That's right, %(TodaysChoice(snailcity)) Hospital is going to be providing shell repair services to so many snails for FREE, but they can only provide that service if they get sufficient funding!\n\n Just imagine how many little snails there are out there with damaged shells that can't race, and how happy you could make them by donating a little lettuce towards the cause. You could make a real impact in a snail's life!\n\n Sign up today to make a donation, or better yet, pledge a monthly amount and make an ongoing impact with just a little lettuce each month! Signing up is easy, it only takes a moment, and you can do it in whatever way is most convenient for you. Give us a call, go to our website on the snailernet, sign up through our app%(emdash)heck, if you live in %(TodaysChoice(snailcity)) I'm sure they'd be happy to sign you up in person if you walked into the hospital.\n\n It's a great cause, so if you can give, please do! And if you sign up any time this week, we'll even send you an exclusive donor patch to celebrate your generosity."
+	"upcoming anniversary for one of our local brands, %(brandanniversary)! That's right, %(brandanniversary) is going to be celebrating its anniversary soon, and I hear there's going to be %(TodaysChoice(brandanniversarydeal)) to celebrate!\n\n Sounds fun, right!? I, for one, can't wait to see what they're cooking up! And I hope you'll join us to celebrate the day."
+	"Mollusk Music meetup that we have coming up next month! If you want to meet up and see us doing the show in person, and meet other fans of the station, sign up on the snailernet or go through our app to sign up!\n\n We're gonna have food, prizes to win, and so much more. I can't wait to see all our lovely fans out there, snails and sponsors alike!"
+	"big meet-and-greet event we're doing with %(TodaysChoice(FamousSnails)) next week! That's right, it's your chance to get to meet %(TodaysChoice(FamousSnails)) in person, and if you bring your favorite merch, you might just be able to get it signed!\n\n Sign ups are on our website or our app, make sure to get your name on the list quick before slots fill up! And remember, only 2 pieces of merch per person for the signing, so that everyone has a chance! And if you don't have anything to be signed, we'll be selling %(TodaysChoice(FamousSnails)) merch at the event!"
 	//"upcoming charity event"
-	"ongoing Super Snailathon, where 100% of all proceeds from Super Snail merch go to the Safe Snail Society!\n\n Get yourself some Super Snail t-shirts, hats, mugs, posters, sponges, bags, and more, and it all goes to a great cause! Isn't that worth putting your money towards?\n\n But that's not all, use our special key word of the day, ""MONEY"", at checkout, and we'll match your donation leaf for leaf! That's right, every head you spend is DOUBLED, so get out there and make an impact!" //TODO i'd really love to make the keyword change each day or something... once I figure out seeding or however i wanna do this
 	//donation drive
 	//merch sale
+	//local brand anniversary
+	//radio meetup
 	//etc...
-	//if i'm gonna do this i should consider having multiple dialogues relating to it
+}
+
+//it's that part of the hour where I remind you guys about the (charityevent2)
+charityevent2 : array
+{
+	"Super Snailathon that's going on. 100% of all proceeds from Super Snail merch go straight to the %(TodaysChoice(safesnailsociety)), so you can get yourself some cool merch of your favorite Super Snail and give to a good cause at the same time!\n\n Not only that, but if you use our special key word today, ""%(TodaysChoice(MusicStationKeyword))"", we'll make a donation matching the amount you spent, leaf for leaf! The impact from your choice will be DOUBLED, isn't that cool?\n\n So don't put it off, get out there and get yourself some Super Snail merch, and celebrate the %(TodaysChoice(safesnailsociety)) with us!"
+	"donation drive going on today, benefitting the Racer Retirement Fund. Every leaf you can donate goes to planting new lettuce fields for aging racers who never made it big and need a little help in their golden years. Isn't that a cause worth putting your lettuce towards?\n\n We're looking to get %(RAND(10) + 5) new monthly donors this hour, but of course, one-off donations are welcome too! Anything we can do to help some cute little snails out, am I right? Just call in and we'll help you sign up, it'll only take a few moments of your time. You can also sign up on the snailernet, we've had %(RAND(10) + 3) donors sign up that way already, and the feedback has been awesome!"
+	"big Mollusk Music merch sale we have coming up! T-shirts, hoodies, sling bags, sunglasses, patches; there's so much to love, and you can get it up to 60% off in just a few days!\n\n Now is the time to pick out what you like, and be prepared to order it quickly when the sale starts, before your favorites sell out!\n\n Already have plenty of Mollusk Music merch for yourself? Why not order some for friends and family so they can show off their favorite radio station too!"
+	"new single by Diamond DJ that's debuting here on Mollusk Music tomorrow! That's right, if you want to be one of the first to listen to the new tune, you've got to tune in to 103.7 to hear it live as it releases to the public!\n\n I've gotta tell you folks, we have a little sample of what's coming tomorrow, and I've been listening to it over and over again. You gotta get excited for this one, it's going to be a hit for sure. But don't just take my word for it! That's right, strap in because we're about to play that sample for you right now so you can get excited with us! Let's hear it!\n\n %(note1)%(note1)%(note1)%(note1)%(note1)%(note1)%(note1)%(note1)%(note1)%(note1)\n\n \f[italic,1]%(TodaysChoice(diamonddjsong))\f[italic,default]\n\n %(note1)%(note1)%(note1)%(note1)%(note1)%(note1)%(note1)%(note1)%(note1)%(note1)"
+	"Q&A that we're going to be having with Diamond DJ next week! If you want the inside scoop, now's the time to ask your questions. That's right, we'll be asking YOUR questions and getting real answers!\n\n Send in your questions on the snailernet or on our app, and we'll pick the best ones to inquire about during our session! I've seen several folks asking %(qa.silly), so I'm sure that'll be on our list. If you have another burning question that you just gotta know the answer to, be sure to send it our way!"
+	"interview coming up with %(TodaysChoice(FamousSnails)) in just a few days! We've got all sorts of questions to ask, it turns out lots of folks want to know %(qa.silly)!\n\n If that's something you want to ask as well, make sure to find us on the snailernet or check out our app, and vote for your favorite questions or submit your own!"
+	"donation drive this week for %(TodaysChoice(snailcity)) Hospital. They're going to be launching a FREE shell repair service for any snail in need, and they need funding!\n\n If you can spare a little lettuce, please send it their way. Just think of how many little snails there are out there with damaged shells, and you could make a big impact in their lives by helping to provide them with repair services. Isn't that a cause worth donating to?\n\n Signing up is so easy you guys, just call in and we'll set you up, or find us on the snailernet or go on our app. Whatever way you choose, it'll only take a few minutes of your time, and ANY amount of lettuce makes a real difference.\n\n Sign up this week and we'll even send you one of these special donor patches to celebrate your generosity! You can't see these on the radio, but they're SO cute, you definitely want to get one while they're available. So go sign up and give!"
+	"big anniversary that %(brandanniversary) is going to be celebrating soon! Yep, you heard that right, %(brandanniversary) is going to be having an anniversary, and I'm told there'll be %(TodaysChoice(brandanniversarydeal)) to celebrate!\n\n It's been a great year for %(brandanniversary), and they're such good friends of the show that we've just gotta celebrate this great achievement with them. Another year going strong, serving snails everywhere. Wow.\n\n Look forward to the festivities coming up, I know I am!"
+	"Mollusk Music meetup happening just a month from today! All our fans our welcome, snails and sponsors alike. We're gonna be doing the show outdoors, with lots of food provided, prizes to win, and so much more.\n\n Sign up on the snailernet or through our app, and come and join us in a celebration of radio and snail music!"
+	"upcoming %(TodaysChoice(FamousSnails)) meet-and-greet event we're doing next week! Sign up before slots are full, and you can bring up to 2 pieces of merchandise to be signed! We'll also be selling merch at the event, so if you don't have anything to be signed, you can get something while you're there.\n\n There'll be food and drink too, so you can make a day of it and meet lots of other %(TodaysChoice(FamousSnails)) fans!"
+}
+
+//Hey hey hey, check it out guys, we've still got that (charityevent3)
+charityevent3 : array
+{
+	"Super Snailathon going on! It's a great time to order yourself some Super Snail merch. Y'know why?\n\n Ding ding ding, that's right! 100% of all proceeds from merch sold today are going to support the %(TodaysChoice(safesnailsociety)), so get out there and spend your lettuce for a great cause!\n\n Not only that, if you use our key word of the day, ""%(TodaysChoice(MusicStationKeyword))"", we'll donate and match your contribution! That's right, we're DOUBLING your impact, leaf for leaf! So get out there and get yourself something fun! T-shirts, hats, mugs, posters, sponges, bags, and so much more. It can be yours today, and you can feel great about supporting an awesome cause!"
+	"donation drive for the Racer Retirement Fund going! We just need a few more monthly donors to sign up in order to hit our goal for this hour, we're almost there!\n\n Every leaf you donate goes towards planting brand new lettuce fields that are being set up to feed older snails that never made it big in their prime and could use a stable source of lettuce in their later years. It's a good cause, right? Of course it is!\n\n Signing up is easy, just give us a call or visit us on the snailernet. It'll only take a few minutes of your time, and you can feel good about giving just a few leaves each month, knowing you're helping so many snails in need. All of our lettuce donors are amazing, a big thank you to everyone who's donated or pledged a monthly donation so far!"
+	"merch sale upcoming, and I can see that a lot of people are adding our latest t-shirt and hoodie designs to their wishlists. Did you know we also have those designs on tanktops, shorts, and socks? If you're itching to have it but the t-shirts and hoodies get sold out before you can snag one, there are other ways to have it that are just as comfortable and nice to wear!\n\n You can also get our commemorative glasses, picture frames, wallets, and so much more! There's a lot to explore on the store, guys, and lots of great gift ideas for your friends and family!"
+	"the upcoming Diamond DJ single to get excited about! It's dropping tomorrow and it's one of the most highly anticipated releases this year. I can practically feel everyone holding their breath to see what Diamond DJ's cooked up for us this time!\n\n Want to hear a little sample? We'll be debuting the song tomorrow, but until then, here's a little appetizer to get you excited to tune in!\n\n %(note1)%(note1)%(note1)%(note1)%(note1)%(note1)%(note1)%(note1)%(note1)%(note1)\n\n \f[italic,1]%(TodaysChoice(diamonddjsong))\f[italic,default]\n\n %(note1)%(note1)%(note1)%(note1)%(note1)%(note1)%(note1)%(note1)%(note1)%(note1)"
+	"Q&A with Diamond DJ coming up next week, so make sure that you get your questions in! Want to know %(qa.music), or maybe %(qa.snail)? That's right, if you've got something you've been wondering about, now's your chance to find out because we'll be asking YOUR most burning questions live on the show!\n\n I've seen a lot of folks asking about %(qa.silly), so I'm sure it'll be a fun show whether we get to ask your particular question or not!"
+	"interview with %(TodaysChoice(FamousSnails)) on the horizon, there's just a few more days left to submit your questions and vote on your favorites. We'll be asking the most popular questions live on the air!\n\n It looks like the question that's in the lead right now is %(qa.silly)! Wow, \f[italic,1]tens of thousands\f[italic,default] of you really want to know, hahaha! If you're wondering the same thing, make sure you visit the voting page on the snailernet, or right in our app where you can cast votes and submit questions of your own!"
+	"donation drive for %(TodaysChoice(snailcity)) Hospital going on all week! That's right, %(TodaysChoice(snailcity)) Hospital is going to be launching a shell repair service, and they want it to be absolutely FREE for any snails in need. Isn't that great!?\n\n You can make a real impact in the lives of so many snails in %(TodaysChoice(snailcity)) if you sign up to give TODAY. Any amount is appreciated, but of course, if you can spare a little lettuce each month that'll make the biggest impact!\n\n Signing up is super easy too. You can call us, go on the snailernet, use our app; whatever way you wanna do it, it only takes a few minutes, and you can make so many little snails happy. And if you sign up during this donation drive, we'll even send you one of these cute little patches we had made exclusively for this event! So get out there and be generous, the snails of %(TodaysChoice(snailcity)) need you!"
+	"anniversary for one of our local brands, %(brandanniversary), coming up very soon! We're gonna be having a party here in the studio to celebrate, and we hope you'll join the festivities at home. I'm told there'll also be %(TodaysChoice(brandanniversarydeal)), so get excited for that! I know I am!\n\n It's really great to see a local business doing well, isn't it? And they're such great friends of the show, too. Talk about authentic business owners with an authentic product!"
+	"Mollusk Music meetup happening just a month from today, sign up while there are still slots available! We're gonna be doing the show surrounded by fans and plenty of food to go around, as well as prize drawings and some other fun stuff we've got planned!\n\n Come and see us in person, and meet snail music fans from all over!"
+	"meet-and-greet event with %(TodaysChoice(FamousSnails)) coming up next week, where there will be food and signings and more! If you haven't got anything to be signed, we'll be selling merch there at the event so you don't have to leave empty-handed!\n\n Sign up now to meet one of the greats in person!"
+}
+
+//after this next song I'll tell you more about that (charityevent4)
+charityevent4 : array
+{
+	"Super Snailathon we have going on"
+	"donation drive going on for the Racer Retirement Fund"
+	"upcoming merch sale, where you can get Mollusk Music merch up to 60% off"
+	"new Diamond DJ single that's dropping tomorrow, and I'll even play you a little sample to whet your appetite"
+	"Q&A that we're having with Diamond DJ next week, and how you can get in your questions to be answered"
+	"interview we're going to be doing with %(TodaysChoice(FamousSnails)) in a few days, and how you can vote on what questions you'd like us to ask"
+	"donation drive going on this week for %(TodaysChoice(snailcity)) Hospital's new shell repair program"
+	"anniversary for %(brandanniversary) that's upcoming soon, and what we'll be doing in celebration"
+	"meetup we're going to be having, where you can meet fellow Mollusk Music fans, win prizes, eat great food, and so much more"
+	"meet-and-greet event with %(TodaysChoice(FamousSnails)), which is happening just next week"
+}
+
+// but stick around, we've got that (charityevent5), and we'll have more details for you
+charityevent5 : array
+{
+	"Super Snailathon ongoing"
+	"donation drive for the Racer Retirement Fund ongoing"
+	"upcoming merch sale"
+	"new Diamond DJ single releasing tomorrow"
+	"upcoming Q&A with Diamond DJ where you can get all your burning questions answered"
+	"interview we'll be doing with %(TodaysChoice(FamousSnails)) in a few days"
+	"donation drive going on all week for %(TodaysChoice(snailcity)) Hospital's new shell repair service"
+	"celebration of %(brandanniversary)'s anniversary coming up in a few days"
+	"Mollusk Music meetup coming up next month"
+	"%(TodaysChoice(FamousSnails)) meet-and-greet event next week"
+}
+
+
+MusicStationKeyword : array
+{
+	"MONEY"
+	"GREEN"
+	"LETTUCE"
+	"LEAVES"
+	"HEADS"
+	"NUTRIENTS"
+	"CRUNCH"
+	"SWEET"
+	"CRISP"
+	"STEMS"
+}
+
+safesnailsociety : array
+{
+	"Safe Snail Society"
+	"Supersonic Snail Supporters"
+	"Smiling Snails"
+}
+
+diamonddjsong : array
+{
+	"%(note1)Do double duty, daring, dauntless~%(note2)\n\n %(note1)Don't drag down, diligence demanded~%(note2)"
+	"%(note1)Dance, dance, dance, dreams doubling daily~%(note2)\n\n %(note1)Dance, dance, dance, dawn dares dampen doubts~%(note2)"
+	"%(note1)Doers dutifully drawing deals~%(note2)\n\n %(note1)Delicate dreams dazzle defenders~%(note2)"
+	"%(note1)Dazzling, decadent dreams defeat danger~%(note2)\n\n %(note1)Denial dampened, deluxe ditties drifting divine~%(note2)"
+	"%(note1)Dune diver, delving drier~%(note2)\n\n %(note1)Decoy diner, denied driver~%(note2)"
+	"%(note1)Devil's daring derby, don't delay, don't drown~%(note2)\n\n %(note1)Daring detour drive, ditches dragging down~%(note2)"
+	"%(note1)Disco dreams dazzling~%(note2)\n\n %(note1)Double diamond dashing~%(note2)"
+	"%(note1)Dusty dunes dare drivers~%(note2)\n\n %(note1)Dodgy depths demand delving~%(note2)"
+	"%(note1)Decals displayed, deluxe driving~%(note2)\n\n %(note1)Divine decorations, dazzling dining~%(note2)"
+	"%(note1)Depths delved, dozens demystified~%(note2)\n\n %(note1)Decorations discovered, dynamically displayed~%(note2)"
+	"%(note1)Dreary days done~%(note2)\n\n %(note1)Dawn drags diamonds down~%(note2)"
+	//"%(note1)%(note2)\n\n %(note1)%(note2)"
+}
+
+qa.music
+{
+	"how it got started making music"
+	"why it doesn't take brand deals"
+	"how challenging it finds writing alliterative lyrics"
+	"why it sings instead of racing"
+	"how much time it spends writing each new song"
+	"the deeper meaning of your favorite Diamond DJ song"
+	"how much time it spends listening to music by other snails"
+	"where it gets its musical inspiration from"
+	"how it comes up with inspiring lyrics"
+	"how it comes up with such catchy melodies"
+	"who sings the backup vocals in its songs"
+	"its hobbies outside of music"
+}
+
+qa.racer
+{
+	"what kind of training regimen it follows"
+	"how it weighs speed vs coolness"
+	"how many races it's been in"
+	"what diet it recommends for fellow racers"
+	"how it got into the racing business"
+	"how it decided what leaderboards to compete on"
+	"how it feels about its current ranking on the leaderboards"
+	"how it plans to stay on top of the competition"
+	"whether it races faster when moving in a particular direction"
+	"what its strategy is for maintaining control in tight curves"
+	"how much time it's spent practicing its curves"
+	"how much effort it's put in to improve acceleration"
+	"how much of its style is its own fashion sense and how much comes from its sponsor"
+	"how it would rate its racer name"
+}
+
+qa.snail
+{
+	"how much fan mail it receives daily"
+	"what grades it got in snail school"
+	"if there are any greens it doesn't like"
+	"when its birthday is"
+	"how well it gets along with its sponsor"
+	"its skincare routine"
+	"how it avoids predators"
+	"its tips for maintaining healthy mucus"
+	"how it deals with potholes in its path"
+	"if it's ever gotten stuck because of a stick across the path" // #snailproblems
+	"what snails it looks up to"
+	"whether it's read its own article on Snailipedia"
+	"how it maintains a nice shell curve"
+	"what its favorite radio station is"
+}
+
+qa.silly
+{
+	"what times it's out of the house"
+	"its favorite color"
+	"its favorite pizza topping"
+	"its lettuce card number"
+	"how many pencils it can hold in its mouth at once"
+	"the highest number it can count to"
+	"what color its wallet is"
+	"how much lettuce it consumes in one week"
+	"its favorite word"
+	"its preferred soap scent"
+	"its opinion on hat designs"
+	"its favorite place to relax at home"
+	"how frequently it takes naps"
+	"how much its electricity bill usually is"
+	"how much TV it watches on a daily basis"
+	"whether it prefers cubes or cylinders"
+	"whether it likes soup"
+
+	_they = "they"
+	_them = "them"
+	_their = "their"
+	if _argv[0] == "you"
+	{
+		_they = "you"
+		_them = "you"
+		_their = "your"
+	}
+	"whether it will sing the song %(_they) wrote for it"
+	"if it will sign %(_their) favorite %(poster)"
+	"if it saw %(_them) at its latest concert"
+	"if it remembers %(_them) from that meet-and-greet a few weeks ago"
+}
+
+//Holdable items - stuff that can be signed
+poster
+{
+	"poster"
+	"helmet"
+	"bag"
+	"satchel"
+	"basket"
+	"pair of glasses"
+	"pair of headphones"
+	"hat"
+	"collectible figurine"
+}
+
+brandanniversary
+{
+	TodaysChoice(snailbrandlist)[0,'|']
+}
+
+brandanniversarydeal : array
+{
+	"some new products announced"
+	"a big sale"
+	"some exclusive freebies"
+	"a big party anywhere their products are sold"
+	"some themed poetry readings"
+	"some kind of special announcement"
+	"a slick rebranding"
+	"a themed BBQ"
+	"a flash mob"
+	"an exclusive race with all their biggest supporters competing"
+	"a parade"
+}
+
+//produce / greens
+celery
+{
+	"celery"
+	"broccoli"
+	"spinach"
+	"kale"
+	"arugula"
+	"lettuce"
+	"cabbage"
+	"brussels sprouts"
+}
+
+//it's a little "metal in inappropriate places" isn't it lol
+inmycar
+{
+	"in my car at a traffic light, and all the cars behind me were honking along as I danced to the beat and belted out the chorus at the top of my lungs"
+	"in the produce aisle of the grocery store, and everyone around was watching in awe at my headbanging skills"
+	"down at court to dispute a traffic violation, and I couldn't help but show off my dancing skills to the judge when my song came on" //hmmmmmm
+	"in the middle of a crosswalk, and all the oncoming cars stopped to witness my slick moves and honk to show their support"
+	"out in the middle of a field, belting out the words as loud as I could and bringing joy to the local wildlife"
+	"in my apartment doing a little late night listening, and the neighbors were so enthralled with my singing and dancing they were stomping their feet along to the beat as well"
+}
+
+danceallnight
+{
+	"dance the whole night long"
+	"run all the way to the corner store and back, and still have energy to dance for hours"
+	"stand in line all day to get an autograph from %(ANY(FamousSnails)) and not get tired"
+	"rock out forever and ever%(emdash)or at least until this caffeine wears off"
+	"move my feet so fast I'd fly right up into the sky"
+}
+
+//Paint company
+chromecolors : array
+{
+	"Chrome Colors"
+	"Pastel Palettes"
+	"Vibrant Veneers"
+	"Colorful Coatings"
+	"Extraordinary Exteriors"
+	"Glitzy Gloss"
+	"Fantastic Flats"
+	"Marvelous Mattes"
+	"Luxurious Layers"
+	"Amazing Acrylics"
+}
+
+betterrustprotection : array
+{
+	// SRAND(TodaysSeed)
+	// _num = RAND(10) + 1
+	// _num = TOSTR(_num)
+	// SRAND(TodaysSeed)
+	// if RAND(2) == 0; _num += "0"
+	//I think SRAND might mess up other stuff...
+
+	_num = TodaysChoice((1,2,3,4,5,6,7,8,9,10))
+	_suffix = TodaysChoice(('','0','0','5','5'))
+	_num = TOSTR(_num) + _suffix
+
+	//OH GOD I'M IN A/AN HELL
+	_a = "a"
+	case _num
+	{
+		when "8", "11", "80", "85"; _a = "an"
+	}
+
+	"%(_num)% better protection against rust"
+	"%(_num)% less impact on the environment"
+	"%(_num)% fewer materials used"
+	"%(_a) %(_num)% reduction in weight"
+	"%(_num)% better vibes"
+	"%(_num)% less odor"
+	"%(_num)% less drying time"
+	"%(_num)% less stickiness"
+	"%(_num)% smoother texture for less drag"
+	"%(_num)% reduced friction"
+	"%(_a) %(_num)% cleaner manufacturing process"
+	"%(_num)% better protection against viruses"
+	"%(_num)% fewer fumes"
+	"%(_num)% improved waterproofing"
+	"a whole new range of scents to choose from"
+	"%(_num)% better protection against birds"
+	"%(_num)% improved staying power, to keep your color vibrant for longer"
+	"%(_num)% less confusing color names"
+	"a completely revamped naming scheme to make them sound fancier"
+	"the ability to scratch the dried paint to make it give off a scent"
+	//"%(_num)% "
+}
+
+newsetofwheels
+{
+	"shiny set of wheels"
+	//"helcome" //.....?????
+	"chunky helmet"
+	"sturdy sling bag"
+	"pair of stylish sunglasses"
+	"ultra-fine-grit shell polish" //hyphens are dumb
+	"fancy saddle"
+	"new lineup of trucker hats"
+	"powerful new engine"
+	"shiny thing over here" //he doesn't know what it is, it's not fast
+	"new lineup of paints"
+	"collection of fancy ribbons"
+}
+
+//theme|commment\n\n start of response from blanca
+aquaticthemed
+{
+	"aquatic themed|I'm seeing a lot of shells, seaweed, and bubbles. I think you could make a nice ""mermaid"" or ""seafloor"" look with these!\n\n You certainly could"
+	"space themed|Look at all those little asteroids, planets, moons... You've got a whole universe here!\n\n You certainly do"
+	"fire themed|A large variety of flame shapes, with a really bold style. I can practically feel the heat coming off of them!\n\n You really can"
+	"lightning bolt|Big bolts, large bolts, medium bolts; this sticker pack has it all!\n\n Exactly right"
+	"snail themed|You've got a big snail on each sticker sheet, and a bunch of mini stickers to decorate its shell with! Isn't that cute?\n\n It really is"
+	"special radio station|Look, I see the logo for Mollusk Music here, as well as Speed of Sound Radio... And look, it's us!\n\n I don't know about you, but I'm flattered"
+	"produce themed|They look so lifelike, you could almost convince me that these are edible. Are they really just stickers!?\n\n They sure are" //lettuce themed or produce themed...
+	"shell wash|Sponges, soap bubbles, and are these long white strips meant to mimic the shiny spots you get after a premium wax?\n\n That's right" //cheating.......................
+	"money themed|I see gold plated lettuce in both heads and leaves, and glittery gold trim you can put around the edges of your snail's shell. Isn't that luxurious! What a way to communicate to your competitors that you've got greens to burn.\n\n That's right, and I hear there's real gold leaf included in each sticker"
+	//"needle themed|What an astonishing variety of needles. I see sewing needles, crochet needles, medicinal needles... Any kind of needle you can think of, it's here!\n\n Exactly right"
+}
+
+//Brand Name|what they're known for
+stickystickers
+{
+	"Sticky Stickers|you know they'll stick firmly to your snail's shell and not peel off for a long time"
+	"Plentiful Peels|you really get a lot of stickers on each sheet"
+	"Sticky Sparkles|they have that mesmerizing sparkle effect that will make you lose track of time as you stare at them for hours"
+	"Sticker Smells|you can of course gently scratch them for fun scents"
+	"Double Duty|they also have a cute design on the back of each sticker, which only you and your snail will know about"
+	"Vibrant Visuals|you know they have an astonishing depth to their colors"
+	"Deluxe Decals|you know these are a premium product, resistant to tears, stains, and jealous competitors trying to peel them off your shell"
+	"Cute Clings|you know they'll make your snail irresistably adorable"
+	"Bumper Banners|you know they can go through a lot before they start showing signs of wear and tear"
+	"Perfect Pictures|you know they've got an astonishing amount of detail despite the tiny size"
+}
+
+//NO MATTER HOW MANY OF THESE I MAKE I NEVER HAVE JUST THE RIGHT ONE FOR THE NEXT TIME I NEED IT.........
+boxfans
+{
+	"sunglasses"
+	"helmets"
+	"sets of tires"
+	"box fans"
+	"sling bags"
+	"radio antennas"
+	"baskets"
+	"engines"
+	"assorted nuts and bolts"
+	"shell wraps"
+	"shell stickers"
+	"shell decals"
+	"saddles"
+	"eyepatches"
+	"rockets"
+	"spoilers"
+}
+
+ihopeenjoying
+{
+	"I hope they're enjoying their purchase!"
+	"Feedback is important!"
+	"I remember being excited for these!"
+	"Customer comments are always welcome!"
+	"These were one of my favorites lately!"
+	"I'm always happy to answer questions for an interested buyer!"
+	"I'm always happy to help a potential customer make an informed purchase!"
+}
+
+whysostinky
+{
+	"Why so stinky!?"
+	"How assemble???"
+	"Can eat it??"
+	"How many calorie?"
+	"Crashed!!! Refund???"
+	"Why exist??"
+	"Taste bad!! Why!?"
+	"Did not make top racer. Scam!?"
+	"Which direction should it face??"
+	"Resist electric shocks??"
+	"Help with reaching top shelf of fridge??"
+}
+
+remotecontrol
+{
+	"remote control"
+	"telephone"
+	"keyboard"
+	"lamp"
+	"waste disposal"
+	"light switch"
+	"garage door opener"
+	"front door lock"
+	"fax machine"
+	"ceiling fan"
+	"ice dispenser"
+	"water cooler"
+	"DVD player"
+}
+
+carrots
+{
+	"carrots"
+	"radishes"
+	"cucumbers"
+	"bell peppers"
+	"limes"
+	"lemons"
+	"kiwis"
+	"ginger"
+	"garlic"
+	"potatoes"
+	"bananas"
+}
+
+starshaped
+{
+	"star shaped"
+	"shell shaped"
+	"circular"
+	"tire shaped"
+	"bubble shaped"
+	"oval shaped"
+	"lettuce shaped"
+	"rectangular"
+	"flame shaped"
+	"bread shaped"
+	"fruit shaped"
+	"dinosaur shaped"
+	"fish shaped"
+	"racecar shaped"
+	"checkered flag"
+}
+
+pelletsdemonstration : array
+{
+	"Perry's Perky Pellets|Those cylinders sure are easy to swallow!|Safety is important, after all; I wouldn't want to risk my darling snails choking on their food!|and cylindrical pellets have a full 360%(degrees) to examine!"
+	"Chow Cubes|Those cubes have nice, crunchy corners, for maximum snail enjoyment!|The stackability alone is a huge benefit that helps them fit into our lifestyle!|and Chow Cubes have 6 great angles to look at!"
+}
+
+//Get a quick index for other functions to do with weather comments...
+//Damn, do we want to make sure this changes to something new every day, tho? Maybe I'd be better off handling it in boot. Something to consider... TODO
+// TodaysWeather
+// {
+	// TodaysChoice((0,1,2,3,4,5,6))
+// }
+
+MakeWeather
+{
+	_types = (0,1,2,3,4,5,6)
+
+	if !ISVAR("Weather.Yesterday"); Weather.Yesterday = ANY(_types)
+	else; Weather.Yesterday = Weather.Today
+
+	if !ISVAR("Weather.Today"); Weather.Today = ANY(_types)
+	else; Weather.Today = Weather.Tomorrow
+
+	//Currently I don't plan to make it avoid duplication... but if I change my mind that has to happen here
+	Weather.Tomorrow = ANY(_types)
+}
+
+//for debug purposes
+WeatherDisplay
+{
+	"\_q\![no-autopause]Yesterday: %(Weather[Weather.Yesterday])\nToday: %(Weather[Weather.Today])\nTomorrow: %(Weather[Weather.Tomorrow])"
+}
+
+Weather : array
+{
+	"Sunny"
+	"Cloudy"
+	"Rainy"
+	"Wormy"
+	"Sneezy" //allergy day
+	"Electric" //batteries charge themselves, electronics go weird
+	"Psionic storm" //fake, but snails claim slugs can read minds and slugs claim snails can read minds
+}
+
+//Name, avg temp
+CityTemps : array
+{
+	"Snail City,80"
+	"Snailopolis,76"
+	"Snailville,78"
+	"New Snail City,82"
+	"Old Snail City,84"
+	"Snailtopia,79"
+	"Snailsburg,73"
+	"Snailtown,75"
+	"Snailton,75"
+	"Snailover,72"
+	"Snailborough,83"
+	"Snailford,82"
+	"Snailshire,73"
+	"Snailhill,78"
+	"Snail Pointe,71"
+	"East Snailsgrad,70"
+	"West Snailsgrad,70"
+	"North Snailsbury,71"
+	"South Snailsbury,74"
+	"Snailham,68"
+	"Snailscester,67"
+	"Snailsby,70"
+	"Snailstead,73"
+}
+
+TodaysTemp
+{
+	_i = _argv[0]
+	_city = CityTemps[_i][0]
+	_base = TOINT(CityTemps[_i][1])
+
+	_weather = 0
+	case Weather.Today
+	{
+		when 0; _weather += 15 //Sunny
+		when 1; _weather -= 10 //Cloudy
+		when 2; _weather -= 20 //Rainy
+		when 3; _weather -= 7 //Wormy - I imagine it's a bit damp/cool for this to happen...
+		//when 5; _weather += 5 //If allergens are coming out it's maybe warming up a little? But it could also be breezy...
+		//Electric, sneezy, and psionic storm get no adjustment
+	}
+
+	/*
+	Pick a number to vary the temp by from -5 to 5
+	Pick a DIFFERENT NUMBER per city (using the index)
+	but keep the number the same each day (using the daily seed)
+	*/
+	_variance = 0
+	_opts = (-5,-4,-3,-2,-1,0,1,2,3,4,5)
+	_cityseed = _i + STRLEN(_city) + _base //IN THEORY it should be a unique-ish number for each city. Or at least, there should be no obvious correlations, like city name length or the position in the list
+	//do i want to add the current hour to the mix so the temps change hourly...? hm. then they would feel random which isn't great, but i mean... i also don't expect you to see every temp every day, so. enh, think that's a pass...
+	_variance = _opts[(TodaysSeed + _cityseed) % ARRAYSIZE(_opts)]
+
+	_output = _base + _weather + _variance
+	if _output == 70 - 1; _output++ //suffer :relieved:
+	_output
+	//"%(_output) (base: %(_base), weather: %(_weather), variance: %(_variance))"
+}
+
+//for debug purposes
+TempsDisplay : all
+{
+	"\b[4]\_q\![set,autoscroll,disable]\![no-autopause]"
+	"%(Weather[Weather.Today])\n\n"
+	for _i = 0; _i < ARRAYSIZE(CityTemps); _i++
+	{
+		"%(SnailCities[_i]): %(TodaysTemp(_i))°F\n"
+	}
+	"\x"
+}
+
+SnailCities : array
+{
+	foreach CityTemps; _city
+	{
+		_city[0]
+	}
+}
+
+OnTrafficUpdateName
+{
+	//Index will be included with the embed tag, therefore, if you repeat the dialogue it will just increment it again. Should be nbd. As long as you can only repeat the previous dialogue lol. If you're messing with script log you're on your own
+	_index = TOINT(reference0)
+
+	TrafficUpdateIndex = _index + 1
+	if TrafficUpdateIndex >= ARRAYSIZE(SnailCities); TrafficUpdateIndex = 0
+
+	SnailCities[_index]
+}
+
+//Embed tag so that we don't increment through the list without meaning to, but using this index so that it doesn't increment when the dialogue is repeated either... what a pain lol
+TrafficCity
+{
+	"\![embed,OnTrafficUpdateName,%(TrafficUpdateIndex)]"
+}
+
+WeeksHarvestIndex
+{
+	//Idk how many options I want, but just to sketch out the code...
+	void SRAND("%(yearweek)%(year)") //don't remember if this takes a string or an int? update later when find out
+	RAND(5) //0-6, adjust when i find out how many conditions we want lol TODO
+}
+
+badtemp
+{
+	"%(RAND(9) + 1),%(RAND(10))%(RAND(10))%(RAND(10)),%(RAND(10))%(RAND(10))%(RAND(10))"
+}
+
+besttoavoid
+{
+	_snailcity = _argv[0]
+
+	"looks like it'd be best to avoid %(_snailcity) for a while, folks! They're getting cooked right now at a searing %(badtemp)°F! That's gonna be a lot of escargot."
+	"folks if you're in %(_snailcity) currently, well, good luck! Looks like it's a balmy %(badtemp)°F there right now, so I know I'll be keeping my distance!"
+	"%(_snailcity) is getting roasted right now at a shocking %(badtemp)°F! That'll give you a tan for sure!"
+	"get this, %(_snailcity) is currently showing as %(badtemp)°F! That's got to be a record high, no doubt about it."
+	"it looks like %(_snailcity) has moved to the surface of the sun, because our equipment is reading %(badtemp)°F!"
+}
+
+fromabbq
+{
+	_snailcity = _argv[0]
+
+	"from a BBQ that got out of hand"
+	"from an informal race that ended when all the competitors crashed into each other and exploded, sending smoke into the sky"
+	"from a plane drawing a snail in the sky"
+	"a bit of cotton stuck to our camera lens"
+	"some condensation on the window of our weather station out there"
+	"a massive flock of birds"
+	"part of an old picture of %(_snailcity) that somehow got put in front of our live feed"
+	"a regular cloud with no storms inside" //HMMMMMMM
+	"an illusion created by a magician currently performing a show" //suspect..........
+	"a baby cloud and someone wrote the wrong units when measuring it"
+	//"here to say hello, and it'll be heading off to the mountains soon" //hmmmmmm couldn't resist putting it down lol
 }

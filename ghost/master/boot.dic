@@ -66,6 +66,11 @@ OnFirstBoot : all
 	RadioScan = 3600 //1hr default scan time
 	RadioScanTime = GETSECCOUNT
 	
+	MakeTodaysSeed
+	MakeWeather
+	
+	TrafficUpdateIndex = RAND(ARRAYSIZE(SnailCities))
+	
 	
 	
 	"\1\s[-1]\0\s[0]"
@@ -84,6 +89,10 @@ OnInitialize
 		if RadioScan == -1 && RadioStation != "Off"; RadioStationChange //-1 means that it is to change on boot
 		if GETSECCOUNT > CurrentSnail.LastOut + 600; CurrentSnail.Cleanliness = 0 //10 minute reset
 		CurrentSnail.LastOut = GETSECCOUNT //this really only matters in the case of crashes i think...
+		MakeTodaysSeed
+		MakeWeather
+		
+		TrafficUpdateIndex = RAND(ARRAYSIZE(SnailCities)) //It almost makes me wonder, if you go off the weather station for a while, should this re-randomize... hm
 	}
 	
 	if !ISVAR("CleaningProductsPurchased"); CleaningProductsPurchased = 0

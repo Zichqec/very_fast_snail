@@ -1,6 +1,7 @@
 ItemDetails : array
 {
 	//Category,Name,Unlock condition (1 if always available),Price,Speed,Coolness,Explosiveness
+	//NOTE: IF THE STATS (INCLUDING PRICE) CHANGE, CHECK THE SHOPPING CHANNEL DIALOGUES AND MAKE SURE THEY STILL MATCH UP THERE
 	"Body Paint,Beige Basic,1,20,0,0,0"
 	"Body Paint,Green Basic,1,20,0,0,0"
 	"Body Paint,Olive Basic,1,20,0,0,0"
@@ -117,7 +118,7 @@ ItemDetails : array
 	"Hardware,Sling Bag,1,120,-1,1,0"
 	"Hardware,Hot Rod Exhaust,1,400,3,0,0"
 	"Hardware,Radio Antenna,1,90,0,2,0"
-	"Hardware,BIG ROCKET,1,3000,100,-4,7"
+	"Hardware,BIG ROCKET,1,3000,100,-4,7" //normal speed here is 10, i keep changing it for testing
 	
 	"Masks,Camo Bandanna,1,50,0,1,0"
 	"Masks,Empty Wicker Basket,1,20,0,0,0"
@@ -135,7 +136,7 @@ ItemDetails : array
 	"Masks,Silver Round Glasses,1,2020,3,-5,-3"
 	"Masks,White Round Glasses,1,2020,3,-5,-3"
 	"Masks,Shades,1,1500,0,10,3"
-	"Masks,Cigarette,(AFTER LOSING FIRST RACE),1500,0,11,(IMMEDIATELY EXPLODES)"
+	"Masks,Cigarette,(AFTER LOSING FIRST RACE),1500,0,11,(IMMEDIATELY EXPLODES)" //TODO i wanna make this be an infinity symbol lol
 	
 	"Hats,Red Helmet,1,500,0,-1,-8"
 	"Hats,Orange Helmet,1,500,0,-1,-8"
@@ -188,5 +189,5 @@ ItemDetails : array
 	"Add-ons,Box Fan,1,150,2,0,0"
 	
 	"Special Effects,Vibrating,1,100,5,2,7"
-	"Special Effects,Moonwalk,1,100,-5,8,10"
+	"Special Effects,Moonwalk,1,100,-5,8,10" //TODO do we want another name? will have to change the related shopping channel dialogue as well if so
 }
