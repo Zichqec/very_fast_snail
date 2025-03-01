@@ -61,15 +61,22 @@ OnAiTalk
 		
 		if RadioStation != "Off"
 		{
+			_station = REPLACE(RadioStation," ","_")
 			if _pick == "Radio" || (_pick == "Ad" && RadioStation == "Shopping") //No ads on shopping channel
 			{
-				_station = REPLACE(RadioStation," ","_")
 				LastTalk = EVAL("RadioStation.%(_station)")
 			}
 			elseif _pick == "Ad"
 			{
 				if RadioStation == "Pirate_Radio"; LastTalk = Ads.Pirate_Radio
-				else; LastTalk = Ads.General
+				else
+				{
+					//TODO i might want to make this more sophisticated than just a RAND...... ad dialogue tape!? oh god how deep does it go
+					//Currently expecting a ratio of 50 general ads to 10 station-specific sponsorship reads...
+					//Of course, it could also be interesting if you occasionally hear ad reads from other stations? that happens on the real radio at least some of the time. but idk, might be nicer to keep them separate... does it feel messy or does it feel like advertising other stations
+					if RAND(6) == 0; LastTalk = EVAL("Ads.%(_station)")
+					else; LastTalk = Ads.General
+				}
 			}
 			elseif _pick == "Snail" || (_pick == "Poem" && CurrentSnail.PersonalityType == "Silent")
 			{
@@ -78,7 +85,7 @@ OnAiTalk
 				_personality = REPLACE(CurrentSnail.PersonalityType," ","_")
 				
 				//Rare, mixed in with basic alliteration dialogues... this way no matter how many dialogues we add we can mix them in at a nice rate. Although in this case, nonoverlap of any kind does not apply... might adjust later
-				if _personality == "Character_Break" 
+				if _personality == "Character_Break"
 				{
 					if RAND(10) >= 3; _personality = "Basic" 
 				}
@@ -134,12 +141,6 @@ ArrayShuffle
 		_array[LSO] = IARRAY
 	}
 	_output
-}
-
-RandomTalk : nonoverlap_pool
-{
-	parallel RadioTalk
-	parallel SnailTalk
 }
 
 RadioTalk : array

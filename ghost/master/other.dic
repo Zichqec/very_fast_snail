@@ -1560,10 +1560,14 @@ AIgraphArray : array
 	_asmr = ARRAYSIZE(ASMR.dialogues.timgulls) + ARRAYSIZE(ASMR.dialogues.sylance) //These ones are weird cuz they have a weird setup
 	_pirate_radio = OUTPUTNUM("RadioStation.Pirate_Radio")
 	
-	//Page 7:
+	// //Page 7:
 	_general_ads = OUTPUTNUM("Ads.General")
-	_pirate_ads = OUTPUTNUM("Ads.Pirate_Radio")
-	//Dummy value here also until/unless this is expanded
+	_racing_news_ads = OUTPUTNUM("Ads.Racing_News")
+	_weather_ads = OUTPUTNUM("Ads.Weather")
+	_music_ads = OUTPUTNUM("Ads.Music")
+	_variety_show_ads = OUTPUTNUM("Ads.Variety_Show")
+	_asmr_ads = OUTPUTNUM("Ads.ASMR")
+	_pirate_radio_ads = OUTPUTNUM("Ads.Pirate_Radio")
 	
 	//Page 0:
 	_all_user = _user.norace + _user.inrace
@@ -1577,7 +1581,7 @@ AIgraphArray : array
 	
 	_all_stations = _racing_news + _weather + _shopping + _music + _variety_show + _asmr + _pirate_radio
 	
-	_all_ads = _general_ads + _pirate_ads
+	_all_ads = _general_ads + + _racing_news_ads + _weather_ads + _music_ads + _variety_show_ads + _asmr_ads + _pirate_radio_ads
 	
 	_all = _all_user + _all_announcer + _all_alliterative + _all_non_alliterative + _all_alliterative_poetry + _all_non_alliterative_poetry + _all_stations + _all_ads
 	//Currently available dialogues? - TODO do this later lol, good for perspective
@@ -1595,17 +1599,32 @@ AIgraphArray : array
 		
 		if RadioStation != "Off"
 		{
-			if RadioStation == "Pirate_Radio"; _currently_available += _pirate_ads
-			elseif RadioStation != "Shopping"; _currently_available += _general_ads
+			if !(RadioStation == "Shopping" || RadioStation == "Pirate_Radio"); _currently_available += _general_ads
 			//Shopping channel has no ads, at least, as of now...
 			
 			case RadioStation
 			{
-				when "Racing_News"; _currently_available += _racing_news
-				when "Weather"; _currently_available += _weather
+				when "Racing_News"
+				{
+					_currently_available += _racing_news
+					_currently_available += _racing_news_ads
+				}
+				when "Weather"
+				{
+					_currently_available += _weather
+					_currently_available += _weather_ads
+				}
 				when "Shopping"; _currently_available += _shopping
-				when "Music"; _currently_available += _music
-				when "Variety_Show"; _currently_available += _variety_show
+				when "Music"
+				{
+					_currently_available += _music
+					_currently_available += _music_ads
+				}
+				when "Variety_Show"
+				{
+					_currently_available += _variety_show
+					_currently_available += _variety_show_ads
+				}
 				when "ASMR"
 				{
 					_jockeys = ("Tim Gulls","Sy Lance")
@@ -1617,7 +1636,11 @@ AIgraphArray : array
 						when "Sy Lance"; _currently_available += ARRAYSIZE(ASMR.dialogues.sylance)
 					}
 				}
-				when "Pirate_Radio"; _currently_available += _pirate_radio
+				when "Pirate_Radio"
+				{
+					_currently_available += _pirate_radio
+					_currently_available += _pirate_radio_ads
+				}
 			}
 			
 			
@@ -1731,21 +1754,26 @@ AIgraphArray : array
 	elseif _page == 7
 	{
 		"%(_general_ads),General Ads,%(GraphDiff(_general_ads,50))"
-		"%(_pirate_ads),Pirate Radio Ads,%(GraphDiff(_pirate_ads,50))"
-		"0,Dummy value,0"
+		"%(_racing_news_ads),Racing News Ads,%(GraphDiff(_racing_news_ads,10))"
+		"%(_weather_ads),Weather Ads,%(GraphDiff(_weather_ads,10))"
+		"%(_music_ads),Music Ads,%(GraphDiff(_music_ads,10))"
+		"%(_variety_show_ads),Variety Show Ads,%(GraphDiff(_variety_show_ads,10))"
+		"%(_asmr_ads),ASMR Ads,%(GraphDiff(_asmr_ads,10))"
+		"%(_pirate_radio_ads),Pirate Radio Ads,%(GraphDiff(_pirate_radio_ads,50))"
+		//"0,Dummy value,0"
 	}
 	else //Page 0
 	{
-		"%(_all),All,%(_currently_available)"
-		"%(_all_user),User"
-		"%(_all_announcer),Announcer"
+		"%(_all),All" //,%(_currently_available)"
+		"%(_currently_available),Currently available"
+		"%(_all_user + _all_announcer),User + Announcer"
+		//"%(_all_announcer),Announcer"
 		"%(_all_alliterative),Alliterative"
 		"%(_all_non_alliterative),Non-alliterative"
 		"%(_all_alliterative_poetry),Allit poetry"
 		"%(_all_non_alliterative_poetry),Non-allit poetry"
 		"%(_all_stations),Radio stations"
 		"%(_all_ads),Ads"
-		//"%(_currently_available),Currently available"
 	}
 }
 

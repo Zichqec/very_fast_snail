@@ -600,7 +600,99 @@ Ads.General : nonoverlap_pool
 	//Perry's Perky Pellets & Chow Cubes - idk if we should write more for them or if the existing chain is enough
 }
 
+Ads.Racing_News : nonoverlap_pool
+{
+	"\1\b[22]I'm Ringo Racetrack and I endorse something or other"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+}
+
+Ads.Weather : nonoverlap_pool
+{
+	"\1\b[22]I'm Haley Storme and I endorse something or other"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+}
+
+Ads.Music : nonoverlap_pool
+{
+	"\1\b[22]I'm Arya Lissenin and I endorse something or other"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+}
+
+Ads.Variety_Show : nonoverlap_pool
+{
+	"\1\b[22]I'm The Cheetah and I endorse something or other"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+}
+
+//This can be both jockeys together. Should it get double ads...? hm. depends how easy they are to write lol
+Ads.ASMR : nonoverlap_pool
+{
+	_candidates = ASMR.ad_reads
+	
+	//This setup is so that we can avoid writing all those tags for each ASMR dialogue, but also so that it doesn't break chains...
+	for _i = 0; _i < ARRAYSIZE(_candidates); _i++
+	{
+		_candidates[_i] = "\1\b[22]\f[italic,1]\f[color,disable]" + _candidates[_i]
+		if "\e" _in_ _candidates[_i]; _candidates[_i] = REPLACE(_candidates[_i],"\e","\f[color,default]\f[italic,default]\e")
+		else; _candidates[_i] += "\f[color,default]\f[italic,default]"
+	}
+	parallel _candidates
+}
+
+ASMR.ad_reads : array //TODO when this was accidentally set to nonoverlap_pool (with one dialogue), it was causing SSP to freeze when opening the aigraph. Maybe try that again to find out if there's a possible issue with the aigraph? if it was an infinite loop, it should have hit the loop limit...
+{
+	//Tim Gulls
+	//"Crunchy leaves just for you... Ask for the best from your sponsor."
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	
+	//Sy Lance
+	"Hey, it's Sy Lance. I got you this new sling bag from Harvey's Snail Emporium. Try it on.\n\n Swish.\n\n Clink clink.\n\n There you are, it fits like a glove. Imagine how much lettuce you could fit in here." //TODO I feel it needs the name mention and to be clearly an ad, but I'm not sure I've quite dialed it in
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+}
+
 Ads.Pirate_Radio : nonoverlap_pool
 {
-	"\1\b[20]hi i'm sluggy mcsluggerson and i endorse SlugSoap"
+	"\1\b[22]hi i'm sluggy mcsluggerson and i endorse SlugSoap"
 }
