@@ -19,7 +19,7 @@ OnSakuraMenu : all
 	
 	"\![*]\q[Garage,OnEquipMenu,Body Paint]  \![*]\q[Racer ID,OnRacerID,%(CurrentSnail.ID),""%(CurrentSnail.Name)"",OnSakuraMenu]\n"
 	"\![*]\q[Snail Training,OnSnailTraining]  \![*]\q[Snail Wash,OnSnailWashMenu]\n"
-	"\![*]\q[Photo Gallery,OnPhotoGallery]\n"
+	"\![*]\q[Photo Gallery,OnPhotoGallery]  \![*]\q[Roster,OnRoster,initial]\n"
 	"\n"
 	
 	"\![*]\q[Lettuce Shop,OnLettuceShop]\n\n"
@@ -592,6 +592,24 @@ OnPhotoGallery.SwitchSnail
 	LoadSnail(_filename)
 	
 	"\C%(RefreshDressups)%(CleanlinessCheck)\![raise,OnRacerID,%(_id),""%(_name)"",%(_frommenu)]"
+}
+
+OnRoster
+{
+	//TODO all of this lol
+	/*
+	
+	The plan is... Whenever this menu is initially opened, run through all the snail files and grab any details we might want to sort by
+	Arrange them all in a menu where a few key stats can be viewed at a time
+	Allow the user to choose what stat to sort by, and MAYBE what stats are showing on each line?
+	The other stats can be shown on hover or click
+	Some things, such as their personality, can be revealed after obtaining a certain item
+	I think I want to just save all the stats to some big global arrays, and use ASORT right on them with the index method i figured out before... and they can be deleted when the ghost closes
+	Um... and if you click the snails you get full stats + can change to them? hm. Unsure how I want the mechanics there to work because it'd be nice not to have to click through, but... eh, i'm sure it's fine. I just gotta sort out how this differs from the gallery, you know?
+	I think most likely the snail names have to be on a separate line from the stats they go with lol. I'll have to be careful how I arrange this, but the names get long, so. it's not gonna be all one line. Can use highlighting to my advantage here
+	I think it will mostly just be a massive pain to set up all the globals and how it's going to sort them and stuff. but once that's dealt with... then it gets a lot easier lol. i hope
+	
+	*/
 }
 
 OnLettuceShop : all
