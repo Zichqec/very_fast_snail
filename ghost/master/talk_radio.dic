@@ -550,9 +550,9 @@ Ads.General : nonoverlap_pool
 	"\1\b[22]CAN YOUR SNAIL SHELL PRESS 30 ADORING FANS ON ITS BACK AT ONCE? IF NOT, \f[bold,1]WHY NOT!? \f[bold,default]GET IT A MEMBERSHIP AT JIM'S GYM TODAY AND \f[bold,1]FIX THAT!\f[bold,default]\n\n STRONG SNAILS WIN RACES, STRONG SNAILS GET FANS, \f[bold,1]STRONG SNAILS BRING IN THE LETTUCE!\f[bold,default]"
 	
 	//Perfect Paint Job - where every coat is personal (?)
-	//"\1\b[22]"
-	//"\1\b[22]"
-	//"\1\b[22]"
+	"\1\b[22]Red. Blue. Yellow.\n\n Every snail wants a stunning shell.\n\n Gloss, or matte? Plain... or \f[italic,1]stripes?\f[italic,default]\n\n Give them the chance to express their innermost desires boldly, and show them off to the world.\n\n \f[italic,1]Perfect Paint Job\f[italic,default]. Where every coat is personal."
+	"\1\b[22]A glossy sheen. Color with fabulous depth. Brilliance in every stroke.\n\n Personalized patterns. Thousands of options. A custom-made delight.\n\n Your snail deserves the best to express itself.\n\n \f[italic,1]Perfect Paint Job\f[italic,default]. Where every coat is personal."
+	"\1\b[22]What will it be? Spots, speckles, stripes?\n\n Perhaps you'd like a blend of all three?\n\n Or... perhaps you like the bold confidence evoked by a solid color shell? We have many high quality paints for a stunning solid color look.\n\n \f[italic,1]Perfect Paint Job\f[italic,default]. Where every coat is personal."
 	
 	//Power Pistons - the power you need to reach the finish line, first time every time.
 	//"\1\b[22]"
@@ -569,8 +569,8 @@ Ads.General : nonoverlap_pool
 	//"\1\b[22]"
 	//"\1\b[22]"
 	
-	//Snailville Auction House - everything you could ever want, and then some!
-	//"\1\b[22]"
+	//Snailville Auction House - everything you could ever want, and then some! - does it feel too much like harvey's snail emporium? hmm
+	//"\1\b[22]Everyone needs snail goods these days. Whether you're a sponsor, a food critic, or just an ordinary fan, you need snail goods, and you need them at competitive prices.\n\n At \f[italic,1]Snailville Auction house\f[italic,default], we've got everything you could ever want, and then some!"
 	//"\1\b[22]"
 	//"\1\b[22]"
 	
