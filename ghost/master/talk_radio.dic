@@ -552,12 +552,12 @@ Ads.General : nonoverlap_pool
 	//Perfect Paint Job - where every coat is personal (?)
 	"\1\b[22]Red. Blue. Yellow.\n\n Every snail wants a stunning shell.\n\n Gloss, or matte? Plain... or \f[italic,1]stripes?\f[italic,default]\n\n Give them the chance to express their innermost desires boldly, and show them off to the world.\n\n \f[italic,1]Perfect Paint Job\f[italic,default]. Where every coat is personal."
 	"\1\b[22]A glossy sheen. Color with fabulous depth. Brilliance in every stroke.\n\n Personalized patterns. Thousands of options. A custom-made delight.\n\n Your snail deserves the best to express itself.\n\n \f[italic,1]Perfect Paint Job\f[italic,default]. Where every coat is personal."
-	"\1\b[22]What will it be? Spots, speckles, stripes?\n\n Perhaps you'd like a blend of all three?\n\n Or... perhaps you like the bold confidence evoked by a solid color shell? We have many high quality paints for a stunning solid color look.\n\n \f[italic,1]Perfect Paint Job\f[italic,default]. Where every coat is personal."
+	"\1\b[22]What will it be? Spots, speckles, stripes?\n\n Perhaps you'd like a blend of all three?\n\n Or... perhaps you like the bold confidence evoked by a solid color shell? We have many high quality paints for a stunning monochrome look.\n\n \f[italic,1]Perfect Paint Job\f[italic,default]. Where every coat is personal."
 	
 	//Power Pistons - the power you need to reach the finish line, first time every time.
-	//"\1\b[22]"
-	//"\1\b[22]"
-	//"\1\b[22]"
+	"\1\b[22]When it comes to racing, we all know that a powerful engine is the most important factor in your snail's speed.\n\n \f[italic,1]Vrrrrooooooommmmm!\f[italic,default]\n\n Don't skimp out. Get the reliable power your snail needs to reach the finish line, first time every time.\n\n \f[italic,1]Power Pistons\f[italic,default]."
+	"\1\b[22]When it comes to converting horsepower to snail power, you want the most efficient engine possible. Sure, there are lots of generic alternatives on the market%(emdash) but only \f[italic,1]Power Pistons\f[italic,default] has the high quality workmanship to ensure you get every bit of speed you pay for, with no mid-race breakdowns or explosions.\n\n Get the reliable power your snail needs to reach the finish line, first time every time.\n\n \f[italic,1]Power Pistons\f[italic,default]."
+	"\1\b[22]When it comes to reliability, nothing beats an original \f[italic,1]Power Pistons\f[italic,default] engine. Hand crafted high-quality workmanship, made to last a lifetime.\n\n Every engine we design goes through extensive testing to ensure it can withstand even the harshest of snail racing conditions. For short races or marathons, in clear skies or inclement weather, whether it's fresh from the factory or has had years of service%(emdash) a%(br)\f[italic,1]Power Pistons\f[italic,default] engine is ready to roar into action at any time.\n\n Get the reliable power your snail needs to reach the finish line, first time every time.\n\n \f[italic,1]Power Pistons\f[italic,default]."
 	
 	//Mollusk Massage - every snail deserves a spa day
 	//"\1\b[22]"
@@ -570,7 +570,7 @@ Ads.General : nonoverlap_pool
 	//"\1\b[22]"
 	
 	//Snailville Auction House - everything you could ever want, and then some! - does it feel too much like harvey's snail emporium? hmm
-	//"\1\b[22]Everyone needs snail goods these days. Whether you're a sponsor, a food critic, or just an ordinary fan, you need snail goods, and you need them at competitive prices.\n\n At \f[italic,1]Snailville Auction house\f[italic,default], we've got everything you could ever want, and then some!"
+	//"\1\b[22]"
 	//"\1\b[22]"
 	//"\1\b[22]"
 	
@@ -593,6 +593,11 @@ Ads.General : nonoverlap_pool
 	"\1\b[22]Have you tried setting up race tracks at home before? It's a real pain, isn't it? They take up so much room, and require a lot of maintenance.\n\n Well let those woes be a thing of the past; our team of scientists has been hard at work developing a new product that can fill the same role without all the drawbacks! Introducing \f[italic,1]Racer Rugs\f[italic,default], a stylish rug with a sleek racetrack design that you can simply lay down on any flat surface.\n\n The rug's markings give your snail a clear guide to follow while it practices its turns and sprints, and cleanup is a breeze! The rug material is resistant to mucus stains, you can use a vacuum cleaner to clean up any dust and debris, and the whole thing is machine washable!\n\n \f[italic,1]Racer Rugs\f[italic,default]. Turn any floor into a practice track."
 	"\1\b[22]Does your livingroom look a little bland? Could you use some new decor, and something to spice up your snail's life?\n\n Then you need \f[italic,1]Racer Rugs\f[italic,default]! These stylish rugs have a track design so your snail can practice any time from the comfort of home, and you won't lose any floor space! If you get creative, you can even place other furniture such as coffee tables in the center of the rug, where they won't cover the track.\n\n \f[italic,1]Racer Rugs\f[italic,default]. Turn any floor into a practice track!"
 	"\1\b[22]You've heard of \f[italic,1]Racer Rugs\f[italic,default], but did you know they actually come in multiple sizes and styles?\n\n Everything from small throw rugs with circular tracks to large rugs with oval tracks that will fill your whole livingroom. We've even got runners with one way sprint tracks on them!\n\n No matter what shape or size of home you have, you're sure to find a rug that you and your snail will love.\n\n \f[italic,1]Racer Rugs\f[italic,default]. Turn any floor into a practice track!"
+	
+	//Either I miscounted or I was counting the chow cubes and stuff? probably that. either way, eh, i'll just slot in another here maybe
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
 	
 	//Any after this point would be extras...
 	
