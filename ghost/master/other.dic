@@ -364,7 +364,14 @@ SaveSnail
 	_dir = FENUM("snail_data/","|")
 	if _dir == ""; void MKDIR("snail_data/")
 	
-	_filename = ToFileNameFormat(CurrentSnail.Name,CurrentSnail.ID)
+	_id = CurrentSnail.ID
+	if ":" _in_ _id
+	{
+		_id = _id[1,':'] //For converting old snails
+	}
+	
+	_filename = ToFileNameFormat(CurrentSnail.Name,_id)
+	LOGGING("_filename: %(_filename)")
 	
 	_file = "snail_data/" + _filename + ".snail"
 	LOGGING("_file: %(_file)")
@@ -379,7 +386,7 @@ SaveSnail
 		LOGGING("====================================================================")
 		LOGGING("====================================================================")
 		//TODO next on this i think i need to deal with the ones that are arrays and also the ones that are new, and then i have to set up the loading function. then i can test this! and hope it doesn't all explode
-		void FWRITE(_file,"ID," + CurrentSnail.ID)
+		void FWRITE(_file,"ID," + _id)
 		void FWRITE(_file,"Name," + CurrentSnail.Name)
 		void FWRITE(_file,"Version," + CurrentSnail.Version)
 		void FWRITE(_file,"DateSponsored," + CurrentSnail.DateSponsored)
@@ -1870,4 +1877,81 @@ GraphDiff
 	_diff = _target - _num
 	if _diff < 0; _diff = 0
 	_diff
+}
+
+
+
+
+ConvertOldSnails
+{
+	foreach SavedSnails.ID; _snail
+	{
+		foreach GETVARLIST("CurrentSnail."); _var
+		{
+			ERASEVAR("_var")
+		}
+		
+		LoadOldSnail(_snail)
+		InitSnailVars
+		SaveSnail
+	}
+}
+
+//For snail conversion
+LoadOldSnail
+{
+	_index = GetSnailIndex(_argv[0])
+	if _index == -1; _index = 0
+	
+	_snaildata = SPLIT(SavedSnails[_index],"|")
+	
+	CurrentSnail.ID = SavedSnails.ID[_index]
+	CurrentSnail.Name = SavedSnails.Name[_index]
+	CurrentSnail.Version = SavedSnails.Version[_index]
+	CurrentSnail.Trait = SavedSnails.Trait[_index]
+	CurrentSnail.TotalRaces = SavedSnails.TotalRaces[_index]
+	CurrentSnail.TotalRaceTime = SavedSnails.TotalRaceTime[_index]
+	CurrentSnail.HighestCoolness = SavedSnails.HighestCoolness[_index]
+	CurrentSnail.TotalCrashes = SavedSnails.TotalCrashes[_index]
+	
+	CurrentSnail.Loadout = SPLIT(SavedSnails.Loadout[_index],"|")
+	CurrentSnail.Notes = SPLIT(SavedSnails.Notes[_index],"|")
+	
+	CurrentSnail.DateSponsored = SavedSnails.DateSponsored[_index]
+	CurrentSnail.Training = SPLIT(SavedSnails.Training,",")
+	if CurrentSnail.Training == "" //This was added in an update so we need to account for if it doesn't exist
+	{
+		CurrentSnail.Training = (0,0,0,0,0,0,0,0,0,0)
+	}
+	else //if it exists make it ints
+	{
+		for _i = 0; _i < ARRAYSIZE(CurrentSnail.Training); _i++
+		{
+			CurrentSnail.Training[_i] = TOINT(CurrentSnail.Training[_i])
+		}
+	}
+	
+	_snailsonality = GenerateSnailsonality(CurrentSnail.Name,CurrentSnail.ID)
+	
+	CurrentSnail.PersonalityType = SavedSnails.PersonalityType[_index]
+	if CurrentSnail.PersonalityType == ""; CurrentSnail.PersonalityType = _snailsonality[0]
+	
+	CurrentSnail.PoetryType = SavedSnails.PoetryType[_index]
+	if CurrentSnail.PoetryType == ""; CurrentSnail.PoetryType = _snailsonality[1]
+	
+	CurrentSnail.RadioPreference = SavedSnails.RadioPreference[_index]
+	if CurrentSnail.RadioPreference == ""; CurrentSnail.RadioPreference = _snailsonality[2]
+	
+	CurrentSnail.AltHobby = SavedSnails.AltHobby[_index]
+	if CurrentSnail.AltHobby == ""; CurrentSnail.AltHobby = _snailsonality[3]
+	
+	CurrentSnail.Cleanliness = SavedSnails.Cleanliness[_index]
+	if CurrentSnail.Cleanliness == ""; CurrentSnail.Cleanliness = 0
+	if GETSECCOUNT > SavedSnails.LastOut[_index] + 600; CurrentSnail.Cleanliness = 0 //10 minute reset
+	CurrentSnail.LastOut = GETSECCOUNT
+}
+
+GetSnailIndex
+{
+	ASEARCH(_argv[0],SavedSnails.ID)
 }
