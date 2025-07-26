@@ -432,6 +432,7 @@ ArrayToSplittableString
 	_output
 }
 
+//TODO there should probably be like... error handling for if loading fails, and also maybe a call to that snail initialization function? hm
 LoadSnail
 {
 	// //Create directory if none exists
@@ -455,16 +456,12 @@ LoadSnail
 	LOGGING("====================================================================")
 	if _o == 1
 	{
-		LOGGING("_o: %(_o)")
 		_toparse = FREAD(_file)
-		LOGGING("_toparse INITIAL: %(_toparse)")
 		
 		if !(_toparse == -1 || STRLEN(_toparse) == 0) //If there is content
 		{
 			_toparse = STRDECODE(_toparse,1,'base64')
-			LOGGING("_toparse DECODED: %(_toparse)")
 			_toparse = SPLIT(_toparse,ENCODE_BR)
-			LOGGING("_toparse SPLIT: %(_toparse)")
 			
 			foreach _toparse; _buff
 			{
