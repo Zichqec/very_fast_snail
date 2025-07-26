@@ -759,7 +759,7 @@ OnMinuteChange
 
 br
 {
-    if SHIORI3FW.BalloonName == "Very Fast Speedway"; "\n"
+    if SHIORI3FW.BalloonName == "Very Fast Speedway"; " \c[char,1]\n"
     else; " "
 }
 
