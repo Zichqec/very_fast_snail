@@ -1888,9 +1888,8 @@ ConvertOldSnails
 	{
 		foreach GETVARLIST("CurrentSnail."); _var
 		{
-			ERASEVAR("_var")
+			ERASEVAR("%(_var)")
 		}
-		
 		LoadOldSnail(_snail)
 		InitSnailVars
 		SaveSnail
