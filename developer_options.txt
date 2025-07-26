@@ -1,2 +1,3 @@
 .gitignore,nonar,noupdate
 .gitattributes,nonar,noupdate
+ghost/master/snail_data/,nonar,noupdate

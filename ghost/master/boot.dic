@@ -103,13 +103,19 @@ InitSnailVars
 	_newsnail = GenerateSnailChoices //If needed
 	if !ISVAR("CurrentSnail.ID"); CurrentSnail.ID = _newsnail[0,C_BYTE1]
 	if !ISVAR("CurrentSnail.Name"); CurrentSnail.Name = _newsnail[1,C_BYTE1]
-	_snailsonality = GenerateSnailsonality(CurrentSnail.Name,CurrentSnail.ID)
+	_id = CurrentSnail.ID
+	if ":" _in_ _id; _id = _id[1,":"] //Handle old snails
+	_snailsonality = GenerateSnailsonality(CurrentSnail.Name,_id)
 	
 	if !ISVAR("CurrentSnail.Version"); CurrentSnail.Version = ghostver
 	if !ISVAR("CurrentSnail.DateSponsored"); CurrentSnail.DateSponsored = "%(year)-%(leadingmonth)-%(leadingday):%(GETSECCOUNT)"
+	LOGGING("====================================================================")
+	LOGGING("CurrentSnail.Number: %(CurrentSnail.Number)")
 	if !ISVAR("CurrentSnail.Number")
 	{
 		TotalSnailsSponsored++
+		LOGGING("Raised")
+		LOGGING("TotalSnailsSponsored: %(TotalSnailsSponsored)")
 		CurrentSnail.Number = TotalSnailsSponsored
 		//untested lol - i think i should do this kind of conversion separately for us...
 		// _num = 1

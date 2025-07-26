@@ -1,3 +1,5 @@
+#define ENCODE_BR '<||>'
+
 OnTranslate
 {
 	_talk = reference0
@@ -364,48 +366,56 @@ SaveSnail
 	_dir = FENUM("snail_data/","|")
 	if _dir == ""; void MKDIR("snail_data/")
 	
-	_filename = ToFileNameFormat(CurrentSnail.Name,CurrentSnail.ID)
+	_id = CurrentSnail.ID
+	if ":" _in_ _id
+	{
+		_id = _id[1,':'] //For converting old snails
+	}
+	
+	_filename = ToFileNameFormat(CurrentSnail.Name,_id)
+	LOGGING("_filename: %(_filename)")
 	
 	_file = "snail_data/" + _filename + ".snail"
 	LOGGING("_file: %(_file)")
 	
 	InitSnailVars
 	
+	_tosave = ""
+	_tosave += "ID,%(_id)" + ENCODE_BR
+	_tosave += "Name,%(CurrentSnail.Name)" + ENCODE_BR
+	_tosave += "Version,%(CurrentSnail.Version)" + ENCODE_BR
+	_tosave += "DateSponsored,%(CurrentSnail.DateSponsored)" + ENCODE_BR
+	_tosave += "Number,%(CurrentSnail.Number)" + ENCODE_BR //TODO new
+	_tosave += "TotalRaces,%(CurrentSnail.TotalRaces)" + ENCODE_BR
+	_tosave += "TotalRaceTime,%(CurrentSnail.TotalRaceTime)" + ENCODE_BR
+	_tosave += "HighestScore,%(CurrentSnail.HighestScore)" + ENCODE_BR //TODO new
+	_tosave += "FastestRaceTime,%(CurrentSnail.FastestRaceTime)" + ENCODE_BR //TODO new
+	_tosave += "HighestCoolness,%(CurrentSnail.HighestCoolness)" + ENCODE_BR
+	_tosave += "TotalCrashes,%(CurrentSnail.TotalCrashes)" + ENCODE_BR
+	_tosave += "LastOut,%(CurrentSnail.LastOut)" + ENCODE_BR
+	_tosave += "TotalOutTime,%(CurrentSnail.TotalOutTime)" + ENCODE_BR //TODO new
+	_tosave += "Training,%(ArrayToSplittableString(CurrentSnail.Training))" + ENCODE_BR
+	_tosave += "Cleanliness,%(CurrentSnail.Cleanliness)" + ENCODE_BR
+	_tosave += "CurrentSpeed,%(CurrentSnail.CurrentSpeed)" + ENCODE_BR //TODO new
+	_tosave += "CurrentCoolness,%(CurrentSnail.CurrentCoolness)" + ENCODE_BR //TODO new
+	_tosave += "CurrentExplosiveness,%(CurrentSnail.CurrentExplosiveness)" + ENCODE_BR //TODO new
+	_tosave += "CarryCapacity,%(CurrentSnail.CarryCapacity)" + ENCODE_BR
+	_tosave += "Trait,%(CurrentSnail.Trait)" + ENCODE_BR
+	_tosave += "PersonalityType,%(CurrentSnail.PersonalityType)" + ENCODE_BR
+	_tosave += "PoetryType,%(CurrentSnail.PoetryType)" + ENCODE_BR
+	_tosave += "RadioPreference,%(CurrentSnail.RadioPreference)" + ENCODE_BR
+	_tosave += "AltHobby,%(CurrentSnail.AltHobby)" + ENCODE_BR
+	_tosave += "FavoriteFamousSnail,%(CurrentSnail.FavoriteFamousSnail)" + ENCODE_BR //TODO new
+	_tosave += "Notes,%(ArrayToSplittableString(CurrentSnail.Notes))" + ENCODE_BR
+	_tosave += "Loadout,%(ArrayToSplittableString(CurrentSnail.Loadout))" //+ ENCODE_BR
+	
+	_tosave = STRENCODE(_tosave,1,'base64')
+	
 	_o = FOPEN(_file,"w")
 	if _o == 1
 	{
-		LOGGING("====================================================================")
-		LOGGING("====================================================================")
-		LOGGING("====================================================================")
-		LOGGING("====================================================================")
 		//TODO next on this i think i need to deal with the ones that are arrays and also the ones that are new, and then i have to set up the loading function. then i can test this! and hope it doesn't all explode
-		void FWRITE(_file,"ID," + CurrentSnail.ID)
-		void FWRITE(_file,"Name," + CurrentSnail.Name)
-		void FWRITE(_file,"Version," + CurrentSnail.Version)
-		void FWRITE(_file,"DateSponsored," + CurrentSnail.DateSponsored)
-		void FWRITE(_file,"Number," + CurrentSnail.Number) //new
-		void FWRITE(_file,"TotalRaces," + CurrentSnail.TotalRaces)
-		void FWRITE(_file,"TotalRaceTime," + CurrentSnail.TotalRaceTime)
-		void FWRITE(_file,"HighestScore," + CurrentSnail.HighestScore) //TODO this is new
-		void FWRITE(_file,"FastestRaceTime," + CurrentSnail.FastestRaceTime) //TODO this is new
-		void FWRITE(_file,"HighestCoolness," + CurrentSnail.HighestCoolness)
-		void FWRITE(_file,"TotalCrashes," + CurrentSnail.TotalCrashes)
-		void FWRITE(_file,"LastOut," + CurrentSnail.LastOut) //TODO this isn't how this one works I don't think...
-		void FWRITE(_file,"TotalOutTime," + CurrentSnail.TotalOutTime) //TODO this is new
-		void FWRITE(_file,"Training," + ArrayToSplittableString(CurrentSnail.Training)) //TODO this is an array
-		void FWRITE(_file,"Cleanliness," + CurrentSnail.Cleanliness)
-		void FWRITE(_file,"CurrentSpeed," + CurrentSnail.CurrentSpeed) //TODO this is new
-		void FWRITE(_file,"CurrentCoolness," + CurrentSnail.CurrentCoolness) //TODO this is new
-		void FWRITE(_file,"CurrentExplosiveness," + CurrentSnail.CurrentExplosiveness) //TODO this is new
-		void FWRITE(_file,"CarryCapacity," + CurrentSnail.CarryCapacity)
-		void FWRITE(_file,"Trait," + CurrentSnail.Trait)
-		void FWRITE(_file,"PersonalityType," + CurrentSnail.PersonalityType)
-		void FWRITE(_file,"PoetryType," + CurrentSnail.PoetryType)
-		void FWRITE(_file,"RadioPreference," + CurrentSnail.RadioPreference)
-		void FWRITE(_file,"AltHobby," + CurrentSnail.AltHobby)
-		void FWRITE(_file,"FavoriteFamousSnail," + CurrentSnail.FavoriteFamousSnail) //TODO this is new
-		void FWRITE(_file,"Notes," + ArrayToSplittableString(CurrentSnail.Notes)) //TODO this is an array
-		void FWRITE(_file,"Loadout," + ArrayToSplittableString(CurrentSnail.Loadout)) //TODO this is an array
+		void FWRITE(_file,_tosave)
 	}
 	void FCLOSE(_file)
 	//_o //output in case of issues opening the file...
@@ -422,6 +432,7 @@ ArrayToSplittableString
 	_output
 }
 
+//TODO there should probably be like... error handling for if loading fails, and also maybe a call to that snail initialization function? hm
 LoadSnail
 {
 	// //Create directory if none exists
@@ -442,37 +453,46 @@ LoadSnail
 	if _argv[1] == "temp"; _var = "TempSnail"
 	
 	_o = FOPEN(_file,"r")
+	LOGGING("====================================================================")
 	if _o == 1
 	{
-		for _buff = FREAD(_file); _buff != -1; _buff = FREAD(_file)
+		_toparse = FREAD(_file)
+		
+		if !(_toparse == -1 || STRLEN(_toparse) == 0) //If there is content
 		{
-			if StartsWith(_buff,"ID,"); EVAL("%(_var).ID = REPLACE(_buff,'ID,','',1)")
-			elseif StartsWith(_buff,"Name,"); EVAL("%(_var).Name = REPLACE(_buff,'Name,','',1)")
-			elseif StartsWith(_buff,"Version,"); EVAL("%(_var).Version = REPLACE(_buff,'Version,','',1)")
-			elseif StartsWith(_buff,"DateSponsored,"); EVAL("%(_var).DateSponsored = REPLACE(_buff,'DateSponsored,','',1)")
-			elseif StartsWith(_buff,"Number,"); EVAL("%(_var).Number = REPLACE(_buff,'Number,','',1)") //new
-			elseif StartsWith(_buff,"TotalRaces,"); EVAL("%(_var).TotalRaces = REPLACE(_buff,'TotalRaces,','',1)")
-			elseif StartsWith(_buff,"TotalRaceTime,"); EVAL("%(_var).TotalRaceTime = REPLACE(_buff,'TotalRaceTime,','',1)")
-			elseif StartsWith(_buff,"HighestScore,"); EVAL("%(_var).HighestScore = REPLACE(_buff,'HighestScore,','',1)") //TODO this is new
-			elseif StartsWith(_buff,"FastestRaceTime,"); EVAL("%(_var).FastestRaceTime = REPLACE(_buff,'FastestRaceTime,','',1)") //TODO this is new
-			elseif StartsWith(_buff,"HighestCoolness,"); EVAL("%(_var).HighestCoolness = REPLACE(_buff,'HighestCoolness,','',1)")
-			elseif StartsWith(_buff,"TotalCrashes,"); EVAL("%(_var).TotalCrashes = REPLACE(_buff,'TotalCrashes,','',1)")
-			elseif StartsWith(_buff,"LastOut,"); EVAL("%(_var).LastOut = REPLACE(_buff,'LastOut,','',1)") //TODO this isn't how this one works I don't think...
-			elseif StartsWith(_buff,"TotalOutTime,"); EVAL("%(_var).TotalOutTime = REPLACE(_buff,'TotalOutTime,','',1)") //TODO this is new
-			elseif StartsWith(_buff,"Training,"); EVAL("%(_var).Training = SPLIT(REPLACE(_buff,'Training,','',1),C_BYTE1)") //TODO this is an array
-			elseif StartsWith(_buff,"Cleanliness,"); EVAL("%(_var).Cleanliness = REPLACE(_buff,'Cleanliness,','',1)")
-			elseif StartsWith(_buff,"CurrentSpeed,"); EVAL("%(_var).CurrentSpeed = REPLACE(_buff,'CurrentSpeed,','',1)") //TODO this is new
-			elseif StartsWith(_buff,"CurrentCoolness,"); EVAL("%(_var).CurrentCoolness = REPLACE(_buff,'CurrentCoolness,','',1)") //TODO this is new
-			elseif StartsWith(_buff,"CurrentExplosiveness,"); EVAL("%(_var).CurrentExplosiveness = REPLACE(_buff,'CurrentExplosiveness,','',1)") //TODO this is new
-			elseif StartsWith(_buff,"CarryCapacity,"); EVAL("%(_var).CarryCapacity = REPLACE(_buff,'CarryCapacity,','',1)")
-			elseif StartsWith(_buff,"Trait,"); EVAL("%(_var).Trait = REPLACE(_buff,'Trait,','',1)")
-			elseif StartsWith(_buff,"PersonalityType,"); EVAL("%(_var).PersonalityType = REPLACE(_buff,'PersonalityType,','',1)")
-			elseif StartsWith(_buff,"PoetryType,"); EVAL("%(_var).PoetryType = REPLACE(_buff,'PoetryType,','',1)")
-			elseif StartsWith(_buff,"RadioPreference,"); EVAL("%(_var).RadioPreference = REPLACE(_buff,'RadioPreference,','',1)")
-			elseif StartsWith(_buff,"AltHobby,"); EVAL("%(_var).AltHobby = REPLACE(_buff,'AltHobby,','',1)")
-			elseif StartsWith(_buff,"FavoriteFamousSnail,"); EVAL("%(_var).FavoriteFamousSnail = REPLACE(_buff,'FavoriteFamousSnail,','',1)") //TODO this is new
-			elseif StartsWith(_buff,"Notes,"); EVAL("%(_var).Notes = SPLIT(REPLACE(_buff,'Notes,','',1),C_BYTE1)") //TODO this is an array
-			elseif StartsWith(_buff,"Loadout,"); EVAL("%(_var).Loadout = SPLIT(REPLACE(_buff,'Loadout,','',1),C_BYTE1)") //TODO this is an array
+			_toparse = STRDECODE(_toparse,1,'base64')
+			_toparse = SPLIT(_toparse,ENCODE_BR)
+			
+			foreach _toparse; _buff
+			{
+				if StartsWith(_buff,"ID,"); EVAL("%(_var).ID = REPLACE(_buff,'ID,','',1)")
+				elseif StartsWith(_buff,"Name,"); EVAL("%(_var).Name = REPLACE(_buff,'Name,','',1)")
+				elseif StartsWith(_buff,"Version,"); EVAL("%(_var).Version = REPLACE(_buff,'Version,','',1)")
+				elseif StartsWith(_buff,"DateSponsored,"); EVAL("%(_var).DateSponsored = REPLACE(_buff,'DateSponsored,','',1)")
+				elseif StartsWith(_buff,"Number,"); EVAL("%(_var).Number = REPLACE(_buff,'Number,','',1)") //new
+				elseif StartsWith(_buff,"TotalRaces,"); EVAL("%(_var).TotalRaces = REPLACE(_buff,'TotalRaces,','',1)")
+				elseif StartsWith(_buff,"TotalRaceTime,"); EVAL("%(_var).TotalRaceTime = REPLACE(_buff,'TotalRaceTime,','',1)")
+				elseif StartsWith(_buff,"HighestScore,"); EVAL("%(_var).HighestScore = REPLACE(_buff,'HighestScore,','',1)") //TODO this is new
+				elseif StartsWith(_buff,"FastestRaceTime,"); EVAL("%(_var).FastestRaceTime = REPLACE(_buff,'FastestRaceTime,','',1)") //TODO this is new
+				elseif StartsWith(_buff,"HighestCoolness,"); EVAL("%(_var).HighestCoolness = REPLACE(_buff,'HighestCoolness,','',1)")
+				elseif StartsWith(_buff,"TotalCrashes,"); EVAL("%(_var).TotalCrashes = REPLACE(_buff,'TotalCrashes,','',1)")
+				elseif StartsWith(_buff,"LastOut,"); EVAL("%(_var).LastOut = REPLACE(_buff,'LastOut,','',1)") //TODO this isn't how this one works I don't think...
+				elseif StartsWith(_buff,"TotalOutTime,"); EVAL("%(_var).TotalOutTime = REPLACE(_buff,'TotalOutTime,','',1)") //TODO this is new
+				elseif StartsWith(_buff,"Training,"); EVAL("%(_var).Training = SPLIT(REPLACE(_buff,'Training,','',1),C_BYTE1)") //TODO this is an array
+				elseif StartsWith(_buff,"Cleanliness,"); EVAL("%(_var).Cleanliness = REPLACE(_buff,'Cleanliness,','',1)")
+				elseif StartsWith(_buff,"CurrentSpeed,"); EVAL("%(_var).CurrentSpeed = REPLACE(_buff,'CurrentSpeed,','',1)") //TODO this is new
+				elseif StartsWith(_buff,"CurrentCoolness,"); EVAL("%(_var).CurrentCoolness = REPLACE(_buff,'CurrentCoolness,','',1)") //TODO this is new
+				elseif StartsWith(_buff,"CurrentExplosiveness,"); EVAL("%(_var).CurrentExplosiveness = REPLACE(_buff,'CurrentExplosiveness,','',1)") //TODO this is new
+				elseif StartsWith(_buff,"CarryCapacity,"); EVAL("%(_var).CarryCapacity = REPLACE(_buff,'CarryCapacity,','',1)")
+				elseif StartsWith(_buff,"Trait,"); EVAL("%(_var).Trait = REPLACE(_buff,'Trait,','',1)")
+				elseif StartsWith(_buff,"PersonalityType,"); EVAL("%(_var).PersonalityType = REPLACE(_buff,'PersonalityType,','',1)")
+				elseif StartsWith(_buff,"PoetryType,"); EVAL("%(_var).PoetryType = REPLACE(_buff,'PoetryType,','',1)")
+				elseif StartsWith(_buff,"RadioPreference,"); EVAL("%(_var).RadioPreference = REPLACE(_buff,'RadioPreference,','',1)")
+				elseif StartsWith(_buff,"AltHobby,"); EVAL("%(_var).AltHobby = REPLACE(_buff,'AltHobby,','',1)")
+				elseif StartsWith(_buff,"FavoriteFamousSnail,"); EVAL("%(_var).FavoriteFamousSnail = REPLACE(_buff,'FavoriteFamousSnail,','',1)") //TODO this is new
+				elseif StartsWith(_buff,"Notes,"); EVAL("%(_var).Notes = SPLIT(REPLACE(_buff,'Notes,','',1),C_BYTE1)") //TODO this is an array
+				elseif StartsWith(_buff,"Loadout,"); EVAL("%(_var).Loadout = SPLIT(REPLACE(_buff,'Loadout,','',1),C_BYTE1)") //TODO this is an array
+			}
 		}
 	}
 	void FCLOSE(_file)
@@ -1870,4 +1890,81 @@ GraphDiff
 	_diff = _target - _num
 	if _diff < 0; _diff = 0
 	_diff
+}
+
+
+//TODO if we want any kind of file encryption i should do it before we roll this out...
+//I am *reasonably* confident in this for converting our snails, but it does need to be tested more thoroughly before we convert user snails. Users should only have 1 though, which helps
+ConvertOldSnails
+{
+	foreach SavedSnails.ID; _snail
+	{
+		foreach GETVARLIST("CurrentSnail."); _var
+		{
+			ERASEVAR("%(_var)")
+		}
+		LoadOldSnail(_snail)
+		InitSnailVars
+		SaveSnail
+	}
+}
+
+//For snail conversion - we shouldn't even have to do this for users cuz their only snail will already be loaded...
+LoadOldSnail
+{
+	_index = GetSnailIndex(_argv[0])
+	if _index == -1; _index = 0
+	
+	_snaildata = SPLIT(SavedSnails[_index],"|")
+	
+	CurrentSnail.ID = SavedSnails.ID[_index]
+	CurrentSnail.Name = SavedSnails.Name[_index]
+	CurrentSnail.Version = SavedSnails.Version[_index]
+	CurrentSnail.Trait = SavedSnails.Trait[_index]
+	CurrentSnail.TotalRaces = SavedSnails.TotalRaces[_index]
+	CurrentSnail.TotalRaceTime = SavedSnails.TotalRaceTime[_index]
+	CurrentSnail.HighestCoolness = SavedSnails.HighestCoolness[_index]
+	CurrentSnail.TotalCrashes = SavedSnails.TotalCrashes[_index]
+	
+	CurrentSnail.Loadout = SPLIT(SavedSnails.Loadout[_index],"|")
+	CurrentSnail.Notes = SPLIT(SavedSnails.Notes[_index],"|")
+	
+	CurrentSnail.DateSponsored = SavedSnails.DateSponsored[_index]
+	CurrentSnail.Training = SPLIT(SavedSnails.Training,",")
+	if CurrentSnail.Training == "" //This was added in an update so we need to account for if it doesn't exist
+	{
+		CurrentSnail.Training = (0,0,0,0,0,0,0,0,0,0)
+	}
+	else //if it exists make it ints
+	{
+		for _i = 0; _i < ARRAYSIZE(CurrentSnail.Training); _i++
+		{
+			CurrentSnail.Training[_i] = TOINT(CurrentSnail.Training[_i])
+		}
+	}
+	
+	_snailsonality = GenerateSnailsonality(CurrentSnail.Name,CurrentSnail.ID)
+	
+	CurrentSnail.PersonalityType = SavedSnails.PersonalityType[_index]
+	if CurrentSnail.PersonalityType == ""; CurrentSnail.PersonalityType = _snailsonality[0]
+	elseif CurrentSnail.PersonalityType == "Stalker"; CurrentSnail.PersonalityType = "Super_Fan"
+	
+	CurrentSnail.PoetryType = SavedSnails.PoetryType[_index]
+	if CurrentSnail.PoetryType == ""; CurrentSnail.PoetryType = _snailsonality[1]
+	
+	CurrentSnail.RadioPreference = SavedSnails.RadioPreference[_index]
+	if CurrentSnail.RadioPreference == ""; CurrentSnail.RadioPreference = _snailsonality[2]
+	
+	CurrentSnail.AltHobby = SavedSnails.AltHobby[_index]
+	if CurrentSnail.AltHobby == ""; CurrentSnail.AltHobby = _snailsonality[3]
+	
+	CurrentSnail.Cleanliness = SavedSnails.Cleanliness[_index]
+	if CurrentSnail.Cleanliness == ""; CurrentSnail.Cleanliness = 0
+	if GETSECCOUNT > SavedSnails.LastOut[_index] + 600; CurrentSnail.Cleanliness = 0 //10 minute reset
+	CurrentSnail.LastOut = GETSECCOUNT
+}
+
+GetSnailIndex
+{
+	ASEARCH(_argv[0],SavedSnails.ID)
 }
