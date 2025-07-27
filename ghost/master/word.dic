@@ -1116,7 +1116,7 @@ insidescoop
 	//"Yes Yes Yes Yahoo!|"
 	//"Znail Zone|"
 	"DNF|DNF wants to be fastest AND coolest snail ever, and it refuses to compromise on anything. So it's tweaking parameters until it can achieve the perfect race.\n\n Top speed, dark glasses, facing backwards; all as part of a perfect run with no crashing.\n\n When it finally happens it's gonna be a sight to see."
-	"Chaos Speedster|recent fireworks factory explosion was misattributed to Chaos Speedster. Inside sources say Yes Yes Yes Yahoo! became too excited during a tour of the facilities and caused a chain reaction that resulted in the impromptu light show."
+	"Chaos Speedster|recent fireworks factory explosion was misattributed to Chaos Speedster. Inside sources say Yes Yes Yes Yahoo!\_w[0] became too excited during a tour of the facilities and caused a chain reaction that resulted in the impromptu light show."
 	//"Eat My Dust|"
 	"Super Snail|the papers printed a false story: Super Snail didn't actually save 1000 people from a burning building, it only saved 100.\n\n I mean it's more than I've ever saved but technical accuracy is important."
 }
@@ -1126,7 +1126,8 @@ wildstory
 	//original nugget of truth|lie
 	"it's picky about what lettuce it eats|eating diamonds for breakfast"
 	"it got straight S's in snail school|cheating at snail school to have better prospects for sponsors" //Ss or S's...
-	"it can't sleep without a clean shell|spending upwards of %(L)%(RAND(11) + 1)0,000 a month on shell washes alone"
+	_amount = TOSTR(RAND(11) + 1) + "0,000"
+	"it can't sleep without a clean shell|spending upwards of %(LL(_amount)) a month on shell washes alone"
 	"it has a side hustle testing out new paint colors|being paid off to keep quiet about toxic ingredients in some of the shell paints it promotes"
 	"it had a crack in its shell repaired once|having had shell surgery to achieve its perfect swirl"
 	"it was the biggest snail in its class|eating its biggest rival in snail school years ago"
@@ -1733,7 +1734,7 @@ inmycar
 	"in my car at a traffic light, and all the cars behind me were honking along as I danced to the beat and belted out the chorus at the top of my lungs"
 	"in the produce aisle of the grocery store, and everyone around was watching in awe at my headbanging skills"
 	"down at court to dispute a traffic violation, and I couldn't help but show off my dancing skills to the judge when my song came on" //hmmmmmm
-	"in the middle of a crosswalk, and all the oncoming cars stopped to witness my slick moves and honk to show their support"
+	"in the middle of a crosswalk, and all the oncoming cars stopped to witness my slick moves and honked to show their support"
 	"out in the middle of a field, belting out the words as loud as I could and bringing joy to the local wildlife"
 	"in my apartment doing a little late night listening, and the neighbors were so enthralled with my singing and dancing they were stomping their feet along to the beat as well"
 }

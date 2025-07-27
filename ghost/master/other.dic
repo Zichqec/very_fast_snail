@@ -772,6 +772,12 @@ L
 	"\f[strike,1]L\f[strike,default]"
 }
 
+//Like L but for in talky dialogues (not menus). It displays the same, but makes it be pronounced as "X Lettuce" in voice synthesis! For this reason, you have to write it like %(LL(100))
+LL
+{
+	"\__v[alternate,""%(_argv[0]) Lettuce""]%(L)%(_argv[0])\__v"
+}
+
 OnMinuteChange
 {
 	Lettuce++ //freebie lettuce gain
