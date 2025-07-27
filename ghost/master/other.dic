@@ -453,7 +453,6 @@ LoadSnail
 	if _argv[1] == "temp"; _var = "TempSnail"
 	
 	_o = FOPEN(_file,"r")
-	LOGGING("====================================================================")
 	if _o == 1
 	{
 		_toparse = FREAD(_file)
@@ -494,6 +493,7 @@ LoadSnail
 				elseif StartsWith(_buff,"Loadout,"); EVAL("%(_var).Loadout = SPLIT(REPLACE(_buff,'Loadout,','',1),C_BYTE1)") //TODO this is an array
 			}
 			
+			//Convert training array to ints
 			EVAL("_array = %(_var).Training")
 			for _i = 0; _i < ARRAYSIZE(_array); _i++
 			{

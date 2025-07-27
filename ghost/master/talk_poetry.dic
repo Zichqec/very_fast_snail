@@ -1,4 +1,4 @@
-Poetry.Snoem : sequential
+Poetry.Snoem : nonoverlap_pool
 {
 	_snoems = <<"
 	Racing runs rampant. Risk, reward.
@@ -47,10 +47,10 @@ Poetry.Snoem : sequential
 	Go, glory!
 
 
-	**Awestruck, aware again, as always.
+	Awestruck, aware again, as always.
 	We wish we were whom, when, why.
 	Eager, eliciting excitement.
-	Supreme speed, sublime smoothness. Similarly studied, saved shortly.
+	Supreme speed, sublime smoothness. Studied, saved.
 	Other options offer, only observed.
 	My memory makes my muscles mightier.
 	External evaluation excellent.
@@ -90,11 +90,11 @@ Poetry.Snoem : sequential
 	Laughter loops, leaves lettuce lacking.
 
 
-	**Every effort exuded.
+	Every effort exuded.
 	Xtreme xpenses xpunged.
 	Plumes pile past the pole.
 	Long languishing, looks like.
-	Ostensibly, overlooked orders or obstinate orchestration.
+	Overlooked orders, or obstinate orchestration.
 	Don't dither, do due diligence.
 	Express example: evade expertly.
 
@@ -178,10 +178,10 @@ Poetry.Snoem : sequential
 	Yay! Yearned yum yours.
 
 
-	**An achievement, amassing accolades.
+	An achievement, amassing accolades.
 	Dreaming. Day dawning, daylight descended.
 	Effort expands. Early effort earns everything.
-	Practice, practice, practice. Perfect practice programs perfect performance.
+	Perfect practice programs perfect performance.
 	Tonight's thoughts true soon.
 
 
@@ -191,9 +191,9 @@ Poetry.Snoem : sequential
 	Trials take time, tasting too.
 
 
-	**No, nothing needed now.
+	No, nothing needed now.
 	An area alone.
-	Pushing, pulling... Please, peace place. Purge pressure.
+	Push, pull... Please, peace place. Purge pressure.
 
 
 	Anterior axle alight.
@@ -212,8 +212,8 @@ Poetry.Snoem : sequential
 	Beautiful. Beginning...
 
 
-	**Beat billions, brain booming.
-	Excellence, exceeding expectations, experience, elation.
+	Beat billions, brain booming.
+	Excellence, exceeding expectations, elation.
 	Streaks shooting straight, surging speedily starward.
 	Tales told til time's termination.
 
@@ -225,9 +225,9 @@ Poetry.Snoem : sequential
 	Thrill time. Tomorrow topples today.
 
 
-	**Long lost lanes, lofty limitations.
+	Long lost lanes, lofty limitations.
 	Everyone expected excellence.
-	Greatness granted graciously, glistening goo gilded grades.
+	Greatness granted graciously, grades glistening.
 	Each earned enshrinement eternally.
 	No number nullified, none.
 	Don't delete data.
@@ -327,13 +327,13 @@ Poetry.Snoem : sequential
 	Trusted to take to the triumph.
 
 
-	**Greased, glowing.
+	Greased, glowing.
 	Objectively outstanding.
 	Gleaming, glossy,
 	Glistening greatly.
 	Lustrous luminosity.
 	Ephemeral.
-	Sublime sights secured. Solely seen, safe sight spectacles.
+	Sublime sights secured. Safe sight spectacles.
 
 
 	Ghostly glimmer.
@@ -447,35 +447,35 @@ Poetry.Snoem : sequential
 	Shoots straight, speeds stupendous.
 
 
-	**Wicked wings whip westward, whooping, waving wins wildly.
-	Impressive? Irresponsible? Impossibly interwoven, intervention... impractical.
+	Wicked wings whip westward, whooping wildly.
+	Impossibly interwoven, intervention impractical.
 	Not nearly, not now.
-	Deliberating deeply. Demands depart, dispel delay distaste.
+	Deliberating deeply. Demands depart, dispel distaste.
 
 
-	**Fleet footed from first. Feathers flexing, fitness fought for. Finally, freedom.
-	Long lashes link, lunging lightly, lift lent. Lofty, luxury.
-	Introspection: impossible instigated. Ideals irrepressible.
+	Feathers flexing, fitness fought for. Freedom.
+	Lunging lightly, lift lent. Lofty, luxury.
+	Introspection: impossible instigated. Ideal.
 	Gaining greatness, glee given.
 	Hovering, head held high. Happy here.
 	This trail, truly, treat to travel.
 
 
-	**Boom!
+	Boom!
 	Obstacle obliterated,
 	Oomph obtained.
 	Sheer speed, speedometer shattered.
-	Tearing towards the top, trails transferred to the track.
+	Tearing towards the top, trails transferred to track.
 	Elation, end earned, enshrined eternally. Except...?
 	Rival returns, retaliates! Risky race. Rush, revenge!
 
 
-	**Risk, reward. Ready?
+	Risk, reward. Ready?
 	On, open! Observe!
-	Crashing concerns? Crushed. Capital condition, construction complete.
+	Crashing concerns? Crushed. Capital condition.
 	Knowledge keen, kilometers known.
 	Except...
-	Tragedy! Toppled, twirling, thrusters torn! Terrible tumbling torrent, totally trashed...
+	Tragedy! Twirling, thrusters torn! Totally trashed...
 
 
 	Reaching robust ranks.
@@ -617,11 +617,11 @@ Poetry.Snoem : sequential
 	Savings shrinking speedily!
 
 
-	**Sweeps swiftly, shoving steadily sunward.
+	Sweeps swiftly, shoving steadily sunward.
 	Keen, knightly, knowledgeable!
-	Inevitably influential, instilling inspiration in idolaters.
+	Inevitably influential, instilling inspiration.
 	Look, leaping leftwards!
-	Leaving leagues languishing, left lingering...
+	Leaving leagues languishing, lingering...
 
 
 	Screaming, squeals surround.
@@ -716,14 +716,14 @@ Poetry.Snoem : sequential
 	Shining star, supreme, superior.
 
 
-	**Practice, progressing, pushing perfection.
+	Practice, progressing, pushing perfection.
 	Running 'round, repetitions rising.
-	Every effort elevates, escalating eventual earned esteem.
+	Every effort elevates, escalating eventual esteem.
 	Practice, practice, practice.
 	All attention assigned. Anything against, avoided.
-	Running ragged, repetitions regressing... Revitalization required.
+	Running ragged... Revitalization required.
 	Exception, end effort, ease...
-	Daydreaming, deadly duelist... Distant dawn. Definitely.
+	Daydreaming, deadly duelist... Distant dawn.
 
 
 	Flowing fast, flying fluidly.
@@ -749,14 +749,14 @@ Poetry.Snoem : sequential
 	Everyone eager, education enticing.
 	">>
 	
-	_snoems = ProcessPoems(_snoems,2,"\b[200]","\f[name,Courier New]\f[height,-2]")
+	_snoems = ProcessPoems(_snoems,2,"\b[14]","\f[name,Courier New]\f[height,-2]")
 	parallel _snoems
 }
 
-Poetry.Bad_Snoem : sequential
+Poetry.Bad_Snoem : nonoverlap_pool
 {
 	_poems = <<"
-	**Leaves Look amazingLy deLicious. Let Little snaiL handLe?
+	Leaves Look deLicious. Let Little snaiL handLe?
 	Excellent, apprEciated grEatly.
 	The besT letTuce This creaTure wiTnessed.
 	Truly asTonishing.
@@ -890,11 +890,11 @@ Poetry.Bad_Snoem : sequential
 	Aluminum, mAybe. Attack!
 	Need coNtents Now!
 	">>
-	_poems = ProcessPoems(_poems,2,"\b[200]","\f[name,Courier New]\f[height,-2]")
+	_poems = ProcessPoems(_poems,2,"\b[14]","\f[name,Courier New]\f[height,-2]")
 	parallel _poems
 }
 
-Poetry.Slugetry : sequential
+Poetry.Slugetry : nonoverlap_pool
 {
 	_poems = <<"
 	Slow, so silly, %(slug('they')) say.
@@ -1049,11 +1049,11 @@ Poetry.Slugetry : sequential
 	Off, oust, overthrow!
 	Now! Negation!
 	">>
-	_poems = ProcessPoems(_poems,2,"\b[200]","\f[name,Courier New]\f[height,-2]")
+	_poems = ProcessPoems(_poems,2,"\b[14]","\f[name,Courier New]\f[height,-2]")
 	parallel _poems
 }
 
-Poetry.Haiku : sequential
+Poetry.Haiku : nonoverlap_pool
 {
 	_poems = <<"
 	The race has begun
@@ -1159,7 +1159,7 @@ Poetry.Haiku : sequential
 	parallel _poems
 }
 
-Poetry.Cinquain : sequential
+Poetry.Cinquain : nonoverlap_pool
 {
 	_poems = <<"
 	Race
@@ -1323,7 +1323,7 @@ Poetry.Cinquain : sequential
 	parallel _poems
 }
 
-Poetry.Limerick : sequential
+Poetry.Limerick : nonoverlap_pool
 {
 	_poems = <<"
 	There once was a very fast snail
@@ -1469,7 +1469,7 @@ Poetry.Limerick : sequential
 	parallel _poems
 }
 
-Poetry.Acrostic : sequential
+Poetry.Acrostic : nonoverlap_pool
 {
 	parallel Poetry.Acrostic.Left
 	parallel Poetry.Acrostic.Center
@@ -1514,7 +1514,7 @@ Poetry.Acrostic.Left
 	Knitted sweater.
 	">>
 	
-	_poems = ProcessPoems(_poems,0,"\b[200]","\f[name,Courier New]\f[height,-2]")
+	_poems = ProcessPoems(_poems,0,"\b[14]","\f[name,Courier New]\f[height,-2]")
 	_poems
 }
 
@@ -1560,7 +1560,7 @@ Poetry.Acrostic.Right
 	::                              for advicE. 
 	">>
 	
-	_poems = ProcessPoems(_poems,0,"\b[200]","\f[name,Courier New]","\f[height,-2]")
+	_poems = ProcessPoems(_poems,0,"\b[14]","\f[name,Courier New]","\f[height,-2]")
 	_poems = SkipSpaces(_poems)
 	_poems
 }
@@ -1607,7 +1607,7 @@ Poetry.Acrostic.Center
     ::     the risks, Defying safety
     ::  warnings and lEarning the hard way.
 	">>
-	_poems = ProcessPoems(_poems,0,"\b[200]","\f[name,Courier New]\f[height,-2]")
+	_poems = ProcessPoems(_poems,0,"\b[14]","\f[name,Courier New]\f[height,-2]")
 	_poems = SkipSpaces(_poems)
 	_poems
 }
@@ -1652,12 +1652,12 @@ Poetry.Acrostic.Span
 	Each  stem  a  deligHt, enhancing  the fresh tastE
 	">>
 	
-	_poems = ProcessPoems(_poems,0,"\b[200]","\f[name,Courier New]","\f[height,-2]")
+	_poems = ProcessPoems(_poems,0,"\b[14]","\f[name,Courier New]","\f[height,-2]")
 	_poems
 }
 
 
-Poetry.Lyric : sequential
+Poetry.Lyric : nonoverlap_pool
 {
 	_poems = <<"
 	%(note1)Oh, don't you wanna cross that finish line?%(note2)
@@ -1773,7 +1773,7 @@ note
 	"\f[name,arial]♫\f[name,default]"
 }
 
-Poetry.Rhyming_Couplet : sequential
+Poetry.Rhyming_Couplet : nonoverlap_pool
 {
 	_poems = <<"
 	The race has ended
@@ -1903,7 +1903,7 @@ Poetry.Rhyming_Couplet : sequential
 	parallel _poems
 }
 
-Poetry.Alternate_Rhyme : sequential
+Poetry.Alternate_Rhyme : nonoverlap_pool
 {
 	_poems = <<"
 	Oh to chew on lettuce green
@@ -2033,7 +2033,7 @@ Poetry.Alternate_Rhyme : sequential
 	parallel _poems
 }
 
-Poetry.Free_Verse : sequential
+Poetry.Free_Verse : nonoverlap_pool
 {
 	_poems = <<"
 	There is nothing like
@@ -2296,11 +2296,11 @@ Poetry.Free_Verse : sequential
 	You won't regret
 	your choice.
 	">>
-	_poems = ProcessPoems(_poems,0,"\b[12]","\f[name,Courier New]")
+	_poems = ProcessPoems(_poems,0,"\b[14]","\f[name,Courier New]")
 	parallel _poems
 }
 
-Poetry.Diamante : sequential
+Poetry.Diamante : nonoverlap_pool
 {
 	_poems = <<"
 	Fast
@@ -2482,12 +2482,12 @@ Poetry.Diamante : sequential
 	New, uncertain
 	Innovation
 	">>
-	_poems = ProcessPoems(_poems,1,"\b[2]","\f[align,center]","\f[height,-2]")
+	_poems = ProcessPoems(_poems,1,"\b[14]","\f[align,center]","\f[height,-2]")
 	parallel _poems
 }
 
 //18 lines x 51 characters maximum
-Poetry.Concrete : sequential
+Poetry.Concrete : nonoverlap_pool
 {
 	_poems = <<"
     ::               the unmistakable       curl      of   
@@ -2855,7 +2855,7 @@ Poetry.Concrete : sequential
 	::                  see it.                         
 	">>
 	
-	_poems = ProcessPoems(_poems,0,"\b[2]","\f[height,-4]","\f[name,courier new]")
+	_poems = ProcessPoems(_poems,0,"\b[14]","\f[height,-4]","\f[name,courier new]")
 	// _poems = REPLACE(_poems,C_CRLF,"\n")
 	// _poems = REPLACE(_poems,"\n::","\n ")
 	// _poems = "\![no-autopause]\1\b[2]\_q\f[name,courier new]\f[height,-4]\f[align,left]" + _poems
