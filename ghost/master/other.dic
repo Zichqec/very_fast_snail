@@ -469,21 +469,21 @@ LoadSnail
 				elseif StartsWith(_buff,"Name,"); EVAL("%(_var).Name = REPLACE(_buff,'Name,','',1)")
 				elseif StartsWith(_buff,"Version,"); EVAL("%(_var).Version = REPLACE(_buff,'Version,','',1)")
 				elseif StartsWith(_buff,"DateSponsored,"); EVAL("%(_var).DateSponsored = REPLACE(_buff,'DateSponsored,','',1)")
-				elseif StartsWith(_buff,"Number,"); EVAL("%(_var).Number = REPLACE(_buff,'Number,','',1)") //new
-				elseif StartsWith(_buff,"TotalRaces,"); EVAL("%(_var).TotalRaces = REPLACE(_buff,'TotalRaces,','',1)")
-				elseif StartsWith(_buff,"TotalRaceTime,"); EVAL("%(_var).TotalRaceTime = REPLACE(_buff,'TotalRaceTime,','',1)")
-				elseif StartsWith(_buff,"HighestScore,"); EVAL("%(_var).HighestScore = REPLACE(_buff,'HighestScore,','',1)") //TODO this is new
-				elseif StartsWith(_buff,"FastestRaceTime,"); EVAL("%(_var).FastestRaceTime = REPLACE(_buff,'FastestRaceTime,','',1)") //TODO this is new
-				elseif StartsWith(_buff,"HighestCoolness,"); EVAL("%(_var).HighestCoolness = REPLACE(_buff,'HighestCoolness,','',1)")
-				elseif StartsWith(_buff,"TotalCrashes,"); EVAL("%(_var).TotalCrashes = REPLACE(_buff,'TotalCrashes,','',1)")
-				elseif StartsWith(_buff,"LastOut,"); EVAL("%(_var).LastOut = REPLACE(_buff,'LastOut,','',1)") //TODO this isn't how this one works I don't think...
-				elseif StartsWith(_buff,"TotalOutTime,"); EVAL("%(_var).TotalOutTime = REPLACE(_buff,'TotalOutTime,','',1)") //TODO this is new
+				elseif StartsWith(_buff,"Number,"); EVAL("%(_var).Number = TOINT(REPLACE(_buff,'Number,','',1))") //new
+				elseif StartsWith(_buff,"TotalRaces,"); EVAL("%(_var).TotalRaces = TOINT(REPLACE(_buff,'TotalRaces,','',1))")
+				elseif StartsWith(_buff,"TotalRaceTime,"); EVAL("%(_var).TotalRaceTime = TOINT(REPLACE(_buff,'TotalRaceTime,','',1))")
+				elseif StartsWith(_buff,"HighestScore,"); EVAL("%(_var).HighestScore = TOINT(REPLACE(_buff,'HighestScore,','',1))") //TODO this is new
+				elseif StartsWith(_buff,"FastestRaceTime,"); EVAL("%(_var).FastestRaceTime = TOINT(REPLACE(_buff,'FastestRaceTime,','',1))") //TODO this is new
+				elseif StartsWith(_buff,"HighestCoolness,"); EVAL("%(_var).HighestCoolness = TOINT(REPLACE(_buff,'HighestCoolness,','',1))")
+				elseif StartsWith(_buff,"TotalCrashes,"); EVAL("%(_var).TotalCrashes = TOINT(REPLACE(_buff,'TotalCrashes,','',1))")
+				elseif StartsWith(_buff,"LastOut,"); EVAL("%(_var).LastOut = TOINT(REPLACE(_buff,'LastOut,','',1))") //TODO this isn't how this one works I don't think...
+				elseif StartsWith(_buff,"TotalOutTime,"); EVAL("%(_var).TotalOutTime = TOINT(REPLACE(_buff,'TotalOutTime,','',1))") //TODO this is new
 				elseif StartsWith(_buff,"Training,"); EVAL("%(_var).Training = SPLIT(REPLACE(_buff,'Training,','',1),C_BYTE1)") //TODO this is an array
-				elseif StartsWith(_buff,"Cleanliness,"); EVAL("%(_var).Cleanliness = REPLACE(_buff,'Cleanliness,','',1)")
-				elseif StartsWith(_buff,"CurrentSpeed,"); EVAL("%(_var).CurrentSpeed = REPLACE(_buff,'CurrentSpeed,','',1)") //TODO this is new
-				elseif StartsWith(_buff,"CurrentCoolness,"); EVAL("%(_var).CurrentCoolness = REPLACE(_buff,'CurrentCoolness,','',1)") //TODO this is new
-				elseif StartsWith(_buff,"CurrentExplosiveness,"); EVAL("%(_var).CurrentExplosiveness = REPLACE(_buff,'CurrentExplosiveness,','',1)") //TODO this is new
-				elseif StartsWith(_buff,"CarryCapacity,"); EVAL("%(_var).CarryCapacity = REPLACE(_buff,'CarryCapacity,','',1)")
+				elseif StartsWith(_buff,"Cleanliness,"); EVAL("%(_var).Cleanliness = TOINT(REPLACE(_buff,'Cleanliness,','',1))")
+				elseif StartsWith(_buff,"CurrentSpeed,"); EVAL("%(_var).CurrentSpeed = TOINT(REPLACE(_buff,'CurrentSpeed,','',1))") //TODO this is new
+				elseif StartsWith(_buff,"CurrentCoolness,"); EVAL("%(_var).CurrentCoolness = TOINT(REPLACE(_buff,'CurrentCoolness,','',1))") //TODO this is new
+				elseif StartsWith(_buff,"CurrentExplosiveness,"); EVAL("%(_var).CurrentExplosiveness = TOINT(REPLACE(_buff,'CurrentExplosiveness,','',1))") //TODO this is new
+				elseif StartsWith(_buff,"CarryCapacity,"); EVAL("%(_var).CarryCapacity = TOINT(REPLACE(_buff,'CarryCapacity,','',1))")
 				elseif StartsWith(_buff,"Trait,"); EVAL("%(_var).Trait = REPLACE(_buff,'Trait,','',1)")
 				elseif StartsWith(_buff,"PersonalityType,"); EVAL("%(_var).PersonalityType = REPLACE(_buff,'PersonalityType,','',1)")
 				elseif StartsWith(_buff,"PoetryType,"); EVAL("%(_var).PoetryType = REPLACE(_buff,'PoetryType,','',1)")
@@ -493,6 +493,13 @@ LoadSnail
 				elseif StartsWith(_buff,"Notes,"); EVAL("%(_var).Notes = SPLIT(REPLACE(_buff,'Notes,','',1),C_BYTE1)") //TODO this is an array
 				elseif StartsWith(_buff,"Loadout,"); EVAL("%(_var).Loadout = SPLIT(REPLACE(_buff,'Loadout,','',1),C_BYTE1)") //TODO this is an array
 			}
+			
+			EVAL("_array = %(_var).Training")
+			for _i = 0; _i < ARRAYSIZE(_array); _i++
+			{
+				_array[_i] = TOINT(_array[_i])
+			}
+			EVAL("%(_var).Training = _array")
 		}
 	}
 	void FCLOSE(_file)
@@ -912,7 +919,7 @@ CleanlinessCheck : all
 		"\![bind,Overlays,Soot Heavy,1]"
 		"\![bind,Overlays,Soot Light,1]"
 	}
-	if CurrentSnail.Cleanliness <= -5
+	elseif CurrentSnail.Cleanliness <= -5
 	{
 		"\![bind,Overlays,Soot Heavy,1]"
 	}
