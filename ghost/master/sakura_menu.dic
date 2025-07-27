@@ -438,7 +438,7 @@ OnSnailWashMenu : all
 {
 	"\C\![lock,balloonrepaint]\c"
 	CleanlinessCheck
-	"\0\b[2]\_q\![set,autoscroll,disable]"
+	"\0\b[2]\_q\![set,autoscroll,disable]\![no-autopause]"
 	"\*"
 	if CurrentSnail.Cleanliness >= 3 && _argv[0] == "stroked"; "\s[3]"
 	else; "\s[0]"
@@ -614,7 +614,7 @@ OnRoster
 
 OnLettuceShop : all
 {
-	"\0\b[2]\_q\![set,autoscroll,disable]"
+	"\0\b[2]\_q\![set,autoscroll,disable]\![no-autopause]"
 	"%(bigheader('LETTUCE LOVERS!'))"
 	
 	"\f[bold,1]\f[italic,1]\f[align,center]\f[color,disable]"
@@ -644,7 +644,7 @@ OnLettuceExchange : all
 	if _money <= 0; _fee = 0
 	
 	"\C\![lock,balloonrepaint]\c"
-	"\0\b[2]\_q\![set,autoscroll,disable]"
+	"\0\b[2]\_q\![set,autoscroll,disable]\![no-autopause]"
 	"%(bigheader('LETTUCE EXCHANGE!'))"
 	"\f[bold,1]\f[italic,1]\f[align,center]\f[color,disable]Exchange money lettuce for food lettuce!\f[color,default]\n\f[align,left]\f[italic,default]\f[bold,default]\n"
 	
