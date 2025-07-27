@@ -284,6 +284,7 @@ OnRacerID : all
 	_filename = ToFileNameFormat(_name,_id)
 	
 	LOGGING("_filename: %(_filename)")
+	SaveSnail //Save before loading in the temp, otherwise we miss stuff that has changed since last load... if you're checking your current snail
 	LoadSnail(_filename,"temp")
 	
 	_racer_num = "%(SUBSTR(_id,0,4))-%(SUBSTR(_id,4,4))-%(SUBSTR(_id,8,4))-%(SUBSTR(_id,12,4))"
@@ -675,7 +676,7 @@ OnLettuceExchange : all
 OnLettuceExchange.Confirm
 {
 	Lettuce -= reference0
-	if ASEARCH("Well fed",CurrentSnail.Notes); CurrentSnail.Notes ,= "Well fed"
+	if ASEARCH("Well fed",CurrentSnail.Notes) == -1; CurrentSnail.Notes ,= "Well fed"
 	OnLettuceShop
 }
 
