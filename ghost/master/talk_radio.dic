@@ -12,9 +12,7 @@ RadioStation.Racing_News : nonoverlap_pool
 }
 
 //Haley Storme & Tailgating Terror
-//Weather Watch
-//Wicked Weather
-//
+//First Place Forecasts
 RadioStation.Weather : nonoverlap_pool
 {
 	//"\1\b[20]wow the weather sure is hot!"
@@ -97,8 +95,8 @@ RadioStation.Weather : nonoverlap_pool
 	
 	//Traffic / other stuff with tailgate specifically - need to rig up code that'll go through cities one by one without repeating. a dialogue tape style thing, perhaps...? generate a new tape each day... yeah. or, same tape but start in a random position... hm! the thing is that i can't just use an embed tag straight up because then it'll pick a new one each time you repeat a dialogue. i think what i have to do is give the embed a reference that is the index i want to pull, that way it stays consistent... and only update that index after... hm, well. tricky, tricky... i guess it wouldn't hurt if it takes the index it was *passed* and increments *that*...? not the worst idea ever...
 	//I think it makes sense that they'd always go in the same order, but I can start from a random position in the list so that it's varied
-	//%(TrafficCity) is the function to use
-	"\1\b[22]NOW over to Tailgating Terror with a traffic update. Tailgate, how's those streets in %(TrafficCity) looking today?\n\n %(snailpic) Bad.\n\n Yikes, we hate to see it! Thanks for the update, now back to the weather!" //TODO temp, we probably want to dress this up a bit more... idk if quotes are what we want here either? ..... UNLESS.............. Do we want random city names or random street names....... i've set it up for city but if we write street names i could do those. hum
+	//%(TrafficCity) is the function to use, %(StreetName) for random street name
+	"\1\b[22]NOW over to Tailgating Terror with a traffic update. Tailgate, how's those %(TrafficCity) streets looking today?\n\n %(snailpic) Bad.\n\n Yikes, we hate to see it! Thanks for the update, now back to the weather!" //TODO temp, we probably want to dress this up a bit more... idk if quotes are what we want here either? ..... UNLESS.............. Do we want random city names or random street names....... i've set it up for city but if we write street names i could do those. hum
 	//"\1\b[22]"
 	//"\1\b[22]"
 	//"\1\b[22]"
@@ -185,12 +183,7 @@ RadioStation.Weather : nonoverlap_pool
 }
 
 //Bill Carde & Blanca Chek
-//Escargot Emporium...
-//Sleek Styles
 //Turbo Trends
-//Trendy Tastes
-//Gastropod Goals 
-//Snail Styles
 RadioStation.Shopping : nonoverlap_pool
 {
 	//"\1\b[20]wow these deals sure are hot!"
@@ -349,12 +342,14 @@ RadioStation.Music : nonoverlap_pool
 }
 
 //The Cheetah
+//Snail Talk
 RadioStation.Variety_Show : nonoverlap_pool
 {
 	"\1\b[20]wow these poems sure are hot!"
 }
 
-//Tim Gulls
+//Tim Gulls / Sy Lance
+//Calming Crackles
 RadioStation.ASMR : nonoverlap_pool
 {
 	//Pick a random jockey of the day, for a bit more variety on this station. Note to self - if we add more this has to be manually added to the aigraph also - INCLUDING the "current dialogues" counter
@@ -502,6 +497,7 @@ chain.applying_stickers
 
 
 //Nelly Norma & Nobop
+//No station name
 RadioStation.Pirate_Radio : nonoverlap_pool
 {
 	//"\1\b[20]get a life, snails"
