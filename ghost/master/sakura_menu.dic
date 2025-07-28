@@ -222,7 +222,7 @@ OnToggleEquipFilter
 
 OnEquipMenu.ToggleItem : all
 {
-	"\C\![set,autoscroll,disable]\0\s[0]\_q\![bind,""%(reference0)"",""%(reference1)""]\![raise,OnEquipMenu,""%(reference0)""]"
+	"\C\![set,autoscroll,disable]\0\s[0]\_q\![bind,""%(reference0)"",""%(reference1)""]\![raise,OnEquipMenu,""%(reference0)""]\_w[1]" //TODO this pause helps on the laptop but isn't perfect... how did i solve with zana again?
 }
 
 OnEquipMenu.Save : all
@@ -379,7 +379,7 @@ OnTakeRacerPhoto : all
 
 OnSnailTraining : all
 {
-	"\0\b[2]\_q\![set,autoscroll,disable]"
+	"\0\b[2]\_q\![set,autoscroll,disable]\![no-autopause]"
 	"%(bigheader('TRAIN YOUR SNAIL!'))"
 	
 	"Current funds: %(L)%(Lettuce)\n\n"

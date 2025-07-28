@@ -434,7 +434,7 @@ Talk.Snailsonality.Sellout : nonoverlap_pool
 	"\1\b[10]Super Snail donates half of its race winnings to charity... What a waste!"
 	"\1\b[10]My favorite snack? Aged moss grown with imported mineral water... but lettuce is more relatable to the audience."
 	"\1\b[10]Don't touch me, I just put on extra slime for the cameras. You'll mess up the shimmer."
-	"\1\b[10]There's 'snails'... and then there's 'Snails'."
+	"\1\b[10]There's 'snails'... and then there's%(br)'Snails'."
 	"\1\b[10]... Although, amazing achievements abound... Huh? I'm busy practicing my alliteration. You never know when you need to be extra charming."
 	"\1\b[10]I deserve the best of everything. Including %(goldlettuce)."
 	"\1\b[10]One day, I'm going to sponsor my own snails. If I teach them all my tricks, think how many winnings I'll get."
