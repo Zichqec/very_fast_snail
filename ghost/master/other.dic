@@ -71,13 +71,13 @@ OnKeyPress
 		if reference0 == "left"
 		{
 			GraphPage--
-			if GraphPage < 0; GraphPage = 7
+			if GraphPage < 0; GraphPage = 8
 			"\![reload,aigraph]"
 		}
 		elseif reference0 == "right"
 		{
 			GraphPage++
-			if GraphPage > 7; GraphPage = 0
+			if GraphPage > 8; GraphPage = 0
 			"\![reload,aigraph]"
 		}
 		elseif reference0 == "f5"
@@ -1539,8 +1539,10 @@ On_getaistate : all
 	if SHIORI3FW.DebugMode
 	{
 		/*
+		Page 0:
+		All dialogue (thrice)
+		
 		Page 1:
-		All dialogue
 		All user dialogue
 		All race announcements
 		All snail dialogue
@@ -1788,18 +1790,30 @@ AIgraphArray : array
 	_page = _argv[0]
 	if _page == 1
 	{
+		"%(_currently_available),Currently available"
+		"%(_all_user + _all_announcer),User + Announcer"
+		//"%(_all_announcer),Announcer"
+		"%(_all_alliterative),Alliterative"
+		"%(_all_non_alliterative),Non-alliterative"
+		"%(_all_alliterative_poetry),Allit poetry"
+		"%(_all_non_alliterative_poetry),Non-allit poetry"
+		"%(_all_stations),Radio stations"
+		"%(_all_ads),Ads"
+	}
+	elseif _page == 2
+	{
 		"%(_user.norace),User (no race),%(GraphDiff(_user.norace,50))"
 		"%(_user.norace),User (in race),%(GraphDiff(_user.inrace,50))"
 		"%(_user.norace),Announcer,%(GraphDiff(_announcer,50))"
 	}
-	elseif _page == 2
+	elseif _page == 3
 	{
 		"%(_abasic),Alliterative basic,%(GraphDiff(_abasic,100))"
 		"%(_abreak),Character break,%(GraphDiff(_abreak,20))"
 		"%(_slug),Slug,%(GraphDiff(_slug,20))"
 		"%(_bad),Bad at alliteration,%(GraphDiff(_bad,20))"
 	}
-	elseif _page == 3
+	elseif _page == 4
 	{
 		"%(_sad),Sad,%(GraphDiff(_sad,20))"
 		"%(_relaxed),Relaxed,%(GraphDiff(_relaxed,20))"
@@ -1817,13 +1831,13 @@ AIgraphArray : array
 		"%(_facts),Facts,%(GraphDiff(_facts,20))"
 		"%(_sellout),Sellout,%(GraphDiff(_sellout,20))"
 	}
-	elseif _page == 4
+	elseif _page == 5
 	{
 		"%(_snoem),Snoem,%(GraphDiff(_snoem,100))"
 		"%(_bad_snoem),Bad Snoem,%(GraphDiff(_bad_snoem,10))"
 		"%(_slugetry),Slugetry,%(GraphDiff(_slugetry,10))"
 	}
-	elseif _page == 5
+	elseif _page == 6
 	{
 		"%(_haiku),Haiku,%(GraphDiff(_haiku,10))"
 		"%(_cinquain),Cinquain,%(GraphDiff(_cinquain,10))"
@@ -1836,7 +1850,7 @@ AIgraphArray : array
 		"%(_diamante),Diamante,%(GraphDiff(_diamante,10))"
 		"%(_concrete),Concrete,%(GraphDiff(_concrete,10))"
 	}
-	elseif _page == 6
+	elseif _page == 7
 	{
 		"%(_racing_news),Racing News,%(GraphDiff(_racing_news,50))"
 		"%(_weather),Weather,%(GraphDiff(_weather,50))"
@@ -1846,7 +1860,7 @@ AIgraphArray : array
 		"%(_asmr),ASMR,%(GraphDiff(_asmr,50))"
 		"%(_pirate_radio),Pirate Radio,%(GraphDiff(_pirate_radio,50))"
 	}
-	elseif _page == 7
+	elseif _page == 8
 	{
 		"%(_general_ads),General Ads,%(GraphDiff(_general_ads,50))"
 		"%(_racing_news_ads),Racing News Ads,%(GraphDiff(_racing_news_ads,10))"
@@ -1860,15 +1874,8 @@ AIgraphArray : array
 	else //Page 0
 	{
 		"%(_all),All" //,%(_currently_available)"
-		"%(_currently_available),Currently available"
-		"%(_all_user + _all_announcer),User + Announcer"
-		//"%(_all_announcer),Announcer"
-		"%(_all_alliterative),Alliterative"
-		"%(_all_non_alliterative),Non-alliterative"
-		"%(_all_alliterative_poetry),Allit poetry"
-		"%(_all_non_alliterative_poetry),Non-allit poetry"
-		"%(_all_stations),Radio stations"
-		"%(_all_ads),Ads"
+		"%(_all),All" //,%(_currently_available)"
+		"%(_all),All" //,%(_currently_available)"
 	}
 }
 
