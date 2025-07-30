@@ -1577,9 +1577,9 @@ Poetry.Acrostic.Center
 	::           you'll rEgret buying cheap.
 	
 	
-	::         it's this We all strive for.
+	::         it's this We all strive for. 
     ::            the achIevement that
-    :: motivates our traiNing,
+    :: motivates our traiNing, 
     ::          pushing sNails to their
     ::           limits, Enticing us
     ::           to do ouR very best.
@@ -1587,22 +1587,22 @@ Poetry.Acrostic.Center
 	
     ::     an endlesS path, round
     ::   and round, Pulling you
-    ::         deep Into its depths.
+    ::         deep Into its depths. 
     :: gaze deeply, Revel in the
     ::      mystery And wonder
     ::      of a welL groomed shell.
 	
 	
     :: please scrub Well
-    ::        with wAter up to temp.
+    ::        with wAter up to temp. 
     ::   many foamy Suds
     ::       mean a Healthy snail.
 	
 	
     ::        the tragEdy of a
     ::       flaming eXpulsion is
-    ::    felt by all Participants.
-    :: an unfortunate Loss of control,
+    ::    felt by all Participants. 
+    :: an unfortunate Loss of control, 
     ::     a style arrOgantly ignoring
     ::     the risks, Defying safety
     ::  warnings and lEarning the hard way.
@@ -1615,9 +1615,9 @@ Poetry.Acrostic.Center
 Poetry.Acrostic.Span
 {
 	_poems = <<"
-	So    similar,   we're    both    molluskS
-	Nearly  identical,  save   for  our  shelL
-	And yet they say mingling would be a snafU
+	So    similar,   we're    both    molluskS\w8\w8
+	Nearly  identical,  save   for  our  shelL\w8\w8
+	And yet they say mingling would be a snafU\w8\w8
 	Is   it   really   true?   it's    seeminG
 	Less  and  less  likely   as  time  passeS
 	
@@ -1628,7 +1628,7 @@ Poetry.Acrostic.Span
 	Yards  melt away lickety-spliT
 	
 	
-	Strong  competition on the  leaderboardS
+	Strong  competition on the  leaderboardS\w8\w8
 	Pitting two different approaches againsT
 	Each  other,  both  vibrant  and rapidlY
 	Expanding. top  snails  making  collosaL
@@ -1643,16 +1643,17 @@ Poetry.Acrostic.Span
 	Tremendous   exertion   finally    appreciateD
 	
 	
-	Lovely  leafy  greenS,  known   to   all,   iconiC
+	Lovely  leafy  greenS,  known   to   all,   iconiC\w8\w8
 	Everyone   should  aPpreciate these lustrous florA
-	Truly  packed  with Integral  nutrients to  absorB
-	These leaves  will  Never  fail to impress as gruB
-	Unleash their undeniAble power, a  vitamin  utopiA
-	Crunch crunch, the  Crispness makes         eatinG
+	Truly  packed  with Integral  nutrients to  absorB\w8\w8
+	These leaves  will  Never  fail to impress as gruB\w8\w8
+	Unleash their undeniAble power, a  vitamin  utopiA\w8\w8
+	Crunch crunch, the  Crispness     makes     eatinG
 	Each  stem  a  deligHt, enhancing  the fresh tastE
 	">>
 	
 	_poems = ProcessPoems(_poems,0,"\b[14]","\f[name,Courier New]","\f[height,-2]")
+	_poems = SkipSpaces(_poems)
 	_poems
 }
 
