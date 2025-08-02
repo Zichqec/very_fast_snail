@@ -97,9 +97,9 @@ RadioStation.Weather : nonoverlap_pool
 	//Traffic / other stuff with tailgate specifically - need to rig up code that'll go through cities one by one without repeating. a dialogue tape style thing, perhaps...? generate a new tape each day... yeah. or, same tape but start in a random position... hm! the thing is that i can't just use an embed tag straight up because then it'll pick a new one each time you repeat a dialogue. i think what i have to do is give the embed a reference that is the index i want to pull, that way it stays consistent... and only update that index after... hm, well. tricky, tricky... i guess it wouldn't hurt if it takes the index it was *passed* and increments *that*...? not the worst idea ever...
 	//I think it makes sense that they'd always go in the same order, but I can start from a random position in the list so that it's varied
 	//%(TrafficCity) is the function to use, %(StreetName) for random street name
-	"\1\b[22]NOW over to Tailgating Terror with a traffic update. Tailgate, how's those %(TrafficCity) streets looking today?\n\n %(snailpic) Bad.\n\n Yikes, we hate to see it! Thanks for the update, now back to the weather!" //TODO temp, we probably want to dress this up a bit more... idk if quotes are what we want here either? ..... UNLESS.............. Do we want random city names or random street names....... i've set it up for city but if we write street names i could do those. hum
-	//"\1\b[22]"
-	//"\1\b[22]"
+	"\1\b[22]NOW over to Tailgating Terror with a traffic update. Tailgate, how's those %(TrafficCity) streets looking today?\n\n %(snailpic) Bad.\n\n Yikes, we hate to see it! Thanks for the update, now back to the weather!"
+	"\1\b[22]Time for another traffic update, lets check in with our lovely Tailgating Terror in %(TrafficCity)! Tailgate, how's it looking over at %(StreetName)?\n\n %(snailpic) Clogged.\n\n Ouch, I sure hope none of our listeners are stuck in that mess! Now for next week's forecast!"
+	"\1\b[22]It's time to shake things up a bit!%(br)We've asked our traffic expert, Tailgating Terror, to have a look at %(StreetName), %(StreetName), and %(StreetName) over in %(TrafficCity), and to give us a summary of the situation there. Tailgate, how's it looking!?\n\n %(snailpic) Slow.\n\n You heard it here first, folks! THAT'S the \f[italic,1]First Place Forecasts\f[italic,default] advantage!"
 	//"\1\b[22]"
 	//"\1\b[22]"
 	
@@ -116,26 +116,39 @@ RadioStation.Weather : nonoverlap_pool
 	if Weather.Today == Weather.Tomorrow
 	{
 		_thatsunnyweather = ("those sunny skies","the protection from the clouds","the hydrating downpour","watching the worm migration","this breezy, sneezy weather","that extra energized air","the benefits of the ongoing psionic storm")[Weather.Today]
-		"\1\b[22]If you've been enjoying %(_thatsunnyweather) today, then you're in luck because it'll be continuing just the same tomorrow!\n\n Forecasts are calling for the current weather patterns to hold for the next 24 hours at least, and if you stay tuned we'll keep giving YOU all the latest weather information on the #1 weather source you can trust, (TODO WEATHER STATION)."
+		"\1\b[22]If you've been enjoying %(_thatsunnyweather) today, then you're in luck because it'll be continuing just the same tomorrow!\n\n Forecasts are calling for the current weather patterns to hold for the next 24 hours at least, and if you stay tuned we'll keep giving YOU all the latest weather information on the #1 weather source you can trust, \f[italic,1]First Place Forecasts\f[italic,default]."
 		
 		_sunnyweather = ("sunny weather","cloudy skies","rainfall","worminess","sneezy weather","electric bursts","psionic interference")[Weather.Today]
-		"\1\b[22]All our forecasts today show that the current weather patterns will hold, so tomorrow you can expect to see the same %(_sunnyweather) that we're having today. If you're traveling, make sure that you're factoring in how that may affect your route!\n\n Whether you're on the road or staying at home, stay tuned, and we'll keep YOU updated on where the weather is going next here at (TODO WEATHER STATION)."
+		"\1\b[22]All our forecasts today show that the current weather patterns will hold, so tomorrow you can expect to see the same %(_sunnyweather) that we're having today. If you're traveling, make sure that you're factoring in how that may affect your route!\n\n Whether you're on the road or staying at home, stay tuned, and we'll keep YOU updated on where the weather is going next here at \f[italic,1]First Place Forecasts\f[italic,default]."
 		
 		_sunnyskies = ("sunny skies","cloudy days","rain showers","to watch the worm migrations","breezy days and you don't have allergies","having the dead batteries in your drawer suddenly recharge themselves","feeling the tingles from the potential psionic energy in the air")[Weather.Today]
 		_thatsunis = ("that sun is","those clouds are","these showers are","the worm migration is","these high winds are","the high levels of electricity in the air are","this psionic storm shows no signs of stopping and is")[Weather.Today]
 		_stockupon = ("regularly apply sunscreen","get out while they can and enjoy the cooler weather","wear rain boots and keep an eye on their snails","watch where they step; you never know where those worms might get to","get out their battery testers, and make sure to have a spare radio just in case","watch what they're thinking today, and maybe consider picking up a special psychic energy-proof hat")[Weather.Today]
-		"\1\b[22]Well, if you like %(_sunnyskies) then you're in luck, because %(_thatsunis) going to continue right into tomorrow. We're advising everyone to %(_stockupon)!\n\n Make sure to check back with us tomorrow, and we at (TODO WEATHER STATION) will keep YOU updated on whatever the weather has in store for us next!"
+		"\1\b[22]Well, if you like %(_sunnyskies) then you're in luck, because %(_thatsunis) going to continue right into tomorrow. We're advising everyone to %(_stockupon)!\n\n Make sure to check back with us tomorrow, and we at \f[italic,1]First Place Forecasts\f[italic,default] will keep YOU updated on whatever the weather has in store for us next!"
 		
-		//"\1\b[22]"
-		//"\1\b[22]"
+		_thatsunwill = ("That sun will continue beating down","There will be no breaks in the clouds","These storms are going to keep rolling in","The worm migration is predicted to continue","The extreme allergen levels we've been seeing will continue","The electrified atmosphere and jolting side effects will continue","The buildup of psychic energy has not yet dissipated and will be volatile")[Weather.Today]
+		"\1\b[22]I hope you're all enjoying this weather, because we are LOCKED IN for the next day at least! %(_thatsunwill) all through tomorrow as well.\n\n Stay tuned to \f[italic,1]First Place Forecasts\f[italic,default] and we'll give YOU updated weather predictions as soon as they become available!"
+		
+		"\1\b[22]Isn't this weather great!? I hope you're asking your friends the same question, because we're going to have the exact same %(_sunnyweather) tomorrow, too! Look forward to it, and for all the latest predictions, be SURE to tune in to \f[italic,1]First Place Forecasts\f[italic,default]!"
 	}
 	else //Changing
 	{
-		//"\1\b[22]"
-		//"\1\b[22]"
-		//"\1\b[22]"
-		//"\1\b[22]"
-		//"\1\b[22]"
+		_weathery = ("sunny","cloudy","rainy","wormy","sneezy","electrified","psychically charged")[Weather.Today]
+		_sunnyskies = ("sunny skies as far as the eye can see","clouds, clouds, and more clouds","wet and humid as storms come rolling through","the perfect conditions for the worm migration","a bad day for allergens, with sneezes and sniffles all around","powerfully electrifying","a day of high psychic energy")[Weather.Tomorrow]
+		"\1\b[22]If you're hoping for a break from this %(_weathery) weather, you won't have to wait long!\n\nMother nature will be shaking things up soon; we're predicting tomorrow will be %(_sunnyskies)! Stay tuned for further details after the break."
+		
+		_thissunnyweather = ("this sunny weather","this cloudy weather","this rainy weather","the worm migration","the intense burst of allergens in the air","the electrifying zip in the air","the psionic storm")[Weather.Today]
+		_sunny = ("sunny","cloudy","rainy","wormy","sneezy","elecric","tinfoil hat")[Weather.Today]
+		_nothingbut = ("the hot sun beating down and warming everything up","puffy clouds all throughout the sky","rain, rain, RAIN","worms","pollen so strong it'll knock your socks off","free energy%(emdash) if you've got batteries to catch it in","terror as we all try to keep prying minds out of our thoughts")[Weather.Tomorrow]
+		"\1\b[22]At long last, it looks like %(_thissunnyweather) is coming to an end! That's right, this chain of %(_sunny) days is coming to a close, and starting tomorrow you can look forward to nothing but %(_nothingbut)!"
+		
+		_brighthot = ("the bright hot sun with no clouds to protect us from its scorching rays","clouds scattered about, blanketing the sky","storms rolling in relentlessly","the worms migrating again","allergens everywhere, and sneezes to match","electrifying zaps that will fill every room with energy","a great mass of psychic energy that is sure to put everyone on edge")[Weather.Tomorrow]
+		"\1\b[22]Woo, who's looking forward to something different tomorrow!? I sure am! Tomorrow we're supposed to see %(_brighthot)!\n\n Whatever the weather, Haley Storme is on the case! And I'll be sure to bring YOU all the latest details, so tune in tomorrow as we learn more!"
+		
+		_lotsofsun = ("lots of sun","cloudy skies","rain","worms","extreme allergy warnings","electrifying bursts of energy","a psionic storm")[Weather.Tomorrow]
+		"\1\b[22]As a reminder, %(_thissunnyweather) won't last forever, and in fact tomorrow the forecasts are calling for %(_lotsofsun). So if you're an enthusiast, get out there and soak it up while you can!"
+		
+		"\1\b[22]It's a great day today for sure, but tomorrow there'll be even MORE weather! Current forecasts are calling for %(_lotsofsun), isn't that exciting!?\n\n I know I'll be looking forward to it! Be sure to stay tuned to \f[italic,1]First Place Forecast\f[italic,default] for all of the juicy details as soon as they become avaliable!"
 	}
 	
 	//Misc
@@ -146,7 +159,7 @@ RadioStation.Weather : nonoverlap_pool
 		_snailcity2 = snailcity
 	}
 	"\1\b[22]And now we're going to take a look at the temperatures over in%(emdash) whoa! Hahaha, %(besttoavoid(_snailcity))\n\n We'll come back around to %(_snailcity) once we've got our equipment functioning properly again. For now, let's move on to %(_snailcity2), where the temperatures look more reasonable!"
-	"\1\b[22]This just in, I'm getting reports about a massive storm cloud brewing over %(_snailcity)! This might be a big one folks!\n\n ... Oh, what's that? Hold on a moment, I'm getting new information that the cloud is actually just %(fromabbq(_snailcity))! False alarm, phew! But rest assured that if there WAS a sudden weather event, we at (TODO STATION NAME) would get you information as fast as it becomes available, and maybe even faster!"
+	"\1\b[22]This just in, I'm getting reports about a massive storm cloud brewing over %(_snailcity)! This might be a big one folks!\n\n ... Oh, what's that? Hold on a moment, I'm getting new information that the cloud is actually just %(fromabbq(_snailcity))!\n\n False alarm, phew! But rest assured that if there WAS a sudden weather event, we at \f[italic,1]First Place Forecasts\f[italic,default] would get you information as fast as it becomes available, and maybe even faster!"
 	//"\1\b[22]"
 	//"\1\b[22]"
 	//"\1\b[22]"
@@ -188,7 +201,7 @@ RadioStation.Weather : nonoverlap_pool
 RadioStation.Shopping : nonoverlap_pool
 {
 	//"\1\b[20]wow these deals sure are hot!"
-	"\1\b[22]Next up we've got the Radio Antenna! You're a bit of an expert on this item, aren't you, Blanca?\n\n I'd like to think so, Bill! The Radio Antenna has a clean, sleek look that's sure to go with any snail, while offering the convenience of a standard radio anywhere you go! What could be cooler than listening to us here at (TODO SHOPPING STATION) while gardening, cleaning, exercising, or even during a trip to the mall?\n\n And for the low price of only %(LL(90)), I don't think it gets any better than this!" //TODO
+	"\1\b[22]Next up we've got the Radio Antenna! You're a bit of an expert on this item, aren't you, Blanca?\n\n I'd like to think so, Bill! The Radio Antenna has a clean, sleek look that's sure to go with any snail, while offering the convenience of a standard radio anywhere you go! What could be cooler than listening to us here at \f[italic,1]Turbo Trends\f[italic,default] while gardening, cleaning, exercising, or even during a trip to the mall?\n\n And for the low price of only %(LL(90)), I don't think it gets any better than this!"
 	"\1\b[22]And now for a personal favorite of mine, the BIG ROCKET!\n\n Oh, Bill, this one again?\n\n Yes indeed, Blanca! When it comes to sheer speed, it's hard to beat the numbers you'll get from strapping a giant jet engine to your shell!\n\n That's true, although it's not the most elegant. And the risks%(emdash)\n\n %(emdash)Are outweighed in many cases by the rewards! Sure, the loss of control makes it far more likely you'll crash, but isn't that what helmets are for!?\n\n Well, yes, a helmet will protect your head. But it's so... \f[italic,1]garish\f[italic,default] of a solution. Surely there are ways to increase your speed that aren't so drastic...?\n\n Nonsense! If you want big numbers, the best value for your leaf is the BIG ROCKET! Get one today and watch your snails fly!"
 	"\1\b[22]Well, what have you got for us next, Blanca?\n\n I'd like to tell you about our new lineup of trucker hats! They come in an assortment of colors, and they cost just %(LL(100)) each.\n\n Now Blanca, we get this question quite regularly; why is it that these hats have brims? Isn't it a bit silly since a snail's eyes are perched higher than any shade afforded by the brim?\n\n That's true, Bill! But the fact of the matter is that a trucker hat simply wouldn't be a trucker hat without that big brim!\n\n You make an excellent point, it just wouldn't be the same. And who doesn't want to be able to match with their snail?\n\n Exactly! Now, let me tell you about the new designs we have this year. We've got a nice orange trucker hat with a design featuring an orange, and a lovely green trucker hat with an adorable leaf!\n\n What a great lineup we have! No matter your snail's aesthetic, you're sure to be able to find one that fits. And for a very affordable price!"
 	"\1\b[22]Bill, you said you wanted to talk about one of your favorite economy options next?\n\n Yes, indeed I do! Some of the best speed options can be pretty pricey, but we've got a great piece that will get you a little more 'oomph' without breaking the bank!\n\n Oh, do tell?\n\n Have a look at this box fan! You can strap this right to the shell of your snail, and the breeze it generates will give you that extra edge that you need in a pinch.\n\n Ooh, well, that may be true, but I think any style critic worth their salt would agree that it's simply an eyesore to look at. If you're hoping to be cool, you'd be well advised to stay away from this one.\n\n So you say, Blanca, but consider this: what is the purpose of a fan if not to make you cool!\n\n I... Ooh, now that's just not right. But all the same I can't argue that point, so I suppose it should be called a net neutral as far as coolness goes.\n\n That's right! A little boost of speed without losing any coolness, and it only costs a mere %(LL(150))! What a deal!"
