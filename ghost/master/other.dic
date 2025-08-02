@@ -1093,6 +1093,16 @@ PoetryTypeOther
 	}
 }
 
+RadioPoem
+{
+	_type = ANY("Snoem","Haiku","Cinquain","Limerick","Acrostic","Lyric","Rhyming_Couplet","Alternate_Rhyme","Free_Verse","Diamante","Concrete","Slugetry")
+	
+	_poem = EVAL("Poetry.%(_type)")
+	_poem = REPLACE(_poem,"\b[","\![original-balloon-")
+	
+	"\f[italic,1]%(_poem)\f[italic,default]"
+}
+
 slug
 {
 	"\![embed,OnSlugWord,""%(_argv[0])"",SlugWord]"

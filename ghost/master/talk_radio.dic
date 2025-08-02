@@ -148,7 +148,7 @@ RadioStation.Weather : nonoverlap_pool
 		_lotsofsun = ("lots of sun","cloudy skies","rain","worms","extreme allergy warnings","electrifying bursts of energy","a psionic storm")[Weather.Tomorrow]
 		"\1\b[22]As a reminder, %(_thissunnyweather) won't last forever, and in fact tomorrow the forecasts are calling for %(_lotsofsun). So if you're an enthusiast, get out there and soak it up while you can!"
 		
-		"\1\b[22]It's a great day today for sure, but tomorrow there'll be even MORE weather! Current forecasts are calling for %(_lotsofsun), isn't that exciting!?\n\n I know I'll be looking forward to it! Be sure to stay tuned to \f[italic,1]First Place Forecast\f[italic,default] for all of the juicy details as soon as they become avaliable!"
+		"\1\b[22]It's a great day today for sure, but tomorrow there'll be even MORE weather! Current forecasts are calling for %(_lotsofsun), isn't that exciting!?\n\n I know I'll be looking forward to it! Be sure to stay tuned to \f[italic,1]First Place Forecasts\f[italic,default] for all of the juicy details as soon as they become avaliable!"
 	}
 	
 	//Misc
@@ -163,6 +163,7 @@ RadioStation.Weather : nonoverlap_pool
 	//"\1\b[22]"
 	//"\1\b[22]"
 	//"\1\b[22]"
+	//"Update on this week's forecast, previous reports were calling for [previous state of variable], but new data just in says that this week is more likely to be [new state of variable]!"
 	
 	//"\1\b[22]"
 	//"\1\b[22]"
