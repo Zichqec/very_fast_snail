@@ -18,11 +18,13 @@ RadioStation.Weather : nonoverlap_pool
 {
 	//"\1\b[20]wow the weather sure is hot!"
 	//something something "it's haley here with the %(hour) o'clock weather, on (weather station)"...
+	//Maybe it's better not to reference the time?
 	
-	//Weather - with word groups for variation?
-	//"\1\b[22]"
-	//"\1\b[22]"
-	//"\1\b[22]"
+	//Weather - with word groups for variation? | gonna be honest i have no idea exactly what i wanted for word groups here...
+	_sunnyskies = ("sunny skies","cloudy skies","showers","the worms","sniffles and sneezes","electric zaps","psionic bolts")[Weather.Today]
+	"\1\b[22]The latest weather data is in: %(_sunnyskies) are here to stay throughout the afternoon! Stay tuned for the details on how we expect this to affect the air quality, your commute, and SO much more, here on \f[italic,1]First Place Forecasts\f[italic,default]!"
+	"\1\b[22]If you look outside your window right now, you can expect to see %(_sunnyskies) today! That's mother nature's way of reminding us that SHE is in charge! Isn't that awesome!?\n\n If you're enthusiastic about weather, stay tuned, because we'll have lots more detail for you right after this word from our sponsors!"
+	"\1\b[22]We've got a LOT of weather to talk about today, this show is going to be EXCITING for the next hour!\n\n This is Haley Storme, reporting for%(br)\f[italic,1]First Place Forecasts\f[italic,default], and if you're not excited about seeing %(_sunnyskies) today then YOU SHOULD BE, and we're gonna talk about why!"
 	//"\1\b[22]"
 	//"\1\b[22]"
 	
@@ -45,7 +47,7 @@ RadioStation.Weather : nonoverlap_pool
 	}
 	elseif Weather.Today == 2 //Rainy
 	{
-		//"\1\b[22]"
+		"\1\b[22]The storms are expected to ease up this next hour, and we'll be seeing a light rain for a while before the thicker clouds move in.\n\n If you're looking to get soaked without getting blown away by the wind, this will be the PERFECT chance to head out and experience the wonder of nature firsthand!"
 		//"\1\b[22]"
 		//"\1\b[22]"
 		//"\1\b[22]"
@@ -88,20 +90,28 @@ RadioStation.Weather : nonoverlap_pool
 	
 	
 	//Temps - I need to set up some code for this. Unsure how in depth I wanna go. tbqh i think it's always summer-ish in this ghost and therefore I can just pick an avg temp for each and call that good? or i could pick 4 temps and have it cycle through seasons also, not the worst. but i think this is a summer vibes kinda thing, or maybe spring...
-	//"\1\b[22]"
-	//"\1\b[22]"
-	//"\1\b[22]"
-	//"\1\b[22]"
-	//"\1\b[22]"
+	_citynum = RAND(ARRAYSIZE(CityTemps))
+	_city = SnailCities[_citynum]
+	_temp = TodaysTemp(_citynum)
+	_temphigh = _temp + (TodaysSeed % 7) + 1 //yes this will be the same for all cities compared this day don't @ me lol
+	_templow = _temp - (TodaysSeed % 6) - 1 //here too
+	if _temphigh == 70 - 1; _temphigh = 70 // :)
+	if _templow == 68 + 1; _templow = 68
+	"\1\b[22]And we've got record-setting temperatures over in %(_city), for the first time this week they'll be reaching at least %(_temp)°F, with some estimates saying they might reach as high as %(_temphigh)°F!\n\n Wow, just wow. If they keep going this way, they might just reach their temperature goal sooner than expected!"
+	"\1\b[22]Today over in %(_city) you can expect temperatures of %(_temp)°F all through the afternoon, WITH the possibility of up to %(_temphigh)°F!\n\n As we all know, more degrees is better,%(br)so lets hope it keeps climbing!"
+	"\1\b[22]Now let's have a look at %(_city). Today in %(_city) you can expect lows of %(_templow)°F, and highs of up to %(_temphigh)°F. But we're predicting that the average temperature will be right around %(_temp)°F all through the afternoon and going into the evening!"
+	"\1\b[22]And now for the temperatures over in %(_city). Looks like we'll be seeing a nice steady %(_temp)°F throughout the afternoon, with lows predicted at %(_templow)°F, and highs at %(_temphigh)°F.\n\n I don't know about you, but those numbers all sound great to me! Isn't the weather awesome!?"
+	"\1\b[22]Now, here's something astonishing; the temperature report for %(_city) has just come in, and the expected lows are %(_temphigh)°F, while the expected highs are %(_templow)°F! What an incredible first in nature, right!?\n\n ... What's that? ... OH! Hahaha, my numbers are backwards, sorry about that!\n\n The temperatures in %(_city) today are expected to be %(_temp)°F throughout the afternoon, with lows of %(_templow)°F, and highs of %(_temphigh)°F. That's more like it!"
 	
 	//Traffic / other stuff with tailgate specifically - need to rig up code that'll go through cities one by one without repeating. a dialogue tape style thing, perhaps...? generate a new tape each day... yeah. or, same tape but start in a random position... hm! the thing is that i can't just use an embed tag straight up because then it'll pick a new one each time you repeat a dialogue. i think what i have to do is give the embed a reference that is the index i want to pull, that way it stays consistent... and only update that index after... hm, well. tricky, tricky... i guess it wouldn't hurt if it takes the index it was *passed* and increments *that*...? not the worst idea ever...
 	//I think it makes sense that they'd always go in the same order, but I can start from a random position in the list so that it's varied
 	//%(TrafficCity) is the function to use, %(StreetName) for random street name
 	"\1\b[22]NOW over to Tailgating Terror with a traffic update. Tailgate, how's those %(TrafficCity) streets looking today?\n\n %(snailpic) Bad.\n\n Yikes, we hate to see it! Thanks for the update, now back to the weather!"
-	"\1\b[22]Time for another traffic update, lets check in with our lovely Tailgating Terror in %(TrafficCity)! Tailgate, how's it looking over at %(StreetName)?\n\n %(snailpic) Clogged.\n\n Ouch, I sure hope none of our listeners are stuck in that mess! Now for next week's forecast!"
+	"\1\b[22]Time for another traffic update, lets check in with our lovely Tailgating Terror in %(TrafficCity)! Tailgate, how's it looking over at %(StreetName)?\n\n %(snailpic) %(ANY('Clogged,Crash,Pileup,Honk,Horns,Brakes,Gridlock,Chaos')).\n\n Ouch, I sure hope none of our listeners are stuck in that mess! Now for next week's forecast!"
 	"\1\b[22]It's time to shake things up a bit!%(br)We've asked our traffic expert, Tailgating Terror, to have a look at %(StreetName), %(StreetName), and %(StreetName) over in %(TrafficCity), and to give us a summary of the situation there. Tailgate, how's it looking!?\n\n %(snailpic) Slow.\n\n You heard it here first, folks! THAT'S the \f[italic,1]First Place Forecasts\f[italic,default] advantage!"
-	//"\1\b[22]"
-	//"\1\b[22]"
+	"\1\b[22]Next up, we've got a traffic report from our snail on the ground, Tailgating Terror, who is over in %(TrafficCity). Tailgate, how's it looking over at %(StreetName)?\n\n %(snailpic) %(ANY('Empty,Clear,Nothing')).\n\n Wow, what a surprise! How about %(StreetName)?\n\n %(snailpic) Same.\n\n Amazing! If you're looking for a good ol' fashioned street race, sounds like that's the place to be!"
+	_streetname = StreetName
+	"\1\b[22]And now for another look at the traffic, this time over in %(TrafficCity)! Our snail on the ground, Tailgating Terror, has just radioed in with the latest report. Tailgate, give us the scoop on %(_streetname)!\n\n %(snailpic) %(ANY('Fast,Speeding,Race,Vroom')).\n\n Awesome! If you like to race, get yourself over to %(_streetname) as soon as possible before it gets choked up!"
 	
 	//"\1\b[22]"
 	//"\1\b[22]"
@@ -138,7 +148,7 @@ RadioStation.Weather : nonoverlap_pool
 		"\1\b[22]If you're hoping for a break from this %(_weathery) weather, you won't have to wait long!\n\nMother nature will be shaking things up soon; we're predicting tomorrow will be %(_sunnyskies)! Stay tuned for further details after the break."
 		
 		_thissunnyweather = ("this sunny weather","this cloudy weather","this rainy weather","the worm migration","the intense burst of allergens in the air","the electrifying zip in the air","the psionic storm")[Weather.Today]
-		_sunny = ("sunny","cloudy","rainy","wormy","sneezy","elecric","tinfoil hat")[Weather.Today]
+		_sunny = ("sunny","cloudy","rainy","wormy","sneezy","electric","tinfoil hat")[Weather.Today]
 		_nothingbut = ("the hot sun beating down and warming everything up","puffy clouds all throughout the sky","rain, rain, RAIN","worms","pollen so strong it'll knock your socks off","free energy%(emdash) if you've got batteries to catch it in","terror as we all try to keep prying minds out of our thoughts")[Weather.Tomorrow]
 		"\1\b[22]At long last, it looks like %(_thissunnyweather) is coming to an end! That's right, this chain of %(_sunny) days is coming to a close, and starting tomorrow you can look forward to nothing but %(_nothingbut)!"
 		
