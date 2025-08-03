@@ -51,6 +51,7 @@ Talk.Snailsonality.Relaxed : nonoverlap_pool
 	"\1\b[10]I think more snails should try %(CurrentSnail.AltHobby). It's pretty fun!"
 	"\1\b[10]Poetry comes from the heart. And my heart says %(PoetryType('haiku','cinquain','limericks','acrostic','lyrics','rhyming couplets','alternate rhymes','free verse','diamante','concrete poetry'))!"
 	"\1\b[12]Those birds have been vicious this week, make sure to find a safe shelter! I've been hiding out %(inthefridge), personally."
+	"\1\b[10]I've started collecting postcards from each racetrack I visit. It makes a nice gallery of memories!"
 	
 	//This may need to change based on weather... or maybe it could be a weather radio dialogue
 	//The sun has been killer this week, make sure to stay moisturized! I've been hiding out %(inthefridge), personally.
@@ -79,7 +80,10 @@ Talk.Snailsonality.Angry : nonoverlap_pool
 	"\1\b[12]I WRITE THE BEST %(TOUPPER(PoetryType('haiku','cinquains','limericks','acrostics','lyrics','rhyming couplets','alternate rhymes','free verse','diamantes','concrete poems'))) THE SNAIL WORLD HAS EVER SEEN. BECAUSE \f[bold,1]MINE\f[bold,default] ARE IN \f[bold,1]UPPERCASE!!!\f[bold,default]" //TODO are they though...? they should be
 	"\1\b[10]ESCARGOT? \f[bold,1]ME? \f[bold,default]I'LL MAKE YOUR FACE ESCARGOT IF YOU TRY IT"
 	"\1\b[10]CAN'T THEY THINK OF ANYTHING BETTER TO PLAY ON THE RADIO?"
+	"\1\b[10]NEVER SETTLE FOR A TIE! I RACE TO%(br)\f[bold,1]WIN!\f[bold,default]"
+	"\1\b[10]PEEL OUT! RACE FOR THE GOAL!%(br)\f[bold,1]GET THE%(br)LETTUCE!!!\f[bold,default]"
 	
+	//TODO this needs to check for if the current snail has "well fed" _and also_ that you have more than 1 snail
 	// BAGEL WAS SAYING YOU DON'T FEED US ENOUGH
 	// if angry is fed
 	// WHAT A LIAR
