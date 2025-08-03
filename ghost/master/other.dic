@@ -1362,6 +1362,7 @@ emdash
 	"\f[name,arial]—\f[name,default]"
 }
 
+//TODO i used degree marks direct in dialogue but am too lazy to fix... fix later lol
 degrees
 {
 	"\f[name,arial]°\f[name,default]"
