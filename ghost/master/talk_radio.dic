@@ -23,14 +23,36 @@ RadioStation.Weather : nonoverlap_pool
 	//Weather - with word groups for variation? | gonna be honest i have no idea exactly what i wanted for word groups here...
 	_sunnyskies = ("sunny skies","cloudy skies","showers","the worms","sniffles and sneezes","electric zaps","psionic bolts")[Weather.Today]
 	"\1\b[22]The latest weather data is in: %(_sunnyskies) are here to stay throughout the afternoon! Stay tuned for the details on how we expect this to affect the air quality, your commute, and SO much more, here on \f[italic,1]First Place Forecasts\f[italic,default]!"
-	"\1\b[22]If you look outside your window right now, you can expect to see %(_sunnyskies) today! That's mother nature's way of reminding us that SHE is in charge! Isn't that awesome!?\n\n If you're enthusiastic about weather, stay tuned, because we'll have lots more detail for you right after this word from our sponsors!"
+	"\1\b[22]If you look outside your window, you can expect to see %(_sunnyskies) today! That's mother nature's way of reminding us that SHE is in charge! Isn't that awesome!?\n\n If you're enthusiastic about weather, stay tuned, because we'll have lots more detail for you right after this word from our sponsors!"
 	"\1\b[22]We've got a LOT of weather to talk about today, this show is going to be EXCITING for the next hour!\n\n This is Haley Storme, reporting for%(br)\f[italic,1]First Place Forecasts\f[italic,default], and if you're not excited about seeing %(_sunnyskies) today then YOU SHOULD BE, and we're gonna talk about why!"
-	//"\1\b[22]"
-	//"\1\b[22]"
 	
-	//Weather, but fully different? 7 pools of this...? 35... not horrible. This will include bringing in "experts" and such, and maybe on days without experts, describing how the weather will intensify or wane throughout the day?
+	_sunsunsun = ("sun, sun, sun","thickly clouded skies","heavy rainstorms","just the right conditions for the worm migration","extra breezy, picking up allergens such as pollen and dust and carrying them everywhere","electrifying, with jolts of raw electric power crackling in the air","full of intense bolts of energy as mollusks everywhere exercise their psionic powers")[Weather.Today] //TODO should it be "mollusks" or "slugs"...
+	"\1\b[22]The weather today is going to be %(_sunsunsun) all through the afternoon and going into the evening, and if THAT doesn't excite you I don't know what will!"
+	
+	{
+		"\1\b[22]And NOW it's time for this hour's FIRSTHAND weather report, courtesy of me, your host Haley Storme!\n\n That's right, at \f[italic,1]First Place Forecasts\f[italic,default] we don't JUST read out the data to you from our weather stations placed strategically across the whole continent, we put our money where our mouth is! And THAT means going outside to get a feel for the weather ourselves!\n\n "
+		--
+		switch Weather.Today
+		{
+			"The sun sure was hot as I stepped out the studio doors and into its powerful rays, and let me tell you, it was an INTENSE experience! There's NOTHING more powerful than the sun, isn't that so awesome!? That's the kind of power we should all be reverent of!\n\n And with that in mind, I was dragged back into the studio and made to apply vigorous amounts of sunscreen. Don't forget your sunscreen today, people; the sun will burn you to a crisp if you underestimate it!"
+			"We've got a great view of the skies from the front door of our studio, and let me tell you, they sure are CLOUDY today! With my own eyes I saw a thick blanket across the sky, with all those lovely fluffy cloud textures that make it look so cozy.\n\n And the colors! Don't forget about the colors. The cloud cover ranged from a light blueish white to a dark purple-y gray, and I'm sure there will be many more vibrant colors later this evening as the sun sets! The clouds really know how to put on a good light show! So get out there and see the skies TODAY!"
+			"The rain was pouring down as I stepped out of the studio, and a stiff breeze brought the rain right to me even though I was under an awning. I couldn't resist after that, I ran out headlong into the torrent and held my hands up to the sky, letting it soak me right through!\n\n Lightning flashed, thunder rumbled, and the winds blew harder and harder. What a rush! Nature is really awe-inspiring, isn't it!?\n\n I almost didn't come back inside to deliver this report, except that the studio manager came running out with an umbrella and brought me back in. I'm telling you here and now, go out and experience that storm before it's GONE!"
+			"I didn't get two steps outside the studio before seeing worms EVERYWHERE, worming their way along to their new homes! Isn't that amazing? When the humidity is perfect and the temperature is about right, out they come in droves!\n\n I tried to pick my way across the walkway to see around the side of the building, but it was so crowded I couldn't make it without risking stepping on the worms! So I came back inside and decided to look from our 2nd floor observatory.\n\n If you've not gone out to see them yet, make sure you do, but plan your route carefully!"
+			"Let me tell you what I saw the moment I stepped out the door. Ripples of wind tearing through the grass, flowers bobbing too and fro scattering their pollen, dandelion puffs soaring through the air%(emdash) it was amazing! Bees and butterflies were out in droves, making sure to spread that pollen around. What hard workers they are!\n\n Many of our dear helper snails around the studio were snuffling and sneezing, but like the true champions they are, they've committed to bringing you the weather NO MATTER WHAT!\n\n The weather sure is amazing, and so are the snails that help us bring it to you!\n\n %(snailpic) \f[color,disable]\f[italic,1]K-chuu!\f[italic,default]\f[color,default]" //TODO do we want to use the snail graphics here or save that for bill and blanca/pirate radio lol
+			"Today I stepped outside with a handful of dead batteries. You know the kind! Not enough power for even a remote control!\n\n The first thing I noticed was my hair starting to stand on end, and then I heard a crackle nearby that made me jump! Ooh, the tingling feelings were INTENSE!\n\n After a few minutes of this, I pulled out my battery tester and got to checking those batteries, and wouldn't you know it%(emdash) they were perfectly charged! Completely full, ready for a new life! Thanks, mother nature!"
+			"I always take precautions on a day like today, and so I had my trusty tinfoil hat on as I stepped outside the studio door. I'm glad I did, because as soon as I was outside, I could feel some kind of presence all around me!\n\n It was like there were a thousand eyes on me, and I got really intense goosebumps! I wonder if there was a slug nearby!? But thanks to the power of my hat, I felt no pressure on my brain at all. My thoughts were safe!\n\n The snail crew that works in the studio didn't have protection, so they shied away from the door, understandably. But if you have the proper equipment to experience a psionic storm safely, it's a feeling like no other! Shifts of energy; walking through focal points and feeling vast amounts of attention on you; the undeniable sensation that you're being followed wherever you go! No weather enthusiast's experience is complete until they've tried it."
+		}
+	}
+	
+	//Weather, but fully different? 7 pools of this...? 35... not horrible. This will include bringing in "experts" and such, and maybe on days without experts, describing how the weather will intensify or wane throughout the day? | update 70 lol. jesus christ this station man
 	if Weather.Today == 0 //Sunny
 	{
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+		
 		//"\1\b[22]"
 		//"\1\b[22]"
 		//"\1\b[22]"
@@ -44,10 +66,22 @@ RadioStation.Weather : nonoverlap_pool
 		//"\1\b[22]"
 		//"\1\b[22]"
 		//"\1\b[22]"
+		
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
 	}
 	elseif Weather.Today == 2 //Rainy
 	{
 		"\1\b[22]The storms are expected to ease up this next hour, and we'll be seeing a light rain for a while before the thicker clouds move in.\n\n If you're looking to get soaked without getting blown away by the wind, this will be the PERFECT chance to head out and experience the wonder of nature firsthand!"
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+		
+		//"\1\b[22]"
 		//"\1\b[22]"
 		//"\1\b[22]"
 		//"\1\b[22]"
@@ -61,9 +95,21 @@ RadioStation.Weather : nonoverlap_pool
 		//"\1\b[22]"
 		//"\1\b[22]"
 		//"\1\b[22]"
+		
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
 	}
 	elseif Weather.Today == 4 //Sneezy
 	{
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+		
 		//"\1\b[22]"
 		//"\1\b[22]"
 		//"\1\b[22]"
@@ -77,10 +123,22 @@ RadioStation.Weather : nonoverlap_pool
 		//"\1\b[22]"
 		//"\1\b[22]"
 		//"\1\b[22]"
+		
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
 	}
 	elseif Weather.Today == 6 //Psionic storm
 	{
 		//Ooo we're experiencing a psionic storm, is that why i've (word group - felt tingly|had urges to dance|etc...)
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+		
 		//"\1\b[22]"
 		//"\1\b[22]"
 		//"\1\b[22]"
@@ -109,15 +167,9 @@ RadioStation.Weather : nonoverlap_pool
 	"\1\b[22]NOW over to Tailgating Terror with a traffic update. Tailgate, how's those %(TrafficCity) streets looking today?\n\n %(snailpic) Bad.\n\n Yikes, we hate to see it! Thanks for the update, now back to the weather!"
 	"\1\b[22]Time for another traffic update, lets check in with our lovely Tailgating Terror in %(TrafficCity)! Tailgate, how's it looking over at %(StreetName)?\n\n %(snailpic) %(ANY('Clogged,Crash,Pileup,Honk,Horns,Brakes,Gridlock,Chaos')).\n\n Ouch, I sure hope none of our listeners are stuck in that mess! Now for next week's forecast!"
 	"\1\b[22]It's time to shake things up a bit!%(br)We've asked our traffic expert, Tailgating Terror, to have a look at %(StreetName), %(StreetName), and %(StreetName) over in %(TrafficCity), and to give us a summary of the situation there. Tailgate, how's it looking!?\n\n %(snailpic) Slow.\n\n You heard it here first, folks! THAT'S the \f[italic,1]First Place Forecasts\f[italic,default] advantage!"
-	"\1\b[22]Next up, we've got a traffic report from our snail on the ground, Tailgating Terror, who is over in %(TrafficCity). Tailgate, how's it looking over at %(StreetName)?\n\n %(snailpic) %(ANY('Empty,Clear,Nothing')).\n\n Wow, what a surprise! How about %(StreetName)?\n\n %(snailpic) Same.\n\n Amazing! If you're looking for a good ol' fashioned street race, sounds like that's the place to be!"
+	"\1\b[22]Next up, we've got a traffic report from our snail on the ground, Tailgating Terror, who is over in %(TrafficCity). Tailgate, how's it looking down at %(StreetName)?\n\n %(snailpic) %(ANY('Empty,Clear,Nothing')).\n\n Wow, what a surprise! How about %(StreetName)?\n\n %(snailpic) Same.\n\n Amazing! If you're looking for a good ol' fashioned street race, sounds like that's the place to be!"
 	_streetname = StreetName
 	"\1\b[22]And now for another look at the traffic, this time over in %(TrafficCity)! Our snail on the ground, Tailgating Terror, has just radioed in with the latest report. Tailgate, give us the scoop on %(_streetname)!\n\n %(snailpic) %(ANY('Fast,Speeding,Race,Vroom')).\n\n Awesome! If you like to race, get yourself over to %(_streetname) as soon as possible before it gets choked up!"
-	
-	//"\1\b[22]"
-	//"\1\b[22]"
-	//"\1\b[22]"
-	//"\1\b[22]"
-	//"\1\b[22]"
 	
 	
 	//Predictions - i can't decide if i want these to just be 5 written straight through and be just bad predictions, or if i want to pick an actual next weather and base it off of that... that could balloon it out to more dialogues, but some of it could be kept to simple word groups. i think it would lend itself to more variance and interest, probably... and i feel this station really needs that. I could also put bad predictions in the misc section lol
@@ -170,10 +222,23 @@ RadioStation.Weather : nonoverlap_pool
 	}
 	"\1\b[22]And now we're going to take a look at the temperatures over in%(emdash) whoa! Hahaha, %(besttoavoid(_snailcity))\n\n We'll come back around to %(_snailcity) once we've got our equipment functioning properly again. For now, let's move on to %(_snailcity2), where the temperatures look more reasonable!"
 	"\1\b[22]This just in, I'm getting reports about a massive storm cloud brewing over %(_snailcity)! This might be a big one folks!\n\n ... Oh, what's that? Hold on a moment, I'm getting new information that the cloud is actually just %(fromabbq(_snailcity))!\n\n False alarm, phew! But rest assured that if there WAS a sudden weather event, we at \f[italic,1]First Place Forecasts\f[italic,default] would get you information as fast as it becomes available, and maybe even faster!"
+	"\1\b[22]\![set,balloonwait,1.7]... Zzz... Temperatures today... Mmf...\![set,balloonwait,1.0]\n\n ... yyYAAAA%(emdash)! So cold!! ...\w8\w8\n\n Oh, we're-\w8\w8 \w8Th-\w8 This is HALEY STORME for \f[italic,1]FIRST PLACE FORECASTS\f[italic,default], and today is going to be FULL OF WEATHER!!\n\n CLOUDS, WIND, TEMPERATURE, YOU NAME IT AND WE'VE GOT IT TODAY!! ... Probably!!\n\n \w8\w8\f[color,disable]Where did my notes go? Are they under the desk...!? How did they get THERE...!\f[color,default]"
+	"\1\b[22]If you think today's weather is great, wait until you see our forecasts for next week, where there's going to be even MORE weather!\n\n Ooh, I'm so excited about what mother nature has in store for us! The temperatures, the humidity levels, the wind speeds%(emdash) all coming soon!"
+	
+	_randforecast = WeekForecastIndex
+	while _randforecast == WeekForecastIndex //Ensure no dupes
+	{
+		_randforecast = RAND(ARRAYSIZE(WeekForecast))
+	}
+	_oldweekforecast = WeekForecast[WeekForecastIndex][0,'|']
+	_newweekforecast = WeekForecast[_randforecast][1,'|'] //Picks a new one but it is NOT assigned UNLESS the dialogue plays due to the raise tag
+	"\![raise,OnUpdateWeekForecast,%(_randforecast)]\1\b[22]We've got an update for YOU on the forecast for this upcoming week. Our previous reports were calling for %(_oldweekforecast), but new data just in says that this week we're more likely to see %(_newweekforecast)!\n\n That's the weather for you! Stay tuned to \f[italic,1]First Place Forecasts\f[italic,default], and%(br)we'll keep you updated as more data comes in!"
+	
+	"\1\b[22]For those of you waiting on more details about the forecast for the upcoming week, just be patient a little longer! All our helper snails are busy crunching the numbers and running calculations, and we'll have the results in for you before you know it!\n\n While we wait, how about next we have a look at the temperatures we're expecting to see tonight?"
 	//"\1\b[22]"
 	//"\1\b[22]"
 	//"\1\b[22]"
-	//"Update on this week's forecast, previous reports were calling for [previous state of variable], but new data just in says that this week is more likely to be [new state of variable]!"
+	//"\1\b[22]"
 	
 	//"\1\b[22]"
 	//"\1\b[22]"
@@ -181,8 +246,11 @@ RadioStation.Weather : nonoverlap_pool
 	//"\1\b[22]"
 	//"\1\b[22]"
 	
-	//I think there needs to be another 10 slots of dialogue - but what to put... I think I'll decide once the rest is filled
-	
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
 	
 	/*
 	
@@ -194,12 +262,12 @@ RadioStation.Weather : nonoverlap_pool
 	We already had the idea of traffic dialogues, I think those can take up a good chunk as well
 	At least 10-15 weather dialogues? 5-10 traffic dialogues? That's anywhere from 15-25 dialogues taken up, feels decent
 	
-	- Trying to predict future weather but they're bad at it ("Looks like there's some clouds brewing up in the east, maybe a storm is coming soon!? ... Wait! I'm hearing now that it's from a snail pileup over on (racetrack)!")
+	///- Trying to predict future weather but they're bad at it ("Looks like there's some clouds brewing up in the east, maybe a storm is coming soon!? ... Wait! I'm hearing now that it's from a snail pileup over on (racetrack)!")
 	- Oh god I need a dialogue, at least for the weird weather types, where they bring in an "expert" on the subject to inform people...
-	- One of them falls asleep on air....... yes i'm stretching for topic ideas lol
+	///- One of them falls asleep on air....... yes i'm stretching for topic ideas lol
 	- POTENTIALLY i could comment VERY SPARSELY on the previous day's weather... like only comments that get the MOST BAREBONES of word groups, like "and after how sunny it was yesterday"...
-	//- Having a glitch where the temps skyrocket and they're like OMG ITS A BILLION DEGREES oh wait its fine lol. This feels like it should be rare to see, but also like................................................... is it funny if it happens every single day??? hm
-	- Honestly reading out the temperatures in various cities might not be bad... theoretically I could plot out the average temp per city, adjust it a bit based on weather, and then randomize it a little... that'd be nice. That's a thing weather stations would do... not the randomizing part obv. I mean, then again, do all cities get the same weather...? ... don't think about it too hard. see this is the part where we wiggle our hands a little to create a pleasing texture that gives the illusion of depth but doesn't take a million years to complete. i say, sinking a million years into this GODDAMN RADIO
+	///- Having a glitch where the temps skyrocket and they're like OMG ITS A BILLION DEGREES oh wait its fine lol. This feels like it should be rare to see, but also like................................................... is it funny if it happens every single day??? hm
+	///- Honestly reading out the temperatures in various cities might not be bad... theoretically I could plot out the average temp per city, adjust it a bit based on weather, and then randomize it a little... that'd be nice. That's a thing weather stations would do... not the randomizing part obv. I mean, then again, do all cities get the same weather...? ... don't think about it too hard. see this is the part where we wiggle our hands a little to create a pleasing texture that gives the illusion of depth but doesn't take a million years to complete. i say, sinking a million years into this GODDAMN RADIO
 	- Predictions about the upcoming ??? snail harvest ??? like... like food snails and how good upcoming batches of racing snails are gonna be due to the weather they grew up in
 	- Maybe also notes about what kind of lettuce yields you might expect this season... hm. that might be weird to vary day to day tho... I could seed it monthly or something tho
 		Seeding by week... hm. I grabbed yearweek, but how to do... I think I'll just use SRAND and use the week number + year number as the seed. The only place RAND is currently used in the base SHIORI files is for communicateratio, which I do not use, so I can use it to my heart's desire. Unless they add more RAND in an update, but shrug, I can deal with that if and when it comes up and it probably won't. No reason to not use SRAND here
@@ -344,23 +412,24 @@ RadioStation.Music : nonoverlap_pool
 	
 	//DJ
 	_somesnail = SnailNameGenerator(,"not alliteration")
+	//TODO this dialogue needs an embed tag or something so that repeating it doesn't draw a new lyric... maybe I could just grab a random index I guess, since it doesn't need to rotate like the traffic stuff. NOTE: this ALSO has to apply to the variety show when we get there!
 	"\1\b[22]And now for something special, folks! A little snail called %(_somesnail) is here in the studio with us today, and it's going to perform a song that it wrote itself. Take it away, %(_somesnail)!\n\n %(note1)%(note1)%(note1)%(note1)%(note1)%(note1)%(note1)%(note1)%(note1)%(note1)\n\n \f[italic,1]\![embed,OnSnailSong]\f[italic,default]\n\n %(note1)%(note1)%(note1)%(note1)%(note1)%(note1)%(note1)%(note1)%(note1)%(note1)\_w[2000]\n\n Aw, that was lovely. Thank you for that wonderful performance, %(_somesnail), and we hope you'll come back to the studio again someday to sing another song!"
-	"\1\b[22]It's that time of the day again, folks, it's time to put in your music requests! Starting next hour, I play nothing but what you send me; you control the show!\n\n Get out those phones, send me a message on the snailernet, use our app; whatever way you wanna get it to me, get it to me and I'll play out the snail tunes you've been itching for."
+	"\1\b[22]It's that time of the day again, folks,%(br)it's time to put in your music requests! Starting next hour, I play nothing but what you send me; you control the show!\n\n Get out those phones, send me a message on the snailernet, use our app; whatever way you wanna get it to me, get it to me and I'll play out the snail tunes you've been itching for."
 	"\1\b[22]How's everyone feeling out there? These tunes are hot today, yowza!\n\n We'll get right back to it in a moment, but I want to take this time to remind everyone about the %(TodaysChoices(charityevent1))"
-	"\1\b[22]Woo! How's everyone doing, feeling awake? What a way to start the day off with some classic tunes that really get your blood pumping! I don't know about you, but all these greatest snail hits make my feet feel like they gotta MOVE!\n\n Stay tuned, it's time to pause and thank our sponsors, but we'll be back in a minute with all your favorites and more on 103.7, Mollusk Music!" //TODO i wonder if "start the day off" ought to be replaced based on the runtime... "start the day off", "get us through the afternoon", "keep us awake through the evening"...
-	"\1\b[22]Alright alright alright, how was that for a great song? It's a shame you all can't see what it's like here in the studio, 'cuz every time we play that one I end up rocking out no matter what else is going on.\n\n That being said, it's that part of the hour where I remind you guys about the %(TodaysChoices(charityevent2))"
-	"\1\b[22]Woohoo! Doesn't that one just make you wanna dance no matter where you are? Just last week I was %(inmycar). It was really something else.\n\n More great tunes like that are coming up soon, so don't touch that dial! We'll be back in a minute after a word from our generous sponsors."
+	"\1\b[22]Woo! How's everyone doing, feeling awake? What a way to start the day off with some classic tunes that really get your blood pumping! I don't know about you, but all these greatest snail hits make my feet feel like they gotta MOVE!\n\n Stay tuned, it's time to pause and thank our sponsors, but we'll be back in a minute with all your favorites and more on 103.7, \f[italic,1]Mollusk Music\f[italic,default]!" //TODO i wonder if "start the day off" ought to be replaced based on the runtime... "start the day off", "get us through the afternoon", "keep us awake through the evening"...
+	"\1\b[22]Alright alright alright, how was that for a great song? It's a shame you all can't see what it's like here in the studio,%(br)'cuz every time we play that one I end up rocking out no matter what else is going on.\n\n That being said, it's that part of the hour where I remind you guys about the %(TodaysChoices(charityevent2))"
+	"\1\b[22]Woohoo! Doesn't that one just make you wanna dance no matter where you are? Just last week I was %(inmycar). It was really something else.\n\n More great tunes like that are coming up soon, so don't touch that dial!%(br)We'll be back in a minute after a word from our generous sponsors."
 	"\1\b[22]Hey hey hey, check it out guys, we've still got that %(TodaysChoices(charityevent3))"
 	"\1\b[22]Who's ready for some more rockin' snail songs? We've got a great lineup this next hour, so crank up the volume and share these beats with all your neighbors!"
 	"\1\b[22]Yahoo, today's tracks have been absolutely scorching hot! We hope all you snails and snail fans out there are having a great time, and we'll be back with more after a quick word from our sponsors that help us keep the show on the air!"
 	"\1\b[22]Ahh, that's a good song, isn't it? One of the all-time greats, it really is. You can feel the energy zipping around the room whenever we play it out.\n\n We've got more great tunes in store for you this hour, so stay with us! And if you'd like to hear your favorites starting next hour, make sure to send in your requests now! Give us a call, send it to me on the snailernet, send a request in on our app; however you can get it to me, get it to me and I'll make it happen!"
-	"\1\b[22]How's everyone doing out there, has that last song got you movin' and groovin'? It's sure made its way to my feet, let me tell you. I feel like I could %(danceallnight)!\n\n Let's keep that energy going with this next tune on 103.7, Mollusk Music. Take it away!"
+	"\1\b[22]How's everyone doing out there, has that last song got you movin' and groovin'? It's sure made its way to my feet, let me tell you. I feel like I could %(danceallnight)!\n\n Let's keep that energy going with this next tune on 103.7, \f[italic,1]Mollusk Music\f[italic,default]. Take it away!"
 	"\1\b[22]Well, that really was a blast from the past, wasn't it? We've pulled out some old songs from our archives to play for you today. They might be a bit older than our standard fare, but as they say, absence makes the heart grow fonder!\n\n Look forward to some more deep cuts throughout the show today! And if you can correctly guess what artists we have in our lineup, you'll be entered to win a prize, so give us a call and get your guesses in!"
-	"\1\b[22]How's that for a nostalgic tune, huh? We're dusting off the old archives today, so get ready for some vintage memories this show! And don't forget that next hour will be songs picked by you, our listeners. If there's a deep cut you'd like to hear in particular, send us a request and if we've got it I'll make sure we play it just for you!"
+	"\1\b[22]How's that for a nostalgic tune, huh? We're dusting off the old archives today, so get ready for some vintage memories this show! And don't forget that next hour will be songs picked by you, our listeners. If there's a deep cut you'd like to hear in particular, send us a request and if we've got it%(br)I'll make sure we play it just for you!"
 	"\1\b[22]Woo! How about that weather, huh? We've got some great tunes for a day like today, so stick with us while we hear a word from our sponsors, and we'll be back with some weather-appropriate songs to jam out to!"
-	"\1\b[22]What a powerful song, am I right? The kind you can't help but sing along to, whether you know the words or not, hahaha!\n\n More like that coming up right now on 103.7, Mollusk Music. And after this next song I'll tell you more about that %(TodaysChoices(charityevent4))!"
-	"\1\b[22]How about that. Talk about a timeless song, I can't imagine a day will come when we don't play that song every show. Ah, it just hits you real good when that last chorus comes in, incredible.\n\n We're going to get right back into some sweet tunes, but stick around, we've got that %(TodaysChoices(charityevent5)), and we'll have more details for you after this next song!"
-	"\1\b[22]Woo, bust out those dance moves, these greatest hits just keep coming!\n\n And we're right back into it, so don't touch that dial. You're listening to%(br)103.7, Mollusk Music."
+	"\1\b[22]What a powerful song, am I right? The kind you can't help but sing along to, whether you know the words or not, hahaha!\n\n More like that coming up right now on 103.7, \f[italic,1]Mollusk Music\f[italic,default]. And after this next song I'll tell you more about that %(TodaysChoices(charityevent4))!"
+	"\1\b[22]How about that. Talk about a timeless song, I can't imagine a day will come when we don't play that track every show. Ah, it just hits you real good when that last chorus comes in, incredible.\n\n We're going to get right back into some sweet tunes, but stick around, we've got that %(TodaysChoices(charityevent5)), and we'll have more details for you after this next song!"
+	"\1\b[22]Woo, bust out those dance moves, these greatest hits just keep coming!\n\n And we're right back into it, so don't touch that dial. You're listening to%(br)103.7, \f[italic,1]Mollusk Music\f[italic,default]."
 	"\1\b[22]Man, I can feel everyone's excitement from here! Who's ready for this next tune?\n\n We'll get into it in just a moment, but as a quick reminder, next hour we'll be playing out your requests, so make sure you get 'em in! Call in, message me on the snailernet, talk to us through our app. However you can get your request in, do it and it just might get played out next hour!"
 	"\1\b[22]What a legendary song. Truly genre-defying, I remember when it first came out and everyone went wild over those thrilling harmonies.\n\n I want to hear from you guys, what songs from your childhood stick most firmly in your memory? Send 'em in to us, and we might just play them out if it's been a while!"
 	"\1\b[22]Ah, I never get tired of these snail songs. There's nothing quite like hearing a thousand snails raise up their voice in one glorious chorus, or hearing a well-tuned group of snails singing in perfect harmony.\n\n What's your favorite kind of snail song? Send in your votes today via our app, or on the snailernet, and let us know!"

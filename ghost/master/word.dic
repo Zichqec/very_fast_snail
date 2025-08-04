@@ -2217,6 +2217,23 @@ StreetName
 	"Exhaust Way"
 }
 
+OnUpdateWeekForecast
+{
+	WeekForecastIndex = TOINT(reference0)
+}
+
+WeekForecast : array
+{
+	//old|new
+	"severe thunderstorms that might knock out power in several areas|some intense storms coming up that might potentially knock down trees, branches, and with them powerlines that supply several areas with electricity"
+	"extreme winds|extreme winds that will blow away snails, garbage cans, recycling bins, and any other small to medium-sized objects that aren't properly tethered"
+	"intense sunshine and potentially a minor drought|sun all week long which will reportedly dry up small creeks, puddles, and wither the plants in your garden"
+	"a tornado watch due to some swirly looking clouds|a giant tornado, the likes of which could tear up snail racetracks and separate many snails from their sponsors"
+	"a deep haze that would blanket the entire city|some intense fog rolling in, covering the whole city in a thick haze that will reduce visibility and muffle sounds"
+	"an intense psionic storm|the most intense psionic storm anyone has ever seen, with %(snailcity) right at the focal point. Everyone will be able to feel the energy crackling in the air"
+	"a hurricane|a giant hurricane rolling in with enough force to blow out windows and tear up trees. Make sure you board up securely"
+}
+
 WeeksHarvestIndex
 {
 	//Idk how many options I want, but just to sketch out the code...

@@ -64,6 +64,8 @@ OnFirstBoot : all
 	
 	TrafficUpdateIndex = RAND(ARRAYSIZE(SnailCities))
 	
+	WeekForecastIndex = RAND(ARRAYSIZE(WeekForecast))
+	
 	
 	
 	"\1\s[-1]\0\s[0]"
@@ -86,6 +88,7 @@ OnInitialize
 		MakeWeather
 		
 		TrafficUpdateIndex = RAND(ARRAYSIZE(SnailCities)) //It almost makes me wonder, if you go off the weather station for a while, should this re-randomize... hm
+		WeekForecastIndex = RAND(ARRAYSIZE(WeekForecast))
 	}
 	
 	if !ISVAR("CleaningProductsPurchased"); CleaningProductsPurchased = 0
