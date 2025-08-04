@@ -52,6 +52,7 @@ Talk.Snailsonality.Relaxed : nonoverlap_pool
 	"\1\b[10]Poetry comes from the heart. And my heart says %(PoetryType('haiku','cinquain','limericks','acrostic','lyrics','rhyming couplets','alternate rhymes','free verse','diamante','concrete poetry'))!"
 	"\1\b[12]Those birds have been vicious this week, make sure to find a safe shelter! I've been hiding out %(inthefridge), personally."
 	"\1\b[10]I've started collecting postcards from each racetrack I visit. It makes a nice gallery of memories!"
+	"\1\b[10]Whether I come in first place or not, it feels great to cross the finish line!"
 	
 	//This may need to change based on weather... or maybe it could be a weather radio dialogue
 	//The sun has been killer this week, make sure to stay moisturized! I've been hiding out %(inthefridge), personally.
@@ -144,6 +145,7 @@ Talk.Snailsonality.Sour : nonoverlap_pool
 	"\1\b[10]Does my mucus seem off? I feel like my mucus is off.\n\n ... Don't tell anyone I said that!!"
 	"\1\b[10]No I don't have any alliterative snail friends. Why would I? They're all weird! I don't wanna be friends with \f[italic,1]them!\f[italic,default]"
 	"\1\b[10]I saw the snooty snails were organizing a training camp. Ha! Imagine being so uptight and focused on other snails that you forget to train during your normal training hours and have to make it up at a camp!"
+	"\1\b[10]Last time I was at the store I saw a bunch of snooty snails all standing in a line. How pathetic! They have to arrange themselves in a ""satisfying way"" just to stave off their feelings of worthlessness!"
 }
 
 Talk.Snailsonality.Tired : nonoverlap_pool
@@ -168,6 +170,7 @@ Talk.Snailsonality.Tired : nonoverlap_pool
 	"\1\b[10]Keep up with your snail taxes, if the SRS catches you not paying you \f[italic,1]will\f[italic,default] regret it."
 	"\1\b[10]Maybe I should retire and get a desk job."
 	"\1\b[10]I wish all the other snails would chill out and focus on racing already. That's what we're here for, isn't it?"
+	"\1\b[10]Sometimes you get really close to finishing first in a race, but then another snail leaps ahead at the last minute. It can be really demoralizing."
 }
 
 Talk.Snailsonality.Ratings : nonoverlap_pool
@@ -309,7 +312,7 @@ Talk.Snailsonality.Gymbro : nonoverlap_pool
 	"\1\b[10]Got any %(proteinshakes)? I could use a pick-me-up."
 	"\1\b[10]I bet I could lift every piece of snail equipment in this garage. At once."
 	"\1\b[10]I've been lifting the wrenches in your toolbox for practice. Impressive, I know."
-	"\1\b[10]Here, watch what happens when I flex.\n\n\s[1]\_w[3000]\s[0] Cool, huh? Raw muscle. Pure power."
+	"\1\b[10]Here, watch what happens when I flex.\n\n \s[1]\_w[3000]\s[0]Cool, huh? Raw muscle. Pure power."
 	"\1\b[10]You're not lifting enough. You should work out with me in the mornings, I'll be your accountability partner."
 	"\1\b[10]There should be a leaderboard for strongest snails."
 	"\1\b[10]I could shell press 10 heads of lettuce at once. Give me some and I'll show you."
@@ -324,6 +327,7 @@ Talk.Snailsonality.Gymbro : nonoverlap_pool
 	"\1\b[10]There's a lot of debate about if coolness or speed matters more. The real answer? Muscle trumps both."
 	"\1\b[10]Muscle... extremely cool \f[italic,1]and\f[italic,default] wickedly fast. The best of both worlds, no need to choose."
 	"\1\b[10]Writing poetry is like a workout for your brain. I enjoy %(PoetryType('haiku','cinquains','limericks','acrostic','lyrics','rhyming couplets','alternate rhymes','free verse','diamante','concrete poetry')), my brain is bulking up nicely."
+	"\1\b[12]Sometimes I try to jump ahead in my workout routine. If I could skip doing 25 shell presses and go straight from 20 to 30, I'd get stronger faster, right?\n\n Big mistake. Injured muscles are bad at growing."
 }
 
 Talk.Snailsonality.Super_Fan : nonoverlap_pool
@@ -460,6 +464,7 @@ Talk.Snailsonality.Facts : nonoverlap_pool
 
 Talk.Snailsonality.Sellout : nonoverlap_pool
 {
+	//TODO should I use %(LL) for these?
 	"\1\b[10]Autographs, 10 lettuce... No, wait, I mean 100."
 	"\1\b[10]You have no idea how much advertising space there is inside my shell."
 	"\1\b[10]My favorite %(helmet) brand? It could be yours! 1,000 lettuce upfront."
