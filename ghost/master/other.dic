@@ -1357,9 +1357,15 @@ gshhk
 	"GSSHK"
 }
 
+//Note to self: these have problems if used in poetry, or if we otherwise do different fonts... hm!
 emdash
 {
 	"\f[name,arial]—\f[name,default]"
+}
+
+tm
+{
+	"\f[name,arial]™\f[name,default]"
 }
 
 //TODO i used degree marks direct in dialogue but am too lazy to fix... fix later lol
