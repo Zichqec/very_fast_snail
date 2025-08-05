@@ -2273,3 +2273,13 @@ fromabbq
 	"a baby cloud and someone wrote the wrong units when measuring it"
 	//"here to say hello, and it'll be heading off to the mountains soon" //hmmmmmm couldn't resist putting it down lol
 }
+
+acalamity
+{
+	"a tornado"
+	"a hurricane"
+	"a tsunami"
+	"an earthquake"
+	"a strong windstorm"
+	"extreme thunderstorms"
+}
