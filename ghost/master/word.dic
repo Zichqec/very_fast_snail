@@ -2232,6 +2232,7 @@ WeekForecast : array
 	"a deep haze that would blanket the entire city|some intense fog rolling in, covering the whole city in a thick haze that will reduce visibility and muffle sounds"
 	"an intense psionic storm|the most intense psionic storm anyone has ever seen, with %(snailcity) right at the focal point. Everyone will be able to feel the energy crackling in the air"
 	"a hurricane|a giant hurricane rolling in with enough force to blow out windows and tear up trees. Make sure you board up securely"
+	"clear, calm skies|calm, pleasant weather, perfect for having a picnic"
 }
 
 WeeksHarvestIndex
