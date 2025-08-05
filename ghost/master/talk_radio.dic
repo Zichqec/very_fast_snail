@@ -26,7 +26,7 @@ RadioStation.Weather : nonoverlap_pool
 	"\1\b[22]If you look outside your window, you can expect to see %(_sunnyskies) today! That's mother nature's way of reminding us that SHE is in charge! Isn't that awesome!?\n\n If you're enthusiastic about weather, stay tuned, because we'll have lots more detail for you right after this word from our sponsors!"
 	"\1\b[22]We've got a LOT of weather to talk about today, this show is going to be EXCITING for the next hour!\n\n This is Haley Storme, reporting for%(br)\f[italic,1]First Place Forecasts\f[italic,default], and if you're not excited about seeing %(_sunnyskies) today then YOU SHOULD BE, and we're gonna talk about why!"
 	
-	_sunsunsun = ("sun, sun, sun","thickly clouded skies","heavy rainstorms","just the right conditions for the worm migration","extra breezy, picking up allergens such as pollen and dust and carrying them everywhere","electrifying, with jolts of raw electric power crackling in the air","full of intense bolts of energy as mollusks everywhere exercise their psionic powers")[Weather.Today] //TODO should it be "mollusks" or "slugs"...
+	_sunsunsun = ("sun, sun, sun","thickly clouded skies","heavy rainstorms","just the right conditions for the worm migration","extra breezy, picking up allergens such as pollen and dust and carrying them everywhere","electrifying, with jolts of raw electric power crackling in the air","full of intense bolts of energy as slugs everywhere exercise their psionic powers")[Weather.Today]
 	"\1\b[22]The weather today is going to be %(_sunsunsun) all through the afternoon and going into the evening, and if THAT doesn't excite you I don't know what will!"
 	
 	{
