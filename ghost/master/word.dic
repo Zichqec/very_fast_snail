@@ -2284,3 +2284,13 @@ acalamity
 	"a strong windstorm"
 	"extreme thunderstorms"
 }
+
+theresweathereverywhere
+{
+	"there's weather in every single place on Earth"
+	"there's weather on %(ANY('Venus,Mars,Jupiter,Saturn'))"
+	"all of Earth's weather takes place inside its atmosphere"
+	"every snail on the planet has been impacted by weather in some form"
+	"clouds occur naturally on their own"
+	"clouds don't just rain water down, they ARE water"
+}
