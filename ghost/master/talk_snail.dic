@@ -388,6 +388,7 @@ Talk.Snailsonality.Slacker : nonoverlap_pool
 	"\1\b[10]Maybe I would perform better if I had a long vacation to recuperate. Paid, of course, so I don't lose morale. Something to think about."
 	"\1\b[10]Hey I need tomorrow off. Just so you know. Thanks."
 	"\1\b[10]Are we done yet? My show is going to come on soon and I don't want to miss prime napping time."
+	"\1\b[10]Today is a self care day. I need some me time and some of that sweet, sweet lettuce to rejuvenate myself."
 }
 
 Talk.Snailsonality.Jealous : nonoverlap_pool
@@ -412,6 +413,7 @@ Talk.Snailsonality.Jealous : nonoverlap_pool
 	"\1\b[10]I think I might try something new for lunch, I haven't been happy with the nutrient spread I've been getting. Optimal nutrients are important, you know!"
 	"\1\b[10]""%(CurrentSnail.Name)"" is an alright name, but I sorta wish it was different. It doesn't really suit how I've grown, you know?"
 	"\1\b[10]I wonder if %(fastfood) is my real calling..."
+	"\1\b[12]If I save up enough lettuce, maybe I could splurge and get some new equipment. Something %(fc('cool','fast'))...\n\n I want to %(fc('try out the latest fashions and make a statement','try and set a new personal best on the track'))!"
 }
 
 Talk.Snailsonality.Liar : nonoverlap_pool
@@ -436,6 +438,7 @@ Talk.Snailsonality.Liar : nonoverlap_pool
 	"\1\b[10]I'm actually an excellent singer, I was gifted with a great vocal range and a unique but soothing quality to my voice. I don't sing in the garage though, bad acoustics. I'll have to serenade you another time."
 	"\1\b[10]I'm a skilled typist, I used to do it for work. I could sustain speeds of 90 wpm or more. I need a specific kind of keyboard for it though, so I can't show you right now."
 	"\1\b[10]I have much to learn about the world. I am but a humble snail, after all. I recognize my own shortcomings, and I try to be realistic when talking about my own capabilities."
+	"\1\b[10]I once ate %(RAND(5) + 2) entire boxes of Snail-ios in a day. It's true. I'll do it again if you don't believe me, bring it on."
 }
 
 Talk.Snailsonality.Facts : nonoverlap_pool
