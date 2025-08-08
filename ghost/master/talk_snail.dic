@@ -25,6 +25,7 @@ Talk.Snailsonality.Sad : nonoverlap_pool
 	"\1\b[10]I'll never have the life I thought I'd have... the life they promised me in snail school."
 	"\1\b[12]I miss those snail school days... Back when all I had to worry about was getting good grades, deciding whether I wanted to be fast or cool, and not becoming someone's lunch."
 	"\1\b[10]All that time I spent practicing my alliteration skills... What's the point now?"
+	"\1\b[12]Maybe I should crawl into the %(refrigerator) for a while... Have some alone time to sort out my thoughts, maybe take a long nap..."
 
 	//Maybe I'd feel better if I was the coolest looking snail ever. ... But it's kinda hard to compete with the legendary cool snails of the past... Do I really stand a chance? //could change based on coolness level
 }
