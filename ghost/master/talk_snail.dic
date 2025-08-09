@@ -214,7 +214,7 @@ chain.running_produce_aisle
 	"\1\b[10]Getting kicked out of the grocery store for oozing all over the vegetables? 0/10, a tragedy.\e:chain=end"
 }}CHAIN
 
-Talk.Snailsonality.Silent : array
+Talk.Snailsonality.Silent : nonoverlap_pool
 {	
 	//106 x 26 max dimensions
 	_drawings = <<"

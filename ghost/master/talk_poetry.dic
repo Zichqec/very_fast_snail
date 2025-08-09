@@ -2862,4 +2862,5 @@ Poetry.Concrete : nonoverlap_pool
 	// _poems = "\![no-autopause]\1\b[2]\_q\f[name,courier new]\f[height,-4]\f[align,left]" + _poems
 	_poems = SkipSpaces(_poems)
 	parallel _poems
+	//TODO there is a direct emdash in this poem rather than %(emdash)... handle somehow
 }
