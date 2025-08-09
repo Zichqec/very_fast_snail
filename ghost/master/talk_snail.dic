@@ -54,6 +54,7 @@ Talk.Snailsonality.Relaxed : nonoverlap_pool
 	"\1\b[12]Those birds have been vicious this week, make sure to find a safe shelter! I've been hiding out %(inthefridge), personally."
 	"\1\b[10]I've started collecting postcards from each racetrack I visit. It makes a nice gallery of memories!"
 	"\1\b[10]Whether I come in first place or not, it feels great to cross the finish line!"
+	"\1\b[10]It's nice to spend a day at home sometimes, isn't it?"
 	
 	//This may need to change based on weather... or maybe it could be a weather radio dialogue
 	//The sun has been killer this week, make sure to stay moisturized! I've been hiding out %(inthefridge), personally.
@@ -122,6 +123,7 @@ Talk.Snailsonality.Proper : nonoverlap_pool
 	"\1\b[10]Freefalling... Freedom...?\n\n ... French fries."
 	"\1\b[10]Fast fast fast, foot forward, fly.\n\n ... Am I fast enough?"
 	"\1\b[10]Negativity about names is never needed. Nevertheless, a regular nuisance..."
+	"\1\b[10]Legend... unlikely. Loser.\n\n Looked upon that way, lately."
 }
 
 Talk.Snailsonality.Sour : nonoverlap_pool
@@ -147,6 +149,7 @@ Talk.Snailsonality.Sour : nonoverlap_pool
 	"\1\b[10]No I don't have any alliterative snail friends. Why would I? They're all weird! I don't wanna be friends with \f[italic,1]them!\f[italic,default]"
 	"\1\b[10]I saw the snooty snails were organizing a training camp. Ha! Imagine being so uptight and focused on other snails that you forget to train during your normal training hours and have to make it up at a camp!"
 	"\1\b[10]Last time I was at the store I saw a bunch of snooty snails all standing in a line. How pathetic! They have to arrange themselves in a ""satisfying way"" just to stave off their feelings of worthlessness!"
+	"\1\b[12]I've got some free advice for any snooty snails out there: get a hobby! Go try %(ANY(AltHobby)) or something! It might make you bearable to talk to!"
 }
 
 Talk.Snailsonality.Tired : nonoverlap_pool
@@ -201,6 +204,8 @@ Talk.Snailsonality.Ratings : nonoverlap_pool
 	else; "\1\b[10]Unpolished shell? 5/10, the way nature intended it but nature could do better."
 	
 	"\1\b[10]Running loose in the produce aisle? 10/10, delicious.\e:chain=chain.running_produce_aisle"
+	"\1\b[10]%(Capitalize(CurrentSnail.AltHobby))? 10/10, fun to do in my spare time."
+	"\1\b[10]Kick flips? 10/10, really hard for a snail to pull off but that just makes it even cooler if you can do it."
 	
 }
 
@@ -440,6 +445,7 @@ Talk.Snailsonality.Liar : nonoverlap_pool
 	"\1\b[10]I'm a skilled typist, I used to do it for work. I could sustain speeds of 90 wpm or more. I need a specific kind of keyboard for it though, so I can't show you right now."
 	"\1\b[10]I have much to learn about the world. I am but a humble snail, after all. I recognize my own shortcomings, and I try to be realistic when talking about my own capabilities."
 	"\1\b[10]I once ate %(RAND(5) + 2) entire boxes of Snail-ios in a day. It's true. I'll do it again if you don't believe me, bring it on."
+	"\1\b[10]I can change a lightbulb on my own without assistance. Next time you have a bulb go out, I'll show you."
 }
 
 Talk.Snailsonality.Facts : nonoverlap_pool
@@ -489,6 +495,7 @@ Talk.Snailsonality.Sellout : nonoverlap_pool
 	"\1\b[10]I think I'm starting to dry out a little. Mist please! I've got to be looking fresh for this next race so I can attract more sponsors!"
 	"\1\b[10]Selling your soul isn't that bad once you remember the perks."
 	"\1\b[10]Where's hair and makeup? It's almost racing time."
+	"\1\b[10]A healthy diet is important if you want to look your best once the cameras are rolling and your show is live!"
 }
 
 
