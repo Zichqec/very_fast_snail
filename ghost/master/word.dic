@@ -2235,12 +2235,39 @@ WeekForecast : array
 	"clear, calm skies|calm, pleasant weather, perfect for having a picnic"
 }
 
-WeeksHarvestIndex
+WeeksLettuceHarvestIndex
 {
-	//Idk how many options I want, but just to sketch out the code...
-	void SRAND("%(yearweek)%(year)") //don't remember if this takes a string or an int? update later when find out
-	RAND(5) //0-6, adjust when i find out how many conditions we want lol TODO
+	_seed = "%(yearweek)%(year)0" //The 0 on the end differentiates it from the seed below which uses a 1, so that they always differ...
+	void SRAND(TOINT(_seed))
+	RAND(4) //0-4
 }
+
+/*
+
+0 - Average/good lettuce crops
+1 - Bumper crop
+2 - Destroyed by bugs
+3 - Everyone planted cabbage this season
+4 - Extreme lettuce surplus
+
+*/
+
+WeeksSnailHarvestIndex
+{
+	_seed = "%(yearweek)%(year)1"
+	void SRAND(TOINT(_seed)) //does not take a string
+	RAND(4) //0-4
+}
+
+/*
+
+0 - Excellent batch of racer snails upcoming
+1 - Excellent batch of food snails upcoming
+2 - Particularly bad batch of racer snails
+3 - Particularly bad batch of food snails
+4 - Snail production got interrupted and now there is a severe snail shortage! Food snails are being used in place of racer snails to meet demand!
+
+*/
 
 badtemp
 {
@@ -2307,4 +2334,44 @@ theresweathereverywhere
 	"some storms are so big they hit more than 1 city at once"
 	"you can get a WEATHER FAN pin FREE for coming to one of our storm chaser events"
 	"you can be a part of the wind too if you go outside and breathe really hard"
+}
+
+acloudsnail
+{
+	"a snail"
+	"a head of lettuce"
+	"an engine"
+	"a cloud" //:joy: i can't help it...
+	"a cabbage leaf"
+	"a helmet"
+	"a saddle"
+	"a wing"
+	"a bird"
+	"a racetrack"
+	"a tree"
+	"a stick"
+	"a weather balloon" //teehee
+	"a balloon"
+	"a sunhat"
+	"a plane"
+	"a beet"
+	"a kale leaf"
+	"a bowl of salad"
+	"a carrot"
+}
+
+floatingcities
+{
+	"floating cities"
+	"alien civilizations"
+	"a rare species of cloud snail"
+	"storms"
+	"even more clouds"
+	"the place where the stars sleep"
+	"the moon"
+	"the nests of certain territorial birds"
+	"a mysterious telescope"
+	"the cans of paint they use to paint the sky each day"
+	"their missing keys"
+	"the meaning to life"
 }

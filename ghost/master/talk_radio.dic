@@ -47,60 +47,60 @@ RadioStation.Weather : nonoverlap_pool
 	//Weather, but fully different? 7 pools of this...? 35... not horrible. This will include bringing in "experts" and such, and maybe on days without experts, describing how the weather will intensify or wane throughout the day? | update 70 lol. jesus christ this station man
 	if Weather.Today == 0 //Sunny
 	{
-		//"\1\b[22]"
-		//"\1\b[22]"
-		//"\1\b[22]"
-		//"\1\b[22]"
-		//"\1\b[22]"
+		"\1\b[22]The sun's rays sure are HOT today. If you're going out, be sure to bring sunscreen for you, and a misting bottle for your snail! At these temperatures, snails might be inclined to go into estivation, so it's important to keep them cool and moist while you're outdoors!"
+		"\1\b[22]If you like sunglasses, today is your day to SHINE! Rock those shades everywhere you go today, because that sun is BRIGHT.\n\n If you haven't got your snail a pair, make sure to do that as well! Snails eyes deserve to be shaded too, and they'll love feeling cool alongside you!"
+		"\1\b[22]If you head outside right about now, you will be absolutely BOMBARDED with ultraviolet rays That's the sun at work, showing off its incredible power! NO other weather event on Earth beats it, not even close!"
+		"\1\b[22]If you're heading out today, bring your sun gear! Sunscreen, umbrellas, mist bottles, squirt guns, plenty of drinking water, all of it!\n\n Experiencing the sun is GREAT, but you probably don't want to experience heat stroke too!" //"probably"
+		"\1\b[22]If you're planning to spend the day tanning, remember to leave your snails at home! Or if they must come along, provide them with PLENTY of shade and cool water.\n\n Snails don't tan, and they don't take well to the heat, so you're better off not making them try!"
 		
-		//"\1\b[22]"
-		//"\1\b[22]"
-		//"\1\b[22]"
-		//"\1\b[22]"
-		//"\1\b[22]"
+		"\1\b[22]If you're running errands with your snail today, make sure you don't leave it in your car, or you might return to find escargot! Cars in the sun are practically OVENS, so be careful with your snails today, or find a different mode of transport!"
+		"\1\b[22]All this sun is GREAT for the lettuce crops that are still growing! The sun may be powerful, but plants EAT that power up for themselves, turning it into something we can use! So cool, right!?"
+		"\1\b[22]It's a tanktop and sunglasses kind of day, no need for a jacket of ANY kind! Unless you consider sunscreen to be a jacket, but why would you!?\n\n Get out there and enjoy the warm weather while it's here! Unless you don't like warm weather, in which case, stay inside and crank that A/C up!"
+		"\1\b[22]Today would be a GREAT day to invest in a personal fan! Whether it's a floor unit for your home, or a hand unit to hold, fans are a great way to beat the heat without breaking the bank!\n\n And as a sweet bonus, a fan can double as a training exercise for your snails! Point the fan at them to simulate INTENSE wind conditions, and help them build up their resilience!"
+		"\1\b[22]Need some ideas to beat the heat? You might consider for a walk where there are lots of trees to provide shade, or visit a nearby waterpark! You can ALSO try your community's swimming pool, or there are jumbo spray bottles for sale if you want to match with your snail and use a few quick spritzes to cool down!"
 	}
 	elseif Weather.Today == 1 //Cloudy
 	{
-		//"\1\b[22]"
-		//"\1\b[22]"
-		//"\1\b[22]"
-		//"\1\b[22]"
-		//"\1\b[22]"
+		"\1\b[22]If you like shade and milder temperatures, today's the day to be outside, because the cloud cover is THICK! No storms yet though; these clouds are storm-free and are just here to say hello!"
+		"\1\b[22]Whenever I see cloudy skies like this, I always think to myself that it's like the Earth is wrapped in a cozy blanket.%(br)Isn't that so cool?\n\n I want a blanket made of clouds, too! Someone should invent that. If there's an inventor out there listening, it could be YOU that makes the dreams of so many weather enthusiasts come true!"
+		"\1\b[22]Today is a great day to get outdoors and go play at the park with your snails. Play some catch, have a casual race, maybe bring some lettuce and have a picnic!\n\n Whatever you end up doing, you won't need any special gear to get the most out of today!"
+		"\1\b[22]I spent my lunch break today cloudwatching, and you'll NEVER believe what I saw. A cloud shaped just like %(acloudsnail)! Isn't that amazing!? It was so detailed!\n\n If you go out cloudwatching today, make sure you share what you saw on our website! We'd love to get a clearer picture on what people are seeing in the clouds!"
+		"\1\b[22]Have you ever wished you could touch a cloud!? I have! Unfortunately, I haven't had the opportunity to actually do it yet, but you CAN buy cloud flavored cotton candy, and that's almost as good!\n\n I'm told one of the ingredients is really harvested from clouds, too, so this stuff is the real deal! If you're a cloud enthusiast, you owe it to yourself to try it!" //This kinda feels like it should be one of the sponsored segments, but it's kind of specific to this weather...??? hmm
 		
-		//"\1\b[22]"
-		//"\1\b[22]"
-		//"\1\b[22]"
-		//"\1\b[22]"
-		//"\1\b[22]"
+		"\1\b[22]Along with the clouds today, there is a lovely breeze out to chase away the heat! You might consider bringing a light jacket or sweater when you head out, if you're particularly sensitive to cooler temperatures.\n\n Your snails will LOVE this kind of weather, so this is a great time to get them outside for some fun and exercise!"
+		"\1\b[22]I wish I could be a cloud... \w8\w8\n\n ... Huh? We're LIVE!?\n\n U-uh, have you seen the clouds outside today!? There's a lot of them! All kinds of shapes, and a variety of grays, with a lot of blue-grays! Isn't that neat!?"
+		"\1\b[22]Cloudy days like this get one of my favorite weather phenomena: sunbeams! If you look in just the right place at just the right time, you'll see beautiful beams of light stretching down from the sky, lighting up a whole township!"
+		"\1\b[22]The nice cool temperatures we're getting today are brought to you by clouds! Puffy, white or gray, AND available in a variety of shapes and sizes, clouds are wonderful and truly a boon for those of us living on the ground!\n\n The sun is remarkably strong, constantly battering the Earth with POWERFUL rays of light, trying to turn us all into one big serving of escargot. And yet, the humble cloud is able to deflect much of its light away, letting us continue on with our lives! Truly astonishing, everyone give a hearty round of applause to our friends, clouds!"
+		"\1\b[22]What's hiding above the clouds!? Some experts speculate that %(floatingcities) may be secreted away up there!\n\n What do YOU think? Vote on our website, or send in your own theories for us to investigate!"
 	}
 	elseif Weather.Today == 2 //Rainy
 	{
 		"\1\b[22]The storms are expected to ease up this next hour, and we'll be seeing a light rain for a while before the thicker clouds move in.\n\n If you're looking to get soaked without getting blown away by the wind, this will be the PERFECT chance to head out and experience the wonder of nature firsthand!"
-		//"\1\b[22]"
-		//"\1\b[22]"
-		//"\1\b[22]"
-		//"\1\b[22]"
+		"\1\b[22]Ooh, there goes another bolt of lightning! Aren't thunderstorms SO much fun to watch!?\n\n We'll be uploading slow-motion shots of some of the lightning to our website later, so be sure to check it out!"
+		"\1\b[22]If you're heading out today and need to stay dry, don't forget your umbrella!\n\n \w8\w8But if you've got nowhere to be, then go ahead and stand outside without for a while. It is THE prime rainstorm experience!"
+		"\1\b[22]The rain is showing no signs of letting up, and in a few hours, it'll be the PERFECT conditions to stomp around in rain boots and splash in puddles. Make sure you've got your gear together to take advantage of this opportunity while it's here!"
+		"\1\b[22]If you don't have time to get out and experience the rain today, then try today's \f[italic,1]First Place Forecasts\f[italic,default] Weather Pro Tip%(tm)! Stick a jar or jug OUTSIDE where it will get rained on, and let it collect rainwater while you go about your day. Then when you have some spare time, you've got your own PERSONAL STASH of rain to experience!"
 		
-		//"\1\b[22]"
-		//"\1\b[22]"
-		//"\1\b[22]"
-		//"\1\b[22]"
-		//"\1\b[22]"
+		"\1\b[22]Today is a great day to bust out all of those rainy day activities you've been saving up! Board games, cleaning, WHATEVER you've got on your list, you've got time, so get to it!\n\n Of course, if you're a rain enthusiast like myself, then this might be a busy day for you! And if that's you, then good luck and make the most of it!"
+		"\1\b[22]If you're like me, the sound of that pitter-patter on the windows will have you yearning to finish up work and get OUTSIDE where the RAIN is. Being stuck inside where it's dry can be MISERABLE!\n\n But don't worry! The rain is certain to continue throughout the afternoon and evening, so you'll have PLENTY of time to get out there and soak it up!"
+		"\1\b[22]Don't forget to thank the friendly clouds today that are bringing us ALL this rain!\n\n Thank you, clouds! What would we do without you!?"
+		"\1\b[22]If you're heading outside in this next hour, hold onto your umbrella TIGHT if you have one! The wind speeds are picking up, and your umbrella might just get carried away if you're not careful!"
+		"\1\b[22]Make sure to keep an eye on your snails today! A lot of snails love rainfall, so they might sneak outside if you're not careful.\n\n Experts say the best thing to do is plan some outside time with your snail during each storm, so it doesn't feel the need to sneak out just to experience it! It'll be safer for your snail, AND you get some extra bonding time!"
 	}
 	elseif Weather.Today == 3 //Wormy
 	{
 		//Dr. Wormington
-		//"\1\b[22]"
-		//"\1\b[22]"
-		//"\1\b[22]"
-		//"\1\b[22]"
-		//"\1\b[22]"
+		"\1\b[22]The worms just KEEP on COMING today! They've carved a little worm river across our parking lot, and are wriggling their way steadily across.\n\n No matter where you are, the worm migration is ALWAYS a sight to behold!"
+		"\1\b[22]If you like worms, then today is your lucky day, because if you step outside you'll see THOUSANDS of them! Rivers of worms have appeared across every community as the worms migrate to a new home.\n\n If you're lucky, their new chosen home might be right outside yours! If you're a worm fan, that would SURELY be a dream come true."
+		"\1\b[22]Our dedicated Worm Team has been hard at work mapping out the paths of the worm migration, and you can see the results of their efforts up on our site! If you're into following worm paths and tracking their behaviors, it's an invaluable tool that you should make use of.\n\n And if you've found any worm paths that we've missed, let us know and we'll dispatch someone to check it out and add it to our map if it's found to be legitimate!"
+		"\1\b[22]It looks like I'll be working overtime today. One of the worm paths from today's migration is going DIRECTLY over my car, Hahaha!\n\n I couldn't possibly move it without crushing SEVERAL worms and very likely breaking their path, so I guess I'll either have to camp out here tonight or find another way home!"
+		"\1\b[22]Oh! It looks like a lost little worm has somehow found its way inside our studio! This isn't where you're meant to be, little guy!\n\n \w8\w8\f[color,disable]Can someone get this worm back outside with the others, please?\f[color,default]\n\n \w8\w8\w8\w8Well! That sure was a cute diversion, but we've GOT to get BACK to the forecast!"
 		
-		//"\1\b[22]"
-		//"\1\b[22]"
-		//"\1\b[22]"
-		//"\1\b[22]"
-		//"\1\b[22]"
+		"\1\b[22]The worms sure know how to seize the day when the conditions are just right! One has to wonder how they know to all get up and migrate as if on cue. And we REALLY wanted to know, so today we're asking Dr.\![] Earth Wormington, an expert on the subject, that very question! Dr.\![] Wormington, how is it that the worms manage to coordinate such an effort perfectly every time!?\n\n Well, now, that, see, that we're not really sure. Not yet. But the research so far is leading us to conclude that, well, it may be that the worms have some sort of ""hive mind"" link.\n\n You're kidding!? That would TOTALLY explain it! You could certainly NEVER get humans to coordinate on that scale, and maybe not even snails.\n\n Well, yes, that's why we're exploring that theory. But the, uh, the research, it's still in a preliminary phase. We can't say anything concretely just yet, so, please treat it as only a theory.\n\n Man, I can't WAIT to tell my bestie about THIS! She's the world's #1 worm enthusiast, she'll be ECSTATIC to hear a new worm fact!!"
+		"\1\b[22]THIS JUST IN: If worms are considered a weather phenomenon, shouldn't snails be considered one too!? Dr.\![] Earth Wormington, you're an expert in worm research. What do you think about this question that's been raised as of late?\n\n Well, you see, uh, that is, the worms \f[italic,1]do\f[italic,default] have a specific weather-based component. They only come out to migrate when the weather conditions are perfect, so, it's not really like snails at all, since snails are ever-present in our environment.\n\n But Dr.\![] Wormington, couldn't one make the argument that snails DO have a weather based component, since they both hibernate and estivate?\n\n Well, that's, well... that's... It's, it's really a very different thing. Each snail does or does not do those things based on the conditions it is personally in, but the worms act as one, more like a weather phenomenon. That's, well, that's why they're classed as one.\n\n I see! So in the end, the worms might as well be weather since they act SO much like it!"
+		"\1\b[22]For all your worm-related questions, we've got Dr.\![] Earth Wormington on today! Dr.\![] Wormington, one of our listeners wants to know why exactly it is that the worms migrate so much!?\n\n Well, that's, uh, it's actually a very interesting field of study all on its own. You see, we can't talk to worms, and uh, if they're kept in a lab environment they don't behave like normal worms. So we really have to study them, well, out in the field, which introduces many more variables.\n\n Got it, got it... so do you have any leading theories?\n\n Well, you see, we think that the worms, perhaps, might simply be dissatisfied with their homes. It could very well be be that they've used up certain nutrients in the soil, or the moisture isn't quite right, or maybe they just couldn't get it decorated how they wanted. And so, when the conditions are right, well, they up and move again.\n\n Wow! It sounds TOUGH to be a worm, never staying in the same place for very long! Although now that you say it, maybe I should consider moving too... I could finally leave that tacky lamp behind me! I think I suddenly understand worms on a level I never have before."
+		"\1\b[22]Time for some new worm knowledge! We've got Dr.\![] Earth Wormington in the studio today, here to answer another listener question. Dr.\![] Wormington, is it true that if you cut a worm in half, each half will turn into a whole new worm!?\n\n Well, it's, it's really rather complicated of a topic. It depends a lot on which kind of worm you're talking about, and as I don't, uh, know what kind of worms your curious listener has in their possession, then I would have to encourage them to do their own research into the subject based on the type of worm they have.\n\n Ohh, that sounds like fun! I might just try doing some research myself later today when I go home, hahaha!" //don't cut worms in half lol
+		"\1\b[22]It's worm time, and that means we've got Dr.\![] Earth Wormington on the show with us today to answer ALL of your worm-related questions! Dr.\![] Wormington, some of our listeners have expressed interest in keeping worms as pets. They want to know, what do you FEED a worm!?\n\n Well, that is, well. It can be done, but it's best not to keep worms indoors. Indoor worms don't behave like outdoor worms, and will miss out on important worm things such as the worm migrations. So really, I'd, I'd recommend that your listeners simply don't keep worms at all.\n\n Aw, well that's a shame. Sorry to the listeners who sent that one in! You'll have to settle for watching the worms in the wild, instead!"
 	}
 	elseif Weather.Today == 4 //Sneezy
 	{
@@ -155,7 +155,7 @@ RadioStation.Weather : nonoverlap_pool
 	_templow = _temp - (TodaysSeed % 6) - 1 //here too
 	if _temphigh == 70 - 1; _temphigh = 70 // :)
 	if _templow == 68 + 1; _templow = 68
-	"\1\b[22]And we've got record-setting temperatures over in %(_city), for the first time this week they'll be reaching at least %(_temp)°F, with some estimates saying they might reach as high as %(_temphigh)°F!\n\n Wow, just wow. If they keep going this way, they might just reach their temperature goal sooner than expected!"
+	"\1\b[22]And we've got record-setting temperatures over in %(_city), for the first time this week they'll be reaching at least %(_temp)°F, with some estimates saying they might reach as high as %(_temphigh)°F!\n\n Wow, just wow. If they keep going this way, they might just reach their combined temperature goal of the week sooner than expected!"
 	"\1\b[22]Today over in %(_city) you can expect temperatures of %(_temp)°F all through the afternoon, WITH the possibility of up to %(_temphigh)°F!\n\n As we all know, more degrees is better,%(br)so lets hope it keeps climbing!"
 	"\1\b[22]Now let's have a look at %(_city). Today in %(_city) you can expect lows of %(_templow)°F, and highs of up to %(_temphigh)°F. But we're predicting that the average temperature will be right around %(_temp)°F all through the afternoon and going into the evening!"
 	"\1\b[22]And now for the temperatures over in %(_city). Looks like we'll be seeing a nice steady %(_temp)°F throughout the afternoon, with lows predicted at %(_templow)°F, and highs at %(_temphigh)°F.\n\n I don't know about you, but those numbers all sound great to me! Isn't the weather awesome!?"
@@ -197,7 +197,7 @@ RadioStation.Weather : nonoverlap_pool
 	{
 		_weathery = ("sunny","cloudy","rainy","wormy","sneezy","electrified","psychically charged")[Weather.Today]
 		_sunnyskies = ("sunny skies as far as the eye can see","clouds, clouds, and more clouds","wet and humid as storms come rolling through","the perfect conditions for the worm migration","a bad day for allergens, with sneezes and sniffles all around","powerfully electrifying","a day of high psychic energy")[Weather.Tomorrow]
-		"\1\b[22]If you're hoping for a break from this %(_weathery) weather, you won't have to wait long!\n\nMother nature will be shaking things up soon; we're predicting tomorrow will be %(_sunnyskies)! Stay tuned for further details after the break."
+		"\1\b[22]If you're hoping for a break from this %(_weathery) weather, you won't have to wait long!\n\n Mother nature will be shaking things up soon; we're predicting tomorrow will be %(_sunnyskies)! Stay tuned for further details after the break."
 		
 		_thissunnyweather = ("this sunny weather","this cloudy weather","this rainy weather","the worm migration","the intense burst of allergens in the air","the electrifying zip in the air","the psionic storm")[Weather.Today]
 		_sunny = ("sunny","cloudy","rainy","wormy","sneezy","electric","tinfoil hat")[Weather.Today]
@@ -221,7 +221,7 @@ RadioStation.Weather : nonoverlap_pool
 		_snailcity2 = snailcity
 	}
 	"\1\b[22]And now we're going to take a look at the temperatures over in%(emdash) whoa! Hahaha, %(besttoavoid(_snailcity))\n\n We'll come back around to %(_snailcity) once we've got our equipment functioning properly again. For now, let's move on to %(_snailcity2), where the temperatures look more reasonable!"
-	"\1\b[22]This just in, I'm getting reports about a massive storm cloud brewing over %(_snailcity)! This might be a big one folks!\n\n ... Oh, what's that? Hold on a moment, I'm getting new information that the cloud is actually just %(fromabbq(_snailcity))!\n\n False alarm, phew! But rest assured that if there WAS a sudden weather event, we at \f[italic,1]First Place Forecasts\f[italic,default] would get you information as fast as it becomes available, and maybe even faster!"
+	"\1\b[22]This just in, I'm getting reports about a massive storm cloud brewing over %(_snailcity)! This might be a big one folks!\n\n \w8\w8... Oh, what's that? Hold on a moment, I'm getting new information that the cloud is actually just %(fromabbq(_snailcity))!\n\n False alarm, phew! But rest assured that if there WAS a sudden weather event, we at \f[italic,1]First Place Forecasts\f[italic,default] would get you information as fast as it becomes available, and maybe even faster!"
 	"\1\b[22]\![set,balloonwait,1.7]... Zzz... Temperatures today... Mmf...\![set,balloonwait,1.0]\n\n ... yyYAAAA%(emdash)! So cold!! ...\w8\w8\n\n Oh, we're-\w8\w8 \w8Th-\w8 This is HALEY STORME for \f[italic,1]FIRST PLACE FORECASTS\f[italic,default], and today is going to be FULL OF WEATHER!!\n\n CLOUDS, WIND, TEMPERATURE, YOU NAME IT AND WE'VE GOT IT TODAY!! ... Probably!!\n\n \w8\w8\f[color,disable]Where did my notes go? Are they under the desk...!? How did they get THERE...!\f[color,default]"
 	"\1\b[22]If you think today's weather is great, wait until you see our forecasts for next week, where there's going to be even MORE weather!\n\n Ooh, I'm so excited about what mother nature has in store for us! The temperatures, the humidity levels, the wind speeds%(emdash) all coming soon!"
 	
@@ -246,11 +246,29 @@ RadioStation.Weather : nonoverlap_pool
 	"\1\b[22]Do YOU or someone you know REALLY know the weather? Why not put your skills to the test with our online weather prediction survey!\n\n Simply visit our website on the snailernet, and enter in your own personal forecast. In a week, we'll see how accurate you were!\n\n If your skills are TRULY top notch, you might just get a job offer then and there! That's the kind of opportunity you can't pass up, am I right!?"
 	"\1\b[22]There's going to be a slight delay on the temperature data for this next hour, folks. It sounds like someone in the break room dropped their sandwich, causing all the lettuce to spill out of it, and, well. Let's just say our helper snails are taking a long lunch break today! Hahaha.\n\n Sorry for any inconvenience, but while we wait, why don't I read out the data from last hour again!"
 	
-	//"\1\b[22]"
-	//"\1\b[22]"
-	//"\1\b[22]"
-	//"\1\b[22]"
-	//"\1\b[22]"
+	"\1\b[22]I'm SO pumped to tell you all about the latest forecast data, and that's COMING UP SOON!\n\n ... But, my producer is telling me that I have to finish the traffic report before we can do that, eheheh... So, let's have a look over at how things are moving in %(TrafficCity)!"
+	"\1\b[22]Later this evening we're going to have an expert on to tell us about the internal anatomy of clouds! I hope%(br)you're excited, because I sure am!\n\n Wow, what kind of inner secrets do you think clouds have!? We'll find out tonight with Dr. McLeod!"
+	"\1\b[22]Don't forget folks, next week we're going to be looking at the \f[italic,1]First Place Forecasts\f[italic,default] Yearly Temperature Tracker%(tm) and checking on our progress so far this year!\n\n All the highest temperature readings from every day so far will be added up,%(br)and we'll see how high those numbers soar! It's gonna be SO much fun to see where we're at!\n\n If you'd like to participate and help us bump the numbers up by a few more degrees, don't forget our #1 tip: get yourself a space heater, put it outside, and let it do its thing. It's THE most simple and effective way to make an impact!"
+	
+	switch WeeksLettuceHarvestIndex
+	{
+		"\1\b[22]The lettuce report is IN, and the lettuce crops this season are steady and reliable, just as you'd expect from such a critical operation! There should be plenty of lettuce for every snail, and more besides. Look forward to it hitting the shelves soon!"
+		"\1\b[22]I'm looking over the lettuce report for this season, and we have got a BUMPER crop to look forward to this year! All the conditions have come together just right to produce lots of sweet lettuce which is sure to bring a smile to snails everywhere!\n\n With all this surplus, it's sure to bring the price of lettuce down, so be sure to get out there and eat a lot of it to keep our currency stable, hahaha!"
+		"\1\b[22]An unfortunate turn of events, the lettuce reports for this season are looking a little scary! It seems like the yields this year were tasty%(emdash) for the local bugs, BEFORE they even reached harvest!\n\n That means we might be a little short on lettuce this season, so you might consider introducing your snail to some other leafy greens, like spinach or kale. It may take some time to adjust, but it's good to acquire the taste in case of shortages!"
+		"\1\b[22]Shocking news this season as we look at the lettuce report%(emdash) we have record numbers, but not the record you'd hope! It seems like almost everyone switched to planting cabbage this year!?\n\n Officials are recommending that dietary lettuce be reduced to a minimum to keep the value of our currency stable, and that we all switch to eating cabbage for the time being.\n\n I don't know about you, but dinner time just isn't going to be the same without a head of lettuce to pick through! And the thought of sandwiches with shredded CABBAGE!? That sounds like a crime!"
+		"\1\b[22]We're just getting word in that there is an EXTREME lettuce surplus at the lettuce farms right now, more lettuce than you can even imagine. I guess the weather's been perfect for it!\n\n Reports say that we're going to have a period of massive inflation, followed by massive deflation as the farmer's market corrects itself next season. Mandates for every citizen to consume at least one head of lettuce per day to help control the spike are under consideration, and I don't know about you all, but I am ALREADY surpassing that in my daily routine!\n\n In fact, here's a challenge for you: if you already consume at least one head of lettuce per day, consider doubling it to TWO heads of lettuce per day until this season of abundance is over! Eat delicious food, show off to all your friends, AND help the world's economy stay stable!"
+	}
+	
+	switch WeeksSnailHarvestIndex
+	{
+		"\1\b[22]We've gotten word in from our local snail farms, and it's sounding like the next batch of racing snails is something really amazing! I'm told that the class about to graduate from snail school has all gotten straight S's!\n\n If you're looking to take on a new snail,%(br)or even become a first-time sponsor, NOW is the time to do it! Get those snails while you can, because this batch is sure to be snatched up quick, and there are CERTAIN to be some history-makers in there!"
+		"\1\b[22]A report from the local snail farms has just come in, and we're told that the upcoming batch of food snails is of EXCELLENT quality! If you've never tried a snail delicacy, this will be the time to do it. Snail restaurants are sure to be packed, so make reservations while you can!"
+		"\1\b[22]This just in, we've gotten a look at the latest batch of racer snails from the local snail farms, and let me tell you, they do NOT seem like winners. They've got no energy to them! Several of them reportedly flunked out of snail school, and the ones that are graduating have only barely managed to get a passing grade.\n\n Well, I only have one thing to say to those snails: struggling with snail school DOESN'T define you! Who knows, maybe one day you'll find a great opportunity as a weather presenter! So keep those tentacles up, and GIVE IT YOUR ALL!"
+		"\1\b[22]As a warning for all the snail lovers out there, we've just spoken with a representative from the snail farms, and it sounds like the harvest of food snails this season has been really poor! Several batches of snails were contaminated and not fit for consumption, so the pickings are going to be THIN. You might want to head out and stock up while there's still product on the shelves!"
+		"\1\b[22]In an unforeseen turn of events, snail production this season was severely limited by various issues plaguing the local farms, and as a result there is a SEVERE snail shortage right now. One of my sources said that it's so bad, they've been fast tracking batches of food snails into snail school to try and meet demand for racing snails!\n\n If you sponsor a snail and find that it only speaks in snail or it can't do basic math, that might be why! Experts are saying that if you plan to sponsor a new snail within the next several months, you should come prepared with various quiz questions to test its quality. It's better to be safe than sorry!"
+	}
+	
+	
 	
 	/*
 	
@@ -268,9 +286,9 @@ RadioStation.Weather : nonoverlap_pool
 	- POTENTIALLY i could comment VERY SPARSELY on the previous day's weather... like only comments that get the MOST BAREBONES of word groups, like "and after how sunny it was yesterday"...
 	///- Having a glitch where the temps skyrocket and they're like OMG ITS A BILLION DEGREES oh wait its fine lol. This feels like it should be rare to see, but also like................................................... is it funny if it happens every single day??? hm
 	///- Honestly reading out the temperatures in various cities might not be bad... theoretically I could plot out the average temp per city, adjust it a bit based on weather, and then randomize it a little... that'd be nice. That's a thing weather stations would do... not the randomizing part obv. I mean, then again, do all cities get the same weather...? ... don't think about it too hard. see this is the part where we wiggle our hands a little to create a pleasing texture that gives the illusion of depth but doesn't take a million years to complete. i say, sinking a million years into this GODDAMN RADIO
-	- Predictions about the upcoming ??? snail harvest ??? like... like food snails and how good upcoming batches of racing snails are gonna be due to the weather they grew up in
-	- Maybe also notes about what kind of lettuce yields you might expect this season... hm. that might be weird to vary day to day tho... I could seed it monthly or something tho
-		Seeding by week... hm. I grabbed yearweek, but how to do... I think I'll just use SRAND and use the week number + year number as the seed. The only place RAND is currently used in the base SHIORI files is for communicateratio, which I do not use, so I can use it to my heart's desire. Unless they add more RAND in an update, but shrug, I can deal with that if and when it comes up and it probably won't. No reason to not use SRAND here
+	//- Predictions about the upcoming ??? snail harvest ??? like... like food snails and how good upcoming batches of racing snails are gonna be due to the weather they grew up in
+	//- Maybe also notes about what kind of lettuce yields you might expect this season... hm. that might be weird to vary day to day tho... I could seed it monthly or something tho
+		//Seeding by week... hm. I grabbed yearweek, but how to do... I think I'll just use SRAND and use the week number + year number as the seed. The only place RAND is currently used in the base SHIORI files is for communicateratio, which I do not use, so I can use it to my heart's desire. Unless they add more RAND in an update, but shrug, I can deal with that if and when it comes up and it probably won't. No reason to not use SRAND here
 	
 	*/
 }
