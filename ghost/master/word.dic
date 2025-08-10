@@ -228,7 +228,7 @@ itssoshiny
 	"it has an extra light shell"
 	"its autograph game is next level"
 	"it likes to organize the fridge"
-	"it got all A's in snail school"
+	"it got all A's in snail school" //TODO S's?
 	"it was a professional in motorsports before it switched to snail racing"
 	"of the cool sounding name"
 	"of the ease with which it slides across the race track"
@@ -2238,7 +2238,7 @@ WeekForecast : array
 WeeksLettuceHarvestIndex
 {
 	_seed = "%(yearweek)%(year)0" //The 0 on the end differentiates it from the seed below which uses a 1, so that they always differ...
-	void SRAND(TOINT(_seed))
+	void SRAND(TOINT(_seed)) //does not take a string
 	RAND(4) //0-4
 }
 
@@ -2255,17 +2255,17 @@ WeeksLettuceHarvestIndex
 WeeksSnailHarvestIndex
 {
 	_seed = "%(yearweek)%(year)1"
-	void SRAND(TOINT(_seed)) //does not take a string
+	void SRAND(TOINT(_seed))
 	RAND(4) //0-4
 }
 
 /*
 
 0 - Excellent batch of racer snails upcoming
-1 - Excellent batch of food snails upcoming
-2 - Particularly bad batch of racer snails
-3 - Particularly bad batch of food snails
-4 - Snail production got interrupted and now there is a severe snail shortage! Food snails are being used in place of racer snails to meet demand!
+1 - Particularly bad batch of racer snails
+2 - Every snail was given a non-alliterative name in this batch, by chance
+3 - A batch of snails has escaped and is running loose, please help us find them
+4 - Snail production got interrupted and now there is a severe snail shortage! Slugs with fake shells are being used in place of snails to meet demand!
 
 */
 
