@@ -85,6 +85,7 @@ Talk.Snailsonality.Angry : nonoverlap_pool
 	"\1\b[10]CAN'T THEY THINK OF ANYTHING BETTER TO PLAY ON THE RADIO?"
 	"\1\b[10]NEVER SETTLE FOR A TIE! I RACE TO%(br)\f[bold,1]WIN!\f[bold,default]"
 	"\1\b[10]PEEL OUT! RACE FOR THE GOAL!%(br)\f[bold,1]GET THE%(br)LETTUCE!!!\f[bold,default]"
+	"\1\b[10]LAST TIME A SNOTTY SNAIL MADE FUN OF ME I PUT A CHIP IN ITS SHELL!"
 	
 	//TODO this needs to check for if the current snail has "well fed" _and also_ that you have more than 1 snail
 	// BAGEL WAS SAYING YOU DON'T FEED US ENOUGH
@@ -124,6 +125,7 @@ Talk.Snailsonality.Proper : nonoverlap_pool
 	"\1\b[10]Fast fast fast, foot forward, fly.\n\n ... Am I fast enough?"
 	"\1\b[10]Negativity about names is never needed. Nevertheless, a regular nuisance..."
 	"\1\b[10]Legend... unlikely. Loser.\n\n Looked upon that way, lately."
+	"\1\b[10]The others keep saying to ""drop the act"". But... it's easier said than done."
 }
 
 Talk.Snailsonality.Sour : nonoverlap_pool
@@ -175,6 +177,7 @@ Talk.Snailsonality.Tired : nonoverlap_pool
 	"\1\b[10]Maybe I should retire and get a desk job."
 	"\1\b[10]I wish all the other snails would chill out and focus on racing already. That's what we're here for, isn't it?"
 	"\1\b[10]Sometimes you get really close to finishing first in a race, but then another snail leaps ahead at the last minute. It can be really demoralizing."
+	"\1\b[10]Hey, if I go sit in the sink, can you open the tap just a little bit? I wanna try it and see if it's like having a rainstorm indoors."
 }
 
 Talk.Snailsonality.Ratings : nonoverlap_pool
@@ -206,7 +209,7 @@ Talk.Snailsonality.Ratings : nonoverlap_pool
 	"\1\b[10]Running loose in the produce aisle? 10/10, delicious.\e:chain=chain.running_produce_aisle"
 	"\1\b[10]%(Capitalize(CurrentSnail.AltHobby))? 10/10, fun to do in my spare time."
 	"\1\b[10]Kick flips? 10/10, really hard for a snail to pull off but that just makes it even cooler if you can do it."
-	
+	"\1\b[10]Tape? 2/10, barely sticky at all, honestly."
 }
 
 chain.running_produce_aisle
@@ -334,6 +337,7 @@ Talk.Snailsonality.Gymbro : nonoverlap_pool
 	"\1\b[10]Muscle... extremely cool \f[italic,1]and\f[italic,default] wickedly fast. The best of both worlds, no need to choose."
 	"\1\b[10]Writing poetry is like a workout for your brain. I enjoy %(PoetryType('haiku','cinquains','limericks','acrostic','lyrics','rhyming couplets','alternate rhymes','free verse','diamante','concrete poetry')), my brain is bulking up nicely."
 	"\1\b[12]Sometimes I try to jump ahead in my workout routine. If I could skip doing 25 shell presses and go straight from 20 to 30, I'd get stronger faster, right?\n\n Big mistake. Injured muscles are bad at growing."
+	"\1\b[12]If you're feeling drained after a workout, you need to make improvements to your diet. An extra leaf of lettuce before you hit the gym is a great place to start."
 }
 
 Talk.Snailsonality.Super_Fan : nonoverlap_pool
@@ -370,6 +374,7 @@ Talk.Snailsonality.Super_Fan : nonoverlap_pool
 	"\1\b[12]I'm trying to get more pieces for my %(ANY(FamousSnails)) collection. I think I might be able to get %(setofplayingcards) I've seen lying around, but it'll require some... finesse.\n\n As a dedicated super fan, you have to learn some special techniques to grow your catalogue of information and memorabilia."
 	"\1\b[12]Most snails are cowards, they aren't willing to go to the lengths I am to catalogue racer information and preserve historical items.\n\n They'll thank me one day, when they realize how important my work is and how much effort I've put in."
 	"\1\b[12]I'm %(CurrentSnail.FavoriteFamousSnail)'s biggest fan. I've been collecting memorabilia and information about it since I was a baby snail.\n\n No snail is more dedicated than me! One day it'll recognize that."
+	"\1\b[10]I search everywhere for %(CurrentSnail.FavoriteFamousSnail) memorabilia. Nothing will escape my tentacles!"
 }
 
 Talk.Snailsonality.Slacker : nonoverlap_pool
@@ -420,6 +425,7 @@ Talk.Snailsonality.Jealous : nonoverlap_pool
 	"\1\b[10]""%(CurrentSnail.Name)"" is an alright name, but I sorta wish it was different. It doesn't really suit how I've grown, you know?"
 	"\1\b[10]I wonder if %(fastfood) is my real calling..."
 	"\1\b[12]If I save up enough lettuce, maybe I could splurge and get some new equipment. Something %(fc('cool','fast'))...\n\n I want to %(fc('try out the latest fashions and make a statement','try and set a new personal best on the track'))!"
+	"\1\b[10]I do alright in races, but... I bet I'd be doubly as good if I changed career paths and became a %(fc('cool','fast')) snail instead."
 }
 
 Talk.Snailsonality.Liar : nonoverlap_pool
@@ -446,6 +452,7 @@ Talk.Snailsonality.Liar : nonoverlap_pool
 	"\1\b[10]I have much to learn about the world. I am but a humble snail, after all. I recognize my own shortcomings, and I try to be realistic when talking about my own capabilities."
 	"\1\b[10]I once ate %(RAND(5) + 2) entire boxes of Snail-ios in a day. It's true. I'll do it again if you don't believe me, bring it on."
 	"\1\b[10]I can change a lightbulb on my own without assistance. Next time you have a bulb go out, I'll show you."
+	"\1\b[10]I drank from a fountain of youth years ago, that's why I don't age. It's true. Check back with me in another 3 years and I'll look just the same as I do now."
 }
 
 Talk.Snailsonality.Facts : nonoverlap_pool
@@ -496,6 +503,7 @@ Talk.Snailsonality.Sellout : nonoverlap_pool
 	"\1\b[10]Selling your soul isn't that bad once you remember the perks."
 	"\1\b[10]Where's hair and makeup? It's almost racing time."
 	"\1\b[10]A healthy diet is important if you want to look your best once the cameras are rolling and your show is live!"
+	"\1\b[12]You can't make sales without a healthy amount of%(br)self-confidence. If you haven't%(br)got what it takes, don't bother trying!"
 }
 
 
