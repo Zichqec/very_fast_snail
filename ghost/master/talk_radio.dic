@@ -125,7 +125,7 @@ RadioStation.Weather : nonoverlap_pool
 		"\1\b[22]As a reminder, candles are the best option to have on hand as we get into the evening today! If you have a flashlight you MIGHT get lucky and get the batteries recharged for FREE today by the electronic interference. But your flashlight might ALSO get switched on without you realizing! There's nothing worse than finding out your flashlight's batteries died instead of getting recharged!\n\n The recommendation from experts is to remove batteries from all battery operated devices today, to avoid accidents that lead to battery drain!"
 		"\1\b[22]Wow, I just felt a POWERFUL crackle behind me! And, gosh, look at that! My phone is COMPLETELY charged! What a miracle of nature!\n\n Hahaha, nothing beats the thrill of having electricity sparking all around you!"
 		"\1\b[22]This just in: we've got word that all the lights in %(snailcity) suddenly started glowing incredibly bright, and then all the bulbs burst at once!\n\n Wow, they must have had a HUGE surge nearby. If you've been thinking about getting into the lightbulb business, now would be a great time!"
-		"\1\b[22]I've been hearing news that some snails are having SUPERCHARGED races today thanks to the electric bursts overcharging their various electronic components! If you're looking for a thrilling race, today is the day to head out to the track!" //"components" isn't the word I want but I can't think of it...
+		"\1\b[22]I've been hearing news that some snails are having SUPERCHARGED races today thanks to the electric bursts overcharging their various electronic upgrades! If you're looking for a thrilling race, today is the day to head out to the track!"
 		//"\1\b[22]"
 		
 		//Dr. Power Watson ???
