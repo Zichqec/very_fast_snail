@@ -126,7 +126,7 @@ RadioStation.Weather : nonoverlap_pool
 		"\1\b[22]Wow, I just felt a POWERFUL crackle behind me! And, gosh, look at that! My phone is COMPLETELY charged! What a miracle of nature!\n\n Hahaha, nothing beats the thrill of having electricity sparking all around you!"
 		"\1\b[22]This just in: we've got word that all the lights in %(snailcity) suddenly started glowing incredibly bright, and then all the bulbs burst at once!\n\n Wow, they must have had a HUGE surge nearby. If you've been thinking about getting into the lightbulb business, now would be a great time!"
 		"\1\b[22]I've been hearing news that some snails are having SUPERCHARGED races today thanks to the electric bursts overcharging their various electronic upgrades! If you're looking for a thrilling race, today is the day to head out to the track!"
-		//"\1\b[22]"
+		"\1\b[22]The weather today is ELECTRIFYING! Hahaha. It may be best to avoid electronics for the day, just in case they activate unexpectedly, or their batteries burst from becoming severely overcharged!\n\n Check our website on the snailernet for tips on how best to harness the electric jolts in the air and use them to your advantage!"
 		
 		//Dr. Power Watson ???
 		"\1\b[22]Here on the show today we've got Dr.\![] Power Watson, an expert on this kind of electric weather, to give us the scoop on how these kinds of conditions come about. Dr.\![] Watson, why IS there stray electricity in the air on days like today?\n\n Well, this is a rather difficult weather phenomenon to study in detail, I'm sure you can understand.\n\n Oh, ABSOLUTELY! How do you study it when the electric bursts appear at random!?\n\n Haha, well, it's rather difficult! That's why right now, we've got a few competing theories as to what causes this phenomenon.\n\n Really!? Well, what's the most popular one at the moment?\n\n The leading theory right now is that these bursts of electricity are baby lightning bolts that haven't yet taken up refuge in a cloud. On their way up from the ground to the skies, sometimes they give us a bit of a shock!\n\n Oh... oh WOW! I hadn't expected it to be so... so adorable..."
@@ -136,17 +136,19 @@ RadioStation.Weather : nonoverlap_pool
 	elseif Weather.Today == 6 //Psionic storm
 	{
 		//Ooo we're experiencing a psionic storm, is that why i've (word group - felt tingly|had urges to dance|etc...)
-		//"\1\b[22]"
-		//"\1\b[22]"
-		//"\1\b[22]"
-		//"\1\b[22]"
-		//"\1\b[22]"
+		"\1\b[22]Today's psionic storm has been INTENSE! If you're experiencing symptoms, we encourage you to report them on our website on the snailernet.\n\n Describe your symtoms in AS MUCH detail as possible. Every report helps us understand this strange phenomenon a little more!"
+		"\1\b[22]Be sure to keep an eye on your surroundings today! In general, it's considered safe to stay inside your home during a psionic storm, but there's ALWAYS the possibility that a slug may have snuck in without your knowledge! If you start feeling symptoms, get your tinfoil hat on and start searching for intruders! Stay safe out there!"
+		"\1\b[22]Are YOU prepared to protect your mind when you head out today? If you don't have a tinfoil hat at the ready to deflect psionic beams, then check our website on the snailernet for tips on how to create your own!\n\n If your snails are going out with you, be sure to make hats for them, too! Staying safe is important on a day like today."
+		"\1\b[22]We're getting lots of reports of psionic activity in %(snailcity)! There must be a TON of slugs gathered there, so be careful if you're headed there today!\n\n As always, if you start experiencing symptoms yourself, you're encouraged to report them on our website on the snailernet no matter where you're located! Your report will help us inform others of the hotspots of slug activity today!"
+		"\1\b[22]Ooh, %(tinglingdownmyspine)! There must be a slug %(peeringinthewindows) again!\n\n \w8\w8\f[color,disable]Where's my tinfoil hat!?\f[color,default]"
 		
-		//"\1\b[22]"
-		//"\1\b[22]"
-		//"\1\b[22]"
-		//"\1\b[22]"
-		//"\1\b[22]"
+		"\1\b[22]One of our listeners in %(snailcity) has reported %(feelingtinglysensations). That's a new one to me! These slugs are INVENTIVE, they've always got new ways to push our neural buttons!\n\n If you've been experiencing odd symptoms today, be sure to send us in a report so we can keep track of the spread and intensity of this phenomenon!"
+		"\1\b[22]Are YOU being targetted by a slug's psionic attacks today!? Know the signs! Sufferers commonly report tingling sensations, headaches, and a feeling of being watched.\n\n If you exhibit these symptoms or anything else strange today, know that you're not alone! Our experts recommend staying at home and finding some sort of protection for your brain. The easiest solution is to make a hat out of tinfoil, but in a pinch, a metal bucket will do just fine to get you through the day!"
+		"\1\b[22]Be on your guard today, slugs are EVERYWHERE, and their psionic powers are ultra-enhanced on a day like today! Protect your brain, and your snails' brains too!"
+		"\1\b[22]Word is coming in that %(snailcity) is RIGHT at the center of a PSIONIC NEXUS today! Officials have issued a public safety warning, urging residents to stay at home until after the sun has gone down.\n\n It's intense stuff! I've heard reports of people dancing in the street, listening to music super loud, and even TALKING on the PHONE as they walk from place to place!"
+		
+		//Dr. Brianna Winters
+		"\1\b[22]We've got an expert on the show today, Dr.\![] Brianna Winters, to tell us more about psionic storms and what causes this strange weather phenomenon! Dr.\![] Winters, what exactly is it about the conditions today that amplifies the psionic powers of slugs so drastically!?\n\n Well, that's just the thing. There is no extreme weather phenomenon today.\n\n ... You mean, slugs have this kind of power all the time, and they just hide it from us!?\n\n No, no, it's not that at all. I mean to say that there are no ""psionic powers"" at all. This is an ordinary day with fair weather, nothing unusual about it.\n\n But doctor, we have clear reports cropping up all over the place of people experiencing strange sensations today! You can't deny such clear evidence, can you!?\n\n I am not denying that people may be feeling something today, however, the science shows that those feelings are most likely to be caused by the nocebo effect and confirmation bias. After all, if you tell your listeners that they might feel something strange today, then their brains may genuinely generate strange feelings. This would lead them to believe that your reporting was correct, and something strange is happening, so they report their findings back to you... and it becomes a cycle where everyone feels more and more convinced it is real, even though there is no true cause outside of your own brain.\n\n ...\n\n ...\n\n %(snailpic) ...\n\n \w8\w8\w8\w8Well! Unfortunately, that's all the time we have for this portion of the show! It was nice meeting you, Dr.\![] Winters!\n\n Wait, but I've not had a chance to explain%(emdash)!"
 	}
 	
 	
