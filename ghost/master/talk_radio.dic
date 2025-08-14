@@ -17,10 +17,8 @@ RadioStation.Racing_News : nonoverlap_pool
 RadioStation.Weather : nonoverlap_pool
 {
 	//"\1\b[20]wow the weather sure is hot!"
-	//something something "it's haley here with the %(hour) o'clock weather, on (weather station)"...
-	//Maybe it's better not to reference the time?
 	
-	//Weather - with word groups for variation? | gonna be honest i have no idea exactly what i wanted for word groups here...
+	//Weather
 	_sunnyskies = ("sunny skies","cloudy skies","showers","the worms","sniffles and sneezes","electric zaps","psionic bolts")[Weather.Today]
 	"\1\b[22]The latest weather data is in: %(_sunnyskies) are here to stay throughout the afternoon! Stay tuned for the details on how we expect this to affect the air quality, your commute, and SO much more, here on \f[italic,1]First Place Forecasts\f[italic,default]!"
 	"\1\b[22]If you look outside your window, you can expect to see %(_sunnyskies) today! That's mother nature's way of reminding us that SHE is in charge! Isn't that awesome!?\n\n If you're enthusiastic about weather, stay tuned, because we'll have lots more detail for you right after this word from our sponsors!"
@@ -44,7 +42,7 @@ RadioStation.Weather : nonoverlap_pool
 		}
 	}
 	
-	//Weather, but fully different? 7 pools of this...? 35... not horrible. This will include bringing in "experts" and such, and maybe on days without experts, describing how the weather will intensify or wane throughout the day? | update 70 lol. jesus christ this station man
+	//Weather, but fully different
 	if Weather.Today == 0 //Sunny
 	{
 		"\1\b[22]The sun's rays sure are HOT today. If you're going out, be sure to bring sunscreen for you, and a misting bottle for your snail! At these temperatures, snails might be inclined to go into estivation, so it's important to keep them cool and moist while you're outdoors!"
@@ -128,14 +126,13 @@ RadioStation.Weather : nonoverlap_pool
 		"\1\b[22]I've been hearing news that some snails are having SUPERCHARGED races today thanks to the electric bursts overcharging their various electronic upgrades! If you're looking for a thrilling race, today is the day to head out to the track!"
 		"\1\b[22]The weather today is ELECTRIFYING! Hahaha. It may be best to avoid electronics for the day, just in case they activate unexpectedly, or their batteries burst from becoming severely overcharged!\n\n Check our website on the snailernet for tips on how best to harness the electric jolts in the air and use them to your advantage!"
 		
-		//Dr. Power Watson ???
+		//Dr. Power Watson
 		"\1\b[22]Here on the show today we've got Dr.\![] Power Watson, an expert on this kind of electric weather, to give us the scoop on how these kinds of conditions come about. Dr.\![] Watson, why IS there stray electricity in the air on days like today?\n\n Well, this is a rather difficult weather phenomenon to study in detail, I'm sure you can understand.\n\n Oh, ABSOLUTELY! How do you study it when the electric bursts appear at random!?\n\n Haha, well, it's rather difficult! That's why right now, we've got a few competing theories as to what causes this phenomenon.\n\n Really!? Well, what's the most popular one at the moment?\n\n The leading theory right now is that these bursts of electricity are baby lightning bolts that haven't yet taken up refuge in a cloud. On their way up from the ground to the skies, sometimes they give us a bit of a shock!\n\n Oh... oh WOW! I hadn't expected it to be so... so adorable..."
 		"\1\b[22]We've got a leading expert on electric weather here in the studio today, Dr.\![] Power Watson. Dr.\![] Watson, one of the questions we get a lot is how best to protect your electrical devices during a phenomenon like this?\n\n Well, the #1 thing to do is to remove batteries from your battery powered devices, as we all know. The second thing to do is to gather up all your battery powered devices, and keep them in your sight to see if they do anything strange!\n\n Oh, that's a good point! Even if you take the battery out of a flashlight, that doesn't mean it can't turn on anyway!\n\n Exactly. Beyond this, we also recommend unplugging as many non-essential corded appliances as you can, and make sure that any heat-generating devices are not in a position where they may pose a fire hazard.\n\n Ooh... ooh, I hope I remembered to move my space heater before I came to work today! Hahaha..."
 		"\1\b[22]Dr.\![] Power Watson is with us here in the studio today to discuss electric weather, and various precautions we should all take. Dr.\![] Watson, our listeners want to know, what's the best thing to do for personal protection? What if you get a nasty shock?\n\n It's very unlikely that anyone will get a bad shock. Most shocks you will experience today are about as powerful as a minor static electricity shock.\n\n Haha, yeah, that matches my experience for sure!\n\n Still, it's best to be prepared. Our best advice is to wear long sleeves, and a simple metal bracelet on each arm. That will help to draw the electricity away from your body.\n\n Right, that makes sense! Thank you doctor!" //No it doesn't??? no it doesn't lol
 	}
 	elseif Weather.Today == 6 //Psionic storm
 	{
-		//Ooo we're experiencing a psionic storm, is that why i've (word group - felt tingly|had urges to dance|etc...)
 		"\1\b[22]Today's psionic storm has been INTENSE! If you're experiencing symptoms, we encourage you to report them on our website on the snailernet.\n\n Describe your symtoms in AS MUCH detail as possible. Every report helps us understand this strange phenomenon a little more!"
 		"\1\b[22]Be sure to keep an eye on your surroundings today! In general, it's considered safe to stay inside your home during a psionic storm, but there's ALWAYS the possibility that a slug may have snuck in without your knowledge! If you start feeling symptoms, get your tinfoil hat on and start searching for intruders! Stay safe out there!"
 		"\1\b[22]Are YOU prepared to protect your mind when you head out today? If you don't have a tinfoil hat at the ready to deflect psionic beams, then check our website on the snailernet for tips on how to create your own!\n\n If your snails are going out with you, be sure to make hats for them, too! Staying safe is important on a day like today."
@@ -144,7 +141,7 @@ RadioStation.Weather : nonoverlap_pool
 		
 		"\1\b[22]One of our listeners in %(snailcity) has reported %(feelingtinglysensations). That's a new one to me! These slugs are INVENTIVE, they've always got new ways to push our neural buttons!\n\n If you've been experiencing odd symptoms today, be sure to send us in a report so we can keep track of the spread and intensity of this phenomenon!"
 		"\1\b[22]Are YOU being targetted by a slug's psionic attacks today!? Know the signs! Sufferers commonly report tingling sensations, headaches, and a feeling of being watched.\n\n If you exhibit these symptoms or anything else strange today, know that you're not alone! Our experts recommend staying at home and finding some sort of protection for your brain. The easiest solution is to make a hat out of tinfoil, but in a pinch, a metal bucket will do just fine to get you through the day!"
-		"\1\b[22]Be on your guard today, slugs are EVERYWHERE, and their psionic powers are ultra-enhanced on a day like today! Protect your brain, and your snails' brains too!"
+		"\1\b[22]Be on your guard today, slugs are EVERYWHERE, and their psionic powers are ultra-enhanced in these conditions! Protect your brain, and your snails' brains too!"
 		"\1\b[22]Word is coming in that %(snailcity) is RIGHT at the center of a PSIONIC NEXUS today! Officials have issued a public safety warning, urging residents to stay at home until after the sun has gone down.\n\n It's intense stuff! I've heard reports of people dancing in the street, listening to music super loud, and even TALKING on the PHONE as they walk from place to place!"
 		
 		//Dr. Brianna Winters
@@ -152,7 +149,7 @@ RadioStation.Weather : nonoverlap_pool
 	}
 	
 	
-	//Temps - I need to set up some code for this. Unsure how in depth I wanna go. tbqh i think it's always summer-ish in this ghost and therefore I can just pick an avg temp for each and call that good? or i could pick 4 temps and have it cycle through seasons also, not the worst. but i think this is a summer vibes kinda thing, or maybe spring...
+	//Temps
 	_citynum = RAND(ARRAYSIZE(CityTemps))
 	_city = SnailCities[_citynum]
 	_temp = TodaysTemp(_citynum)
@@ -166,9 +163,8 @@ RadioStation.Weather : nonoverlap_pool
 	"\1\b[22]And now for the temperatures over in %(_city). Looks like we'll be seeing a nice steady %(_temp)°F throughout the afternoon, with lows predicted at %(_templow)°F, and highs at %(_temphigh)°F.\n\n I don't know about you, but those numbers all sound great to me! Isn't the weather awesome!?"
 	"\1\b[22]Now, here's something astonishing; the temperature report for %(_city) has just come in, and the expected lows are %(_temphigh)°F, while the expected highs are %(_templow)°F! What an incredible first in nature, right!?\n\n ... What's that? ... OH! Hahaha, my numbers are backwards, sorry about that!\n\n The temperatures in %(_city) today are expected to be %(_temp)°F throughout the afternoon, with lows of %(_templow)°F, and highs of %(_temphigh)°F. That's more like it!"
 	
-	//Traffic / other stuff with tailgate specifically - need to rig up code that'll go through cities one by one without repeating. a dialogue tape style thing, perhaps...? generate a new tape each day... yeah. or, same tape but start in a random position... hm! the thing is that i can't just use an embed tag straight up because then it'll pick a new one each time you repeat a dialogue. i think what i have to do is give the embed a reference that is the index i want to pull, that way it stays consistent... and only update that index after... hm, well. tricky, tricky... i guess it wouldn't hurt if it takes the index it was *passed* and increments *that*...? not the worst idea ever...
-	//I think it makes sense that they'd always go in the same order, but I can start from a random position in the list so that it's varied
-	//%(TrafficCity) is the function to use, %(StreetName) for random street name
+	//Traffic
+	//%(TrafficCity) is the function to use for a city name (avoids duplicates but CANNOT be displayed more than once per dialogue), %(StreetName) for random street name
 	"\1\b[22]NOW over to Tailgating Terror with a traffic update. Tailgate, how's those %(TrafficCity) streets looking today?\n\n %(snailpic) Bad.\n\n Yikes, we hate to see it! Thanks for the update, now back to the weather!"
 	"\1\b[22]Time for another traffic update, lets check in with our lovely Tailgating Terror in %(TrafficCity)! Tailgate, how's it looking over at %(StreetName)?\n\n %(snailpic) %(ANY('Clogged,Crash,Pileup,Honk,Horns,Brakes,Gridlock,Chaos')).\n\n Ouch, I sure hope none of our listeners are stuck in that mess! Now for next week's forecast!"
 	"\1\b[22]It's time to shake things up a bit!%(br)We've asked our traffic expert, Tailgating Terror, to have a look at %(StreetName), %(StreetName), and %(StreetName) over in %(TrafficCity), and to give us a summary of the situation there. Tailgate, how's it looking!?\n\n %(snailpic) Slow.\n\n You heard it here first, folks! THAT'S the \f[italic,1]First Place Forecasts\f[italic,default] advantage!"
@@ -177,9 +173,7 @@ RadioStation.Weather : nonoverlap_pool
 	"\1\b[22]And now for another look at the traffic, this time over in %(TrafficCity)! Our snail on the ground, Tailgating Terror, has just radioed in with the latest report. Tailgate, give us the scoop on %(_streetname)!\n\n %(snailpic) %(ANY('Fast,Speeding,Race,Vroom')).\n\n Awesome! If you like to race, get yourself over to %(_streetname) as soon as possible before it gets choked up!"
 	
 	
-	//Predictions - i can't decide if i want these to just be 5 written straight through and be just bad predictions, or if i want to pick an actual next weather and base it off of that... that could balloon it out to more dialogues, but some of it could be kept to simple word groups. i think it would lend itself to more variance and interest, probably... and i feel this station really needs that. I could also put bad predictions in the misc section lol
-	//I might be able to get away with this if it's just 2 pools: 1 for if the current weather is gonna continue and 1 if it's gonna change? hm
-	
+	//Predictions
 	if Weather.Today == Weather.Tomorrow
 	{
 		_thatsunnyweather = ("those sunny skies","the protection from the clouds","the hydrating downpour","watching the worm migration","this breezy, sneezy weather","that extra energized air","the benefits of the ongoing psionic storm")[Weather.Today]
@@ -272,30 +266,6 @@ RadioStation.Weather : nonoverlap_pool
 		"\1\b[22]We got a notice in from one of the local snail farms that a batch of young snails has ESCAPED the farm and is now out on the loose! Locals are being encouraged to watch where they step, and if they spot any snails, particularly ones that aren't quite mature yet, to catch them and check the top of their shells for a dot of UV-reactive paint that the farm uses to track wayward snails.\n\n If you've found an escaped snail, you're encouraged to return it back to the farm as soon as possible. These snails haven't finished snail school yet, and are still vulnerable out in the world at large! With any luck, we'll be able to recover most of them, and classes can resume!"
 		"\1\b[22]In an unprecedented turn of events, snail production this season was severely limited by various issues plaguing the local farms, and as a result there is an EXTREME snail shortage right now. One of my sources said that it's so bad, some farms have been recruiting slugs and giving them FAKE SHELLS so they can get into snail school and learn to race, to try and meet demand!\n\n If you sponsor a snail and find that it doesn't seem thrilled about alliteration or that it moves around like it's not used to having a shell, that might be why! Experts are saying that if you plan to sponsor a new snail within the next several months, you should bring a magnifying glass to inspect its shell closely. It's better to be safe than sorry!"
 	}
-	
-	
-	
-	/*
-	
-	Topic ideas...
-	The problem is that I don't want them to talk about the current weather *too* much because dear god the last thing I need to do is write 7*50 dialogues just for this one station...
-	I'm thinking that the weather dialogues should be *fully* different and not just word groups, as well... aghghgh! i'm gonna die this snail is gonna kill me
-	Ok that's way too many, that on its own would be 105. Maybe just SOME of the dialogues are fully different, and some of them are word groups... yeah.
-	
-	We already had the idea of traffic dialogues, I think those can take up a good chunk as well
-	At least 10-15 weather dialogues? 5-10 traffic dialogues? That's anywhere from 15-25 dialogues taken up, feels decent
-	
-	///- Trying to predict future weather but they're bad at it ("Looks like there's some clouds brewing up in the east, maybe a storm is coming soon!? ... Wait! I'm hearing now that it's from a snail pileup over on (racetrack)!")
-	- Oh god I need a dialogue, at least for the weird weather types, where they bring in an "expert" on the subject to inform people...
-	///- One of them falls asleep on air....... yes i'm stretching for topic ideas lol
-	- POTENTIALLY i could comment VERY SPARSELY on the previous day's weather... like only comments that get the MOST BAREBONES of word groups, like "and after how sunny it was yesterday"...
-	///- Having a glitch where the temps skyrocket and they're like OMG ITS A BILLION DEGREES oh wait its fine lol. This feels like it should be rare to see, but also like................................................... is it funny if it happens every single day??? hm
-	///- Honestly reading out the temperatures in various cities might not be bad... theoretically I could plot out the average temp per city, adjust it a bit based on weather, and then randomize it a little... that'd be nice. That's a thing weather stations would do... not the randomizing part obv. I mean, then again, do all cities get the same weather...? ... don't think about it too hard. see this is the part where we wiggle our hands a little to create a pleasing texture that gives the illusion of depth but doesn't take a million years to complete. i say, sinking a million years into this GODDAMN RADIO
-	//- Predictions about the upcoming ??? snail harvest ??? like... like food snails and how good upcoming batches of racing snails are gonna be due to the weather they grew up in
-	//- Maybe also notes about what kind of lettuce yields you might expect this season... hm. that might be weird to vary day to day tho... I could seed it monthly or something tho
-		//Seeding by week... hm. I grabbed yearweek, but how to do... I think I'll just use SRAND and use the week number + year number as the seed. The only place RAND is currently used in the base SHIORI files is for communicateratio, which I do not use, so I can use it to my heart's desire. Unless they add more RAND in an update, but shrug, I can deal with that if and when it comes up and it probably won't. No reason to not use SRAND here
-	
-	*/
 }
 
 //Bill Carde & Blanca Chek
