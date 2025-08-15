@@ -10,6 +10,84 @@ RadioStation.Racing_News : nonoverlap_pool
 	//We realized after recording that we'd accidentally interviewed the wrong snail (either an impostor or just a rando?)
 	//etc
 	"\1\b[20]wow the leaderboards sure are hot!"
+	
+	if LastRaceVictory
+	{
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+	}
+	else
+	{
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+		//"\1\b[22]"
+	}
+	
+	//Famous snails - Change every time you race?
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	
+	//Races at well known tracks/events...? Change every time you race?
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	
+	//Other races - Totally random with word groups
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	
+	//Pool of 5 or 10 dialogues for if you won the last race or not
+	//Otherwise, the rest of it is a flat dialogue pool
+	//They can comment on the latest races, and also the major races that have happened, and races that famous snails have been in
 }
 
 //Haley Storme & Tailgating Terror
@@ -34,7 +112,7 @@ RadioStation.Weather : nonoverlap_pool
 		{
 			"The sun sure was hot as I stepped out the studio doors and into its powerful rays, and let me tell you, it was an INTENSE experience! There's NOTHING more powerful than the sun, isn't that so awesome!? That's the kind of power we should all be reverent of!\n\n And with that in mind, I was dragged back into the studio and made to apply vigorous amounts of sunscreen. Don't forget your sunscreen today, people; the sun will burn you to a crisp if you underestimate it!"
 			"We've got a great view of the skies from the front door of our studio, and let me tell you, they sure are CLOUDY today! With my own eyes I saw a thick blanket across the sky, with all those lovely fluffy cloud textures that make it look so cozy.\n\n And the colors! Don't forget about the colors. The cloud cover ranged from a light blueish white to a dark purple-y gray, and I'm sure there will be many more vibrant colors later this evening as the sun sets! The clouds really know how to put on a good light show! So get out there and see the skies TODAY!"
-			"The rain was pouring down as I stepped out of the studio, and a stiff breeze brought the rain right to me even though I was under an awning. I couldn't resist after that, I ran out headlong into the torrent and held my hands up to the sky, letting it soak me right through!\n\n Lightning flashed, thunder rumbled, and the winds blew harder and harder. What a rush! Nature is really awe-inspiring, isn't it!?\n\n I almost didn't come back inside to deliver this report, except that the studio manager came running out with an umbrella and brought me back in. I'm telling you here and now, go out and experience that storm before it's GONE!"
+			"The rain was pouring down as I stepped out of the studio, and a stiff breeze brought the rain right to me even though I was under the awning. I couldn't resist after that, I ran out headlong into the torrent and held my hands up to the sky, letting it soak me right through!\n\n Lightning flashed, thunder rumbled, and the winds blew harder and harder. What a rush! Nature is really awe-inspiring, isn't it!?\n\n I almost didn't come back inside to deliver this report, except that the studio manager came running out with an umbrella and brought me back in. I'm telling you here and now, go out and experience that storm before it's GONE!"
 			"I didn't get two steps outside the studio before seeing worms EVERYWHERE, worming their way along to their new homes! Isn't that amazing? When the humidity is perfect and the temperature is about right, out they come in droves!\n\n I tried to pick my way across the walkway to see around the side of the building, but it was so crowded I couldn't make it without risking stepping on the worms! So I came back inside and decided to look from our 2nd floor observatory.\n\n If you've not gone out to see them yet, make sure you do, but plan your route carefully!"
 			"Let me tell you what I saw the moment I stepped out the door. Ripples of wind tearing through the grass, flowers bobbing to and fro scattering their pollen, dandelion puffs soaring through the air%(emdash) it was amazing! Bees and butterflies were out in droves, making sure to spread that pollen around. What hard workers they are!\n\n Many of our dear helper snails around the studio were snuffling and sneezing,%(br)but like the true champions they are, they've committed to bringing you the weather NO MATTER WHAT!\n\n The weather sure is amazing, and so are the snails that help us bring it to you!\n\n %(snailpic) \f[color,disable]\f[italic,1]K-chuu!\f[italic,default]\f[color,default]" //TODO do we want to use the snail graphics here or save that for bill and blanca/pirate radio lol
 			"Today I stepped outside with a handful of dead batteries. You know the kind! Not enough power for even a remote control!\n\n The first thing I noticed was my hair starting to stand on end, and then I heard a crackle nearby that made me jump! Ooh, the tingling feelings were INTENSE!\n\n After a few minutes of this, I pulled out my battery tester and got to checking those batteries, and wouldn't you know it%(emdash) they were perfectly charged! Completely full, ready for a new life! Thanks, mother nature!"
