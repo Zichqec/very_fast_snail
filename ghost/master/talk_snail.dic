@@ -86,6 +86,7 @@ Talk.Snailsonality.Angry : nonoverlap_pool
 	"\1\b[10]NEVER SETTLE FOR A TIE! I RACE TO%(br)\f[bold,1]WIN!\f[bold,default]"
 	"\1\b[10]PEEL OUT! RACE FOR THE GOAL!%(br)\f[bold,1]GET THE%(br)LETTUCE!!!\f[bold,default]"
 	"\1\b[10]LAST TIME A SNOTTY SNAIL MADE FUN OF ME I PUT A CHIP IN ITS SHELL!"
+	"\1\b[10]IF SOMEONE TRIES TO TAKE A BITE OUT OF \f[bold,1]ME\f[bold,default] I'LL BREAK THEIR TEETH"
 	
 	//TODO this needs to check for if the current snail has "well fed" _and also_ that you have more than 1 snail
 	// BAGEL WAS SAYING YOU DON'T FEED US ENOUGH
@@ -95,7 +96,7 @@ Talk.Snailsonality.Angry : nonoverlap_pool
 	// AND ITS RIGHT, SO I STARTED A PETITION
 }
 
-//TODO this will change per dialogue... is a problem. unless maybe i use an argument to specify what to pull...?
+//TODO this will change per dialogue... is a problem. unless maybe i use an argument to specify what to pull...? like i did with TrafficCity
 OnAngryQuoteBasic
 {
 	//TODO idk if this will be good or not... depends if we use text effects in those dialogues and if we want to keep those effects here
@@ -375,6 +376,7 @@ Talk.Snailsonality.Super_Fan : nonoverlap_pool
 	"\1\b[12]Most snails are cowards, they aren't willing to go to the lengths I am to catalogue racer information and preserve historical items.\n\n They'll thank me one day, when they realize how important my work is and how much effort I've put in."
 	"\1\b[12]I'm %(CurrentSnail.FavoriteFamousSnail)'s biggest fan. I've been collecting memorabilia and information about it since I was a baby snail.\n\n No snail is more dedicated than me! One day it'll recognize that."
 	"\1\b[10]I search everywhere for %(CurrentSnail.FavoriteFamousSnail) memorabilia. Nothing will escape my tentacles!"
+	"\1\b[12]I once spoke to %(ANY(FamousSnails))'s %(sponsorsmom) on the phone.\n\n I mean, the phone was ringing, and it would have been rude to just ignore it. So I took a message, like the good citizen I am."
 }
 
 Talk.Snailsonality.Slacker : nonoverlap_pool
@@ -400,6 +402,10 @@ Talk.Snailsonality.Slacker : nonoverlap_pool
 	"\1\b[10]Hey I need tomorrow off. Just so you know. Thanks."
 	"\1\b[10]Are we done yet? My show is going to come on soon and I don't want to miss prime napping time."
 	"\1\b[10]Today is a self care day. I need some me time and some of that sweet, sweet lettuce to rejuvenate myself."
+	"\1\b[10]I deserve a sweet treat for doing so well today. %(Capitalize(honey)) should do."
+	"\1\b[12]What's the point of all this, really? That's right, there isn't one. That's why I'm going to take a nap. Good night."
+	"\1\b[10]Training takes soooo long. Couldn't we do something more productive? Like napping, or watching TV."
+	"\1\b[12]Z\w8 z\w8 z\w8.\w8.\w8.\n\n \w8\w8That's the sound of a healthy snail. Wanna hear that sound for real? Let's go inside and sit on the couch."
 }
 
 Talk.Snailsonality.Jealous : nonoverlap_pool
@@ -426,6 +432,15 @@ Talk.Snailsonality.Jealous : nonoverlap_pool
 	"\1\b[10]I wonder if %(fastfood) is my real calling..."
 	"\1\b[12]If I save up enough lettuce, maybe I could splurge and get some new equipment. Something %(fc('cool','fast'))...\n\n I want to %(fc('try out the latest fashions and make a statement','try and set a new personal best on the track'))!"
 	"\1\b[10]I do alright in races, but... I bet I'd be doubly as good if I changed career paths and became a %(fc('cool','fast')) snail instead."
+	_hobby1 = ANY(AltHobby) //I should make a function for this type of thing lol
+	_hobby2 = _hobby1
+	while _hobby2 == _hobby1
+	{
+		_hobby2 = ANY(AltHobby)
+	}
+	"\1\b[12]I thought I might try %(_hobby1), and it was kinda fun at first, but now I'm not sure if I want to keep doing it.\n\n Maybe my time would be better spent on something else, like %(_hobby2)...?"
+	"\1\b[10]Is there a point in trying to be %(fc('fast','stylish'))...? I'm so out of my league..."
+	"\1\b[10]Why did I ever think I could make it as a %(fc('fast','cool')) snail...? There's not a trace of %(fc('speed','style')) in me, I knew that..."
 }
 
 Talk.Snailsonality.Liar : nonoverlap_pool
@@ -504,6 +519,9 @@ Talk.Snailsonality.Sellout : nonoverlap_pool
 	"\1\b[10]Where's hair and makeup? It's almost racing time."
 	"\1\b[10]A healthy diet is important if you want to look your best once the cameras are rolling and your show is live!"
 	"\1\b[12]You can't make sales without a healthy amount of%(br)self-confidence. If you haven't%(br)got what it takes, don't bother trying!"
+	"\1\b[12]Don't underestimate the power of a good face scrub and a foot massage to rejuvenate your image and win you that brand lettuce."
+	"\1\b[12]Not many snails want to do a photoshoot on a plate.%(br)""Insulting"", ""below their standards"", they say. But for that amount of lettuce? Honey, I'll pose on a plate all day long if you want."
+	"\1\b[12]If you ever regret being bound to a contract you signed, just remember how much lettuce you got when you made the deal.\n\n Ahh... Sweet, expendable lettuce."
 }
 
 

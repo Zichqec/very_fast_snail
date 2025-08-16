@@ -2048,6 +2048,7 @@ MakeWeather
 	else; Weather.Today = Weather.Tomorrow
 
 	//Currently I don't plan to make it avoid duplication... but if I change my mind that has to happen here
+	//Nah, don't make it avoid that, I already turned that into content lol
 	Weather.Tomorrow = ANY(_types)
 }
 
@@ -2420,4 +2421,30 @@ feelingtinglysensations
 	"seeing a long line of people outside of their local bakery, all standing eerily quiet and still"
 	"having really weird dreams when they took a nap at the park earlier"
 	"feeling butterflies in their stomach when they met with their crush at a snail race today"
+}
+
+honey
+{
+	"honey"
+	"a pint of ice cream"
+	"syrup"
+	"caramel sauce"
+	"cherry soda"
+	"lemonade"
+	"chocolate milk"
+	"a glass of apple juice"
+	"sugar water"
+	"your chapstick" //concern
+}
+
+sponsorsmom
+{
+	"sponsor's mom"
+	"PR agent"
+	"secret best friend"
+	"second biggest fan"
+	"secret admirer"
+	"brand manager"
+	"merchandiser"
+	"coordinator"
 }
