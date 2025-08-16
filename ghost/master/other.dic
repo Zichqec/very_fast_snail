@@ -1884,8 +1884,8 @@ AIgraphArray : array
 		"%(_weather_ads),Weather Ads,%(GraphDiff(_weather_ads,10))"
 		"%(_music_ads),Music Ads,%(GraphDiff(_music_ads,10))"
 		"%(_variety_show_ads),Variety Show Ads,%(GraphDiff(_variety_show_ads,10))"
-		"%(_asmr_ads),ASMR Ads,%(GraphDiff(_asmr_ads,10))"
-		"%(_pirate_radio_ads),Pirate Radio Ads,%(GraphDiff(_pirate_radio_ads,50))"
+		"%(_asmr_ads),ASMR Ads,%(GraphDiff(_asmr_ads,20))"
+		"%(_pirate_radio_ads),Pirate Radio Ads,%(GraphDiff(_pirate_radio_ads,21))"
 		//"0,Dummy value,0"
 	}
 	else //Page 0

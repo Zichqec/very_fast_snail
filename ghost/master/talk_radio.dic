@@ -738,7 +738,7 @@ Ads.General : nonoverlap_pool
 	//Snailville Auction House - everything you could ever want, and then some! - does it feel too much like harvey's snail emporium? hmm. Something something, "get your hands on old racer memorabilia at competitive prices" lol
 	"\1\b[22]Merchandise from yesterday's winners at today's prices! If you're a dedicated snail racing fan, you'll love what you see at the Snailville Auction House. Old engine parts, posters, t-shirts still new in their packaging%(emdash) and even some tickets to rare events!\n\n The \f[italic,1]Snailville Auction House\f[italic,default]. Get your hands on old racer memorabilia!"
 	"\1\b[22]Looking for racer memorabilia? Get yourself down to the \f[italic,1]Snailville Auction House\f[italic,default]! We've got hats, we've got tires, we've got used sponges from the greats! Everything you could ever want \f[italic,1]and then some!\f[italic,default]\n\n The \f[italic,1]Snailville Auction House\f[italic,default]. Get your hands on old racer memorabilia at competitive prices!"
-	//"\1\b[22]"
+	"\1\b[22]Do you want snail posters? Signed helmets and engines? Spoilers that have been used by some of the top racers from 10 years ago!?\n\n Come on down to the Snailville Auction House, where we've got all that and more! We have all kinds of classic snail memorabilia from when you were a bit younger, and before this generation of snails was even in school!\n\n The \f[italic,1]Snailville Auction House\f[italic,default]. Get your hands on old racer memorabilia at competitive prices!"
 	
 	//Nature's Nitro - nutrients to unlock your snail's true potential
 	"\1\b[22]Is your snail reaching its true potential?%(br)Most snails don't.\n\n A variety of fruits and vegetables will keep it healthy, sure, but spreading out as much as possible means you aren't dialing in on the specific nutrients that will give your snail that extra edge.\n\n Our nutritional supplements boost four essential vitamins: vitamins S, N, A1, and L. Together, these vitamins can enhance your snail's alertness, critical thinking skills, and%(br)aerodynamics. Taking just one tablet daily can unlock the true power hidden within your snail, helping it to perform its best on the racetrack.\n\n \f[italic,1]Nature's Nitro\f[italic,default]. Speed, the natural way." //are the vitamins too obvious lol - TODO maybe i should make A1 be A\f[sup,1]1\f[sup,default]???
@@ -766,15 +766,12 @@ Ads.General : nonoverlap_pool
 	"\1\b[22]Snails love the taste of \f[italic,1]Perry's Perky Pellets\f[italic,default]! If you've got a snail, we've got a pellet for you, which your snail is sure to love!\n\n Vitamins, nutrients, flavor, these pellets have it all! Buy them today!"
 	"\1\b[22]Snails love the crunch of \f[italic,1]Chow Cubes\f[italic,default]! If your snail is tired of the same old boring cylinders, give it something new to chew on, with 6 smooth faces and plenty of edges for its crunching delight!\n\n Nutritionally dense, packed with energy, and a pleasure to eat. \f[italic,1]Chow Cubes\f[italic,default] are the snail food of the future!"
 	
-	
-	
-	//Public service announcements & public safety alerts? hmm. I think they make the most sense here but at least one of them needs code
+	//Public safety alerts
 	"\1\b[20]Public Safety Alert:\n\n Healthy snails start with healthy mucus. Healthy mucus starts with good hydration."
 	"\1\b[20]Public Safety Alert:\n\n Watch where you step! Sticks aren't the only thing on the ground."
-	
-	if Weather.Today == 2; "\1\b[20]Public Service Announcement:\n\n It's a rainy day today. Do you know where your snail is?"
-	//else; "\1\b[20]"
-	//"\1\b[22]"
+	"\1\b[22]Public Safety Alert:\n\n Unlicensed funerals are the #1 cause of post-mortem snaildentity theft. Make sure your mollusks' shells are taken care of by professionals."
+	if Weather.Today == 2; "\1\b[20]Public Safety Alert:\n\n It's a rainy day today. Do you know where your snail is?"
+	else; "\1\b[20]Public Safety Alert:\n\n Birds won't tell you when they're in the skies. Stay vigilant, for yourself and for your snails."
 	
 	//Any after this point would be extras...
 }

@@ -68,7 +68,8 @@ OnAiTalk
 			}
 			elseif _pick == "Ad"
 			{
-				if RadioStation == "Pirate_Radio"; LastTalk = Ads.Pirate_Radio
+				if RadioStation == "ASMR"; LastTalk = Ads.ASMR //ASMR station exclusively gets sponsorship reads that fit the quiet vibe
+				elseif RadioStation == "Pirate_Radio"; LastTalk = Ads.Pirate_Radio //Pirate radio gets pirate radio only ads
 				else
 				{
 					//TODO i might want to make this more sophisticated than just a RAND...... ad dialogue tape!? oh god how deep does it go
