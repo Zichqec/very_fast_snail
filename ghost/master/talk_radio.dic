@@ -123,9 +123,9 @@ RadioStation.Weather : nonoverlap_pool
 	//Weather, but fully different
 	if Weather.Today == 0 //Sunny
 	{
-		"\1\b[22]The sun's rays sure are HOT today. If you're going out, be sure to bring sunscreen for you, and a misting bottle for your snail! At these temperatures, snails might be inclined to go into estivation, so it's important to keep them cool and moist while you're outdoors!"
+		"\1\b[22]The sun's rays are HOT today. If you're going out, be sure to bring sunscreen for you, and a misting bottle for your snail! At these temperatures, snails might be inclined to go into estivation, so it's important to keep them cool and moist while you're outdoors!"
 		"\1\b[22]If you like sunglasses, today is your day to SHINE! Rock those shades everywhere you go today, because that sun is BRIGHT.\n\n If you haven't got your snail a pair, make sure to do that as well! Snails eyes deserve to be shaded too, and they'll love feeling cool alongside you!"
-		"\1\b[22]If you head outside right about now, you will be absolutely BOMBARDED with ultraviolet rays That's the sun at work, showing off its incredible power! NO other weather event on Earth beats it, not even close!"
+		"\1\b[22]If you head outside right about now, you will be absolutely BOMBARDED with ultraviolet rays. That's the sun at work, showing off its incredible power! NO other weather event on Earth beats it, not even close!"
 		"\1\b[22]If you're heading out today, bring your sun gear! Sunscreen, umbrellas, mist bottles, squirt guns, plenty of drinking water, all of it!\n\n Experiencing the sun is GREAT, but you probably don't want to experience heat stroke too!" //"probably"
 		"\1\b[22]If you're planning to spend the day tanning, remember to leave your snails at home! Or if they must come along, provide them with PLENTY of shade and cool water.\n\n Snails don't tan, and they don't take well to the heat, so you're better off not making them try!"
 		
@@ -468,6 +468,8 @@ RadioStation.Music : nonoverlap_pool
 	"\1\b[20]%(note1)Wah wah, wah wah wah wah!%(note2)\n\n %(note1)Wah wah wah wah, wah wah wah wahhh!%(note2)\n\n %(note1)Wahhhh wah wah wah! Wah wah wah!%(note2)"
 	"\1\b[20]%(note1)Do do bop, do wop de do bop, dop de do~%(note2)\n\n %(note1)Dop dop do bop, do do do be do be wop de do~%(note2)"
 	
+	"\1\b[20]Now back to our foot tapping, shell cracking, Boogie Down Music Hour!\n\n %(note1)Do wop~ Do be do be da do~%(note2)"
+	
 	//Actual lyrics
 	"\1\b[20]%(note1)Ooooo be my racing baby~%(note2)\n\n %(note1)Ooooo be my winning bet~%(note2)"
 	"\1\b[20]%(note1)Watch them zip across the track~%(note2)\n\n %(note1)Oh, these snails are such a thrill~%(note2)" //resisting the urge to put "also a delicious snack"...
@@ -724,18 +726,18 @@ Ads.General : nonoverlap_pool
 	"\1\b[22]When it comes to reliability, nothing beats an original \f[italic,1]Power Pistons\f[italic,default] engine. Hand crafted high-quality workmanship, made to last a lifetime.\n\n Every engine we design goes through extensive testing to ensure it can withstand even the harshest of snail racing conditions. For short races or marathons, in clear skies or inclement weather, whether it's fresh from the factory or has had years of service%(emdash) a%(br)\f[italic,1]Power Pistons\f[italic,default] engine is ready to roar into action at any time.\n\n Get the reliable power your snail needs to reach the finish line, first time every time.\n\n \f[italic,1]Power Pistons\f[italic,default]."
 	
 	//Mollusk Massage - every snail deserves a spa day
-	//"\1\b[22]"
-	//"\1\b[22]"
-	//"\1\b[22]"
+	"\1\b[22]You have hardworking snails. They train for hours, stick to specialized diets, pose stylishly for the camera, and give it their all on the race track. Day in, day out, constant effort.\n\n Why not give your snail a little reprieve, and show it that you care? At \f[italic,1]Mollusk Massage\f[italic,default], we'll massage the foot of any snail and help it release all that tension. Your snail will leave feeling like a whole new gastropod, or your money back.\n\n \f[italic,1]Mollusk Massage\f[italic,default]. Every snail deserves a spa day."
+	"\1\b[22]Does your snail seem worn out? Does it have an ache in its foot that just won't leave? Is it hard to wake up every day and get itself to the track?\n\n We've got just the thing your snail needs. Our trained experts will give your snail a vigorous foot massage, working out tension and soothing aches. Your snail will leave looking more energetic than you've seen it in weeks%(emdash) which is always sure to boost both its speed and its ability to show off its style.\n\n \f[italic,1]Mollusk Massage\f[italic,default]. Every snail deserves a spa day."
+	"\1\b[22]Is your snail finding it hard to ooze along? Is it low on vitality, only just managing to get through the day?\n\n That's no way for a snail to be. But at \f[italic,1]Mollusk Massage\f[italic,default], we have the expertise to put a spring back into your snail's step. Our premium foot massage will relieve tension and bring your snail a sense of peace and calm that it might not have had for a while in our busy world. The results are sure to be stunning.\n\n \f[italic,1]Mollusk Massage\f[italic,default]. Every snail deserves a spa day."
 	
-	//Gastropod Gardens - a bird-free paradise for your snails to roam
-	//"\1\b[22]"
-	//"\1\b[22]"
-	//"\1\b[22]"
+	//Gastropod Gardens - a bird-free paradise for you and your snails to roam
+	"\1\b[22]Looking for some quiet time away from the hustle and bustle of life? At \f[italic,1]Gastropod Gardens\f[italic,default], we've created an oasis of nature that's perfect for you and your snail.\n\n Trees, a bubbling brook, and tidy paths to walk. Your snail can relax knowing that there are no birds within our walls, and you can relax knowing you don't have to keep an eye out for winged terrors that would steal your snail. Truly, a breath of fresh air.\n\n \f[italic,1]Gastropod Gardens\f[italic,default]. A bird-free paradise for you and your snails to roam."
+	"\1\b[22]Many snails spend their \f[italic,1]whole lives\f[italic,default] in terror at the thought of beating wings. Sharp beaks and talons, ready to rip a snail from its shell. It's a stressful way to live, out here in the city with no cover over your head to protect you from preying eyes.\n\n Here at \f[italic,1]Gastropod Gardens\f[italic,default], we've solved this issue by building an enclosure that's full of all sorts of nature%(emdash) except for birds. Bugs, leaves, twigs, pinecones; everything to make a snail feel at home.\n\n \f[italic,1]Gastropod Gardens\f[italic,default]. A bird-free paradise for you and your snails to roam."
+	"\1\b[22]A day out with your snail is a tiring thing, isn't it? Wherever you go, you have to keep a close eye on your snail, lest it get carried away by some cruel avian.\n\n That's no way to live. That's stressful for you, and that's especially stressful for your snail. What you need is a quiet oasis of nature, with no birds to threaten your snail's safety... and that's just what we've created for you at \f[italic,1]Gastropod Gardens\f[italic,default]. All of the soothing parts of nature, without any of the birds.\n\n \f[italic,1]Gastropod Gardens\f[italic,default]. A bird-free paradise for you and your snails to roam."
 	
 	//Snailville Auction House - everything you could ever want, and then some! - does it feel too much like harvey's snail emporium? hmm. Something something, "get your hands on old racer memorabilia at competitive prices" lol
-	//"\1\b[22]"
-	//"\1\b[22]"
+	"\1\b[22]Merchandise from yesterday's winners at today's prices! If you're a dedicated snail racing fan, you'll love what you see at the Snailville Auction House. Old engine parts, posters, t-shirts still new in their packaging%(emdash) and even some tickets to rare events!\n\n The \f[italic,1]Snailville Auction House\f[italic,default]. Get your hands on old racer memorabilia!"
+	"\1\b[22]Looking for racer memorabilia? Get yourself down to the \f[italic,1]Snailville Auction House\f[italic,default]! We've got hats, we've got tires, we've got used sponges from the greats! Everything you could ever want \f[italic,1]and then some!\f[italic,default]\n\n The \f[italic,1]Snailville Auction House\f[italic,default]. Get your hands on old racer memorabilia at competitive prices!"
 	//"\1\b[22]"
 	
 	//Nature's Nitro - nutrients to unlock your snail's true potential
@@ -758,18 +760,32 @@ Ads.General : nonoverlap_pool
 	"\1\b[22]Does your livingroom look a little bland? Could you use some new decor, and something to spice up your snail's life?\n\n Then you need \f[italic,1]Racer Rugs\f[italic,default]! These stylish rugs have a track design so your snail can practice any time from the comfort of home, and you won't lose any floor space! If you get creative, you can even place other furniture such as coffee tables in the center of the rug, where they won't cover the track.\n\n \f[italic,1]Racer Rugs\f[italic,default]. Turn any floor into a practice track!"
 	"\1\b[22]You've heard of \f[italic,1]Racer Rugs\f[italic,default], but did you know they actually come in multiple sizes and styles?\n\n Everything from small throw rugs with circular tracks to large rugs with oval tracks that will fill your whole livingroom. We've even got runners with one way sprint tracks on them!\n\n No matter what shape or size of home you have, you're sure to find a rug that you and your snail will love.\n\n \f[italic,1]Racer Rugs\f[italic,default]. Turn any floor into a practice track!"
 	
-	//Either I miscounted or I was counting the chow cubes and stuff? probably that. either way, eh, i'll just slot in another here maybe
-	//"\1\b[22]"
-	//"\1\b[22]"
-	//"\1\b[22]"
 	
-	//Any after this point would be extras...
+	//Perry's Perky Pellets & Chow Cubes
+	"\1\b[22]Looking for snail food?\n\n \f[italic,1]Perry's Perky Pellets\f[italic,default] have perfect nutritional balance and energy for the most athletic of mollusks, all in a convenient to eat, mechanically processed cylinder!\e:chain=chain.pellet_wars"
+	"\1\b[22]Snails love the taste of \f[italic,1]Perry's Perky Pellets\f[italic,default]! If you've got a snail, we've got a pellet for you, which your snail is sure to love!\n\n Vitamins, nutrients, flavor, these pellets have it all! Buy them today!"
+	"\1\b[22]Snails love the crunch of \f[italic,1]Chow Cubes\f[italic,default]! If your snail is tired of the same old boring cylinders, give it something new to chew on, with 6 smooth faces and plenty of edges for its crunching delight!\n\n Nutritionally dense, packed with energy, and a pleasure to eat. \f[italic,1]Chow Cubes\f[italic,default] are the snail food of the future!"
 	
 	
 	
 	//Public service announcements & public safety alerts? hmm. I think they make the most sense here but at least one of them needs code
-	//Perry's Perky Pellets & Chow Cubes - idk if we should write more for them or if the existing chain is enough
+	"\1\b[20]Public Safety Alert:\n\n Healthy snails start with healthy mucus. Healthy mucus starts with good hydration."
+	"\1\b[20]Public Safety Alert:\n\n Watch where you step! Sticks aren't the only thing on the ground."
+	
+	if Weather.Today == 2; "\1\b[20]Public Service Announcement:\n\n It's a rainy day today. Do you know where your snail is?"
+	//else; "\1\b[20]"
+	//"\1\b[22]"
+	
+	//Any after this point would be extras...
 }
+
+chain.pellet_wars
+{{CHAIN
+	"\1\b[22]Are you looking for excitement in your life? A taste of something new? Tired of eating the same old cylinders day after day?\n\n \f[italic,1]Chow Cubes\f[italic,default] are for you! Shareable, stackable, and superior to traditional pellets in every way. \f[italic,1]Chow Cubes!\f[italic,default] Buy them now!"
+	"\1\b[22]New research reveals that cylindrical food poses significantly lower odds of suffocation compared to trendy new%(br)'cubic' foods.\n\n Think about it: the average throat is a tube, and tubes are basically cylinders. It's a natural fit! Get your edible cylinders now! \f[italic,1]Perry's Perky Pellets\f[italic,default]!"
+	"\1\b[22]This just in: a series of horrific tripping accidents are sweeping the nation. ""All it takes is a bag knocked over, and suddenly the floor is a minefield! Those cylindrical pellets are a deathtrap!"" says one very real victim.\n\n Don't take the risk. \f[italic,1]Chow Cubes\f[italic,default]! Available now!"
+	"\1\b[22]What's the truth about pellets? Are some really better than others? We took to the streets to find out.\n\n ""They're all terrible for snails,"" said Dr.\![dummy] Shellcracker, certified sports medicine physician. ""Snails need a variety of nutrient dense vegetables, as well as a stable source of calcium, such as eggshells. Pellets simply don't cut it, no matter the brand.""\e:chain=end"
+}}CHAIN
 
 Ads.Racing_News : nonoverlap_pool
 {
