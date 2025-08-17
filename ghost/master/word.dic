@@ -2451,7 +2451,28 @@ sponsorsmom
 
 racetype
 {
-	"1 meter dash"
+	"10 centimeter dash"
+	"33 centimeter classic run"
+	"100 centimeter run" //standard length
+	"3k" //3000 millimeters
+	"half-meterthon" //13ft / 3.96 meters
+	"5k" //5000 millimeters
+	"meterthon" //26ft / 7.92 meters
+}
+
+/*
+Relay races, straight tracks vs loops, up and down tracks, racing up a wall... upside-down tracks, obstacle courses, hurdles (they're just gentle speedbumps)
+*/
+
+//Snailympics...
+theracename
+{
+	"The Snailville 500"
+	"The New Snail City Relay"
+	"The \f[italic,1]Super Sponges\f[italic,default] Obstacle Course"
+	"The Decimater Decameter"
+	"The Super Snail Super Speedy 6k"
+	"The South Snailsbury Falls Trail"
 }
 
 racetime
