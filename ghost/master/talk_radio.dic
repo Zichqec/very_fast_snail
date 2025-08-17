@@ -1,7 +1,8 @@
-//Ringo Racetrack
+//Ringo Racetrack & Chase Cooke (??? I don't love this name lol)
 //Speed of Sound Radio
 RadioStation.Racing_News : nonoverlap_pool
 {
+	//"\1\b[20]wow the leaderboards sure are hot!"
 	//"We tried to get an interview with it but (reason for not interviewing your snail)"
 	//reasons such as:
 	//It was so star struck it was at a loss for words
@@ -9,9 +10,8 @@ RadioStation.Racing_News : nonoverlap_pool
 	//It was too shy and declined
 	//We realized after recording that we'd accidentally interviewed the wrong snail (either an impostor or just a rando?)
 	//etc
-	"\1\b[20]wow the leaderboards sure are hot!"
 	
-	if LastRaceVictory
+	if LastRaceVictory //TODO this doesn't connect to anything yet, i imagine later it will have stuff like if you won and the name of the victor of the last race... we'll see!
 	{
 		//"\1\b[22]"
 		//"\1\b[22]"
@@ -28,7 +28,7 @@ RadioStation.Racing_News : nonoverlap_pool
 		//"\1\b[22]"
 	}
 	
-	//Famous snails - Change every time you race?
+	//Famous snails - Change every time you race? Actually, it'd be real nice if this one and the next one had a rotation of base dialogues........ but, lets uh, see how hard it is to get through the base of this station first, yeah?
 	//"\1\b[22]"
 	//"\1\b[22]"
 	//"\1\b[22]"
@@ -49,7 +49,10 @@ RadioStation.Racing_News : nonoverlap_pool
 	//"\1\b[22]"
 	
 	//Other races - Totally random with word groups
-	//"\1\b[22]"
+	_snailname = SnailNameGenerator
+	_racetype = racetype
+	_racetime = racetime
+	"\1\b[22]It sounds like the snail of the hour is %(_snailname)! %(_snailname) reportedly finished 1st in the %(_racetype), leaving all its opponents in the dust with a blazingly fast time of %(_racetime)! Chase, what do you make of that?\n\n Well, it's certainly an impressive showing, Ringo. Word has it that %(keptitsshelllight). It seems that strategy paid off well for it!\n\n Haha, it certainly has! I saw the lettuce turnout for that race. If it can pull that trick off a few more times, it might just be set for life!" //I hope we'll see others start trying similarly daring tricks.\n\n Haha, indeed! Although if it becomes too popular, we might just see new rules added to the rulebook soon!
 	//"\1\b[22]"
 	//"\1\b[22]"
 	//"\1\b[22]"
@@ -418,7 +421,7 @@ RadioStation.Shopping : nonoverlap_pool
 	_pelletsdemonstration = SPLIT(TodaysChoice(pelletsdemonstration),"|")
 	"\1\b[22]%(snailpic) \f[italic,1]Wah! Wahh!\f[italic,default]\n\n Oh? %(_snailname), we've already talked about those %(boxfans) on today's show!\n\n %(snailpic) \f[italic,1]Gubuh! Gimme!\f[italic,default]\n\n ... Blanca, I think %(_snailname) might be hungry!\n\n Ooh, you know, I think you're right Bill! In that case, how about a practical demonstration of our next product? %(_pelletsdemonstration[0]) make a quick and easy snack for your snail, and are packed full of nutrition!\n\n %(snailpic) \f[italic,1]Crunch crunch.\f[italic,default]\n\n See, look at how happy it is. %(_pelletsdemonstration[1])\n\n Very true, Bill! When it comes to supplementing my snail's diet with pellets, %(_pelletsdemonstration[0]) are always my #1 pick. %(_pelletsdemonstration[2])\n\n It's an important consideration! Food choices really have to be examined from a number of angles, %(_pelletsdemonstration[3])\n\n %(snailpic) \f[italic,1]Chomp chew.\f[italic,default]\n\n That's the sound of a satisfied snail enjoying %(_pelletsdemonstration[0]), folks. Buy some today!"
 	"\1\b[22]Bill, have you got a well-thought-out housing solution for all your snails?\n\n You know what Blanca, I've never really thought about it! What have you got for us?\n\n It's the latest and greatest snail habitat innovation: SnailPartments! This prefabricated lattice of squares can be placed along any wall in your home to instantly transform it into a luxury snail habitat!\n\n Oh wow, now that is convenient. My snails usually stay in one tank all together, but now they'll each get their own cozy room. It's brilliant!\n\n Exactly! And if you order the special premium model, you can hook it up to your water supply, and each snail can use the mister built into the top of its room to mist itself whenever desired.\n\n That sounds like the peak of snail comfort. Why doesn't my room have a built in mister?\n\n Ooh I know, it sounds lovely. I'm certain this is going to be a hot item, so be sure to order yours quick, everyone, before they're gone!"
-	"\1\b[22]Blanca, have a look at this!\n\n Ooh, what is it, Bill?\n\n It's my favorite new item for snail enrichment in the home. The FastTrack! It's a quick and easy practice race track that you can deploy in any room, any time!\n\n Oh, interesting! How does it work?\n\n Simply unfold the smooth plastic track and let it click into place, set it down in your desired location, attach optional accessories like these little flags and a checkered banner at the finish line, and set your snail inside! It can go around and around as much as it likes, and you can cheer it on from the side.\n\n Wow, it seems like a simple way to keep your snails entertained, and even get in a little more practice for races!\n\n It sure is! I've been using it with my snails, and it's been a huge hit. Why, I've had to buy a dozen of them just to keep up with the demand!\n\n Amazing! I'll have to get a few of them to try for myself." //Snails need enrichment beyond just racing............
+	"\1\b[22]Blanca, have a look at this!\n\n Ooh, what is it, Bill?\n\n It's my favorite new item for snail enrichment in the home. The FastTrack! It's a quick and easy practice racetrack that you can deploy in any room, any time!\n\n Oh, interesting! How does it work?\n\n Simply unfold the smooth plastic track and let it click into place, set it down in your desired location, attach optional accessories like these little flags and a checkered banner at the finish line, and set your snail inside! It can go around and around as much as it likes, and you can cheer it on from the side.\n\n Wow, it seems like a simple way to keep your snails entertained, and even get in a little more practice for races!\n\n It sure is! I've been using it with my snails, and it's been a huge hit. Why, I've had to buy a dozen of them just to keep up with the demand!\n\n Amazing! I'll have to get a few of them to try for myself." //Snails need enrichment beyond just racing............
 	"\1\b[22]If your everyday essentials need a little more pizzazz, we've got you covered. Check out these all-new misting bottles in a variety of colors and patterns from MultiMist!\n\n Dozens of colors to choose from, and you can pick options such as two-tone, plaid, racing stripes, and glitter. Each one has a great ergonomic handle to keep you comfortable while you comfort your snail friend!\n\n That's right, Bill! These spray bottles really are top-notch, premium products. Buy some for your snails today! Brighten up each snail's day with a bottle in it's favorite color.\n\n %(snailpic) \f[italic,1]Wahoo! Water!\f[italic,default]\n\n Aw, now that's real love, folks!"
 	"\1\b[22]Now Bill, you were saying you wanted to promote some %(boxfans) today?\n\n Yes Blanca, we've got a really great deal going on where%(emdash)\n\n %(snailpic) \f[italic,1]Wah! Wubah!? \f[color,disable]Crash.\f[color,default]\f[italic,default]\n\n Oh no! %(_snailname), are you alright? \f[color,disable]What were you doing over here? You poor dear...\f[color,default]\n\n ... Well, looks like that deal is going, going, gone! That's a reminder for all of us that a good deal never lasts long, so if you hear us talk about something you just can't live without, get your orders in quickly before it's too late. You never know \f[italic,1]what\f[italic,default] could happen, hahaha!"
 }
@@ -429,15 +432,6 @@ chain.blanca_bill_break
 	//TODO also uh... find a way to... insert coupon code...............
 	"And we're back, folks!\n\n Haha, did you miss us?\n\n We missed YOU! And to show our appreciation for our listeners who waited for us, how about a special coupon code?\n\n %(snailpic) \f[italic,1]Whoa! Woohoo!\f[italic,default]\n\n I think that's a great idea, Bill! Let's see what we have... TODOCOUPONCODE10! (TODO something something what it's used for?)\n\n What a deal! And that's our thanks to you, our most loyal listeners. Now, back to the show!\e:chain=end"
 }}CHAIN
-
-// test
-// {
-	// _snailname = SnailNameGenerator //TODO i'd love to make this specify alliterative sometime
-	// //"\1\b[22]%(snailpic) \f[italic,1]Hubop! Hah!\f[italic,default]\n\n Haha, Bill, I think %(_snailname) is excited for the %(boxfans) we have over there!\n\n I think you're right, Blanca. It's certainly got an eye for a good deal, since those have just gone on sale for %(ANY(10,15,20,25,30,35,40))% off!\n\n Well there you have it, folks. Thanks for the help, %(_snailname)!\n\n %(snailpic) \f[italic,1]Woohoo!\f[italic,default]"
-	// _pelletsdemonstration = SPLIT(TodaysChoice(pelletsdemonstration),"|")
-	// //"\1\b[22]%(snailpic) \f[italic,1]Wah! Wahh!\f[italic,default]\n\n Oh? %(_snailname), we've already talked about those %(boxfans) on today's show!\n\n %(snailpic) \f[italic,1]Gubuh! Gimme!\f[italic,default]\n\n ... Blanca, I think %(_snailname) might be hungry!\n\n Ooh, you know, I think you're right Bill! In that case, how about a practical demonstration of our next product? %(_pelletsdemonstration[0]) make a quick and easy snack for your snail, and are packed full of nutrition!\n\n %(snailpic) \f[italic,1]Crunch crunch.\f[italic,default]\n\n See, look at how happy it is. %(_pelletsdemonstration[1])\n\n Very true, Bill! When it comes to supplementing my snail's diet with pellets, %(_pelletsdemonstration[0]) are always my #1 pick. %(_pelletsdemonstration[2])\n\n It's an important consideration! Food choices really have to be examined from a number of angles, %(_pelletsdemonstration[3])\n\n %(snailpic) \f[italic,1]Chomp chew.\f[italic,default]\n\n That's the sound of a satisfied snail enjoying %(_pelletsdemonstration[0]), folks. Buy some today!"
-	// "\1\b[22]Now Bill, you were saying you wanted to promote some %(boxfans) today?\n\n Yes Blanca, we've got a really great deal going on where%(emdash)\n\n %(snailpic) \f[italic,1]Wah! Wubah!? \f[color,disable]Crash.\f[color,default]\f[italic,default]\n\n Oh no! %(_snailname), are you alright? \f[color,disable]What were you doing over here? You poor dear...\f[color,default]\n\n ... Well, looks like that deal is going, going, gone! That's a reminder for all of us that a good deal never lasts long, so if you hear us talk about something you just can't live without, get your orders in quickly before it's too late. You never know \f[italic,1]what\f[italic,default] could happen, hahaha!"
-// }
 
 //Arya Lissenin
 //103.7 Mollusk Music
@@ -726,7 +720,7 @@ Ads.General : nonoverlap_pool
 	"\1\b[22]When it comes to reliability, nothing beats an original \f[italic,1]Power Pistons\f[italic,default] engine. Hand crafted high-quality workmanship, made to last a lifetime.\n\n Every engine we design goes through extensive testing to ensure it can withstand even the harshest of snail racing conditions. For short races or marathons, in clear skies or inclement weather, whether it's fresh from the factory or has had years of service%(emdash) a%(br)\f[italic,1]Power Pistons\f[italic,default] engine is ready to roar into action at any time.\n\n Get the reliable power your snail needs to reach the finish line, first time every time.\n\n \f[italic,1]Power Pistons\f[italic,default]."
 	
 	//Mollusk Massage - every snail deserves a spa day
-	"\1\b[22]You have hardworking snails. They train for hours, stick to specialized diets, pose stylishly for the camera, and give it their all on the race track. Day in, day out, constant effort.\n\n Why not give your snail a little reprieve, and show it that you care? At \f[italic,1]Mollusk Massage\f[italic,default], we'll massage the foot of any snail and help it release all that tension. Your snail will leave feeling like a whole new gastropod, or your money back.\n\n \f[italic,1]Mollusk Massage\f[italic,default]. Every snail deserves a spa day."
+	"\1\b[22]You have hardworking snails. They train for hours, stick to specialized diets, pose stylishly for the camera, and give it their all on the racetrack. Day in, day out, constant effort.\n\n Why not give your snail a little reprieve, and show it that you care? At \f[italic,1]Mollusk Massage\f[italic,default], we'll massage the foot of any snail and help it release all that tension. Your snail will leave feeling like a whole new gastropod, or your money back.\n\n \f[italic,1]Mollusk Massage\f[italic,default]. Every snail deserves a spa day."
 	"\1\b[22]Does your snail seem worn out? Does it have an ache in its foot that just won't leave? Is it hard to wake up every day and get itself to the track?\n\n We've got just the thing your snail needs. Our trained experts will give your snail a vigorous foot massage, working out tension and soothing aches. Your snail will leave looking more energetic than you've seen it in weeks%(emdash) which is always sure to boost both its speed and its ability to show off its style.\n\n \f[italic,1]Mollusk Massage\f[italic,default]. Every snail deserves a spa day."
 	"\1\b[22]Is your snail finding it hard to ooze along? Is it low on vitality, only just managing to get through the day?\n\n That's no way for a snail to be. But at \f[italic,1]Mollusk Massage\f[italic,default], we have the expertise to put a spring back into your snail's step. Our premium foot massage will relieve tension and bring your snail a sense of peace and calm that it might not have had for a while in our busy world. The results are sure to be stunning.\n\n \f[italic,1]Mollusk Massage\f[italic,default]. Every snail deserves a spa day."
 	
@@ -756,7 +750,7 @@ Ads.General : nonoverlap_pool
 	"\1\b[22]Got a mouth? Then we've got something for you down at \f[italic,1]Snack Shack\f[italic,default]! Any creature with a mouth needs to eat eventually, and why not make mealtime great?\n\n Got snails? Bring em down for a delicious meal at half price! Treat yourself to a milkshake or a pudding pie while you're here! When you need quick food, comfort food, tasty food, WHATEVER food, we've got you covered at \f[italic,1]Snack Shack\f[italic,default].\n\n \f[italic,1]Snack Shack\f[italic,default]. Any appetite sated!"
 	
 	//Racer Rugs - turn any floor into a practice track!
-	"\1\b[22]Have you tried setting up race tracks at home before? It's a real pain, isn't it? They take up so much room, and require a lot of maintenance.\n\n Well let those woes be a thing of the past; our team of scientists has been hard at work developing a new product that can fill the same role without all the drawbacks! Introducing%(br)\f[italic,1]Racer Rugs\f[italic,default], a stylish rug with a sleek racetrack design that you can simply lay down on any flat surface.\n\n The rug's markings give your snail a clear guide to follow while it practices its turns and sprints, and cleanup is a breeze! The rug material is resistant to mucus stains, you can use a vacuum cleaner to clean up any dust and debris, and the whole thing is machine washable!\n\n \f[italic,1]Racer Rugs\f[italic,default]. Turn any floor into a practice track."
+	"\1\b[22]Have you tried setting up racetracks at home before? It's a real pain, isn't it? They take up so much room, and require a lot of maintenance.\n\n Well let those woes be a thing of the past; our team of scientists has been hard at work developing a new product that can fill the same role without all the drawbacks! Introducing%(br)\f[italic,1]Racer Rugs\f[italic,default], a stylish rug with a sleek racetrack design that you can simply lay down on any flat surface.\n\n The rug's markings give your snail a clear guide to follow while it practices its turns and sprints, and cleanup is a breeze! The rug material is resistant to mucus stains, you can use a vacuum cleaner to clean up any dust and debris, and the whole thing is machine washable!\n\n \f[italic,1]Racer Rugs\f[italic,default]. Turn any floor into a practice track."
 	"\1\b[22]Does your livingroom look a little bland? Could you use some new decor, and something to spice up your snail's life?\n\n Then you need \f[italic,1]Racer Rugs\f[italic,default]! These stylish rugs have a track design so your snail can practice any time from the comfort of home, and you won't lose any floor space! If you get creative, you can even place other furniture such as coffee tables in the center of the rug, where they won't cover the track.\n\n \f[italic,1]Racer Rugs\f[italic,default]. Turn any floor into a practice track!"
 	"\1\b[22]You've heard of \f[italic,1]Racer Rugs\f[italic,default], but did you know they actually come in multiple sizes and styles?\n\n Everything from small throw rugs with circular tracks to large rugs with oval tracks that will fill your whole livingroom. We've even got runners with one way sprint tracks on them!\n\n No matter what shape or size of home you have, you're sure to find a rug that you and your snail will love.\n\n \f[italic,1]Racer Rugs\f[italic,default]. Turn any floor into a practice track!"
 	
@@ -778,7 +772,7 @@ Ads.General : nonoverlap_pool
 
 chain.pellet_wars
 {{CHAIN
-	"\1\b[22]Are you looking for excitement in your life? A taste of something new? Tired of eating the same old cylinders day after day?\n\n \f[italic,1]Chow Cubes\f[italic,default] are for you! Shareable, stackable, and superior to traditional pellets in every way. \f[italic,1]Chow Cubes!\f[italic,default] Buy them now!"
+	"\1\b[22]Are you looking for excitement in your life? A taste of something new? Tired of eating the same old cylinders day after day?\n\n \f[italic,1]Chow Cubes\f[italic,default] are for you! Shareable, stackable, and superior to traditional pellets in every way. \f[italic,1]Chow Cubes\f[italic,default]! Buy them now!"
 	"\1\b[22]New research reveals that cylindrical food poses significantly lower odds of suffocation compared to trendy new%(br)'cubic' foods.\n\n Think about it: the average throat is a tube, and tubes are basically cylinders. It's a natural fit! Get your edible cylinders now! \f[italic,1]Perry's Perky Pellets\f[italic,default]!"
 	"\1\b[22]This just in: a series of horrific tripping accidents are sweeping the nation. ""All it takes is a bag knocked over, and suddenly the floor is a minefield! Those cylindrical pellets are a deathtrap!"" says one very real victim.\n\n Don't take the risk. \f[italic,1]Chow Cubes\f[italic,default]! Available now!"
 	"\1\b[22]What's the truth about pellets? Are some really better than others? We took to the streets to find out.\n\n ""They're all terrible for snails,"" said Dr.\![dummy] Shellcracker, certified sports medicine physician. ""Snails need a variety of nutrient dense vegetables, as well as a stable source of calcium, such as eggshells. Pellets simply don't cut it, no matter the brand.""\e:chain=end"
@@ -847,7 +841,17 @@ Ads.Variety_Show : nonoverlap_pool
 //This can be both jockeys together. Should it get double ads...? hm. depends how easy they are to write lol
 Ads.ASMR : nonoverlap_pool
 {
-	_candidates = ASMR.ad_reads
+	_candidates = IARRAY
+	_jockeys = ("Tim Gulls","Sy Lance")
+	_today = TodaysChoice(_jockeys)
+	if _today == "Sy Lance"
+	{
+		_candidates = Ads.ASMR.sylance
+	}
+	else //Tim Gulls - the OG
+	{
+		_candidates = Ads.ASMR.timgulls
+	}
 	
 	//This setup is so that we can avoid writing all those tags for each ASMR dialogue, but also so that it doesn't break chains...
 	for _i = 0; _i < ARRAYSIZE(_candidates); _i++
@@ -859,24 +863,62 @@ Ads.ASMR : nonoverlap_pool
 	parallel _candidates
 }
 
-ASMR.ad_reads : array //TODO when this was accidentally set to nonoverlap_pool (with one dialogue), it was causing SSP to freeze when opening the aigraph. Maybe try that again to find out if there's a possible issue with the aigraph? if it was an infinite loop, it should have hit the loop limit...
+Ads.ASMR.timgulls : array //TODO when this was accidentally set to nonoverlap_pool (with one dialogue), it was causing SSP to freeze when opening the aigraph. Maybe try that again to find out if there's a possible issue with the aigraph? if it was an infinite loop, it should have hit the loop limit...
 {
 	//Tim Gulls
-	//"Crunchy leaves just for you... Ask for the best from your sponsor."
-	//"\1\b[22]"
-	//"\1\b[22]"
-	//"\1\b[22]"
-	//"\1\b[22]"
+	"Imagine the delicious crunch of a bell pepper from Good Greens. You deserve that kind of nourishment."
+	"Good Greens just got in a fresh shipment of cabbage. Crunchy leaves just for you... Ask for the best from your sponsor. It's good for your health."
+	//""
+	//""
+	//""
 	
+	//""
+	//""
+	//""
+	//""
+	//""
+}
+
+Ads.ASMR.sylance : array
+{
 	//Sy Lance
-	"Hey, it's Sy Lance. I got you this new sling bag from Harvey's Snail Emporium. Try it on.\n\n Swish.\n\n Clink clink.\n\n There you are, it fits like a glove. Imagine how much lettuce you could fit in here." //TODO I feel it needs the name mention and to be clearly an ad, but I'm not sure I've quite dialed it in
-	//"\1\b[22]"
-	//"\1\b[22]"
-	//"\1\b[22]"
-	//"\1\b[22]"
+	"I got you this new sling bag from Harvey's Snail Emporium. Try it on.\n\n Swish.\n\n Clink clink.\n\n There you are, it fits like a glove. Imagine how much lettuce you could fit in here."
+	"Does your foot ache? Maybe we should take you to one of those Mollusk Massage studios. Let's try it.\n\n ... Squish squish. \w8\w8Squish squish. \w8\w8Splap.\n\n How do you feel now? More relaxed?"
+	//""
+	//""
+	//""
+	
+	//""
+	//""
+	//""
+	//""
+	//""
 }
 
 Ads.Pirate_Radio : nonoverlap_pool
 {
 	"\1\b[22]hi i'm sluggy mcsluggerson and i endorse SlugSoap"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
+	//"\1\b[22]"
 }

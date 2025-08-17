@@ -2448,3 +2448,35 @@ sponsorsmom
 	"merchandiser"
 	"coordinator"
 }
+
+racetype
+{
+	"1 meter dash"
+}
+
+racetime
+{
+	_mins = RAND(5) + 4
+	_seconds = RAND(60)
+	
+	if _seconds == 0
+	{
+		"%(_mins) minutes flat"
+	}
+	else
+	{
+		_s = "s"; if _seconds == 1; _s = ""
+		"%(_mins) minutes and %(_seconds) second%(_s)"
+	}
+}
+
+keptitsshelllight
+{
+	"it scoped out its competitors beforehand, and decided to keep its shell light instead of loading up on heavy engines and thrusters"
+	"it spread rumors about the other racers that led to them viciously fighting with each other just after they got off the starting line"
+	"it pulled the fire alarms at the apartments of its most serious competitors the night before, disrupting their sleep so they wouldn't be at their best on the day of the race"
+	"it listened to nothing but affirmations for the week leading up to the race"
+	"it's been taking a bunch of those \f[italic,1]Nature's Nitro\f[italic,default] supplements in the weeks leading up to the race"
+	"it gave up pellets and has been eating a diet composed entirely of whole greens"
+	"it looked itself in the mirror and promised itself it would win no matter what"
+}

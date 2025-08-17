@@ -66,7 +66,7 @@ OnAiTalk
 			{
 				LastTalk = EVAL("RadioStation.%(_station)")
 			}
-			elseif _pick == "Ad"
+			elseif _pick == "Ad" //TODO ummmmmm pirate radio and ASMR are going to have a REALLY HIGH ratio of ad reads lol. Might have to tweak that!
 			{
 				if RadioStation == "ASMR"; LastTalk = Ads.ASMR //ASMR station exclusively gets sponsorship reads that fit the quiet vibe
 				elseif RadioStation == "Pirate_Radio"; LastTalk = Ads.Pirate_Radio //Pirate radio gets pirate radio only ads

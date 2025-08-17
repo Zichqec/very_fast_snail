@@ -179,6 +179,10 @@ Talk.Snailsonality.Tired : nonoverlap_pool
 	"\1\b[10]I wish all the other snails would chill out and focus on racing already. That's what we're here for, isn't it?"
 	"\1\b[10]Sometimes you get really close to finishing first in a race, but then another snail leaps ahead at the last minute. It can be really demoralizing."
 	"\1\b[10]Hey, if I go sit in the sink, can you open the tap just a little bit? I wanna try it and see if it's like having a rainstorm indoors."
+	"\1\b[12]Someone keeps nibbling on the produce in the fridge. Hey,%(br)here's an idea: put me in there and close the door, if I spot the criminal I'll shout."
+	"\1\b[10]Another snail called me a leaf-eater the other day. Aren't we all, though?"
+	"\1\b[12]Whenever other snails boast they know the key to winning races, I just ignore them. Every race is different, there is no one solution."
+	"\1\b[10]I wish we could put an end to the snail rivalries. The constant outrage doesn't help anyone." //TODO is this... is this too close to home lol
 }
 
 Talk.Snailsonality.Ratings : nonoverlap_pool
@@ -199,7 +203,7 @@ Talk.Snailsonality.Ratings : nonoverlap_pool
 	"\1\b[10]Paperwork? 0/10, not fast at all."
 	"\1\b[10]Being the %(fc('fastest','coolest')) on the leaderboard? 10/10, feels good but you'll make yourself a target."
 	"\1\b[10]Getting sponsorships? 7/10, you'll feel like you sold your soul, but the money is great."
-	"\1\b[10]Oozing my way through your %(airducts)? %(RAND(11))/10, certainly an experience."
+	"\1\b[12]Oozing my way through your %(airducts)? %(RAND(11))/10, certainly an experience."
 	
 	_letter = letter
 	"\1\b[10]The letter %(_letter[0,'|'])? %(_letter[1,'|'])/10, %(_letter[2,'|'])."
@@ -211,6 +215,8 @@ Talk.Snailsonality.Ratings : nonoverlap_pool
 	"\1\b[10]%(Capitalize(CurrentSnail.AltHobby))? 10/10, fun to do in my spare time."
 	"\1\b[10]Kick flips? 10/10, really hard for a snail to pull off but that just makes it even cooler if you can do it."
 	"\1\b[10]Tape? 2/10, barely sticky at all, honestly."
+	"\1\b[10]Mucus? 10/10, protective, indicator of health, all around great stuff."
+	"\1\b[10]Sticks in the road?%(br)4/10, sometimes they're a fun challenge, but usually they're just annoying."
 }
 
 chain.running_produce_aisle
@@ -322,7 +328,7 @@ Talk.Snailsonality.Gymbro : nonoverlap_pool
 	"\1\b[10]Got any %(proteinshakes)? I could use a pick-me-up."
 	"\1\b[10]I bet I could lift every piece of snail equipment in this garage. At once."
 	"\1\b[10]I've been lifting the wrenches in your toolbox for practice. Impressive, I know."
-	"\1\b[10]Here, watch what happens when I flex.\n\n \s[1]\_w[3000]\s[0]Cool, huh? Raw muscle. Pure power."
+	"\1\b[10]Here, watch what happens when I flex.\n\n \0\s[1]\_w[3500]\s[0]\1Cool, huh? Raw muscle. Pure power."
 	"\1\b[10]You're not lifting enough. You should work out with me in the mornings, I'll be your accountability partner."
 	"\1\b[10]There should be a leaderboard for strongest snails."
 	"\1\b[10]I could shell press 10 heads of lettuce at once. Give me some and I'll show you."
@@ -343,7 +349,6 @@ Talk.Snailsonality.Gymbro : nonoverlap_pool
 
 Talk.Snailsonality.Super_Fan : nonoverlap_pool
 {
-	
 	_randfamous = RAND(30)
 	"\1\b[12]Did you hear the latest grub news? Apparently %(FamousSnails[_randfamous]) likes %(pineapple[_randfamous]) on its pizza. Imagine."
 	

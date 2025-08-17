@@ -51,6 +51,13 @@ OnTranslateInternal.AutoPause
 		//_talk = REPLACE(_talk,"- ","-\w8 ") //Dash - This one seems to happen a lot when I don't want it, so I am commenting it out
 		_talk = REPLACE(_talk,"\w8 \n","\w8\n") //Bandaid fix for poetry linebreak awkwardness...
 		_talk = REPLACE(_talk,"\w4 \n","\w4\n")
+		
+		//Quotes... bah. i mean i could regex this, but boooo
+		//Actually I think these make it worse...
+		//_talk = REPLACE(_talk,'?" ','?"\w8\w8 ')
+		//_talk = REPLACE(_talk,'!" ','!"\w8\w8 ')
+		//_talk = REPLACE(_talk,'." ','."\w8\w8 ')
+		//_talk = REPLACE(_talk,'," ',',"\w4 ')
 	}
 	
 	_talk
@@ -1602,6 +1609,8 @@ On_getaistate : all
 		Talk.Announcer
 		RadioStation.Racing_News
 		Ads.General
+		Ads.ASMR.timgulls
+		Ads.ASMR.sylance
 		Ads.Pirate_Radio
 		Poetry.Snoem
 		Poetry.Cinquain
@@ -1680,7 +1689,7 @@ AIgraphArray : array
 	_weather_ads = OUTPUTNUM("Ads.Weather")
 	_music_ads = OUTPUTNUM("Ads.Music")
 	_variety_show_ads = OUTPUTNUM("Ads.Variety_Show")
-	_asmr_ads = OUTPUTNUM("Ads.ASMR")
+	_asmr_ads = ARRAYSIZE(Ads.ASMR.timgulls) + ARRAYSIZE(Ads.ASMR.sylance)
 	_pirate_radio_ads = OUTPUTNUM("Ads.Pirate_Radio")
 	
 	//Page 0:
@@ -1713,7 +1722,7 @@ AIgraphArray : array
 		
 		if RadioStation != "Off"
 		{
-			if !(RadioStation == "Shopping" || RadioStation == "Pirate_Radio"); _currently_available += _general_ads
+			if !(RadioStation == "Shopping" || RadioStation == "Pirate_Radio" || RadioStation == "ASMR"); _currently_available += _general_ads
 			//Shopping channel has no ads, at least, as of now...
 			
 			case RadioStation
@@ -1746,8 +1755,16 @@ AIgraphArray : array
 					
 					case _today
 					{
-						when "Tim Gulls"; _currently_available += ARRAYSIZE(ASMR.dialogues.timgulls)
-						when "Sy Lance"; _currently_available += ARRAYSIZE(ASMR.dialogues.sylance)
+						when "Tim Gulls"
+						{
+							_currently_available += ARRAYSIZE(ASMR.dialogues.timgulls)
+							_currently_available += ARRAYSIZE(Ads.ASMR.timgulls)
+						}
+						when "Sy Lance"
+						{
+							_currently_available += ARRAYSIZE(ASMR.dialogues.sylance)
+							_currently_available += ARRAYSIZE(Ads.ASMR.sylance)
+						}
 					}
 				}
 				when "Pirate_Radio"
