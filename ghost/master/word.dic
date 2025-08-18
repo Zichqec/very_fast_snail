@@ -2452,13 +2452,14 @@ sponsorsmom
 
 racetype
 {
-	"10 centimeter dash"
-	"33 centimeter classic run"
-	"100 centimeter run" //standard length
-	"3k" //3000 millimeters
-	"half-meterthon" //13ft / 3.96 meters
-	"5k" //5000 millimeters
-	"meterthon" //26ft / 7.92 meters
+	//Name,millimeters
+	"10 centimeter dash,100"
+	"33 centimeter classic run,330"
+	"100 centimeter run,1000" //standard length
+	"3k,3000" //3000 millimeters
+	"half-meterthon,3960" //13ft / 3.96 meters
+	"5k,5000" //5000 millimeters
+	"meterthon,7920" //26ft / 7.92 meters
 }
 
 /*
@@ -2476,8 +2477,41 @@ theracename
 	"The South Snailsbury Falls Trail"
 }
 
-racetime
+racetime : all
 {
+	_base = 1000
+	if GETTYPE(_argv[0]) == 1 && _argv[0] > 0; _base = _argv[0]
+	
+	//The base time is how many millimeters the race is, and a real world snail averages like 1mm per second
+	//These are Very Fast Snails, they go a goodly bit faster. They got rockets and stuff lol. It also varies a lot based on terrain, etc.
+	//I think... divide by 10 (assume base speed of 1cm per second), and then give it a variance of + or - 50%?
+	
+	_base = _base / 10
+	_half = _base / 2
+	_rand = RAND(_base)
+	_time = _half + _rand //half guaranteeing at least it'll be 50% of the starting value, and _rand giving it the range of anywhere from 50%-150%...
+	
+	_minutes = _time / 60
+	_seconds = _time % 60
+	
+	if _minutes != 0
+	{
+		_s = "s"; if _minutes == 1; _s = ""
+		"%(_minutes) minute%(_s)"
+	}
+	
+	if _seconds != 0
+	{
+		if _minutes != 0; " and " //this is awkward but i can't come up with a better way???
+		_s = "s"; if _seconds == 1; _s = ""
+		"%(_seconds) second%(_s)"
+	}
+	else
+	{
+		" flat"
+	}
+	
+	/*
 	_mins = RAND(5) + 4
 	_seconds = RAND(60)
 	
@@ -2490,6 +2524,7 @@ racetime
 		_s = "s"; if _seconds == 1; _s = ""
 		"%(_mins) minutes and %(_seconds) second%(_s)"
 	}
+	*/
 }
 
 keptitsshelllight
@@ -2537,4 +2572,42 @@ shakeflavor
 	"strawberry"
 	"fudge brownie"
 	"cookie dough"
+}
+
+itmadeitswaytofirst
+{
+	"it steadily pressed onward, eventually pressing past its competitors and making its way to 1st"
+	"it suddenly exploded in the middle of the pack, taking out the snails everyone thought were most likely to win"
+	"it shot forward to 1st place, completely outstripping its competitors with its raw talent"
+	"it made creative use of its mucus to gain a tactical advantage and pull into 1st place"
+	"it devoured the 1st place competitor to secure victory" //TODO IS IT TOO MUCH???????
+}
+
+inchingpastitscompetitor
+{
+	_snailname2 = _argv[0]
+	"inching just past its competitor with a final burst of speed once the finish line was in sight"
+	"suddenly turning on a pair of thrusters it had hidden the whole time and wowing the crowd"
+	"seizing its chance when %(_snailname2) was momentarily distracted by a stray leaf of lettuce"
+	"after it let out a shrill war cry that startled %(_snailname2) and caused it to fall over"
+}
+
+itgotacoldfoot
+{
+	"it got a cold foot on the day of the race and couldn't move an inch"
+	"it exploded the moment it set off from the starting line"
+	"it had a false start, but it was so focused in on racing that it didn't hear the warnings. It ended up expending all its thruster fuel, and exhausting itself from the effort"
+	"it tripped on a weed and toppled onto its side. It ended up not being able to right itself"
+	"it was attacked by a bird that swooped out of nowhere, and the whole race had to be postponed"
+	"it got so nervous it squeezed its eyes shut when the race started, and ended up racing in circles"
+	"it turns out its sponsor had misread the rules for the event, and it got disqualified for its loadout" // :(
+}
+
+justhardworkandsweat
+{
+	"just hard work and sweat"
+	"it just kept on moving in a straight line, tightly focused. As they say, slow and steady reaches the top of the leaderboards if all your competitors crash and explode"
+	"lots of supplements"
+	"apparently it got a massage just before the race started"
+	"not at all! Its competitors were so busy trying to get their fancy thrusters to ignite that it had passed the finish linme before they even started"
 }

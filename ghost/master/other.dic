@@ -1683,7 +1683,7 @@ AIgraphArray : array
 	_asmr = ARRAYSIZE(ASMR.dialogues.timgulls) + ARRAYSIZE(ASMR.dialogues.sylance) //These ones are weird cuz they have a weird setup
 	_pirate_radio = OUTPUTNUM("RadioStation.Pirate_Radio")
 	
-	// //Page 7:
+	//Page 7:
 	_general_ads = OUTPUTNUM("Ads.General")
 	_racing_news_ads = OUTPUTNUM("Ads.Racing_News")
 	_weather_ads = OUTPUTNUM("Ads.Weather")
@@ -1704,7 +1704,7 @@ AIgraphArray : array
 	
 	_all_stations = _racing_news + _weather + _shopping + _music + _variety_show + _asmr + _pirate_radio
 	
-	_all_ads = _general_ads + + _racing_news_ads + _weather_ads + _music_ads + _variety_show_ads + _asmr_ads + _pirate_radio_ads
+	_all_ads = _general_ads + _racing_news_ads + _weather_ads + _music_ads + _variety_show_ads + _asmr_ads + _pirate_radio_ads
 	
 	_all = _all_user + _all_announcer + _all_alliterative + _all_non_alliterative + _all_alliterative_poetry + _all_non_alliterative_poetry + _all_stations + _all_ads
 	//Currently available dialogues? - TODO do this later lol, good for perspective

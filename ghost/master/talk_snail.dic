@@ -36,7 +36,8 @@ Talk.Snailsonality.Relaxed : nonoverlap_pool
 	"\1\b[10]Traditions aren't everything."
 	"\1\b[10]There's so much pressure in snail culture to conform. I was devastated when I got my racer name and couldn't anymore.\n\n But now I see it differently. I didn't realize how stressed I was. I didn't realize how much I was being held back. I'm much happier now, just being me."
 	"\1\b[10]Vroom vroom, I'm excited for the next race!"
-	"\1\b[10]It's nice out here. A warm breeze, some clouds for shade, the smell of grease... I like it."
+	if Weather.Today == 1; "\1\b[10]It's nice out here. A warm breeze, some clouds for shade, the smell of grease... I like it." //oopsie, this is weather specific lol
+	else; "\1\b[10]Whatever the weather outside, it's always nice in the garage!"
 	"\1\b[10]I try not to be uppity about snail stuff. There's too much of that in the world as it is, and young snails could really use more acceptance."
 	"\1\b[10]There's a big change happening in snail culture, and I'm here for it. Although, I can't agree with snails that want to fully wipe out our traditions, our history is important to preserve!"
 	"\1\b[10]The change in snail naming conventions came as a huge shock, and is going to heavily affect the younger generations. But I'm hopeful that it will lead to a more open and accepting snail culture, rather than dividing us. Gotta do my part to push it that way!"
@@ -55,9 +56,10 @@ Talk.Snailsonality.Relaxed : nonoverlap_pool
 	"\1\b[10]I've started collecting postcards from each racetrack I visit. It makes a nice gallery of memories!"
 	"\1\b[10]Whether I come in first place or not, it feels great to cross the finish line!"
 	"\1\b[10]It's nice to spend a day at home sometimes, isn't it?"
+	"\1\b[10]I'm not really ""in the loop"" these days, but that's fine. I'd rather just do my best and be me!"
+	"\1\b[12]When a race gets tough, I reach deep down inside and draw on my innermost mollusk spirit.\n\n It's never actually worked, but one day it will...!"
+	"\1\b[10]I really wish they'd just declare some races a draw, instead of implementing higher and higher speed cameras. Why stress so much over a few seconds?"
 	
-	//This may need to change based on weather... or maybe it could be a weather radio dialogue
-	//The sun has been killer this week, make sure to stay moisturized! I've been hiding out %(inthefridge), personally.
 	//My snailoscope said %(snailoscope). What do you think it means? //TODO i....... don't know what horoscopes are actually like lol. but if we do this i wanna seed it per snail per day lolllllll - wait what if they all have the same snailoscope each day, hmmmmm
 }
 

@@ -50,16 +50,22 @@ RadioStation.Racing_News : nonoverlap_pool
 	
 	//Other races - Totally random with word groups
 	_snailname = SnailNameGenerator
-	_racetype = racetype
-	_racetime = racetime
-	"\1\b[22]It sounds like the snail of the hour is %(_snailname)! %(_snailname) reportedly finished 1st in the %(_racetype), leaving all its opponents in the dust with a blazingly fast time of %(_racetime)! Chase, what do you make of that?\n\n Well, it's certainly an impressive showing, Ringo. Word has it that %(keptitsshelllight). It seems that strategy paid off well for it!\n\n Haha, it certainly has! I saw the lettuce turnout for that race. If it can pull that trick off a few more times, it might just be set for life!" //I hope we'll see others start trying similarly daring tricks.\n\n Haha, indeed! Although if it becomes too popular, we might just see new rules added to the rulebook soon!
-	//"\1\b[22]"
-	//"\1\b[22]"
-	//"\1\b[22]"
-	//"\1\b[22]"
+	_snailname2 = SnailNameGenerator
+	while _snailname == _snailname2 //This should never happen, but. lol
+	{
+		_snailname2 = SnailNameGenerator
+	}
+	_race = racetype
+	_racetype = _race[0]
+	_racetime = racetime(TOINT(_race[1]))
+	"\1\b[22]It sounds like the snail of the hour is %(_snailname)! %(_snailname) reportedly finished 1st in a %(_racetype) hosted by a snail enthusiast group in %(snailcity). It left all its opponents in the dust with a blazingly fast time of %(_racetime)! Chase, what do you make of that?\n\n Well, it's certainly an impressive showing, Ringo. Word has it that %(keptitsshelllight). It seems that strategy paid off well for it.\n\n Haha, it certainly has! I saw the lettuce turnout for that race. If it can pull that trick off a few more times, it might just be set for life!" //I hope we'll see others start trying similarly daring tricks.\n\n Haha, indeed! Although if it becomes too popular, we might just see new rules added to the rulebook soon!
+	"\1\b[22]Now here's a snail I really like. %(_snailname) is a humble little snail from %(snailcity). Nobody even noticed when it entered the local %(_racetype), but they certainly noticed when %(itmadeitswaytofirst)!\n\n Yes, %(_snailname) certainly has made a name for itself now, Ringo. Here's hoping this isn't the last we hear of its racing career."
+	"\1\b[22]Chase, have you heard the word about %(_snailname) yet?\n\n No, Ringo, I haven't. What's going on in the life of this little snail?\n\n %(_snailname) took part in a %(_racetype) that its sponsor put on, and it was set to win after training all week for the event, but right at the end the snail just behind it tripped over on a weed and exploded!\n\n Oh, no! So %(_snailname) had an easy victory, then?\n\n As if! %(_snailname)'s got a heart of gold! It stopped to assess the damage, and then turned around to push its competitor along, letting that snail have the victory in the end!\n\n Wow. What a kind snail, offering such compassion to a rival on the racetrack.\n\n I know. %(_snailname) has truly set an example for us all to live by!"
+	"\1\b[22]This just in, a %(_racetype) over in %(snailcity) had the crowds roaring over a close victory! It was a close match between a snail called %(_snailname) and another snail called %(_snailname2).\n\n Solid names. If I were betting, my money'd be on %(_snailname2).\n\n And you'd be wrong! %(_snailname) pulled out a win at the last moment, %(inchingpastitscompetitor(_snailname2))!\n\n Well, that's certainly one way to win a race. Congratulations.\n\n Haha, indeed it is! We'll see if other snails try to adopt the same trick!"
+	"\1\b[22]Now here's an interesting race. Have you heard about the little%(br)community-organized %(_racetype) they just had over in %(snailcity)?\n\n No, Ringo, I haven't. What's so interesting about it?\n\n Well, this snail called %(_snailname) was the one everyone had predicted would win. It had been training hard, its gear was optimized and properly balanced, and it had even spent time practicing on the specific racetrack that was to be used for the race that day.\n\n Oh? It wouldn't be remarkable if it just won, then, so what happened?\n\n %(Capitalize(itgotacoldfoot))! Nobody saw it coming.\n\n Wow. That's shocking.\n\n Right? So unfortunate! I hope %(_snailname) will learn from this experience and try again someday soon!"
 	
-	//"\1\b[22]"
-	//"\1\b[22]"
+	"\1\b[22]I've just heard about a %(_racetype) that was held in %(snailcity) to raise money for the %(TodaysChoice(safesnailsociety))! What a great cause to support. They're still tallying up the donations, but I'm told that no fewer than %(RAND(10) + 5) heads were raised!\n\n Impressive for such a small event.\n\n The snail that won the event, %(_snailname), even personally pledged to give 10 of its freshest leaves! Doesn't that sort of thing just warm your heart?\n\n Oh, certainly, it must. It's amazing what people and snails can do when they come together and pool their produce.\n\n It really is! I'm sure there'll be more races supporting the %(TodaysChoice(safesnailsociety)) in the future, so I'd encourage all our listeners to keep an eye out if that's something they're looking to support!"
+	"\1\b[22]Chase, I just got word about a %(_racetype) in %(snailcity) that finished up just about an hour ago. Apparently, the winner managed to win with a time of %(_racetime)!\n\n %(_racetime)? That's really something.\n\n It is! A round of applause for %(_snailname) of %(snailcity), who must be one happy snail taking that prize pool home. You put in the work, and it paid off big time!\n\n Did it use any special kind of strategy?\n\n %(Capitalize(justhardworkandsweat))!\n\n Wow. That'll do it for sure."
 	//"\1\b[22]"
 	//"\1\b[22]"
 	//"\1\b[22]"
