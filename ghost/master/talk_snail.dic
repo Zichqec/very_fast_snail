@@ -195,7 +195,7 @@ Talk.Snailsonality.Ratings : nonoverlap_pool
 	"\1\b[10]New paint job? 7/10, would be higher if the paint didn't smell so bad while drying."
 	"\1\b[10]Potholes? 3/10, sometimes they're full of water and then they're kinda fun."
 	"\1\b[10]Alliteration? 0/10, waste of time."
-	"\1\b[10]%(PoetryType('haiku','cinquains','limericks','acrostic','lyrics','rhyming couplets','alternate rhymes','free verse','diamante','concrete poetry'))? 10/10, very enjoyable."
+	"\1\b[10]%(Capitalize(PoetryType('haiku','cinquains','limericks','acrostic','lyrics','rhyming couplets','alternate rhymes','free verse','diamante','concrete poetry')))? 10/10, very enjoyable."
 	"\1\b[10]Being a snail? 10/10, would recommend it to a friend."
 	"\1\b[10]Waking up in the morning? 0/10, should be illegal."
 	"\1\b[10]Exploding? 0/10 if it's me, 10/10 if it's anyone else."

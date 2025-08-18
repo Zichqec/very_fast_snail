@@ -7,11 +7,11 @@ OnSakuraMenu : all
 	
 	switch RadioStation == "Off"
 	{
-		"\![*]\__q[OnAiTalk.Prompt,%(ANY('Radio,Radio,Ad'))]Listen to the radio\__q"
+		"\![*]\__q[OnAiTalk.Prompt,%(ANY('Radio,Radio,Radio,Advertisement,Advertisement2'))]Listen to the radio\__q"
 		"\![*]\f[color,disable]Listen to the radio\f[color,default]"
 	}
 	"\n"
-	"\![*]\__q[OnAiTalk.Prompt,%(ANY('Snail,Poem,User'))]Talk with your snail\__q" //TODO should this include poems or no...?
+	"\![*]\__q[OnAiTalk.Prompt,%(ANY('Snail,Snail,Snail,Poem,User'))]Talk with your snail\__q" //TODO should this include poems or no...?
 	"\n"
 	if LastTalk != ""; "\![*]\q[Repeat,OnLastTalk]"
 	else; "\n"

@@ -62,11 +62,11 @@ OnAiTalk
 		if RadioStation != "Off"
 		{
 			_station = REPLACE(RadioStation," ","_")
-			if _pick == "Radio" || (_pick == "Ad" && RadioStation == "Shopping") //No ads on shopping channel
+			if _pick == "Radio" || ("Advertisement" _in_ _pick && RadioStation == "Shopping") || (_pick == "Advertisement2" && (RadioStation == "ASMR" || RadioStation == "Pirate_Radio")) //No ads on shopping channel, ASMR and pirate radio get half ads
 			{
 				LastTalk = EVAL("RadioStation.%(_station)")
 			}
-			elseif _pick == "Ad" //TODO ummmmmm pirate radio and ASMR are going to have a REALLY HIGH ratio of ad reads lol. Might have to tweak that!
+			elseif "Advertisement" _in_ _pick
 			{
 				if RadioStation == "ASMR"; LastTalk = Ads.ASMR //ASMR station exclusively gets sponsorship reads that fit the quiet vibe
 				elseif RadioStation == "Pirate_Radio"; LastTalk = Ads.Pirate_Radio //Pirate radio gets pirate radio only ads
@@ -120,13 +120,13 @@ GenerateDialogueTape
 	DialogueTape ,= "Radio"
 	DialogueTape ,= "Radio"
 	DialogueTape ,= "Radio"
-	DialogueTape ,= "Ad"
-	DialogueTape ,= "Ad"
+	DialogueTape ,= "Advertisement"
+	DialogueTape ,= "Advertisement2" //Doesn't count as an ad for ASMR and pirate radio
+	DialogueTape ,= "Snail"
+	DialogueTape ,= "Snail"
+	DialogueTape ,= "Snail"
+	DialogueTape ,= "Poem"
 	DialogueTape ,= "User"
-	DialogueTape ,= "Snail"
-	DialogueTape ,= "Snail"
-	DialogueTape ,= "Poem"
-	DialogueTape ,= "Poem"
 	
 	DialogueTape = ArrayShuffle(DialogueTape)
 }

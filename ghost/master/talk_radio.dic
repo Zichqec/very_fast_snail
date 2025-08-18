@@ -693,7 +693,7 @@ Ads.General : nonoverlap_pool
 	"\1\b[22]Got greens? Get 'em cleaned, converted, or any other service you need at \f[italic,1]Lettuce Lovers\f[italic,default]! For minimal fees, we can convert money lettuce to food lettuce, and vice versa! We'll wash it, dry it, and we'll even exchange your wilted leaves for fresh ones!\n\n \f[italic,1]Lettuce Lovers\f[italic,default]. For all your lettuce needs!" //please note that the service of upgrading your wilted leaves to fresh ones incurs an extra fee...
 	
 	//Shell Shiners - look your best for your win! (idk if this is the right tagline but I want them to make the point that if you're dirty when you win you'll always regret it. Imagine the newspaper photos! The magazines! All with a dirty shell!? unthinkable!!)
-	//TODO shell shiners is also the name of a shell polish that is on bill and blanca's channel... I think it's ok to share the name because it's just them selling one of their products. Hm!
+	//shell shiners is also the name of a shell polish that is on bill and blanca's channel... I think it's ok to share the name because it's just them selling one of their products. Hm!
 	"\1\b[22]\f[italic,1]Wow! Amazing! How did you do it? What brand of engine do you use?\f[italic,default]\n\n Hear that? It's a crowd of adoring fans after you win that big race. There's just \f[italic,1]one\f[italic,default] little problem...\n\n \f[italic,1]Oh my, are those soot stains on your shell? Gasp! Oh, yuck, these pictures won't come out well at all...\f[italic,default]\n\n Uh oh. Your big moment's finally come, but a dirty shell is ruining everything.\n\n \f[italic,1]Lets just... give it some space. Maybe if we get better lighting in here it will help...\f[italic,default]\n\n Don't let that be you. You deserve to have everyone singing your praises when you win, so why let a little dirt get in the way? At \f[italic,1]Shell Shiners\f[italic,default], we'll give you a professional wash and wax so that you look your very best when all the cameras are finally pointed at you.\n\n \f[italic,1]Oh wow, so shiny! You're definitely going on the front cover of this week's magazine!\f[italic,default]\n\n \f[italic,1]Shell Shiners\f[italic,default]. Look your best for your win."
 	"\1\b[22]\f[italic,1]Hey! Over here!\f[italic,default]\n\n Well, would you look at that. It's an adoring fan that recognized you on your way to the store.\n\n \f[italic,1]Can you autograph this for me? Ooh, could we get a snailfie!?\f[italic,default]\n\n Uh oh. A picture that will be seen by potentially millions of others, there's just one little problem...\n\n \f[italic,1]Ooh, um, maybe we should try from this side instead? You've got a little...\f[italic,default]\n\n Dirt on your shell. How embarassing. This could haunt you for the rest of your career. But how can you turn down a fan?\n\n \f[italic,1]Hmm, this isn't really coming out how I'd hoped... but I guess it'll have to do!\f[italic,default]\n\n Nobody wants to be in that position. Don't let it be you. At \f[italic,1]Shell Shiners\f[italic,default], we'll give your shell a professional wash and wax so that you can be prepared for any time the cameras come out, whether it's on the racetrack or meeting fans in the street.\n\n \f[italic,1]Aw, how cute! Your shell is so glossy, it's perfect.\f[italic,default]\n\n \f[italic,1]Shell Shiners\f[italic,default]. Look your best for your fans."
 	"\1\b[22]\f[italic,1]Alright, now let's get a picture of you with this hat and bandanna...\f[italic,default]\n\n You've finally made it. Your name's become big enough that magazines want to write articles about you, and it's photoshoot day. There's just one little problem...\n\n \f[italic,1]Hm, this wax job isn't even, we'll have to try from a different angle...\f[italic,default]\n\n You thought you'd do a ""DIY"" wash and wax at home. But with professional cameras trained on you, it's ended up disastrous.\n\n \f[italic,1]Ah, this spot isn't glossy at all! We'll have to redo all of this and try again in an hour.\f[italic,default]\n\n Not a good look. Will the magazine even approve your pictures? Will they want you back? Maybe they will, but straining your professional relationships is never a good thing.\n\n \f[italic,1]I'll have to call my next appointment and let them know we'll be running late...\f[italic,default]\n\n Don't let it be you. At \f[italic,1]Shell Shiners\f[italic,default], we'll give your shell a professional wash and wax to make life easy and simple for those you work with. They're sure to appreciate it, and who wouldn't want to invite back a snail that considerate?\n\n \f[italic,1]Just hold still and we'll get a few pictures from each side... perfect!\f[italic,default]\n\n \f[italic,1]Shell shiners\f[italic,default]. Look your best for picture day."
@@ -868,15 +868,15 @@ Ads.ASMR.timgulls : array //TODO when this was accidentally set to nonoverlap_po
 	//Tim Gulls
 	"Imagine the delicious crunch of a bell pepper from Good Greens. You deserve that kind of nourishment."
 	"Good Greens just got in a fresh shipment of cabbage. Crunchy leaves just for you... Ask for the best from your sponsor. It's good for your health."
-	//""
-	//""
-	//""
+	"Those fresh sponges from Super Sponges really bring out the detail in your shell. You're such a pretty snail."
+	"Did you go to Shell Shiners today? Your shell is gleaming, everyone is impressed."
+	"Those paints you picked out from Perfect Paint Job look stunning on your shell."
 	
-	//""
-	//""
-	//""
-	//""
-	//""
+	"You're looking so strong today. Did you take a trip to Jim's Gym? Everyone will be amazed when they see you on the track tomorrow."
+	"Your muscles are very impressive. Everyone's going to look at you and think, ""that snail has been going to Jim's Gym. How cool!"""
+	"Those supplements from Nature's Nitro have done wonders for your complexion, you're glowing. Everyone will want pictures with you."
+	"Custom detailing from Shell Shiners? Fans are going to swoon over you at your big race tomorrow. Everyone loves a shiny snail."
+	"You've been practicing so much on that Racer Rug. You're sure to win your big race."
 }
 
 Ads.ASMR.sylance : array
@@ -884,15 +884,15 @@ Ads.ASMR.sylance : array
 	//Sy Lance
 	"I got you this new sling bag from Harvey's Snail Emporium. Try it on.\n\n Swish.\n\n Clink clink.\n\n There you are, it fits like a glove. Imagine how much lettuce you could fit in here."
 	"Does your foot ache? Maybe we should take you to one of those Mollusk Massage studios. Let's try it.\n\n ... Squish squish. \w8\w8Squish squish. \w8\w8Splap.\n\n How do you feel now? More relaxed?"
-	//""
-	//""
-	//""
+	"Guess what I've got for you? It's a fresh sponge from Super Sponges. Lets get you clean, hmm?\n\n Squee. Squee. Squee. Your shell is so shiny now."
+	"I brought you some lettuce. Freshly washed at lettuce lovers. All for you.\n\n Crunch. Crunch. Isn't it so sweet?"
+	"Why don't we go look at some paint swatches from Perfect Paint Job? See here, they have so many colors...\n\n I think you'd look stunning in this %(paintcolor)."
 	
-	//""
-	//""
-	//""
-	//""
-	//""
+	"We should go for a walk at the local Gastropod Gardens. You'd like that, wouldn't you?\n\n Just you, me, the sounds of nature, no birds... We can even find a nice rock or pinecone to bring home."
+	"I got you this cool poster from the Snailville Auction House. Look how amazing this old snail is. You can be like this too one day. Let's put it up on your wall to inspire you.\n\n Thhhp. Thhhp. \w8\w8Pat pat. There, it brings your room together perfectly."
+	"I got you a present. It's a Snail Sounds CD, it'll be perfect for when you go to sleep tonight. Here, let's open the plastic...\n\n Shhhhrp. \w8\w8Crinkle crinkle."
+	"Want a shake from Snack Shack? Of course you do... don't worry, I already got us some. %(Capitalize(shakeflavor)). Drink up.\n\n Slllluuuuuurp. \w8\w8Ahhh..."
+	"I brought you some of those Nature's Nitro supplements. Here, try them.\n\n Crunch. \w8\w8Crunch. \w8\w8Crunch.\n\n \w8\w8Do you feel the rush of nutrients making you stronger already?"
 }
 
 Ads.Pirate_Radio : nonoverlap_pool

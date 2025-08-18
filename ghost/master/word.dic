@@ -2501,3 +2501,39 @@ keptitsshelllight
 	"it gave up pellets and has been eating a diet composed entirely of whole greens"
 	"it looked itself in the mirror and promised itself it would win no matter what"
 }
+
+paintcolor
+{
+	"deep blue"
+	"shimmery yellow"
+	"metallic silver"
+	"bold black"
+	"pristine white"
+	"mature green"
+	"mauve"
+	"matte gray"
+	"striking red"
+	"hot pink"
+	"attention-grabbing orange"
+	"mysterious purple"
+	"glossy teal"
+	"speckled brown"
+	"glittery gold"
+	"pearlescent white"
+	"shiny bronze"
+	"UV-reactive pink"
+	"glow-in-the-dark green"
+}
+
+shakeflavor
+{
+	"birthday cake with sprinkles"
+	"chocolate chip"
+	"cookies and cream"
+	"chocolate"
+	"vanilla"
+	"caramel"
+	"strawberry"
+	"fudge brownie"
+	"cookie dough"
+}
