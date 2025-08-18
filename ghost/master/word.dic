@@ -2236,10 +2236,11 @@ WeekForecast : array
 	"clear, calm skies|calm, pleasant weather, perfect for having a picnic"
 }
 
+//TODO i commented out the SRANDs because they mess up the snail name generator??????? huh????????????? how does this function work, what
 WeeksLettuceHarvestIndex
 {
 	_seed = "%(yearweek)%(year)0" //The 0 on the end differentiates it from the seed below which uses a 1, so that they always differ...
-	void SRAND(TOINT(_seed)) //does not take a string
+	//void SRAND(TOINT(_seed)) //does not take a string
 	RAND(4) //0-4
 }
 
@@ -2256,7 +2257,7 @@ WeeksLettuceHarvestIndex
 WeeksSnailHarvestIndex
 {
 	_seed = "%(yearweek)%(year)1"
-	void SRAND(TOINT(_seed))
+	//void SRAND(TOINT(_seed))
 	RAND(4) //0-4
 }
 
