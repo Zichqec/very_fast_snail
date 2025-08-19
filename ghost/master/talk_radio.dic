@@ -66,12 +66,12 @@ RadioStation.Racing_News : nonoverlap_pool
 	
 	"\1\b[22]I've just heard about a %(_racetype) that was held in %(snailcity) to raise money for the %(TodaysChoice(safesnailsociety))! What a great cause to support. They're still tallying up the donations, but I'm told that no fewer than %(RAND(10) + 5) heads were raised!\n\n Impressive for such a small event.\n\n The snail that won the event, %(_snailname), even personally pledged to give 10 of its freshest leaves! Doesn't that sort of thing just warm your heart?\n\n Oh, certainly, it must. It's amazing what people and snails can do when they come together and pool their produce.\n\n It really is! I'm sure there'll be more races supporting the %(TodaysChoice(safesnailsociety)) in the future, so I'd encourage all our listeners to keep an eye out if that's something they're looking to support!"
 	"\1\b[22]Chase, I just got word about a %(_racetype) in %(snailcity) that finished up just about an hour ago. Apparently, the winner managed to win with a time of %(_racetime)!\n\n %(_racetime)? That's really something.\n\n It is! A round of applause for %(_snailname) of %(snailcity), who must be one happy snail taking that prize pool home. You put in the work, and it paid off big time!\n\n Did it use any special kind of strategy?\n\n %(Capitalize(justhardworkandsweat))!\n\n Wow. That'll do it for sure."
-	//"\1\b[22]"
-	//"\1\b[22]"
-	//"\1\b[22]"
+	"\1\b[22]This just in, a snail called %(_snailname) just set its personal best for the %(_racetype) during a competition in %(snailcity)! It managed to complete the race in just %(_racetime), beating its previous personal best by %(RAND(50) + 5) seconds!\n\n Yes, Ringo, it's quite an impressive feat. Although, it should be noted that the actual winner of the race was a different snail called %(_snailname2), who won by quite a wide margin.\n\n That's true, and congratulations to %(_snailname2) for winning the competition! However, I think %(_snailname) shouldn't let that get it down. Setting a new personal best is a great achievement no matter what rank you place!"
+	"\1\b[22]Disaster today at a race that was held in %(snailcity): Apparently %(allthecompetitorswentboom)!\n\n That is stunning. That's the kind of thing you never want to see.\n\n It's true! What a shame. Records might have been set there, but now we'll never know!"
+	"\1\b[22]Now here's something you don't see every day. At a %(_racetype) in %(snailcity), one snail got the highest score in \f[italic,1]both\f[italic,default] the speed and style categories!\n\n Wow. That's impressive, Ringo.\n\n It really is, Chase. Everyone give it up for %(_snailname), who managed to put together a sublime combination of gear that got it the shortest time \f[italic,1]and\f[italic,default] was very clearly the coolest on the track!\n\n If %(_snailname) keeps this up, it might eventually make snail history.\n\n Indeed! I hope we see %(_snailname) go on to become one of the greats!"
 	
-	//"\1\b[22]"
-	//"\1\b[22]"
+	"\1\b[22]Word has it that a snail called %(_snailname), from %(snailcity), just completed a %(_racetype) \f[italic,1]in reverse!\f[italic,default]\n\n In reverse? Really?\n\n Yes indeed, in reverse! It went through the whole track while facing backwards, unable to see obstacles in its path!\n\n That's quite a bold strategy.\n\n Bold doesn't even begin to describe it. The courage! The mental fortitude! The raw talent required to pull such a thing off without crashing! Truly a stunning display. It's no wonder, despite placing %(RAND(9) + 10)th in that race, it still came on top when it came to sheer coolness!\n\n A well deserved win, one might say.\n\n Well deserved indeed!"
+	"\1\b[22]Another stunning display of style today at a racetrack in %(snailcity). One of the competitors quickly veered out of its lane, and nobody could work out what it was doing for a while.\n\n I heard about this one. All the other snails had finished the race, but it was still dragging along near the starting line.\n\n Indeed it was, and for good reason, it turns out! Once it was about halfway through, the overhead cameras caught sight of what it was doing, and the crowd went wild!\n\n It was drawing something in the track soil, isn't that right?\n\n Yes it was, %(thewordlettuce)! Isn't that amazing?\n\n Certainly, that's a very inventive strategy. It's no wonder it won the race on coolness alone.\n\n Congratulations on your win, %(_snailname)! I hope we get to see your artistic talents again in the future!"
 	//"\1\b[22]"
 	//"\1\b[22]"
 	//"\1\b[22]"
@@ -97,6 +97,13 @@ RadioStation.Racing_News : nonoverlap_pool
 	//Pool of 5 or 10 dialogues for if you won the last race or not
 	//Otherwise, the rest of it is a flat dialogue pool
 	//They can comment on the latest races, and also the major races that have happened, and races that famous snails have been in
+	//Topics:
+	//Races that have happened and strategies used to win them
+		//Races focused on the style leaderboard!!
+	//Upcoming races to be held by a place
+	//Strategies that are in use, both old ones becoming new again, and new ones becoming old...
+	//Big picture discussion of the racing scene
+	//Discussion of famous snails and their racing careers in general?
 }
 
 //Haley Storme & Tailgating Terror

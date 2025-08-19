@@ -2611,3 +2611,84 @@ justhardworkandsweat
 	"apparently it got a massage just before the race started"
 	"not at all! Its competitors were so busy trying to get their fancy thrusters to ignite that it had passed the finish line before they even started"
 }
+
+xtremelyxtremesplushiecollection
+{
+	//"Amazing Acorn's"
+	//"Burnout Bandit's"
+	//"Crunching Calcium's"
+	"Derivative Dancer's pet ant"
+	//"Exceptional Escapee's"
+	//"Fortified Fungus's"
+	//"Grandmaster Gastropod's"
+	"Hungry Hungry Hangnail's habit of eating crayons before its big races"
+	//"Impressive Idol's"
+	"Junior Jester's broccoli allergy"
+	//"Kiwi Kid's"
+	"Loser Lemon's napping routine, including which spots in its home it is statistically most likely to be napping in at any given time"
+	//"Meaty Mollusk's"
+	//"Nervous Newbie's"
+	"Outcast Old One's collection of vintage newspapers"
+	"Pickled Pasta's box of secret recipies"
+	//"Quitter Quiz's"
+	//"Relatable Racer's"
+	"Snailstopher Snailerton's special blankie that it can't sleep without"
+	"The Tank's drawer full of cute socks"
+	//"Unbelievable Underdog's"
+	//"Violin Vibrato's"
+	//"Walkathon Winner's"
+	"Xtremely Xtreme's plushie collection"
+	//"Yes Yes Yes Yahoo!'s"
+	//"Znail Zone's"
+	//"DNF's"
+	//"Chaos Speedster's"
+	//"Eat My Dust's"
+	//"Super Snail's"
+}
+
+abottle
+{
+	"a bottle"
+	"a remote control"
+	"a checkbook"
+	"a charging cable"
+	"a screwdriver"
+	"a yo-yo"
+	"a sponge"
+	"a half-used sticker pack"
+	"a receipt for a brand new engine"
+	"a printer ink cartridge"
+	"a watch"
+	"a spoon"
+}
+
+allthecompetitorswentboom
+{
+	"all the competitors exploded only a few seconds after the race began"
+	"a flock of birds swarmed the area in the middle of the race, and all the snails had to be scooped up off the track and put into a box to protect them"
+	"all of the snails got confused and started racing the wrong way around the track, meaning the whole thing had to be called off"
+	"someone threw a bunch of lettuce leaves onto the track, and all of the snails abandoned the race to eat instead"
+	"the sun was a little too hot, and several of the competitors went into estivation, causing the whole thing to be called off"
+	"some of the snails recognized each other from snail school and a fight broke out"
+	"someone stole several pieces of racing equipment that were being checked by the judges, leading the whole race to be postponed until they find the culprit and recover the gear"
+}
+
+thewordlettuce
+{
+	"the word ""lettuce"""
+	"the word ""snail"""
+	"the word ""radio"""
+	"the word ""engine"""
+	"the word ""foot"""
+	"the word ""mucus"""
+	"the word ""race"""
+	"the word ""win"""
+	"the word ""victory"""
+	"the word ""poem"""
+	"the word ""help""" //oh noooooo
+	"a rendition of a lettuce leaf"
+	"a rendition of a trophy"
+	"a rendition of a stick"
+	"a forgery of its sponsor's signature"
+	"the barcode for its favorite brand of lettuce"
+}

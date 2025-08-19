@@ -347,6 +347,8 @@ Talk.Snailsonality.Gymbro : nonoverlap_pool
 	"\1\b[10]Writing poetry is like a workout for your brain. I enjoy %(PoetryType('haiku','cinquains','limericks','acrostic','lyrics','rhyming couplets','alternate rhymes','free verse','diamante','concrete poetry')), my brain is bulking up nicely."
 	"\1\b[12]Sometimes I try to jump ahead in my workout routine. If I could skip doing 25 shell presses and go straight from 20 to 30, I'd get stronger faster, right?\n\n Big mistake. Injured muscles are bad at growing."
 	"\1\b[12]If you're feeling drained after a workout, you need to make improvements to your diet. An extra leaf of lettuce before you hit the gym is a great place to start."
+	"\1\b[12]Workout tip: have a clear goal before you start. Otherwise you're likely to be unfocused in your efforts, or overwork yourself, neither of which will get you the gains you want."
+	"\1\b[12]Connecting with your fellow gymgoers is important. A bit of friendly competition will keep you coming back and working hard."
 }
 
 Talk.Snailsonality.Super_Fan : nonoverlap_pool
@@ -384,6 +386,8 @@ Talk.Snailsonality.Super_Fan : nonoverlap_pool
 	"\1\b[12]I'm %(CurrentSnail.FavoriteFamousSnail)'s biggest fan. I've been collecting memorabilia and information about it since I was a baby snail.\n\n No snail is more dedicated than me! One day it'll recognize that."
 	"\1\b[10]I search everywhere for %(CurrentSnail.FavoriteFamousSnail) memorabilia. Nothing will escape my tentacles!"
 	"\1\b[12]I once spoke to %(ANY(FamousSnails))'s %(sponsorsmom) on the phone.\n\n I mean, the phone was ringing, and it would have been rude to just ignore it. So I took a message, like the good citizen I am."
+	"\1\b[12]Sometimes you have to follow suspicious links on the snailernet to find the best information.\n\n That's how I found out about %(xtremelyxtremesplushiecollection)."
+	"\1\b[12]I almost got %(abottle) for my %(ANY(FamousSnails)) collection. I abandoned it at the last minute though.\n\n Just as I was almost out the door I overheard someone asking where it had gotten to,%(br)so I figured they must have needed it more than I did, and left it there for them.\n\n It's important to recognize when the needs of others conflict with your own, and be willing to compromise."
 }
 
 Talk.Snailsonality.Slacker : nonoverlap_pool
