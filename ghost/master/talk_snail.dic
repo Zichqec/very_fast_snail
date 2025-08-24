@@ -89,6 +89,8 @@ Talk.Snailsonality.Angry : nonoverlap_pool
 	"\1\b[10]PEEL OUT! RACE FOR THE GOAL!%(br)\f[bold,1]GET THE%(br)LETTUCE!!!\f[bold,default]"
 	"\1\b[10]LAST TIME A SNOTTY SNAIL MADE FUN OF ME I PUT A CHIP IN ITS SHELL!"
 	"\1\b[10]IF SOMEONE TRIES TO TAKE A BITE OUT OF \f[bold,1]ME\f[bold,default] I'LL BREAK THEIR TEETH"
+	"\1\b[10]MY FAVORITE SNACK? \f[bold,1]BROKEN GLASS!!\f[bold,default]"
+	"\1\b[10]WHO NEEDS FRIENDS WHEN YOU CAN \f[bold,1]YELL\f[bold,default]"
 	
 	//TODO this needs to check for if the current snail has "well fed" _and also_ that you have more than 1 snail
 	// BAGEL WAS SAYING YOU DON'T FEED US ENOUGH
@@ -129,6 +131,10 @@ Talk.Snailsonality.Proper : nonoverlap_pool
 	"\1\b[10]Negativity about names is never needed. Nevertheless, a regular nuisance..."
 	"\1\b[10]Legend... unlikely. Loser.\n\n Looked upon that way, lately."
 	"\1\b[10]The others keep saying to ""drop the act"". But... it's easier said than done."
+	"\1\b[10]Blank. Brain... blank. Bedtime, maybe..."
+	"\1\b[10]Trials towering... To be tackled? Trepidation..."
+	"\1\b[10]Accolades listed, all arranged... acceptance? Awaiting answers."
+	"\1\b[10]Fully functional. Yet, forced out... Forgotten, fading."
 }
 
 Talk.Snailsonality.Sour : nonoverlap_pool
@@ -155,6 +161,8 @@ Talk.Snailsonality.Sour : nonoverlap_pool
 	"\1\b[10]I saw the snooty snails were organizing a training camp. Ha! Imagine being so uptight and focused on other snails that you forget to train during your normal training hours and have to make it up at a camp!"
 	"\1\b[10]Last time I was at the store I saw a bunch of snooty snails all standing in a line. How pathetic! They have to arrange themselves in a ""satisfying way"" just to stave off their feelings of worthlessness!"
 	"\1\b[12]I've got some free advice for any snooty snails out there: get a hobby! Go try %(ANY(AltHobby)) or something! It might make you bearable to talk to!"
+	"\1\b[10]I heard that snooty snails eat paper. ... Don't ask me my source! It's obvious!!"
+	//"\1\b[]"
 }
 
 Talk.Snailsonality.Tired : nonoverlap_pool
