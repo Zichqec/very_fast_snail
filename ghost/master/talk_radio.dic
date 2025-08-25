@@ -58,6 +58,7 @@ RadioStation.Racing_News : nonoverlap_pool
 	_race = racetype
 	_racetype = _race[0]
 	_racetime = racetime(TOINT(_race[1]))
+	_snailcity = snailcity
 	"\1\b[22]It sounds like the snail of the hour is %(_snailname)! %(_snailname) reportedly finished 1st in a %(_racetype) hosted by a snail enthusiast group in %(snailcity). It left all its opponents in the dust with a blazingly fast time of %(_racetime)! Chase, what do you make of that?\n\n Well, it's certainly an impressive showing, Ringo. Word has it that %(keptitsshelllight). It seems that strategy paid off well for it.\n\n Haha, it certainly has! I saw the lettuce turnout for that race. If it can pull that trick off a few more times, it might just be set for life!" //I hope we'll see others start trying similarly daring tricks.\n\n Haha, indeed! Although if it becomes too popular, we might just see new rules added to the rulebook soon!
 	"\1\b[22]Now here's a snail I really like. %(_snailname) is a humble little snail from %(snailcity). Nobody even noticed when it entered the local %(_racetype), but they certainly noticed when %(itmadeitswaytofirst)!\n\n Yes, %(_snailname) certainly has made a name for itself now, Ringo. Here's hoping this isn't the last we hear of its racing career."
 	"\1\b[22]Chase, have you heard the word about %(_snailname) yet?\n\n No, Ringo, I haven't. What's going on in the life of this little snail?\n\n %(_snailname) took part in a %(_racetype) that its sponsor put on, and it was set to win after training all week for the event, but right at the end the snail just behind it tripped over on a weed and exploded!\n\n Oh, no! So %(_snailname) had an easy victory, then?\n\n As if! %(_snailname)'s got a heart of gold! It stopped to assess the damage, and then turned around to push its competitor along, letting that snail have the victory in the end!\n\n Wow. What a kind snail, offering such compassion to a rival on the racetrack.\n\n I know. %(_snailname) has truly set an example for us all to live by!"
@@ -72,13 +73,14 @@ RadioStation.Racing_News : nonoverlap_pool
 	
 	"\1\b[22]Word has it that a snail called %(_snailname), from %(snailcity), just completed a %(_racetype) \f[italic,1]in reverse!\f[italic,default]\n\n In reverse? Really?\n\n Yes indeed, in reverse! It went through the whole track while facing backwards, unable to see obstacles in its path!\n\n That's quite a bold strategy.\n\n Bold doesn't even begin to describe it. The courage! The mental fortitude! The raw talent required to pull such a thing off without crashing! Truly a stunning display. It's no wonder, despite placing %(RAND(9) + 10)th in that race, it still came on top when it came to sheer coolness!\n\n A well deserved win, one might say.\n\n Well deserved indeed!"
 	"\1\b[22]Another stunning display of style today at a racetrack in %(snailcity). One of the competitors quickly veered out of its lane, and nobody could work out what it was doing for a while.\n\n I heard about this one. All the other snails had finished the race, but it was still dragging along near the starting line.\n\n Indeed it was. And for good reason, it turns out! Once it was about halfway through, the overhead cameras caught sight of what it was doing, and the crowd went wild!\n\n It was drawing something in the track soil, isn't that right?\n\n Yes it was, %(thewordlettuce)! Isn't that amazing?\n\n Certainly, that's a very inventive strategy. It's no wonder it won the race on coolness alone.\n\n Congratulations on your win, %(_snailname)! I hope we get to see your artistic talents again in the future!"
-	//"\1\b[22]"
-	//"\1\b[22]"
-	//"\1\b[22]"
+	"\1\b[22]I'm hearing that the coolest snail on the block right now is %(_snailname), who just shattered records in some community races happening over in %(_snailcity)!\n\n Yes, it's very impressive, Ringo. Nobody had heard of %(_snailname) before now, but this has certainly placed it on its local coolness leaderboards.\n\n I'm sure we'll be seeing trendy new styles over in %(_snailcity) soon as they mimic %(_snailname)'s look!"
+	"\1\b[22]There's been a bit of an upset on the coolness leaderboards for %(_snailcity). %(_snailcity)'s local champion, %(_snailname), has just been surpassed by another snail called %(_snailname2) in a big way!\n\n This truly is unprecedented, Ringo. %(_snailname) has been champion for a while now, but the gap between it and %(_snailname2) is so large that we may not see a big leaderboard shift for a long time.\n\n Indeed! I think %(_snailname2) might just have what it takes to go national, and I certainly hope we get to see it try!"
+	"\1\b[22]Another micro-trend has just started, following the stunning success of a snail called %(_snailname) in %(snailcity)! This little snail broke several records in a short period of time, and now fashion enthusiasts are thronging stores, trying to get their hands on anything they can to look just like their new idol!\n\n It may be best to avoid stores for a while if you'd like to avoid being trampled.\n\n That's true, Chase! I heard some folks are trying to place orders on the snailernet, but stock is selling out so quickly that it's hard to find a place that has anything left!\n\n In other news, if you're still interested in the fashion trends from last week's champion, %(_snailname2), it's sure to be on sale at a discount at your local thrift store.\n\n That it is! Be sure to check it out, it supports local charity efforts!"
 	
-	//"\1\b[22]"
-	//"\1\b[22]"
-	//"\1\b[22]"
+	_ahatenthusiastgroup = SPLIT(ahatenthusiastgroup,"|")
+	"\1\b[22]It's always so fascinating to see what new fashion trends happen in various cities, isn't it? But I think you really have to drill down to the community level to see where they start from. For example, I'm looking at the results of a %(_racetype) run by %(_ahatenthusiastgroup[0]) in %(_snailcity) right now, and wow, look at %(_ahatenthusiastgroup[1])!\n\n That's not at all the style that's hot city-wide right now. Seems like a group of outliers.\n\n Exactly right! But I wouldn't be surprised if we see this style bubble up and become commonplace throughout %(_snailcity) for a while, and maybe even spread elsewhere throughout the nation!"
+	"\1\b[22]I've heard word that a big %(_racetype) is being organized in %(snailcity)! Word is that %(_snailname) is going to be competing, and not only that, its rival %(_snailname2) is coming back to town to challenge it once more!\n\n Yes, I'm sure we'll see some fierce competition, Ringo. This will certainly be an interesting race to watch.\n\n I'm looking forward to it! We'll be sure to cover it here on \f[italic,1]Speed of Sound Radio\f[italic,default], so you listeners at home don't miss a thing!"
+	"\1\b[22]There's a rumor going around that there's going to be a %(_racetype) in %(_snailcity) soon, which %(ANY(FamousSnail)) is going to be taking part in! Chase, have you heard anything about it?\n\n I've heard of it, Ringo, but there aren't any sources to support the claims right now. I'm inclined to believe it is nothing more than just a rumor.\n\n Well, I suppose we'll find out! If anyone in %(_snailcity) has the word, and sources to back it up, get in touch!"
 	//"\1\b[22]"
 	//"\1\b[22]"
 	
@@ -98,9 +100,9 @@ RadioStation.Racing_News : nonoverlap_pool
 	//Otherwise, the rest of it is a flat dialogue pool
 	//They can comment on the latest races, and also the major races that have happened, and races that famous snails have been in
 	//Topics:
-	//Races that have happened and strategies used to win them
-		//Races focused on the style leaderboard!!
-	//Upcoming races to be held by a place
+	//--Races that have happened and strategies used to win them
+		//--Races focused on the style leaderboard!!
+	//--Upcoming races to be held by a place
 	//Strategies that are in use, both old ones becoming new again, and new ones becoming old...
 	//Big picture discussion of the racing scene
 	//Discussion of famous snails and their racing careers in general?

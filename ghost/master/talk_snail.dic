@@ -162,7 +162,9 @@ Talk.Snailsonality.Sour : nonoverlap_pool
 	"\1\b[10]Last time I was at the store I saw a bunch of snooty snails all standing in a line. How pathetic! They have to arrange themselves in a ""satisfying way"" just to stave off their feelings of worthlessness!"
 	"\1\b[12]I've got some free advice for any snooty snails out there: get a hobby! Go try %(ANY(AltHobby)) or something! It might make you bearable to talk to!"
 	"\1\b[10]I heard that snooty snails eat paper. ... Don't ask me my source! It's obvious!!"
-	//"\1\b[]"
+	"\1\b[12]I saw a snooty snail with%(br)%(arose) sticker on its shell. Boring! Who wants a design like that, it's so last week! I got rid of mine yesterday when the fashion changed!" //br here because the radio names wrap awkwardly...
+	"\1\b[10]Those snooty snails think they're a threat on the track. I'll show them a threat on the track!"
+	"\1\b[12]Have you ever tried asking a snooty snail for directions? It's unbearable! ""Left left left, left left... left left left...... left.""\n\n Like, how am I supposed to parse THAT?"
 }
 
 Talk.Snailsonality.Tired : nonoverlap_pool
@@ -227,108 +229,13 @@ Talk.Snailsonality.Ratings : nonoverlap_pool
 	"\1\b[10]Tape? 2/10, barely sticky at all, honestly."
 	"\1\b[10]Mucus? 10/10, protective, indicator of health, all around great stuff."
 	"\1\b[10]Sticks in the road?%(br)4/10, sometimes they're a fun challenge, but usually they're just annoying."
+	"\1\b[10]Freshly groomed track? 10/10, no other feeling like it."
 }
 
 chain.running_produce_aisle
 {{CHAIN
 	"\1\b[10]Getting kicked out of the grocery store for oozing all over the vegetables? 0/10, a tragedy.\e:chain=end"
 }}CHAIN
-
-Talk.Snailsonality.Silent : nonoverlap_pool
-{	
-	//106 x 26 max dimensions
-	_drawings = <<"
-.                                                 @@@@         @@@@   
-.                 @@@@@@@@@@@@@@@@@@@@@@@@@       @@@@        @@@@@   
-.              @@@@                       @@@@      @@       @@       
-.           @@@@                             @@@@    @@     @@        
-.         @@@                                   @@@   @@    @@        
-.        @@            @@@@@@@@@@@@              @@ @@@@@@@@@         
-.       @@         @@@@           @@@            @@@         @@@      
-.      @@         @@                @@@          @@            @@     
-.     @@         @@                   @          @@             @@    
-.     @         @@     @@@@@          @@         @@    @@       @@@@  
-.     @         @@    @@   @         @@         @@       @     @@  @@ 
-.     @         @@        @@         @@        @@        @@@@@@@      
-.     @           @@@@@@@@@         @@        @@@      @@@            
-.     @@                          @@@        @@       @@              
-.     @@@                       @@@@        @@        @@              
-.      @@@@                   @@@@@      @@@@        @@               
-.   @@@@  @@@           @@@@@@    @@@@@@@            @@               
-.  @@        @@@@@@@@@@@@                            @                
-. @@                                           @@@@@@                 
-. @@@  @@@         @@@@@                     @@@                      
-.   @@@@ @@  @@@@@@    @@      @@@@@       @@@                        
-.          @@@          @@@@@@@    @@ @@@@@@@                         
-.                                   @@@                               
-
-
-
-.            @@@@@@@                                                   
-.        @@@@       @@@@                                               
-.      @@               @@                                             
-.    @@                   @@                                           
-.   @@ @@                  @@                                          
-.  @@ @  @                  @@                                         
-. @@ @  @                   @@                                         
-. @ @  @                     @@                                        
-. @ @ @                      @@                                        
-. @ @ @                       @                                        
-. @  @                        @                                        
-. @@                          @                                        
-.  @@                         @                                        
-.    @@                      @                                         
-.      @@@                  @@                                         
-.         @@@               @                                          
-.            @@@@@@@@@@@@@@@@@                                         
-.                        @@@  @                                        
-.                       @  @@                       @@@@@@@@@@@@       
-.                      @                      @@@@@@            @@@    
-.                     @                   @@@@                     @@  
-.                     @               @@@@                           @ 
-.                     @           @@@@                                 
-.                      @@     @@@@                                     
-.                        @@@@@                                         
-
-
-
-.                                +%%%%%%%%%%%                                   
-.          %%%%%%%%%             %% .. -%%#   -%%%%%%                           
-.         %%%     %%%%%%    *%%%%%    %%%         :%%%%         %%%             
-.     %%%%%%           %%%%%%%   %% %%%     +%% %%:    %%%%%.%%%%%%%%%          
-.    %%%%%         %   %%%        %%%%%%%%%%%             %%        %%%         
-.   -%%*           % %%%%%        %%%                   %%%%# %%     %%=        
-.   -%%       %%   %%%=  %:      %%%                 %%%#   %%%       #%%       
-.   -%%        %%%%%%     %+    %%%               %%%%       %%        +%%      
-.   -%%*        %+         %%  %%%           %%%%%%          %%%   %     %%     
-.    %%%%      %%+         %%% %%%      -%%%%%                 %% %%     %%     
-.     %%%  +   %%%          +%%%%    %%%%%                    %%%%+      %%     
-.     %%%    %%%%%%           %%%%%%%%                      %%%%%        %%%    
-.     %%%     %%  %%*        %%%                          #%%   %%       =%%    
-.   %%%%%%   *%%   -%%%%%%**%%%%%%%%                    %%%     %%        %%    
-.  %%  %%%    %%%%%%%=              %%%%          %%%%%%         %% %     %%    
-.  %%  %%%   %%%%                      .%%%%%%%%%%%%%%%%%%%%%%%%%%=  .%% =%%%   
-. %%%   %%% %%                                           %%%%%%%%%%%     %%%%%  
-. %%%    %%%%          %%       %                                 %%%    %%  %  
-.  %%     %%%           .%*     %                    -%           %%%  =%% %%   
-.  %%%     %%       %     %%%    %               %%%%            %%%  %%%  %%   
-.   %%%    #%%  %     %      %%  +%         :%%%%        %#     %%% %%%   %%    
-.    %%%%   =%%%%%     %%      %% %     %%%=           %%     %%%%%%%   %%%     
-.      %%%    *%%%%       %%%    #%%%%%.           %%%=    % %%%%%%. %%%.       
-.       #%%%%%%  %%%%%      *%-   +%           %%%%      %%%%%%%..%%%%          
-.            %%%%%%%%%%%%=     %%. %-       %%%      %%%%%%%%%%%%%+             
-.                    %%%%%%%%%%%%%%%%%%%%%%@@@@%%%%%%%% %%                      
-	">>
-	_drawings = SPLIT(_drawings,"%(C_CRLF)%(C_CRLF)%(C_CRLF)%(C_CRLF)")
-	
-	foreach _drawings; _drawing
-	{
-		_drawing = REPLACE(_drawing,C_CRLF,"\n")
-		_drawing = REPLACE(_drawing,"."," ")
-		_drawing = "\![no-autopause]\1\b[12]\_q\f[name,courier new]\f[height,3]\f[align,center]" + _drawing
-		_drawing
-	}
-}
 
 Talk.Snailsonality.Gymbro : nonoverlap_pool
 {
@@ -357,6 +264,7 @@ Talk.Snailsonality.Gymbro : nonoverlap_pool
 	"\1\b[12]If you're feeling drained after a workout, you need to make improvements to your diet. An extra leaf of lettuce before you hit the gym is a great place to start."
 	"\1\b[12]Workout tip: have a clear goal before you start. Otherwise you're likely to be unfocused in your efforts, or overwork yourself, neither of which will get you the gains you want."
 	"\1\b[12]Connecting with your fellow gymgoers is important. A bit of friendly competition will keep you coming back and working hard."
+	"\1\b[12]Bulking up your muscles is the #1 way to give yourself a boost on the track.\n\n \w8\w8Of course, thrusters are faster, but they require a lot of extra fuel."
 }
 
 Talk.Snailsonality.Super_Fan : nonoverlap_pool
@@ -396,6 +304,7 @@ Talk.Snailsonality.Super_Fan : nonoverlap_pool
 	"\1\b[12]I once spoke to %(ANY(FamousSnails))'s %(sponsorsmom) on the phone.\n\n I mean, the phone was ringing, and it would have been rude to just ignore it. So I took a message, like the good citizen I am."
 	"\1\b[12]Sometimes you have to follow suspicious links on the snailernet to find the best information.\n\n That's how I found out about %(xtremelyxtremesplushiecollection)."
 	"\1\b[12]I almost got %(abottle) for my %(ANY(FamousSnails)) collection. I abandoned it at the last minute though.\n\n Just as I was almost out the door I overheard someone asking where it had gotten to,%(br)so I figured they must have needed it more than I did, and left it there for them.\n\n It's important to recognize when the needs of others conflict with your own, and be willing to compromise."
+	"I heard %(ANY(FamousSnails)) is going to be on a panel at a snail convention soon. I've got to go through my collection and decide on something to get signed."
 }
 
 Talk.Snailsonality.Slacker : nonoverlap_pool
@@ -425,6 +334,7 @@ Talk.Snailsonality.Slacker : nonoverlap_pool
 	"\1\b[12]What's the point of all this, really? That's right, there isn't one. That's why I'm going to take a nap. Good night."
 	"\1\b[10]Training takes soooo long. Couldn't we do something more productive? Like napping, or watching TV."
 	"\1\b[12]Z\w8 z\w8 z\w8.\w8.\w8.\n\n \w8\w8That's the sound of a healthy snail. Wanna hear that sound for real? Let's go inside and sit on the couch."
+	"\1\b[12]You know, for as hard as I've worked at this, I don't think I'd miss racing if you decided to give it up and choose a life of napping instead."
 }
 
 Talk.Snailsonality.Jealous : nonoverlap_pool
@@ -460,6 +370,7 @@ Talk.Snailsonality.Jealous : nonoverlap_pool
 	"\1\b[12]I thought I might try %(_hobby1), and it was kinda fun at first, but now I'm not sure if I want to keep doing it.\n\n Maybe my time would be better spent on something else, like %(_hobby2)...?"
 	"\1\b[10]Is there a point in trying to be %(fc('fast','stylish'))...? I'm so out of my league..."
 	"\1\b[10]Why did I ever think I could make it as a %(fc('fast','cool')) snail...? There's not a trace of %(fc('speed','style')) in me, I knew that..."
+	"\1\b[12]I'm really not very good at being %(fc('fast','cool')), am I...\n\n \w8\w8Maybe I should look at it as a chance to build my character!\n\n \w8\w8... \f[italic,1]Sigh.\f[italic,default]"
 }
 
 Talk.Snailsonality.Liar : nonoverlap_pool
@@ -487,6 +398,10 @@ Talk.Snailsonality.Liar : nonoverlap_pool
 	"\1\b[10]I once ate %(RAND(5) + 2) entire boxes of Snail-ios in a day. It's true. I'll do it again if you don't believe me, bring it on."
 	"\1\b[10]I can change a lightbulb on my own without assistance. Next time you have a bulb go out, I'll show you."
 	"\1\b[10]I drank from a fountain of youth years ago, that's why I don't age. It's true. Check back with me in another 3 years and I'll look just the same as I do now."
+	"\1\b[10]I once hiked the whole Decimater Decameter trail by myself in one day. It was the off season though, so nobody was there to record my feat."
+	"\1\b[12]I never have trouble crossing the road. Cars see me approach and stop to wait. I'll show you sometime."
+	"\1\b[10]I can drive a car.\n\n \w8\w8Not yours though, obviously I need a custom setup for it."
+	"\1\b[10]I saved another snail from a spider web once. I'm known as a hero in my home town."
 }
 
 Talk.Snailsonality.Facts : nonoverlap_pool
@@ -541,6 +456,7 @@ Talk.Snailsonality.Sellout : nonoverlap_pool
 	"\1\b[12]Don't underestimate the power of a good face scrub and a foot massage to rejuvenate your image and win you that brand lettuce."
 	"\1\b[12]Not many snails want to do a photoshoot on a plate.%(br)""Insulting"", ""below their standards"", they say. But for that amount of lettuce? Honey, I'll pose on a plate all day long if you want."
 	"\1\b[12]If you ever regret being bound to a contract you signed, just remember how much lettuce you got when you made the deal.\n\n Ahh... Sweet, expendable lettuce."
+	"\1\b[12]Attracting sponsors is an art. You've even got to perfect the way you walk! It does no good to plaster sponsorships all over your shell if you don't know how to strut and show them off to the cameras."
 }
 
 
@@ -728,4 +644,381 @@ Talk.AlliterativeSnailsonality.Bad : nonoverlap_pool
 	"\1\b[10]Training Training Training. uTmost imporTance! don'T sidesTep iT!"
 	"\1\b[10]Trying besT To asTound The Throngs. %(fc('acceleraTion','sTyle'))! magnificenT! Truly Terrific! The Tumult almosT smoThers..."
 	"\1\b[10]And snAil declAred chAmpion! All Applaud! Ahh..."
+}
+
+
+Talk.Snailsonality.Silent : array
+{	
+	//106 x 26 max dimensions
+	_drawings = <<"
+.                                                 @@@@         @@@@   
+.                 @@@@@@@@@@@@@@@@@@@@@@@@@       @@@@        @@@@@   
+.              @@@@                       @@@@      @@       @@       
+.           @@@@                             @@@@    @@     @@        
+.         @@@                                   @@@   @@    @@        
+.        @@            @@@@@@@@@@@@              @@ @@@@@@@@@         
+.       @@         @@@@           @@@            @@@         @@@      
+.      @@         @@                @@@          @@            @@     
+.     @@         @@                   @          @@             @@    
+.     @         @@     @@@@@          @@         @@    @@       @@@@  
+.     @         @@    @@   @         @@         @@       @     @@  @@ 
+.     @         @@        @@         @@        @@        @@@@@@@      
+.     @           @@@@@@@@@         @@        @@@      @@@            
+.     @@                          @@@        @@       @@              
+.     @@@                       @@@@        @@        @@              
+.      @@@@                   @@@@@      @@@@        @@               
+.   @@@@  @@@           @@@@@@    @@@@@@@            @@               
+.  @@        @@@@@@@@@@@@                            @                
+. @@                                           @@@@@@                 
+. @@@  @@@         @@@@@                     @@@                      
+.   @@@@ @@  @@@@@@    @@      @@@@@       @@@                        
+.          @@@          @@@@@@@    @@ @@@@@@@                         
+.                                   @@@                               
+
+
+
+.            @@@@@@@                                                   
+.        @@@@       @@@@                                               
+.      @@               @@                                             
+.    @@                   @@                                           
+.   @@ @@                  @@                                          
+.  @@ @  @                  @@                                         
+. @@ @  @                   @@                                         
+. @ @  @                     @@                                        
+. @ @ @                      @@                                        
+. @ @ @                       @                                        
+. @  @                        @                                        
+. @@                          @                                        
+.  @@                         @                                        
+.    @@                      @                                         
+.      @@@                   @                                         
+.         @@@@              @                                          
+.             @@@@@@@@@@@@@@@@                                         
+.                        @@@  @                                        
+.                       @  @@                       @@@@@@@@@@@@       
+.                      @                      @@@@@@            @@@    
+.                     @                   @@@@                     @@  
+.                     @               @@@@                           @ 
+.                     @           @@@@                                 
+.                      @@     @@@@                                     
+.                        @@@@@                                         
+
+
+
+.                                  @@@@@@@@@@                                  
+.          @@@@@@@@@             @@ @@ @@     @@@@@@@                          
+.        @@@      @@@@@@    @@@@@@    @@          @@@@@        @@@@@           
+.     @@@@@             @@@@@@   @@ @@      @@@ @@@    @@@@@@@@@   @@@         
+.    @@@           @   @@@        @@@@@@@@@@@             @@        @@@        
+.   @@@            @ @@@ @        @@                    @@@@@ @@     @@@       
+.   @@@       @@   @@@@  @@      @@                  @@@@   @@@       @@@      
+.   @@@        @@@@@@     @@    @@                @@@@       @@        @@@     
+.   @@@         @@         @@  @@            @@@@@@          @@@   @     @@    
+.    @@@       @@@         @@@ @@       @@@@@@                 @@ @@     @@    
+.     @@@  @   @@@          @@@@@    @@@@@                    @@@@@      @@    
+.     @@@    @@@ @@           @@@@@@@@                      @@ @@        @@@   
+.     @@@     @@  @@@        @@@                          @@@   @@       @@@   
+.   @@@@@@    @@   @@@@@@@@@@@@@@@@@                    @@@     @@        @@   
+.  @@  @@@    @@@@@@@@              @@@@          @@@@@@         @@ @     @@   
+.  @@  @@@   @@@                       @@@@@@@@@@@@@@@@@@@@@@    @@  @@@ @@@@  
+. @@@   @@@ @@                                            @@@@@@@@@@     @@@ @ 
+. @@@    @@@@          @        @                                 @@@    @@  @ 
+.  @@     @@@           @@      @                    @@           @@   @@@  @@ 
+.  @@@     @@       @     @@     @               @@@@            @@   @@@  @@  
+.   @@@    @@@  @     @      @@  @@         @@@@@        @@     @@  @@@   @@   
+.    @@@@   @@@@@@     @@      @@ @     @@@@           @@     @@@ @@@   @@@    
+.      @@@    @@@@@       @@@    @@@@@@@           @@@@    @ @@@@@   @@@@      
+.       @@@@@@@  @@@@@      @@@   @@           @@@@      @@@@@@@@  @@@         
+.            @@@@@@@@@@@@@     @@@ @@       @@@      @@@@@@@@@@@@@@            
+.                    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                        
+
+
+
+.                                                @   @@     @@ @ 
+.                                             @     @@@    @ @   
+.                                           @@   @@ @   @@       
+.                                           @@  @@   @@     @@   
+.                                         @ @@@  @@@@ @@@@@@     
+.                                         @  @@ @@ @@  @@        
+.                                          @@@@@  @@@@           
+.                                        @@@@@@@@@ @@            
+.                                  @@@@@ @@@@ @@@                
+.                               @@   @  @@@                      
+.                              @@ @   @  @@                      
+.                           @@@    @   @  @                      
+.                          @  @     @  @ @@                      
+.                        @@    @    @   @                        
+.                      @@  @    @   @@@                          
+.                     @@    @   @  @@                            
+.                   @@ @    @    @@                              
+.                @@@    @    @@@                                 
+.              @@ @      @@@@@                                   
+.            @@    @    @@                                       
+.           @ @     @@@@                                         
+.         @@   @  @@@                                            
+.      @@@@@   @@@                                               
+.    @@@ @  @@@@                                                 
+. @@@   @@@@                                                     
+.  @@@@@@                                                        
+
+
+
+.                          @ @@@@@@@@@@@@@@ @@@@@@@@@@                
+.                         @ @              @         @@@@@            
+.                         @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@            
+.                         @                            @@             
+.                        @@         @@@@               @@             
+.                        @         @@                  @@             
+.                       @@         @@  @@              @@             
+.                       @@          @@@                @@             
+.                       @         @   @               @@              
+.                      @@@       @@@@@@               @@              
+.                      @@        @@  @              @@@               
+.                    @@          @@                 @@                
+.                  @@             @ @@              @                 
+.                @@            @@@@                 @                 
+.              @@                @@@@               @    @@@@@        
+.    @@@@@    @@                                   @@@@@@    @@       
+.  @@     @@@@@               @@@@@                @@         @@      
+. @@        @@               @@@                   @@@@@@     @@@@    
+. @@       @@              @@@@@                   @@   @@@@@@@@@ @@  
+.  @@@@   @@                                       @               @@ 
+.      @@@@                                       @@@              @@ 
+.       @@@@@@@@@@          @@@@@@@@@@@@@@@@@@@@ @@ @@@@         @@@  
+.      @@ @     @ @@@@@@@@@@     @@  @@@@@   @  @@@    @@@@@@@@@@@    
+.      @@@ @@@@@ @@@  @@@@@@@@@@@  @@     @@@ @@@@                    
+
+
+
+.                                                  @@@@@@@@@                            
+.                                                @@@       @@@                          
+.                                       @@@@@@@@@@           @@                         
+.                           @@@@@@@@  @@@       @             @@                        
+.                         @@@       @@@                      @@@@@                      
+.                       @@@          @                          @@@@@@                  
+.                    @@@@                                            @@                 
+.                  @@     @@@@@@@                                     @@ @@             
+.                 @     @@       @@                                    @@  @@           
+.               @@@@  @@           @                                   @@   @@          
+.            @@@     @@                                     @@@@@@     @@    @@         
+.           @@       @                                    @@       @@@     @@ @@@@      
+.          @@        @                 @@@@@@@@@@        @          @        @    @@    
+.          @                      @@@@@@        @@@@@@@                   @@@ @@@@@ @   
+.     @@@@@@                    @@                     @@                         @@@   
+.  @@                        @@@                         @@@                         @@ 
+. @@                                                                             @@@    
+. @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                          @@@@@@@@@@@@@@@@@@@@       
+.                                  @@@@@@@@@@@@@@@@@@@@@@@@@@                           
+
+
+
+.                       @@@@@                    
+.                     @@     @@                  
+.               @@@@@@        @@      @@@@       
+.             @@              @@   @@@    @@     
+.             @               @@  @@       @@    
+.             @                @@@          @    
+.             @@              @@@           @    
+.               @@@           @@             @@  
+.                  @@        @@                @ 
+.           @@@@@@@@@@@@@    @                 @ 
+.         @@             @@@ @                 @ 
+.        @                  @ @@@@@         @@@  
+.        @                 @       @@@@@@@@@     
+.         @               @@          @@         
+.          @@            @@             @@       
+.            @          @ @               @@     
+.            @        @@ @@               @@     
+.             @     @@@  @@               @@     
+.              @@@@@@@  @ @            @@@@      
+.                   @  @  @@       @@@@          
+.                 @@ @@    @@@   @@              
+.              @@@ @@         @@@                
+.          @@@@  @@                              
+.       @@@   @@@                                
+. @@@@@@  @@@@                                   
+.  @@@@@@                                        
+
+
+
+.                    @@@@@@@@@@@@@@@@@                 
+.             @@@@@@@@@             @@@@@@             
+.          @@@@@                         @@@           
+.         @@@    @@                       @@@          
+.        @@@    @@@@@@               @@     @@@        
+.      @@@     @@@@@@@@              @@@      @@@      
+.    @@@       @@@@@@@                          @@@    
+.   @@@         @@@@@                            @@    
+.  @@@                                           @@@   
+. @@                                             @@@   
+. @@                           @@                 @@   
+. @@                         @@@@                  @@  
+. @@                          @@          @@       @@  
+. @@                                      @@@      @@  
+. @@@    @@                                @@      @@@ 
+.  @@                                              @@  
+.  @@@                                            @@   
+.   @@@     @@                                   @@    
+.   @@@                                         @@@    
+.    @@@             @@@            @@@@@       @@     
+.     @@@          @@@@@@@         @@@@@@@     @@      
+.      @@@         @@@@@@           @@@      @@@       
+.       @@@@        @                     @@@@         
+.          @@@@@                     @@@@@@@           
+.            @@@@@@                @@@@@               
+.                @@@@@@@@@@@@@@@@@@@@                  
+
+
+
+.              @              
+.             @@@             
+.             @@@             
+.            @@ @@            
+.           @@   @@           
+.          @@     @@          
+.         @@       @@         
+.        @@@       @@@        
+.       @@@         @@@       
+.      @@@           @@@      
+.     @@@  @@         @@@     
+.    @@@  @@           @@@    
+.   @@@  @@             @@@   
+.  @@@  @@               @@@  
+. @@@  @@                 @@@ 
+. @@@  @@                 @@@ 
+. @@@  @@                 @@@ 
+. @@@   @                 @@@ 
+. @@@                     @@@ 
+. @@@   @@                @@@ 
+.  @@@   @@              @@@  
+.   @@@                 @@@   
+.     @@@              @@@    
+.      @@@@         @@@@      
+.        @@@@@@@@@@@@@        
+.           @@@@@@            
+
+
+
+.                                                 @@@@@@@@@@@@@@@@@@@@ 
+.                                           @@@@@@                   @ 
+.                                    @@@@@@                @@@      @  
+.                               @@@@@@                 @@@        @@   
+.                           @@@@                   @@@         @@@     
+.                        @@@                  @@@@          @@@@       
+.                     @@@                 @@@            @@@@          
+.                  @@@                @@@@            @@@@             
+.                @@@               @@@@             @@@                
+.               @@             @@@@              @@@@                  
+.         @   @@@           @@@@@              @@@                     
+.       @@@  @@          @@@@@              @@@@                       
+.      @@ @  @@        @@@@               @@@                          
+.     @@  @ @@       @@@@               @@@                            
+.     @@  @@@     @@@@@              @@@@                              
+.     @@  @@    @@@@               @@@                                 
+.    @@@  @@  @@@@               @@@                                   
+.    @@   @@@@@@             @@@@@                                     
+.    @@   @@@@@@@@@@@@@@@@@@@@                                         
+.     @ @@@@          @@@@                                             
+.     @@@@@@@@@@@@@@                                                   
+.    @@@                                                               
+.   @@@                                                                
+.  @@@                                                                 
+. @@@                                                                  
+
+
+
+.                                                                          @       
+.                                                                         @@       
+.                                                         @@             @@        
+.                                                         @@@            @@@@      
+.                                        @@@@          @@@  @@    @@@    @@@@@     
+.                           @         @@@@@@        @@@@  @@@    @@@@@     @@@     
+.                            @@      @@@  @@    @@@@@   @@@   @@@@   @    @@       
+.                            @@@@@   @@    @@@@@       @@@   @@     @@         @@  
+.                              @@@@@ @@@   @@         @@@    @@@@@@@@      @@@@@   
+.                              @@ @@@  @@            @@       @@@        @@@@@     
+.                               @@ @@ @@@            @@                 @@ @@      
+.                               @@  @@@              @@@   @@@@@@@@@@@  @@ @@      
+.                              @@   @@@               @@@@@@     @@@    @@  @@     
+.                             @@@                               @@@   @@@    @@    
+.                           @@@    @@                            @@@@@@       @@   
+.                         @@@      @@       @@@@@@@                           @@   
+.                    @@@@@@       @@@@   @@@     @@                      @@@@@     
+.            @@@@@@@@@           @@  @  @@      @@     @@@@@  @        @@  @@@@@@  
+.         @@@@                 @@@   @ @@       @@  @@@   @@  @@       @  @@  @@   
+.       @@@             @@@@@@@     @@@@         @@@     @@   @ @@      @@@  @@    
+.    @@@            @@@           @@@                      @@@    @          @@@   
+.  @@@           @@@                                            @@            @@   
+. @@            @@                                              @        @@@@@     
+. @@           @                                              @@    @@@@@@         
+. @@@         @                                            @@@   @@@@              
+.  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                  
+
+
+
+.           @@@@@@@@@@@@@@@@@@@@@@@@@               
+.     @@@@@@@@@@     @@@@@@@@     @@@@@             
+.   @@  @@@@@@@@@@@@@@@@@@@@@@@@@@ @@@@@            
+. @@      @@     @@@@@@@      @@@@@@@  @@           
+.  @@ @@@@@       @@@@@@@      @@@@@@@   @          
+.  @@@@@@@@@  @@@@@      @@@@@@@@    @@@  @         
+.   @@@@@@  @@@@@@@@      @@@@@@@@     @@@@@        
+.    @@      @@@@@@@@@@@@@@@     @@@@@  @@@@@       
+.     @@     @@@     @@@@@@@       @@@@@@@  @@      
+.      @@@@@@@@       @@@@@@@@@@@@@@@@@@@@@   @     
+.       @@@@@@@@  @@@@@      @@@@@@@@      @@@ @    
+.       @@@@@@@@@@@@@@@@      @@@@@@@@      @@@@@   
+.        @@      @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
+.         @@@    @@@@@                              
+.          @@ @@@                                   
+.           @@@                                     
+.            @@@                                    
+.             @@@                                   
+.              @@@                                  
+.               @@@                                 
+.                @@@                                
+.                 @@@                               
+.                  @@@                              
+.                   @@@                             
+.                    @@@                            
+.                     @@@                           
+
+
+
+.                               @@@@@@@@                                   
+.        @@@@@@@@@@          @@@@@    @@@                                  
+.     @@@@@@     @@@@      @@@@        @@@                                 
+.   @@@@           @@@   @@@@          @@@                                 
+.  @@@              @@@ @@@            @@@                                 
+.  @@                @@@@@             @@@                                 
+.  @@                @@@@             @@@                                  
+.  @@            @@@@@@@@@@@         @@@@                                  
+.  @@@         @@@@@      @@@@      @@@                                    
+.   @@@       @@@            @@@@ @@@@@@@@@@@@                             
+.    @@@    @@@@               @@@@@@      @@@@@                           
+.     @@@  @@@                  @@@          @@@@                          
+.      @@@ @@@                 @@@            @@@                          
+.       @@@@@@                 @@              @@@                         
+.     @@@@@@@@                @@@              @@@                         
+.   @@@@@   @@@@           @@@@               @@@                          
+.  @@@        @@@@@@@@@@@@@@@@@@             @@@@                          
+. @@@           @@@@@@@@@@ @@@@@@           @@@@                           
+. @@               @@       @@@@@@@@@@@@@@@@@@                             
+. @@              @@@         @@@ @@@@@@@@@                                
+. @@@@          @@@@          @@@@@  @@@@                                  
+.  @@@@@@@@@@@@@@@@@          @@@@@@@  @@@@@           @@@@@@@@@@@@@@@@@@@ 
+.        @@@@@@  @@@          @@@ @@@@    @@@@@@@@@@@@@@@              @@  
+.                @@@        @@@@@@  @@@@@                            @@@   
+.                 @@@@@@@@@@@@@ @   @@ @@@@@          @@@@@@@@@@@@@@@@     
+.                  @@@@@@@@@     @@@      @@@@@@@@@@@@@@                   
+	">>
+	_drawings = SPLIT(_drawings,"%(C_CRLF)%(C_CRLF)%(C_CRLF)%(C_CRLF)")
+	
+	foreach _drawings; _drawing
+	{
+		_drawing = REPLACE(_drawing,C_CRLF,"\n")
+		_drawing = REPLACE(_drawing,"."," ")
+		_drawing = "\![no-autopause]\1\b[12]\_q\f[name,courier new]\f[height,3]\f[align,center]" + _drawing
+		_drawing
+	}
 }

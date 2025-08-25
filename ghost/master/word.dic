@@ -2692,3 +2692,30 @@ thewordlettuce
 	"a forgery of its sponsor's signature"
 	"the barcode for its favorite brand of lettuce"
 }
+
+arose
+{
+	"a rose"
+	"a sponge"
+	"a fish"
+	"a lettuce leaf"
+	"an oak leaf"
+	"a stick" //a stick sticker hehe
+	"a snail"
+	"a trophy"
+	"a \f[italic,1]Mollusk Music\f[italic,default]"
+	"a \f[italic,1]Speed of Sound Radio\f[italic,default]"
+	"a wing"
+	"a celery"
+	"a fractal"
+}
+
+ahatenthusiastgroup
+{
+	"a hat enthusiast group|all these silly hats they're wearing"
+	"a group collecting donations for charity|how each snail has a cute little basket to collect lettuce donations in"
+	"a group of tea party enthusiasts|how each snail perfectly balances a cute teacup on its shell"
+	"a tech startup|all this fancy futuristic-themed gear"
+	"a group of artists|these little decorations made with brushes and pencils"
+	"a group of minimalists|that! A lineup of snails with a completely natural look, not a drop of shell paint or other enhancements to be seen anywhere" //is minimalists the right term for this? I also feel like minimalist could be like, just white paint and nothing else...
+}
