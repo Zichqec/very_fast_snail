@@ -11,7 +11,7 @@ RadioStation.Racing_News : nonoverlap_pool
 	//We realized after recording that we'd accidentally interviewed the wrong snail (either an impostor or just a rando?)
 	//etc
 	
-	if LastRaceVictory //TODO this doesn't connect to anything yet, i imagine later it will have stuff like if you won and the name of the victor of the last race... we'll see!
+	if LastRaceVictory //TODO this doesn't connect to anything yet, i imagine later it will have stuff like if you won and the name of the victor of the last race... we'll see! -- TODO make them recognize your snail after it's won a few times!
 	{
 		//"\1\b[22]"
 		//"\1\b[22]"
