@@ -375,7 +375,7 @@ Talk.Snailsonality.Jealous : nonoverlap_pool
 	"\1\b[10]Is there a point in trying to be %(fc('fast','stylish'))...? I'm so out of my league..."
 	"\1\b[10]Why did I ever think I could make it as a %(fc('fast','cool')) snail...? There's not a trace of %(fc('speed','style')) in me, I knew that..."
 	"\1\b[12]I'm really not very good at being %(fc('fast','cool')), am I...\n\n \w8\w8Maybe I should look at it as a chance to build my character!\n\n \w8\w8... \f[italic,1]Sigh.\f[italic,default]"
-	"\1\b[10]I wish I could be like %(ANY(FamousSnails))..."
+	"\1\b[10]I wish I could be like %(CurrentSnail.FavoriteFamousSnail)..."
 	"\1\b[10]How can I face my potential fans when I'm like this...? I'll have to rework everything from the ground up."
 	"\1\b[10]I think I need to reinvent myself. This really isn't working."
 	"\1\b[12]I saw a meet and greet event that was being hosted for %(ANY(FamousSnails)) recently, but I didn't go. How could I let it see me like \f[italic,1]this\f[italic,default]...?"
