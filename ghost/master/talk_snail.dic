@@ -335,6 +335,10 @@ Talk.Snailsonality.Slacker : nonoverlap_pool
 	"\1\b[10]Training takes soooo long. Couldn't we do something more productive? Like napping, or watching TV."
 	"\1\b[12]Z\w8 z\w8 z\w8.\w8.\w8.\n\n \w8\w8That's the sound of a healthy snail. Wanna hear that sound for real? Let's go inside and sit on the couch."
 	"\1\b[12]You know, for as hard as I've worked at this, I don't think I'd miss racing if you decided to give it up and choose a life of napping instead."
+	"\1\b[10]Hey look at that, it's break time again. Let's get a snack so I can keep my energy up."
+	"\1\b[12]I've been working hard lately. You should give me a bonus. Think about it: if you reward my effort I'll be more likely to keep working just as hard in the future."
+	"\1\b[10]You look tired. We should take another break so you can rest."
+	"\1\b[10]Can't they make clocks go any faster?"
 }
 
 Talk.Snailsonality.Jealous : nonoverlap_pool
@@ -371,6 +375,10 @@ Talk.Snailsonality.Jealous : nonoverlap_pool
 	"\1\b[10]Is there a point in trying to be %(fc('fast','stylish'))...? I'm so out of my league..."
 	"\1\b[10]Why did I ever think I could make it as a %(fc('fast','cool')) snail...? There's not a trace of %(fc('speed','style')) in me, I knew that..."
 	"\1\b[12]I'm really not very good at being %(fc('fast','cool')), am I...\n\n \w8\w8Maybe I should look at it as a chance to build my character!\n\n \w8\w8... \f[italic,1]Sigh.\f[italic,default]"
+	"\1\b[10]I wish I could be like %(ANY(FamousSnails))..."
+	"\1\b[10]How can I face my potential fans when I'm like this...? I'll have to rework everything from the ground up."
+	"\1\b[10]I think I need to reinvent myself. This really isn't working."
+	"\1\b[12]I saw a meet and greet event that was being hosted for %(ANY(FamousSnails)) recently, but I didn't go. How could I let it see me like \f[italic,1]this\f[italic,default]...?"
 }
 
 Talk.Snailsonality.Liar : nonoverlap_pool
@@ -402,17 +410,20 @@ Talk.Snailsonality.Liar : nonoverlap_pool
 	"\1\b[12]I never have trouble crossing the road. Cars see me approach and stop to wait. I'll show you sometime."
 	"\1\b[10]I can drive a car.\n\n \w8\w8Not yours though, obviously I need a custom setup for it."
 	"\1\b[10]I saved another snail from a spider web once. I'm known as a hero in my home town."
+	"\1\b[12]I'm a master lockpicker and can get into any door, sealed container, or anything else which has a secured entry. I use this power solely to help those in need."
+	"\1\b[12]I've tasted a wide variety of leafy vegetables, including cabbage, arugula, and kale. Lettuce beats all of them easily."
+	"\1\b[10]I'm an accomplished scholar and have read many tomes on snail history and culture. I'd show you one of my essays, but I'd have to translate it out of snail."
 }
 
 Talk.Snailsonality.Facts : nonoverlap_pool
 {
-	"\1\b[10]There are actually more than 4000 species of snail. Just thought you should know."
+	"\1\b[10]There are actually more than 4,000 species of snail. Just thought you should know."
 	"\1\b[10]Snails can actually weigh over 5½ lbs, depending on the species. In case you didn't know."
 	"\1\b[10]Did you know some species of snail are actually very territorial? Explains the competitiveness of the leaderboards, doesn't it?"
 	"\1\b[10]Most snails are primarily active at night. There's a reason coffee is so prevalent in the snail racing community.\n\n ... For our sponsors. Not us snails. Coffee is bad for snails."
 	"\1\b[10]Humidity is very important for us snails. When it isn't humid enough out, we go into estivation, which isn't ideal during the racing season. Keep a spray bottle handy."
 	"\1\b[10]Most snail shells coil to the right, although there have been rare exceptions. In case you were wondering."
-	"\1\b[10]Baby snails eat the shells of their eggs to gain their first nutrients. It is also an important cultural tradition. After all, if a hatchling cannot overcome its own egg's shell, how can it face the hardships of life?"
+	"\1\b[12]Baby snails eat the shells of their eggs to gain their first nutrients. It is also an important cultural tradition. After all, if a hatchling cannot overcome its own egg's shell, how can it face the hardships of life?"
 	"\1\b[10]Snails begin life transparent and with very soft shells. Please be careful where you step."
 	"\1\b[10]The number of rings on a snail's shell acts as an indicator of age. Be sure to count carefully.\n\n Of course, the point is moot if the shell has been painted over."
 	"\1\b[10]Watch out for birds. You'll see them coming better than I can."
@@ -422,10 +433,20 @@ Talk.Snailsonality.Facts : nonoverlap_pool
 	"\1\b[10]The largest known snails are over 27 inches long. Are there longer snails out there? I won't tell."
 	"\1\b[10]We store our vital organs within our shell for protection. That's something you humans should consider trying."
 	"\1\b[10]Snail diets vary greatly depending on species. Some snails eat only specific things, while others are generalists. Know what kind of snail you have before lunch time."
-	"\1\b[10]Some snails eat other snails.\n\n\_w[3000]Not me, of course. But just so you know."
-	"\1\b[10]Snails can move over many kinds of surfaces thanks to our strong foot and protective mucus. We can even move over the blades of sharp knives, completely unscathed. You should keep this in mind."
-	"\1\b[10]Sleep is very important for snails. Some snails have been known to sleep for up to 3 days at a time. Although it's more typical to sleep for less than a day."
+	"\1\b[10]Some snails eat other snails.\n\n \_w[3000]Not me, of course. But just so you know."
+	"\1\b[10]Snails can move over many kinds of surfaces thanks to our strong foot and protective mucus. We can even move over the blades of sharp knives completely unscathed. You should keep this in mind."
+	"\1\b[10]Sleep is very important for snails. Some snails have been known to sleep for up to 3 days at a time. Although it's more typical to sleep for less than a day." //other source says up to 3 years??? lol
 	"\1\b[10]While we don't have teeth, we do have tooth-like structures on our ""tongues"", or more properly, our radulas.\n\n I'd show you mine but you'd have to lean in to see it and I don't want your breath on me."
+	"\1\b[10]Most species of snail are actually aquatic. Perhaps in another life the world would be focused on underwater snail racing instead."
+	"\1\b[10]Our radulas have thousands of tiny tooth-like structures. You could say we have more teeth than any other creatures on the planet."
+	"\1\b[10]Snails are quite sensitive to acid. Please do not feed us citrus fruits. You'll regret it if you try."
+	"\1\b[10]Snails require a protein-rich diet to grow. Please ensure we have ready access to all the nutrients we need."
+	"\1\b[10]Carnivorous snails tend to have better vision than other snails. That's another metric you may want to mind when selecting snails to sponsor."
+	"\1\b[10]Some species of snail are extremely tiny. So tiny they can fit through the eye of a needle. You could be surrounded by snails right now and not even know it."
+	"\1\b[10]Old snail shells have historically been recycled by humans into all sorts of products, from paper to cosmetics.\n\n I'm not mad. If they didn't recycle it, we would. Shells are filled with useful materials and are too valuable to let go to waste."
+	"\1\b[10]Snails can use each other's mucus to move even faster than normal. There's a reason you see snails ""drafting"" together in long races."
+	"\1\b[10]Snails don't feel pain. Remember this."
+	"\1\b[10]Snails typically have two eyes, but not always. Fun fact."
 }
 
 Talk.Snailsonality.Sellout : nonoverlap_pool
@@ -457,6 +478,10 @@ Talk.Snailsonality.Sellout : nonoverlap_pool
 	"\1\b[12]Not many snails want to do a photoshoot on a plate.%(br)""Insulting"", ""below their standards"", they say. But for that amount of lettuce? Honey, I'll pose on a plate all day long if you want."
 	"\1\b[12]If you ever regret being bound to a contract you signed, just remember how much lettuce you got when you made the deal.\n\n Ahh... Sweet, expendable lettuce."
 	"\1\b[12]Attracting sponsors is an art. You've even got to perfect the way you walk! It does no good to plaster sponsorships all over your shell if you don't know how to strut and show them off to the cameras."
+	"\1\b[12]To jam in as many advertisements as possible, or to give a few major names room to breathe and be clearly seen?\n\n It depends how much they pay you. Shell space comes at a premium!"
+	"\1\b[12]How much an advertiser pays out is tied directly to how well you place in a race. Showing off a brand name doesn't have much impact if you lose.\n\n Winning lets you squeeze out every possible leaf!"
+	"\1\b[12]Yes my shell is real. 100% authentic, organically grown snail shell!\n\n \w8\w8But if you've got an artificial shell to promote, I might be interested if you put enough lettuce down."
+	"\1\b[12]I actually find snail washes rather appalling, but most advertisers prefer their brand name to be seen on a clean, sparkly shell.\n\n Alas, the tradeoff is worthwhile!"
 }
 
 

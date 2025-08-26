@@ -2717,5 +2717,31 @@ ahatenthusiastgroup
 	"a group of tea party enthusiasts|how each snail perfectly balances a cute teacup on its shell"
 	"a tech startup|all this fancy futuristic-themed gear"
 	"a group of artists|these little decorations made with brushes and pencils"
-	"a group of minimalists|that! A lineup of snails with a completely natural look, not a drop of shell paint or other enhancements to be seen anywhere" //is minimalists the right term for this? I also feel like minimalist could be like, just white paint and nothing else...
+	"a group of naturists|that! A lineup of snails with a completely natural look, not a drop of shell paint or other enhancements to be seen anywhere"
+	"a group of minimalists|that slick look all the snails share! A flawless white paint job with simple black detailing. Certainly eye catching with them all in a row like that"
+}
+
+draftingtogether
+{
+	"drafting together until the very end, when they suddenly spread apart and try to surge ahead"
+	"dropping their heaviest equipment on the track halfway through to reduce weight and give them a mid-race boost"
+	"reciting poetry mid-race to distract the other racers"
+	"developing techniques to slow down other racers, such as smoke screens and oil slicks"
+	"chowing down on vitamins just before their races to try and gain a boost through nutrients"
+	"painting their equipment the same color as their shell to disguise how much gear they actually have"
+	"eating lettuce mid-race to replenish their strength"
+	"making themselves look like cool snails on the surface, but underneath they've got gear that's optimized for speed which they reveal as soon as the race starts"
+	"painting faces on the backs of their shells to confuse competitors"
+	"using helium balloons to reduce their weight so they can glide more quickly across the track"
+}
+
+snailsstackontopofeachother
+{
+	"two snails stack on top of each other and use their different loadouts to compliment each other and secure a faster time than they could make alone"
+	"pre-mucusing their lane of the track so they can reach their top speed faster"
+	"some clever snails are bringing a basket of lettuce with them and scattering it on the track as they speed along, so that their competitors are tempted to stop for a bite"
+	"they're bringing stashes of twigs in sling bags, and throwing them into the paths of their competitors"
+	"if you see a tiny snail on top of your favored racer, that's a lookout snail that's keeping an eye out for obstacles and distractions on the track"
+	"tiny RC cars for snails to race in are back in fashion until they get banned again"
+	"they've got tiny pairs of headphones so they can listen to their favorite station while they race. I hear \f[italic,1]Calming Crackles\f[italic,default] is a very popular station for this"
 }
