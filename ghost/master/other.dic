@@ -717,9 +717,7 @@ EndsWith
 //Arrange an array by the order output by ASORT's index option
 ReorderArray
 {
-	LOGGING("REORDER ARRAY:")
 	_neworder = SPLIT(_argv[0],",")
-	LOGGING("_neworder: %(_neworder)")
 	_argv[0] = IARRAY
 	_array = _argv
 	
@@ -727,16 +725,10 @@ ReorderArray
 	
 	for _i = 0; _i < ARRAYSIZE(_array); _i++
 	{
-		LOGGING("-----FOR LOOP:")
 		_index = TOINT(_neworder[_i])
-		LOGGING("_index: %(_index)")
-		LOGGING("_array[_i]: %(_array[_i])")
 		_newarray[_i] = _array[_index]
 	}
-	LOGGING("_array: %(_array)")
-	LOGGING("_newarray: %(_newarray)")
 	_newarray
-	LOGGING
 }
 
 //Take all the roster arratys and arrange them in the order given
@@ -748,7 +740,6 @@ ReorderRosterArrays
 	foreach GETVARLIST("RosterSnails."); _array
 	{
 		EVAL("%(_array) = ReorderArray('%(_neworder)',%(_array))")
-		LOGGING("AFTER SORT: ",EVAL("%(_array)"))
 	}
 }
 

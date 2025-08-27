@@ -619,14 +619,8 @@ OnRoster : all
 		RosterSort = reference1 //For the labels
 		
 		_array = EVAL("RosterSnails.%(RosterSort[0])")
-		LOGGING("RosterSort: %(RosterSort)")
-		LOGGING("_array: %(_array)")
-		LOGGING("RosterSort[1]: %(RosterSort[1])")
 		_sortindex = ASORT("string,%(RosterSort[1]),index",_array)
-		LOGGING("_sortindex: %(_sortindex)")
 		ReorderRosterArrays(TOSTR(_sortindex))
-		LOGGING
-		LOGGING
 	}
 	
 	/*
@@ -639,6 +633,9 @@ OnRoster : all
 	
 	//TODO i would love for, when you pick a snail, it puts it to center instead of taking you to top...
 	
+	//SO! this is working now, the only thing it's missing is more UI stuff. I want more sortable categories, and POSSIBLY filters... but I have to be careful not to let the UI become too cumbersome.
+	//The data bits work, now it's just up to designing the thing to feel fluid and nice
+	
 	"\0\b[4,--fallback=2]\_q\![set,autoscroll,disable]\![no-autopause]\t\*"
 	"%(bigheader('COMPARE YOUR SNAILS!'))"
 	"\![*]\__q[OnSakuraMenu]Back\__q  \![*]\__q[blank]Close\__q"
@@ -648,31 +645,31 @@ OnRoster : all
 	switch RosterSort[0] == "Name"
 	{
 		"\__q[OnRoster,sort,""Name,%(RosterSort[1])""]Name\__q"
-		"\_a[OnRoster,sort,""Name,%(RosterSort[1])""]Name\_a"
+		"\f[underline,1]\_a[OnRoster,sort,""Name,%(RosterSort[1])""]Name\_a\f[underline,default]"
 	}
 	"  "
 	switch RosterSort[0] == "PersonalityType"
 	{
 		"\__q[OnRoster,sort,""PersonalityType,%(RosterSort[1])""]Personality\__q"
-		"\_a[OnRoster,sort,""PersonalityType,%(RosterSort[1])""]Personality\_a"
+		"\f[underline,1]\_a[OnRoster,sort,""PersonalityType,%(RosterSort[1])""]Personality\_a\f[underline,default]"
 	}
 	"  "
 	switch RosterSort[0] == "PoetryType"
 	{
 		"\__q[OnRoster,sort,""PoetryType,%(RosterSort[1])""]Poetry style\__q"
-		"\_a[OnRoster,sort,""PoetryType,%(RosterSort[1])""]Poetry style\_a"
+		"\f[underline,1]\_a[OnRoster,sort,""PoetryType,%(RosterSort[1])""]Poetry style\_a\f[underline,default]"
 	}
 	"\n"
 	switch RosterSort[1] == "ascending"
 	{
 		"\__q[OnRoster,sort,""%(RosterSort[0]),ascending""]Ascending\__q"
-		"\_a[OnRoster,sort,""%(RosterSort[0]),ascending""]Ascending\_a"
+		"\f[underline,1]\_a[OnRoster,sort,""%(RosterSort[0]),ascending""]Ascending\_a\f[underline,default]"
 	}
 	"  "
 	switch RosterSort[1] == "descending"
 	{
 		"\__q[OnRoster,sort,""%(RosterSort[0]),descending""]Descending\__q"
-		"\_a[OnRoster,sort,""%(RosterSort[0]),descending""]Descending\_a"
+		"\f[underline,1]\_a[OnRoster,sort,""%(RosterSort[0]),descending""]Descending\_a\f[underline,default]"
 	}
 	"\n\n"
 	
@@ -686,7 +683,7 @@ OnRoster : all
 			"\f[color,default.anchor]\f[bold,1]%(RosterSnails.Name[_i])\f[bold,default]\f[color,default]"
 		}
 		"\__q"
-		"  \__q[OnRoster.SwitchSnail,""%(RosterSnails.ID[_i])"",""%(RosterSnails.Name[_i])""](Pick)\__q"
+		if RosterSnails.ID[_i] != CurrentSnail.ID; "  \__q[OnRoster.SwitchSnail,""%(RosterSnails.ID[_i])"",""%(RosterSnails.Name[_i])""](Pick)\__q"
 		
 		"\n"
 		"\f[color,disable]%(REPLACE(RosterSnails.PersonalityType[_i],'_',' ')) | %(REPLACE(RosterSnails.PoetryType[_i],'_',' '))\f[color,default]"
@@ -701,7 +698,7 @@ OnRoster.SnailDetails : all
 	_i = TOINT(reference0)
 	
 	"\0\b[4,--fallback=2]\_q\![set,autoscroll,disable]\![no-autopause]"
-	"%(bigheader('INSPECT YOUR SNAILS!'))"
+	"%(bigheader('INSPECT YOUR SNAIL!'))"
 	
 	"\f[height,+2]%(RosterSnails.Name[_i])\f[height,default]\n\n"
 	"%(RosterSnails.PersonalityType[_i])\n"
