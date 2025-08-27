@@ -595,7 +595,7 @@ OnPhotoGallery.SwitchSnail
 	"\C%(RefreshDressups)%(CleanlinessCheck)\![raise,OnRacerID,%(_id),""%(_name)"",%(_frommenu)]"
 }
 
-OnRoster
+OnRoster : all
 {
 	//TODO all of this lol
 	/*
@@ -611,6 +611,171 @@ OnRoster
 	I think it will mostly just be a massive pain to set up all the globals and how it's going to sort them and stuff. but once that's dealt with... then it gets a lot easier lol. i hope
 	
 	*/
+	
+	if reference0 == "initial"; GatherSnailStats
+	if !ISVAR("RosterSort"); RosterSort = "Name,ascending"
+	if reference0 == "sort"
+	{
+		RosterSort = reference1 //For the labels
+		
+		_array = EVAL("RosterSnails.%(RosterSort[0])")
+		LOGGING("RosterSort: %(RosterSort)")
+		LOGGING("_array: %(_array)")
+		LOGGING("RosterSort[1]: %(RosterSort[1])")
+		_sortindex = ASORT("string,%(RosterSort[1]),index",_array)
+		LOGGING("_sortindex: %(_sortindex)")
+		ReorderRosterArrays(TOSTR(_sortindex))
+		LOGGING
+		LOGGING
+	}
+	
+	/*
+	I want to be able to sort by any data, so maybe the play is to load snails with a "roster" argument and just fill arrays with the data... but that data is NOT used for storage, only temp for sorting purposes
+	Prefix is "RosterSnails."
+	*/
+	
+	//Firstly, lets display the snails... then we can do sorting
+	//The way sorting will work is we take the array to sort by (and ascending/descending), and then we use ASORT with the index option, and that gives us an array of index numbers where the elements should be arranged to. Then we change EVERY ARRAY to that sorting. I need a function to handle this. Shouldn't be that hard... I hope.
+	
+	//TODO i would love for, when you pick a snail, it puts it to center instead of taking you to top...
+	
+	"\0\b[4,--fallback=2]\_q\![set,autoscroll,disable]\![no-autopause]\t\*"
+	"%(bigheader('COMPARE YOUR SNAILS!'))"
+	"\![*]\__q[OnSakuraMenu]Back\__q  \![*]\__q[blank]Close\__q"
+	"\n"
+	"Sort by:\n"
+	//This sucks lol, make better later
+	switch RosterSort[0] == "Name"
+	{
+		"\__q[OnRoster,sort,""Name,%(RosterSort[1])""]Name\__q"
+		"\_a[OnRoster,sort,""Name,%(RosterSort[1])""]Name\_a"
+	}
+	"  "
+	switch RosterSort[0] == "PersonalityType"
+	{
+		"\__q[OnRoster,sort,""PersonalityType,%(RosterSort[1])""]Personality\__q"
+		"\_a[OnRoster,sort,""PersonalityType,%(RosterSort[1])""]Personality\_a"
+	}
+	"  "
+	switch RosterSort[0] == "PoetryType"
+	{
+		"\__q[OnRoster,sort,""PoetryType,%(RosterSort[1])""]Poetry style\__q"
+		"\_a[OnRoster,sort,""PoetryType,%(RosterSort[1])""]Poetry style\_a"
+	}
+	"\n"
+	switch RosterSort[1] == "ascending"
+	{
+		"\__q[OnRoster,sort,""%(RosterSort[0]),ascending""]Ascending\__q"
+		"\_a[OnRoster,sort,""%(RosterSort[0]),ascending""]Ascending\_a"
+	}
+	"  "
+	switch RosterSort[1] == "descending"
+	{
+		"\__q[OnRoster,sort,""%(RosterSort[0]),descending""]Descending\__q"
+		"\_a[OnRoster,sort,""%(RosterSort[0]),descending""]Descending\_a"
+	}
+	"\n\n"
+	
+	for _i = 0; _i < ARRAYSIZE(RosterSnails.Name); _i++
+	{
+		"\![*]"
+		"\__q[OnRoster.SnailDetails,%(_i)]"
+		switch RosterSnails.ID[_i] == CurrentSnail.ID
+		{
+			"%(RosterSnails.Name[_i])"
+			"\f[color,default.anchor]\f[bold,1]%(RosterSnails.Name[_i])\f[bold,default]\f[color,default]"
+		}
+		"\__q"
+		"  \__q[OnRoster.SwitchSnail,""%(RosterSnails.ID[_i])"",""%(RosterSnails.Name[_i])""](Pick)\__q"
+		
+		"\n"
+		"\f[color,disable]%(REPLACE(RosterSnails.PersonalityType[_i],'_',' ')) | %(REPLACE(RosterSnails.PoetryType[_i],'_',' '))\f[color,default]"
+		"\n\n"
+	}
+	"\n\n"
+	"\![*]\__q[OnSakuraMenu]Back\__q  \![*]\__q[blank]Close\__q"
+}
+
+OnRoster.SnailDetails : all
+{
+	_i = TOINT(reference0)
+	
+	"\0\b[4,--fallback=2]\_q\![set,autoscroll,disable]\![no-autopause]"
+	"%(bigheader('INSPECT YOUR SNAILS!'))"
+	
+	"\f[height,+2]%(RosterSnails.Name[_i])\f[height,default]\n\n"
+	"%(RosterSnails.PersonalityType[_i])\n"
+	"%(RosterSnails.PoetryType[_i])\n"
+	
+	"\n\n"
+	switch RosterSnails.ID[_i] == CurrentSnail.ID
+	{
+		"\![*]\__q[OnRoster.SwitchSnail,%(RosterSnails.ID[_i]),%(RosterSnails.Name[_i]),%(_i),details]Change to this snail\__q"
+		"\f[color,disable]\![*]Current snail\f[color,default]"
+	}
+	"\n\n"
+	
+	"\![*]\__q[OnRoster]Back\__q  \![*]\__q[blank]Close\__q"
+}
+
+OnRoster.SwitchSnail
+{
+	_id = reference0
+	_name = reference1
+	_filename = ToFileNameFormat(_name,_id)
+	_menu = "OnRoster"
+	if reference3 == "details"; _menu = "OnRoster.SnailDetails"
+	
+	SaveSnail(CurrentSnail.ID)
+	LoadSnail(_filename)
+	
+	"\C%(RefreshDressups)%(CleanlinessCheck)\![raise,%(_menu),%(reference2)]"
+}
+
+GatherSnailStats
+{
+	//Load snails with the temp argument, then loop through them here and snatch their stats, converting any arrays to strings (separated by C_BYTE1) along the way? could work...
+	LOGGING("====================================================================")
+	//Clear old values
+	foreach GETVARLIST("RosterSnails."); _array
+	{
+		EVAL("%(_array) = IARRAY")
+	}
+	
+	_allsnails = FENUM("snail_data/")
+	foreach _allsnails; _snail
+	{
+		if !EndsWith(_snail,".snail"); continue
+		_snail = REPLACE(_snail,".snail","")
+		
+		LoadSnail(_snail,"temp")
+		
+		LOGGING("TempSnail.Name: %(TempSnail.Name)")
+		foreach GETVARLIST("TempSnail."); _value
+		{
+			LOGGING("_value: %(_value)")
+			//Change arrays to strings
+			if GETTYPEEX("%(_value)") == 4 //General purpose array
+			{
+				LOGGING("CONVERT ARRAY TO STRING")
+				_values = EVAL("%(_value)")
+				_temp = ""
+				foreach _values; _val
+				{
+					if _temp != ""; _temp += C_BYTE1
+					_temp += _val
+				}
+				
+				EVAL("%(_value) = _temp")
+			}
+			
+			_rosterval = REPLACE(_value,"TempSnail.","RosterSnails.")
+			LOGGING("_rosterval: %(_rosterval)")
+			
+			EVAL("%(_rosterval) ,= %(_value)")
+		}
+		LOGGING; LOGGING
+	}
 }
 
 OnLettuceShop : all
