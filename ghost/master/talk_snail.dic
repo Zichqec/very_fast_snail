@@ -26,6 +26,10 @@ Talk.Snailsonality.Sad : nonoverlap_pool
 	"\1\b[12]I miss those snail school days... Back when all I had to worry about was getting good grades, deciding whether I wanted to be fast or cool, and not becoming someone's lunch."
 	"\1\b[10]All that time I spent practicing my alliteration skills... What's the point now?"
 	"\1\b[12]Maybe I should crawl into the %(refrigerator) for a while... Have some alone time to sort out my thoughts, maybe take a long nap..."
+	"\1\b[10]I wanna go back in time..."
+	"\1\b[12]Maybe if I get a high enough score on the leaderboards, I can convince them to change my name...?\n\n I've heard rumors that it might have happened once before..."
+	"\1\b[12]What if I'm hibernating and this is all a bad dream? A really long, vivid nightmare... but I'll wake up soon!\n\n ... Right?"
+	"\1\b[12]My tentacles have felt heavy since I got my racer name. I can't remember what it was like to be full of energy..."
 
 	//Maybe I'd feel better if I was the coolest looking snail ever. ... But it's kinda hard to compete with the legendary cool snails of the past... Do I really stand a chance? //could change based on coolness level
 }
@@ -59,6 +63,10 @@ Talk.Snailsonality.Relaxed : nonoverlap_pool
 	"\1\b[10]I'm not really ""in the loop"" these days, but that's fine. I'd rather just do my best and be me!"
 	"\1\b[12]When a race gets tough, I reach deep down inside and draw on my innermost mollusk spirit.\n\n It's never actually worked, but one day it will...!"
 	"\1\b[10]I really wish they'd just declare some races a draw, instead of implementing higher and higher speed cameras. Why stress so much over a few seconds?"
+	"\1\b[10]Got any houseplants around here? I kinda want a snack!"
+	"\1\b[10]It's fun exploring different types of poetry. There's nothing holding me back anymore!"
+	"\1\b[10]I'm working on making a mood board for my room. I need more leafy greens, do you have any high quality pictures of %(celery)?"
+	"\1\b[12]I keep hearing from my peers about how great organic greens are. But I'll be honest, I don't really taste a difference! Maybe my mouth tingles a little less, but that's just part of the experience, you know?" //TODO hmmmmmmmmmmmmm
 	
 	//My snailoscope said %(snailoscope). What do you think it means? //TODO i....... don't know what horoscopes are actually like lol. but if we do this i wanna seed it per snail per day lolllllll - wait what if they all have the same snailoscope each day, hmmmmm
 }
@@ -304,7 +312,7 @@ Talk.Snailsonality.Super_Fan : nonoverlap_pool
 	"\1\b[12]I once spoke to %(ANY(FamousSnails))'s %(sponsorsmom) on the phone.\n\n I mean, the phone was ringing, and it would have been rude to just ignore it. So I took a message, like the good citizen I am."
 	"\1\b[12]Sometimes you have to follow suspicious links on the snailernet to find the best information.\n\n That's how I found out about %(xtremelyxtremesplushiecollection)."
 	"\1\b[12]I almost got %(abottle) for my %(ANY(FamousSnails)) collection. I abandoned it at the last minute though.\n\n Just as I was almost out the door I overheard someone asking where it had gotten to,%(br)so I figured they must have needed it more than I did, and left it there for them.\n\n It's important to recognize when the needs of others conflict with your own, and be willing to compromise."
-	"I heard %(ANY(FamousSnails)) is going to be on a panel at a snail convention soon. I've got to go through my collection and decide on something to get signed."
+	"\1\b[12]I heard %(ANY(FamousSnails)) is going to be on a panel at a snail convention soon. I've got to go through my collection and decide on something to get signed."
 }
 
 Talk.Snailsonality.Slacker : nonoverlap_pool
