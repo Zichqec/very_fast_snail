@@ -2746,3 +2746,18 @@ snailsstackontopofeachother
 	"tiny RC cars for snails to race in are back in fashion until they get banned again"
 	"they've got tiny pairs of headphones so they can listen to their favorite station while they race. I hear \f[italic,1]Calming Crackles\f[italic,default] is a very popular station for this"
 }
+
+atthetrack
+{
+	"at the track"
+	"at the store"
+	"last time I was at the mall"
+	"while I was watching %(CurrentSnail.FavoriteFamousSnail)'s big race"
+}
+
+shinynewengine
+{
+	"shiny new engine"
+	"fancy helmet"
+	"sling bag straps"
+}

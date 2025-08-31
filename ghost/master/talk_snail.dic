@@ -99,6 +99,10 @@ Talk.Snailsonality.Angry : nonoverlap_pool
 	"\1\b[10]IF SOMEONE TRIES TO TAKE A BITE OUT OF \f[bold,1]ME\f[bold,default] I'LL BREAK THEIR TEETH"
 	"\1\b[10]MY FAVORITE SNACK? \f[bold,1]BROKEN GLASS!!\f[bold,default]"
 	"\1\b[10]WHO NEEDS FRIENDS WHEN YOU CAN \f[bold,1]YELL\f[bold,default]"
+	"\1\b[12]WHO'S SCARED OF A LITTLE SALT? SO IT'LL DEHYDRATE YOU IF YOU TOUCH IT, BIG DEAL, GET GOOD LOSERS"
+	"\1\b[10]CRUNCH. \w8CRUNCH. \w8CRUNCH. \w8MORE LETTUCE!"
+	"\1\b[10]THE MISTER BOTTLE IS TOO WEAK FOR ME. POUR THAT BUCKET OF WATER ON MY HEAD."
+	"\1\b[10]I'M GONNA \f[bold,1]WIN!!!!!\f[bold,default]"
 	
 	//TODO this needs to check for if the current snail has "well fed" _and also_ that you have more than 1 snail
 	// BAGEL WAS SAYING YOU DON'T FEED US ENOUGH
@@ -143,6 +147,10 @@ Talk.Snailsonality.Proper : nonoverlap_pool
 	"\1\b[10]Trials towering... To be tackled? Trepidation..."
 	"\1\b[10]Accolades listed, all arranged... acceptance? Awaiting answers."
 	"\1\b[10]Fully functional. Yet, forced out... Forgotten, fading."
+	"\1\b[10]Test time. To see the topmost... Truly tough."
+	"\1\b[10]Stems satiate stomach, set souls at ease."
+	"\1\b[10]Betrayed. Bonds broken. Buds burned.\n\n Just business..."
+	"\1\b[10]Old order ousted.%(br)... Or so one hopes."
 }
 
 Talk.Snailsonality.Sour : nonoverlap_pool
@@ -173,6 +181,10 @@ Talk.Snailsonality.Sour : nonoverlap_pool
 	"\1\b[12]I saw a snooty snail with%(br)%(arose) sticker on its shell. Boring! Who wants a design like that, it's so last week! I got rid of mine yesterday when the fashion changed!" //br here because the radio names wrap awkwardly...
 	"\1\b[10]Those snooty snails think they're a threat on the track. I'll show them a threat on the track!"
 	"\1\b[12]Have you ever tried asking a snooty snail for directions? It's unbearable! ""Left left left, left left... left left left...... left.""\n\n Like, how am I supposed to parse THAT?"
+	"\1\b[12]My therapist said I should spend some time on my own, and not think about snooty snails. But how am I supposed to do that when they're EVERYWHERE?\n\n Anywhere you look there'll be snooty snails lining up ready to ruin your day! Honestly, it's%(br)so rude of them!"
+	"\1\b[12]I ordered a lettuce sandwich at the café the other day, and some snooty snail was looking on and \f[italic,1]drooling\f[italic,default].\n\n Gross! How am I supposed to enjoy my sandwich after that! I left it there for the next snail that comes along."
+	"\1\b[12]Some snail called %(SnailNameGenerator(,'alliteration')) or whatever was rude to me %(atthetrack).\n\n I took apart its %(shinynewengine) while it wasn't looking, ha!" //TODO this can output non-alliterative names such as "Full Throttle Flea"... need to fix that, and probably also other instances where I tried to call this
+	"\1\b[12]A snooty snail accused me of having mood swings!\n\n Well, it didn't use the term%(br)""mood swings"", of course. It said ""mood meanderings"". \w8\w8But still!!"
 }
 
 Talk.Snailsonality.Tired : nonoverlap_pool
@@ -202,7 +214,11 @@ Talk.Snailsonality.Tired : nonoverlap_pool
 	"\1\b[12]Someone keeps nibbling on the produce in the fridge. Hey,%(br)here's an idea: put me in there and close the door, if I spot the criminal I'll shout."
 	"\1\b[10]Another snail called me a leaf-eater the other day. Aren't we all, though?"
 	"\1\b[12]Whenever other snails boast they know the key to winning races, I just ignore them. Every race is different, there is no one solution."
-	"\1\b[10]I wish we could put an end to the snail rivalries. The constant outrage doesn't help anyone." //TODO is this... is this too close to home lol
+	"\1\b[10]I wish we could put an end to the snail rivalries. The constant outrage doesn't help anyone."
+	"\1\b[10]Have you read the papers lately? Been some interesting stuff going on."
+	"\1\b[12]I was always told that if I would apply myself I could make it big. Then I got my racer name and people stopped saying that to me, so, like, whatever."
+	"\1\b[10]We should try out some of the restaurants in town soon. It's good to scout out new grub."
+	"\1\b[12]Some snails are really busy hunting for themselves these days, but honestly I don't get it. I'm already me, what more is there to find?"
 }
 
 Talk.Snailsonality.Ratings : nonoverlap_pool
@@ -238,6 +254,10 @@ Talk.Snailsonality.Ratings : nonoverlap_pool
 	"\1\b[10]Mucus? 10/10, protective, indicator of health, all around great stuff."
 	"\1\b[10]Sticks in the road?%(br)4/10, sometimes they're a fun challenge, but usually they're just annoying."
 	"\1\b[10]Freshly groomed track? 10/10, no other feeling like it."
+	"\1\b[10]Ratings? 8/10, a well-established practice, but sometimes applied poorly by critics."
+	"\1\b[10]Bandannas? 7/10, a great way to covertly eat some lettuce on the track, but a bit to close to the face for my liking."
+	"\1\b[10]Bananas? 6/10, they ripen up and get soft and mushy too quick."
+	"\1\b[10]Snailfies with fans? 7/10, they're usually fine, but sometimes you get weirdos that ruin the whole experience."
 }
 
 chain.running_produce_aisle
@@ -273,6 +293,10 @@ Talk.Snailsonality.Gymbro : nonoverlap_pool
 	"\1\b[12]Workout tip: have a clear goal before you start. Otherwise you're likely to be unfocused in your efforts, or overwork yourself, neither of which will get you the gains you want."
 	"\1\b[12]Connecting with your fellow gymgoers is important. A bit of friendly competition will keep you coming back and working hard."
 	"\1\b[12]Bulking up your muscles is the #1 way to give yourself a boost on the track.\n\n \w8\w8Of course, thrusters are faster, but they require a lot of extra fuel."
+	"\1\b[12]I wouldn't trade my muscles away for all the lettuce in the world.\n\n \w8\w8Spinach, on the other hand... maybe we could talk."
+	"\1\b[12]Safety is important during your reps. If you tear a muscle, you won't be able to exercise for a while, and you'll lose progress."
+	"\1\b[12]Whenever I have the urge to spend a lazy day watching TV,%(br)I turn that into a workout too.\n\n You'd be surprised how much exercise you can get by pushing buttons on the remote control over and over."
+	"\1\b[12]The only way to get ahead in life is to wake up before everyone else.\n\n That means getting up at 3PM while the others are sound asleep."
 }
 
 Talk.Snailsonality.Super_Fan : nonoverlap_pool
