@@ -2753,6 +2753,10 @@ atthetrack
 	"at the store"
 	"last time I was at the mall"
 	"while I was watching %(CurrentSnail.FavoriteFamousSnail)'s big race"
+	"in the park"
+	"behind a dumpster"
+	"while we were hiding under an anti-bird shelter"
+	"at the snail wash"
 }
 
 shinynewengine

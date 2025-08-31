@@ -148,7 +148,7 @@ Talk.Snailsonality.Proper : nonoverlap_pool
 	"\1\b[10]Accolades listed, all arranged... acceptance? Awaiting answers."
 	"\1\b[10]Fully functional. Yet, forced out... Forgotten, fading."
 	"\1\b[10]Test time. To see the topmost... Truly tough."
-	"\1\b[10]Stems satiate stomach, set souls at ease."
+	"\1\b[10]Stems satiate stomach, sets soul at ease."
 	"\1\b[10]Betrayed. Bonds broken. Buds burned.\n\n Just business..."
 	"\1\b[10]Old order ousted.%(br)... Or so one hopes."
 }
@@ -255,7 +255,7 @@ Talk.Snailsonality.Ratings : nonoverlap_pool
 	"\1\b[10]Sticks in the road?%(br)4/10, sometimes they're a fun challenge, but usually they're just annoying."
 	"\1\b[10]Freshly groomed track? 10/10, no other feeling like it."
 	"\1\b[10]Ratings? 8/10, a well-established practice, but sometimes applied poorly by critics."
-	"\1\b[10]Bandannas? 7/10, a great way to covertly eat some lettuce on the track, but a bit to close to the face for my liking."
+	"\1\b[10]Bandannas? 7/10, a great way to covertly eat some lettuce on the track, but a bit too close to the face for my liking."
 	"\1\b[10]Bananas? 6/10, they ripen up and get soft and mushy too quick."
 	"\1\b[10]Snailfies with fans? 7/10, they're usually fine, but sometimes you get weirdos that ruin the whole experience."
 }
