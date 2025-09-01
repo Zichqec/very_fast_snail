@@ -337,6 +337,10 @@ Talk.Snailsonality.Super_Fan : nonoverlap_pool
 	"\1\b[12]Sometimes you have to follow suspicious links on the snailernet to find the best information.\n\n That's how I found out about %(xtremelyxtremesplushiecollection)."
 	"\1\b[12]I almost got %(abottle) for my %(ANY(FamousSnails)) collection. I abandoned it at the last minute though.\n\n Just as I was almost out the door I overheard someone asking where it had gotten to,%(br)so I figured they must have needed it more than I did, and left it there for them.\n\n It's important to recognize when the needs of others conflict with your own, and be willing to compromise."
 	"\1\b[12]I heard %(ANY(FamousSnails)) is going to be on a panel at a snail convention soon. I've got to go through my collection and decide on something to get signed."
+	"\1\b[12]My name will be famous one day too. ""%(CurrentSnail.Name), the dedicated and loyal fan who preserved %(ANY(FamousSnails))'s legacy for generations to come.""\n\n Yeah, I'm happy with that. Really highlights my efforts."
+	"\1\b[12]If you're really serious about hunting down items of historic value, then leave no stone unturned. You never know what you might find if you spend a few minutes oozing %(throughtheblankets).\n\n I've found some really impressive pieces for my collection that way."
+	"\1\b[12]I managed to get my tentacles on %(acandywrapper) that was once touched by %(ANY(FamousSnails)).\n\n You should have seen the reaction I got from a group of fellow enthusiasts. They were all shocked, and multiple of them offered to buy it off of me, but I'm not selling! This is one-of-a-kind and will become a treasured part of my collection."
+	"\1\b[12]You have to be shrewd when purchasing collectibles on the snailernet. I've clicked through thousands of fake listings just to sniff out one or two genuine ones.\n\n Pro tip: Real sales come from accounts with no profile picture, and they never have more than a few items listed at a time. You'll never find a fan that's liquidating its entire collection, it just doesn't happen."
 }
 
 Talk.Snailsonality.Slacker : nonoverlap_pool

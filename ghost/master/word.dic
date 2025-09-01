@@ -2771,3 +2771,31 @@ shinynewengine
 	"box fan"
 	"saddle"
 }
+
+throughtheblankets
+{
+	"through the blanket that was left crumpled on the floor"
+	"your way under each and every pillow on the couch"
+	"between the couch cushions"
+	"around the old storage boxes in the garage"
+	"through the medicine cabinet"
+	"through the junk drawer"
+	"through all the pockets in the laundry basket"
+	"through the sock drawer"
+	"your way under the sink"
+	"through the grocery bags"
+	"through the topmost layers of the trash can"
+	"through the recycling bin"
+	"your way behind the refrigerator"
+}
+
+acandywrapper
+{
+	"a lollipop wrapper"
+	"a CD case"
+	"a sock"
+	"a TV remote"
+	"a broken helmet buckle"
+	"an old pair of human-sized glasses"
+	"a stick"
+}
