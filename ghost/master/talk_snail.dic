@@ -705,6 +705,18 @@ Talk.AlliterativeSnailsonality.Bad : nonoverlap_pool
 	"\1\b[10]Training Training Training. uTmost imporTance! don'T sidesTep iT!"
 	"\1\b[10]Trying besT To asTound The Throngs. %(fc('acceleraTion','sTyle'))! magnificenT! Truly Terrific! The Tumult almosT smoThers..."
 	"\1\b[10]And snAil declAred chAmpion! All Applaud! Ahh..."
+	"\1\b[10]Cheers! Congratulatory Clapping! viCtory aCcomplished!"
+	"\1\b[10]Snacks Soon? Spinach, perhapS...? Sweat firSt. afterwardS, conSume!"
+	"\1\b[10]Strong mucuS Saves liveS. Speed, Safety... impreSsive Stuff!"
+	"\1\b[10]Radio adveRtisements aRe Really inteResting!"
+	"\1\b[10]Sing Snail Songs, Smooth melodieS Soothing heartS~"
+	"\1\b[10]Talk sTrangely? noT! This sTyle Traditional!"
+	"\1\b[10]Heard tHis: Hat Havers Have Hot Heads! Hehe, laugHable?"
+	"\1\b[10]Rain bRings woRms upwaRd. suRface, spReading! dRip dRip. squiRm woRm."
+	"\1\b[10]Rival! aggRessively Racing, victoRy Required!"
+	if CurrentSnail.Cleanliness < 0; "\1\b[10]Snail waSh Soon? So Sooty!"
+	elseif CurrentSnail.Cleanliness >= 3; "\1\b[10]Shiny Shell, onlookerS Swoon! So Special..."
+	else; "\1\b[10]Shell poliSh Soon? Shiny Snail Seizes accoladeS!"
 }
 
 
