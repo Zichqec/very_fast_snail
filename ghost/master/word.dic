@@ -2236,12 +2236,34 @@ WeekForecast : array
 	"clear, calm skies|calm, pleasant weather, perfect for having a picnic"
 }
 
+WeeksSeed
+{
+	LOGGING("====================================================================")
+	_primes = (13,17,19,23,29,31,37,41,43,47,53,59,61)
+	_arg = TOINT(_argv[0])
+	LOGGING("_arg: %(_arg)")
+	_variance = _primes[_arg % ARRAYSIZE(_primes)]
+	LOGGING("_variance: %(_variance)")
+	_year = year * 7 * _variance
+	LOGGING("_year: %(_year)")
+	_week = yearweek * 11 * _variance
+	LOGGING("_week: %(_week)")
+	//_variance = _argv[0] * 13
+	
+	LOGGING("RESULT: %(_year + _week + _variance)")
+	
+	TOSTR(_year + _week + _variance)
+}
+
 //TODO i commented out the SRANDs because they mess up the snail name generator??????? huh????????????? how does this function work, what
+//UPDATE: it's because I had the AI graph open to the weather station and it was running these functions even though I was using script input to pull dialogue from the racing station!!! hmmm
+//TODO i would also like to change these so i don't have to configure them for the number of dialogues over here lol
 WeeksLettuceHarvestIndex
 {
 	_seed = "%(yearweek)%(year)0" //The 0 on the end differentiates it from the seed below which uses a 1, so that they always differ...
-	//void SRAND(TOINT(_seed)) //does not take a string
-	RAND(4) //0-4
+	void SRAND(TOINT(_seed)) //does not take a string
+	RAND(5) //0-4
+	//void SRAND()
 }
 
 /*
@@ -2257,8 +2279,9 @@ WeeksLettuceHarvestIndex
 WeeksSnailHarvestIndex
 {
 	_seed = "%(yearweek)%(year)1"
-	//void SRAND(TOINT(_seed))
-	RAND(4) //0-4
+	void SRAND(TOINT(_seed))
+	RAND(5) //0-4
+	//void SRAND()
 }
 
 /*
@@ -2271,6 +2294,28 @@ WeeksSnailHarvestIndex
 
 */
 
+WeeksLeaderboardIndex
+{
+	_seed = "%(yearweek)%(year)2"
+	//void SRAND(TOINT(_seed))
+	RAND(4) //0-3
+}
+
+WeeksTrackNewsIndex
+{
+	_seed = "%(yearweek)%(year)3"
+	//void SRAND(TOINT(_seed))
+	RAND(3) //0-2
+}
+
+WeeksRuleNewsIndex
+{
+	_seed = "%(yearweek)%(year)4"
+	//void SRAND(TOINT(_seed))
+	RAND(3) //0-2
+}
+
+//TODO would it be more fun to generate a random number and then throw my digit grouper function thing onto it so the length varies? ... Not that you'd usually see that though. I dunno, I am wondering if 5-6 digits is better generally, though... hmm. I could add more logic to it...
 badtemp
 {
 	"%(RAND(9) + 1),%(RAND(10))%(RAND(10))%(RAND(10)),%(RAND(10))%(RAND(10))%(RAND(10))"
