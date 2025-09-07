@@ -96,7 +96,7 @@ RadioStation.Racing_News : nonoverlap_pool
 	//If I can't come up with more topic groups I can just duplicate the next two??
 	switch WeeksTrackNewsIndex
 	{
-		//"\1\b[22]Chase, have you heard the word? " //eeh..... how do i want to handle picking a city/track type for the week? i can't do TodaysChoice... hmmm. I wish I could have ThisWeeksChoice... I wonder if I ought to try and rig up a system with epoch, but... i could also just make this not weekly, that is an option
+		//"\1\b[22]Chase, have you heard the word? " //eeh..... how do i want to handle picking a city/track type for the week? i can't do TodaysChoice... hmmm. I wish I could have ThisWeeksChoice... I wonder if I ought to try and rig up a system with epoch, but... i could also just make this not weekly, that is an option. SRAND would be good for this if it were unsettable...!!
 		//"\1\b[22]"
 		//"\1\b[22]"
 	}
@@ -132,6 +132,7 @@ RadioStation.Racing_News : nonoverlap_pool
 		//Rule news (simplifying the ruleset, bunch of cheaters just got banned, etc.)
 		
 	//Discussion of famous snails and their racing careers in general?
+	//Could be fun to pick one snail per day to have a closer look at...??? hm, but that means 30x5 dedicated to this... dear god! that's 150! no!!! lets keep it to word groups thanks...
 }
 
 //Haley Storme & Tailgating Terror
