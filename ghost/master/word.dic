@@ -2315,6 +2315,20 @@ WeeksRuleNewsIndex
 	RAND(3) //0-2
 }
 
+//I wonder, if we can get SRAND working, would it be better to just have ONE function that uses SRAND to generate a week seed, and then use that everywhere else...? that way I don't have to call it so much... less dirty?
+
+OnT
+{
+	void SRAND('test')
+	void SRAND()
+	_r = '\0\_q'
+	for _i = 0; _i < 10; _i++ {
+		_r += ' ' + RAND(100)
+	}
+	_r += '\e'
+	_r
+}
+
 //TODO would it be more fun to generate a random number and then throw my digit grouper function thing onto it so the length varies? ... Not that you'd usually see that though. I dunno, I am wondering if 5-6 digits is better generally, though... hmm. I could add more logic to it...
 badtemp
 {
