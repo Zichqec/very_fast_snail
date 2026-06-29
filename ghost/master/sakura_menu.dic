@@ -222,7 +222,7 @@ OnToggleEquipFilter
 
 OnEquipMenu.ToggleItem : all
 {
-	"\C\![set,autoscroll,disable]\0\s[0]\_q\![bind,""%(reference0)"",""%(reference1)""]\![raise,OnEquipMenu,""%(reference0)""]\_w[1]" //TODO this pause helps on the laptop but isn't perfect... how did i solve with zana again?
+	"\C\![set,autoscroll,disable]\0\s[0]\_q\![bind,""%(reference0)"",""%(reference1)""]\e __BACK_TO_CONFIG__:%(reference0)"
 }
 
 OnEquipMenu.Save : all

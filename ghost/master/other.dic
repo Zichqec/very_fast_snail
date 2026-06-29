@@ -530,6 +530,12 @@ OnNotifyDressupInfo
 		
 		if ASEARCH(_ref[1,C_BYTE1],Dressups.Categories) == -1; Dressups.Categories ,= _ref[1,C_BYTE1]
 	}
+	
+	if "__BACK_TO_CONFIG__" _in_ SHIORI3FW.LastTalk
+	{
+		_category = SPLIT(SHIORI3FW.LastTalk,"__BACK_TO_CONFIG__:")[1]
+		"\C\![raise,OnEquipMenu,""%(_category)""]"
+	}
 }
 
 IsOwned
